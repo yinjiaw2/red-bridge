@@ -1,0 +1,70 @@
+{
+  "serviceCareerLaunch": {
+    "eyebrow": "Career Pathways",
+    "headingMain": "Choose Your",
+    "headingHighlight": "Specialisation",
+    "description": "See the work you will actually do: real project briefs, real tools, and real outcomes.",
+    "assessingBodyLabel": "Assessing Body:",
+    "features": {
+      "outcome": {
+        "label": "Outcome"
+      },
+      "position": {
+        "label": "Role"
+      },
+      "project": {
+        "label": "Project"
+      },
+      "duration": {
+        "label": "Duration"
+      },
+      "reference": {
+        "label": "Reference"
+      }
+    },
+    "pathways": {
+      "acc": {
+        "label": "Accounting",
+        "title": "Assistant Accountant",
+        "description": "Handle real year-end financial work for SMEs under CPA supervision. Build local Australian business experience and maintain work logbooks aligned with CAANZ requirements.",
+        "tools": ["Xero", "MYOB", "SAP", "Tax lodgements", "BAS reporting"],
+        "assessingBody": "CAANZ (Chartered Accountants Australia and New Zealand)",
+        "features": {
+          "outcome": "CPA-signed logbooks",
+          "position": "Assistant Accountant",
+          "project": "SME tax preparation and year-end financials",
+          "duration": "3 months (400+ hours)",
+          "reference": "Professional reference from a CPA supervisor"
+        }
+      },
+      "it": {
+        "label": "IT & Data",
+        "title": "Full-Stack Developer",
+        "description": "Work on real client projects and complete web application development and deployment in a staged delivery environment. Each phase includes defined tasks and deliverables that mirror actual workplace practice.",
+        "tools": ["React.js", "Node.js", "AWS", "Python", "Git / CI-CD"],
+        "assessingBody": "ACS (Australian Computer Society)",
+        "features": {
+          "outcome": "A deployed project showcased on GitHub",
+          "position": "Junior Software Developer",
+          "project": "E-commerce platform build",
+          "duration": "3 months (400+ hours)",
+          "reference": "Reference letter from a senior development lead"
+        }
+      },
+      "mkt": {
+        "label": "Marketing",
+        "title": "Marketing Coordinator",
+        "description": "Manage advertising budgets and content strategy for local businesses. Analyse live campaign data, produce measurable ROI outcomes, and document achievements in line with AMI expectations.",
+        "tools": ["Google Ads", "Meta Business", "SEO", "Canva", "HubSpot"],
+        "assessingBody": "AMI (Australian Marketing Institute)",
+        "features": {
+          "outcome": "A marketing portfolio with measurable results",
+          "position": "Marketing Coordinator",
+          "project": "Brand launch and digital strategy",
+          "duration": "3 months (400+ hours)",
+          "reference": "Reference letter from a marketing manager"
+        }
+      }
+    }
+  }
+}

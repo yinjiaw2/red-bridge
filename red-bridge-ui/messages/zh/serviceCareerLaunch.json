@@ -1,0 +1,70 @@
+{
+  "serviceCareerLaunch": {
+    "eyebrow": "职业导向",
+    "headingMain": "选择您的",
+    "headingHighlight": "专业方向",
+    "description": "了解您将实际参与的工作内容：真实项目简报、真实工具、真实成果。",
+    "assessingBodyLabel": "评估机构：",
+    "features": {
+      "outcome": {
+        "label": "成果"
+      },
+      "position": {
+        "label": "职位"
+      },
+      "project": {
+        "label": "项目"
+      },
+      "duration": {
+        "label": "时长"
+      },
+      "reference": {
+        "label": "推荐"
+      }
+    },
+    "pathways": {
+      "acc": {
+        "label": "会计",
+        "title": "会计助理",
+        "description": "在 CPA 导师指导下处理真实中小企业年终财务。积累澳洲本地企业经验，建立符合 CAANZ 要求的工作日志。",
+        "tools": ["Xero", "MYOB", "SAP", "税务申报", "BAS报表"],
+        "assessingBody": "CAANZ（澳大利亚和新西兰特许会计师协会）",
+        "features": {
+          "outcome": "CPA签署的日志",
+          "position": "会计助理",
+          "project": "中小企业税务准备与年终财务",
+          "duration": "3个月（400+小时）",
+          "reference": "CPA主管的专业推荐信"
+        }
+      },
+      "it": {
+        "label": "IT与数据",
+        "title": "全栈开发工程师",
+        "description": "参与真实客户项目，在分阶段推进的开发环境中完成 Web 应用的开发与部署。每个阶段都有明确任务与交付成果，流程贴近实际工作模式。",
+        "tools": ["React.js", "Node.js", "AWS", "Python", "Git / CI-CD"],
+        "assessingBody": "ACS（澳大利亚计算机协会）",
+        "features": {
+          "outcome": "完成项目部署并在 GitHub 展示",
+          "position": "初级软件开发工程师",
+          "project": "电商平台搭建",
+          "duration": "3个月（400+小时）",
+          "reference": "高级开发负责人的推荐信"
+        }
+      },
+      "mkt": {
+        "label": "市场营销",
+        "title": "市场营销协调员",
+        "description": "为本地企业管理广告预算与内容策略。基于实时营销数据进行分析，输出可衡量的 ROI 结果，并形成符合 AMI 要求的成果记录。",
+        "tools": ["Google Ads", "Meta Business", "SEO", "Canva", "HubSpot"],
+        "assessingBody": "AMI（澳大利亚市场营销协会）",
+        "features": {
+          "outcome": "展示具备衡量效果的营销项目",
+          "position": "市场营销协调员",
+          "project": "品牌上市与数字战略",
+          "duration": "3个月（400+小时）",
+          "reference": "市场营销经理的推荐信"
+        }
+      }
+    }
+  }
+}

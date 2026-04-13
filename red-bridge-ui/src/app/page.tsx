@@ -10,6 +10,7 @@ import StatsSection from "@/components/home/StatusSection";
 import EmployerNetwork from "@/components/home/EmployerNetworkSection";
 import Footer from "@/components/home/Footer";
 import FAQSection from "@/components/home/FaqSection";
+import CaseStudySection from "@/components/home/CaseStudySection";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <SuccessTicker />
         <ComparisonSection />
         <EmployerNetwork />
+        <CaseStudySection />
         <ProcessSection />
         <ProgramsSection />
         <StatsSection />
