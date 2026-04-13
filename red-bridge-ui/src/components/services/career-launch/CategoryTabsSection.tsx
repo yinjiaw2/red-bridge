@@ -1,7 +1,8 @@
+"use client";
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import {
-  CheckCircle,
+  CheckCircle2, // 使用更符合图片的 CheckCircle 样式
   Calculator,
   Code2,
   BarChart3,
@@ -12,13 +13,7 @@ import {
 } from "lucide-react";
 
 type PathwayKey = "acc" | "it" | "mkt";
-
-type FeatureKey =
-  | "outcome"
-  | "position"
-  | "project"
-  | "duration"
-  | "reference";
+type FeatureKey = "outcome" | "position" | "project" | "duration" | "reference";
 
 const CareerTabsSection = () => {
   const t = useTranslations("serviceCareerLaunch");
@@ -26,120 +21,115 @@ const CareerTabsSection = () => {
 
   const pathways: Record<
     PathwayKey,
-    {
-      id: PathwayKey;
-      icon: React.ReactNode;
-      featureKeys: FeatureKey[];
-    }
+    { id: PathwayKey; featureKeys: FeatureKey[] }
   > = {
     acc: {
       id: "acc",
-      icon: <Calculator className="w-4 h-4" />,
       featureKeys: ["outcome", "position", "project", "duration", "reference"],
     },
     it: {
       id: "it",
-      icon: <Code2 className="w-4 h-4" />,
       featureKeys: ["outcome", "position", "project", "duration", "reference"],
     },
     mkt: {
       id: "mkt",
-      icon: <BarChart3 className="w-4 h-4" />,
       featureKeys: ["outcome", "position", "project", "duration", "reference"],
     },
   };
 
-  const featureIcons: Record<FeatureKey, React.ReactNode> = {
-    outcome: <FileText className="w-5 h-5 text-green-500" />,
-    position: <Briefcase className="w-5 h-5 text-green-500" />,
-    project: <CheckCircle className="w-5 h-5 text-green-500" />,
-    duration: <Clock className="w-5 h-5 text-green-500" />,
-    reference: <Users className="w-5 h-5 text-green-500" />,
-  };
-
-  const activeContent = pathways[activeTab];
-
   return (
-    <section className="py-16 px-4 max-w-6xl mx-auto font-sans">
+    <section className="py-16 px-4 w-full mx-auto font-sans bg-[#FDF8F1]">
       {/* Section Title */}
       <div className="text-center mb-12">
-        <div className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">
-          {t("eyebrow")}
+        <div className="flex items-center justify-center gap-2 mb-3">
+          <div className="h-[1px] w-8 bg-[#A65E32]"></div>
+          <div className="text-sm font-medium tracking-wider text-[#A65E32] uppercase">
+            {t("eyebrow")}
+          </div>
+          <div className="h-[1px] w-8 bg-[#A65E32]"></div>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#3E2723] mb-6">
           {t("headingMain")}
-          <em className="text-blue-600 not-italic ml-2 text-border-bottom">
+          <span className="text-[#A65E32] italic ml-3 font-serif">
             {t("headingHighlight")}
-          </em>
+          </span>
         </h2>
-        <p className="text-slate-500 text-lg">
+        <p className="text-stone-500 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
           {t("description")}
         </p>
       </div>
 
-      {/* Tabs Header */}
-      <div className="flex justify-center gap-2 mb-8 border-b border-slate-200">
+      {/* Tabs Header - 改为图片中的圆角药丸样式 */}
+      <div className="flex justify-center gap-4 mb-12">
         {Object.values(pathways).map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-2 px-6 py-3 text-sm font-medium transition-all duration-200 border-b-2 -mb-px
+            className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 border
               ${
                 activeTab === tab.id
-                  ? "border-blue-600 text-blue-600 bg-blue-50/50"
-                  : "border-transparent text-slate-500 hover:text-slate-700 hover:bg-slate-50"
+                  ? "bg-[#A65E32] text-white border-[#A65E32] shadow-lg shadow-orange-900/10"
+                  : "bg-white text-stone-400 border-stone-200 hover:border-stone-300 hover:text-stone-600"
               }`}
           >
-            {tab.icon}
             {t(`pathways.${tab.id}.label`)}
           </button>
         ))}
       </div>
 
-      {/* Tab Content */}
-      <div className="bg-white rounded-2xl shadow-xl shadow-slate-100 border border-slate-100 overflow-hidden transition-all duration-300">
+      {/* Tab Content - 极简圆角卡片 */}
+      <div className="bg-white rounded-[32px] shadow-sm border border-stone-100 overflow-hidden transition-all duration-500">
         <div className="flex flex-col md:flex-row">
           {/* Content Left */}
-          <div className="flex-1 p-8 md:p-12 border-b md:border-b-0 md:border-r border-slate-100">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">
+          <div className="flex-1 p-10 md:p-16">
+            <h3 className="text-3xl font-bold text-stone-800 mb-6">
               {t(`pathways.${activeTab}.title`)}
             </h3>
-            <p className="text-slate-600 leading-relaxed mb-8">
+            <p className="text-stone-500 leading-relaxed mb-10 text-[17px]">
               {t(`pathways.${activeTab}.description`)}
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-8">
+            {/* Tools Tags - 灰色胶囊样式 */}
+            <div className="flex flex-wrap gap-3 mb-12">
               {t.raw(`pathways.${activeTab}.tools`).map((tool: string) => (
                 <span
                   key={tool}
-                  className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded-full"
+                  className="px-5 py-2 bg-stone-100 text-stone-500 text-sm font-medium rounded-xl"
                 >
                   {tool}
                 </span>
               ))}
             </div>
 
-            <div className="pt-6 border-t border-slate-50 text-sm">
-              <strong className="text-slate-800">{t("assessingBodyLabel")}</strong>
-              <span className="text-slate-600 ml-2">
-                {t(`pathways.${activeTab}.assessingBody`)}
-              </span>
+            {/* Assessing Body - 淡色背景块 */}
+            <div className="p-6 bg-[#FDF8F1] rounded-2xl border border-orange-50/50">
+              <p className="text-sm leading-relaxed">
+                <span className="text-[#A65E32] font-bold mr-2">
+                  {t("assessingBodyLabel")}:
+                </span>
+                <span className="text-stone-600">
+                  {t(`pathways.${activeTab}.assessingBody`)}
+                </span>
+              </p>
             </div>
           </div>
 
-          {/* Content Right (Features) */}
-          <div className="w-full md:w-2/5 bg-slate-50/50 p-8 md:p-12">
+          {/* 分隔线（仅桌面端显示） */}
+          <div className="hidden md:block w-[1px] bg-stone-100 my-16"></div>
+
+          {/* Content Right (Features) - 列表样式优化 */}
+          <div className="w-full md:w-[45%] p-10 md:p-16 flex flex-col justify-center">
             <div className="space-y-6">
-              {activeContent.featureKeys.map((featureKey) => (
-                <div key={featureKey} className="flex items-start gap-4">
-                  <div className="mt-1 p-1 bg-white rounded-full shadow-sm">
-                    {featureIcons[featureKey]}
+              {pathways[activeTab].featureKeys.map((featureKey) => (
+                <div key={featureKey} className="flex items-start gap-4 group">
+                  <div className="mt-1 flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600" />
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-tight">
-                      {t(`features.${featureKey}.label`)}
+                  <div className="flex flex-row items-baseline gap-2">
+                    <span className="text-stone-800 font-bold whitespace-nowrap">
+                      {t(`features.${featureKey}.label`)}:
                     </span>
-                    <span className="text-slate-700 font-medium leading-snug">
+                    <span className="text-stone-500 font-medium">
                       {t(`pathways.${activeTab}.features.${featureKey}`)}
                     </span>
                   </div>
