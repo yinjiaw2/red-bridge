@@ -61,6 +61,53 @@
       }
     ]
   },
+  "processSection": {
+    "eyebrow": "服务流程",
+    "headingMain": "您的移民之旅",
+    "headingHighlight": "4个步骤",
+    "description": "流程透明，按阶段推进，每个里程碑都清晰可见 — 每个成功节点后，您再付款。",
+    "cta": "了解详细流程并预约免费咨询 →",
+    "steps": [
+      {
+        "num": "01",
+        "title": "免费咨询",
+        "description": "我们认真地评估您的背景、目标和资格。没有义务，没有预付费用。如不符合条件或不适合推进，我们会如实说明，杜绝不负责推销。"
+      },
+      {
+        "num": "02",
+        "title": "方案匹配",
+        "description": "我们确定能真正实现的方案。在签合同之前，您会看到雇主资料和清晰的费用计划 — 没有模糊的承诺。"
+      },
+      {
+        "num": "03",
+        "title": "职业规划",
+        "description": "与我们已审核雇主资源中的优质雇主进行匹配。我们将提供真实的担保资质、经得起移民局审查的真实就业记录。"
+      },
+      {
+        "num": "04",
+        "title": "持续支持",
+        "description": "我们将从技能评估、签证递交到成功获邀全程陪伴您。法律事务全程由持牌合作伙伴 Insight Idea 处理。"
+      }
+    ]
+  },
+  "employerNetwork": {
+    "eyebrow": "我们的雇主资源",
+    "headingMain": "所有职位均为",
+    "headingHighlight": "真实岗位",
+    "description": "雇主资源库中所有雇主均具备当前有效的 482/186 担保资格",
+    "verifiedBadge": "发布雇主信息均已核实",
+    "detailDescription": "我们的雇主合作伙伴在招聘过程中倾向于保密 — 我们会在咨询期间提供完整的公司简介、可用职位和当前担保审批状态。没有模糊的承诺，没有\"神秘的\"雇主。",
+    "verifiedLabel": "经验证的雇主",
+    "disclaimer": "雇主资料将于咨询期间提供。",
+    "cta": "预约免费咨询了解哪些雇主正在招聘",
+    "categories": [
+      { "title": "科技与ICT", "count": 12, "iconKey": "monitor" },
+      { "title": "会计与金融", "count": 8, "iconKey": "trendingUp" },
+      { "title": "市场营销与传播", "count": 6, "iconKey": "megaphone" },
+      { "title": "工程", "count": 5, "iconKey": "hardHat" },
+      { "title": "医疗保健", "count": 4, "iconKey": "heartPulse" }
+    ]
+  },
   "trustSafety": {
     "heading": "我们知道您在担心什么。",
     "subheading": "这些情况，您或许早已听过：",

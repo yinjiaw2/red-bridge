@@ -61,6 +61,53 @@
       }
     ]
   },
+  "processSection": {
+    "eyebrow": "Our Process",
+    "headingMain": "Your migration journey",
+    "headingHighlight": "4 steps",
+    "description": "A transparent, milestone-driven process — you pay at each successful stage, not upfront.",
+    "cta": "Learn more about the process and book a free consultation →",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Free Consultation",
+        "description": "We genuinely assess your background, goals, and eligibility. No obligation, no upfront fees. If you don't qualify or it doesn't make sense to proceed, we'll tell you honestly — no irresponsible upselling."
+      },
+      {
+        "num": "02",
+        "title": "Pathway Matching",
+        "description": "We identify pathways that can actually work. Before any contract is signed, you'll see employer profiles and a clear fee schedule — no vague promises."
+      },
+      {
+        "num": "03",
+        "title": "Career Placement",
+        "description": "Matched with quality employers from our vetted network. We provide genuine sponsorship credentials and authentic employment records that stand up to immigration scrutiny."
+      },
+      {
+        "num": "04",
+        "title": "Ongoing Support",
+        "description": "We stay by your side from skills assessment and visa lodgement through to receiving your invitation. All legal matters are handled by licensed partner Insight Idea throughout."
+      }
+    ]
+  },
+  "employerNetwork": {
+    "eyebrow": "Our Employer Network",
+    "headingMain": "All job listings are",
+    "headingHighlight": "real positions",
+    "description": "Every employer in our network holds a current, active 482/186 sponsorship licence",
+    "verifiedBadge": "All listed employers are verified",
+    "detailDescription": "Our employer partners prefer to keep their recruitment confidential — we provide full company profiles, available roles, and current sponsorship approval status during the consultation. No vague promises, no \"mystery\" employers.",
+    "verifiedLabel": "Verified employers",
+    "disclaimer": "Employer profiles are provided during the consultation.",
+    "cta": "Book a free consultation to find out which employers are hiring",
+    "categories": [
+      { "title": "Technology & ICT", "count": 12, "iconKey": "monitor" },
+      { "title": "Accounting & Finance", "count": 8, "iconKey": "trendingUp" },
+      { "title": "Marketing & Communications", "count": 6, "iconKey": "megaphone" },
+      { "title": "Engineering", "count": 5, "iconKey": "hardHat" },
+      { "title": "Healthcare", "count": 4, "iconKey": "heartPulse" }
+    ]
+  },
   "trustSafety": {
     "heading": "We know what you're worried about.",
     "subheading": "You may have already heard stories like these:",
