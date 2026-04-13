@@ -1,0 +1,103 @@
+{
+  "comparison": {
+    "eyebrow": "为什么选择RedBridge？",
+    "headingMain": "我们的",
+    "headingHighlight": "不同之处",
+    "description": "移民行业信任问题由来已久。RedBridge的成立，正是为了打造一个经得起审查的选择。",
+    "col1": "您应得的服务",
+    "col2": "其他中介",
+    "col3": "RedBridge Consulting",
+    "cta": {
+      "heading": "还有疑问？来聊聊。",
+      "subheading": "免费咨询，清晰解答，无任何压力。",
+      "primaryBtn": "预约免费咨询",
+      "secondaryBtn": "了解我们的流程"
+    },
+    "rows": [
+      {
+        "deserve": {
+          "title": "无法核实的职位信息",
+          "description": "付款后才发现职位是假的。"
+        },
+        "others": {
+          "title": "雇主信息未经核实",
+          "description": "无法证明担保资质。"
+        },
+        "redBridge": {
+          "title": "提前公开真实雇主信息",
+          "description": "我们在免费咨询时分享雇主名称、行业及482担保批准状态——在您做决定之前。"
+        }
+      },
+      {
+        "deserve": {
+          "title": "预先收取全额费用",
+          "description": "在任何工作开始前就要缴纳数千澳元。"
+        },
+        "others": {
+          "title": "一次性收取高额费用",
+          "description": "财务风险极高。"
+        },
+        "redBridge": {
+          "title": "按进度分期付款",
+          "description": "所有费用记录在客户协议中，按3–4个里程碑阶段分期支付。"
+        }
+      },
+      {
+        "deserve": {
+          "title": "未注册顾问",
+          "description": "在没有法律资质的情况下提供建议。"
+        },
+        "others": {
+          "title": "在无持牌资质的情况下提供移民建议",
+          "description": "无监管机构监督。"
+        },
+        "redBridge": {
+          "title": "持牌移民法律合作伙伴",
+          "description": "所有签证申请由<link>Insight Idea</link>专属处理——澳洲注册律师事务所及MARA移民代理。"
+        }
+      },
+      {
+        "deserve": {
+          "title": "伪造工作经历和出勤记录",
+          "description": "工时或职位无法通过技能评估审查。"
+        },
+        "others": {
+          "title": "工作经历难以核实",
+          "description": "存在评估风险。"
+        },
+        "redBridge": {
+          "title": "400+小时真实有薪工作",
+          "description": "我们提供符合CAANZ、ACS和AMI技能评估格式要求的有记录有薪工时表。"
+        }
+      },
+      {
+        "deserve": {
+          "title": "千篇一律的方案推荐",
+          "description": "所有人都获得相同的建议。"
+        },
+        "others": {
+          "title": "推销不一定适合您情况的项目",
+          "description": "缺乏个性化匹配。"
+        },
+        "redBridge": {
+          "title": "不匹配，不推销",
+          "description": "我们直话直说：如果某条路径不适合您，我们会在免费咨询时告知您。"
+        }
+      },
+      {
+        "deserve": {
+          "title": "付款后被独自留下",
+          "description": "支持在付款后终止。"
+        },
+        "others": {
+          "title": "付款后指导有限",
+          "description": "自行处理后续问题。"
+        },
+        "redBridge": {
+          "title": "成功保障与持续支持",
+          "description": "如果您完成项目但技能评估未通过，我们将继续免费为您提供支持直到成功。"
+        }
+      }
+    ]
+  }
+}

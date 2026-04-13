@@ -1,0 +1,103 @@
+{
+  "comparison": {
+    "eyebrow": "Why RedBridge?",
+    "headingMain": "How We're ",
+    "headingHighlight": "Different",
+    "description": "The migration industry has a trust problem. We built RedBridge to be the verifiable opposite.",
+    "col1": "You Deserve Better",
+    "col2": "Other Agencies",
+    "col3": "RedBridge Consulting",
+    "cta": {
+      "heading": "Still have questions? Let's talk.",
+      "subheading": "A free consultation. Clear answers. No pressure.",
+      "primaryBtn": "Book Free Consultation",
+      "secondaryBtn": "See How We Work"
+    },
+    "rows": [
+      {
+        "deserve": {
+          "title": "Job listings you can verify",
+          "description": "You only find out they're fake after paying."
+        },
+        "others": {
+          "title": "Unverified employer details",
+          "description": "No proof of sponsorship."
+        },
+        "redBridge": {
+          "title": "Verified Employers, Upfront",
+          "description": "We share employer names, industry, and 482 sponsorship approval during your free consultation — before you commit."
+        }
+      },
+      {
+        "deserve": {
+          "title": "Full fees charged upfront",
+          "description": "They pay thousands before any work begins."
+        },
+        "others": {
+          "title": "Large upfront payments",
+          "description": "High financial risk."
+        },
+        "redBridge": {
+          "title": "Pay As We Progress",
+          "description": "Fees are documented in a Client Agreement and split across 3–4 milestone stages."
+        }
+      },
+      {
+        "deserve": {
+          "title": "Unregistered consultants",
+          "description": "Advise without legal accountability."
+        },
+        "others": {
+          "title": "Give migration advice without being licensed",
+          "description": "No regulatory oversight."
+        },
+        "redBridge": {
+          "title": "Licensed Migration Law Partner",
+          "description": "All visa lodgements are handled by <link>Insight Idea</link> — a registered Australian law firm and MARA migration agent."
+        }
+      },
+      {
+        "deserve": {
+          "title": "Fabricated work & work evidence",
+          "description": "Hours/jobs that fail skill assessments."
+        },
+        "others": {
+          "title": "Hard to verify work experience",
+          "description": "Assessment risk."
+        },
+        "redBridge": {
+          "title": "400+ Hours of Genuine Paid Work",
+          "description": "We deliver documented paid timesheets in the exact format required for CAANZ, ACS, and AMI skills assessments."
+        }
+      },
+      {
+        "deserve": {
+          "title": "One-size-fits-all pathways",
+          "description": "Everyone gets the same recommendation."
+        },
+        "others": {
+          "title": "Pushes programs that may not suit your situation",
+          "description": "No personalised matching."
+        },
+        "redBridge": {
+          "title": "Not Matching, Not Selling",
+          "description": "We're clear first: if a pathway isn't right for you, we say so at the free consultation."
+        }
+      },
+      {
+        "deserve": {
+          "title": "You're left on your own",
+          "description": "Support ends after payment."
+        },
+        "others": {
+          "title": "Limited guidance after payment",
+          "description": "You handle it alone."
+        },
+        "redBridge": {
+          "title": "Success Guarantee & Ongoing Support",
+          "description": "If you complete the program and don't pass your skills assessment, we continue supporting you at no extra cost."
+        }
+      }
+    ]
+  }
+}
