@@ -1,0 +1,16 @@
+{
+  "homeHero": {
+    "badge": "REGISTERED AUSTRALIAN CONSULTANCY",
+    "title": "Build Your Career in <highlight>Australia.</highlight><br></br>We Make It Real.",
+    "description": "Get placed with verified employers. Gain the right experience. Move from study to 482 visa and PR with confidence.",
+    "primaryButton": "Get Free Assessment",
+    "secondaryButton": "View Programs",
+    "imageAlt": "Career in Australia hero image",
+    "stats": {
+      "placements": "Successful Placements",
+      "assessments": "Assessments Approved",
+      "teamActive": "Team Active",
+      "since": "Since 2018"
+    }
+  }
+}
