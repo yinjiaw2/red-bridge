@@ -13,7 +13,8 @@
       "placements": "Successful Placements",
       "assessments": "Assessments Approved",
       "teamActive": "Team Active",
-      "since": "Since 2018"},
+      "since": "Since 2018"
+    },
     "countries": [
       {
         "label": "India",
@@ -41,24 +42,6 @@
       "Licensed migration lawyer partners",
       "Free initial consultation",
       "200+ successful placements since 2018"
-    ],
-    "stats": [
-      {
-        "value": "200+",
-        "label": "Career placements\nSince 2018"
-      },
-      {
-        "value": "4.9★",
-        "label": "Client\naverage rating"
-      },
-      {
-        "value": "300+",
-        "label": "Skills assessments\npassed first try"
-      },
-      {
-        "value": "10+",
-        "label": "Verified\nemployer partners"
-      }
     ]
   },
   "processSection": {
@@ -400,5 +383,5 @@
     "hqAddress": "Docklands VIC 3008",
     "established": "Established",
     "establishedText": "Founded in 2018 · Registered in 2024"
-  },
+  }
 }

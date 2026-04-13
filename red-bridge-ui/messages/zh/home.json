@@ -13,7 +13,8 @@
       "placements": "成功就业案例",
       "assessments": "评估通过案例",
       "teamActive": "团队深耕",
-      "since": "始于 2018",
+      "since": "始于 2018"
+    },
     "countries": [
       {
         "label": "印度",
@@ -41,24 +42,6 @@
       "持牌移民律师合作伙伴",
       "免费初步咨询",
       "200+成功入职案例 · 始于2018"
-    ],
-    "stats": [
-      {
-        "value": "200+",
-        "label": "职业发展\n始于2018"
-      },
-      {
-        "value": "4.9★",
-        "label": "客户\n平均评分"
-      },
-      {
-        "value": "300+",
-        "label": "技能评估\n首次通过"
-      },
-      {
-        "value": "10+",
-        "label": "经验证的\n雇主合作伙伴"
-      }
     ]
   },
   "processSection": {
@@ -395,5 +378,5 @@
     "hqAddress": "Docklands VIC 3008",
     "established": "成立时间",
     "establishedText": "始于2018 · 2024年注册"
-  },
+  }
 }

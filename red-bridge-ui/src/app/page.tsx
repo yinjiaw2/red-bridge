@@ -26,7 +26,6 @@ export default function Home() {
         <CaseStudySection />
         <ProcessSection />
         <ProgramsSection />
-        <StatsSection />
         <FAQSection />
         <Footer />
       </main>
