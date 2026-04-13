@@ -3,17 +3,17 @@
     "title": "你好，世界！"
   },
   "hero": {
-    "badge": "澳洲注册咨询公司-始于2018",
-    "titlePrefix": "墨尔本",
-    "titleHighlight": "真实可靠",
-    "titleMiddle": "的",
-    "titleSuffix": "职业咨询专家",
-    "introLead": "200+专业人才",
-    "introCountriesPrefix": "来自",
-    "introCountriesSuffix": "及其他23个国家",
-    "description": "RedBridge Consulting致力于优质人才与获得认证澳洲雇主精准匹配。我们推荐的每种方案都是真实的。所有雇主岗位均已提前由我们逐一审核。",
-    "primaryCta": "从这里免费开启您的移民之旅",
-    "secondaryCta": "查看真实成功案例 →",
+    "badge": "澳洲正规注册咨询机构",
+    "title": "在<highlight>澳洲</highlight>开启你的职业道路。<br></br>我们帮你真正落地。",
+    "description": "对接真实雇主，积累关键经验。从留学到482签证与PR路径，走得更稳、更清晰。",
+    "primaryButton": "免费评估",
+    "secondaryButton": "查看项目",
+    "imageAlt": "澳洲职业发展",
+    "stats": {
+      "placements": "成功就业案例",
+      "assessments": "评估通过案例",
+      "teamActive": "团队深耕",
+      "since": "始于 2018",
     "countries": [
       {
         "label": "印度",
