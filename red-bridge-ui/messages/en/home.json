@@ -103,7 +103,11 @@
     "categories": [
       { "title": "Technology & ICT", "count": 12, "iconKey": "monitor" },
       { "title": "Accounting & Finance", "count": 8, "iconKey": "trendingUp" },
-      { "title": "Marketing & Communications", "count": 6, "iconKey": "megaphone" },
+      {
+        "title": "Marketing & Communications",
+        "count": 6,
+        "iconKey": "megaphone"
+      },
       { "title": "Engineering", "count": 5, "iconKey": "hardHat" },
       { "title": "Healthcare", "count": 4, "iconKey": "heartPulse" }
     ]
@@ -171,5 +175,80 @@
       "separator": " or ",
       "booking": "Book a free initial assessment"
     }
+  },
+  "_todo": "review zh translations",
+  "contact": {
+    "eyebrow": "Contact Us",
+    "headingMain": "Your first step is ",
+    "headingHighlight": "free",
+    "description": "Book a free consultation. We will assess your background and clarify whether it is suitable to proceed and the best option.",
+    "addressTitle": "Company Address",
+    "addressLine1": "Level 9, Tower 3",
+    "addressLine2": "18–38 Siddeley Street",
+    "addressLine3": "Docklands VIC 3008",
+    "addressSub": "5 minutes walk from Southern Cross Station",
+    "phoneTitle": "Call Us",
+    "phoneNumber": "03 9961 7301",
+    "phoneTime1": "Mon-Thu 12pm–6pm",
+    "phoneTime2": "Fri 12pm–5pm",
+    "emailTitle": "Email Us",
+    "emailLink": "Write to us",
+    "emailTime1": "Reply within 24 hours",
+    "emailTime2": "Excluding public holidays",
+    "ctaMain": "Book Free Consultation",
+    "ctaSubPrefix": "Not sure if you are eligible?",
+    "ctaSubLink": "Apply for free eligibility assessment"
+  },
+  "credentials": {
+    "googleRating": "Google Rating",
+    "registeredCompany": "Registered Company",
+    "companyName": "RedBridge Consulting Pty Ltd",
+    "licensedPartner": "Licensed Immigration Lawyer Partner",
+    "partnerName": "Insight Idea — Registered Law Firm",
+    "headquarters": "Headquarters",
+    "hqAddress": "Docklands VIC 3008",
+    "established": "Established",
+    "establishedText": "Founded in 2018 · Registered in 2024"
+  },
+  "footer": {
+    "brandSubtitle": "Connecting Dreams and Opportunities",
+    "description1": "A registered Australian consulting company dedicated to authentic career development and immigration pathway support. All immigration services are provided by ",
+    "descriptionLink": "Insight Idea",
+    "description2": " — licensed migration agents and registered Australian law firm.",
+    "servicesTitle": "Services",
+    "services": [
+      { "name": "Career Launch Program", "href": "/services/career-launch" },
+      {
+        "name": "189 Skilled Independent Visa",
+        "href": "/services/189-pathway"
+      },
+      { "name": "190 Skilled Nominated Visa", "href": "/services/190-pathway" },
+      {
+        "name": "491 Skilled Work Regional Visa",
+        "href": "/services/491-pathway"
+      },
+      {
+        "name": "482/186 Employer Sponsored Visa",
+        "href": "/services/employer-pathway"
+      },
+      { "name": "Emergency Visa Solutions", "href": "/services/emergency" }
+    ],
+    "companyTitle": "Company",
+    "company": [
+      { "name": "News & Updates", "href": "/news" },
+      { "name": "About Us", "href": "/about-us" },
+      { "name": "Success Cases", "href": "/success-cases" },
+      { "name": "For Employers", "href": "/for-employers" },
+      { "name": "Join Our Team", "href": "/join-our-team" },
+      { "name": "Book Consultation", "href": "/booking" }
+    ],
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "copyright": "Copyright Notice",
+      "sitemap": "Sitemap"
+    },
+    "copyrightText": "© 2026 RedBridge Consulting Pty Ltd · ABN: 88 678 186 091",
+    "disclaimer": "Docklands VIC 3008 · Migration services provided by Insight Idea (licensed migration agent) · All rights reserved."
   }
 }

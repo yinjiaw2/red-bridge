@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import {
   ChevronDown,
@@ -7,201 +8,131 @@ import {
   Phone,
   Calendar,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-interface FAQItem {
+interface FAQRawItem {
   question: string;
-  answer: React.ReactNode;
+  answer?: string;
+  bold1?: string; text1?: string; bold2?: string; text2?: string;
+  prefix?: string; bold?: string; suffix?: string;
+  linkText?: string; linkHref?: string; isExternal?: boolean;
+  row1Label?: string; row1Link?: string; row1Href?: string;
+  row2Label?: string; row2Link?: string; row2Href?: string;
+  row3Label?: string; row3Link?: string; row3Href?: string;
+  row4Label?: string; row4Link?: string; row4Href?: string;
+  row5Label?: string; row5Link?: string; row5Href?: string;
+  bookingCta?: string;
+  addressLabel?: string; address?: string; phone?: string; onlineBooking?: string;
 }
 
-const faqData: FAQItem[] = [
-  {
-    question: "RedBridge Consulting的职位安置是否真实且经过验证？",
-    answer:
-      "是的。所有合作雇主均具备当前有效的482担保资格。公司名称、行业及担保状态等信息，将会在免费咨询时直接提供。无需付费，也无需先做决定。如果没有适合您的方案，我们会在咨询时直接说明，不会收取任何费用。",
-  },
-  {
-    question: "482和186雇主担保签证有什么区别？",
-    answer: (
+function renderAnswer(item: FAQRawItem) {
+  if (item.answer) return <>{item.answer}</>;
+
+  if (item.bold1) {
+    return (
       <>
-        <strong>482（临时技能短缺）</strong>
-        签证可让您在澳洲为担保雇主工作，最长可达4年。
-        <strong>186（雇主提名）</strong>
-        签证可直接获得永久居留。不少客户先通过482入境，在同一雇主下工作2–3年后转186过渡签证。完整方案会在免费咨询时为您说明。
+        <strong>{item.bold1}</strong>{item.text1}
+        <strong>{item.bold2}</strong>{item.text2}
       </>
-    ),
-  },
-  {
-    question: "在澳大利亚，482雇主担保签证获批需要多长时间？",
-    answer: (
+    );
+  }
+
+  if (item.bold && !item.linkText) {
+    return <>{item.prefix}<strong>{item.bold}</strong>{item.suffix}</>;
+  }
+
+  if (item.linkText && !item.row1Label) {
+    if (item.isExternal) {
+      return (
+        <>
+          {item.prefix}
+          <a href={item.linkHref} target="_blank" rel="noopener noreferrer"
+            className="text-[#7c5a43] underline inline-flex items-center gap-1">
+            {item.linkText} <ExternalLink className="h-3 w-3" aria-hidden="true" />
+          </a>
+          {item.suffix}
+        </>
+      );
+    }
+    return (
       <>
-        482签证获批时间通常为<strong>3–12</strong>
-        个月。具体时间取决于职业类型、雇主是否已具备担保资格，以及移民局当前审理进度。我们会根据您的情况，在免费咨询时提供更具体的时间预估。
-      </>
-    ),
-  },
-  {
-    question: "维多利亚州190州提名获批需要多长时间？",
-    answer:
-      "维州190州担保审批周期通常为2–12个月。时间主要取决于职业、当前分数以及当期邀请情况。我们会根据您的职业匹配更有机会的州，并在咨询时给出实际时间预估。",
-  },
-  {
-    question: "国际学生可以在没有永久居留权或工作的情况下申请吗？",
-    answer: (
-      <>
-        当然可以。我们的方案面向不同阶段的留学生与技术人才。 我们的
-        <Link
-          href="/zh/career-launch"
-          className="text-[#b45309] underline mx-1"
-        >
-          职业起航计划
+        {item.prefix}
+        <Link href={item.linkHref!} className="text-[#b45309] underline mx-1">
+          {item.linkText}
         </Link>
-        可以帮助留学生积累符合移民要求的本地工作经验。而雇主担保方案则可以直接对接提供岗位与提名支持的雇主。无需PR，也不需要工作即可开始规划。
+        {item.suffix}
       </>
-    ),
-  },
-  {
-    question: "在澳大利亚，技术移民需要多少费用？",
-    answer: (
-      <>
-        在RedBridge, 您的首次咨询是<strong>完全免费</strong>的。我们的项目费用从
-        AUD 50,000 起，具体根据服务类型而定。而政府签证申请费用另计，通常在 AUD
-        3,000–8,000
-        之间，取决于签证类别。所有费用均写入正式客户协议，包括服务费、政府费用及
-        Insight Idea 律所的法律费用，费用结构清晰透明。
-      </>
-    ),
-  },
-  {
-    question: "移民咨询费用是否可以分期付款？",
-    answer:
-      "当然可以。我们提供3-4阶段里程碑式的付款结构，您仅需在成功节点付款，无需一次性付清。所有付款安排均写入正式客户协议。您可以使用银行转账，PayID 和 BPAY 方式支付。",
-  },
-  {
-    question: "什么是职业技能评估成功保障？",
-    answer:
-      "如果您已完成我们的项目，但您的职业技术评估失败了，我们将会一直免费跟进支持您，至到您通过。我们的项目设计严格对标 CAANZ、ACS 和 AMI 的评估要求，工作时长、格式及证明材料均符合标准。",
-  },
-  {
-    question: "哪种签证途径适合我的职业和情况？",
-    answer: (
+    );
+  }
+
+  if (item.row1Label) {
+    const rows = [
+      { label: item.row1Label, link: item.row1Link!, href: item.row1Href! },
+      { label: item.row2Label!, link: item.row2Link!, href: item.row2Href! },
+      { label: item.row3Label!, link: item.row3Link!, href: item.row3Href! },
+      { label: item.row4Label!, link: item.row4Link!, href: item.row4Href! },
+      { label: item.row5Label!, link: item.row5Link!, href: item.row5Href! },
+    ];
+    return (
       <div className="space-y-3">
-        <p>
-          <strong>如果您是应届毕业生，缺乏本地经验:</strong>{" "}
-          <Link href="/zh/career-launch" className="text-[#7c5a43] underline">
-            职业起航计划
-          </Link>
-        </p>
-        <p>
-          <strong>如果您已有雇主意向或工作机会:</strong>{" "}
-          <Link
-            href="/zh/employer-pathway"
-            className="text-[#7c5a43] underline"
-          >
-            482/186 雇主担保移民
-          </Link>
-        </p>
-        <p>
-          <strong>如果您想了解独立技术移民:</strong>{" "}
-          <Link href="/zh/189-pathway" className="text-[#7c5a43] underline">
-            189 Pathway
-          </Link>
-        </p>
-        <p>
-          <strong>如果您想了解州担保加分路径:</strong>{" "}
-          <Link href="/zh/190-pathway" className="text-[#7c5a43] underline">
-            190 Pathway
-          </Link>
-        </p>
-        <p>
-          <strong>如果您想了解偏远地区移民:</strong>{" "}
-          <Link href="/zh/491-pathway" className="text-[#7c5a43] underline">
-            491 Pathway
-          </Link>
-        </p>
-        <Link
-          href="/booking"
-          className="inline-flex items-center gap-2 mt-2 font-bold text-[#b45309]"
-        >
-          欢迎预约免费咨询 <Calendar size={14} />
+        {rows.map((row, i) => (
+          <p key={i}>
+            <strong>{row.label}</strong>{" "}
+            <Link href={row.href} className="text-[#7c5a43] underline">{row.link}</Link>
+          </p>
+        ))}
+        <Link href="/booking" className="inline-flex items-center gap-2 mt-2 font-bold text-[#b45309]">
+          {item.bookingCta}
+          <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
         </Link>
       </div>
-    ),
-  },
-  {
-    question: "谁会负责处理签证递交和移民法律事务？",
-    answer: (
-      <>
-        所有移民建议、签证递交及法律事务，均由持牌合作方律所{" "}
-        <a
-          href="https://www.insightidea.com.au/en/success"
-          target="_blank"
-          rel="noopener"
-          className="text-[#7c5a43] underline inline-flex items-center gap-1"
-        >
-          Insight Idea <ExternalLink size={12} />
-        </a>{" "}
-        — 注册律师事务所 + MARA 持牌移民代理。RedBridge 负责职业与雇主匹配。
-      </>
-    ),
-  },
-  {
-    question: "RedBridge Consulting专注于哪些行业和职业？",
-    answer:
-      "我们专精于三大领域：会计与金融（CAANZ 评估），ICT 与科技（ACS 评估），和市场与商业（AMI 评估）。",
-  },
-  {
-    question: "RedBridge Consulting公司在哪里？你们提供在线咨询吗？",
-    answer: (
+    );
+  }
+
+  if (item.addressLabel) {
+    return (
       <div className="space-y-2">
-        <p>
-          公司地址：
-          <strong>
-            Level 9, Tower 3, 18–38 Siddeley Street, Docklands VIC 3008
-          </strong>
-        </p>
+        <p>{item.addressLabel}<strong>{item.address}</strong></p>
         <div className="flex flex-wrap gap-4 mt-4">
-          <a
-            href="tel:0399617301"
-            className="flex items-center gap-2 text-[#7c5a43] font-bold"
-          >
-            <Phone size={16} /> 03 9961 7301
+          <a href={`tel:${item.phone?.replace(/\s/g, "")}`}
+            className="flex items-center gap-2 text-[#7c5a43] font-bold">
+            <Phone className="h-4 w-4" aria-hidden="true" /> {item.phone}
           </a>
-          <Link
-            href="/booking"
-            className="flex items-center gap-2 text-[#b45309] font-bold"
-          >
-            <MessageCircle size={16} /> 在线预约咨询
+          <Link href="/booking" className="flex items-center gap-2 text-[#b45309] font-bold">
+            <MessageCircle className="h-4 w-4" aria-hidden="true" /> {item.onlineBooking}
           </Link>
         </div>
       </div>
-    ),
-  },
-];
+    );
+  }
+
+  return null;
+}
 
 export const FAQSection = () => {
+  const t = useTranslations("faq");
+  const items = t.raw("items") as FAQRawItem[];
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <section id="faq" className="bg-[#fbf9f4] py-24 px-[5%]">
       <div className="max-w-[900px] mx-auto">
-        {/* 标题区域 */}
         <div className="text-center mb-16">
           <div className="text-[0.75rem] font-bold tracking-[0.2em] text-[#a28e7e] uppercase mb-4 flex items-center justify-center gap-2">
-            <span className="w-8 h-[1px] bg-[#a28e7e]/40"></span>
-            常见问题
-            <span className="w-8 h-[1px] bg-[#a28e7e]/40"></span>
+            <span className="w-8 h-px bg-[#a28e7e]/40"></span>
+            {t("eyebrow")}
+            <span className="w-8 h-px bg-[#a28e7e]/40"></span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#2d241e] mb-6">
-            常见<span className="text-[#7c5a43] italic ml-2">问题</span>解答
+            {t("headingMain")}
+            <span className="text-[#7c5a43] italic ml-2">{t("headingHighlight")}</span>
+            {t("headingSuffix")}
           </h2>
-          <p className="text-[#928276] text-lg">
-            如果您有更多的问题，欢迎免费咨询
-          </p>
+          <p className="text-[#928276] text-lg">{t("description")}</p>
         </div>
 
-        {/* 手风琴列表 */}
         <div className="space-y-4">
-          {faqData.map((item, index) => {
+          {items.map((item, index) => {
             const isOpen = activeIndex === index;
             return (
               <div
@@ -216,24 +147,17 @@ export const FAQSection = () => {
                   onClick={() => setActiveIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
-                  <span
-                    className={`text-lg font-bold transition-colors ${isOpen ? "text-[#7c5a43]" : "text-[#2d241e]"}`}
-                  >
+                  <span className={`text-lg font-bold transition-colors ${isOpen ? "text-[#7c5a43]" : "text-[#2d241e]"}`}>
                     {item.question}
                   </span>
                   <ChevronDown
-                    size={20}
-                    className={`text-[#a28e7e] transition-transform duration-300 ${isOpen ? "rotate-180 text-[#7c5a43]" : ""}`}
+                    className={`h-5 w-5 text-[#a28e7e] transition-transform duration-300 shrink-0 ${isOpen ? "rotate-180 text-[#7c5a43]" : ""}`}
+                    aria-hidden="true"
                   />
                 </button>
-
-                <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                >
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-6 pt-0 text-[#928276] leading-relaxed border-t border-[#e8dfd4]/50">
-                    {item.answer}
+                    {renderAnswer(item)}
                   </div>
                 </div>
               </div>

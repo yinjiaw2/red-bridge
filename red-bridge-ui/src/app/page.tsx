@@ -8,6 +8,8 @@ import ProcessSection from "@/components/home/ProcessSection";
 import ProgramsSection from "@/components/home/ProgramsSection";
 import StatsSection from "@/components/home/StatusSection";
 import EmployerNetwork from "@/components/home/EmployerNetworkSection";
+import Footer from "@/components/home/Footer";
+import FAQSection from "@/components/home/FaqSection";
 
 export default function Home() {
   return (
@@ -23,6 +25,8 @@ export default function Home() {
         <ProcessSection />
         <ProgramsSection />
         <StatsSection />
+        <FAQSection />
+        <Footer />
       </main>
     </>
   );

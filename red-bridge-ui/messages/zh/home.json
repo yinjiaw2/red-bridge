@@ -171,5 +171,70 @@
       "separator": " 或 ",
       "booking": "预约免费初步评估"
     }
+  },
+  "contact": {
+    "eyebrow": "联系我们",
+    "headingMain": "您的第一步是",
+    "headingHighlight": "免费的",
+    "description": "预约免费咨询。我们会基于您的背景进行评估，并明确是否适合推进和最佳方案。",
+    "addressTitle": "公司地址",
+    "addressLine1": "Level 9, Tower 3",
+    "addressLine2": "18–38 Siddeley Street",
+    "addressLine3": "Docklands VIC 3008",
+    "addressSub": "距 Southern Cross 车站步行 5 分钟",
+    "phoneTitle": "欢迎致电我们",
+    "phoneNumber": "03 9961 7301",
+    "phoneTime1": "周一至周四 12pm–6pm",
+    "phoneTime2": "周五 12pm–5pm",
+    "emailTitle": "邮件联系",
+    "emailLink": "给我们写信",
+    "emailTime1": "24 小时内回复",
+    "emailTime2": "公共假期除外",
+    "ctaMain": "预约免费咨询",
+    "ctaSubPrefix": "不确定您是否符合条件？",
+    "ctaSubLink": "申请免费资格评估"
+  },
+  "credentials": {
+    "googleRating": "Google 评分",
+    "registeredCompany": "注册公司",
+    "companyName": "RedBridge Consulting Pty Ltd",
+    "licensedPartner": "持牌移民律师合作伙伴",
+    "partnerName": "Insight Idea — 注册律师事务所",
+    "headquarters": "总部",
+    "hqAddress": "Docklands VIC 3008",
+    "established": "成立时间",
+    "establishedText": "始于2018 · 2024年注册"
+  },
+  "footer": {
+    "brandSubtitle": "连接梦想与机遇",
+    "description1": "一家注册的澳洲咨询公司，致力于真实的职业发展和移民路径支持。所有移民服务由",
+    "descriptionLink": "Insight Idea",
+    "description2": "提供 — 持牌移民代理和注册澳洲律师事务所。",
+    "servicesTitle": "服务项目",
+    "services": [
+      { "name": "职业起航计划", "href": "/services/career-launch" },
+      { "name": "189 技术独立移民", "href": "/services/189-pathway" },
+      { "name": "190 州提名移民", "href": "/services/190-pathway" },
+      { "name": "491 偏远地区移民", "href": "/services/491-pathway" },
+      { "name": "482/186 雇主担保移民", "href": "/services/employer-pathway" },
+      { "name": "紧急签证方案", "href": "/services/emergency" }
+    ],
+    "companyTitle": "公司",
+    "company": [
+      { "name": "新闻与更新", "href": "/news" },
+      { "name": "关于我们", "href": "/about-us" },
+      { "name": "成功案例", "href": "/success-cases" },
+      { "name": "雇主合作", "href": "/for-employers" },
+      { "name": "加入我们", "href": "/join-our-team" },
+      { "name": "预约咨询", "href": "/booking" }
+    ],
+    "legal": {
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "copyright": "版权声明",
+      "sitemap": "网站地图"
+    },
+    "copyrightText": "© 2026 RedBridge Consulting Pty Ltd · ABN: 88 678 186 091",
+    "disclaimer": "Docklands VIC 3008 · Migration services provided by Insight Idea (licensed migration agent) · All rights reserved."
   }
 }
