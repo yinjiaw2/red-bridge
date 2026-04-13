@@ -2,7 +2,7 @@
   "nav": {
     "ariaLabel": "Main navigation",
     "home": "Home",
-    "services": "Services",
+    "services": "Programs",
     "servicesDropdown": {
       "careerLaunch": "Career Launch Program",
       "pathway189": "189 Skilled Independent",
@@ -12,8 +12,8 @@
       "emergency": "Emergency Visa Solutions"
     },
     "successCases": "Success Stories",
-    "forEmployers": "For Employers",
-    "about": "About Us"
+    "forEmployers": "Employers",
+    "about": "About"
   },
   "cta": "Free Consultation",
   "actions": {

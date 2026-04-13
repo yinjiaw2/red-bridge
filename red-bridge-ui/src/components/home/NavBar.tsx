@@ -136,25 +136,22 @@ export default function NavBar() {
   return (
     <>
       {/* ── Fixed header bar ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-white shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-white shadow-sm font-(family-name:--font-geist-sans) font-semibold">
         <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 flex items-center justify-between gap-4">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 shrink-0"
+            className="flex items-center shrink-0"
             onClick={closeAll}
           >
             <Image
-              src="/images/red-bridge-logo.png"
+              src="/rb-logo.png"
               alt="RedBridge Consulting"
-              width={38}
-              height={38}
+              width={140}
+              height={40}
               className="object-contain"
               priority
             />
-            <span className="font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">
-              RedBridge Consulting
-            </span>
           </Link>
 
           {/* ── Desktop navigation ── */}
@@ -242,11 +239,11 @@ export default function NavBar() {
                 aria-label={t("localeSwitch.ariaLabel")}
                 className="text-sm text-gray-500 hover:text-red-600 transition-colors whitespace-nowrap"
               >
-                {t(`localeSwitch.${targetLocale}`)} →
+                {t(`localeSwitch.${targetLocale}`)}
               </button>
               <Link
                 href="/booking"
-                className="px-4 py-2 rounded-full text-sm font-medium text-white bg-linear-to-r from-red-600 to-rose-500 hover:from-red-700 hover:to-rose-600 transition-all shadow-sm whitespace-nowrap"
+                className="px-4 py-2 rounded-lg text-sm font-medium text-[#1a1a1a] bg-[#D4A017] hover:bg-[#b88a10] hover:shadow-[0_0_12px_rgba(212,160,23,0.4)] transition-all shadow-sm whitespace-nowrap"
               >
                 {t("cta")}
               </Link>
