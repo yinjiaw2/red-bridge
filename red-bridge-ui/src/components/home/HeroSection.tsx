@@ -38,9 +38,9 @@ export default function HeroSection() {
             <span>{t("badge")}</span>
           </div>
 
-          <h1 className="mt-6 text-4xl leading-tight font-semibold tracking-tight text-stone-950 sm:text-5xl lg:text-7xl">
+          <h1 className="mt-6 text-4xl leading-tight font-semibold tracking-tight text-stone-950 sm:text-5xl lg:text-7xl font-serif">
             {t("titlePrefix")}
-            <span className="mx-2 inline-block bg-[linear-gradient(135deg,#b45309,#f97316)] bg-clip-text text-transparent">
+            <span className="mx-2 inline-block bg-[linear-gradient(135deg,#b45309,#f97316)] bg-clip-text text-transparent font-serif">
               {t("titleHighlight")}
             </span>
             {t("titleMiddle")}
