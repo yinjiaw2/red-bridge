@@ -208,26 +208,33 @@
     ]
   },
   "trustSafety": {
-    "heading": "We know what you're worried about.",
-    "subheading": "You may have already heard stories like these:",
-    "description": "Fake job listings, hidden fees that only appear after payment, promises that vanish after a transfer. RedBridge exists to draw a clear line against these practices. Our word is our bond — and you're welcome to verify it yourself.",
+    "eyebrow": "Why RedBridge?",
+    "heading": "We Know What You're",
+    "headingHighlight": "Thinking",
+    "headingSuffix": "— Because We've Seen It All.",
+    "description": "This industry has its risks. Fake job listings. Hidden fees. Empty promises. We built RedBridge to be the verifiable opposite — transparent, professional, and results-driven.",
+    "primaryCta": "Book a Free Assessment",
+    "secondaryCta": "See How We're Different",
     "items": [
       {
-        "label": "Licensed migration lawyer partner",
+        "label": "Licensed Migration Law Partner",
         "linkText": "Insight Idea — Registered Law Firm ↗",
+        "description": "Your pathway is designed and reviewed by qualified professionals.",
         "href": "https://www.insightidea.com.au/en/success",
         "iconKey": "certificate"
       },
       {
-        "label": "Australian registered company",
-        "linkText": "Verify our ABN on ABR ↗",
+        "label": "Australian Registered Company",
+        "linkText": "Verify our ABN on the ABR ↗",
+        "description": "We're a legitimate Australian business you can trust.",
         "href": "https://abr.business.gov.au/ABN/View?abn=88678186091",
         "iconKey": "building"
       },
       {
-        "label": "Contact us",
-        "linkText": "Send us an email ↗",
-        "href": "mailto:hello@redbridge.com.au",
+        "label": "Direct Contact",
+        "linkText": "info@red-bridge.com.au",
+        "description": "Talk to real people who care about your outcome.",
+        "href": "mailto:info@red-bridge.com.au",
         "iconKey": "envelope"
       }
     ]
