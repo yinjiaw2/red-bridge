@@ -1,16 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import {
-  X,
-  Check,
-  ArrowRight,
-  Search,
-  CreditCard,
-  ShieldOff,
-  ClipboardX,
-  LayoutList,
-  UserMinus,
-} from "lucide-react";
+import { X, Check, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import {
   Table,
   TableBody,
@@ -19,24 +10,25 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { comparisonData } from "@/lib/comparisonCategory";
+import { comparisonMeta, ICON_MAP } from "@/lib/comparisonCategory";
 
 export const ComparisonSection = () => {
+  const t = useTranslations("comparison");
+
   return (
     <section id="why-us" className="bg-white py-24 px-[5%]">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16">
           <span className="text-[0.75rem] font-bold tracking-[0.2em] text-[#a28e7e] uppercase block mb-4">
-            Why RedBridge?
+            {t("eyebrow")}
           </span>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#2d241e] mb-6">
-            How We&apos;re{" "}
-            <em className="text-[#7c5a43] not-italic">Different</em>
+            {t("headingMain")}{" "}
+            <em className="text-[#A30000] not-italic">{t("headingHighlight")}</em>
           </h2>
           <p className="text-[#928276] text-lg max-w-2xl mx-auto leading-relaxed">
-            The migration industry has a trust problem. We built RedBridge to be
-            the verifiable opposite.
+            {t("description")}
           </p>
         </div>
 
@@ -46,24 +38,24 @@ export const ComparisonSection = () => {
             <TableHeader className="[&_tr]:border-b-0">
               <TableRow className="hover:bg-transparent border-b border-[#e8dfd4] align-top">
                 <TableHead className="py-6 px-6 text-[#6b7280] font-bold text-xs uppercase tracking-widest w-[22%] whitespace-normal h-auto border-b border-[#e8dfd4]">
-                  You Deserve Better
+                  {t("col1")}
                 </TableHead>
-                <TableHead className="py-6 px-6 text-[#a28e7e] font-bold text-xs uppercase tracking-widest w-[33%] border-l bg-[#F2E1D6] whitespace-normal h-auto ">
+                <TableHead className="py-6 px-6 text-[#a28e7e] font-bold text-xs uppercase tracking-widest w-[33%] border-l bg-[#F2E1D6] whitespace-normal h-auto">
                   <div className="flex items-center gap-2">
                     <X size={14} className="opacity-50" aria-hidden="true" />
-                    Other Agencies
+                    {t("col2")}
                   </div>
                 </TableHead>
                 <TableHead className="py-6 px-6 text-white font-bold text-xs uppercase tracking-widest w-[45%] border-l border-[#e8dfd4] whitespace-normal h-auto bg-[#A20000]">
                   <div className="flex items-center gap-2">
                     <Check size={14} aria-hidden="true" />
-                    RedBridge Consulting
+                    {t("col3")}
                   </div>
                 </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {comparisonData.map((row, index) => (
+              {comparisonMeta.map((meta, index) => (
                 <TableRow
                   key={index}
                   className="border-b border-[#e8dfd4] last:border-b-0 hover:bg-brandbackground/40 transition-colors align-top"
@@ -72,14 +64,14 @@ export const ComparisonSection = () => {
                   <TableCell className="py-6 px-6 text-[#374151] text-sm whitespace-normal bg-[#FFFBFA]">
                     <div className="flex gap-3 items-start">
                       <span className="mt-0.5 shrink-0 text-[#6b7280]">
-                        {row.deserve.icon}
+                        {ICON_MAP[meta.iconKey]}
                       </span>
                       <div>
                         <p className="font-semibold text-[#1f2937] leading-snug mb-1">
-                          {row.deserve.title}
+                          {t(`rows.${index}.deserve.title`)}
                         </p>
                         <p className="text-xs text-[#6b7280] leading-relaxed">
-                          {row.deserve.description}
+                          {t(`rows.${index}.deserve.description`)}
                         </p>
                       </div>
                     </div>
@@ -95,10 +87,10 @@ export const ComparisonSection = () => {
                       />
                       <div>
                         <p className="font-medium text-[#7c6a60] leading-snug mb-1">
-                          {row.others.title}
+                          {t(`rows.${index}.others.title`)}
                         </p>
                         <p className="text-xs text-[#a28e7e] leading-relaxed">
-                          {row.others.description}
+                          {t(`rows.${index}.others.description`)}
                         </p>
                       </div>
                     </div>
@@ -116,10 +108,23 @@ export const ComparisonSection = () => {
                       </span>
                       <div>
                         <p className="font-bold text-[#2d241e] leading-snug mb-1">
-                          {row.redBridge.title}
+                          {t(`rows.${index}.redBridge.title`)}
                         </p>
                         <p className="text-xs text-[#7c5a43] leading-relaxed">
-                          {row.redBridge.description}
+                          {meta.richRedBridge
+                            ? t.rich(`rows.${index}.redBridge.description`, {
+                                link: (chunks) => (
+                                  <a
+                                    href="https://www.insightidea.com.au/en/success"
+                                    target="_blank"
+                                    rel="noopener"
+                                    className="font-bold underline underline-offset-2"
+                                  >
+                                    {chunks}
+                                  </a>
+                                ),
+                              })
+                            : t(`rows.${index}.redBridge.description`)}
                         </p>
                       </div>
                     </div>
@@ -130,20 +135,34 @@ export const ComparisonSection = () => {
           </Table>
         </div>
 
-        {/* Footer CTA */}
-        <div className="mt-12 text-center">
-          <p className="text-[#928276] mb-6">
-            Still have questions?{" "}
+        {/* CTA Card */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl bg-[#FAF5F0] border border-[#e8dfd4] px-8 py-6">
+          <div className="flex items-start gap-4">
+            <div className="w-1 self-stretch rounded-full bg-[#A20000] shrink-0" />
+            <div>
+              <p className="text-lg font-bold text-[#1f2937]">
+                {t("cta.heading")}
+              </p>
+              <p className="text-sm text-[#928276] mt-0.5">
+                {t("cta.subheading")}
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 shrink-0">
             <Link
               href="/booking"
-              className="text-[#b45309] font-bold hover:underline underline-offset-4 inline-flex items-center gap-1 transition-all"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#D4A017] px-6 py-3 text-sm font-bold text-[#1f2937] hover:bg-[#c4920f] transition-colors"
             >
-              Book a free consultation{" "}
+              {t("cta.primaryBtn")}
               <ArrowRight size={16} aria-hidden="true" />
             </Link>
-          </p>
-          <div className="text-xs text-[#a28e7e] uppercase tracking-widest font-bold">
-            — No cost, no commitment —
+            <Link
+              href="#process"
+              className="inline-flex items-center gap-2 rounded-xl border-2 border-[#A20000] px-6 py-3 text-sm font-bold text-[#A20000] hover:bg-[#A20000]/5 transition-colors"
+            >
+              {t("cta.secondaryBtn")}
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </div>
