@@ -3,17 +3,17 @@
     "title": "Hello, World!"
   },
   "hero": {
-    "badge": "Australian registered consulting firm, established in 2018",
-    "titlePrefix": "Melbourne",
-    "titleHighlight": "trusted",
-    "titleMiddle": "",
-    "titleSuffix": "career consulting experts",
-    "introLead": "200+ skilled professionals",
-    "introCountriesPrefix": "from",
-    "introCountriesSuffix": "and 23 other countries",
-    "description": "RedBridge Consulting connects high-quality talent with certified Australian employers through precise matching. Every pathway we recommend is real, and every employer role is individually vetted by our team in advance.",
-    "primaryCta": "Start your migration journey with a free consultation",
-    "secondaryCta": "View real success stories →",
+    "badge": "Registered Australian Consultancy",
+    "title": "Build Your Career in <highlight>Australia.</highlight><br></br>We Make It Real.",
+    "description": "Get placed with verified employers. Gain the right experience. Move from study to 482 visa and PR with confidence.",
+    "primaryButton": "Get Free Assessment",
+    "secondaryButton": "View Programs",
+    "imageAlt": "Career in Australia",
+    "stats": {
+      "placements": "Successful Placements",
+      "assessments": "Assessments Approved",
+      "teamActive": "Team Active",
+      "since": "Since 2018"},
     "countries": [
       {
         "label": "India",

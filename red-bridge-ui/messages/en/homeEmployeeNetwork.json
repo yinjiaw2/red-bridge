@@ -1,0 +1,33 @@
+{
+  "employerNetwork": {
+    "eyebrow": "OUR EMPLOYER NETWORK",
+    "headingMain": "The Jobs Are",
+    "headingHighlight": "Real.",
+    "description": "Every employer in our network is individually verified for active 482 sponsorship approval before we introduce them to you.",
+    "feature1Title": "Verified Sponsorship",
+    "feature1Desc": "We confirm 482 approval before sharing any employer.",
+    "feature2Title": "Full Transparency",
+    "feature2Desc": "You'll see the company, industry, and approval status during consultation.",
+    "feature3Title": "No Vague Promises",
+    "feature3Desc": "Real companies. Real roles. Real opportunities.",
+    "processBadge": "OUR VERIFICATION PROCESS",
+    "step1Title": "Check Sponsorship Approval",
+    "step1Desc": "Confirm active 482 sponsorship status with official records.",
+    "step2Title": "Review Company & Role",
+    "step2Desc": "Assess business legitimacy, job duties, and suitability.",
+    "step3Title": "Ongoing Monitoring",
+    "step3Desc": "Regularly recheck status to ensure it stays valid.",
+    "verifiedBadge": "All employers verified before listing. Always.",
+    "industriesEyebrow": "OUR VERIFIED EMPLOYERS BY INDUSTRY",
+    "industriesHeading": "Opportunities Across Key Industries",
+    "seeAll": "See All Industries",
+    "verifiedLabel": "VERIFIED EMPLOYERS",
+    "categories": [
+      { "title": "Technology & ICT", "count": 12, "iconKey": "monitor" },
+      { "title": "Accounting & Finance", "count": 8, "iconKey": "calculator" },
+      { "title": "Marketing & Communications", "count": 6, "iconKey": "megaphone" },
+      { "title": "Engineering", "count": 5, "iconKey": "hardHat" },
+      { "title": "Healthcare", "count": 4, "iconKey": "heartPulse" }
+    ]
+  }
+}
