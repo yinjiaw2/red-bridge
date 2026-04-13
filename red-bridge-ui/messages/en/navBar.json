@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "home": "Home",
+    "services": "Services",
+    "servicesDropdown": {
+      "careerLaunch": "Career Launch Program",
+      "pathway189": "189 Skilled Independent",
+      "pathway190": "190 State Nominated",
+      "pathway491": "491 Regional Skilled",
+      "employerPathway": "482/186 Employer Sponsored",
+      "emergency": "Emergency Visa Solutions"
+    },
+    "successCases": "Success Stories",
+    "forEmployers": "For Employers",
+    "about": "About Us"
+  },
+  "cta": "Free Consultation",
+  "actions": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "localeSwitch": {
+    "zh": "中文",
+    "en": "English",
+    "ariaLabel": "Switch language"
+  },
+  "social": {
+    "whatsapp": "WhatsApp",
+    "wechat": "WeChat",
+    "tiktok": "TikTok",
+    "xiaohongshu": "Xiaohongshu",
+    "instagram": "Instagram"
+  },
+  "qrModal": {
+    "close": "Close",
+    "wechat": "Scan to add WeChat",
+    "tiktok": "Scan to follow TikTok"
+  }
+}

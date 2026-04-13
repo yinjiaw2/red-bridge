@@ -1,5 +1,64 @@
 {
   "HomePage": {
     "title": "Hello, World!"
+  },
+  "hero": {
+    "badge": "Australian registered consulting firm, established in 2018",
+    "titlePrefix": "Melbourne",
+    "titleHighlight": "trusted",
+    "titleMiddle": "",
+    "titleSuffix": "career consulting experts",
+    "introLead": "200+ skilled professionals",
+    "introCountriesPrefix": "from",
+    "introCountriesSuffix": "and 23 other countries",
+    "description": "RedBridge Consulting connects high-quality talent with certified Australian employers through precise matching. Every pathway we recommend is real, and every employer role is individually vetted by our team in advance.",
+    "primaryCta": "Start your migration journey with a free consultation",
+    "secondaryCta": "View real success stories →",
+    "countries": [
+      {
+        "label": "India",
+        "title": "India"
+      },
+      {
+        "label": "China",
+        "title": "China"
+      },
+      {
+        "label": "Philippines",
+        "title": "Philippines"
+      },
+      {
+        "label": "Vietnam",
+        "title": "Vietnam"
+      },
+      {
+        "label": "Nepal",
+        "title": "Nepal"
+      }
+    ],
+    "trustPoints": [
+      "Verified employer resources",
+      "Licensed migration lawyer partners",
+      "Free initial consultation",
+      "200+ successful placements since 2018"
+    ],
+    "stats": [
+      {
+        "value": "200+",
+        "label": "Career placements\nSince 2018"
+      },
+      {
+        "value": "4.9★",
+        "label": "Client\naverage rating"
+      },
+      {
+        "value": "300+",
+        "label": "Skills assessments\npassed first try"
+      },
+      {
+        "value": "10+",
+        "label": "Verified\nemployer partners"
+      }
+    ]
   }
 }

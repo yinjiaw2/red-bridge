@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "ariaLabel": "主导航",
+    "home": "首页",
+    "services": "服务项目",
+    "servicesDropdown": {
+      "careerLaunch": "职业起航计划",
+      "pathway189": "189 技术独立移民",
+      "pathway190": "190 州提名移民",
+      "pathway491": "491 偏远地区移民",
+      "employerPathway": "482/186 雇主担保移民",
+      "emergency": "紧急签证方案"
+    },
+    "successCases": "成功案例",
+    "forEmployers": "雇主合作",
+    "about": "关于我们"
+  },
+  "cta": "免费咨询",
+  "actions": {
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "localeSwitch": {
+    "zh": "中文",
+    "en": "English",
+    "ariaLabel": "切换语言"
+  },
+  "social": {
+    "whatsapp": "WhatsApp",
+    "wechat": "微信",
+    "tiktok": "抖音",
+    "xiaohongshu": "小红书",
+    "instagram": "Instagram"
+  },
+  "qrModal": {
+    "close": "关闭",
+    "wechat": "扫码添加微信",
+    "tiktok": "扫码关注抖音"
+  }
+}

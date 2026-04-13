@@ -1,14 +1,21 @@
 import {getRequestConfig} from 'next-intl/server';
-import {hasLocale} from 'next-intl';
+import {cookies} from 'next/headers';
 import fs from 'fs';
 import path from 'path';
-import {routing} from './routing';
+
+const LOCALES = new Set(['en', 'zh']);
+const DEFAULT_LOCALE = 'en';
+const LOCALE_COOKIE = 'NEXT_LOCALE';
 
 export default getRequestConfig(async ({requestLocale}) => {
   const requested = await requestLocale;
-  const locale = hasLocale(routing.locales, requested)
-    ? requested
-    : routing.defaultLocale;
+  const cookieStore = await cookies();
+  const cookieLocale = cookieStore.get(LOCALE_COOKIE)?.value;
+  const locale = LOCALES.has(requested ?? '')
+    ? requested!
+    : LOCALES.has(cookieLocale ?? '')
+      ? cookieLocale!
+      : DEFAULT_LOCALE;
 
   const messagesDir = path.join(process.cwd(), 'messages', locale);
   const files = fs.readdirSync(messagesDir).filter((f) => f.endsWith('.json'));
