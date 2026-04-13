@@ -40,7 +40,7 @@ export const ComparisonSection = () => {
                 <TableHead className="py-6 px-6 text-[#6b7280] font-bold text-xs uppercase tracking-widest w-[22%] whitespace-normal h-auto border-b border-[#e8dfd4]">
                   {t("col1")}
                 </TableHead>
-                <TableHead className="py-6 px-6 text-[#a28e7e] font-bold text-xs uppercase tracking-widest w-[33%] border-l bg-[#F2E1D6] whitespace-normal h-auto">
+                <TableHead className="hidden md:table-cell py-6 px-6 text-[#a28e7e] font-bold text-xs uppercase tracking-widest w-[33%] border-l bg-[#F2E1D6] whitespace-normal h-auto">
                   <div className="flex items-center gap-2">
                     <X size={14} className="opacity-50" aria-hidden="true" />
                     {t("col2")}
@@ -78,7 +78,7 @@ export const ComparisonSection = () => {
                   </TableCell>
 
                   {/* Other Agencies */}
-                  <TableCell className="py-6 px-6 text-[#928276] text-sm whitespace-normal border-l bg-[#FFF4ED]">
+                  <TableCell className="hidden md:table-cell py-6 px-6 text-[#928276] text-sm whitespace-normal border-l bg-[#FFF4ED]">
                     <div className="flex gap-3 items-start">
                       <X
                         size={14}
