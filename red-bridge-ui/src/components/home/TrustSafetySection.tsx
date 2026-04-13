@@ -76,10 +76,10 @@ export const TrustSafetySection = () => {
                 key={index}
                 className="flex items-start gap-4 p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/8 transition-colors"
               >
-                <div className="shrink-0 mt-0.5 p-2 rounded-lg bg-white/10">
+                <div className="shrink-0 mt-0.5 p-2 rounded-lg bg-[#D4A017]/15">
                   <Icon
                     size={18}
-                    className="text-white/70"
+                    className="text-[#D4A017]"
                     strokeWidth={1.5}
                     aria-hidden="true"
                   />
