@@ -61,6 +61,31 @@
       }
     ]
   },
+  "trustSafety": {
+    "heading": "We know what you're worried about.",
+    "subheading": "You may have already heard stories like these:",
+    "description": "Fake job listings, hidden fees that only appear after payment, promises that vanish after a transfer. RedBridge exists to draw a clear line against these practices. Our word is our bond — and you're welcome to verify it yourself.",
+    "items": [
+      {
+        "label": "Licensed migration lawyer partner",
+        "linkText": "Insight Idea — Registered Law Firm ↗",
+        "href": "https://www.insightidea.com.au/en/success",
+        "iconKey": "certificate"
+      },
+      {
+        "label": "Australian registered company",
+        "linkText": "Verify our ABN on ABR ↗",
+        "href": "https://abr.business.gov.au/ABN/View?abn=88678186091",
+        "iconKey": "building"
+      },
+      {
+        "label": "Contact us",
+        "linkText": "Send us an email ↗",
+        "href": "mailto:hello@redbridge.com.au",
+        "iconKey": "envelope"
+      }
+    ]
+  },
   "userScenario": {
     "eyebrow": "What kind of help do you need most right now?",
     "scenarios": [

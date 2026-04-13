@@ -73,7 +73,7 @@ export const UserScenarioSection = () => {
                   {item.description}
                 </p>
 
-                <span className="text-base font-bold text-[#b4907a] group-hover:text-[#a17c66] transition-colors">
+                <span className="text-base font-bold text-primary group-hover:text-[#a17c66] transition-colors">
                   {item.linkText}
                 </span>
               </Link>
@@ -86,14 +86,14 @@ export const UserScenarioSection = () => {
           <span className="text-[#a28e7e]">{t("footer.prefix")}</span>{" "}
           <Link
             href="#programs"
-            className="text-[#b4907a] font-bold hover:text-[#a17c66]"
+            className="text-primary font-bold hover:text-[#a17c66]"
           >
             {t("footer.learnMore")}
           </Link>
           {t("footer.separator")}
           <Link
             href="/booking"
-            className="text-[#b4907a] font-bold hover:text-[#a17c66]"
+            className="text-primary font-bold hover:text-[#a17c66]"
           >
             {t("footer.booking")}
           </Link>

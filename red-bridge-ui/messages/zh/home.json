@@ -61,6 +61,31 @@
       }
     ]
   },
+  "trustSafety": {
+    "heading": "我们知道您在担心什么。",
+    "subheading": "这些情况，您或许早已听过：",
+    "description": "虚假职位信息、付款后才出现的隐藏附加费用、转账后不再兑现的承诺。RedBridge 的存在，正是为了与这些做法划清界限。言而有信是我们的宗旨，欢迎您亲自验证。",
+    "items": [
+      {
+        "label": "持牌移民律师合作伙伴",
+        "linkText": "Insight Idea — 注册律师事务所 ↗",
+        "href": "https://www.insightidea.com.au/en/success",
+        "iconKey": "certificate"
+      },
+      {
+        "label": "澳洲注册公司",
+        "linkText": "在ABR上验证我们的ABN ↗",
+        "href": "https://abr.business.gov.au/ABN/View?abn=88678186091",
+        "iconKey": "building"
+      },
+      {
+        "label": "联系我们",
+        "linkText": "给我们写email ↗",
+        "href": "mailto:hello@redbridge.com.au",
+        "iconKey": "envelope"
+      }
+    ]
+  },
   "userScenario": {
     "eyebrow": "您现在最需要什么帮助？",
     "scenarios": [

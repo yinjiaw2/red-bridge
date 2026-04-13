@@ -96,7 +96,7 @@ export default function HeroSection() {
             </Link>
             <Link
               href="/success-cases"
-              className="inline-flex h-14 items-center justify-center rounded-full border-2 border-[#b4907a]/30 bg-[#fbf9f4]/50 px-10 text-base font-bold text-[#7c5a43] transition hover:bg-[#fbf9f4]"
+              className="inline-flex h-14 items-center justify-center rounded-full border-2 border-primary/30 bg-[#fbf9f4]/50 px-10 text-base font-bold text-[#7c5a43] transition hover:bg-[#fbf9f4]"
             >
               {t("secondaryCta")}
             </Link>
