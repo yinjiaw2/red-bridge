@@ -396,36 +396,4 @@
     "established": "成立时间",
     "establishedText": "始于2018 · 2024年注册"
   },
-  "footer": {
-    "brandSubtitle": "连接梦想与机遇",
-    "description1": "一家注册的澳洲咨询公司，致力于真实的职业发展和移民路径支持。所有移民服务由",
-    "descriptionLink": "Insight Idea",
-    "description2": "提供 — 持牌移民代理和注册澳洲律师事务所。",
-    "servicesTitle": "服务项目",
-    "services": [
-      { "name": "职业起航计划", "href": "/services/career-launch" },
-      { "name": "189 技术独立移民", "href": "/services/189-pathway" },
-      { "name": "190 州提名移民", "href": "/services/190-pathway" },
-      { "name": "491 偏远地区移民", "href": "/services/491-pathway" },
-      { "name": "482/186 雇主担保移民", "href": "/services/employer-pathway" },
-      { "name": "紧急签证方案", "href": "/services/emergency" }
-    ],
-    "companyTitle": "公司",
-    "company": [
-      { "name": "新闻与更新", "href": "/news" },
-      { "name": "关于我们", "href": "/about-us" },
-      { "name": "成功案例", "href": "/success-cases" },
-      { "name": "雇主合作", "href": "/for-employers" },
-      { "name": "加入我们", "href": "/join-our-team" },
-      { "name": "预约咨询", "href": "/booking" }
-    ],
-    "legal": {
-      "privacy": "隐私政策",
-      "terms": "服务条款",
-      "copyright": "版权声明",
-      "sitemap": "网站地图"
-    },
-    "copyrightText": "© 2026 RedBridge Consulting Pty Ltd · ABN: 88 678 186 091",
-    "disclaimer": "Docklands VIC 3008 · Migration services provided by Insight Idea (licensed migration agent) · All rights reserved."
-  }
 }

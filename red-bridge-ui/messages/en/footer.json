@@ -1,0 +1,36 @@
+{
+  "footer": {
+    "logoAlt": "RedBridge Consulting",
+    "tagline": "Connecting Dreams and Opportunities",
+    "descriptionBefore": "A registered Australian consulting company dedicated to genuine career development and migration pathway support. All migration services are provided by ",
+    "descriptionLink": "Insight Idea",
+    "descriptionAfter": " — licensed migration agents and registered Australian law firm.",
+    "servicesTitle": "Services",
+    "services": [
+      { "name": "Career Launch Program", "href": "/services/career-launch" },
+      { "name": "189 Skilled Independent Visa", "href": "/services/189-pathway" },
+      { "name": "190 Skilled Nominated Visa", "href": "/services/190-pathway" },
+      { "name": "491 Skilled Work Regional Visa", "href": "/services/491-pathway" },
+      { "name": "482/186 Employer Sponsored Visa", "href": "/services/employer-pathway" },
+      { "name": "Emergency Visa Solutions", "href": "/services/emergency" }
+    ],
+    "social": {
+      "wechat": "WeChat",
+      "tiktok": "TikTok",
+      "rednote": "RedNote",
+      "instagram": "Instagram"
+    },
+    "siddeleyGroup": "Siddeley Group",
+    "affiliationSuffix": "company — alongside",
+    "partner1": "Insight Idea Law Firm",
+    "partner2": "Good Mood Studio",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "copyright": "Copyright Notice",
+      "sitemap": "Sitemap"
+    },
+    "copyrightText": "© 2026 RedBridge Consulting Pty Ltd · ABN: 88 678 186 091",
+    "disclaimer": "Docklands VIC 3008 · Migration services provided by Insight Idea (licensed migration agent) · All rights reserved."
+  }
+}
