@@ -90,6 +90,101 @@
       }
     ]
   },
+  "programs": {
+    "eyebrow": "我们的项目",
+    "headingMain": "找到您的",
+    "headingHighlight": "移民方案",
+    "description": "选择您的情况以查看最相关的项目。",
+    "mostPopular": "最受欢迎",
+    "viewDetails": "查看详情",
+    "filters": {
+      "all": "显示全部",
+      "graduate": "我是应届毕业生",
+      "employer": "我有感兴趣的雇主",
+      "independent": "我想独立申请"
+    },
+    "items": [
+      {
+        "id": "p1",
+        "category": "employer",
+        "badge": "⭐ 最受欢迎",
+        "price": "From AUD 250,000",
+        "title": "482 / 186 雇主担保",
+        "description": "通过真实担保雇主获得永久居留的最直接途径 — 在您承诺之前完全透明地了解雇主是谁。",
+        "features": [
+          "接入经验证的雇主网络",
+          "签约前分享雇主资料",
+          "简历和面试辅导",
+          "通过 Insight Idea 提供全面法律支持"
+        ],
+        "cta": "查看详情",
+        "href": "/zh/employer-pathway"
+      },
+      {
+        "id": "p2",
+        "category": "graduate",
+        "price": "From AUD 50,000",
+        "title": "职业起航计划",
+        "description": "为需要真实、有薪的澳洲工作经验以获得技术移民资格的应届毕业生 — 而非无薪实习。",
+        "features": [
+          "400+小时真实有薪项目工作",
+          "CAANZ、ACS、AMI认可的工时表",
+          "专业作品集开发",
+          "技能评估保证"
+        ],
+        "cta": "查看详情",
+        "href": "/zh/career-launch"
+      },
+      {
+        "id": "p3",
+        "category": "independent",
+        "price": "From AUD 50,000",
+        "title": "189 独立技术移民",
+        "description": "基于打分的永久居留，无需雇主担保。",
+        "features": [
+          "打分策略与差距分析",
+          "工作经验规划",
+          "技能评估匹配",
+          "专业职业指导"
+        ],
+        "cta": "查看详情",
+        "href": "/zh/189-pathway"
+      },
+      {
+        "id": "p4",
+        "category": "independent",
+        "price": "From AUD 50,000",
+        "title": "190 州提名移民",
+        "description": "通过州提名提升您的分数 — 根据您的职业和个人情况匹配合适的州。",
+        "features": [
+          "针对特定州的提名策略",
+          "目标行业和地区匹配",
+          "基于项目的经验计划",
+          "提名申请支持"
+        ],
+        "cta": "查看详情",
+        "href": "/zh/190-pathway"
+      },
+      {
+        "id": "p5",
+        "category": "independent",
+        "price": "From AUD 50,000",
+        "title": "491 偏远地区移民",
+        "description": "偏远地区移民享有额外加分、更快处理速度，以及通向191永久居留的明确路径。",
+        "features": [
+          "偏远地区雇主联系",
+          "特定地区职业发展",
+          "通向191永久居留的路径",
+          "定制化搬迁支持"
+        ],
+        "cta": "查看详情",
+        "href": "/zh/491-pathway"
+      }
+    ],
+    "footerPrefix": "不确定哪条路径适合？ ",
+    "footerLink": "预约免费咨询",
+    "footerSuffix": " — 我们诚实评估您的选项，包括告诉您是否没有合适的方案。"
+  },
   "employerNetwork": {
     "eyebrow": "我们的雇主资源",
     "headingMain": "所有职位均为",
@@ -171,6 +266,95 @@
       "separator": " 或 ",
       "booking": "预约免费初步评估"
     }
+  },
+  "faq": {
+    "eyebrow": "常见问题",
+    "headingMain": "常见",
+    "headingHighlight": "问题",
+    "headingSuffix": "解答",
+    "description": "如果您有更多的问题，欢迎免费咨询",
+    "items": [
+      {
+        "question": "RedBridge Consulting的职位安置是否真实且经过验证？",
+        "answer": "是的。所有合作雇主均具备当前有效的482担保资格。公司名称、行业及担保状态等信息，将会在免费咨询时直接提供。无需付费，也无需先做决定。如果没有适合您的方案，我们会在咨询时直接说明，不会收取任何费用。"
+      },
+      {
+        "question": "482和186雇主担保签证有什么区别？",
+        "bold1": "482（临时技能短缺）",
+        "text1": "签证可让您在澳洲为担保雇主工作，最长可达4年。",
+        "bold2": "186（雇主提名）",
+        "text2": "签证可直接获得永久居留。不少客户先通过482入境，在同一雇主下工作2–3年后转186过渡签证。完整方案会在免费咨询时为您说明。"
+      },
+      {
+        "question": "在澳大利亚，482雇主担保签证获批需要多长时间？",
+        "prefix": "482签证获批时间通常为",
+        "bold": "3–12",
+        "suffix": "个月。具体时间取决于职业类型、雇主是否已具备担保资格，以及移民局当前审理进度。我们会根据您的情况，在免费咨询时提供更具体的时间预估。"
+      },
+      {
+        "question": "维多利亚州190州提名获批需要多长时间？",
+        "answer": "维州190州担保审批周期通常为2–12个月。时间主要取决于职业、当前分数以及当期邀请情况。我们会根据您的职业匹配更有机会的州，并在咨询时给出实际时间预估。"
+      },
+      {
+        "question": "国际学生可以在没有永久居留权或工作的情况下申请吗？",
+        "prefix": "当然可以。我们的方案面向不同阶段的留学生与技术人才。我们的",
+        "linkText": "职业起航计划",
+        "linkHref": "/zh/career-launch",
+        "suffix": "可以帮助留学生积累符合移民要求的本地工作经验。而雇主担保方案则可以直接对接提供岗位与提名支持的雇主。无需PR，也不需要工作即可开始规划。"
+      },
+      {
+        "question": "在澳大利亚，技术移民需要多少费用？",
+        "prefix": "在RedBridge, 您的首次咨询是",
+        "bold": "完全免费",
+        "suffix": "的。我们的项目费用从 AUD 50,000 起，具体根据服务类型而定。而政府签证申请费用另计，通常在 AUD 3,000–8,000 之间，取决于签证类别。所有费用均写入正式客户协议，包括服务费、政府费用及 Insight Idea 律所的法律费用，费用结构清晰透明。"
+      },
+      {
+        "question": "移民咨询费用是否可以分期付款？",
+        "answer": "当然可以。我们提供3-4阶段里程碑式的付款结构，您仅需在成功节点付款，无需一次性付清。所有付款安排均写入正式客户协议。您可以使用银行转账，PayID 和 BPAY 方式支付。"
+      },
+      {
+        "question": "什么是职业技能评估成功保障？",
+        "answer": "如果您已完成我们的项目，但您的职业技术评估失败了，我们将会一直免费跟进支持您，至到您通过。我们的项目设计严格对标 CAANZ、ACS 和 AMI 的评估要求，工作时长、格式及证明材料均符合标准。"
+      },
+      {
+        "question": "哪种签证途径适合我的职业和情况？",
+        "row1Label": "如果您是应届毕业生，缺乏本地经验:",
+        "row1Link": "职业起航计划",
+        "row1Href": "/zh/career-launch",
+        "row2Label": "如果您已有雇主意向或工作机会:",
+        "row2Link": "482/186 雇主担保移民",
+        "row2Href": "/zh/employer-pathway",
+        "row3Label": "如果您想了解独立技术移民:",
+        "row3Link": "189 Pathway",
+        "row3Href": "/zh/189-pathway",
+        "row4Label": "如果您想了解州担保加分路径:",
+        "row4Link": "190 Pathway",
+        "row4Href": "/zh/190-pathway",
+        "row5Label": "如果您想了解偏远地区移民:",
+        "row5Link": "491 Pathway",
+        "row5Href": "/zh/491-pathway",
+        "bookingCta": "欢迎预约免费咨询"
+      },
+      {
+        "question": "谁会负责处理签证递交和移民法律事务？",
+        "prefix": "所有移民建议、签证递交及法律事务，均由持牌合作方律所",
+        "linkText": "Insight Idea",
+        "linkHref": "https://www.insightidea.com.au/en/success",
+        "isExternal": true,
+        "suffix": "— 注册律师事务所 + MARA 持牌移民代理。RedBridge 负责职业与雇主匹配。"
+      },
+      {
+        "question": "RedBridge Consulting专注于哪些行业和职业？",
+        "answer": "我们专精于三大领域：会计与金融（CAANZ 评估），ICT 与科技（ACS 评估），和市场与商业（AMI 评估）。"
+      },
+      {
+        "question": "RedBridge Consulting公司在哪里？你们提供在线咨询吗？",
+        "addressLabel": "公司地址：",
+        "address": "Level 9, Tower 3, 18–38 Siddeley Street, Docklands VIC 3008",
+        "phone": "03 9961 7301",
+        "onlineBooking": "在线预约咨询"
+      }
+    ]
   },
   "contact": {
     "eyebrow": "联系我们",

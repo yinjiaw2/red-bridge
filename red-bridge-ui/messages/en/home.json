@@ -90,6 +90,101 @@
       }
     ]
   },
+  "programs": {
+    "eyebrow": "Our Programs",
+    "headingMain": "Find your",
+    "headingHighlight": "migration pathway",
+    "description": "Select your situation to see the most relevant programs.",
+    "mostPopular": "Most Popular",
+    "viewDetails": "View Details",
+    "filters": {
+      "all": "Show All",
+      "graduate": "I am a recent graduate",
+      "employer": "I have an employer in mind",
+      "independent": "I want to apply independently"
+    },
+    "items": [
+      {
+        "id": "p1",
+        "category": "employer",
+        "badge": "⭐ Most Popular",
+        "price": "From AUD 250,000",
+        "title": "482 / 186 Employer Sponsored",
+        "description": "The most direct path to PR through a genuine sponsored employer — with complete transparency on who the employer is before you commit.",
+        "features": [
+          "Access to verified employer network",
+          "Employer profiles shared before signing",
+          "Resume and interview coaching",
+          "Comprehensive legal support via Insight Idea"
+        ],
+        "cta": "View Details",
+        "href": "/employer-pathway"
+      },
+      {
+        "id": "p2",
+        "category": "graduate",
+        "price": "From AUD 50,000",
+        "title": "Career Launch Program",
+        "description": "For recent graduates who need genuine, paid Australian work experience to qualify for skilled migration — not unpaid internships.",
+        "features": [
+          "400+ hours genuine paid project work",
+          "CAANZ, ACS, AMI recognised timesheets",
+          "Professional portfolio development",
+          "Skills assessment guarantee"
+        ],
+        "cta": "View Details",
+        "href": "/career-launch"
+      },
+      {
+        "id": "p3",
+        "category": "independent",
+        "price": "From AUD 50,000",
+        "title": "189 Skilled Independent",
+        "description": "Points-based permanent residency, no employer sponsorship required.",
+        "features": [
+          "Points strategy & gap analysis",
+          "Work experience planning",
+          "Skills assessment matching",
+          "Professional career guidance"
+        ],
+        "cta": "View Details",
+        "href": "/189-pathway"
+      },
+      {
+        "id": "p4",
+        "category": "independent",
+        "price": "From AUD 50,000",
+        "title": "190 Skilled Nominated",
+        "description": "Boost your points through state nomination — matched to the right state based on your occupation and profile.",
+        "features": [
+          "State-specific nomination strategies",
+          "Target industry & region matching",
+          "Project-based experience planning",
+          "Nomination application support"
+        ],
+        "cta": "View Details",
+        "href": "/190-pathway"
+      },
+      {
+        "id": "p5",
+        "category": "independent",
+        "price": "From AUD 50,000",
+        "title": "491 Skilled Work Regional",
+        "description": "Regional migration with extra points, faster processing, and a clear path to 191 permanent residency.",
+        "features": [
+          "Regional employer connections",
+          "Region-specific career development",
+          "Clear path to 191 PR",
+          "Customised relocation support"
+        ],
+        "cta": "View Details",
+        "href": "/491-pathway"
+      }
+    ],
+    "footerPrefix": "Not sure which pathway fits? ",
+    "footerLink": "Book a free consultation",
+    "footerSuffix": " — we assess your options honestly, including telling you if there isn't a suitable option."
+  },
   "employerNetwork": {
     "eyebrow": "Our Employer Network",
     "headingMain": "All job listings are",
@@ -175,6 +270,95 @@
       "separator": " or ",
       "booking": "Book a free initial assessment"
     }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headingMain": "Frequently Asked",
+    "headingHighlight": "Questions",
+    "headingSuffix": "",
+    "description": "If you have more questions, book a free consultation.",
+    "items": [
+      {
+        "question": "Are RedBridge Consulting job placements real and verified?",
+        "answer": "Yes. All partner employers currently hold valid 482 sponsorship eligibility. Company names, industries, and sponsorship status are provided directly during the free consultation. There is no payment required and no need to commit first. If there is no suitable pathway for you, we will tell you directly during the consultation and charge nothing."
+      },
+      {
+        "question": "What is the difference between the 482 and 186 employer-sponsored visas?",
+        "bold1": "The 482 Temporary Skill Shortage visa",
+        "text1": " allows you to work in Australia for a sponsoring employer for up to 4 years. ",
+        "bold2": "The 186 Employer Nomination visa",
+        "text2": " can lead directly to permanent residency. Many clients first enter on a 482 visa and then transition to the 186 pathway after working with the same employer for 2 to 3 years. We explain the complete strategy during the free consultation."
+      },
+      {
+        "question": "How long does a 482 employer-sponsored visa usually take in Australia?",
+        "prefix": "482 visa approval usually takes around ",
+        "bold": "3 to 12 months",
+        "suffix": ". Timing depends on the occupation, whether the employer already holds sponsorship approval, and the Department's current processing pace. We provide a more specific estimate based on your case during the free consultation."
+      },
+      {
+        "question": "How long does Victoria state nomination under the 190 visa usually take?",
+        "answer": "Victoria 190 state nomination usually takes around 2 to 12 months. Timing depends mainly on your occupation, current points score, and invitation rounds. We will assess which states are more realistic for your profile and give you a practical estimate during consultation."
+      },
+      {
+        "question": "Can international students apply even without permanent residency or work experience?",
+        "prefix": "Absolutely. Our pathways are designed for international students and skilled professionals at different stages. Our ",
+        "linkText": "Career Launch Program",
+        "linkHref": "/career-launch",
+        "suffix": " helps students build genuine local work experience aligned with migration requirements. Employer-sponsored pathways can also connect you directly with employers offering roles and nomination support. You do not need PR or an existing job to begin planning."
+      },
+      {
+        "question": "How much does skilled migration cost in Australia?",
+        "prefix": "At RedBridge, your initial consultation is ",
+        "bold": "completely free",
+        "suffix": ". Our program fees start from AUD 50,000 depending on the service type. Government visa application fees are additional and are usually around AUD 3,000 to 8,000 depending on the visa category. All costs are set out clearly in the formal client agreement, including service fees, government charges, and legal fees through Insight Idea."
+      },
+      {
+        "question": "Can migration consulting fees be paid in instalments?",
+        "answer": "Yes. We offer a milestone-based 3 to 4 stage payment structure, so you only pay at successful milestones rather than all at once. All payment arrangements are written into the formal client agreement. You can pay by bank transfer, PayID, or BPAY."
+      },
+      {
+        "question": "What is the skills assessment success guarantee?",
+        "answer": "If you complete our program but your skills assessment is unsuccessful, we continue supporting you at no extra charge until you pass. Our programs are designed to align closely with the assessment standards of CAANZ, ACS, and AMI, including required work duration, document format, and supporting evidence."
+      },
+      {
+        "question": "Which visa pathway suits my occupation and situation?",
+        "row1Label": "If you are a recent graduate and lack local experience:",
+        "row1Link": "Career Launch Program",
+        "row1Href": "/career-launch",
+        "row2Label": "If you already have an employer lead or job opportunity:",
+        "row2Link": "482/186 Employer Sponsored",
+        "row2Href": "/employer-pathway",
+        "row3Label": "If you want to understand skilled independent migration:",
+        "row3Link": "189 Pathway",
+        "row3Href": "/189-pathway",
+        "row4Label": "If you want to explore state nomination options:",
+        "row4Link": "190 Pathway",
+        "row4Href": "/190-pathway",
+        "row5Label": "If you want to understand regional migration:",
+        "row5Link": "491 Pathway",
+        "row5Href": "/491-pathway",
+        "bookingCta": "Book a free consultation"
+      },
+      {
+        "question": "Who handles the visa lodgement and migration legal work?",
+        "prefix": "All migration advice, visa lodgement, and legal matters are handled by our licensed legal partner ",
+        "linkText": "Insight Idea",
+        "linkHref": "https://www.insightidea.com.au/en/success",
+        "isExternal": true,
+        "suffix": " — a registered law firm and MARA-licensed migration practice. RedBridge focuses on career planning and employer matching."
+      },
+      {
+        "question": "Which industries and occupations does RedBridge Consulting focus on?",
+        "answer": "We specialise in three core areas: accounting and finance (CAANZ assessment), ICT and technology (ACS assessment), and marketing and business (AMI assessment)."
+      },
+      {
+        "question": "Where is RedBridge Consulting located, and do you offer online consultations?",
+        "addressLabel": "Office address: ",
+        "address": "Level 9, Tower 3, 18-38 Siddeley Street, Docklands VIC 3008",
+        "phone": "03 9961 7301",
+        "onlineBooking": "Book an online consultation"
+      }
+    ]
   },
   "_todo": "review zh translations",
   "contact": {

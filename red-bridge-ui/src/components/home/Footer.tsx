@@ -11,7 +11,7 @@ import {
 import { useTranslations } from "next-intl";
 
 export const Footer = () => {
-  const t = useTranslations("home.footer");
+  const t = useTranslations("footer");
   const services = t.raw("services") as { name: string; href: string }[];
   const company = t.raw("company") as { name: string; href: string }[];
 

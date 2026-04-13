@@ -22,9 +22,19 @@ interface FilterItem {
   iconKey: string;
 }
 
+interface ProgramMessageItem {
+  id: string;
+  category: Exclude<Category, "all">;
+  price: string;
+  title: string;
+  description: string;
+  features: string[];
+  href: string;
+}
+
 interface ProgramItem {
   id: string;
-  category: Category;
+  category: Exclude<Category, "all">;
   isFeatured: boolean;
   price: string;
   title: string;
@@ -42,8 +52,28 @@ const filterIconMap: Record<string, LucideIcon> = {
 
 export const ProgramsSection = () => {
   const t = useTranslations("programs");
-  const filters = t.raw("filters") as FilterItem[];
-  const programItems = t.raw("items") as ProgramItem[];
+  const filtersMessage = t.raw("filters") as Record<string, string> | FilterItem[];
+  const itemsMessage = t.raw("items") as ProgramMessageItem[];
+
+  const filters: FilterItem[] = Array.isArray(filtersMessage)
+    ? filtersMessage
+    : [
+        { id: "all", label: filtersMessage.all, iconKey: "layoutGrid" },
+        { id: "graduate", label: filtersMessage.graduate, iconKey: "graduationCap" },
+        { id: "employer", label: filtersMessage.employer, iconKey: "handshake" },
+        { id: "independent", label: filtersMessage.independent, iconKey: "compass" },
+      ];
+
+  const programItems: ProgramItem[] = itemsMessage.map((item) => ({
+    id: item.id,
+    category: item.category,
+    isFeatured: item.category === "employer",
+    price: item.price,
+    title: item.title,
+    subtitle: item.description,
+    features: item.features,
+    href: item.href,
+  }));
 
   const [filter, setFilter] = useState<Category>("all");
 
@@ -161,12 +191,12 @@ export const ProgramsSection = () => {
 
         {/* Footer CTA */}
         <p className="text-center mt-12 text-[#928276] text-sm">
-          {t("footerText")}{" "}
+          {t("footerPrefix")}{" "}
           <Link
             href="/booking"
             className="text-[#b45309] font-bold underline underline-offset-4 decoration-2"
           >
-            {t("footerCta")}
+            {t("footerLink")}
           </Link>{" "}
           {t("footerSuffix")}
         </p>
