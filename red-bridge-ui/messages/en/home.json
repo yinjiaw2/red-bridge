@@ -13,7 +13,8 @@
       "placements": "Successful Placements",
       "assessments": "Assessments Approved",
       "teamActive": "Team Active",
-      "since": "Since 2018"},
+      "since": "Since 2018"
+    },
     "countries": [
       {
         "label": "India",
@@ -41,24 +42,6 @@
       "Licensed migration lawyer partners",
       "Free initial consultation",
       "200+ successful placements since 2018"
-    ],
-    "stats": [
-      {
-        "value": "200+",
-        "label": "Career placements\nSince 2018"
-      },
-      {
-        "value": "4.9★",
-        "label": "Client\naverage rating"
-      },
-      {
-        "value": "300+",
-        "label": "Skills assessments\npassed first try"
-      },
-      {
-        "value": "10+",
-        "label": "Verified\nemployer partners"
-      }
     ]
   },
   "processSection": {
@@ -400,46 +383,5 @@
     "hqAddress": "Docklands VIC 3008",
     "established": "Established",
     "establishedText": "Founded in 2018 · Registered in 2024"
-  },
-  "footer": {
-    "brandSubtitle": "Connecting Dreams and Opportunities",
-    "description1": "A registered Australian consulting company dedicated to authentic career development and immigration pathway support. All immigration services are provided by ",
-    "descriptionLink": "Insight Idea",
-    "description2": " — licensed migration agents and registered Australian law firm.",
-    "servicesTitle": "Services",
-    "services": [
-      { "name": "Career Launch Program", "href": "/services/career-launch" },
-      {
-        "name": "189 Skilled Independent Visa",
-        "href": "/services/189-pathway"
-      },
-      { "name": "190 Skilled Nominated Visa", "href": "/services/190-pathway" },
-      {
-        "name": "491 Skilled Work Regional Visa",
-        "href": "/services/491-pathway"
-      },
-      {
-        "name": "482/186 Employer Sponsored Visa",
-        "href": "/services/employer-pathway"
-      },
-      { "name": "Emergency Visa Solutions", "href": "/services/emergency" }
-    ],
-    "companyTitle": "Company",
-    "company": [
-      { "name": "News & Updates", "href": "/news" },
-      { "name": "About Us", "href": "/about-us" },
-      { "name": "Success Cases", "href": "/success-cases" },
-      { "name": "For Employers", "href": "/for-employers" },
-      { "name": "Join Our Team", "href": "/join-our-team" },
-      { "name": "Book Consultation", "href": "/booking" }
-    ],
-    "legal": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "copyright": "Copyright Notice",
-      "sitemap": "Sitemap"
-    },
-    "copyrightText": "© 2026 RedBridge Consulting Pty Ltd · ABN: 88 678 186 091",
-    "disclaimer": "Docklands VIC 3008 · Migration services provided by Insight Idea (licensed migration agent) · All rights reserved."
   }
 }
