@@ -243,7 +243,7 @@ export default function NavBar() {
               </button>
               <Link
                 href="/booking"
-                className="px-4 py-2 rounded-lg text-sm font-medium text-[#1a1a1a] bg-[#D4A017] hover:bg-[#b88a10] hover:shadow-[0_0_12px_rgba(212,160,23,0.4)] transition-all shadow-sm whitespace-nowrap"
+                className="ml-8 px-4 py-2 rounded-lg text-sm font-medium text-[#1a1a1a] bg-[#D4A017] hover:bg-[#b88a10] hover:shadow-[0_0_12px_rgba(212,160,23,0.4)] transition-all shadow-sm whitespace-nowrap"
               >
                 {t("cta")}
               </Link>
