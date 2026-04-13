@@ -21,7 +21,7 @@ export const TrustSafetySection = () => {
   const items = t.raw("items") as VerifyItem[];
 
   return (
-    <section className="bg-[#2d241e] py-16 px-[5%] overflow-hidden">
+    <section className="bg-[#172D5D] py-16 px-[5%] overflow-hidden">
       <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left text */}
         <div className="flex-1 text-left">
@@ -47,7 +47,11 @@ export const TrustSafetySection = () => {
                 className="flex items-start gap-4 p-5 bg-[#3a3028] border border-[#4a3f36] rounded-xl transition-all hover:bg-[#43382f]"
               >
                 <div className="mt-1">
-                  <Icon className="h-5 w-5 text-primary" strokeWidth={1.5} aria-hidden="true" />
+                  <Icon
+                    className="h-5 w-5 text-primary"
+                    strokeWidth={1.5}
+                    aria-hidden="true"
+                  />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[#a28e7e] text-sm font-medium mb-1">
