@@ -46,8 +46,8 @@ export const TrustSafetySection = () => {
                 key={index}
                 className="flex items-start gap-4 p-5 bg-[#3a3028] border border-[#4a3f36] rounded-xl transition-all hover:bg-[#43382f]"
               >
-                <div className="mt-1 text-primary">
-                  <Icon size={18} strokeWidth={1.5} aria-hidden="true" />
+                <div className="mt-1">
+                  <Icon className="h-5 w-5 text-primary" strokeWidth={1.5} aria-hidden="true" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[#a28e7e] text-sm font-medium mb-1">

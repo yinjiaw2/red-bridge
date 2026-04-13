@@ -2,6 +2,7 @@ import NavBar from "@/components/home/NavBar";
 import HeroSection from "@/components/home/HeroSection";
 import UserScenarioSection from "@/components/home/UserScenarioSection";
 import TrustSafetySection from "@/components/home/TrustSafetySection";
+import SuccessTicker from "@/components/home/OutcomeTickerSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <HeroSection />
         <UserScenarioSection />
         <TrustSafetySection />
+        <SuccessTicker />
       </main>
     </>
   );
