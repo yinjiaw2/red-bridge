@@ -36,7 +36,7 @@ export const TrustSafetySection = () => {
       <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* 左侧文字区域 */}
         <div className="flex-1 text-left">
-          <h3 className="text-white text-3xl font-bold mb-4 leading-tight">
+          <h3 className="text-white text-3xl font-bold mb-4 leading-tight font-serif">
             我们知道您在担心什么。
             <br />
             <span className="text-[#b4907a] italic font-normal mt-2 block">

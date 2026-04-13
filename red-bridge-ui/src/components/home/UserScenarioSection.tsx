@@ -41,7 +41,7 @@ export const UserScenarioSection = () => {
 
   return (
     // 使用统一的浅米色背景：bg-[#f5f1ea]
-    <section className="py-20 px-[5%] bg-[#f5f1ea] border-b border-[#e5e1d7]">
+    <section className="py-20 px-[5%] bg-brandbackground border-b border-[#e5e1d7]">
       <div className="max-w-[1200px] mx-auto text-center">
         {/* 顶部副标题 */}
         <p className="flex items-center justify-center gap-2 text-[0.72rem] font-bold tracking-[0.2em] uppercase text-[#a28e7e] mb-12 font-serif">
