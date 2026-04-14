@@ -1,0 +1,40 @@
+{
+  "visa189ProcessSection": {
+    "eyebrow": "How it Works",
+    "title1": "From first consultation to ",
+    "titleHighlight": "PR outcome",
+    "subtitle": "Each step is clearly defined — RedBridge prepares your profile, Insight Idea handles the visa process.",
+    "steps": {
+      "0": {
+        "who": "RedBridge",
+        "title": "Free Points Assessment",
+        "desc": "We review your full profile and map out your points, competitiveness, and realistic pathway options.",
+        "time": "Week 1 — Free"
+      },
+      "1": {
+        "who": "RedBridge",
+        "title": "Strategy Planning",
+        "desc": "We identify the most impactful ways to improve your score, including English, experience or partner factors.",
+        "time": "Week 1–2"
+      },
+      "2": {
+        "who": "RedBridge",
+        "title": "Skills Assessment Preparation",
+        "desc": "We prepare your documents and application for ACS, AMI or other assessing bodies.",
+        "time": "1–3 months"
+      },
+      "3": {
+        "who": "Insight Idea",
+        "title": "EOI Submission",
+        "desc": "Your EOI is submitted with a strong, optimised profile ready for invitation rounds.",
+        "time": "After assessment"
+      },
+      "4": {
+        "who": "Insight Idea",
+        "title": "Visa Lodgement",
+        "desc": "Once invited, your visa application is prepared and lodged by a registered migration agent.",
+        "time": "Post-invitation"
+      }
+    }
+  }
+}

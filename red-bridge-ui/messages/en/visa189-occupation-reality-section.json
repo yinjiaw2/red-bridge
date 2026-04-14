@@ -1,0 +1,40 @@
+{
+  "visa189OccupationRealitySection": {
+    "eyebrow": "Occupation Reality",
+    "title1": "Know your occupation ",
+    "titleHighlight": "score range",
+    "subtitle": "Invitation cut-offs vary by occupation. Here is the current picture for ICT, Marketing, Engineering and Trades based on recent invitation trends.",
+    "tiers": {
+      "0": {
+        "label": "Highly Competitive",
+        "title": "ICT — Software Engineers, Business Analysts, IT Project Managers",
+        "desc": "One of the highest-volume EOI fields globally. Occupations are often subject to invitation ceilings, which means only a limited number of candidates are invited in each round. A strong score and a strong profile are both important.",
+        "score": "95–100+",
+        "scoreLabel": "Indicative invitation range"
+      },
+      "1": {
+        "label": "Highly Competitive",
+        "title": "Marketing — Marketing Specialists, Digital Marketing Managers",
+        "desc": "Marketing sits close to ICT in competitiveness in SkillSelect. AMI skills assessment is a threshold requirement, and strong Australian work experience often makes a major difference in whether the profile is actually competitive.",
+        "score": "90–100+",
+        "scoreLabel": "Indicative invitation range"
+      },
+      "2": {
+        "label": "Competitive",
+        "title": "Engineering — Civil, Mechanical, Electrical Engineers",
+        "desc": "Requires assessment through Engineers Australia. Competition is still real, but more achievable than the hottest ICT categories. Most candidates need around 85–90 points to be realistically competitive.",
+        "score": "85–90",
+        "scoreLabel": "Indicative invitation range"
+      },
+      "3": {
+        "label": "Lower Competition",
+        "title": "Trades — Carpenters, Plumbers, Electricians, Welders",
+        "desc": "These are often shortage occupations and can receive stronger priority in invitations. In recent rounds, applicants in this group have sometimes been invited at much lower scores than major professional occupations.",
+        "score": "65–75",
+        "scoreLabel": "Indicative invitation range"
+      }
+    },
+    "disclaimer": "Ranges above are indicative only and can move between invitation rounds.",
+    "disclaimerLink": "View current invitation data →"
+  }
+}

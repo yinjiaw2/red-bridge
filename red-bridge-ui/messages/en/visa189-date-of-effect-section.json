@@ -1,0 +1,19 @@
+{
+  "visa189DateOfEffectSection": {
+    "eyebrow": "The Rule Most Applicants Overlook",
+    "title1": "Your Date of Effect ",
+    "titleHighlight": "is a weapon",
+    "subtitle": "When two applicants have the same score, the person who submitted earlier is invited first. That means timing matters.",
+    "card": {
+      "title": "What is Date of Effect?",
+      "p1Strong": "Date of Effect (DOE) ",
+      "p1": "is the date you first reached your current points score in SkillSelect. When the Department runs an invitation round and two applicants have the same score, the applicant with the earlier DOE is invited first — sometimes months or even years earlier.",
+      "p2": "That means lodging your EOI as soon as you are eligible can lock in an earlier DOE, even before your profile is fully maximised. If you later improve your score, your DOE may reset to a later date. This is why submission timing and score strategy need to be considered together.",
+      "p3": "In your free consultation, Insight Idea can help assess whether it is smarter to submit now or wait for a specific score improvement."
+    },
+    "example": {
+      "strong": "Example: ",
+      "text": "Two ICT applicants both have 90 points. Applicant A submitted in January. Applicant B submitted in June. In the next invitation round, if both are above the cut-off, Applicant A is invited first simply because their DOE is earlier."
+    }
+  }
+}

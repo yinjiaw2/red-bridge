@@ -1,0 +1,28 @@
+{
+  "visa189RelatedPathwaysSection": {
+    "eyebrow": "Related Pathways",
+    "title1": "Other pathways worth ",
+    "titleHighlight": "considering",
+    "subtitle": "If 189 is too competitive right now, a stronger migration strategy may involve running another pathway in parallel.",
+    "items": {
+      "0": {
+        "visa": "Visa 190",
+        "title": "State Nominated PR",
+        "desc": "Adds 5 extra points and may be more realistic than waiting only on 189, depending on your occupation and state eligibility.",
+        "linkText": "Explore 190 pathway →"
+      },
+      "1": {
+        "visa": "Visa 491",
+        "title": "Regional Skilled Pathway",
+        "desc": "Adds 15 extra points and can significantly improve invitation chances for applicants open to regional Australia.",
+        "linkText": "Explore 491 pathway →"
+      },
+      "2": {
+        "visa": "482 / 186",
+        "title": "Employer Sponsored Pathway",
+        "desc": "For applicants with employer support, this may create a more direct route than relying only on SkillSelect competition.",
+        "linkText": "Explore employer pathway →"
+      }
+    }
+  }
+}

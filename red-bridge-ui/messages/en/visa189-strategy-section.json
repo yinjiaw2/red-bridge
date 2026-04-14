@@ -1,0 +1,40 @@
+{
+  "visa189StrategySection": {
+    "eyebrow": "How RedBridge Helps",
+    "title1": "Find the points you did not realise you ",
+    "titleHighlight": "should have",
+    "subtitle": "Our role in the 189 pathway is points maximisation and skills assessment preparation. Visa lodgement is handled by Insight Idea, your registered migration partner.",
+    "cards": {
+      "0": {
+        "title": "Full Points Audit",
+        "desc": "We map every available points category against your profile — age, English, work experience, education, partner factors and NAATI. Many applicants discover points they were not planning to claim.",
+        "badge": "Free in consultation"
+      },
+      "1": {
+        "title": "English Score Strategy",
+        "desc": "The difference between competent, proficient and superior English can completely change your timeline. We assess whether another test attempt is realistically the fastest way to improve your score.",
+        "badge": "Up to +20 points"
+      },
+      "2": {
+        "title": "Skills Assessment Preparation",
+        "desc": "A positive skills assessment is mandatory for the 189 visa. We help prepare employment evidence, project documents and supporting narratives so your application is stronger and cleaner.",
+        "badge": "Mandatory for 189"
+      },
+      "3": {
+        "title": "Australian Work Experience Planning",
+        "desc": "For some profiles, more verified Australian experience is what turns a weak EOI into a competitive one. We identify whether this is the score gap that actually matters in your case.",
+        "badge": "Up to +20 points"
+      },
+      "4": {
+        "title": "Partner Points Review",
+        "desc": "If your partner may qualify for additional points, we review whether their English, occupation and skills assessment pathway are worth pursuing as part of the overall strategy.",
+        "badge": "Up to +10 points"
+      },
+      "5": {
+        "title": "Alternative Pathway Planning",
+        "desc": "If 189 is not realistic in the near term, we tell you clearly and map out stronger 190 or 491 options instead. A dual-path strategy is often faster than waiting on 189 alone.",
+        "badge": "Realistic pathway advice"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "visa189ProcessSection": {
+    "eyebrow": "流程说明",
+    "title1": "从第一次咨询到",
+    "titleHighlight": "PR结果",
+    "subtitle": "每一步职责清晰 —— RedBridge负责准备，Insight Idea负责递交。",
+    "steps": {
+      "0": {
+        "who": "RedBridge",
+        "title": "免费打分评估",
+        "desc": "全面评估你的背景、分数和竞争力，并给出最现实的路径判断。",
+        "time": "第1周 — 免费"
+      },
+      "1": {
+        "who": "RedBridge",
+        "title": "提分策略规划",
+        "desc": "确定最关键的提分方向，例如英语、工作经验或配偶加分。",
+        "time": "第1–2周"
+      },
+      "2": {
+        "who": "RedBridge",
+        "title": "技能评估准备",
+        "desc": "准备 ACS / AMI 等评估材料，提高一次通过概率。",
+        "time": "1–3个月"
+      },
+      "3": {
+        "who": "Insight Idea",
+        "title": "递交EOI",
+        "desc": "以优化后的 profile 提交EOI，进入邀请池。",
+        "time": "评估完成后"
+      },
+      "4": {
+        "who": "Insight Idea",
+        "title": "签证递交",
+        "desc": "获邀后由持牌移民代理正式递交签证申请。",
+        "time": "获邀之后"
+      }
+    }
+  }
+}
