@@ -25,7 +25,9 @@ export const ComparisonSection = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#2d241e] mb-6">
             {t("headingMain")}{" "}
-            <em className="text-[#A30000] not-italic">{t("headingHighlight")}</em>
+            <em className="text-[#A30000] not-italic">
+              {t("headingHighlight")}
+            </em>
           </h2>
           <p className="text-[#928276] text-lg max-w-2xl mx-auto leading-relaxed">
             {t("description")}
@@ -151,7 +153,7 @@ export const ComparisonSection = () => {
           <div className="flex items-center gap-3 shrink-0">
             <Link
               href="/booking"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#D4A017] px-6 py-3 text-sm font-bold text-[#1f2937] hover:bg-[#c4920f] transition-colors"
+              className="inline-flex items-center gap-2 rounded-xl bg-highlightyellow px-6 py-3 text-sm font-bold text-[#1f2937] hover:bg-[#c4920f] transition-colors"
             >
               {t("cta.primaryBtn")}
               <ArrowRight size={16} aria-hidden="true" />

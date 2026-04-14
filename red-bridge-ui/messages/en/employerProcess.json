@@ -1,0 +1,49 @@
+{
+  "employerProcess": {
+    "eyebrow": "Process Breakdown",
+    "headingLine1": "Three Phases:",
+    "headingLine2": "From Gap to",
+    "headingHighlight": "Visa Grant.",
+    "description": "482 employer sponsorship can run concurrently across phases — you don't have to wait for one step to fully close before starting the next. Our process is designed to move efficiently without cutting corners.",
+    "phases": [
+      {
+        "number": "01",
+        "teamBadge": "REDBRIDGE + INSIGHT IDEA",
+        "title": "Eligibility & Role Assessment",
+        "bullets": [
+          "Confirm the role is on the Core Skills Occupation List (CSOL) or applicable list",
+          "Assess Labour Market Testing (LMT) requirements for the position",
+          "Determine sponsorship status — apply for Standard Business Sponsorship if not yet held",
+          "RedBridge matches pre-screened candidates from our verified talent pool"
+        ]
+      },
+      {
+        "number": "02",
+        "teamBadge": "INSIGHT IDEA — LEGAL LODGEMENT",
+        "title": "Sponsorship & Nomination Application",
+        "bullets": [
+          "Lodge Standard Business Sponsorship (SBS) — approval and DOHA registration",
+          "Compile the complete 482 nomination package — no client chasing required",
+          "Document and analyse Labour Market Testing reports (2 periods, 4 months apart)",
+          "Submit nomination (small business ~$1,200/yr · standard business ~$1,800/yr)",
+          "Lodge visa application jointly with the nominated candidate",
+          "Monitor application and respond to any Department requests"
+        ]
+      },
+      {
+        "number": "03",
+        "teamBadge": "REDBRIDGE + INSIGHT IDEA",
+        "title": "Visa Grant & Ongoing Compliance",
+        "bullets": [
+          "Visa granted — employee commences work under sponsorship conditions",
+          "Insight Idea tracks all visa milestone dates and compliance obligations",
+          "Sponsor notified of any material change obligations within the required 28-day window",
+          "RedBridge monitors placement alignment and flags any role or candidate changes",
+          "Optional pathway planning for 186 ENS transition after qualifying period"
+        ]
+      }
+    ],
+    "footerLinkText": "482 Visa — Learn More",
+    "footerLinkHref": "/employer-pathway"
+  }
+}

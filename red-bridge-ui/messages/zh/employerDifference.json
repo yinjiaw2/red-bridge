@@ -1,0 +1,39 @@
+{
+  "employerDifference": {
+    "eyebrow": "为什么选择REDBRIDGE",
+    "headingMain": "与普通招聘公司",
+    "headingHighlight": "有什么不同。",
+    "cards": [
+      {
+        "iconKey": "userCheck",
+        "title": "候选人已通过预评估",
+        "description": "我们ICT、市场营销、工程及酒店管理人才库中的每位候选人，均已完成工作经历核查、技能评估资格筛选及签证路径可行性评估，再向雇主进行推荐。"
+      },
+      {
+        "iconKey": "scale",
+        "title": "法律合作伙伴在同一办公室",
+        "description": "Insight Idea 的律师和移民代理与我们的团队共同工作于Docklands办公室。职业安置与签证递交之间不存在信息断层——两者同步并行推进。"
+      },
+      {
+        "iconKey": "trendingUp",
+        "title": "签证有效期内全程合规追踪",
+        "description": "我们的CRM系统追踪每位被担保员工的关键节点日期及482/永居状态。所有合规截止日期均提前预警——确保您不会错过任何通知窗口或合规义务。"
+      },
+      {
+        "iconKey": "dollarSign",
+        "title": "费用完全透明",
+        "description": "我们在签署前提供完整明细的费用清单——政府费用、SAF征收费及服务费一一列明。流程开始后不会出现任何意外收费。"
+      },
+      {
+        "iconKey": "building2",
+        "title": "经验证的担保雇主合作伙伴",
+        "description": "我们的雇主网络均持有当前有效的482或186担保资格。我们已在ICT、会计、市场营销及工程行业，为多家真实担保雇主成功完成候选人安置。"
+      },
+      {
+        "iconKey": "users",
+        "title": "中文团队",
+        "description": "我们的许多客户习惯使用普通话沟通。团队成员具备流利的中英双语能力——确保雇主与候选人之间的每一个细节都不会因语言而产生误差。"
+      }
+    ]
+  }
+}

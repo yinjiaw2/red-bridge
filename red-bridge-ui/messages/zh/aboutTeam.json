@@ -1,0 +1,64 @@
+{
+  "team": {
+    "intro": "RedBridge 是一个小而精的专业团队。正因为技术移民本身极为复杂，我们专注于自己擅长的领域——雇主匹配、合规文件、市场分析与客户关系管理。每个项目均由我们的持牌法律合作伙伴 Insight Idea 全程跟进。",
+    "learnMore": "了解更多",
+    "members": [
+      {
+        "initials": "RB",
+        "colorKey": "red",
+        "title": "担保雇主专员",
+        "tag": "职位担保",
+        "description": "负责管理我们活跃的482和186担保雇主网络，核实每位雇主的当前担保资格，并在客户做出任何承诺之前完成职位匹配。"
+      },
+      {
+        "initials": "CC",
+        "colorKey": "teal",
+        "title": "资深职业顾问",
+        "tag": "职业咨询",
+        "description": "专注于IT、会计及市场营销专业人员的职业路径规划。主导初步评估，并为每位客户建立个性化的移民路线图。"
+      },
+      {
+        "initials": "CC",
+        "colorKey": "teal",
+        "title": "职业与就业协调顾问",
+        "tag": "职业咨询",
+        "description": "协调雇主引荐流程，准备简历与面试材料，并在从初次接触到拿到录用通知的整个就业安置过程中为客户提供全程支持。"
+      },
+      {
+        "initials": "BA",
+        "colorKey": "blue",
+        "title": "商业分析师",
+        "tag": "移民合规",
+        "description": "依据CAANZ、ACS及AMI技能评估标准，审核客户的工作经历与技能证明，确保文件在首次提交时即符合监管要求。"
+      },
+      {
+        "initials": "BA",
+        "colorKey": "blue",
+        "title": "商业分析师",
+        "tag": "移民合规",
+        "description": "负责里程碑跟踪与合规文件管理，并与 Insight Idea 紧密协作，确保所有雇佣记录及配套证明材料准确完整。"
+      },
+      {
+        "initials": "NK",
+        "colorKey": "green",
+        "title": "市场营销专员",
+        "tag": "市场营销",
+        "description": "负责客户沟通、数字内容及对外推广工作，确保潜在客户能够清晰、准确地了解 RedBridge 的服务内容与流程。"
+      },
+      {
+        "initials": "CR",
+        "colorKey": "orange",
+        "title": "客户关系经理",
+        "tag": "客户关系",
+        "description": "担任在册客户的主要联络人，负责入职流程管理、里程碑节点跟进，并确保每位客户对路径进展的每个阶段都有清晰认知。"
+      },
+      {
+        "initials": "HR",
+        "colorKey": "purple",
+        "title": "人力数据与合规协调员",
+        "tag": "人力资源",
+        "description": "负责维护内部雇佣记录、项目工时表及客户档案，确保所有记录符合技能评估机构所要求的证据标准。"
+      }
+    ]
+  }
+}

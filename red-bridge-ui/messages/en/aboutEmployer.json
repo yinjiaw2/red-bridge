@@ -1,0 +1,31 @@
+{
+  "aboutEmployer": {
+    "eyebrow": "Employer Sponsorship Network · 482 / 186 Sponsorship",
+    "headingLine1": "The talent you need",
+    "headingLine2": "is right",
+    "headingHighlight": "here.",
+    "description": "Hundreds of skilled visa holders in ICT, accounting, and marketing are actively seeking sponsorship opportunities. RedBridge handles candidate screening and initial assessment — then Insight Idea manages the complete 482 sponsorship legal process.",
+    "bullets": [
+      {
+        "label": "150+ employer matches",
+        "detail": "Covering ICT, marketing, accounting, and engineering — each candidate pre-screened against sponsorship eligibility criteria."
+      },
+      {
+        "label": "Candidates assessed by Insight Idea",
+        "detail": "Full evaluation process managed by our registered legal partner — transparent, documented, and legally compliant."
+      },
+      {
+        "label": "482 sponsorship handled end-to-end",
+        "detail": "Insight Idea (MARN: 1467670) manages all sponsorship lodgement and legal compliance, co-located with RedBridge."
+      },
+      {
+        "label": "Skills assessment ready",
+        "detail": "All candidates hold or are progressing towards recognised assessments from CAANZ, ACS, or AMI before placement."
+      }
+    ],
+    "primaryButton": "Submit Employer Enquiry",
+    "primaryHref": "/contact",
+    "secondaryButton": "Our Process →",
+    "secondaryHref": "/services"
+  }
+}

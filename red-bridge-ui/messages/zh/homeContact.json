@@ -1,0 +1,24 @@
+{
+  "contact": {
+    "eyebrow": "联系我们",
+    "headingMain": "您的第一步",
+    "headingHighlight": "免费",
+    "description": "预约免费咨询，无任何义务。我们将如实评估您的情况——包括告知您我们的项目是否适合您。",
+    "addressTitle": "到访地址",
+    "addressLine1": "Level 9, Tower 3",
+    "addressLine2": "18–38 Siddeley Street",
+    "addressLine3": "Docklands VIC 3008",
+    "addressSub": "距 Southern Cross 车站步行 5 分钟",
+    "phoneTitle": "电话联系",
+    "phoneNumber": "03 9961 7301",
+    "phoneTime1": "周一至周四 12pm–6pm",
+    "phoneTime2": "周五 12pm–5pm",
+    "emailTitle": "邮件联系",
+    "emailLink": "info@red-bridge.com.au",
+    "emailTime1": "24 小时内回复",
+    "emailTime2": "公共假期除外",
+    "ctaMain": "预约免费咨询",
+    "ctaSubPrefix": "不确定是否符合条件？",
+    "ctaSubLink": "申请免费资格评估"
+  }
+}

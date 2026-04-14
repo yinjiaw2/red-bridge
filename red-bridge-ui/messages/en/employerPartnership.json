@@ -1,0 +1,33 @@
+{
+  "employerPartnership": {
+    "eyebrow": "Our Partnership",
+    "headingMain": "RedBridge + Insight Idea —",
+    "headingHighlight": "Clear Division of Roles.",
+    "description": "RedBridge focuses on finding and preparing the right candidates. Insight Idea is our MARA-registered legal partner, co-located in the same office, handling all migration advice, applications, and compliance.",
+    "cards": [
+      {
+        "badge": "REDBRIDGE CONSULTING",
+        "title": "Talent & Employer",
+        "bullets": [
+          "Match candidates from our pool to role requirements and visa-eligible occupation levels",
+          "Pre-screen skills assessment eligibility (ACS, AMI, Engineers Australia) before referral",
+          "Coordinate candidate documentation and career preparation",
+          "Manage employer–candidate communication and end-to-end milestone support",
+          "CRM milestone tracking — flagging the 2-year milestone for 186 ENS transition eligibility"
+        ]
+      },
+      {
+        "badge": "INSIGHT IDEA — MARN: 1467870",
+        "title": "Law & Migration",
+        "bullets": [
+          "Standard Business Sponsorship (SBS) application and Department approval",
+          "Labour Market Testing — advertising compliance and documentation records",
+          "Nomination preparation and lodgement (482 Core Skills / Specialist stream)",
+          "Visa application support and internal document management for visa holders",
+          "Ongoing compliance monitoring and Department of Home Affairs notifications",
+          "2-year milestone 186 ENS transition lodgement and pathway planning"
+        ]
+      }
+    ]
+  }
+}

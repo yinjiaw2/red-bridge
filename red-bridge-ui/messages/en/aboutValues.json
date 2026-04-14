@@ -1,0 +1,29 @@
+{
+  "values": {
+    "eyebrow": "Core Principles",
+    "heading": "Our Values",
+    "description": "These aren't slogans for display. They are the working standards every member of our team is held to.",
+    "items": [
+      {
+        "iconKey": "eye",
+        "title": "Full Transparency",
+        "description": "All client information — including employer names and fee structure — is disclosed upfront in a single, clear conversation. No hidden charges, no vague promises. If a pathway isn't viable, we tell you honestly."
+      },
+      {
+        "iconKey": "clipboardCheck",
+        "title": "Verified Accuracy",
+        "description": "Every partner employer holds a current, valid 482 sponsorship licence. Every role has been vetted. All work experience records are genuine, documented, and traceable — with full records available on request."
+      },
+      {
+        "iconKey": "scale",
+        "title": "Legal Rigour",
+        "description": "All migration advice and visa lodgement is handled by Insight Idea — a registered Australian law firm and MARA-licensed migration agency. Every step is professionally supervised and legally protected."
+      },
+      {
+        "iconKey": "handshake",
+        "title": "Trust Through Milestones",
+        "description": "Our fee structure is milestone-based, not a lump-sum paid upfront. You pay at each successful stage. One milestone completed, one payment made — nothing more until we deliver."
+      }
+    ]
+  }
+}

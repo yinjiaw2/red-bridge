@@ -2,48 +2,6 @@
   "HomePage": {
     "title": "Hello, World!"
   },
-  "hero": {
-    "badge": "Registered Australian Consultancy",
-    "title": "Build Your Career in <highlight>Australia.</highlight><br></br>We Make It Real.",
-    "description": "Get placed with verified employers. Gain the right experience. Move from study to 482 visa and PR with confidence.",
-    "primaryButton": "Get Free Assessment",
-    "secondaryButton": "View Programs",
-    "imageAlt": "Career in Australia",
-    "stats": {
-      "placements": "Successful Placements",
-      "assessments": "Assessments Approved",
-      "teamActive": "Team Active",
-      "since": "Since 2018"
-    },
-    "countries": [
-      {
-        "label": "India",
-        "title": "India"
-      },
-      {
-        "label": "China",
-        "title": "China"
-      },
-      {
-        "label": "Philippines",
-        "title": "Philippines"
-      },
-      {
-        "label": "Vietnam",
-        "title": "Vietnam"
-      },
-      {
-        "label": "Nepal",
-        "title": "Nepal"
-      }
-    ],
-    "trustPoints": [
-      "Verified employer resources",
-      "Licensed migration lawyer partners",
-      "Free initial consultation",
-      "200+ successful placements since 2018"
-    ]
-  },
   "processSection": {
     "eyebrow": "Our Process",
     "headingMain": "Your migration journey",
@@ -351,28 +309,6 @@
     ]
   },
   "_todo": "review zh translations",
-  "contact": {
-    "eyebrow": "Contact Us",
-    "headingMain": "Your first step is ",
-    "headingHighlight": "free",
-    "description": "Book a free consultation. We will assess your background and clarify whether it is suitable to proceed and the best option.",
-    "addressTitle": "Company Address",
-    "addressLine1": "Level 9, Tower 3",
-    "addressLine2": "18–38 Siddeley Street",
-    "addressLine3": "Docklands VIC 3008",
-    "addressSub": "5 minutes walk from Southern Cross Station",
-    "phoneTitle": "Call Us",
-    "phoneNumber": "03 9961 7301",
-    "phoneTime1": "Mon-Thu 12pm–6pm",
-    "phoneTime2": "Fri 12pm–5pm",
-    "emailTitle": "Email Us",
-    "emailLink": "Write to us",
-    "emailTime1": "Reply within 24 hours",
-    "emailTime2": "Excluding public holidays",
-    "ctaMain": "Book Free Consultation",
-    "ctaSubPrefix": "Not sure if you are eligible?",
-    "ctaSubLink": "Apply for free eligibility assessment"
-  },
   "credentials": {
     "googleRating": "Google Rating",
     "registeredCompany": "Registered Company",

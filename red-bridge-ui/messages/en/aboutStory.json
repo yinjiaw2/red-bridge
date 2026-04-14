@@ -1,0 +1,38 @@
+{
+  "story": {
+    "eyebrow": "Our Story",
+    "heading": "Rebuilding Standards for a Disordered Industry.",
+    "paragraphs": [
+      "RedBridge Consulting was founded out of frustration with an industry that had lost its standards. Fake job listings, hidden fees, unqualified advisers — these weren't isolated incidents. They were the norm. In 2024, we formally incorporated as RedBridge Consulting Pty Ltd.",
+      "From day one, we committed to a single principle: everything we tell you should be verifiable. We share employer names, industry, and sponsorship approval status during your free consultation — before you pay a single dollar. Fees are structured in milestones, so you only pay when we deliver.",
+      "Our legal work is handled exclusively by Insight Idea, a registered Australian law firm and MARA-licensed migration agency. That separation of responsibilities — career matching on our side, legal compliance on theirs — is what makes our service both thorough and trustworthy."
+    ],
+    "stats": [
+      {
+        "value": "2018",
+        "label": "Our Starting Point",
+        "description": "RedBridge began as an employer matching initiative before formally incorporating as a consulting firm."
+      },
+      {
+        "value": "200+",
+        "label": "Career Placements",
+        "description": "Professionals placed into verified employer roles across accounting, IT, and marketing."
+      },
+      {
+        "value": "150+",
+        "label": "Employer Partnerships",
+        "description": "Active sponsoring employers across Australia, each holding current 482 or 186 eligibility."
+      },
+      {
+        "value": "300+",
+        "label": "Skills Assessments Passed",
+        "description": "Clients who passed CAANZ, ACS, or AMI skills assessments on their first attempt."
+      },
+      {
+        "value": "4.9★",
+        "label": "Average Client Rating",
+        "description": "Based on independent Google reviews from verified clients."
+      }
+    ]
+  }
+}

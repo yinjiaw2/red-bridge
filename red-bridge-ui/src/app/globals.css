@@ -11,6 +11,8 @@
   --color-primary: #b4907a;
   --color-highlight: #d4a017;
   --color-naviblue: #172d5d;
+  --color-brandred: #a30000;
+  --color-highlightyellow: #fdc365;
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);

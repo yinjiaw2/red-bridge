@@ -1,0 +1,23 @@
+{
+  "employerObligations": {
+    "eyebrow": "Sponsor Commitments",
+    "headingMain": "Sponsor Obligations —",
+    "headingHighlight": "Clearly Explained.",
+    "description": "Sponsorship is a regulated immigration relationship. The obligations below are the most important ones. Insight Idea monitors compliance for all our clients.",
+    "mustTitle": "Must Do",
+    "mustNotTitle": "Must NOT Do",
+    "must": [
+      "Pay at least the market salary rate for the nominated occupation — no less than what an equivalent Australian worker would receive in the same role",
+      "Ensure the employee works only in the nominated occupation — a new nomination is required if the role changes significantly",
+      "Notify the Department of Home Affairs within 28 days if: the business name changes, the business becomes insolvent, or the sponsored employee's employment ends",
+      "Keep records of salary, duties, tasks, and disciplinary processes for the full duration of the sponsorship",
+      "Pay the SAF levy in full at the time of nomination lodgement — covering the entire visa period"
+    ],
+    "mustNot": [
+      "Recover any sponsorship-related costs from the sponsored employee — including SAF levy, visa application fees, or professional service fees",
+      "Allow the employee to work in a different occupation or at a different location without lodging a new nomination",
+      "Let the employee's salary fall below the level approved in the original visa grant without lodging a new nomination",
+      "Sponsor workers for roles that do not genuinely exist or are not reflective of the business's actual operational needs"
+    ]
+  }
+}

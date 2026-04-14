@@ -1,0 +1,22 @@
+{
+  "legal": {
+    "eyebrow": "法律合作伙伴",
+    "headingMain": "移民法律，",
+    "headingHighlight": "专业处理。",
+    "description": "我们内部不提供移民或签证建议，所有法律事务均由注册律师事务所及持牌移民代理机构全权处理，确保完全符合法规要求。",
+    "card": {
+      "eyebrow": "注册移民法律合作伙伴",
+      "name": "Insight Idea",
+      "marnLabel": "MARN: 1467670 — 已在 MARA 官方注册备案确认",
+      "paragraphs": [
+        "Insight Idea 是注册澳洲律师事务所及 MARA 持牌移民代理机构。所有移民建议、签证申请递交及法律代理，均由 Insight Idea 全权负责。",
+        "Insight Idea 的注册移民代理与我们的职业顾问在同一办公室协作——地址位于 Docklands Siddeley Street 18–38 号 Tower 3，9 层。同处一地意味着沟通更直接、响应更及时，职业规划与法律合规之间不存在任何信息断层，客户体验更加流畅一体。",
+        "通过 RedBridge，客户获得职业发展与雇主匹配支持；Insight Idea 则负责所有所需的移民法律服务。两支团队在统一的项目与费用框架下协同运作。"
+      ],
+      "link1Text": "Insight Idea 官网 ↗",
+      "link1Href": "https://www.insightidea.com.au/en",
+      "link2Text": "验证 MARA 注册 ↗",
+      "link2Href": "https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=4a87bac4-9b52-e411-9402-005056ab0eca"
+    }
+  }
+}
