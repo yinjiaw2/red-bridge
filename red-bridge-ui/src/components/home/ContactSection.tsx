@@ -9,6 +9,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 
 export const ContactSection = () => {
   const t = useTranslations("contact");
@@ -121,13 +122,16 @@ export const ContactSection = () => {
           <div className="flex items-center gap-2 text-sm text-white/35">
             <HelpCircle size={14} className="text-white/30" aria-hidden="true" />
             <span>{t("ctaSubPrefix")}</span>
-            <Link
-              href="/eligibility"
-              className="text-white/60 hover:text-white underline underline-offset-4 decoration-white/20 inline-flex items-center gap-1 transition-colors"
+            <Button
+              asChild
+              variant="outline"
+              className="h-8 rounded-none border-white/30 bg-transparent text-white/70 hover:bg-white/10 hover:text-white hover:border-white/60 px-4 text-[12px] font-bold uppercase tracking-widest transition-colors gap-1.5"
             >
-              {t("ctaSubLink")}
-              <ArrowRight size={13} aria-hidden="true" />
-            </Link>
+              <Link href="/eligibility">
+                {t("ctaSubLink")}
+                <ArrowRight size={13} aria-hidden="true" />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
