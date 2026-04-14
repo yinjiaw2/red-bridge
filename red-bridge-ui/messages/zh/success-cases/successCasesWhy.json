@@ -1,0 +1,29 @@
+{
+  "successCasesWhy": {
+    "headingMain": "为什么这些",
+    "headingHighlight": "方案是可行的。",
+    "description": "本页展示的每个案例，均来自真实客户经历，而非理想化情境。其共同点在于：从一开始就进行准确评估，选择正确路径，并在技能评估及申请过程中稳步推进，避免关键错误。",
+    "cards": [
+      {
+        "iconKey": "award",
+        "title": "首轮技能评估通过率",
+        "description": "100+份ACS、AMI和Engineers Australia技能评估首次即通过。关键在于提交前充分对齐评估要求，而非在被拒后再作补救。"
+      },
+      {
+        "iconKey": "building2",
+        "title": "一致的雇主担保资质",
+        "description": "所有雇主均持有真实、当前有效的担保资格，可在DOHA官网查询验证。每位雇主在与客户接触前，均已通过RedBridge的背景核查。"
+      },
+      {
+        "iconKey": "badgeCheck",
+        "title": "MARA注册法律合作伙伴",
+        "description": "Insight Idea（MARN: 1467870）全程负责所有移民法律事务，与RedBridge同在Docklands办公——直接沟通，无外包转接，信息零断层。"
+      },
+      {
+        "iconKey": "trendingUp",
+        "title": "分数优先策略",
+        "description": "在正式递交EOI之前，我们帮助客户建立并最大化分数，确保进入更高邀请轮次，减少申请失败风险，明确PR邀请路径。"
+      }
+    ]
+  }
+}

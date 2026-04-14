@@ -1,0 +1,29 @@
+{
+  "successCasesWhy": {
+    "headingMain": "Why these",
+    "headingHighlight": "outcomes are real.",
+    "description": "Every case on this page comes from a real client experience — not an idealised scenario. What they share in common: an accurate assessment from the start, the right pathway chosen, and consistent execution through skills assessment and visa lodgement without critical errors.",
+    "cards": [
+      {
+        "iconKey": "award",
+        "title": "First-attempt skills assessment pass rate",
+        "description": "100+ ACS, AMI, and Engineers Australia assessments passed on the first attempt. The key is aligning documentation to assessment criteria well before submission — not after a rejection."
+      },
+      {
+        "iconKey": "building2",
+        "title": "Verified employer eligibility",
+        "description": "Every employer holds genuine, current sponsorship eligibility verifiable on the DOHA register. Each employer is background-checked by RedBridge before any client introduction is made."
+      },
+      {
+        "iconKey": "badgeCheck",
+        "title": "MARA-registered legal partner",
+        "description": "Insight Idea (MARN: 1467870) handles all migration legal matters. Co-located with RedBridge at Docklands — direct communication, no outsourced handoffs, no information gaps."
+      },
+      {
+        "iconKey": "trendingUp",
+        "title": "Points-first strategy",
+        "description": "Before any EOI is submitted, we help clients build and maximise their points score. This means higher invitation rounds, fewer rejected applications, and a clearer path to PR."
+      }
+    ]
+  }
+}
