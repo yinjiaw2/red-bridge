@@ -7,7 +7,7 @@ export default function AboutCtaSection() {
   const t = useTranslations("aboutCta");
 
   return (
-    <section className="w-full py-24 px-[5%] bg-brandred">
+    <section className="w-full py-24 px-[5%] bg-naviblue">
       <div className="max-w-300 mx-auto flex flex-col items-center text-center gap-6">
         {/* Heading */}
         <h2

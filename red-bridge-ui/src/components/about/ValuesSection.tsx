@@ -21,7 +21,7 @@ export default function ValuesSection() {
   const items = t.raw("items") as ValueItem[];
 
   return (
-    <section className="bg-brandred py-24 px-[5%]">
+    <section className="bg-naviblue py-24 px-[5%]">
       <div className="max-w-300 mx-auto">
         {/* Eyebrow — lines on both sides */}
         <div className="flex items-center justify-center gap-4 mb-12">
