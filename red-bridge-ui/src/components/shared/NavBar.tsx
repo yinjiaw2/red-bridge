@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -78,6 +78,11 @@ export default function NavBar() {
   const t = useTranslations();
   const locale = useLocale();
   const router = useRouter();
+
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === href;
+  const isServicesActive = pathname.startsWith("/services");
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -163,7 +168,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/"
-                  className="text-sm text-gray-700 hover:text-red-600 transition-colors"
+                  className={`text-sm transition-colors hover:text-red-600 ${isActive("/") ? "text-red-600" : "text-gray-700"}`}
                 >
                   {t("nav.home")}
                 </Link>
@@ -172,7 +177,7 @@ export default function NavBar() {
               {/* Services with dropdown */}
               <li ref={servicesRef} className="relative">
                 <button
-                  className="flex items-center gap-1 text-sm text-gray-700 hover:text-red-600 transition-colors cursor-pointer"
+                  className={`flex items-center gap-1 text-sm transition-colors hover:text-red-600 cursor-pointer ${isServicesActive ? "text-red-600" : "text-gray-700"}`}
                   onClick={() => setServicesOpen((v) => !v)}
                   aria-expanded={servicesOpen}
                   aria-haspopup="menu"
@@ -207,7 +212,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/success-cases"
-                  className="text-sm text-gray-700 hover:text-red-600 transition-colors"
+                  className={`text-sm transition-colors hover:text-red-600 ${isActive("/success-cases") ? "text-red-600" : "text-gray-700"}`}
                 >
                   {t("nav.successCases")}
                 </Link>
@@ -216,7 +221,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/for-employers"
-                  className="text-sm text-gray-700 hover:text-red-600 transition-colors"
+                  className={`text-sm transition-colors hover:text-red-600 ${isActive("/for-employers") ? "text-red-600" : "text-gray-700"}`}
                 >
                   {t("nav.forEmployers")}
                 </Link>
@@ -225,7 +230,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-gray-700 hover:text-red-600 transition-colors"
+                  className={`text-sm transition-colors hover:text-red-600 ${isActive("/about") ? "text-red-600" : "text-gray-700"}`}
                 >
                   {t("nav.about")}
                 </Link>
@@ -289,7 +294,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/"
-                  className="block py-4 text-gray-800 font-medium"
+                  className={`block py-4 font-medium ${isActive("/") ? "text-red-600" : "text-gray-800"}`}
                   onClick={closeAll}
                 >
                   {t("nav.home")}
@@ -299,7 +304,7 @@ export default function NavBar() {
               {/* Services accordion */}
               <li>
                 <button
-                  className="flex items-center justify-between w-full py-4 text-gray-800 font-medium"
+                  className={`flex items-center justify-between w-full py-4 font-medium ${isServicesActive ? "text-red-600" : "text-gray-800"}`}
                   onClick={() => setServicesOpen((v) => !v)}
                   aria-expanded={servicesOpen}
                 >
@@ -328,7 +333,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/success-cases"
-                  className="block py-4 text-gray-800 font-medium"
+                  className={`block py-4 font-medium ${isActive("/success-cases") ? "text-red-600" : "text-gray-800"}`}
                   onClick={closeAll}
                 >
                   {t("nav.successCases")}
@@ -338,7 +343,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/for-employers"
-                  className="block py-4 text-gray-800 font-medium"
+                  className={`block py-4 font-medium ${isActive("/for-employers") ? "text-red-600" : "text-gray-800"}`}
                   onClick={closeAll}
                 >
                   {t("nav.forEmployers")}
@@ -348,7 +353,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/about"
-                  className="block py-4 text-gray-800 font-medium"
+                  className={`block py-4 font-medium ${isActive("/about") ? "text-red-600" : "text-gray-800"}`}
                   onClick={closeAll}
                 >
                   {t("nav.about")}
