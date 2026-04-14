@@ -209,10 +209,12 @@
       }
     ],
     "footer": {
-      "prefix": "不确定哪个适合您？",
-      "learnMore": "详细了解所有移民路径",
-      "separator": " 或 ",
-      "booking": "预约免费初步评估"
+      "cardTitle": "不确定哪个适合您？",
+      "cardDescription": "全面了解所有移民路径，或通过免费评估获取专属方案。",
+      "learnMore": "了解所有路径",
+      "learnMoreHref": "#programs",
+      "booking": "预约免费评估",
+      "bookingHref": "/booking"
     }
   },
   "faq": {

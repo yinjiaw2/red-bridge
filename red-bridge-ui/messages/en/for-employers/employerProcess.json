@@ -5,6 +5,12 @@
     "headingLine2": "From Gap to",
     "headingHighlight": "Visa Grant.",
     "description": "482 employer sponsorship can run concurrently across phases — you don't have to wait for one step to fully close before starting the next. Our process is designed to move efficiently without cutting corners.",
+    "tableHeaders": {
+      "phase": "Phase",
+      "title": "Title",
+      "team": "Team",
+      "details": "Details"
+    },
     "phases": [
       {
         "number": "01",
@@ -44,6 +50,6 @@
       }
     ],
     "footerLinkText": "482 Visa — Learn More",
-    "footerLinkHref": "/employer-pathway"
+    "footerLinkHref": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482"
   }
 }
