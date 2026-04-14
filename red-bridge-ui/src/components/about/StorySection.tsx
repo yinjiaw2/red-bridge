@@ -14,22 +14,22 @@ export default function StorySection() {
   const stats = t.raw("stats") as Stat[];
 
   return (
-    <section className="bg-brandbackground py-24 px-[5%]">
+    <section className="bg-gray-50 py-24 px-[5%] border-b border-gray-200">
       <div className="max-w-300 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column */}
           <div>
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-6 h-px bg-[#A20000]" />
-              <span className="text-[0.7rem] font-bold tracking-[0.22em] text-[#A20000] uppercase">
+              <span className="w-6 h-px bg-brandred" />
+              <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase">
                 {t("eyebrow")}
               </span>
             </div>
 
             {/* Heading */}
             <h2
-              className="text-4xl md:text-5xl font-bold text-[#1a1209] leading-tight mb-10"
+              className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-10"
               style={{ fontFamily: "Georgia, serif" }}
             >
               {t("heading")}
@@ -38,7 +38,10 @@ export default function StorySection() {
             {/* Paragraphs */}
             <div className="space-y-5">
               {paragraphs.map((para, i) => (
-                <p key={i} className="text-[#6b5a4e] text-base md:text-[17px] leading-relaxed">
+                <p
+                  key={i}
+                  className="text-gray-700 text-base md:text-[17px] leading-relaxed"
+                >
                   {para}
                 </p>
               ))}
@@ -49,21 +52,21 @@ export default function StorySection() {
           <div className="flex flex-col justify-center">
             {stats.map((stat, i) => (
               <div key={i}>
-                {i > 0 && <div className="h-px bg-[#e2d9d0] my-6" />}
+                {i > 0 && <div className="h-px bg-gray-200 my-6" />}
                 <div className="flex items-start gap-6">
                   <div className="min-w-20">
                     <div
-                      className="text-3xl md:text-4xl font-bold text-[#A20000]"
+                      className="text-3xl md:text-4xl font-bold text-brandred"
                       style={{ fontFamily: "Georgia, serif" }}
                     >
                       {stat.value}
                     </div>
                   </div>
                   <div>
-                    <div className="text-[#1a1209] font-semibold text-base mb-1">
+                    <div className="text-gray-900 font-bold text-lg mb-1">
                       {stat.label}
                     </div>
-                    <div className="text-[#6b5a4e] text-sm leading-relaxed">
+                    <div className="text-gray-600 text-sm leading-relaxed">
                       {stat.description}
                     </div>
                   </div>

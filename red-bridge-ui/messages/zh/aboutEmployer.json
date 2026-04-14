@@ -1,0 +1,31 @@
+{
+  "aboutEmployer": {
+    "eyebrow": "雇佣担保网络 · 482 / 186 担保",
+    "headingLine1": "您需要的人才",
+    "headingLine2": "就在",
+    "headingHighlight": "这里。",
+    "description": "数百名持有482及技能类签证的IT、会计和市场营销专业人才正积极寻求担保机会。RedBridge负责筛选与初步评估，随后由Insight Idea全程处理482担保签证的法律流程。",
+    "bullets": [
+      {
+        "label": "150+ 雇主匹配",
+        "detail": "覆盖ICT、市场营销、会计及工程行业，每位候选人均已通过担保资格预审。"
+      },
+      {
+        "label": "候选人由Insight Idea全程评估",
+        "detail": "由我们的注册法律合作伙伴主导完整评估流程——透明、有据可查，完全符合法律规范。"
+      },
+      {
+        "label": "482担保全程经办",
+        "detail": "Insight Idea（MARN: 1467670）负责所有担保申请递交及法律合规事务，与RedBridge同处一个办公室。"
+      },
+      {
+        "label": "技能评估就绪",
+        "detail": "所有候选人均已持有或正在申请CAANZ、ACS或AMI的认可技能评估，确保在安置前符合要求。"
+      }
+    ],
+    "primaryButton": "提交雇主查询",
+    "primaryHref": "/contact",
+    "secondaryButton": "服务流程 →",
+    "secondaryHref": "/services"
+  }
+}

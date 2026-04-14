@@ -8,57 +8,64 @@ export default function LegalPartnerSection() {
   const paragraphs = t.raw("card.paragraphs") as string[];
 
   return (
-    <section className="bg-brandbackground py-24 px-[5%]">
+    <section className="bg-gray-50 py-24 px-[5%] border-b border-gray-200">
       <div className="max-w-300 mx-auto">
         {/* Eyebrow */}
         <div className="flex items-center justify-center gap-4 mb-8">
-          <span className="flex-1 max-w-16 h-px bg-[#c9a98a]" />
-          <span className="text-[0.68rem] font-bold tracking-[0.22em] text-[#9a7a5e] uppercase whitespace-nowrap">
+          <span className="flex-1 max-w-16 h-px bg-gray-300" />
+          <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
             {t("eyebrow")}
           </span>
-          <span className="flex-1 max-w-16 h-px bg-[#c9a98a]" />
+          <span className="flex-1 max-w-16 h-px bg-gray-300" />
         </div>
 
         {/* Heading */}
         <div className="text-center mb-5">
           <h2
-            className="text-4xl md:text-5xl font-bold text-[#1a1209]"
+            className="text-4xl md:text-5xl font-bold text-gray-900"
             style={{ fontFamily: "Georgia, serif" }}
           >
             {t("headingMain")}{" "}
-            <span className="text-[#A20000]">{t("headingHighlight")}</span>
+            <span className="text-brandred">{t("headingHighlight")}</span>
           </h2>
         </div>
 
         {/* Sub-description */}
-        <p className="text-center text-[#6b5a4e] text-base md:text-[17px] leading-relaxed max-w-2xl mx-auto mb-14">
+        <p className="text-center text-gray-600 text-base md:text-[17px] leading-relaxed max-w-2xl mx-auto mb-14">
           {t("description")}
         </p>
 
         {/* Partner card */}
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl border border-[#ede7df] shadow-sm p-8 md:p-10">
+        <div className="max-w-3xl mx-auto bg-white rounded-none border border-gray-200 shadow-md p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-2 bg-brandred" />
           {/* Card eyebrow + icon */}
           <div className="flex items-center gap-3 mb-5">
-            <div className="w-10 h-10 rounded-xl bg-[#f5ece1] flex items-center justify-center shrink-0">
-              <Scale className="h-5 w-5 text-[#b3592a]" aria-hidden="true" />
+            <div className="w-10 h-10 rounded-none bg-gray-100 flex items-center justify-center shrink-0">
+              <Scale
+                className="h-5 w-5 text-brandred"
+                aria-hidden="true"
+              />
             </div>
-            <span className="text-[0.68rem] font-bold tracking-[0.2em] text-[#9a7a5e] uppercase">
+            <span className="text-[0.75rem] font-bold tracking-widest text-gray-900 uppercase">
               {t("card.eyebrow")}
             </span>
           </div>
 
           {/* Partner name */}
           <h3
-            className="text-2xl md:text-3xl font-bold text-[#1a1209] mb-4"
+            className="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
             style={{ fontFamily: "Georgia, serif" }}
           >
             {t("card.name")}
           </h3>
 
           {/* MARN badge */}
-          <div className="inline-flex items-center gap-2 bg-[#f0f7f0] border border-[#b8d8b8] rounded-full px-4 py-1.5 mb-7">
-            <BadgeCheck className="h-4 w-4 text-[#3a7a3a] shrink-0" aria-hidden="true" />
-            <span className="text-[12px] font-semibold text-[#2d5c2d] tracking-wide">
+          <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-none px-4 py-2 mb-7">
+            <BadgeCheck
+              className="h-4 w-4 text-brandred shrink-0"
+              aria-hidden="true"
+            />
+            <span className="text-[12px] font-bold uppercase tracking-wider text-gray-900">
               {t("card.marnLabel")}
             </span>
           </div>
@@ -66,14 +73,14 @@ export default function LegalPartnerSection() {
           {/* Paragraphs */}
           <div className="space-y-4 mb-8">
             {paragraphs.map((para, i) => (
-              <p key={i} className="text-[#6b5a4e] text-[15px] leading-relaxed">
+              <p key={i} className="text-gray-700 text-base leading-relaxed">
                 {para}
               </p>
             ))}
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-[#ede7df] mb-6" />
+          <div className="h-px bg-gray-200 mb-6" />
 
           {/* External links */}
           <div className="flex flex-wrap gap-6">
@@ -81,7 +88,7 @@ export default function LegalPartnerSection() {
               href={t("card.link1Href")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#A20000] hover:underline"
+              className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wide text-brandred hover:text-red-800 transition-colors"
             >
               {t("card.link1Text")}
             </a>
@@ -89,7 +96,7 @@ export default function LegalPartnerSection() {
               href={t("card.link2Href")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#6b5a4e] hover:text-[#A20000] hover:underline transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wide text-gray-500 hover:text-brandred transition-colors"
             >
               {t("card.link2Text")}
             </a>

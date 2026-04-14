@@ -3,10 +3,10 @@
 import { useTranslations } from "next-intl";
 
 const AVATAR_COLORS: Record<string, { bg: string; text: string }> = {
-  red:    { bg: "#bf4a2e", text: "#ffffff" },
-  teal:   { bg: "#3d8c8c", text: "#ffffff" },
-  blue:   { bg: "#4a6fa5", text: "#ffffff" },
-  green:  { bg: "#4a8c5a", text: "#ffffff" },
+  red: { bg: "#bf4a2e", text: "#ffffff" },
+  teal: { bg: "#3d8c8c", text: "#ffffff" },
+  blue: { bg: "#4a6fa5", text: "#ffffff" },
+  green: { bg: "#4a8c5a", text: "#ffffff" },
   orange: { bg: "#c07030", text: "#ffffff" },
   purple: { bg: "#7a5aaa", text: "#ffffff" },
 };
@@ -24,10 +24,10 @@ export default function TeamSection() {
   const members = t.raw("members") as TeamMember[];
 
   return (
-    <section className="bg-[#faf6f0] py-24 px-[5%]">
+    <section className="bg-white py-24 px-[5%] border-b border-gray-200">
       <div className="max-w-300 mx-auto">
         {/* Intro paragraph */}
-        <p className="text-[#6b5a4e] text-base md:text-[17px] leading-relaxed max-w-3xl mb-14">
+        <p className="text-gray-700 text-base md:text-[17px] leading-relaxed max-w-3xl mb-14">
           {t("intro")}
         </p>
 
@@ -38,11 +38,11 @@ export default function TeamSection() {
             return (
               <div
                 key={i}
-                className="bg-white rounded-2xl p-6 border border-[#ede7df] flex flex-col gap-3"
+                className="bg-white p-6 border border-gray-200 shadow-sm flex flex-col gap-4 hover:shadow-md transition-shadow"
               >
                 {/* Avatar */}
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
+                  className="w-12 h-12 rounded-none flex items-center justify-center text-sm font-bold shrink-0"
                   style={{ backgroundColor: color.bg, color: color.text }}
                 >
                   {member.initials}
@@ -50,25 +50,25 @@ export default function TeamSection() {
 
                 {/* Title */}
                 <div>
-                  <h3 className="text-[#1a1209] font-semibold text-[15px] leading-snug mb-2">
+                  <h3 className="text-gray-900 font-bold text-lg font-serif leading-snug mb-2">
                     {member.title}
                   </h3>
 
                   {/* Tag */}
-                  <span className="inline-block text-[11px] font-semibold tracking-wide text-[#A20000] border border-[#e8c0b8] bg-[#fdf2f0] rounded-full px-3 py-0.5">
+                  <span className="inline-block text-[11px] font-bold tracking-wider uppercase text-brandred border border-brandred bg-white px-3 py-1">
                     {member.tag}
                   </span>
                 </div>
 
                 {/* Description */}
-                <p className="text-[#6b5a4e] text-[13px] leading-relaxed flex-1">
+                <p className="text-gray-600 text-sm leading-relaxed flex-1">
                   {member.description}
                 </p>
 
                 {/* Learn more */}
                 <a
                   href="#"
-                  className="text-[13px] font-semibold text-[#A20000] hover:underline mt-1 self-start"
+                  className="text-sm font-bold uppercase tracking-wide text-brandred hover:text-red-800 transition-colors mt-2 self-start"
                 >
                   {t("learnMore")} →
                 </a>
