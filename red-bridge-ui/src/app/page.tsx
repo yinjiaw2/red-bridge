@@ -18,7 +18,6 @@ export default function Home() {
         <SuccessTicker />
         <ComparisonSection />
         <EmployerNetwork />
-
         <Footer />
       </main>
     </>
