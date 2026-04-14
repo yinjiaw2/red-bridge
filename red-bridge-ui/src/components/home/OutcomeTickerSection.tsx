@@ -85,7 +85,7 @@ export const SuccessTicker = () => {
               <span className="font-bold text-[#b45309] text-sm md:text-base">
                 {item.result}
               </span>
-              <span className="text-[#928276] text-xs md:text-sm italic">
+              <span className="text-[#928276] text-xs md:text-sm">
                 · {item.detail} {item.duration && `· ${item.duration}`}
               </span>
             </div>

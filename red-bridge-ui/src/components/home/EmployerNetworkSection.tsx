@@ -71,9 +71,7 @@ export default function EmployerNetwork() {
 
             <h2 className="mb-4 font-serif text-[32px] font-semibold leading-[1.02] text-[#1A2025] md:text-[46px] xl:text-[56px]">
               {t("headingMain")}{" "}
-              <span className="italic text-[#8A1523]">
-                {t("headingHighlight")}
-              </span>
+              <span className="text-[#8A1523]">{t("headingHighlight")}</span>
             </h2>
 
             <p className="mb-6 max-w-[520px] text-[15px] leading-[1.8] text-[rgba(26,32,37,0.7)] md:text-[16px]">

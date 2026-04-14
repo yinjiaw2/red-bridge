@@ -14,8 +14,8 @@ export default function AboutCtaSection() {
           className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          {t("headingMain")}{" "}
-          <span className="text-white italic">{t("headingHighlight")}</span>
+          {t("headingMain")}
+          <span className="text-white">{t("headingHighlight")}</span>
           {t("headingSuffix")}
         </h2>
 
