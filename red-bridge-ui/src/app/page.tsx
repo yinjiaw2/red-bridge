@@ -6,6 +6,7 @@ import SuccessTicker from "@/components/home/OutcomeTickerSection";
 import ComparisonSection from "@/components/home/ComparisonSection";
 import EmployerNetwork from "@/components/home/EmployerNetworkSection";
 import Footer from "@/components/home/Footer";
+import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <SuccessTicker />
         <ComparisonSection />
         <EmployerNetwork />
+        <ContactSection />
         <Footer />
       </main>
     </>

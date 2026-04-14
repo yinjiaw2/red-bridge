@@ -11,7 +11,7 @@ import {
 import { useTranslations } from "next-intl";
 
 export const ContactSection = () => {
-  const t = useTranslations("home.contact");
+  const t = useTranslations("contact");
 
   return (
     <section

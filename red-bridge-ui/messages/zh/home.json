@@ -346,28 +346,6 @@
       }
     ]
   },
-  "contact": {
-    "eyebrow": "联系我们",
-    "headingMain": "您的第一步是",
-    "headingHighlight": "免费的",
-    "description": "预约免费咨询。我们会基于您的背景进行评估，并明确是否适合推进和最佳方案。",
-    "addressTitle": "公司地址",
-    "addressLine1": "Level 9, Tower 3",
-    "addressLine2": "18–38 Siddeley Street",
-    "addressLine3": "Docklands VIC 3008",
-    "addressSub": "距 Southern Cross 车站步行 5 分钟",
-    "phoneTitle": "欢迎致电我们",
-    "phoneNumber": "03 9961 7301",
-    "phoneTime1": "周一至周四 12pm–6pm",
-    "phoneTime2": "周五 12pm–5pm",
-    "emailTitle": "邮件联系",
-    "emailLink": "给我们写信",
-    "emailTime1": "24 小时内回复",
-    "emailTime2": "公共假期除外",
-    "ctaMain": "预约免费咨询",
-    "ctaSubPrefix": "不确定您是否符合条件？",
-    "ctaSubLink": "申请免费资格评估"
-  },
   "credentials": {
     "googleRating": "Google 评分",
     "registeredCompany": "注册公司",
