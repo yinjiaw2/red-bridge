@@ -51,7 +51,7 @@ export const UserScenarioSection = () => {
         </p>
 
         {/* 网格容器：适配图片 3+1 布局 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16">
           {scenarios.map((item, index) => {
             const Icon = scenarioIcons[item.filterType ?? "urgent"] ?? Clock3;
 
