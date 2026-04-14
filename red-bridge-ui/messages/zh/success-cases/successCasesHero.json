@@ -1,0 +1,27 @@
+{
+  "successCasesHero": {
+    "eyebrow": "真实案例 · 成果可信",
+    "headingLine1": "200+成功案例",
+    "headingLine2": "每一种方案，",
+    "headingHighlight": "皆有结果。",
+    "description": "以下为RedBridge Consulting部分客户的代表性案例。为保护隐私，所有客户信息均以姓名缩写及职业呈现。所有签证结果及项目完成情况均为内部核实记录。",
+    "stats": [
+      {
+        "value": "200+",
+        "label": "截止目前，成功安置的客户数量"
+      },
+      {
+        "value": "150+",
+        "label": "合作担保雇主关系"
+      },
+      {
+        "value": "300+",
+        "label": "成功通过技能评估的客户"
+      },
+      {
+        "value": "4.9★",
+        "label": "所有客户平均满意度评分"
+      }
+    ]
+  }
+}

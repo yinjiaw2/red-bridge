@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import FormSelectInput from "./FormSelectInput";
+import { Button } from "@/components/ui/button";
 
 interface FormValues {
   companyName: string;
@@ -31,9 +32,9 @@ interface FormValues {
 
 function Label({ text, required }: { text: string; required?: boolean }) {
   return (
-    <label className="block text-[13px] font-semibold text-[#1a1209] mb-1.5">
+    <label className="block text-sm font-bold text-naviblue mb-2">
       {text}
-      {required && <span className="text-[#A20000] ml-0.5">*</span>}
+      {required && <span className="text-brandred ml-1">*</span>}
     </label>
   );
 }
@@ -56,22 +57,22 @@ function TextInput({
       <input
         type={type}
         {...register(field, rules)}
-        className={`w-full h-10 rounded-lg border px-3 text-[14px] bg-white focus:outline-none focus:ring-2 focus:ring-[#A20000]/20 ${
-          error ? "border-[#A20000]" : "border-[#d9cfc6]"
+        className={`w-full h-11 rounded-none border px-4 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brandred/20 ${
+          error ? "border-brandred" : "border-gray-300"
         }`}
       />
-      {error && <p className="mt-1 text-[11px] text-[#A20000]">{error}</p>}
+      {error && <p className="mt-1.5 text-xs text-brandred">{error}</p>}
     </>
   );
 }
 
 function SectionHeading({ number, title }: { number: string; title: string }) {
   return (
-    <div className="flex items-center gap-3 pt-8 mb-6 border-t border-[#e2d9d0]">
-      <div className="w-6 h-6 rounded-full bg-[#A20000] flex items-center justify-center text-white text-[11px] font-bold shrink-0">
+    <div className="flex items-center gap-4 pt-10 mb-8 border-t border-gray-200">
+      <div className="w-8 h-8 rounded-none bg-brandred flex items-center justify-center text-white text-sm font-bold shrink-0">
         {number}
       </div>
-      <h3 className="text-[#1a1209] font-bold text-[13px] uppercase tracking-[0.12em]">
+      <h3 className="text-naviblue font-bold text-base uppercase tracking-wider">
         {title}
       </h3>
     </div>
@@ -106,46 +107,47 @@ export default function EmployerEnquirySection() {
       : undefined;
 
   return (
-    <section className="bg-[#faf6f0] py-24 px-[5%]">
+    <section className="bg-gray-50 py-24 px-[5%] border-b border-gray-200">
       <div className="max-w-300 mx-auto">
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-10">
-          <span className="w-6 h-px bg-[#c9a98a]" />
-          <span className="text-[0.68rem] font-bold tracking-[0.2em] text-[#9a7a5e] uppercase">
+          <span className="w-6 h-px bg-brandred" />
+          <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase">
             {t("eyebrow")}
           </span>
         </div>
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-[#1a1209] leading-tight mb-5"
+          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-5"
           style={{ fontFamily: "Georgia, serif" }}
         >
           {t("headingMain")}{" "}
-          <span className="text-[#A20000]">{t("headingHighlight")}</span>
+          <span className="text-brandred">{t("headingHighlight")}</span>
         </h2>
 
-        <p className="text-[#6b5a4e] text-base leading-relaxed max-w-2xl mb-12">
+        <p className="text-gray-600 text-base md:text-[17px] leading-relaxed max-w-2xl mb-12">
           {t("description")}
         </p>
 
         {/* Form card */}
-        <div className="bg-white rounded-2xl border border-[#ede7df] p-8 md:p-10">
+        <div className="bg-white rounded-none border border-gray-200 shadow-md p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-2 bg-brandred" />
           {isSubmitSuccessful ? (
             <div className="py-16 text-center">
-              <p className="text-[#1a1209] font-semibold text-lg mb-2">
+              <p className="text-naviblue font-bold text-2xl mb-4">
                 {t("successTitle")}
               </p>
-              <p className="text-[#6b5a4e] text-sm">{t("successMessage")}</p>
+              <p className="text-gray-600 text-base">{t("successMessage")}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
               {/* ── Contact ── */}
-              <h3 className="text-[#1a1209] font-bold text-[13px] uppercase tracking-[0.12em] mb-6">
+              <h3 className="text-naviblue font-bold text-base uppercase tracking-wider mb-6">
                 {t("contactTitle")}
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                 <div>
                   <Label text={t("labelCompanyName")} required />
                   <TextInput
@@ -209,7 +211,7 @@ export default function EmployerEnquirySection() {
                 </div>
               </div>
 
-              <div className="mt-4">
+              <div className="mt-6">
                 <Label text={t("labelAddress")} required />
                 <TextInput
                   field="address"
@@ -224,7 +226,7 @@ export default function EmployerEnquirySection() {
                 number={t("section1Number")}
                 title={t("section1Title")}
               />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                 <div>
                   <Label text={t("labelIsApprovedSponsor")} required />
                   <FormSelectInput
@@ -265,7 +267,7 @@ export default function EmployerEnquirySection() {
                 number={t("section2Number")}
                 title={t("section2Title")}
               />
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                 <div>
                   <Label text={t("labelCanProvideBusinessEvidence")} required />
                   <FormSelectInput
@@ -292,7 +294,7 @@ export default function EmployerEnquirySection() {
                   />
                 </div>
               </div>
-              <div className="mt-4">
+              <div className="mt-6">
                 <Label text={t("labelLocalOverseasRatio")} required />
                 <TextInput
                   field="localOverseasRatio"
@@ -307,7 +309,7 @@ export default function EmployerEnquirySection() {
                 number={t("section3Number")}
                 title={t("section3Title")}
               />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                 <div>
                   <Label text={t("labelIsOnCSOL")} required />
                   <FormSelectInput
@@ -351,7 +353,7 @@ export default function EmployerEnquirySection() {
                 number={t("section4Number")}
                 title={t("section4Title")}
               />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                 <div>
                   <Label text={t("labelWillCoverAllFees")} required />
                   <FormSelectInput
@@ -392,7 +394,7 @@ export default function EmployerEnquirySection() {
                 number={t("section5Number")}
                 title={t("section5Title")}
               />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                 <div>
                   <Label
                     text={t("labelWillProvideFullTimeContract")}
@@ -432,14 +434,14 @@ export default function EmployerEnquirySection() {
               </div>
 
               {/* ── Submit ── */}
-              <div className="mt-10 pt-8 border-t border-[#e2d9d0]">
-                <button
+              <div className="mt-12 pt-10 border-t border-gray-200 flex flex-col items-center text-center">
+                <Button
                   type="submit"
-                  className="h-12 rounded-lg bg-[#efb64f] px-8 text-[15px] font-semibold text-[#2a1f19] hover:bg-[#e0a43c] transition-colors"
+                  className="h-14 rounded-none bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
                 >
                   {t("submitButton")}
-                </button>
-                <p className="mt-4 text-[12px] text-[#9a8a80] leading-relaxed max-w-xl">
+                </Button>
+                <p className="mt-5 text-sm text-gray-500 leading-relaxed max-w-xl">
                   {t("disclaimer")}
                 </p>
               </div>

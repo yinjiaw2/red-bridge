@@ -7,6 +7,7 @@ import EmployerPartnershipSection from "@/components/for-employers/EmployerPartn
 import EmployerDifferenceSection from "@/components/for-employers/EmployerDifferenceSection";
 import EmployerFaqSection from "@/components/for-employers/EmployerFaqSection";
 import EmployerEnquirySection from "@/components/for-employers/table/EmployerEnquirySection";
+import EmployerCtaSection from "@/components/for-employers/EmployerCtaSection";
 import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
 
@@ -24,6 +25,7 @@ export default function EmployersPage() {
         <EmployerDifferenceSection />
         <EmployerFaqSection />
         <EmployerEnquirySection />
+        <EmployerCtaSection />
       </main>
       <Footer />
     </>

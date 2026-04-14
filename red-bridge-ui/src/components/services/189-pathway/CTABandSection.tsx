@@ -2,9 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { ShieldCheck, FileCheck2, CalendarDays } from "lucide-react";
-import Link from "next/link";
-
-const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
+import { Button } from "@/components/ui/button";
 
 export default function CtaSection() {
   const t = useTranslations("visa189CtaSection");
@@ -27,20 +25,17 @@ export default function CtaSection() {
   return (
     <section
       id="cta"
-      style={{ fontFamily: font }}
-      className="relative overflow-hidden bg-[linear-gradient(140deg,#6b2e0f,#a8501e,#bf6b35)] px-6 py-24 text-center md:px-8"
+      className="relative overflow-hidden bg-naviblue px-6 py-24 text-center md:px-8"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.05),transparent_50%),radial-gradient(circle_at_80%_50%,rgba(255,255,255,0.04),transparent_50%)]" />
 
       <div className="relative z-10 mx-auto max-w-[920px]">
-        <h2 className="text-[34px] font-semibold leading-tight text-[#faf6f0] md:text-[52px]">
+        <h2 className="text-[34px] font-bold leading-tight text-white md:text-[52px] font-serif">
           {t("title1")}
-          <em className="not-italic text-[rgba(245,239,228,0.72)]">
-            {t("titleHighlight")}
-          </em>
+          <em className="not-italic text-highlight">{t("titleHighlight")}</em>
         </h2>
 
-        <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-8 text-[rgba(245,239,228,0.75)] md:text-[16px]">
+        <p className="mx-auto mt-4 max-w-[560px] text-base leading-8 text-gray-300 md:text-lg">
           {t("subtitle")}
         </p>
 
@@ -48,26 +43,24 @@ export default function CtaSection() {
           {trustItems.map((item, index) => (
             <span
               key={index}
-              className="inline-flex items-center gap-2 text-[13px] text-[rgba(245,239,228,0.8)]"
+              className="inline-flex items-center gap-2 text-sm text-gray-300"
             >
-              <span className="text-[rgba(245,239,228,0.7)]">{item.icon}</span>
+              <span className="text-highlight">{item.icon}</span>
               {item.text}
             </span>
           ))}
         </div>
 
         <div className="mt-9">
-          <Link
-            href="/booking?src=189_cta"
-            className="inline-flex items-center justify-center rounded-full bg-[#faf6f0] px-8 py-4 text-[15px] font-bold text-[#a8501e] shadow-[0_4px_20px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
+          <Button
+            asChild
+            className="h-14 rounded-none bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-naviblue hover:bg-yellow-400 transition-colors shadow-lg"
           >
-            {t("button")}
-          </Link>
+            <a href="/booking?src=189_cta">{t("button")}</a>
+          </Button>
         </div>
 
-        <p className="mt-4 text-[13px] text-[rgba(245,239,228,0.68)]">
-          {t("footnote")}
-        </p>
+        <p className="mt-4 text-sm text-gray-400">{t("footnote")}</p>
       </div>
     </section>
   );

@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
-
 type Pathway = {
   visa: string;
   title: string;
@@ -43,46 +41,45 @@ export default function RelatedPathwaysSection() {
   return (
     <section
       id="related-pathways"
-      style={{ fontFamily: font }}
-      className="bg-[#f5efe4] px-6 py-24 md:px-8"
+      className="bg-gray-50 px-6 py-24 md:px-8 border-b border-gray-200"
     >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#a8501e]">
-            <span className="h-px w-6 bg-[#bf6b35]" />
+          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-brandred">
+            <span className="h-px w-6 bg-brandred" />
             {t("eyebrow")}
           </div>
 
-          <h2 className="text-[34px] font-semibold leading-tight text-[#2a1f14] md:text-[44px]">
+          <h2 className="text-4xl font-bold leading-tight text-naviblue md:text-5xl font-serif">
             {t("title1")}
-            <em className="not-italic text-[#bf6b35]">{t("titleHighlight")}</em>
+            <em className="not-italic text-brandred">{t("titleHighlight")}</em>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-[620px] text-[15px] leading-7 text-[rgba(42,31,20,0.6)] md:text-[16px]">
+          <p className="mx-auto mt-5 max-w-[620px] text-lg leading-8 text-gray-600">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-[900px] grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="mx-auto grid max-w-[900px] grid-cols-1 gap-6 md:grid-cols-3">
           {pathways.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className="block rounded-[8px] border border-[rgba(42,31,20,0.09)] bg-[#faf6f0] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(168,80,30,0.2)] hover:shadow-[0_4px_24px_rgba(42,31,20,0.1)]"
+              className="block rounded-none border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="mb-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[#a8501e]">
+              <div className="mb-3 text-xs font-bold uppercase tracking-wider text-brandred">
                 {item.visa}
               </div>
 
-              <h4 className="mb-2 text-[18px] font-semibold text-[#2a1f14]">
+              <h4 className="mb-3 text-xl font-bold text-naviblue font-serif">
                 {item.title}
               </h4>
 
-              <p className="mb-4 text-[14px] leading-7 text-[rgba(42,31,20,0.6)]">
+              <p className="mb-5 text-base leading-relaxed text-gray-600">
                 {item.desc}
               </p>
 
-              <span className="text-[13px] font-semibold text-[#a8501e]">
+              <span className="text-sm font-bold uppercase tracking-wider text-brandred">
                 {item.linkText}
               </span>
             </Link>

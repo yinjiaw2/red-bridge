@@ -14,31 +14,31 @@ export default function EmployerNetworkSection() {
   const bullets = t.raw("bullets") as Bullet[];
 
   return (
-    <section className="bg-brandbackground py-24 px-[5%]">
+    <section className="bg-naviblue py-24 px-[5%]">
       <div className="max-w-300 mx-auto">
         {/* Eyebrow — lines on both sides */}
         <div className="flex items-center justify-center gap-4 mb-10">
-          <span className="flex-1 max-w-16 h-px bg-[#c9a98a]" />
-          <span className="text-[0.68rem] font-bold tracking-[0.2em] text-[#9a7a5e] uppercase whitespace-nowrap">
+          <span className="flex-1 max-w-16 h-px bg-white/20" />
+          <span className="text-[0.75rem] font-bold tracking-widest text-highlight uppercase whitespace-nowrap">
             {t("eyebrow")}
           </span>
-          <span className="flex-1 max-w-16 h-px bg-[#c9a98a]" />
+          <span className="flex-1 max-w-16 h-px bg-white/20" />
         </div>
 
         {/* Heading */}
         <h2
-          className="text-center text-5xl md:text-6xl lg:text-[4rem] font-bold text-[#1a1209] leading-tight mb-7"
+          className="text-center text-5xl md:text-6xl lg:text-[4rem] font-bold text-white leading-tight mb-7"
           style={{ fontFamily: "Georgia, serif" }}
         >
           <span className="block">{t("headingLine1")}</span>
           <span className="block">
             {t("headingLine2")}{" "}
-            <span className="text-[#A20000]">{t("headingHighlight")}</span>
+            <span className="text-highlight">{t("headingHighlight")}</span>
           </span>
         </h2>
 
         {/* Description */}
-        <p className="text-center text-[#6b5a4e] text-base md:text-[17px] leading-relaxed max-w-2xl mx-auto mb-12">
+        <p className="text-center text-gray-300 text-base md:text-[17px] leading-relaxed max-w-2xl mx-auto mb-12">
           {t("description")}
         </p>
 
@@ -48,15 +48,15 @@ export default function EmployerNetworkSection() {
             <div key={i} className="flex items-start gap-4">
               <div className="shrink-0 mt-0.5">
                 <CheckCircle
-                  className="h-5 w-5 text-[#b3592a]"
+                  className="h-5 w-5 text-highlight"
                   aria-hidden="true"
                 />
               </div>
               <div>
-                <span className="font-semibold text-[#1a1209] text-[15px]">
+                <span className="font-bold text-white text-[15px]">
                   {item.label}
                 </span>
-                <span className="text-[#6b5a4e] text-[15px]">
+                <span className="text-gray-300 text-[15px]">
                   {" "}
                   — {item.detail}
                 </span>
@@ -69,13 +69,13 @@ export default function EmployerNetworkSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href={t("primaryHref")}
-            className="inline-flex h-12 items-center gap-2 rounded-lg bg-[#efb64f] px-8 text-[15px] font-semibold text-[#2a1f19] hover:bg-[#e0a43c] transition-colors"
+            className="inline-flex h-12 items-center gap-2 rounded-none bg-brandred px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
           >
             {t("primaryButton")}
           </Link>
           <Link
             href={t("secondaryHref")}
-            className="inline-flex h-12 items-center rounded-lg border border-[#c9a98a] px-8 text-[15px] font-semibold text-[#6b5a4e] hover:border-[#A20000] hover:text-[#A20000] transition-colors"
+            className="inline-flex h-12 items-center rounded-none border border-white/30 bg-transparent px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-white/10 hover:border-white transition-colors"
           >
             {t("secondaryButton")}
           </Link>

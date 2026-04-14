@@ -35,7 +35,7 @@ export default function EmployerProcessSection() {
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6"
+          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-6"
           style={{ fontFamily: "Georgia, serif" }}
         >
           <span className="block">{t("headingLine1")}</span>
@@ -66,7 +66,7 @@ export default function EmployerProcessSection() {
                 <TableCell className="font-bold text-lg text-brandred">
                   {phase.number}
                 </TableCell>
-                <TableCell className="font-semibold text-gray-900">
+                <TableCell className="font-bold text-naviblue">
                   {phase.title}
                 </TableCell>
                 <TableCell>
@@ -98,10 +98,10 @@ export default function EmployerProcessSection() {
             href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-brandred hover:text-red-800 transition-colors"
+            className="inline-flex h-12 items-center gap-2 rounded-none bg-brandred px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
           >
             {t("footerLinkText")}
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            <ArrowRight className="h-5 w-5" aria-hidden="true" />
           </a>
         </div>
       </div>

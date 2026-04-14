@@ -1,0 +1,82 @@
+{
+  "successCasesList": {
+    "statLabels": {
+      "visa": "签证类型",
+      "timeline": "处理时间",
+      "assessment": "技能评估",
+      "status": "状态"
+    },
+    "statusApproved": "获批",
+    "statusPR": "PR获批",
+    "statusOngoing": "进行中",
+    "disclaimer": "以上所有案例均代表真实客户成果。为保护隐私，所有客户身份均以姓名缩写及职业呈现。所有签证结果及项目完成情况均经RedBridge内部记录核实。",
+    "cases": [
+      {
+        "category": "雇主担保",
+        "categoryKey": "employer",
+        "colorKey": "warm",
+        "title": "会计师4个月内获得482担保雇主安置",
+        "body": "该客户持有485签证已两年，独立求职屡遭碰壁。RedBridge为其匹配了一家持有有效482担保资格的中型会计师事务所。客户CAANZ技能评估已完成，从首次咨询到签证获批仅用时不到4个月。",
+        "visa": "482",
+        "timeline": "4个月",
+        "assessment": "CAANZ",
+        "status": "approved"
+      },
+      {
+        "category": "雇主担保",
+        "categoryKey": "employer",
+        "colorKey": "default",
+        "title": "市场营销经理走上担保雇主186 PR路径",
+        "body": "该客户联系RedBridge时已有意向雇主，但尚未建立正式担保结构。Insight Idea随即并行递交了SBS申请与482提名。客户目前已完成482签证18个月，186 ENS过渡路径按计划推进中。",
+        "visa": "482 → 186",
+        "timeline": "进行中",
+        "assessment": "AMI",
+        "status": "ongoing"
+      },
+      {
+        "category": "技术独立移民",
+        "categoryKey": "independent",
+        "colorKey": "default",
+        "title": "IT工程师7个月内通过189签证获永久居留",
+        "body": "该客户已有较高分数并完成ACS技能评估，主要障碍在于EOI策略规划。RedBridge提供了详细的分数差距分析并协助完成技能评估申请，EOI递交后7个月内收到邀请。",
+        "visa": "189",
+        "timeline": "约7个月",
+        "assessment": "ACS",
+        "status": "approved"
+      },
+      {
+        "category": "职业发展",
+        "categoryKey": "career",
+        "colorKey": "warm",
+        "title": "工科毕业生完成ANZSCO对齐工作经历积累",
+        "body": "该客户刚完成大学学业，无本地工作记录。加入职业发展项目后，他在12个月内积累了400+小时符合ANZSCO标准、经Engineers Australia认可的项目工作记录，完全满足技能评估申请要求。",
+        "visa": "485",
+        "timeline": "12个月",
+        "assessment": "Engineers Australia",
+        "status": "ongoing"
+      },
+      {
+        "category": "雇主担保",
+        "categoryKey": "employer",
+        "colorKey": "default",
+        "title": "ICT专员从485顺利过渡至雇主担保482签证",
+        "body": "该客户联系RedBridge时485签证仅剩8个月有效期。RedBridge为其匹配墨尔本科技企业后，Insight Idea在过桥签证A生效期间完成提名及签证申请递交，482签证在485到期前顺利获批。",
+        "visa": "485 → 482",
+        "timeline": "5个月",
+        "assessment": "ACS",
+        "status": "approved"
+      },
+      {
+        "category": "技术独立移民",
+        "categoryKey": "independent",
+        "colorKey": "warm",
+        "title": "留学生通过市场营销职业路径规划190州担保",
+        "body": "该客户就读市场营销硕士期间首次咨询RedBridge。我们识别出维多利亚州190提名为可行路径，并制定了符合AMI评估要求的24个月职业规划。客户按计划时间节点收到州担保邀请。",
+        "visa": "190",
+        "timeline": "24个月",
+        "assessment": "AMI",
+        "status": "approved"
+      }
+    ]
+  }
+}

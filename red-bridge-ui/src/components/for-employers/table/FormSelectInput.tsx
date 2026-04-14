@@ -35,8 +35,8 @@ export default function FormSelectInput<T extends FieldValues>({
         render={({ field }) => (
           <Select onValueChange={field.onChange} value={field.value}>
             <SelectTrigger
-              className={`w-full h-10 rounded-lg border px-3 text-[14px] bg-white focus:outline-none focus:ring-2 focus:ring-[#A20000]/20 ${
-                error ? "border-[#A20000]" : "border-[#d9cfc6]"
+              className={`w-full h-11 rounded-none border px-4 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brandred/20 ${
+                error ? "border-brandred" : "border-gray-300"
               }`}
             >
               <SelectValue placeholder={placeholder} />
@@ -51,7 +51,7 @@ export default function FormSelectInput<T extends FieldValues>({
           </Select>
         )}
       />
-      {error && <p className="mt-1 text-[11px] text-[#A20000]">{error}</p>}
+      {error && <p className="mt-1.5 text-xs text-brandred">{error}</p>}
     </>
   );
 }

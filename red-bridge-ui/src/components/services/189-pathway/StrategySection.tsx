@@ -10,8 +10,6 @@ import {
   Users,
 } from "lucide-react";
 
-const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
-
 type StrategyCard = {
   icon: React.ReactNode;
   title: string;
@@ -64,47 +62,44 @@ export default function StrategySection() {
   return (
     <section
       id="strategy"
-      style={{ fontFamily: font }}
-      className="bg-[#ede5d8] px-6 py-24 md:px-8"
+      className="bg-gray-50 px-6 py-24 md:px-8 border-b border-gray-200"
     >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#a8501e]">
-            <span className="h-px w-6 bg-[#bf6b35]" />
+          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-brandred">
+            <span className="h-px w-6 bg-brandred" />
             {t("eyebrow")}
           </div>
 
-          <h2 className="text-[34px] font-semibold leading-tight text-[#2a1f14] md:text-[44px]">
+          <h2 className="text-4xl font-bold leading-tight text-naviblue md:text-5xl font-serif">
             {t("title1")}
-            <em className="not-italic text-[#bf6b35]">{t("titleHighlight")}</em>
+            <em className="not-italic text-brandred">{t("titleHighlight")}</em>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-[620px] text-[15px] leading-7 text-[rgba(42,31,20,0.6)] md:text-[16px]">
+          <p className="mx-auto mt-5 max-w-[620px] text-lg leading-8 text-gray-600">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-[8px] border border-[rgba(42,31,20,0.09)] bg-[#faf6f0] p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(42,31,20,0.1)]"
+              className="group relative overflow-hidden rounded-none border-t-4 border-t-naviblue bg-white p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="absolute bottom-0 left-0 right-0 h-[3px] origin-left scale-x-0 bg-[linear-gradient(135deg,#bf6b35_0%,#8b3e18_100%)] transition-transform duration-300 group-hover:scale-x-100" />
-
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-[8px] bg-[rgba(168,80,30,0.07)]">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-none bg-brandred/10">
                 {card.icon}
               </div>
 
-              <h4 className="mb-2 text-[18px] font-semibold text-[#2a1f14]">
+              <h4 className="mb-2 text-xl font-bold text-naviblue font-serif">
                 {card.title}
               </h4>
 
-              <p className="text-[14px] leading-7 text-[rgba(42,31,20,0.6)]">
+              <p className="text-base leading-relaxed text-gray-600">
                 {card.desc}
               </p>
 
-              <span className="mt-4 inline-block rounded-full bg-[rgba(168,80,30,0.07)] px-3 py-1 text-[12px] font-bold text-[#bf6b35]">
+              <span className="mt-5 inline-block rounded-none bg-brandred/10 border border-brandred/20 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brandred">
                 {card.badge}
               </span>
             </div>
