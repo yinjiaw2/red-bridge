@@ -1,11 +1,11 @@
-import NavBar from "@/components/home/NavBar";
+import NavBar from "@/components/shared/NavBar";
 import HeroSection from "@/components/home/HeroSection";
 import UserScenarioSection from "@/components/home/UserScenarioSection";
 import TrustSafetySection from "@/components/home/TrustSafetySection";
 import SuccessTicker from "@/components/home/OutcomeTickerSection";
 import ComparisonSection from "@/components/home/ComparisonSection";
 import EmployerNetwork from "@/components/home/EmployerNetworkSection";
-import Footer from "@/components/home/Footer";
+import Footer from "@/components/shared/Footer";
 import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {

@@ -1,5 +1,5 @@
-import NavBar from "@/components/home/NavBar";
-import Footer from "@/components/home/Footer";
+import NavBar from "@/components/shared/NavBar";
+import Footer from "@/components/shared/Footer";
 import CareerTabsSection from "@/components/services/career-launch/CategoryTabsSection";
 
 export default function CareerLaunchPage() {
