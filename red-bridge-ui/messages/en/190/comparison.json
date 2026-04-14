@@ -1,0 +1,35 @@
+{
+  "visa190": {
+    "comparison": {
+      "eyebrow": "189 vs 190",
+      "title1": "Same Destination. ",
+      "titleHighlight": "Different Route.",
+      "subtitle": "Both visas grant permanent residency from day one. The differences are in how you get there, and what you commit to.",
+      "note": "Many clients run 189 and 190 simultaneously. We advise on the optimal dual-pathway strategy at your free consultation.",
+      "cards": [
+        {
+          "badge": "Subclass 189 — Skilled Independent",
+          "title": "No sponsor, no state, no commitment.",
+          "items": [
+            "No state nomination — you compete solely in the federal SkillSelect queue",
+            "No bonus points beyond the base test — maximum from own profile only",
+            "No living commitment — live and work anywhere in Australia from day one",
+            "For ICT and Marketing: typically requires 95–100+ points to receive invitation in reasonable time",
+            "Single process — EOI in SkillSelect, wait for invitation, lodge application"
+          ]
+        },
+        {
+          "badge": "Subclass 190 — Skilled Nominated · Victoria",
+          "title": "State nomination. Five extra points. A different queue.",
+          "items": [
+            "+5 points from Victoria's nomination — can move an 80-point profile to 85, or 85 to 90",
+            "Separate ROI-based selection system — Victoria manages its own invitation rounds independently of federal SkillSelect",
+            "Must commit to living and working in Victoria for at least 2 years after grant",
+            "Often faster for well-matched profiles — Victoria's pool is smaller than the global 189 queue",
+            "Two-step process: EOI in SkillSelect, then ROI in Live in Melbourne portal — both required"
+          ]
+        }
+      ]
+    }
+  }
+}

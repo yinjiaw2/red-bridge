@@ -1,0 +1,61 @@
+{
+  "visa190": {
+    "process": {
+      "eyebrow": "How We Work Together",
+      "title1": "RedBridge Prepares You. ",
+      "titleHighlight": "Insight Idea Lodges For You.",
+      "subtitle": "Clear responsibilities at every step. No blurred lines, no confusion about who does what.",
+      "steps": [
+        {
+          "step": "01",
+          "who": "RedBridge",
+          "title": "Free Assessment — Points & ROI Prospects",
+          "desc": "Your RedBridge consultant calculates your full points profile, reviews your Victorian employment and earnings situation, and gives you an honest assessment of your ROI ranking prospects. If the 190 timeline is not favourable for your occupation, we map the 189 or 491 as alternatives at the same consultation — no second appointment needed.",
+          "time": "Week 1 — free, no obligation",
+          "type": "rb"
+        },
+        {
+          "step": "02",
+          "who": "RedBridge",
+          "title": "Skills Assessment Preparation",
+          "desc": "A positive skills assessment is mandatory for the 190, and your assessment must have at least 12 weeks of validity remaining when you submit your nomination application. RedBridge prepares your employment documentation and application package for ACS (ICT), AMI (Marketing), or the relevant assessing body. Assessment preparation runs in parallel with EOI and ROI strategy to minimise total timeline.",
+          "time": "4–12 weeks depending on assessing body",
+          "type": "rb"
+        },
+        {
+          "step": "03",
+          "who": "Insight Idea — MARA Agent",
+          "title": "EOI Lodged in SkillSelect + ROI in Live in Melbourne",
+          "desc": "Insight Idea lodges your federal EOI in SkillSelect selecting Victoria, and prepares your ROI submission in the Live in Melbourne portal. The ROI is a separate, detailed document — it must accurately reflect your skills, employment history, earnings, and Victorian ties. Insight Idea reviews every claim before submission to minimise refusal risk.",
+          "time": "After skills assessment result",
+          "type": "ii",
+          "alert": "14-day deadline: If Victoria issues you an invitation to apply for nomination, you must submit your full nomination application within 14 days. Insight Idea monitors your portal and prepares all documentation in advance so you are never scrambling when an invitation arrives."
+        },
+        {
+          "step": "04",
+          "who": "Victorian Government",
+          "title": "Nomination Granted",
+          "desc": "Victoria approves your nomination and issues a nomination certificate. This automatically triggers a federal invitation to apply for the 190 visa in SkillSelect. Your points score is updated to include the +5 nomination points.",
+          "time": "Weeks to months — no set timeline",
+          "type": "state"
+        },
+        {
+          "step": "05",
+          "who": "Insight Idea — MARA Agent",
+          "title": "190 Visa Application Lodged",
+          "desc": "Insight Idea lodges your complete 190 visa application with the Department of Home Affairs within the 60-day window from nomination. All medical examinations, character checks, and supporting documents are managed through this process. RedBridge CRM tracks milestone dates and ensures Insight Idea is notified of any circumstance changes.",
+          "time": "Within 60 days of nomination",
+          "type": "ii"
+        },
+        {
+          "step": "★",
+          "who": "Insight Idea — MARA Agent",
+          "title": "190 Visa Granted — Permanent Resident of Victoria",
+          "desc": "Your 190 is granted. You are a Permanent Resident of Australia from the date of grant — with full work rights, Medicare, and a commitment to live and work in Victoria for at least two years. After 4 years as a PR (including 1 year as a citizen), you may apply for Australian citizenship.",
+          "time": "Permanent Resident ★",
+          "type": "final"
+        }
+      ]
+    }
+  }
+}

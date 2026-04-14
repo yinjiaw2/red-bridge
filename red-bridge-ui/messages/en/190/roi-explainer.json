@@ -1,0 +1,42 @@
+{
+  "visa190": {
+    "roiExplainer": {
+      "eyebrow": "Two Systems",
+      "title1": "EOI and ROI. ",
+      "titleHighlight": "Both Matter.",
+      "subtitle": "The Victorian 190 is not a single federal application. It is a coordinated two-system process involving SkillSelect and Victoria's Live in Melbourne portal.",
+      "steps": [
+        {
+          "who": "Federal",
+          "title": "Submit EOI in SkillSelect",
+          "desc": "Your Expression of Interest sits in the federal system and records your points score, occupation, and visa subclasses selected.",
+          "time": "Federal queue"
+        },
+        {
+          "who": "Victoria",
+          "title": "Submit ROI in Live in Melbourne",
+          "desc": "Your Registration of Interest is a separate Victorian submission explaining your occupation, earnings, and ties to the state.",
+          "time": "State queue"
+        },
+        {
+          "who": "Victoria",
+          "title": "Victoria ranks your ROI",
+          "desc": "Victoria reviews occupation demand, Victorian earnings, points score, and commitment evidence before selecting candidates.",
+          "time": "No fixed round timing"
+        },
+        {
+          "who": "Legal",
+          "title": "Nomination invitation issued",
+          "desc": "If selected, you receive an invitation to apply for state nomination and must move quickly with supporting documents.",
+          "time": "14-day nomination deadline"
+        },
+        {
+          "who": "Final",
+          "title": "190 visa invitation follows",
+          "desc": "Once Victoria grants nomination, SkillSelect issues your federal 190 invitation and the visa application can be lodged.",
+          "time": "60-day visa deadline"
+        }
+      ]
+    }
+  }
+}

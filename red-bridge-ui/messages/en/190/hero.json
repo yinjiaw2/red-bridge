@@ -1,0 +1,36 @@
+{
+  "visa190": {
+    "hero": {
+      "eyebrow": "Subclass 190 — Skilled Nominated Visa · Victoria",
+      "title1": "Five Extra Points.",
+      "title2": "A Separate Queue.",
+      "subtitle": "If your points score is strong but your occupation is too competitive for a timely 189 invitation, state nomination changes the equation. Victoria's 190 adds 5 points and puts you in a state-managed selection pool — often less crowded than the federal SkillSelect queue for ICT and Marketing professionals.",
+      "trust": [
+        "Permanent residency from day one",
+        "+5 points from Victoria nomination",
+        "Separate ROI queue — less competition",
+        "EOI + ROI strategy by Insight Idea (MARN: 1467870)"
+      ],
+      "ctaPrimary": "Check My 190 Eligibility — Free",
+      "ctaSecondary": "How it differs from 189",
+      "stats": [
+        {
+          "value": "2,700",
+          "label": "Victoria 190 places 2025–26"
+        },
+        {
+          "value": "+5",
+          "label": "Bonus points from nomination"
+        },
+        {
+          "value": "80–85",
+          "label": "Typical competitive points in VIC"
+        },
+        {
+          "value": "2 yrs",
+          "label": "Victoria living commitment"
+        }
+      ]
+    }
+  }
+}

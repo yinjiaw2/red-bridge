@@ -1,0 +1,32 @@
+{
+  "visa190": {
+    "related": {
+      "eyebrow": "Also Consider",
+      "title1": "Other Pathways Worth ",
+      "titleHighlight": "Mapping",
+      "items": [
+        {
+          "visa": "Subclass 189",
+          "title": "Skilled Independent",
+          "desc": "No state commitment. No nomination required. Purely points-based. Best for profiles at 90–100+ points. Often run in parallel with the 190.",
+          "linkText": "Explore 189 pathway →",
+          "href": "/services/189-pathway"
+        },
+        {
+          "visa": "Subclass 491",
+          "title": "Regional Pathway",
+          "desc": "+15 points from regional nomination. Much less competition. Leads to 191 PR after 3 years in regional Victoria. Worth serious consideration for ICT profiles at 75–85 points.",
+          "linkText": "Explore 491 pathway →",
+          "href": "/services/491-pathway"
+        },
+        {
+          "visa": "Subclass 482 / 186",
+          "title": "Employer Sponsored",
+          "desc": "Bypasses the points queue entirely. If you have 1+ year of experience and a willing employer, this can be the fastest route to PR without ever needing a competitive points score.",
+          "linkText": "Explore employer pathway →",
+          "href": "/services/employer-pathway"
+        }
+      ]
+    }
+  }
+}

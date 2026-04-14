@@ -1,0 +1,32 @@
+{
+  "visa190": {
+    "requirements": {
+      "eyebrow": "Core Requirements",
+      "title1": "What You Need Before Victoria ",
+      "titleHighlight": "Can Nominate You",
+      "subtitle": "The 190 has both federal visa rules and Victorian nomination-specific requirements. You need both sets aligned.",
+      "groups": [
+        {
+          "title": "Federal 190 visa requirements",
+          "items": [
+            "Occupation on the relevant skilled occupation list",
+            "Positive skills assessment for your nominated occupation",
+            "Competent English at minimum",
+            "At least 65 points including the 5 nomination points",
+            "Age under 45 at time of invitation"
+          ]
+        },
+        {
+          "title": "Victorian nomination requirements",
+          "items": [
+            "Valid EOI in SkillSelect selecting Victoria",
+            "Separate ROI lodged through Live in Melbourne",
+            "Skills assessment with at least 12 weeks validity remaining when nomination is lodged",
+            "Commitment to live and work in Victoria for at least 2 years",
+            "Evidence that your profile aligns with Victoria's selection priorities"
+          ]
+        }
+      ]
+    }
+  }
+}
