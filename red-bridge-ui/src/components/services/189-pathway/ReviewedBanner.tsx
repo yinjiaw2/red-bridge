@@ -8,10 +8,10 @@ export default function ReviewedBanner() {
 
   return (
     <section className="px-6 py-3 bg-gray-100 border-y border-gray-200">
-      <div className="max-w-[1100px] mx-auto flex flex-wrap items-center gap-3 text-sm text-gray-600">
+      <div className="max-w-[1100px] mx-auto flex flex-wrap items-center gap-3 text-sm text-gray-600 justify-center">
         <CalendarCheck size={16} className="text-green-700 shrink-0" />
 
-        <span>
+        <span className="items-center justify-center">
           {t("textBefore")}
           <strong className="text-gray-900">{t("date")}</strong>
           {t("textAfter")}
