@@ -18,11 +18,20 @@ export default getRequestConfig(async ({requestLocale}) => {
       : DEFAULT_LOCALE;
 
   const messagesDir = path.join(process.cwd(), 'messages', locale);
-  const files = fs.readdirSync(messagesDir).filter((f) => f.endsWith('.json'));
+
+  const collectJsonFiles = (dir: string): string[] => {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    return entries.flatMap((entry) => {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) return collectJsonFiles(fullPath);
+      if (entry.isFile() && entry.name.endsWith('.json')) return [fullPath];
+      return [];
+    });
+  };
+
+  const files = collectJsonFiles(messagesDir);
   const messages = files.reduce<Record<string, unknown>>((acc, file) => {
-    const content = JSON.parse(
-      fs.readFileSync(path.join(messagesDir, file), 'utf-8')
-    );
+    const content = JSON.parse(fs.readFileSync(file, 'utf-8'));
     return {...acc, ...content};
   }, {});
 
