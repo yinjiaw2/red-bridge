@@ -1,0 +1,33 @@
+{
+  "employerPartnership": {
+    "eyebrow": "合作关系",
+    "headingMain": "RedBridge + Insight Idea —",
+    "headingHighlight": "分工明确。",
+    "description": "RedBridge 专注于寻找和准备合适的候选人。Insight Idea 是我们同一办公室的 MARA 注册法律合作伙伴，处理所有移民建议、申请和合规事务。",
+    "cards": [
+      {
+        "badge": "REDBRIDGE CONSULTING",
+        "title": "人才与商务",
+        "bullets": [
+          "从候选人数据库中匹配符合岗位要求及签证资格职业级别的人选",
+          "在推荐前预筛选技能评估资格（ACS、AMI、Engineers Australia）",
+          "协调候选人材料准备与职业发展规划",
+          "管理雇主与候选人之间的沟通及全程里程碑跟进支持",
+          "CRM里程碑追踪——标记2年节点以评估186 ENS永居过渡资格"
+        ]
+      },
+      {
+        "badge": "INSIGHT IDEA — MARN: 1467870",
+        "title": "法律与移民",
+        "bullets": [
+          "标准商业担保（SBS）申请与移民部获批",
+          "劳动力市场测试——招聘广告合规与材料存档记录",
+          "提名材料准备及递交（482核心技能流/专家技能流）",
+          "签证申请支持及签证持有人内部证件管理",
+          "持续合规监控及内政部通知义务跟进",
+          "2年节点186 ENS过渡申请及路径规划"
+        ]
+      }
+    ]
+  }
+}

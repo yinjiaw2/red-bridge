@@ -1,0 +1,39 @@
+{
+  "employerDifference": {
+    "eyebrow": "Why Choose RedBridge",
+    "headingMain": "How We Differ from",
+    "headingHighlight": "a Standard Recruiter.",
+    "cards": [
+      {
+        "iconKey": "userCheck",
+        "title": "Candidates Are Pre-Assessed",
+        "description": "Every candidate in our ICT, marketing, engineering, and hospitality pools has been screened for work history, skills assessment eligibility, and visa pathway viability before we refer them to any employer."
+      },
+      {
+        "iconKey": "scale",
+        "title": "Legal Partner in the Same Office",
+        "description": "Insight Idea's lawyers and migration agents work alongside our team at our Docklands office. There is no handoff gap between career placement and visa lodgement — both happen in parallel."
+      },
+      {
+        "iconKey": "trendingUp",
+        "title": "Full Compliance Tracking Throughout Visa Validity",
+        "description": "Our CRM tracks each sponsored worker's milestone dates and 482/PR status. You will not miss a notification window or compliance deadline — all flagged well in advance."
+      },
+      {
+        "iconKey": "dollarSign",
+        "title": "Completely Transparent Fees",
+        "description": "We provide a fully itemised fee structure before signing — government fees, SAF levy, and service fees all listed. No surprises after the process begins."
+      },
+      {
+        "iconKey": "building2",
+        "title": "Verified Sponsoring Employer Partners",
+        "description": "Our employer network holds current, verified 482 or 186 sponsorship eligibility. We have placed candidates across ICT, accounting, marketing, and engineering with employers who sponsor genuinely."
+      },
+      {
+        "iconKey": "users",
+        "title": "Chinese-Speaking Team",
+        "description": "Many of our clients are most comfortable communicating in Mandarin. Our team includes fluent Mandarin and English speakers — ensuring nothing is lost in translation for either employer or candidate."
+      }
+    ]
+  }
+}
