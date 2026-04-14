@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
+import FormSelectInput from "./FormSelectInput";
 
 interface FormValues {
   companyName: string;
@@ -64,42 +65,6 @@ function TextInput({
   );
 }
 
-function SelectInput({
-  field,
-  options,
-  placeholder,
-  register,
-  error,
-}: {
-  field: keyof FormValues;
-  options: string[];
-  placeholder: string;
-  register: ReturnType<typeof useForm<FormValues>>["register"];
-  error?: string;
-}) {
-  return (
-    <>
-      <select
-        {...register(field, { required: true })}
-        defaultValue=""
-        className={`w-full h-10 rounded-lg border px-3 text-[14px] bg-white focus:outline-none focus:ring-2 focus:ring-[#A20000]/20 ${
-          error ? "border-[#A20000]" : "border-[#d9cfc6]"
-        }`}
-      >
-        <option value="" disabled>
-          {placeholder}
-        </option>
-        {options.map((o) => (
-          <option key={o} value={o}>
-            {o}
-          </option>
-        ))}
-      </select>
-      {error && <p className="mt-1 text-[11px] text-[#A20000]">{error}</p>}
-    </>
-  );
-}
-
 function SectionHeading({ number, title }: { number: string; title: string }) {
   return (
     <div className="flex items-center gap-3 pt-8 mb-6 border-t border-[#e2d9d0]">
@@ -127,6 +92,7 @@ export default function EmployerEnquirySection() {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors, isSubmitSuccessful },
   } = useForm<FormValues>();
 
@@ -261,32 +227,35 @@ export default function EmployerEnquirySection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
                 <div>
                   <Label text={t("labelIsApprovedSponsor")} required />
-                  <SelectInput
-                    field="isApprovedSponsor"
+                  <FormSelectInput
+                    name="isApprovedSponsor"
+                    control={control}
                     options={optionsApprovedSponsor}
                     placeholder={placeholder}
-                    register={register}
                     error={err("isApprovedSponsor")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
                 <div>
                   <Label text={t("labelHasPreviouslySponsored")} required />
-                  <SelectInput
-                    field="hasPreviouslySponsored"
+                  <FormSelectInput
+                    name="hasPreviouslySponsored"
+                    control={control}
                     options={yesNo}
                     placeholder={placeholder}
-                    register={register}
                     error={err("hasPreviouslySponsored")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
                 <div>
                   <Label text={t("labelIsAccreditedSponsor")} required />
-                  <SelectInput
-                    field="isAccreditedSponsor"
+                  <FormSelectInput
+                    name="isAccreditedSponsor"
+                    control={control}
                     options={yesNo}
                     placeholder={placeholder}
-                    register={register}
                     error={err("isAccreditedSponsor")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
               </div>
@@ -299,12 +268,13 @@ export default function EmployerEnquirySection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                 <div>
                   <Label text={t("labelCanProvideBusinessEvidence")} required />
-                  <SelectInput
-                    field="canProvideBusinessEvidence"
+                  <FormSelectInput
+                    name="canProvideBusinessEvidence"
+                    control={control}
                     options={yesNo}
                     placeholder={placeholder}
-                    register={register}
                     error={err("canProvideBusinessEvidence")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
                 <div>
@@ -312,12 +282,13 @@ export default function EmployerEnquirySection() {
                     text={t("labelCanDemonstrateFinancialCapacity")}
                     required
                   />
-                  <SelectInput
-                    field="canDemonstrateFinancialCapacity"
+                  <FormSelectInput
+                    name="canDemonstrateFinancialCapacity"
+                    control={control}
                     options={yesNo}
                     placeholder={placeholder}
-                    register={register}
                     error={err("canDemonstrateFinancialCapacity")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
               </div>
@@ -339,22 +310,24 @@ export default function EmployerEnquirySection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
                 <div>
                   <Label text={t("labelIsOnCSOL")} required />
-                  <SelectInput
-                    field="isOnCSOL"
+                  <FormSelectInput
+                    name="isOnCSOL"
+                    control={control}
                     options={yesNoUnsure}
                     placeholder={placeholder}
-                    register={register}
                     error={err("isOnCSOL")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
                 <div>
                   <Label text={t("labelWillingToDoLMT")} required />
-                  <SelectInput
-                    field="willingToDoLMT"
+                  <FormSelectInput
+                    name="willingToDoLMT"
+                    control={control}
                     options={yesNo}
                     placeholder={placeholder}
-                    register={register}
                     error={err("willingToDoLMT")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
                 <div>
@@ -362,12 +335,13 @@ export default function EmployerEnquirySection() {
                     text={t("labelCanProvidePositionDescription")}
                     required
                   />
-                  <SelectInput
-                    field="canProvidePositionDescription"
+                  <FormSelectInput
+                    name="canProvidePositionDescription"
+                    control={control}
                     options={yesNo}
                     placeholder={placeholder}
-                    register={register}
                     error={err("canProvidePositionDescription")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
               </div>
@@ -380,32 +354,35 @@ export default function EmployerEnquirySection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
                 <div>
                   <Label text={t("labelWillCoverAllFees")} required />
-                  <SelectInput
-                    field="willCoverAllFees"
+                  <FormSelectInput
+                    name="willCoverAllFees"
+                    control={control}
                     options={optionsFees}
                     placeholder={placeholder}
-                    register={register}
                     error={err("willCoverAllFees")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
                 <div>
                   <Label text={t("labelAwareOfSAFLevy")} required />
-                  <SelectInput
-                    field="awareOfSAFLevy"
+                  <FormSelectInput
+                    name="awareOfSAFLevy"
+                    control={control}
                     options={yesNo}
                     placeholder={placeholder}
-                    register={register}
                     error={err("awareOfSAFLevy")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
                 <div>
                   <Label text={t("labelWillCoverRelocation")} required />
-                  <SelectInput
-                    field="willCoverRelocation"
+                  <FormSelectInput
+                    name="willCoverRelocation"
+                    control={control}
                     options={optionsRelocation}
                     placeholder={placeholder}
-                    register={register}
                     error={err("willCoverRelocation")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
               </div>
@@ -421,32 +398,35 @@ export default function EmployerEnquirySection() {
                     text={t("labelWillProvideFullTimeContract")}
                     required
                   />
-                  <SelectInput
-                    field="willProvideFullTimeContract"
+                  <FormSelectInput
+                    name="willProvideFullTimeContract"
+                    control={control}
                     options={yesNo}
                     placeholder={placeholder}
-                    register={register}
                     error={err("willProvideFullTimeContract")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
                 <div>
                   <Label text={t("labelPreparedForCompliance")} required />
-                  <SelectInput
-                    field="preparedForCompliance"
+                  <FormSelectInput
+                    name="preparedForCompliance"
+                    control={control}
                     options={yesNo}
                     placeholder={placeholder}
-                    register={register}
                     error={err("preparedForCompliance")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
                 <div>
                   <Label text={t("labelOffersPRPathway")} required />
-                  <SelectInput
-                    field="offersPRPathway"
+                  <FormSelectInput
+                    name="offersPRPathway"
+                    control={control}
                     options={yesNoUnsure}
                     placeholder={placeholder}
-                    register={register}
                     error={err("offersPRPathway")}
+                    rules={{ required: requiredMsg }}
                   />
                 </div>
               </div>
