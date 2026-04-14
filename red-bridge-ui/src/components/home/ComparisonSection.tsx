@@ -32,8 +32,7 @@ export const ComparisonSection = () => {
             <span className="flex-1 max-w-16 h-px bg-brandred" />
           </div>
           <h2
-            className="text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-6"
-            style={{ fontFamily: "Georgia, serif" }}
+            className="text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-6"
           >
             {t("headingMain")}{" "}
             <span className="text-brandred">{t("headingHighlight")}</span>
@@ -153,7 +152,6 @@ export const ComparisonSection = () => {
             <div>
               <p
                 className="text-xl font-bold text-naviblue"
-                style={{ fontFamily: "Georgia, serif" }}
               >
                 {t("cta.heading")}
               </p>

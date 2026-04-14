@@ -35,8 +35,7 @@ export default function EmployerProcessSection() {
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-6"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-6"
         >
           <span className="block">{t("headingLine1")}</span>
           <span className="block">

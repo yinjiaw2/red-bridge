@@ -29,7 +29,7 @@ export const ContactSection = () => {
             </span>
             <span className="w-8 h-px bg-[#A20000]" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight font-serif">
             {t("headingMain")}
             <em className="text-[#D4A017] font-serif not-italic ml-2">
               {t("headingHighlight")}

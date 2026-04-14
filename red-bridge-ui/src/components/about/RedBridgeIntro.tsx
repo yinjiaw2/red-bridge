@@ -15,7 +15,7 @@ export const RedBridgeIntro = () => {
         </div>
 
         {/* Heading */}
-        <h1 className="font-serif font-bold text-gray-900 leading-tight mb-8">
+        <h1 className="font-serif font-bold text-gray-900 leading-tight font-serif mb-8">
           <span className="block text-5xl md:text-6xl lg:text-7xl">
             {t("headingLine1")}
           </span>

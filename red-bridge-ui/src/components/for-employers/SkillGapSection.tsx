@@ -34,8 +34,7 @@ export default function SkillsgGapSection() {
 
         {/* Heading */}
         <h2
-          className="text-center text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-5"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-center text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-5"
         >
           {t("headingMain")}{" "}
           <span className="text-brandred">{t("headingHighlight")}</span>
@@ -70,7 +69,6 @@ export default function SkillsgGapSection() {
         <div className="flex flex-col items-center gap-2 pt-8 border-t border-gray-200">
           <p
             className="text-naviblue text-lg md:text-xl font-bold text-center"
-            style={{ fontFamily: "Georgia, serif" }}
           >
             {t("footerLine1")}
           </p>

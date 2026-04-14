@@ -24,7 +24,7 @@ export default function HeroSection() {
           {t("eyebrow")}
         </div>
 
-        <h1 className="mb-6 text-6xl font-bold leading-tight text-naviblue font-serif">
+        <h1 className="mb-6 text-6xl font-bold leading-tight font-serif text-naviblue font-serif">
           {t("title1")}
           <br />
           <span className="text-brandred">{t("title2")}</span>

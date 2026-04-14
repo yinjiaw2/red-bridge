@@ -11,8 +11,7 @@ export default function AboutCtaSection() {
       <div className="max-w-300 mx-auto flex flex-col items-center text-center gap-6">
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight font-serif"
         >
           {t("headingMain")}
           <span className="text-white">{t("headingHighlight")}</span>

@@ -11,8 +11,7 @@ export default function SuccessCasesCta() {
     <section className="w-full py-28 px-[5%] bg-naviblue">
       <div className="max-w-300 mx-auto flex flex-col items-center text-center gap-5">
         <h2
-          className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight font-serif"
         >
           <span className="block">{t("headingLine1")}</span>
           <span className="block">{t("headingLine2")}</span>

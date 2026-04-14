@@ -21,7 +21,7 @@ export default function CTASection() {
           <CalendarCheck size={14} />
           {t("eyebrow")}
         </div>
-        <h2 className="text-4xl font-bold leading-tight text-white md:text-5xl font-serif">
+        <h2 className="text-4xl font-bold leading-tight font-serif text-white md:text-5xl font-serif">
           {t("title")}
         </h2>
         <p className="mx-auto mt-6 max-w-[620px] text-lg leading-8 text-gray-300">

@@ -25,7 +25,7 @@ export default function TimelineSection() {
             <span className="h-px w-6 bg-highlight" />
             {t("eyebrow")}
           </div>
-          <h2 className="text-4xl font-bold leading-tight text-white md:text-5xl font-serif">
+          <h2 className="text-4xl font-bold leading-tight font-serif text-white md:text-5xl font-serif">
             {t("title1")}
             <em className="not-italic text-highlight">{t("titleHighlight")}</em>
           </h2>

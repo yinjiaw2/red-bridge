@@ -36,7 +36,7 @@ export const TrustSafetySection = () => {
             {t("eyebrow")}
           </span>
 
-          <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6">
+          <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight font-serif mb-6">
             {t("heading")}
             <br />
             <em className="text-[#D4A017] not-italic">

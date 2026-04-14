@@ -25,8 +25,7 @@ export default function SuccessCasesWhy() {
       <div className="max-w-300 mx-auto">
         {/* Heading */}
         <h2
-          className="text-center text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-6"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-center text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-6"
         >
           {t("headingMain")}{" "}
           <span className="text-brandred">{t("headingHighlight")}</span>

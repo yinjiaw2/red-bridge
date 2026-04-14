@@ -26,8 +26,7 @@ export default function EmployerPartnershipSection() {
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-5"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-5"
         >
           {t("headingMain")}{" "}
           <span className="text-brandred">{t("headingHighlight")}</span>
@@ -55,7 +54,6 @@ export default function EmployerPartnershipSection() {
               {/* Title */}
               <h3
                 className="text-naviblue font-bold text-2xl"
-                style={{ fontFamily: "Georgia, serif" }}
               >
                 {card.title}
               </h3>

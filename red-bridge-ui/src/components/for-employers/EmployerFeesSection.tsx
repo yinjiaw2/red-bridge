@@ -26,8 +26,7 @@ export default function EmployerFeesSection() {
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-4xl md:text-5xl font-bold text-white leading-tight font-serif mb-5"
         >
           {t("headingMain")}{" "}
           <span className="text-highlight">{t("headingHighlight")}</span>
