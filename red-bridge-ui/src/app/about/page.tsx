@@ -1,6 +1,6 @@
 import NavBar from "@/components/home/NavBar";
 import Footer from "@/components/home/Footer";
-import RedBridgeIntro from "@/components/about-us/red-bridge-intro";
+import RedBridgeIntro from "@/components/about/RedBridgeIntro";
 
 export default function AboutUsPage() {
   return (
