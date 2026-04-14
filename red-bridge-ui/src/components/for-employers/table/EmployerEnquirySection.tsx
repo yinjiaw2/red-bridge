@@ -107,7 +107,7 @@ export default function EmployerEnquirySection() {
       : undefined;
 
   return (
-    <section className="bg-gray-50 py-24 px-[5%] border-b border-gray-200">
+    <section id="enquiry" className="bg-gray-50 py-24 px-[5%] border-b border-gray-200">
       <div className="max-w-300 mx-auto">
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-10">

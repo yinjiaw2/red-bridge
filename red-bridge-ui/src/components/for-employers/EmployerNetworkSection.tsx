@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface Bullet {
   label: string;
@@ -67,18 +68,23 @@ export default function EmployerNetworkSection() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href={t("primaryHref")}
-            className="inline-flex h-12 items-center gap-2 rounded-none bg-brandred px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
+          <Button
+            onClick={() =>
+              document
+                .getElementById("enquiry")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="h-12 rounded-none bg-brandred px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
           >
             {t("primaryButton")}
-          </Link>
-          <Link
-            href={t("secondaryHref")}
-            className="inline-flex h-12 items-center rounded-none border border-white/30 bg-transparent px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-white/10 hover:border-white transition-colors"
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="h-12 rounded-none border border-white/30 bg-transparent px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-white/10 hover:border-white hover:text-white transition-colors"
           >
-            {t("secondaryButton")}
-          </Link>
+            <Link href={t("secondaryHref")}>{t("secondaryButton")}</Link>
+          </Button>
         </div>
       </div>
     </section>
