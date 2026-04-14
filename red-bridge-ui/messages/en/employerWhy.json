@@ -1,0 +1,32 @@
+{
+  "employerWhy": {
+    "eyebrow": "Hiring Pain Points",
+    "headingMain": "Why Australian Businesses",
+    "headingHighlight": "Choose Sponsorship",
+    "description": "Skilled talent shortages in key roles are not a temporary problem — they are structural. For positions that are genuinely difficult to fill locally, employer sponsorship is a realistic and legally compliant solution.",
+    "cards": [
+      {
+        "iconKey": "search",
+        "title": "No qualified local candidates",
+        "description": "ICT, engineering, and healthcare roles consistently attract few or no suitable local applicants. Genuine experience with specific certifications is simply not available in sufficient volume domestically."
+      },
+      {
+        "iconKey": "clock",
+        "title": "Extended vacancies cost the business",
+        "description": "Every month a critical role stays open means lost productivity, increased workload on existing staff, and a growing risk of losing ground to competitors who have already filled theirs."
+      },
+      {
+        "iconKey": "fileText",
+        "title": "Compliance complexity discourages action",
+        "description": "Many businesses assume sponsorship is prohibitively complicated. 482 and 186 visa requirements, nomination obligations, and ongoing sponsorship duties can feel overwhelming without the right guidance."
+      },
+      {
+        "iconKey": "userSearch",
+        "title": "Hard to find the right sponsored candidate",
+        "description": "Sponsorship only works when the candidate is a genuine fit — skills, visa eligibility, and long-term commitment all need to align. Finding that match without a trusted network is a real challenge."
+      }
+    ],
+    "footerLine1": "RedBridge solves the candidate problem. Insight Idea solves the compliance problem.",
+    "footerLine2": "Together, we provide a complete solution from screening to settlement."
+  }
+}

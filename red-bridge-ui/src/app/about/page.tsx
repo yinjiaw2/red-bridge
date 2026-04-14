@@ -6,7 +6,6 @@ import ValuesSection from "@/components/about/ValuesSection";
 import TeamSection from "@/components/about/TeamSection";
 import LegalPartnerSection from "@/components/about/LegalPartnerSection";
 import AboutCtaSection from "@/components/about/AboutCtaSection";
-import EmployerNetworkSection from "@/components/employers/EmployerNetworkSection";
 
 export default function AboutUsPage() {
   return (
@@ -18,7 +17,6 @@ export default function AboutUsPage() {
         <ValuesSection />
         <TeamSection />
         <LegalPartnerSection />
-        <EmployerNetworkSection />
         <AboutCtaSection />
       </main>
       <Footer />
