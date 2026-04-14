@@ -1,0 +1,36 @@
+{
+  "careerLaunch": {
+    "timeline": {
+      "eyebrow": "Your Roadmap",
+      "title1": "Your Journey to ",
+      "titleHighlight": "Employment",
+      "subtitle": "A structured, 6-month roadmap designed around what assessment bodies actually need to see.",
+      "steps": [
+        {
+          "month": "Month 1",
+          "title": "Gap Analysis & Training",
+          "desc": "We review your university transcript and existing skills. We then put you through an intensive bootcamp to master the specific software tools and workflows used in Australian workplaces.",
+          "chips": ["Transcript review", "Software bootcamp", "Workplace readiness"]
+        },
+        {
+          "month": "Months 2–4",
+          "title": "Commercial Project",
+          "desc": "The core of the program. You join a project team to deliver real, paid work for a client. You clock 400+ hours of verified, loggable experience — the exact format assessment bodies require.",
+          "chips": ["400+ paid hours", "Real client deliverables", "Signed timesheets", "CPA / ACS / AMI ready log"]
+        },
+        {
+          "month": "Month 5",
+          "title": "Portfolio & Personal Brand",
+          "desc": "We rebuild your CV to highlight your new experience. We construct your professional portfolio and optimise your LinkedIn and online presence so employers take notice.",
+          "chips": ["CV rewrite", "Professional portfolio", "LinkedIn optimisation"]
+        },
+        {
+          "month": "Month 6",
+          "title": "Placement & Reference",
+          "desc": "You receive a professional reference letter from your project lead. We connect you with our hiring network and continue supporting you until you sign a contract.",
+          "chips": ["Professional reference letter", "Hiring network access", "Support until signed"]
+        }
+      ]
+    }
+  }
+}
