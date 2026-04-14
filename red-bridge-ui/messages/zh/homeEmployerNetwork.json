@@ -1,0 +1,49 @@
+{
+  "homeEmployerNetwork": {
+    "eyebrow": "我们的雇主网络",
+    "headingMain": "这些岗位都是真实",
+    "headingHighlight": "在招的。",
+    "description": "在把雇主介绍给你之前，我们会先逐一核验对方是否持有有效的 482 担保资质。",
+
+    "feature1Title": "担保资质已核验",
+    "feature1Desc": "在分享任何雇主前，我们都会先确认其 482 担保资格。",
+
+    "feature2Title": "信息完全透明",
+    "feature2Desc": "在咨询过程中，你会看到公司、行业以及担保状态。",
+
+    "feature3Title": "不做模糊承诺",
+    "feature3Desc": "真实公司，真实岗位，真实机会。",
+
+    "processBadge": "我们的核验流程",
+
+    "step1Title": "核查担保资质",
+    "step1Desc": "通过官方记录确认对方是否持有有效的 482 担保资格。",
+
+    "step2Title": "审核公司与岗位",
+    "step2Desc": "评估企业真实性、岗位职责以及与你的匹配度。",
+
+    "step3Title": "持续跟进复核",
+    "step3Desc": "定期复查状态，确保资质持续有效。",
+
+    "verifiedBadge": "所有雇主都会先核验，再展示。",
+
+    "privateLabel": "私密且受保护",
+    "privateDesc1": "雇主资料只会在你的咨询过程中",
+    "privateDescStrong": "私下展示",
+    "privateDesc2": "，不会公开放出，以保护合作中的招聘关系。",
+    "privateCta": "预约免费咨询，查看当前招聘雇主",
+
+    "industriesEyebrow": "按行业分类的已核验雇主",
+    "industriesHeading": "覆盖重点行业的工作机会",
+    "seeAll": "查看全部行业",
+    "verifiedLabel": "已核验雇主",
+
+    "categories": [
+      { "title": "科技与 ICT", "count": 12, "iconKey": "monitor" },
+      { "title": "会计与金融", "count": 8, "iconKey": "calculator" },
+      { "title": "市场与传播", "count": 6, "iconKey": "megaphone" },
+      { "title": "工程类", "count": 5, "iconKey": "hardHat" },
+      { "title": "医疗健康", "count": 4, "iconKey": "heartPulse" }
+    ]
+  }
+}
