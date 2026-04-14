@@ -49,7 +49,7 @@ export const UserScenarioSection = () => {
         </p>
 
         {/* 网格容器：适配图片 3+1 布局 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
           {scenarios.map((item, index) => {
             const Icon = scenarioIcons[item.filterType ?? "urgent"] ?? Clock3;
 
@@ -58,21 +58,21 @@ export const UserScenarioSection = () => {
                 key={index}
                 href={item.href}
                 onClick={() => handleCardClick(item.filterType)}
-                className="group flex flex-col items-center justify-start p-10 pt-12 pb-14 bg-white border border-gray-200 shadow-sm rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-black/5 hover:border-[#A30000]/30 text-center"
+                className="group flex flex-col items-center justify-start rounded-2xl border border-gray-200 bg-white px-8 pt-10 pb-12 text-center shadow-sm transition-all duration-300 hover:border-[#A30000]/30 hover:shadow-lg hover:shadow-black/5"
               >
-                <div className="flex items-center justify-center w-20 h-20 rounded-full bg-[#A30000]/10 mb-8 transition-transform duration-300 group-hover:scale-110">
-                  <Icon className="h-8 w-8 text-[#A30000]" strokeWidth={2} />
+                <div className="mb-7 flex h-18 w-18 items-center justify-center rounded-full bg-[#A30000]/10 transition-transform duration-300 group-hover:scale-110">
+                  <Icon className="h-7 w-7 text-[#A30000]" strokeWidth={2} />
                 </div>
 
-                <h4 className="text-2xl font-bold mb-4 text-gray-900 leading-tight font-serif">
+                <h4 className="mb-4 font-serif text-[2rem] font-bold leading-tight text-gray-900 xl:text-[1.85rem]">
                   {item.title}
                 </h4>
 
-                <p className="text-base text-gray-600 leading-relaxed mb-6 flex-grow">
+                <p className="mb-6 flex-grow text-[0.95rem] leading-relaxed text-gray-600 xl:text-[0.92rem]">
                   {item.description}
                 </p>
 
-                <span className="text-base font-bold text-[#A30000] group-hover:text-[#8a0000] transition-colors">
+                <span className="text-base font-bold text-[#A30000] transition-colors group-hover:text-[#8a0000]">
                   {item.linkText}
                 </span>
               </Link>
