@@ -5,6 +5,7 @@ import {
   Compass,
   GraduationCap,
   Clock3,
+  MoveRight,
   type LucideIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -45,7 +46,7 @@ export const UserScenarioSection = () => {
       <div className="max-w-[1200px] mx-auto text-center">
         {/* 顶部副标题 */}
         <p className="flex items-center justify-center gap-2 text-[0.72rem] font-bold tracking-[0.2em] uppercase text-[#A30000] mb-12 font-serif">
-          <span>👉</span>
+          <MoveRight size={14} aria-hidden="true" />
           <span>{t("eyebrow")}</span>
         </p>
 
