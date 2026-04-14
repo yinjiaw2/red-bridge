@@ -2,8 +2,6 @@
 
 import { useTranslations } from "next-intl";
 
-const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
-
 type Tier = {
   label: string;
   title: string;
@@ -53,59 +51,58 @@ export default function OccupationRealitySection() {
 
   const labelClass = (variant: Tier["variant"]) => {
     if (variant === "hard") {
-      return "bg-[rgba(168,80,30,0.08)] text-[#a8501e]";
+      return "bg-red-100 text-brandred";
     }
     if (variant === "mid") {
-      return "bg-[rgba(90,125,94,0.08)] text-[#5a7d5e]";
+      return "bg-yellow-100 text-yellow-700";
     }
-    return "bg-[rgba(74,111,165,0.08)] text-[#4a6fa5]";
+    return "bg-green-100 text-green-700";
   };
 
   const cardClass = (variant: Tier["variant"]) => {
     if (variant === "hard") {
-      return "border-l-[3px] border-l-[#a8501e]";
+      return "border-l-4 border-l-brandred";
     }
     if (variant === "mid") {
-      return "border-l-[3px] border-l-[#5a7d5e]";
+      return "border-l-4 border-l-yellow-500";
     }
-    return "border-l-[3px] border-l-[#4a6fa5]";
+    return "border-l-4 border-l-green-600";
   };
 
   return (
     <section
       id="competition"
-      style={{ fontFamily: font }}
-      className="bg-[#ede5d8] px-6 py-24 md:px-8"
+      className="bg-white px-6 py-24 md:px-8 border-b border-gray-200"
     >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#a8501e]">
-            <span className="h-px w-6 bg-[#bf6b35]" />
+          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-brandred">
+            <span className="h-px w-6 bg-brandred" />
             {t("eyebrow")}
           </div>
 
-          <h2 className="text-[34px] font-semibold leading-tight text-[#2a1f14] md:text-[44px]">
+          <h2 className="text-4xl font-bold leading-tight text-naviblue md:text-5xl font-serif">
             {t("title1")}
-            <em className="not-italic text-[#bf6b35]">{t("titleHighlight")}</em>
+            <em className="not-italic text-brandred">{t("titleHighlight")}</em>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-7 text-[rgba(42,31,20,0.6)] md:text-[16px]">
+          <p className="mx-auto mt-5 max-w-[560px] text-lg leading-8 text-gray-600">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="mx-auto flex max-w-[860px] flex-col gap-4">
+        <div className="mx-auto flex max-w-[860px] flex-col gap-5">
           {tiers.map((tier, index) => (
             <div
               key={index}
-              className={`grid grid-cols-1 gap-3 rounded-[8px] border border-[rgba(42,31,20,0.09)] bg-[#faf6f0] px-6 py-6 transition-shadow duration-300 hover:shadow-[0_4px_24px_rgba(42,31,20,0.1)] md:grid-cols-[auto_1fr_auto] md:items-center md:gap-5 md:px-7 ${cardClass(
-                tier.variant
+              className={`grid grid-cols-1 gap-4 rounded-none border border-gray-200 bg-white px-7 py-6 shadow-sm transition-shadow duration-300 hover:shadow-md md:grid-cols-[auto_1fr_auto] md:items-center md:gap-6 md:px-8 ${cardClass(
+                tier.variant,
               )}`}
             >
               <div>
                 <span
-                  className={`inline-block rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] ${labelClass(
-                    tier.variant
+                  className={`inline-block rounded-none px-3 py-1.5 text-xs font-bold uppercase tracking-wider ${labelClass(
+                    tier.variant,
                   )}`}
                 >
                   {tier.label}
@@ -113,19 +110,19 @@ export default function OccupationRealitySection() {
               </div>
 
               <div>
-                <h4 className="mb-1 text-[16px] font-semibold text-[#2a1f14] md:text-[17px]">
+                <h4 className="mb-1 text-lg font-bold text-naviblue md:text-xl font-serif">
                   {tier.title}
                 </h4>
-                <p className="text-[14px] leading-7 text-[rgba(42,31,20,0.6)]">
+                <p className="text-base leading-relaxed text-gray-600">
                   {tier.desc}
                 </p>
               </div>
 
               <div className="text-left md:text-right">
-                <div className="text-[28px] font-semibold leading-none text-[#2a1f14] md:text-[30px]">
+                <div className="text-4xl font-bold leading-none text-naviblue md:text-4xl">
                   {tier.score}
                 </div>
-                <div className="mt-1 text-[11px] text-[rgba(42,31,20,0.36)]">
+                <div className="mt-1 text-xs uppercase tracking-wider text-gray-400">
                   {tier.scoreLabel}
                 </div>
               </div>
@@ -133,11 +130,11 @@ export default function OccupationRealitySection() {
           ))}
         </div>
 
-        <p className="mt-5 text-center text-[13px] text-[rgba(42,31,20,0.36)]">
+        <p className="mt-6 text-center text-sm text-gray-400">
           {t("disclaimer")}{" "}
           <a
             href="/"
-            className="text-[#a8501e] underline underline-offset-4"
+            className="text-naviblue underline underline-offset-4 hover:text-brandred"
           >
             {t("disclaimerLink")}
           </a>

@@ -2,8 +2,6 @@
 
 import { useTranslations } from "next-intl";
 
-const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
-
 type Step = {
   step: string;
   who: string;
@@ -62,25 +60,22 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      style={{ fontFamily: font }}
-      className="bg-[#f5efe4] px-6 py-24 md:px-8"
+      className="bg-white px-6 py-24 md:px-8 border-b border-gray-200"
     >
       <div className="mx-auto max-w-[1100px]">
         {/* 标题 */}
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#a8501e]">
-            <span className="h-px w-6 bg-[#bf6b35]" />
+          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-brandred">
+            <span className="h-px w-6 bg-brandred" />
             {t("eyebrow")}
           </div>
 
-          <h2 className="text-[34px] font-semibold leading-tight text-[#2a1f14] md:text-[44px]">
+          <h2 className="text-4xl font-bold leading-tight text-naviblue md:text-5xl font-serif">
             {t("title1")}
-            <em className="not-italic text-[#bf6b35]">
-              {t("titleHighlight")}
-            </em>
+            <em className="not-italic text-brandred">{t("titleHighlight")}</em>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-[600px] text-[15px] leading-7 text-[rgba(42,31,20,0.6)]">
+          <p className="mx-auto mt-5 max-w-[600px] text-lg leading-8 text-gray-600">
             {t("subtitle")}
           </p>
         </div>
@@ -88,20 +83,18 @@ export default function ProcessSection() {
         {/* 时间线 */}
         <div className="relative mx-auto max-w-[720px]">
           {/* 竖线 */}
-          <div className="absolute left-[22px] top-[44px] bottom-[44px] w-[2px] bg-[linear-gradient(to_bottom,#bf6b35,rgba(168,80,30,0.1))]" />
+          <div className="absolute left-6 top-12 bottom-12 w-0.5 bg-gradient-to-b from-brandred to-gray-200" />
 
           <div className="flex flex-col gap-10">
             {steps.map((item, index) => (
               <div
                 key={index}
-                className="grid grid-cols-[44px_1fr] gap-6 relative"
+                className="grid grid-cols-[52px_1fr] gap-6 relative"
               >
                 {/* 圆点 */}
                 <div
-                  className={`z-10 flex h-[44px] w-[44px] items-center justify-center rounded-full text-[13px] font-bold text-white shadow-md ${
-                    item.type === "rb"
-                      ? "bg-[linear-gradient(135deg,#bf6b35,#8b3e18)]"
-                      : "bg-[linear-gradient(135deg,#5a7d5e,#3d5c40)]"
+                  className={`z-10 flex h-12 w-12 items-center justify-center rounded-none text-base font-bold text-white shadow-md ${
+                    item.type === "rb" ? "bg-brandred" : "bg-naviblue"
                   }`}
                 >
                   {item.step}
@@ -110,24 +103,22 @@ export default function ProcessSection() {
                 {/* 内容 */}
                 <div>
                   <div
-                    className={`mb-1 text-[11px] font-bold uppercase tracking-[0.14em] ${
-                      item.type === "rb"
-                        ? "text-[#a8501e]"
-                        : "text-[#5a7d5e]"
+                    className={`mb-2 text-xs font-bold uppercase tracking-wider ${
+                      item.type === "rb" ? "text-brandred" : "text-naviblue"
                     }`}
                   >
                     {item.who}
                   </div>
 
-                  <h3 className="text-[20px] font-semibold text-[#2a1f14]">
+                  <h3 className="text-2xl font-bold text-naviblue font-serif">
                     {item.title}
                   </h3>
 
-                  <p className="mt-1 text-[14px] leading-7 text-[rgba(42,31,20,0.6)]">
+                  <p className="mt-2 text-base leading-relaxed text-gray-600">
                     {item.desc}
                   </p>
 
-                  <span className="mt-2 inline-block rounded-full bg-[#ede5d8] px-3 py-1 text-[11px] text-[rgba(42,31,20,0.5)]">
+                  <span className="mt-3 inline-block rounded-none bg-gray-100 border border-gray-200 px-3 py-1 text-xs text-gray-500">
                     {item.time}
                   </span>
                 </div>

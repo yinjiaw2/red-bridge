@@ -1,34 +1,33 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { CheckCircle, Calculator } from "lucide-react";
+import { CheckCircle, Calculator, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const t = useTranslations("visa189HeroSection");
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center text-center px-6 py-28 bg-gradient-to-b from-[#e8d9c4] via-[#f5efe4] to-[#ede5d8]">
-
+    <section className="relative flex min-h-[80vh] items-center justify-center bg-white px-6 py-28 text-center border-b border-gray-200">
       <div className="max-w-[820px] w-full">
-
         {/* eyebrow */}
-        <div className="text-[11px] tracking-[0.2em] uppercase text-[#a8501e] mb-3 font-medium">
+        <div className="text-sm font-bold tracking-widest uppercase text-brandred mb-4">
           {t("eyebrow")}
         </div>
 
         {/* title */}
-        <h1 className="text-[clamp(2.4rem,5.5vw,4.2rem)] leading-[1.05] font-semibold text-[#2a1f14] mb-5">
+        <h1 className="text-[clamp(2.4rem,5.5vw,4.2rem)] font-serif leading-tight font-bold text-naviblue mb-6">
           {t("title1")} <br />
-          <span className="text-[#bf6b35]">{t("title2")}</span>
+          <span className="text-brandred">{t("title2")}</span>
         </h1>
 
         {/* subtitle */}
-        <p className="text-[16px] text-[rgba(42,31,20,0.65)] leading-[1.8] max-w-[600px] mx-auto mb-6">
+        <p className="text-lg text-gray-600 leading-relaxed max-w-[600px] mx-auto mb-8">
           {t("description")}
         </p>
 
         {/* trust */}
-        <div className="flex flex-wrap justify-center gap-4 text-[12px] text-[rgba(42,31,20,0.55)] mb-8">
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500 mb-10">
           <span className="flex items-center gap-1">
             <CheckCircle size={14} className="text-[#5a7d5e]" />
             {t("trust1")}
@@ -49,22 +48,24 @@ export default function HeroSection() {
 
         {/* CTA */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-
           {/* primary */}
-          <button className="flex items-center gap-2 bg-gradient-to-r from-[#bf6b35] to-[#8b3e18] text-white px-8 py-4 rounded-full font-semibold text-[15px] shadow-lg hover:translate-y-[-2px] transition">
-            <Calculator size={18} />
-            {t("primary")}
-          </button>
+          <Button className="h-14 rounded-none bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md">
+            <Calculator size={20} className="mr-2" />
+            <span>{t("primary")}</span>
+          </Button>
 
           {/* secondary */}
-          <button className="px-6 py-4 border border-[rgba(42,31,20,0.15)] rounded-full text-[14px] text-[rgba(42,31,20,0.7)] hover:border-[#a8501e] hover:text-[#a8501e] transition">
-            {t("secondary")}
-          </button>
+          <Button
+            variant="outline"
+            className="h-14 rounded-none border-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-brandred hover:bg-brandred/5 hover:text-brandred transition-colors"
+          >
+            <span>{t("secondary")}</span>
+            <ArrowRight size={20} className="ml-2" />
+          </Button>
         </div>
 
         {/* stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 border border-[rgba(42,31,20,0.1)] rounded-md overflow-hidden bg-[#faf6f0] shadow-xl">
-
+        <div className="grid grid-cols-2 md:grid-cols-4 border border-gray-200 rounded-none overflow-hidden bg-gray-50 shadow-md">
           {[
             { num: "65+", label: t("stat1") },
             { num: "85+", label: t("stat2") },
@@ -73,18 +74,17 @@ export default function HeroSection() {
           ].map((item, i) => (
             <div
               key={i}
-              className="p-5 border-r border-b md:border-b-0 last:border-r-0 text-center"
+              className="p-5 border-r border-b border-gray-200 md:border-b-0 last:border-r-0 text-center"
             >
-              <div className="text-[22px] font-semibold bg-gradient-to-r from-[#bf6b35] to-[#8b3e18] bg-clip-text text-transparent mb-1">
+              <div className="text-3xl font-bold text-brandred mb-1">
                 {item.num}
               </div>
-              <div className="text-[11px] text-[rgba(42,31,20,0.5)] leading-snug">
+              <div className="text-xs text-gray-500 uppercase tracking-wider">
                 {item.label}
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
