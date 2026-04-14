@@ -8,6 +8,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 
 // 定义卡片的数据结构（保持不变）
 interface Scenario {
@@ -81,22 +82,21 @@ export const UserScenarioSection = () => {
         </div>
 
         {/* 底部引导文案 */}
-        <p className="flex items-center justify-center gap-x-2 mt-7 text-lg text-gray-600">
-          <span className="text-gray-500">{t("footer.prefix")}</span>{" "}
-          <Link
-            href="#programs"
-            className="text-[#A30000] font-bold hover:text-[#8a0000] transition-colors"
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
+          <Button
+            asChild
+            variant="outline"
+            className="h-11 rounded-none border-brandred text-brandred hover:bg-brandred hover:text-white px-8 text-[13px] font-bold uppercase tracking-widest transition-colors"
           >
-            {t("footer.learnMore")}
-          </Link>
-          {t("footer.separator")}
-          <Link
-            href="/booking"
-            className="text-[#A30000] font-bold hover:text-[#8a0000] transition-colors"
+            <Link href="#programs">{t("footer.learnMore")}</Link>
+          </Button>
+          <Button
+            asChild
+            className="h-11 rounded-none bg-brandred hover:bg-red-800 text-white px-8 text-[13px] font-bold uppercase tracking-widest transition-colors shadow-md"
           >
-            {t("footer.booking")}
-          </Link>
-        </p>
+            <Link href="/booking">{t("footer.booking")}</Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
