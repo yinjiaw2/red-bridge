@@ -33,7 +33,7 @@ export default function EmployerNetworkSection() {
           <span className="block">{t("headingLine1")}</span>
           <span className="block">
             {t("headingLine2")}{" "}
-            <span className="text-brandred">{t("headingHighlight")}</span>
+            <span className="text-highlight">{t("headingHighlight")}</span>
           </span>
         </h2>
 
