@@ -113,9 +113,9 @@ export default function HeroSection() {
                   aria-hidden="true"
                 />
                 <div>
-                  <div className="text-sm">{t("stats.teamActive")}</div>
-                  <div className="text-base font-bold text-[#b3131b]">
-                    {t("stats.since")}
+                  <div className="text-2xl font-bold">10+</div>
+                  <div className="text-sm text-[#7a736d]">
+                    {t("stats.employerPartners")}
                   </div>
                 </div>
               </div>
