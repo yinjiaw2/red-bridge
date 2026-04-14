@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import FormSelectInput from "./FormSelectInput";
+import { Button } from "@/components/ui/button";
 
 interface FormValues {
   companyName: string;
@@ -433,13 +434,13 @@ export default function EmployerEnquirySection() {
               </div>
 
               {/* ── Submit ── */}
-              <div className="mt-12 pt-10 border-t border-gray-200">
-                <button
+              <div className="mt-12 pt-10 border-t border-gray-200 flex flex-col items-center text-center">
+                <Button
                   type="submit"
                   className="h-14 rounded-none bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
                 >
                   {t("submitButton")}
-                </button>
+                </Button>
                 <p className="mt-5 text-sm text-gray-500 leading-relaxed max-w-xl">
                   {t("disclaimer")}
                 </p>
