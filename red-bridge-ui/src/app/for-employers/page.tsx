@@ -2,6 +2,7 @@ import EmployerNetworkSection from "@/components/for-employers/EmployerNetworkSe
 import SkillsgGapSection from "@/components/for-employers/SkillGapSection";
 import EmployerProcessSection from "@/components/for-employers/EmployerProcessSection";
 import EmployerFeesSection from "@/components/for-employers/EmployerFeesSection";
+import EmployerObligationsSection from "@/components/for-employers/EmployerObligationsSection";
 import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
 
@@ -14,6 +15,7 @@ export default function EmployersPage() {
         <SkillsgGapSection />
         <EmployerProcessSection />
         <EmployerFeesSection />
+        <EmployerObligationsSection />
       </main>
       <Footer />
     </>
