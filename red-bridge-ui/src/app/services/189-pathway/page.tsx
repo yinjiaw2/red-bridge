@@ -1,15 +1,13 @@
-
-
-import ReviewedBanner from "@/components/services/visa-189/ReviewedBanner";
-import HeroSection from "@/components/services/visa-189/HeroSection";
-import ContextBand from "@/components/services/visa-189/ContextBand";
-import PointsSection from "@/components/services/visa-189/PointsSection";
-import OccupationRealitySection from "@/components/services/visa-189/OccupationRealitySection";
-import DateOfEffectSection from "@/components/services/visa-189/DateOfEffectSection";
-import StrategySection from "@/components/services/visa-189/StrategySection";
-import ProcessSection from "@/components/services/visa-189/ProcessSection";
-import RelatedPathwaysSection from "@/components/services/visa-189/RelatedPathwaysSection";
-import CTABandSection from "@/components/services/visa-189/CTABandSection";
+import ReviewedBanner from "@/components/services/189-pathway/ReviewedBanner";
+import HeroSection from "@/components/services/189-pathway/HeroSection";
+import ContextBand from "@/components/services/189-pathway/ContextBand";
+import PointsSection from "@/components/services/189-pathway/PointsSection";
+import OccupationRealitySection from "@/components/services/189-pathway/OccupationRealitySection";
+import DateOfEffectSection from "@/components/services/189-pathway/DateOfEffectSection";
+import StrategySection from "@/components/services/189-pathway/StrategySection";
+import ProcessSection from "@/components/services/189-pathway/ProcessSection";
+import RelatedPathwaysSection from "@/components/services/189-pathway/RelatedPathwaysSection";
+import CTABandSection from "@/components/services/189-pathway/CTABandSection";
 import NavBar from "@/components/shared/NavBar";
 import Footer from "@/components/shared/Footer";
 
