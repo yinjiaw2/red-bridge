@@ -14,38 +14,38 @@ export default function EmployerFeesSection() {
   const rows = t.raw("rows") as FeeRow[];
 
   return (
-    <section className="bg-brandbackground py-24 px-[5%]">
+    <section className="bg-naviblue py-24 px-[5%]">
       <div className="max-w-300 mx-auto">
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-10">
-          <span className="w-6 h-px bg-[#c9a98a]" />
-          <span className="text-[0.68rem] font-bold tracking-[0.2em] text-[#9a7a5e] uppercase">
+          <span className="w-6 h-px bg-highlight" />
+          <span className="text-[0.75rem] font-bold tracking-widest text-highlight uppercase">
             {t("eyebrow")}
           </span>
         </div>
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-[#1a1209] leading-tight mb-5"
+          className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5"
           style={{ fontFamily: "Georgia, serif" }}
         >
           {t("headingMain")}{" "}
-          <span className="text-[#A20000]">{t("headingHighlight")}</span>
+          <span className="text-highlight">{t("headingHighlight")}</span>
         </h2>
 
         {/* Description */}
-        <p className="text-[#6b5a4e] text-base md:text-[17px] leading-relaxed max-w-2xl mb-12">
+        <p className="text-gray-300 text-base md:text-[17px] leading-relaxed max-w-2xl mb-12">
           {t("description")}
         </p>
 
         {/* Fee table card */}
-        <div className="bg-white rounded-2xl border border-[#ede7df] overflow-hidden mb-6">
+        <div className="bg-white rounded-none border border-gray-200 overflow-hidden mb-6 shadow-lg">
           {/* Table header */}
-          <div className="grid grid-cols-[1fr_auto] items-center px-6 py-3 bg-[#faf6f0] border-b border-[#ede7df]">
-            <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-[#9a7a5e]">
+          <div className="grid grid-cols-[1fr_auto] items-center px-8 py-4 bg-gray-50 border-b border-gray-200">
+            <span className="text-[12px] font-bold tracking-wider uppercase text-naviblue">
               {t("tableHeaderLabel")}
             </span>
-            <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-[#9a7a5e]">
+            <span className="text-[12px] font-bold tracking-wider uppercase text-naviblue">
               {t("tableHeaderAmount")}
             </span>
           </div>
@@ -54,20 +54,20 @@ export default function EmployerFeesSection() {
           {rows.map((row, i) => (
             <div
               key={i}
-              className={`grid grid-cols-[1fr_auto] items-center gap-6 px-6 py-4 ${
-                i < rows.length - 1 ? "border-b border-[#f0ebe4]" : ""
+              className={`grid grid-cols-[1fr_auto] items-center gap-6 px-8 py-5 ${
+                i < rows.length - 1 ? "border-b border-gray-100" : ""
               }`}
             >
               <div>
-                <p className="text-[#1a1209] font-semibold text-[14px] leading-snug mb-0.5">
+                <p className="text-naviblue font-bold text-base leading-snug mb-1">
                   {row.title}
                 </p>
-                <p className="text-[#9a8a80] text-[12px] leading-relaxed">
+                <p className="text-gray-500 text-sm leading-relaxed">
                   {row.note}
                 </p>
               </div>
               <div className="text-right shrink-0">
-                <span className="text-[#b3592a] font-bold text-[14px] whitespace-nowrap">
+                <span className="text-brandred font-bold text-lg whitespace-nowrap">
                   {row.amount}
                 </span>
               </div>
@@ -76,7 +76,7 @@ export default function EmployerFeesSection() {
         </div>
 
         {/* Disclaimer */}
-        <p className="text-[#9a8a80] text-[12px] leading-relaxed max-w-3xl mb-8">
+        <p className="text-gray-400 text-sm leading-relaxed max-w-3xl mb-8">
           {t("disclaimer")}
         </p>
 
@@ -85,7 +85,7 @@ export default function EmployerFeesSection() {
           href={t("footerLinkHref")}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#A20000] hover:underline"
+          className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-highlight hover:text-white transition-colors"
         >
           {t("footerLinkText")}
           <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -35,7 +35,7 @@ export default function EmployerProcessSection() {
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6"
+          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-6"
           style={{ fontFamily: "Georgia, serif" }}
         >
           <span className="block">{t("headingLine1")}</span>
@@ -66,7 +66,7 @@ export default function EmployerProcessSection() {
                 <TableCell className="font-bold text-lg text-brandred">
                   {phase.number}
                 </TableCell>
-                <TableCell className="font-semibold text-gray-900">
+                <TableCell className="font-bold text-naviblue">
                   {phase.title}
                 </TableCell>
                 <TableCell>
