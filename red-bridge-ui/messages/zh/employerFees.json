@@ -1,0 +1,50 @@
+{
+  "employerFees": {
+    "eyebrow": "费用明细",
+    "headingMain": "担保",
+    "headingHighlight": "实际费用",
+    "description": "政府费用为强制性支出，无法调整。RedBridge与Insight Idea的服务费用根据服务内容确定，并在岗位评估后提供固定报价。",
+    "tableHeaderLabel": "费用详情",
+    "tableHeaderAmount": "总额",
+    "rows": [
+      {
+        "title": "标准商业担保（SBS）申请费",
+        "note": "一次性费用。如雇主已持有有效SBS，无需重复申请。",
+        "amount": "AUD $420"
+      },
+      {
+        "title": "提名费 — 482（技术需求签证）",
+        "note": "每项提名，不可退还。",
+        "amount": "AUD $330"
+      },
+      {
+        "title": "提名费 — 186（雇主提名计划）",
+        "note": "每项提名，不可退还。",
+        "amount": "AUD $540"
+      },
+      {
+        "title": "SAF（技能澳洲基金）征收费 — 小型企业",
+        "note": "适用于年营业额低于1000万澳元的小型企业。按签证年限计算。",
+        "amount": "AUD $1,200 / yr"
+      },
+      {
+        "title": "SAF征收费 — 大型企业",
+        "note": "年营业额1000万澳元及以上。按签证年限计算。",
+        "amount": "AUD $1,800 / yr"
+      },
+      {
+        "title": "最低薪资 — 核心技能流（CST）",
+        "note": "以当前年度TSMIT为基准。如适用，需额外添加AMM，届时参考相关薪资认定文件。",
+        "amount": "AUD $76,515 + super"
+      },
+      {
+        "title": "最低薪资 — 专家技能流",
+        "note": "适用于CSOL专家层职业。以相关薪资认定文件为准。",
+        "amount": "AUD $135,000 + super"
+      }
+    ],
+    "disclaimer": "* 所有担保费用必须由担保雇主承担。上述费用不得转嫁给、向候选人、申请人或签证持有人收取或追偿——包括482签证费、服务费及专业服务费。",
+    "footerLinkText": "担保人义务",
+    "footerLinkHref": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/sponsoring-workers/sponsorship-obligations/sponsor-obligations"
+  }
+}

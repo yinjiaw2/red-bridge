@@ -1,0 +1,50 @@
+{
+  "employerFees": {
+    "eyebrow": "Fee Breakdown",
+    "headingMain": "Sponsorship",
+    "headingHighlight": "Actual Costs",
+    "description": "Government fees are mandatory and non-negotiable. RedBridge and Insight Idea service fees are determined by scope and provided as a fixed quote after the role assessment.",
+    "tableHeaderLabel": "Fee Details",
+    "tableHeaderAmount": "Total",
+    "rows": [
+      {
+        "title": "Standard Business Sponsorship (SBS) Application",
+        "note": "One-off fee. Not required if the employer already holds an approved SBS.",
+        "amount": "AUD $420"
+      },
+      {
+        "title": "Nomination Fee — 482 (Skills in Demand Visa)",
+        "note": "Per nomination. Non-refundable.",
+        "amount": "AUD $330"
+      },
+      {
+        "title": "Nomination Fee — 186 (Employer Nomination Scheme)",
+        "note": "Per nomination. Non-refundable.",
+        "amount": "AUD $540"
+      },
+      {
+        "title": "SAF Levy — Small Business",
+        "note": "Annual turnover under $10 million AUD. Calculated per visa year.",
+        "amount": "AUD $1,200 / yr"
+      },
+      {
+        "title": "SAF Levy — Large Business",
+        "note": "Annual turnover $10 million AUD or above. Calculated per visa year.",
+        "amount": "AUD $1,800 / yr"
+      },
+      {
+        "title": "Minimum Salary — Core Skills Stream (CST)",
+        "note": "Base TSMIT as of current year. Add AMM where applicable — refer to the relevant determination.",
+        "amount": "AUD $76,515 + super"
+      },
+      {
+        "title": "Minimum Salary — Specialist Skills Stream",
+        "note": "For CSOL Specialist Tier occupations. Subject to applicable determination.",
+        "amount": "AUD $135,000 + super"
+      }
+    ],
+    "disclaimer": "* All sponsorship fees must be paid by the sponsoring employer. These costs must not be transferred to, charged to, or recovered from a candidate, applicant, or visa holder — including 482 visa fees, service fees, and professional service fees.",
+    "footerLinkText": "Sponsor Obligations",
+    "footerLinkHref": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/sponsoring-workers/sponsorship-obligations/sponsor-obligations"
+  }
+}
