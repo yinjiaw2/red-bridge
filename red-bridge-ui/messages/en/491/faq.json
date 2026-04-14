@@ -1,0 +1,37 @@
+{
+  "visa491": {
+    "faq": {
+      "eyebrow": "Common Questions",
+      "title1": "Frequently Asked ",
+      "titleHighlight": "Questions",
+      "items": [
+        {
+          "question": "How many points does the 491 visa add?",
+          "answer": "The 491 adds 15 points to your federal SkillSelect score through state or territory nomination. This is triple the 5 points added by the 190 visa, and is the largest single points boost available in the skilled migration points test."
+        },
+        {
+          "question": "Where is regional Victoria? Do I have to leave Melbourne?",
+          "answer": "Yes - you must live outside Melbourne's metropolitan boundary. Regional Victoria includes Geelong, Ballarat, Bendigo, and all other areas outside the metropolitan region. You cannot commute from Melbourne - you must establish genuine residence in the regional area."
+        },
+        {
+          "question": "Is employment mandatory for the 491 nomination?",
+          "answer": "Yes - this is the critical difference from the 190 visa. For Victorian 491 nomination, you must currently be employed in skilled work for an employer physically located in regional Victoria, and you must provide an estimate of your annual earnings in your ROI. If you do not currently meet this requirement, the 190 may be more accessible - see our",
+          "linkText": "190 pathway page",
+          "linkHref": "/services/190-pathway"
+        },
+        {
+          "question": "How does the 491 lead to permanent residency?",
+          "answer": "After 3 years of living, working, and earning a minimum taxable income in a designated regional area, you can apply for the Subclass 191 Permanent Residence visa. Once the 191 is granted, you are a full Permanent Resident of Australia with no regional restriction."
+        },
+        {
+          "question": "Is Victoria's 491 nomination really free?",
+          "answer": "Yes - Victoria charges no fee for state nomination under either the 190 or 491 program. The federal visa application fee is separate and payable directly to the Department of Home Affairs."
+        },
+        {
+          "question": "Can I apply for both 190 and 491 at the same time?",
+          "answer": "Yes. You can submit one SkillSelect EOI that selects both the 190 and 491 visa subclasses. Your ROI submissions to Victoria are separate for each visa type, but submitting both maximises your chances of receiving a nomination."
+        }
+      ]
+    }
+  }
+}

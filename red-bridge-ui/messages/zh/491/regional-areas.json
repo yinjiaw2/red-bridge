@@ -1,0 +1,39 @@
+{
+  "visa491": {
+    "regionalAreas": {
+      "eyebrow": "维州哪些算偏远地区？",
+      "title1": "比您想象的",
+      "title2": "离墨尔本更近",
+      "subtitle": "维州偏远地区不是偏远的澳洲内陆。不少符合要求的偏远地区距离墨尔本仅两小时内，工作机会多，生活配套齐全，居住体验舒适。",
+      "regions": [
+        {
+          "distance": "距墨尔本约1小时",
+          "title": "Geelong",
+          "desc": "维州第二大城市。医疗、教育及专业服务配套完善。欢迎享受海滨生活方式，不断发展的基础设施，以及直达墨尔本CBD的火车。",
+          "tags": ["医疗", "教育", "工程", "ICT（增长中）"]
+        },
+        {
+          "distance": "距墨尔本约1.5小时",
+          "title": "Ballarat",
+          "desc": "重要的偏远地区中心，拥有优质的医疗和教育资源。澳洲联邦大学设在此处，与教育和研究职业相关。",
+          "tags": ["医疗", "教育", "建筑", "政府"]
+        },
+        {
+          "distance": "距墨尔本约1.5小时",
+          "title": "Bendigo",
+          "desc": "重要的偏远地区枢纽，拥有强劲的医疗资源、先进制造业和不断发展的专业服务行业。",
+          "tags": ["医疗", "制造业", "工程", "金融"]
+        },
+        {
+          "distance": "其他维州偏远地区",
+          "title": "Shepparton, Wodonga, Warrnambool",
+          "desc": "更远的偏远地区城市，有特定的雇主需求。这些地区中的部分城市提名竞争也可能更低。",
+          "tags": ["医疗", "食品制造业", "技工"]
+        }
+      ],
+      "sourcePrefix": "检查您的雇主地址是否属于偏远地区：",
+      "sourceHref": "https://immi.homeaffairs.gov.au/visas/working-in-australia/regional-migration/regional-postcodes",
+      "sourceLinkText": "内政部 - 偏远地区邮编 →"
+    }
+  }
+}

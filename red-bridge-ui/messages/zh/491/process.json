@@ -1,0 +1,72 @@
+{
+  "visa491": {
+    "process": {
+      "eyebrow": "如何运作",
+      "title1": "从首次咨询到",
+      "title2": "191永久居留",
+      "subtitle": "每一步职责清晰。与190相比，491多了一个阶段 - 在191 PR申请前的3年偏远地区工作期。",
+      "steps": [
+        {
+          "step": "01",
+          "who": "RedBridge",
+          "title": "免费评估 - 打分、就业与ROI前景",
+          "desc": "您的RedBridge顾问评估您目前的分数，审查您在维州偏远地区的就业和收入，并诚实评估您目前是否符合维州491提名资格。如果您目前的就业或地点不满足要求，我们规划需要做出的改变 - 或找到190或189作为更快的替代方案。",
+          "time": "第1周 - 免费，无义务",
+          "type": "rb"
+        },
+        {
+          "step": "02",
+          "who": "RedBridge",
+          "title": "技能评估准备",
+          "desc": "491签证强制要求正面技能评估 - 且提名申请阶段必须剩余至少12周有效期。RedBridge准备您的ACS、AMI或Engineers Australia提交，与EOI和ROI策略同步以缩短总时间线。",
+          "time": "4-12周，取决于评估机构",
+          "type": "rb"
+        },
+        {
+          "step": "03",
+          "who": "Insight Idea - MARA代理",
+          "title": "EOI in SkillSelect + ROI in Live in Melbourne",
+          "desc": "Insight Idea递交您的联邦EOI选择维州，然后在Live in Melbourne门户准备并提交您的ROI。您的ROI必须包含经验证的就业文件、收入证据和所有声明的支持文件。",
+          "time": "职业技能评估结果后",
+          "type": "ii",
+          "alert": "14天提名截止期限：如果维州邀请您申请提名，您必须在14天内提交完整的提名申请。Insight Idea提前准备所有文件，确保邀请到达时您已准备就绪。",
+          "alertKind": "warning"
+        },
+        {
+          "step": "04",
+          "who": "维州政府",
+          "title": "偏远地区提名获批",
+          "desc": "维州批准您的提名。这将为您的SkillSelect分数增加+15分，并触发491签证的联邦申请邀请。您必须在60天内向内政部递交签证申请。",
+          "time": "数周到数月 - 无固定时间线",
+          "type": "state"
+        },
+        {
+          "step": "05",
+          "who": "Insight Idea - MARA代理",
+          "title": "491签证获批",
+          "desc": "您的491获批。您拥有一个5年临时签证在维州偏远地区生活和工作。Insight Idea向您说明您的义务 - 居住、工作和满足收入门槛。RedBridge CRM系统会追踪您的3年里程碑。",
+          "time": "提名后60天内",
+          "type": "ii"
+        },
+        {
+          "step": "3yr",
+          "who": "您 - 维州偏远地区",
+          "title": "3年偏远地区生活",
+          "desc": "您在指定的维州偏远地区生活和工作3年，满足最低应税收入门槛。这期间您的雇主不需要匹配您的提名职业。",
+          "time": "签证获批后3年",
+          "type": "you",
+          "alert": "收入门槛：191申请需要3年每年约$53,900应税收入。税务申报会作为主要证据。",
+          "alertKind": "info"
+        },
+        {
+          "step": "★",
+          "who": "Insight Idea - MARA代理",
+          "title": "191签证 - 永久居民",
+          "desc": "在偏远地区居住3年后，Insight Idea递交您的子类191永久居留申请。获签后，您成为澳洲永久居民，拥有全国任何地方的完整工作权利以及获得公民身份的路径。",
+          "time": "永久居民 ★",
+          "type": "final"
+        }
+      ]
+    }
+  }
+}

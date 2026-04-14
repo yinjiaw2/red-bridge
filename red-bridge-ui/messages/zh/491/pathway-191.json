@@ -1,0 +1,45 @@
+{
+  "visa491": {
+    "pathway191": {
+      "eyebrow": "最终目标",
+      "title1": "您通往",
+      "titleHighlight": "191签证",
+      "subtitle": "491不是永久签证 - 它是通往191永久居留签证的桥梁。以下是这3年的确切要求。",
+      "cardTitle1": "子类191 - ",
+      "cardTitle2": "永久居留（偏远地区）",
+      "body1": "191签证面向满足偏远地区居住和工作要求的491签证持有人。它授予不受州限制的永久居留权 - 一旦191获批，您可以自由在澳洲任何地方生活和工作。",
+      "body2": "以下三个条件必须在3年期间满足：",
+      "requirements": [
+        {
+          "title": "3年居住",
+          "desc": "在指定偏远地区。您必须实际居住在该地区 - 不能从墨尔本通勤。"
+        },
+        {
+          "title": "3年工作",
+          "desc": "在偏远地区。您的职业不需要匹配您的提名职业。"
+        },
+        {
+          "title": "最低应税收入",
+          "desc": "约$53,900/年，连续3年。税务申报是主要证据来源。"
+        }
+      ],
+      "sourcePrefix": "来源：",
+      "sourceHref": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/permanent-residence-regional-191",
+      "sourceLinkText": "内政部 - 子类191 →",
+      "stats": [
+        {
+          "value": "3",
+          "label": "在维州偏远地区所需年数"
+        },
+        {
+          "value": "~$54K",
+          "label": "每年最低应税收入"
+        },
+        {
+          "value": "PR",
+          "label": "永久居留 - 可在澳洲任何地方生活"
+        }
+      ]
+    }
+  }
+}

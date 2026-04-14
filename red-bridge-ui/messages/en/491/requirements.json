@@ -1,0 +1,73 @@
+{
+  "visa491": {
+    "requirements": {
+      "eyebrow": "Eligibility",
+      "title1": "What You Need to ",
+      "titleHighlight": "Qualify",
+      "subtitle": "Both federal and Victorian requirements must be satisfied. The 491 has stricter employment conditions than the 190.",
+      "groups": [
+        {
+          "title": "Federal Requirements - Department of Home Affairs",
+          "items": [
+            {
+              "title": "Under 45 years old",
+              "desc": "At time of nomination invitation",
+              "kind": "check"
+            },
+            {
+              "title": "Competent English minimum",
+              "desc": "IELTS 6.0 all bands or equivalent - Proficient (7.0) and Superior (8.0) earn additional points",
+              "kind": "check"
+            },
+            {
+              "title": "Positive skills assessment - mandatory",
+              "desc": "Required for all 491 applicants. ACS, AMI, Engineers Australia, or the relevant authority. Minimum 12 weeks validity at nomination application stage.",
+              "kind": "check"
+            },
+            {
+              "title": "Minimum 65 points (including nomination)",
+              "desc": "Base score of 50 before nomination is the theoretical minimum - in practice 70+ base is needed to be competitive",
+              "kind": "check"
+            },
+            {
+              "title": "Occupation on eligible skilled list",
+              "desc": "The federal Skilled Occupations List applies",
+              "kind": "check"
+            }
+          ]
+        },
+        {
+          "title": "Victorian Requirements - Critical Differences from 190",
+          "accent": true,
+          "items": [
+            {
+              "title": "Employment in regional Victoria - mandatory",
+              "desc": "You must be currently employed in skilled work for an employer physically located in regional Victoria. Virtual offices and Melbourne-based employers do not qualify.",
+              "kind": "warn"
+            },
+            {
+              "title": "Annual earnings claim - required",
+              "desc": "You must provide an estimate of your annual earnings in your ROI. This is a key selection factor.",
+              "kind": "warn"
+            },
+            {
+              "title": "Residing in regional Victoria (if onshore)",
+              "desc": "ROIs from applicants in Melbourne or other states are generally not selected. Offshore applicants are eligible but face more competition.",
+              "kind": "location"
+            },
+            {
+              "title": "Commit to 3 years in regional Victoria",
+              "desc": "After grant, you must live and work in a designated regional area for at least 3 years to qualify for the 191 PR visa.",
+              "kind": "home"
+            },
+            {
+              "title": "All ROI claims must be substantiated",
+              "desc": "Victoria verifies evidence. Nomination applications are refused if supporting documents do not match ROI claims.",
+              "kind": "file"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
