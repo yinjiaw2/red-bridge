@@ -10,47 +10,56 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
 import { comparisonMeta, ICON_MAP } from "@/lib/comparisonCategory";
 
 export const ComparisonSection = () => {
   const t = useTranslations("comparison");
 
   return (
-    <section id="why-us" className="bg-white py-24 px-[5%]">
+    <section
+      id="why-us"
+      className="bg-gray-50 py-24 px-[5%] border-b border-gray-200"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <div className="text-center mb-16">
-          <span className="text-[0.75rem] font-bold tracking-[0.2em] text-[#a28e7e] uppercase block mb-4">
-            {t("eyebrow")}
-          </span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#2d241e] mb-6">
+        <div className="mb-14 text-center">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <span className="flex-1 max-w-16 h-px bg-brandred" />
+            <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
+              {t("eyebrow")}
+            </span>
+            <span className="flex-1 max-w-16 h-px bg-brandred" />
+          </div>
+          <h2
+            className="text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-6"
+            style={{ fontFamily: "Georgia, serif" }}
+          >
             {t("headingMain")}{" "}
-            <em className="text-[#A30000] not-italic">
-              {t("headingHighlight")}
-            </em>
+            <span className="text-brandred">{t("headingHighlight")}</span>
           </h2>
-          <p className="text-[#928276] text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
             {t("description")}
           </p>
         </div>
 
         {/* Table */}
-        <div className="overflow-hidden rounded-3xl border bg-[#FFFBFA] shadow-sm">
+        <div className="overflow-hidden rounded-none border border-gray-200 bg-white shadow-md">
           <Table>
             <TableHeader className="[&_tr]:border-b-0">
-              <TableRow className="hover:bg-transparent border-b border-[#e8dfd4] align-top">
-                <TableHead className="py-6 px-6 text-[#6b7280] font-bold text-xs uppercase tracking-widest w-[22%] whitespace-normal h-auto border-b border-[#e8dfd4]">
+              <TableRow className="hover:bg-transparent border-b border-gray-200 align-top">
+                <TableHead className="py-6 px-6 text-gray-500 font-bold text-xs uppercase tracking-widest w-[22%] whitespace-normal h-auto border-b border-gray-200 bg-gray-100">
                   {t("col1")}
                 </TableHead>
-                <TableHead className="hidden md:table-cell py-6 px-6 text-[#a28e7e] font-bold text-xs uppercase tracking-widest w-[33%] border-l bg-[#F2E1D6] whitespace-normal h-auto">
+                <TableHead className="hidden md:table-cell py-6 px-6 text-gray-600 font-bold text-xs uppercase tracking-widest w-[33%] border-l border-gray-300 bg-gray-200 whitespace-normal h-auto">
                   <div className="flex items-center gap-2">
-                    <X size={14} className="opacity-50" aria-hidden="true" />
+                    <X size={16} className="text-gray-400" aria-hidden="true" />
                     {t("col2")}
                   </div>
                 </TableHead>
-                <TableHead className="py-6 px-6 text-white font-bold text-xs uppercase tracking-widest w-[45%] border-l border-[#e8dfd4] whitespace-normal h-auto bg-[#A20000]">
+                <TableHead className="py-6 px-6 text-white font-bold text-xs uppercase tracking-widest w-[45%] border-l border-brandred whitespace-normal h-auto bg-brandred">
                   <div className="flex items-center gap-2">
-                    <Check size={14} aria-hidden="true" />
+                    <Check size={16} aria-hidden="true" />
                     {t("col3")}
                   </div>
                 </TableHead>
@@ -60,19 +69,19 @@ export const ComparisonSection = () => {
               {comparisonMeta.map((meta, index) => (
                 <TableRow
                   key={index}
-                  className="border-b border-[#e8dfd4] last:border-b-0 hover:bg-brandbackground/40 transition-colors align-top"
+                  className="border-b border-gray-200 last:border-b-0 hover:bg-gray-50/50 transition-colors align-top"
                 >
                   {/* You Deserve Better */}
-                  <TableCell className="py-6 px-6 text-[#374151] text-sm whitespace-normal bg-[#FFFBFA]">
+                  <TableCell className="py-6 px-6 text-gray-700 text-sm whitespace-normal bg-white">
                     <div className="flex gap-3 items-start">
-                      <span className="mt-0.5 shrink-0 text-[#6b7280]">
+                      <span className="mt-0.5 shrink-0 text-gray-400">
                         {ICON_MAP[meta.iconKey]}
                       </span>
                       <div>
-                        <p className="font-semibold text-[#1f2937] leading-snug mb-1">
+                        <p className="font-bold text-naviblue leading-snug mb-1">
                           {t(`rows.${index}.deserve.title`)}
                         </p>
-                        <p className="text-xs text-[#6b7280] leading-relaxed">
+                        <p className="text-sm text-gray-500 leading-relaxed">
                           {t(`rows.${index}.deserve.description`)}
                         </p>
                       </div>
@@ -80,18 +89,18 @@ export const ComparisonSection = () => {
                   </TableCell>
 
                   {/* Other Agencies */}
-                  <TableCell className="hidden md:table-cell py-6 px-6 text-[#928276] text-sm whitespace-normal border-l bg-[#FFF4ED]">
+                  <TableCell className="hidden md:table-cell py-6 px-6 text-gray-600 text-sm whitespace-normal border-l border-gray-200 bg-gray-50/50">
                     <div className="flex gap-3 items-start">
                       <X
-                        size={14}
-                        className="mt-0.5 shrink-0 text-[#a28e7e]/50"
+                        size={16}
+                        className="mt-0.5 shrink-0 text-gray-400"
                         aria-hidden="true"
                       />
                       <div>
-                        <p className="font-medium text-[#7c6a60] leading-snug mb-1">
+                        <p className="font-bold text-gray-700 leading-snug mb-1">
                           {t(`rows.${index}.others.title`)}
                         </p>
-                        <p className="text-xs text-[#a28e7e] leading-relaxed">
+                        <p className="text-sm text-gray-500 leading-relaxed">
                           {t(`rows.${index}.others.description`)}
                         </p>
                       </div>
@@ -99,28 +108,28 @@ export const ComparisonSection = () => {
                   </TableCell>
 
                   {/* RedBridge */}
-                  <TableCell className="py-6 px-6 text-sm whitespace-normal border-l border-[#e8dfd4] bg-[#fdf6f0]">
+                  <TableCell className="py-6 px-6 text-sm whitespace-normal border-l border-red-100 bg-red-50/30">
                     <div className="flex gap-3 items-start">
-                      <span className="mt-0.5 shrink-0 p-1 rounded-full bg-[#b45309]/10">
+                      <span className="mt-0.5 shrink-0 p-1 rounded-none bg-brandred/10">
                         <Check
-                          size={12}
-                          className="text-[#b45309]"
+                          size={14}
+                          className="text-brandred"
                           aria-hidden="true"
                         />
                       </span>
                       <div>
-                        <p className="font-bold text-[#2d241e] leading-snug mb-1">
+                        <p className="font-bold text-brandred leading-snug mb-1">
                           {t(`rows.${index}.redBridge.title`)}
                         </p>
-                        <p className="text-xs text-[#7c5a43] leading-relaxed">
+                        <p className="text-sm text-gray-700 leading-relaxed">
                           {meta.richRedBridge
                             ? t.rich(`rows.${index}.redBridge.description`, {
                                 link: (chunks) => (
                                   <a
                                     href="https://www.insightidea.com.au/en/success"
                                     target="_blank"
-                                    rel="noopener"
-                                    className="font-bold underline underline-offset-2"
+                                    rel="noopener noreferrer"
+                                    className="font-bold text-brandred underline underline-offset-4 hover:text-red-800 transition-colors"
                                   >
                                     {chunks}
                                   </a>
@@ -138,33 +147,41 @@ export const ComparisonSection = () => {
         </div>
 
         {/* CTA Card */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl bg-[#FAF5F0] border border-[#e8dfd4] px-8 py-6">
+        <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-8 rounded-none bg-white border border-gray-200 shadow-sm p-8 md:p-10 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-1.5 h-full bg-brandred" />
           <div className="flex items-start gap-4">
-            <div className="w-1 self-stretch rounded-full bg-[#A20000] shrink-0" />
             <div>
-              <p className="text-lg font-bold text-[#1f2937]">
+              <p
+                className="text-xl font-bold text-naviblue"
+                style={{ fontFamily: "Georgia, serif" }}
+              >
                 {t("cta.heading")}
               </p>
-              <p className="text-sm text-[#928276] mt-0.5">
+              <p className="text-base text-gray-600 mt-2">
                 {t("cta.subheading")}
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-3 shrink-0">
-            <Link
-              href="/booking"
-              className="inline-flex items-center gap-2 rounded-xl bg-highlightyellow px-6 py-3 text-sm font-bold text-[#1f2937] hover:bg-[#c4920f] transition-colors"
+          <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full md:w-auto">
+            <Button
+              asChild
+              className="w-full sm:w-auto h-12 rounded-none bg-brandred px-8 text-sm font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
             >
-              {t("cta.primaryBtn")}
-              <ArrowRight size={16} aria-hidden="true" />
-            </Link>
-            <Link
-              href="#process"
-              className="inline-flex items-center gap-2 rounded-xl border-2 border-[#A20000] px-6 py-3 text-sm font-bold text-[#A20000] hover:bg-[#A20000]/5 transition-colors"
+              <Link href="/booking">
+                <span>{t("cta.primaryBtn")}</span>
+                <ArrowRight size={18} className="ml-2" aria-hidden="true" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="w-full sm:w-auto h-12 rounded-none border border-brandred bg-transparent px-8 text-sm font-bold uppercase tracking-widest text-brandred hover:bg-brandred/5 transition-colors"
             >
-              {t("cta.secondaryBtn")}
-              <ArrowRight size={16} aria-hidden="true" />
-            </Link>
+              <Link href="#process">
+                <span>{t("cta.secondaryBtn")}</span>
+                <ArrowRight size={18} className="ml-2" aria-hidden="true" />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
