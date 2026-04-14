@@ -1,0 +1,82 @@
+{
+  "successCasesList": {
+    "statLabels": {
+      "visa": "Visa",
+      "timeline": "Timeline",
+      "assessment": "Assessment",
+      "status": "Status"
+    },
+    "statusApproved": "Approved",
+    "statusPR": "PR Approved",
+    "statusOngoing": "In Progress",
+    "disclaimer": "All cases are representative of real client outcomes. Client identities are presented using initials and occupation only to protect privacy. All visa results and project completions are verified against RedBridge internal records.",
+    "cases": [
+      {
+        "category": "Employer Sponsorship",
+        "categoryKey": "employer",
+        "colorKey": "warm",
+        "title": "Accountant secures 482 sponsorship within 4 months",
+        "body": "After two years on a 485 visa, this client had been applying independently without success. RedBridge matched her to a mid-tier accounting firm holding current 482 eligibility. Her CAANZ assessment was already complete. From first consultation to visa grant took under 4 months.",
+        "visa": "482",
+        "timeline": "4 months",
+        "assessment": "CAANZ",
+        "status": "approved"
+      },
+      {
+        "category": "Employer Sponsorship",
+        "categoryKey": "employer",
+        "colorKey": "default",
+        "title": "Marketing manager on employer-sponsored pathway to 186 PR",
+        "body": "This client approached RedBridge with an existing employer relationship but no formal sponsorship structure in place. Insight Idea lodged the SBS and 482 nomination concurrently. The client is now 18 months into a 482 and on track for 186 ENS transition.",
+        "visa": "482 → 186",
+        "timeline": "Ongoing",
+        "assessment": "AMI",
+        "status": "ongoing"
+      },
+      {
+        "category": "Skilled Independent",
+        "categoryKey": "independent",
+        "colorKey": "default",
+        "title": "IT engineer achieves permanent residency via 189 in 7 months",
+        "body": "With a strong points score and a completed ACS assessment, this client's main barrier was EOI strategy. RedBridge provided a detailed points gap analysis and supported the skills assessment submission. An invitation was received within 7 months of the EOI being submitted.",
+        "visa": "189",
+        "timeline": "~7 months",
+        "assessment": "ACS",
+        "status": "approved"
+      },
+      {
+        "category": "Career Launch",
+        "categoryKey": "career",
+        "colorKey": "warm",
+        "title": "Engineering graduate builds ANZSCO-aligned experience for migration",
+        "body": "Fresh out of university with no local work history, this client enrolled in the Career Launch Program. Over 12 months, he accumulated 400+ hours of documented, ANZSCO-aligned project work recognised by Engineers Australia, fully qualifying him for a skills assessment submission.",
+        "visa": "485",
+        "timeline": "12 months",
+        "assessment": "Engineers Australia",
+        "status": "ongoing"
+      },
+      {
+        "category": "Employer Sponsorship",
+        "categoryKey": "employer",
+        "colorKey": "default",
+        "title": "ICT specialist transitions from 485 to employer-sponsored 482",
+        "body": "This client's 485 visa had 8 months remaining when he contacted RedBridge. After matching him with a technology employer in Melbourne, Insight Idea lodged the nomination and visa application with a Bridging Visa A in place. The 482 was granted before the 485 expired.",
+        "visa": "485 → 482",
+        "timeline": "5 months",
+        "assessment": "ACS",
+        "status": "approved"
+      },
+      {
+        "category": "Skilled Independent",
+        "categoryKey": "independent",
+        "colorKey": "warm",
+        "title": "International student uses marketing career to build 190 nomination pathway",
+        "body": "This client was completing a master's degree in marketing when she first consulted RedBridge. We identified Victoria's 190 nomination as a viable pathway and designed a 24-month career plan aligned to AMI assessment requirements. Her nomination invitation was received on schedule.",
+        "visa": "190",
+        "timeline": "24 months",
+        "assessment": "AMI",
+        "status": "approved"
+      }
+    ]
+  }
+}

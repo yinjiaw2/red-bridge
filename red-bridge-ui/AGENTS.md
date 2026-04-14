@@ -68,6 +68,23 @@ Refactor a collection of unstructured HTML files into a well-organised Next.js (
 - Do not use inline `style={{}}` props for values that Tailwind can handle.
 - Dark mode: use Tailwind's `dark:` variant. Do not write separate dark-mode CSS files.
 
+#### Design Token Priority — Always Check `globals.css` First
+
+- Before using any arbitrary color value (e.g. `bg-[#b4907a]`), **check `globals.css` first** to see if a named token already exists for that color.
+- If a token exists, **always use the named class** instead of the raw value:
+
+  ```tsx
+  // ✅ Correct — uses the design token
+  <div className="bg-primary text-primary-foreground" />
+
+  // ❌ Wrong — hardcodes a raw value that already has a token
+  <div className="bg-[#b4907a] text-[#ffffff]" />
+  ```
+
+- This applies to all token categories: colors, border-radius, spacing, shadows, font sizes.
+- If a color from the original HTML has **no matching token**, add it to `globals.css` under `@theme` (Tailwind v4) or in the `extend.colors` config, then use the named class — never use the raw hex inline.
+- Treat `globals.css` as the **single source of truth** for the design system. Do not duplicate token values in component files.
+
 ---
 
 ## Project Structure
@@ -200,3 +217,13 @@ Stop and ask before proceeding if you encounter:
 - A section with **ambiguous structure** where multiple interpretations are possible.
 - Any existing **third-party script or analytics tag** in the HTML — do not silently carry it over.
 - Images that appear to be **icon-like SVGs embedded as `<img>` tags** — confirm before replacing with Lucide.
+
+---
+
+## Out of Scope for This Agent
+
+- Backend / API route logic
+- Database schema or ORM setup
+- Authentication
+- Deployment configuration
+- SEO meta tags (handle separately in `generateMetadata`)
