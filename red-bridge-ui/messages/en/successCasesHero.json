@@ -1,0 +1,27 @@
+{
+  "successCasesHero": {
+    "eyebrow": "Real Cases · Verified Outcomes",
+    "headingLine1": "200+ Success Stories",
+    "headingLine2": "Every pathway,",
+    "headingHighlight": "a real result.",
+    "description": "The following are representative cases from a selection of RedBridge Consulting clients. To protect privacy, all client details are presented using initials and occupation only. All visa outcomes and project completions are verified against our internal records.",
+    "stats": [
+      {
+        "value": "200+",
+        "label": "Career placements to date"
+      },
+      {
+        "value": "150+",
+        "label": "Active sponsoring employer partners"
+      },
+      {
+        "value": "300+",
+        "label": "Clients who passed their skills assessment"
+      },
+      {
+        "value": "4.9★",
+        "label": "Average client satisfaction rating"
+      }
+    ]
+  }
+}
