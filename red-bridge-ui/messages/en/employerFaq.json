@@ -1,0 +1,31 @@
+{
+  "employerFaq": {
+    "eyebrow": "Employer Common Questions",
+    "headingMain": "Hiring Manager",
+    "headingHighlight": "FAQ.",
+    "items": [
+      {
+        "question": "What are the minimum salary requirements for sponsored employees?",
+        "answer": "From 1 July 2025, the Core Skills Income Threshold (CSIT) is AUD $76,515 per year (excluding superannuation). This is the floor — you must also pay at least the Annual Market Salary Rate (AMSR) for the role, whichever is higher. The Specialist Skills stream (occupations not on the CSOL, or salaries above the threshold) has a minimum of AUD $135,000. These thresholds are adjusted annually and will increase from July 2026.",
+        "sourceText": "Department of Home Affairs — Salary Requirements",
+        "sourceHref": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/sponsoring-workers/nominate-a-position/salary-requirements"
+      },
+      {
+        "question": "How long does the entire process take?",
+        "answer": "SBS approval usually takes 1–8 weeks. Nomination can be lodged concurrently with the SBS — no need to wait for each stage to close. Onshore candidates (on a 485 or student visa) receive a Bridging Visa A immediately after visa lodgement, allowing them to keep working legally. From first meeting to visa grant, the typical timeline is 3–7 months. Accredited sponsors receive priority processing."
+      },
+      {
+        "question": "Is Labour Market Testing (advertising) required before sponsoring?",
+        "answer": "Most Core Skills stream nominations require Labour Market Testing — advertising on at least two platforms for at least 4 weeks, within 4 months before the nomination is lodged. Certain occupations and circumstances are exempt. If you already have a specific candidate in mind, we can plan the LMT advertising schedule around your timeline. The Specialist Skills stream (salary $135,000+) does not require LMT."
+      },
+      {
+        "question": "Can part-time employees be sponsored?",
+        "answer": "No — 482 nominations require a full-time position. Part-time or casual roles do not qualify. The sponsored employee must work full-time in the nominated occupation, with salary meeting both the CSIT and AMSR on a full-time equivalent basis. If your business model requires part-time work, limited arrangements exist under specific labour agreements, but these are industry-specific and require separate assessment."
+      },
+      {
+        "question": "Can you retain the employee after their 482 visa expires?",
+        "answer": "Yes — a 482 holder who has worked with your business for 2 years becomes eligible to apply for the 186 Employer Nomination Scheme visa (Transition stream), granting permanent residency. Insight Idea will assist with the 186 nomination at the appropriate milestone. This is one of the most valued aspects of the sponsorship pathway — sponsored employees have a strong incentive to stay because their PR depends on the employment relationship, resulting in significantly lower turnover than standard hires."
+      }
+    ]
+  }
+}
