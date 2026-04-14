@@ -1,0 +1,64 @@
+{
+  "team": {
+    "intro": "RedBridge is a small, specialist professional team. Because skilled migration is genuinely complex, we focus on what we do well — employer matching, compliance documentation, market analysis, and client relationship management. Every project is supported by our licensed legal partner, Insight Idea.",
+    "learnMore": "Learn more",
+    "members": [
+      {
+        "initials": "RB",
+        "colorKey": "red",
+        "title": "Employer Sponsorship Specialist",
+        "tag": "Job Sponsorship",
+        "description": "Manages our active network of 482 and 186 sponsoring employers. Verifies each employer's current eligibility and matches clients to appropriate roles before any commitment is made."
+      },
+      {
+        "initials": "CC",
+        "colorKey": "teal",
+        "title": "Senior Career Consultant",
+        "tag": "Career Consulting",
+        "description": "Specialises in career pathway design for ICT, accounting, and marketing professionals. Leads the initial assessment and builds each client's migration roadmap."
+      },
+      {
+        "initials": "CC",
+        "colorKey": "teal",
+        "title": "Career & Placement Coordinator",
+        "tag": "Career Consulting",
+        "description": "Coordinates employer introductions, prepares résumés and interview materials, and supports clients through the placement process from first contact to offer."
+      },
+      {
+        "initials": "BA",
+        "colorKey": "blue",
+        "title": "Business Analyst",
+        "tag": "Immigration Compliance",
+        "description": "Reviews client work history and skills evidence against CAANZ, ACS, and AMI assessment standards to ensure documentation meets regulatory requirements on the first submission."
+      },
+      {
+        "initials": "BA",
+        "colorKey": "blue",
+        "title": "Business Analyst",
+        "tag": "Immigration Compliance",
+        "description": "Supports milestone tracking and compliance documentation. Works closely with Insight Idea to ensure all employment records and supporting evidence are accurate and complete."
+      },
+      {
+        "initials": "NK",
+        "colorKey": "green",
+        "title": "Marketing Specialist",
+        "tag": "Marketing",
+        "description": "Manages client communications, digital content, and outreach. Ensures prospective clients receive clear, accurate information about RedBridge's services and processes."
+      },
+      {
+        "initials": "CR",
+        "colorKey": "orange",
+        "title": "Client Relations Manager",
+        "tag": "Client Relations",
+        "description": "Primary point of contact for active clients. Oversees the onboarding process, manages milestone check-ins, and ensures every client understands each stage of their pathway."
+      },
+      {
+        "initials": "HR",
+        "colorKey": "purple",
+        "title": "HR Data & Compliance Coordinator",
+        "tag": "Human Resources",
+        "description": "Maintains internal employment records, project timesheets, and client documentation archives. Ensures all records meet the evidentiary standards required by skills assessment bodies."
+      }
+    ]
+  }
+}
