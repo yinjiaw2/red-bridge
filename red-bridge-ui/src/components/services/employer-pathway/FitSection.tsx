@@ -81,7 +81,10 @@ export default function FitSection() {
               <p className="mt-5 text-[13px] leading-6 text-muted-foreground">
                 {no.note}{" "}
                 {no.noteLinkText && no.noteLinkHref ? (
-                  <Link href={no.noteLinkHref} className="text-primary underline underline-offset-4">
+                  <Link
+                    href={no.noteLinkHref}
+                    className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[12px] font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-white hover:shadow-md"
+                  >
                     {no.noteLinkText}
                   </Link>
                 ) : null}

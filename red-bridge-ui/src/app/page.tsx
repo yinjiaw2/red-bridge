@@ -5,6 +5,7 @@ import TrustSafetySection from "@/components/home/TrustSafetySection";
 import SuccessTicker from "@/components/home/OutcomeTickerSection";
 import ComparisonSection from "@/components/home/ComparisonSection";
 import EmployerNetwork from "@/components/home/EmployerNetworkSection";
+import VideoSection from "@/components/home/VideoSection";
 import Footer from "@/components/shared/Footer";
 import { ContactSection } from "@/components/home/ContactSection";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <SuccessTicker />
         <ComparisonSection />
         <EmployerNetwork />
+        <VideoSection />
         <ContactSection />
         <Footer />
       </main>

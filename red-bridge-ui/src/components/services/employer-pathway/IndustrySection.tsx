@@ -68,7 +68,10 @@ export default function IndustrySection() {
 
         <p className="mt-8 text-center text-[14px] leading-7 text-muted-foreground">
           {t("note")}{" "}
-          <Link href={t("noteLinkHref")} className="font-semibold text-primary underline underline-offset-4">
+          <Link
+            href={t("noteLinkHref")}
+            className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[12px] font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-white hover:shadow-md"
+          >
             {t("noteLinkText")}
           </Link>
         </p>

@@ -1,0 +1,24 @@
+{
+  "homeVideo": {
+    "eyebrow": "About RedBridge",
+    "title": "Company Video Introduction",
+    "description": "Get to know who we are, what we do, and how we help you succeed in Australia.",
+    "viewAll": "View All Videos",
+    "cardTag": "Featured",
+    "close": "Close video",
+    "cards": {
+      "welcome": {
+        "title": "Welcome to RedBridge",
+        "description": "Our story, our mission, and why we do what we do."
+      },
+      "process": {
+        "title": "How We Work With You",
+        "description": "From assessment to placement, our proven process."
+      },
+      "stories": {
+        "title": "Success Stories",
+        "description": "Hear from our students and professionals who made it happen."
+      }
+    }
+  }
+}

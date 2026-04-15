@@ -1,7 +1,6 @@
 import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
 import CTABandSection from "@/components/services/employer-pathway/CTABandSection";
-import FAQSection from "@/components/services/employer-pathway/FAQSection";
 import FitSection from "@/components/services/employer-pathway/FitSection";
 import HeroSection from "@/components/services/employer-pathway/HeroSection";
 import IndustrySection from "@/components/services/employer-pathway/IndustrySection";
@@ -23,7 +22,6 @@ export default function Page() {
         <ProcessSection />
         <IndustrySection />
         <PromiseSection />
-        <FAQSection />
         <CTABandSection />
       </main>
 

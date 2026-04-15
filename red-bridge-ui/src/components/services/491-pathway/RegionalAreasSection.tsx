@@ -73,7 +73,7 @@ export default function RegionalAreasSection() {
             href={t("sourceHref")}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-4"
+            className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[12px] font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-white hover:shadow-md"
           >
             {t("sourceLinkText")}
           </a>

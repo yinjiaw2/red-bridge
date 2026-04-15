@@ -86,7 +86,10 @@ export default function OccupationRealitySection() {
 
         <p className="mt-6 text-center text-sm text-muted-foreground">
           {t("disclaimer")}{" "}
-          <Link href="/" className="text-primary underline underline-offset-4 hover:opacity-80">
+          <Link
+            href="/"
+            className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[12px] font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-white hover:shadow-md"
+          >
             {t("disclaimerLink")}
           </Link>
         </p>

@@ -45,14 +45,17 @@ export default function CTABandSection() {
 
         <Link
           href="/booking?src=employer_bottom_cta"
-          className="mt-8 inline-flex rounded-full bg-white px-8 py-3 font-semibold text-[#8b3e18]"
+          className="mt-8 inline-flex rounded-full bg-white px-8 py-3 font-semibold text-primary"
         >
           {t("button")}
         </Link>
 
         <p className="mt-5 text-[13px] text-white/70">
           {t("phoneLabel")}{" "}
-          <a href="tel:0399617301" className="underline underline-offset-4">
+          <a
+            href="tel:0399617301"
+            className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[12px] font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-secondary hover:shadow-md"
+          >
             03 9961 7301
           </a>
         </p>

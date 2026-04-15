@@ -1,7 +1,6 @@
 import CTABandSection from "@/components/services/491-pathway/CTABandSection";
 import ContextBand from "@/components/services/491-pathway/ContextBand";
 import DifferenceSection from "@/components/services/491-pathway/DifferenceSection";
-import FAQSection from "@/components/services/491-pathway/FAQSection";
 import HeroSection from "@/components/services/491-pathway/HeroSection";
 import Pathway191Section from "@/components/services/491-pathway/Pathway191Section";
 import ProcessSection from "@/components/services/491-pathway/ProcessSection";
@@ -28,7 +27,6 @@ export default function Page() {
         <RequirementsSection />
         <ProcessSection />
         <Pathway191Section />
-        <FAQSection />
         <RelatedPathwaysSection />
         <CTABandSection />
       </main>

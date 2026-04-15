@@ -38,17 +38,17 @@ export default function Pathway191Section() {
           </div>
           <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
             {t("title1")}
-            <em className="not-italic text-[#2d6a4f]">{t("titleHighlight")}</em>
+            <em className="not-italic text-primary">{t("titleHighlight")}</em>
           </h2>
           <p className="mx-auto mt-4 max-w-[720px] text-[15px] leading-7 text-muted-foreground">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="mx-auto max-w-[860px] rounded-[12px] border border-[rgba(45,106,79,0.2)] bg-[linear-gradient(135deg,rgba(45,106,79,0.08),rgba(27,67,50,0.04))] p-8 md:p-10">
+        <div className="mx-auto max-w-[860px] rounded-[12px] border border-primary/20 bg-primary/5 p-8 md:p-10">
           <h3 className="mb-4 text-[30px] font-semibold text-foreground">
             {t("cardTitle1")}
-            <em className="not-italic text-[#2d6a4f]">{t("cardTitle2")}</em>
+            <em className="not-italic text-primary">{t("cardTitle2")}</em>
           </h3>
           <p className="mb-4 text-[15px] leading-8 text-[rgba(42,31,20,0.68)]">
             {t("body1")}
@@ -60,7 +60,7 @@ export default function Pathway191Section() {
           <div className="space-y-4">
             {requirements.map((item) => (
               <div key={item.title} className="flex gap-3">
-                <CheckCircle2 size={18} className="mt-1 shrink-0 text-[#2d6a4f]" />
+                <CheckCircle2 size={18} className="mt-1 shrink-0 text-primary" />
                 <p className="text-[14px] leading-7 text-[rgba(42,31,20,0.68)]">
                   <strong className="text-foreground">{item.title}</strong>
                   {item.desc}
@@ -75,7 +75,7 @@ export default function Pathway191Section() {
               href={t("sourceHref")}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline underline-offset-4"
+              className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[12px] font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-white hover:shadow-md"
             >
               {t("sourceLinkText")}
             </a>
@@ -85,9 +85,9 @@ export default function Pathway191Section() {
             {stats.map((item) => (
               <div
                 key={item.label}
-                className="rounded-[8px] bg-[rgba(45,106,79,0.06)] px-5 py-6 text-center"
+                className="rounded-[8px] bg-primary/10 px-5 py-6 text-center"
               >
-                <div className="mb-1 text-[34px] font-semibold text-[#2d6a4f]">
+                <div className="mb-1 text-[34px] font-semibold text-primary">
                   {item.value}
                 </div>
                 <div className="text-[12px] leading-5 text-muted-foreground">

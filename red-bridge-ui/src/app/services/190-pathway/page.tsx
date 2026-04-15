@@ -7,7 +7,6 @@ import RequirementsSection from "@/components/services/190-pathway/RequirementsS
 import VictoriaPrioritiesSection from "@/components/services/190-pathway/VictoriaPrioritiesSection";
 import SelectionFactorsSection from "@/components/services/190-pathway/SelectionFactorsSection";
 import ProcessSection from "@/components/services/190-pathway/ProcessSection";
-import FAQSection from "@/components/services/190-pathway/FAQSection";
 import CTABandSection from "@/components/services/190-pathway/CTABandSection";
 import RelatedPathwaysSection from "@/components/services/190-pathway/RelatedPathwaysSection";
 import Footer from "@/components/shared/Footer";
@@ -28,7 +27,6 @@ export default function Page() {
         <VictoriaPrioritiesSection />
         <SelectionFactorsSection />
         <ProcessSection />
-        <FAQSection />
         <CTABandSection />
         <RelatedPathwaysSection />
       </main>

@@ -35,7 +35,7 @@ export default function HeroSection() {
         <div className="mb-10 flex flex-wrap justify-center gap-4 text-[0.8rem] text-muted-foreground">
           {trust.map((item) => (
             <span key={item} className="inline-flex items-center gap-2">
-              <CheckCircle size={14} className="text-primary" />
+              <CheckCircle size={14} className="text-[#2d6a4f]" />
               {item}
             </span>
           ))}

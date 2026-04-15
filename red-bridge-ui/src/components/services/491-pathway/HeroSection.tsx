@@ -53,9 +53,9 @@ export default function HeroSection() {
         <div className="mb-12 flex flex-wrap justify-center gap-4">
           <Link
             href="/booking?src=491_hero_cta"
-            className="inline-flex items-center rounded-full bg-primary px-8 py-3 font-semibold text-white shadow-md"
+            className="group inline-flex items-center rounded-full bg-primary px-8 py-3 font-semibold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
           >
-            <MapPin size={16} className="mr-2" />
+            <MapPin size={16} className="mr-2 transition-transform duration-200 group-hover:translate-x-0.5" />
             {t("ctaPrimary")}
           </Link>
 
@@ -65,9 +65,9 @@ export default function HeroSection() {
                 .getElementById("the-tradeoff")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="rounded-full border border-border px-8 py-3 text-foreground"
+            className="rounded-full border border-border px-8 py-3 text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary hover:shadow-md"
           >
-            {t("ctaSecondary")} â†’
+            {t("ctaSecondary")} {"\u2192"}
           </button>
         </div>
 

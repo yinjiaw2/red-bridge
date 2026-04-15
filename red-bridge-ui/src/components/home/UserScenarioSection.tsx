@@ -46,7 +46,7 @@ export const UserScenarioSection = () => {
     <section className="py-20 px-[5%] bg-white border-b border-gray-200">
       <div className="max-w-[1200px] mx-auto text-center">
         {/* 顶部副标题 */}
-        <p className="flex items-center justify-center gap-2 text-[0.72rem] font-bold tracking-[0.2em] uppercase text-[#A30000] mb-12 font-serif">
+        <p className="mb-12 flex items-center justify-center gap-2 font-serif text-[0.72rem] font-bold uppercase tracking-[0.2em] text-[#B5121B]">
           <MoveRight size={14} aria-hidden="true" />
           <span>{t("eyebrow")}</span>
         </p>
@@ -61,10 +61,10 @@ export const UserScenarioSection = () => {
                 key={index}
                 href={item.href}
                 onClick={() => handleCardClick(item.filterType)}
-                className="group flex flex-col items-center justify-start p-8 pt-10 pb-10 bg-white border border-gray-200 shadow-sm rounded-none transition-all duration-300 hover:shadow-lg hover:border-brandred/40 hover:-translate-y-1 text-center"
+                className="group flex flex-col items-center justify-start rounded-none border border-gray-200 bg-white p-8 pb-10 pt-10 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B5121B]/40 hover:shadow-lg"
               >
-                <div className="flex items-center justify-center w-16 h-16 rounded-none bg-brandred/10 mb-8 transition-all duration-300 group-hover:scale-110 group-hover:bg-brandred/20">
-                  <Icon className="h-8 w-8 text-brandred" strokeWidth={2} />
+                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-none bg-[#B5121B]/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#B5121B]/20">
+                  <Icon className="h-8 w-8 text-[#B5121B]" strokeWidth={2} />
                 </div>
 
                 <h4 className="mb-4 font-serif text-[2rem] font-bold leading-tight text-gray-900 xl:text-[1.85rem]">
@@ -75,7 +75,7 @@ export const UserScenarioSection = () => {
                   {item.description}
                 </p>
 
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-brandred border-b border-brandred/40 pb-px group-hover:border-brandred transition-colors">
+                <span className="inline-flex items-center gap-1.5 border-b border-[#B5121B]/40 pb-px text-[11px] font-bold uppercase tracking-widest text-[#B5121B] transition-colors group-hover:border-[#B5121B]">
                   {item.linkText}
                   <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
                 </span>
@@ -85,7 +85,7 @@ export const UserScenarioSection = () => {
         </div>
 
         {/* 底部引导文案 */}
-        <div className="mt-10 border border-gray-200 bg-white shadow-sm border-l-4 border-l-brandred flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-6 text-left">
+        <div className="mt-10 flex flex-col items-center justify-between gap-6 border border-gray-200 border-l-4 border-l-[#B5121B] bg-white px-8 py-6 text-left shadow-sm sm:flex-row">
           <div className="flex-1 min-w-0">
             <p className="font-bold text-gray-900 text-base mb-1">
               {t("footer.cardTitle")}
@@ -98,7 +98,7 @@ export const UserScenarioSection = () => {
             <Button
               asChild
               variant="outline"
-              className="h-10 rounded-full border-brandred text-brandred hover:bg-brandred hover:text-white px-6 text-[13px] font-semibold transition-colors gap-2"
+              className="h-10 gap-2 rounded-full border-[#B5121B] px-6 text-[13px] font-semibold text-[#B5121B] transition-colors hover:bg-[#B5121B] hover:text-white"
             >
               <Link href={t("footer.learnMoreHref")}>
                 {t("footer.learnMore")}
@@ -107,7 +107,7 @@ export const UserScenarioSection = () => {
             </Button>
             <Button
               asChild
-              className="h-10 rounded-full bg-brandred hover:bg-red-800 text-white px-6 text-[13px] font-semibold transition-colors shadow-sm gap-2"
+              className="h-10 gap-2 rounded-full bg-[#B5121B] px-6 text-[13px] font-semibold text-white shadow-sm transition-colors hover:bg-[#981018]"
             >
               <Link href={t("footer.bookingHref")}>
                 {t("footer.booking")}

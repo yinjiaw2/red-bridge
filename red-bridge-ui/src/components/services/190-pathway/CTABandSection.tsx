@@ -48,7 +48,10 @@ export default function CTABandSection() {
 
         <p className="mt-5 text-[13px] text-white/70">
           {t("phoneLabel")}{" "}
-          <a href="tel:0399617301" className="underline underline-offset-4">
+          <a
+            href="tel:0399617301"
+            className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[12px] font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-secondary hover:shadow-md"
+          >
             03 9961 7301
           </a>
         </p>

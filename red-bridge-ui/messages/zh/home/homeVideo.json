@@ -1,0 +1,24 @@
+{
+  "homeVideo": {
+    "eyebrow": "关于 RedBridge",
+    "title": "公司视频介绍",
+    "description": "了解我们是谁、我们做什么，以及我们如何帮助您在澳洲实现职业与移民目标。",
+    "viewAll": "查看全部视频",
+    "cardTag": "精选",
+    "close": "关闭视频",
+    "cards": {
+      "welcome": {
+        "title": "欢迎来到 RedBridge",
+        "description": "了解我们的故事、使命，以及我们为什么坚持做这件事。"
+      },
+      "process": {
+        "title": "我们如何与您合作",
+        "description": "从评估到匹配落地，带您了解我们的完整服务流程。"
+      },
+      "stories": {
+        "title": "成功案例分享",
+        "description": "听听我们的学生与专业人士是如何一步步实现目标的。"
+      }
+    }
+  }
+}

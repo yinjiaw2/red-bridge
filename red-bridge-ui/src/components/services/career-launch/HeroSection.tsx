@@ -49,7 +49,7 @@ export default function HeroSection() {
         <div className="mb-10 flex flex-wrap justify-center gap-4">
           <Button
             asChild
-            className="h-14 rounded-none bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
+            className="h-14 rounded-none bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white transition-colors hover:opacity-90 shadow-md"
           >
             <Link href="/booking?src=career_launch_hero_cta">
               {t("primaryCta")}

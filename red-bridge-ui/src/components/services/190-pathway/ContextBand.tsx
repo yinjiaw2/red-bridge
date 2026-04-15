@@ -24,7 +24,10 @@ export default function ContextBand() {
           </h3>
           <p className="text-[14px] leading-7 text-[rgba(42,31,20,0.68)]">
             {t("body")}{" "}
-            <Link href="/services/491-pathway" className="text-primary underline underline-offset-4">
+            <Link
+              href="/services/491-pathway"
+              className="mt-3 inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[12px] font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-white hover:shadow-md"
+            >
               {t("linkText")}
             </Link>
           </p>
