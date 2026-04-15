@@ -10,7 +10,7 @@ const videoCards = [
   {
     key: "welcome",
     duration: "02:45",
-    poster: "/home-assets/wtc-hero.png",
+    poster: "/home-assets/wtc-hero.jpg",
     videoSrc: "/videos/Andy-2.mp4",
     position: "object-center",
   },
