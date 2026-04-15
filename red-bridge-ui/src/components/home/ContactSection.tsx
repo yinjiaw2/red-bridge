@@ -4,12 +4,9 @@ import {
   MapPin,
   PhoneCall,
   MailOpen,
-  HelpCircle,
-  ArrowRight,
   Calendar,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
 
 export const ContactSection = () => {
   const t = useTranslations("contact");
@@ -119,20 +116,6 @@ export const ContactSection = () => {
             <Calendar size={18} aria-hidden="true" />
             {t("ctaMain")}
           </Link>
-          <div className="flex items-center gap-2 text-sm text-white/35">
-            <HelpCircle size={14} className="text-white/30" aria-hidden="true" />
-            <span>{t("ctaSubPrefix")}</span>
-            <Button
-              asChild
-              variant="outline"
-              className="h-8 rounded-none border-white/30 bg-transparent text-white/70 hover:bg-white/10 hover:text-white hover:border-white/60 px-4 text-[12px] font-bold uppercase tracking-widest transition-colors gap-1.5"
-            >
-              <Link href="/eligibility">
-                {t("ctaSubLink")}
-                <ArrowRight size={13} aria-hidden="true" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </div>
     </section>

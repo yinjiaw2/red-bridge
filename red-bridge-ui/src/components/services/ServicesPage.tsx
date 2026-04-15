@@ -2,7 +2,6 @@ import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
 import { ServicesCtaSection } from "./ServicesCtaSection";
 import { ServicesFinderSection } from "./ServicesFinderSection";
-import { ServicesGridSection } from "./ServicesGridSection";
 import { ServicesHero } from "./ServicesHero";
 import { ServicesProcessSection } from "./ServicesProcessSection";
 import { ServicesStatsBand } from "./ServicesStatsBand";
@@ -15,7 +14,6 @@ export function ServicesPage() {
         <ServicesHero />
         <ServicesStatsBand />
         <ServicesProcessSection />
-        <ServicesGridSection />
         <ServicesFinderSection />
         <ServicesCtaSection />
       </main>

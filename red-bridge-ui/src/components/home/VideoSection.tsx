@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Play, X } from "lucide-react";
+import { Play, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const videoCards = [
@@ -67,7 +66,7 @@ export function VideoSection() {
       <section id="videos" className="w-full bg-background px-[5%] py-14 md:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="rounded-[22px] border border-border bg-card p-6 shadow-md md:p-8">
-            <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+            <div>
               <div>
                 <p className="text-[0.75rem] font-bold uppercase tracking-[0.22em] text-primary">
                   {t("eyebrow")}
@@ -79,13 +78,6 @@ export function VideoSection() {
                   {t("description")}
                 </p>
               </div>
-              <Link
-                href="#contact"
-                className="inline-flex items-center gap-2 self-start text-sm font-bold text-primary"
-              >
-                {t("viewAll")}
-                <ArrowRight className="h-4 w-4" />
-              </Link>
             </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-3">

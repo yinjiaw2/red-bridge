@@ -10,7 +10,7 @@ import {
 import { useTranslations } from "next-intl";
 
 export const CredentialsBarSection = () => {
-  const t = useTranslations("home.credentials");
+  const t = useTranslations("credentials");
 
   const credentials = [
     {

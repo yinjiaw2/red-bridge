@@ -175,7 +175,7 @@ export const ComparisonSection = () => {
               variant="outline"
               className="w-full sm:w-auto h-12 rounded-none border border-brandred bg-transparent px-8 text-sm font-bold uppercase tracking-widest text-brandred hover:bg-brandred/5 transition-colors"
             >
-              <Link href="#process">
+              <Link href="/services#how-it-works">
                 <span>{t("cta.secondaryBtn")}</span>
                 <ArrowRight size={18} className="ml-2" aria-hidden="true" />
               </Link>

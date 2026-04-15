@@ -10,7 +10,6 @@ import {
   ShieldCheck,
   BadgeCheck,
   Lock,
-  ArrowRight,
   type LucideIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -200,7 +199,7 @@ export default function EmployerNetwork() {
 
         {/* Industries */}
         <div className="border-t border-[rgba(0,0,0,0.08)] pt-8">
-          <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div className="mb-5">
             <div>
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8A1523] md:text-[12px]">
                 {t("industriesEyebrow")}
@@ -209,14 +208,6 @@ export default function EmployerNetwork() {
                 {t("industriesHeading")}
               </h3>
             </div>
-
-            <Link
-              href="/industries"
-              className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#8A1523] transition hover:text-[#A82030]"
-            >
-              {t("seeAll")}
-              <ArrowRight className="h-4 w-4" strokeWidth={1.9} />
-            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">

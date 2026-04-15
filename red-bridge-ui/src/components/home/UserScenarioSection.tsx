@@ -31,6 +31,13 @@ const scenarioIcons: Record<string, LucideIcon> = {
   urgent: Clock3,
 };
 
+const scenarioHrefMap: Record<string, string> = {
+  graduate: "/services/career-launch",
+  employer: "/services/employer-pathway",
+  independent: "/services",
+  urgent: "/contact",
+};
+
 export const UserScenarioSection = () => {
   const t = useTranslations("userScenario");
   const scenarios = t.raw("scenarios") as ScenarioMessage[];
@@ -55,11 +62,12 @@ export const UserScenarioSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {scenarios.map((item, index) => {
             const Icon = scenarioIcons[item.filterType ?? "urgent"] ?? Clock3;
+            const href = scenarioHrefMap[item.filterType ?? "urgent"] ?? item.href;
 
             return (
               <Link
                 key={index}
-                href={item.href}
+                href={href}
                 onClick={() => handleCardClick(item.filterType)}
                 className="group flex flex-col items-center justify-start rounded-none border border-gray-200 bg-white p-8 pb-10 pt-10 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B5121B]/40 hover:shadow-lg"
               >

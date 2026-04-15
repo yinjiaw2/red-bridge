@@ -182,29 +182,29 @@
       {
         "title": "我刚毕业",
         "description": "我有澳洲学位，但还没有足够的本地工作经验来申请移民。",
-        "linkText": "职业起航计划 →",
-        "href": "#programs",
+        "linkText": "职业起航计划",
+        "href": "/services/career-launch",
         "filterType": "graduate"
       },
       {
         "title": "我需要签证担保",
         "description": "我是一名技术专业人才或者我拥有工作经验，正在寻找能为我担保482或186签证的澳洲雇主。",
-        "linkText": "雇主担保 →",
-        "href": "#programs",
+        "linkText": "雇主担保",
+        "href": "/services/employer-pathway",
         "filterType": "employer"
       },
       {
         "title": "我想获得永久居留权",
         "description": "我想通过打分制技术移民系统独立申请PR。",
         "linkText": "189 / 190 / 491 →",
-        "href": "#programs",
+        "href": "/services",
         "filterType": "independent"
       },
       {
         "title": "我的签证即将到期",
         "description": "我时间紧迫，需要关于过桥签证、签证延期或转换签证的紧急指导。",
-        "linkText": "紧急签证方案 →",
-        "href": "/emergency",
+        "linkText": "紧急签证方案",
+        "href": "/contact",
         "filterType": "urgent"
       }
     ],
