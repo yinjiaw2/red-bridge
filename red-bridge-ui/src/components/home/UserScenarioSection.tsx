@@ -5,9 +5,12 @@ import {
   Compass,
   GraduationCap,
   Clock3,
+  MoveRight,
+  ArrowRight,
   type LucideIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 
 // 定义卡片的数据结构（保持不变）
 interface Scenario {
@@ -44,12 +47,12 @@ export const UserScenarioSection = () => {
       <div className="max-w-[1200px] mx-auto text-center">
         {/* 顶部副标题 */}
         <p className="flex items-center justify-center gap-2 text-[0.72rem] font-bold tracking-[0.2em] uppercase text-[#A30000] mb-12 font-serif">
-          <span>👉</span>
+          <MoveRight size={14} aria-hidden="true" />
           <span>{t("eyebrow")}</span>
         </p>
 
-        {/* 网格容器：适配图片 3+1 布局 */}
-        <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {/* 网格容器 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {scenarios.map((item, index) => {
             const Icon = scenarioIcons[item.filterType ?? "urgent"] ?? Clock3;
 
@@ -58,22 +61,23 @@ export const UserScenarioSection = () => {
                 key={index}
                 href={item.href}
                 onClick={() => handleCardClick(item.filterType)}
-                className="group flex flex-col items-center justify-start rounded-2xl border border-gray-200 bg-white px-8 pt-10 pb-12 text-center shadow-sm transition-all duration-300 hover:border-[#A30000]/30 hover:shadow-lg hover:shadow-black/5"
+                className="group flex flex-col items-center justify-start p-8 pt-10 pb-10 bg-white border border-gray-200 shadow-sm rounded-none transition-all duration-300 hover:shadow-lg hover:border-brandred/40 hover:-translate-y-1 text-center"
               >
-                <div className="mb-7 flex h-18 w-18 items-center justify-center rounded-full bg-[#A30000]/10 transition-transform duration-300 group-hover:scale-110">
-                  <Icon className="h-7 w-7 text-[#A30000]" strokeWidth={2} />
+                <div className="flex items-center justify-center w-16 h-16 rounded-none bg-brandred/10 mb-8 transition-all duration-300 group-hover:scale-110 group-hover:bg-brandred/20">
+                  <Icon className="h-8 w-8 text-brandred" strokeWidth={2} />
                 </div>
 
                 <h4 className="mb-4 font-serif text-[2rem] font-bold leading-tight text-gray-900 xl:text-[1.85rem]">
                   {item.title}
                 </h4>
 
-                <p className="mb-6 flex-grow text-[0.95rem] leading-relaxed text-gray-600 xl:text-[0.92rem]">
+                <p className="text-base text-gray-600 leading-relaxed mb-8 flex-grow">
                   {item.description}
                 </p>
 
-                <span className="text-base font-bold text-[#A30000] transition-colors group-hover:text-[#8a0000]">
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-brandred border-b border-brandred/40 pb-px group-hover:border-brandred transition-colors">
                   {item.linkText}
+                  <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
                 </span>
               </Link>
             );
@@ -81,22 +85,37 @@ export const UserScenarioSection = () => {
         </div>
 
         {/* 底部引导文案 */}
-        <p className="flex items-center justify-center gap-x-2 mt-7 text-lg text-gray-600">
-          <span className="text-gray-500">{t("footer.prefix")}</span>{" "}
-          <Link
-            href="#programs"
-            className="text-[#A30000] font-bold hover:text-[#8a0000] transition-colors"
-          >
-            {t("footer.learnMore")}
-          </Link>
-          {t("footer.separator")}
-          <Link
-            href="/booking"
-            className="text-[#A30000] font-bold hover:text-[#8a0000] transition-colors"
-          >
-            {t("footer.booking")}
-          </Link>
-        </p>
+        <div className="mt-10 border border-gray-200 bg-white shadow-sm border-l-4 border-l-brandred flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-6 text-left">
+          <div className="flex-1 min-w-0">
+            <p className="font-bold text-gray-900 text-base mb-1">
+              {t("footer.cardTitle")}
+            </p>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              {t("footer.cardDescription")}
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+            <Button
+              asChild
+              variant="outline"
+              className="h-10 rounded-full border-brandred text-brandred hover:bg-brandred hover:text-white px-6 text-[13px] font-semibold transition-colors gap-2"
+            >
+              <Link href={t("footer.learnMoreHref")}>
+                {t("footer.learnMore")}
+                <ArrowRight size={14} aria-hidden="true" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              className="h-10 rounded-full bg-brandred hover:bg-red-800 text-white px-6 text-[13px] font-semibold transition-colors shadow-sm gap-2"
+            >
+              <Link href={t("footer.bookingHref")}>
+                {t("footer.booking")}
+                <ArrowRight size={14} aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );

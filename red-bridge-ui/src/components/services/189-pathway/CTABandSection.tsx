@@ -30,7 +30,7 @@ export default function CtaSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.05),transparent_50%),radial-gradient(circle_at_80%_50%,rgba(255,255,255,0.04),transparent_50%)]" />
 
       <div className="relative z-10 mx-auto max-w-[920px]">
-        <h2 className="text-[34px] font-bold leading-tight text-white md:text-[52px] font-serif">
+        <h2 className="text-[34px] font-bold leading-tight font-serif text-white md:text-[52px] font-serif">
           {t("title1")}
           <em className="not-italic text-highlight">{t("titleHighlight")}</em>
         </h2>

@@ -23,7 +23,6 @@ export default function LegalPartnerSection() {
         <div className="text-center mb-5">
           <h2
             className="text-4xl md:text-5xl font-bold text-gray-900"
-            style={{ fontFamily: "Georgia, serif" }}
           >
             {t("headingMain")}{" "}
             <span className="text-brandred">{t("headingHighlight")}</span>
@@ -54,7 +53,6 @@ export default function LegalPartnerSection() {
           {/* Partner name */}
           <h3
             className="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
-            style={{ fontFamily: "Georgia, serif" }}
           >
             {t("card.name")}
           </h3>

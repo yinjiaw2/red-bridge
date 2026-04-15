@@ -5,6 +5,12 @@
     "headingLine2": "从缺口到",
     "headingHighlight": "获签。",
     "description": "482雇主担保申请可在各阶段并行推进，无需等待前一步骤完全结束再启动下一步。我们的流程设计兼顾效率与合规，确保每个环节都稳步推进。",
+    "tableHeaders": {
+      "phase": "阶段",
+      "title": "标题",
+      "team": "团队",
+      "details": "细节"
+    },
     "phases": [
       {
         "number": "01",
@@ -44,6 +50,6 @@
       }
     ],
     "footerLinkText": "482签证 了解更多",
-    "footerLinkHref": "/employer-pathway"
+    "footerLinkHref": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482"
   }
 }

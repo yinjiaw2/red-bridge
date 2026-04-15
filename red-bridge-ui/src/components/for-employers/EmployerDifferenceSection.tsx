@@ -43,8 +43,7 @@ export default function EmployerDifferenceSection() {
 
         {/* Heading */}
         <h2
-          className="text-center text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-14"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-center text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-14"
         >
           {t("headingMain")}{" "}
           <span className="text-brandred">{t("headingHighlight")}</span>

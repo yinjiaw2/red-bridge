@@ -61,7 +61,6 @@ export default function SuccessCasesList() {
                 {/* Title */}
                 <h3
                   className="text-naviblue font-bold text-xl leading-snug"
-                  style={{ fontFamily: "Georgia, serif" }}
                 >
                   {c.title}
                 </h3>

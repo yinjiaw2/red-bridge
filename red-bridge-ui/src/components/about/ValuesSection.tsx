@@ -36,7 +36,6 @@ export default function ValuesSection() {
         <div className="flex flex-col md:flex-row md:items-end gap-4 md:gap-12 mb-14">
           <h2
             className="text-4xl md:text-5xl font-bold text-white shrink-0"
-            style={{ fontFamily: "Georgia, serif" }}
           >
             {t("heading")}
           </h2>
@@ -46,7 +45,7 @@ export default function ValuesSection() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {items.map((item, i) => (
             <div
               key={i}

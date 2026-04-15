@@ -25,8 +25,7 @@ export default function SuccessCasesHero() {
 
         {/* Heading */}
         <h1
-          className="text-center font-bold text-naviblue leading-tight mb-7"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-center font-bold text-naviblue leading-tight font-serif mb-7"
         >
           <span className="block text-4xl md:text-5xl lg:text-[3.5rem]">
             {t("headingLine1")}
@@ -51,7 +50,6 @@ export default function SuccessCasesHero() {
             >
               <span
                 className="text-3xl font-bold text-brandred"
-                style={{ fontFamily: "Georgia, serif" }}
               >
                 {stat.value}
               </span>

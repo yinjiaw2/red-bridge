@@ -70,7 +70,7 @@ export default function EmployerNetwork() {
             </p>
 
             <h2 className="mb-4 font-serif text-[32px] font-semibold leading-[1.02] text-[#1A2025] md:text-[46px] xl:text-[56px]">
-              {t("headingMain")}{" "}
+              {t("headingMain")}
               <span className="text-[#8A1523]">{t("headingHighlight")}</span>
             </h2>
 

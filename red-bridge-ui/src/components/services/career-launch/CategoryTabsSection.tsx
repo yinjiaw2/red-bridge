@@ -5,12 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 type PathwayKey = "acc" | "it" | "mkt";
-type FeatureKey =
-  | "outcome"
-  | "position"
-  | "project"
-  | "duration"
-  | "reference";
+type FeatureKey = "outcome" | "position" | "project" | "duration" | "reference";
 
 const CareerTabsSection = () => {
   const t = useTranslations("careerLaunch.majors");
@@ -18,7 +13,7 @@ const CareerTabsSection = () => {
 
   const pathways: Record<
     PathwayKey,
-    {id: PathwayKey; featureKeys: FeatureKey[]}
+    { id: PathwayKey; featureKeys: FeatureKey[] }
   > = {
     acc: {
       id: "acc",
@@ -40,23 +35,23 @@ const CareerTabsSection = () => {
   return (
     <section
       id="overview"
-      className="mx-auto w-full bg-[#f5efe4] px-4 py-24 font-sans"
+      className="mx-auto w-full bg-gray-50 border-b border-gray-200 px-4 py-24 font-sans"
     >
       <div className="mb-12 text-center">
         <div className="mb-3 flex items-center justify-center gap-2">
-          <div className="h-[1px] w-8 bg-[#A65E32]" />
-          <div className="text-sm font-medium uppercase tracking-wider text-[#A65E32]">
+          <div className="h-[1px] w-8 bg-brandred" />
+          <div className="text-sm font-bold uppercase tracking-widest text-brandred">
             {t("eyebrow")}
           </div>
-          <div className="h-[1px] w-8 bg-[#A65E32]" />
+          <div className="h-[1px] w-8 bg-brandred" />
         </div>
-        <h2 className="mb-6 text-4xl font-bold text-[#3E2723] md:text-5xl">
+        <h2 className="mb-6 text-4xl font-bold text-naviblue md:text-5xl font-serif">
           {t("headingMain")}
-          <span className="ml-3 font-serif italic text-[#A65E32]">
+          <span className="ml-3 font-serif text-brandred">
             {t("headingHighlight")}
           </span>
         </h2>
-        <p className="mx-auto max-w-3xl text-base leading-relaxed text-stone-500 md:text-lg">
+        <p className="mx-auto max-w-3xl text-base leading-relaxed text-gray-600 md:text-lg">
           {t("description")}
         </p>
       </div>
@@ -66,10 +61,10 @@ const CareerTabsSection = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`rounded-full border px-8 py-3 text-sm font-semibold transition-all duration-300 ${
+            className={`rounded-none border px-10 py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
               activeTab === tab.id
-                ? "border-[#A65E32] bg-[#A65E32] text-white shadow-lg shadow-orange-900/10"
-                : "border-stone-200 bg-white text-stone-400 hover:border-stone-300 hover:text-stone-600"
+                ? "border-brandred bg-brandred text-white shadow-md"
+                : "border-gray-300 bg-white text-gray-500 hover:border-brandred hover:text-brandred"
             }`}
           >
             {t(`pathways.${tab.id}.label`)}
@@ -77,13 +72,13 @@ const CareerTabsSection = () => {
         ))}
       </div>
 
-      <div className="mx-auto max-w-[980px] overflow-hidden rounded-[32px] border border-stone-100 bg-white shadow-sm transition-all duration-500">
+      <div className="mx-auto max-w-[980px] overflow-hidden rounded-none border border-gray-200 bg-white shadow-md transition-all duration-500">
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 p-10 md:p-16">
-            <h3 className="mb-6 text-3xl font-bold text-stone-800">
+            <h3 className="mb-6 text-3xl font-bold text-naviblue font-serif">
               {t(`pathways.${activeTab}.title`)}
             </h3>
-            <p className="mb-10 text-[17px] leading-relaxed text-stone-500">
+            <p className="mb-10 text-lg leading-relaxed text-gray-600">
               {t(`pathways.${activeTab}.description`)}
             </p>
 
@@ -91,26 +86,26 @@ const CareerTabsSection = () => {
               {tools.map((tool) => (
                 <span
                   key={tool}
-                  className="rounded-xl bg-stone-100 px-5 py-2 text-sm font-medium text-stone-500"
+                  className="rounded-none border border-gray-200 bg-gray-100 px-5 py-2 text-sm font-bold text-naviblue tracking-wide"
                 >
                   {tool}
                 </span>
               ))}
             </div>
 
-            <div className="rounded-2xl border border-orange-50/50 bg-[#FDF8F1] p-6">
+            <div className="rounded-none border border-gray-200 bg-gray-50 p-6">
               <p className="text-sm leading-relaxed">
-                <span className="mr-2 font-bold text-[#A65E32]">
+                <span className="mr-2 font-bold text-brandred uppercase tracking-wider">
                   {t("assessingBodyLabel")}:
                 </span>
-                <span className="text-stone-600">
+                <span className="text-gray-700 font-medium">
                   {t(`pathways.${activeTab}.assessingBody`)}
                 </span>
               </p>
             </div>
           </div>
 
-          <div className="my-16 hidden w-[1px] bg-stone-100 md:block" />
+          <div className="my-16 hidden w-px bg-gray-200 md:block" />
 
           <div className="flex w-full flex-col justify-center p-10 md:w-[45%] md:p-16">
             <div className="space-y-6">
@@ -120,10 +115,10 @@ const CareerTabsSection = () => {
                     <CheckCircle2 className="h-5 w-5 text-emerald-600" />
                   </div>
                   <div className="flex flex-row items-baseline gap-2">
-                    <span className="whitespace-nowrap font-bold text-stone-800">
+                    <span className="whitespace-nowrap font-bold text-naviblue">
                       {t(`features.${featureKey}.label`)}:
                     </span>
-                    <span className="font-medium text-stone-500">
+                    <span className="font-medium text-gray-600">
                       {t(`pathways.${activeTab}.features.${featureKey}`)}
                     </span>
                   </div>

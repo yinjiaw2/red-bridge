@@ -28,8 +28,7 @@ export default function EmployerNetworkSection() {
 
         {/* Heading */}
         <h2
-          className="text-center text-5xl md:text-6xl lg:text-[4rem] font-bold text-white leading-tight mb-7"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-center text-5xl md:text-6xl lg:text-[4rem] font-bold text-white leading-tight font-serif mb-7"
         >
           <span className="block">{t("headingLine1")}</span>
           <span className="block">

@@ -29,8 +29,7 @@ export default function StorySection() {
 
             {/* Heading */}
             <h2
-              className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-10"
-              style={{ fontFamily: "Georgia, serif" }}
+              className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight font-serif mb-10"
             >
               {t("heading")}
             </h2>
@@ -57,7 +56,6 @@ export default function StorySection() {
                   <div className="min-w-20">
                     <div
                       className="text-3xl md:text-4xl font-bold text-brandred"
-                      style={{ fontFamily: "Georgia, serif" }}
                     >
                       {stat.value}
                     </div>

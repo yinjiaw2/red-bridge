@@ -186,37 +186,39 @@
       {
         "title": "I just graduated",
         "description": "I have an Australian degree, but I do not yet have enough local work experience to apply for migration.",
-        "linkText": "Career Launch Program →",
+        "linkText": "Career Launch Program",
         "href": "#programs",
         "filterType": "graduate"
       },
       {
         "title": "I need visa sponsorship",
         "description": "I am a skilled professional or I have work experience, and I am looking for an Australian employer who can sponsor my 482 or 186 visa.",
-        "linkText": "Employer Sponsored →",
+        "linkText": "Employer Sponsored",
         "href": "#programs",
         "filterType": "employer"
       },
       {
         "title": "I want permanent residency",
         "description": "I want to apply for PR independently through the points-tested skilled migration system.",
-        "linkText": "189 / 190 / 491 →",
+        "linkText": "189 / 190 / 491",
         "href": "#programs",
         "filterType": "independent"
       },
       {
         "title": "My visa is about to expire",
         "description": "I am short on time and need urgent guidance on bridging visas, visa extensions, or changing visa types.",
-        "linkText": "Emergency Visa Solutions →",
+        "linkText": "Emergency Visa Solutions",
         "href": "/emergency",
         "filterType": "urgent"
       }
     ],
     "footer": {
-      "prefix": "Not sure which one fits you?",
-      "learnMore": "Explore all migration pathways",
-      "separator": " or ",
-      "booking": "Book a free initial assessment"
+      "cardTitle": "Not sure which applies to you?",
+      "cardDescription": "Explore all pathways or get a personalised plan with a free assessment.",
+      "learnMore": "Explore All Pathways",
+      "learnMoreHref": "#programs",
+      "booking": "Book Free Assessment",
+      "bookingHref": "/booking"
     }
   },
   "faq": {

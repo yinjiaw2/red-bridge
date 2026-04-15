@@ -21,6 +21,7 @@ interface Phase {
 export default function EmployerProcessSection() {
   const t = useTranslations("employerProcess");
   const phases = t.raw("phases") as Phase[];
+  const footerLinkHref = t("footerLinkHref");
 
   return (
     <section className="bg-white py-24 px-[5%] border-b border-gray-200">
@@ -35,8 +36,7 @@ export default function EmployerProcessSection() {
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-6"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-6"
         >
           <span className="block">{t("headingLine1")}</span>
           <span className="block">
@@ -54,10 +54,10 @@ export default function EmployerProcessSection() {
         <Table className="mb-10 border">
           <TableHeader>
             <TableRow>
-              <TableHead className="w-24">Phase</TableHead>
-              <TableHead>Title</TableHead>
-              <TableHead>Team</TableHead>
-              <TableHead>Details</TableHead>
+              <TableHead className="w-24">{t("tableHeaders.phase")}</TableHead>
+              <TableHead>{t("tableHeaders.title")}</TableHead>
+              <TableHead>{t("tableHeaders.team")}</TableHead>
+              <TableHead>{t("tableHeaders.details")}</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -95,7 +95,7 @@ export default function EmployerProcessSection() {
         {/* Footer link */}
         <div className="flex justify-center">
           <a
-            href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482"
+            href={footerLinkHref}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-12 items-center gap-2 rounded-none bg-brandred px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"

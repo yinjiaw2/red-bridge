@@ -22,8 +22,7 @@ export default function EmployerObligationsSection() {
 
         {/* Heading */}
         <h2
-          className="text-center text-4xl md:text-5xl font-bold text-naviblue leading-tight mb-5"
-          style={{ fontFamily: "Georgia, serif" }}
+          className="text-center text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-5"
         >
           {t("headingMain")}{" "}
           <span className="text-brandred">{t("headingHighlight")}</span>

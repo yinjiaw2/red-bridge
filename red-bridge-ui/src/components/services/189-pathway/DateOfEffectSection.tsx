@@ -18,7 +18,7 @@ export default function DateOfEffectSection() {
             {t("eyebrow")}
           </div>
 
-          <h2 className="text-4xl font-bold leading-tight text-naviblue md:text-5xl font-serif">
+          <h2 className="text-4xl font-bold leading-tight font-serif text-naviblue md:text-5xl font-serif">
             {t("title1")}
             <em className="not-italic text-brandred">{t("titleHighlight")}</em>
           </h2>

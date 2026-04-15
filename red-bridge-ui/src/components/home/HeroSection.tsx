@@ -19,7 +19,7 @@ export default function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/hero.jpg"
+          src="/home-hero-bg.png"
           alt={t("imageAlt")}
           fill
           priority
@@ -44,7 +44,6 @@ export default function HeroSection() {
           {/* Title */}
           <h1
             className="text-[38px] leading-[1.05] text-[#22150f] md:text-[50px] xl:text-[56px]"
-            style={{ fontFamily: "Georgia, serif" }}
           >
             {t.rich("title", {
               highlight: (chunks) => (
