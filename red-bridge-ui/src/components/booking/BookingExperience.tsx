@@ -1,9 +1,10 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import type { ConsultationStage, ConsultationTypeOption } from "./booking-data";
 import { BookingForm } from "./BookingForm";
 import { BookingInfoPanel } from "./BookingInfoPanel";
-import { consultationTypes, type ConsultationStage, type ConsultationTypeOption } from "./booking-data";
 import type { BookingDraft, BookingFormState, CalendarDay, TimeSlot } from "./types";
 
 const STORAGE_KEY = "redbridge_booking_draft";
@@ -15,7 +16,7 @@ const initialFormState: BookingFormState = {
   lastName: "",
   email: "",
   mobile: "",
-  preferredContact: "",
+ preferredContact: "",
   preferredLanguage: "",
   source: "",
   pathway: "",
@@ -37,8 +38,24 @@ function getMelbourneNow(now = new Date()) {
   return new Date(now.toLocaleString("en-US", { timeZone: "Australia/Melbourne" }));
 }
 
-function formatClockLabel(date: Date, timeZone?: string) {
-  return new Intl.DateTimeFormat("en-AU", {
+function getDateLocale(locale: string) {
+  return locale.startsWith("zh") ? "zh-CN" : "en-AU";
+}
+
+function getMelbourneTimeLabel(locale: string) {
+  return locale.startsWith("zh") ? "墨尔本时间" : "Melbourne time";
+}
+
+function getAtLabel(locale: string) {
+  return locale.startsWith("zh") ? "于" : "at";
+}
+
+function getFallbackName(locale: string) {
+  return locale.startsWith("zh") ? "朋友" : "there";
+}
+
+function formatClockLabel(date: Date, locale: string, timeZone?: string) {
+  return new Intl.DateTimeFormat(getDateLocale(locale), {
     weekday: "short",
     day: "numeric",
     month: "short",
@@ -49,8 +66,8 @@ function formatClockLabel(date: Date, timeZone?: string) {
   }).format(date);
 }
 
-function formatMonthLabel(date: Date) {
-  return new Intl.DateTimeFormat("en-AU", {
+function formatMonthLabel(date: Date, locale: string) {
+  return new Intl.DateTimeFormat(getDateLocale(locale), {
     month: "long",
     year: "numeric",
   }).format(date);
@@ -63,10 +80,10 @@ function formatDateString(date: Date) {
   return `${year}-${month}-${day}`;
 }
 
-function formatSelectedDateLabel(dateString: string) {
+function formatSelectedDateLabel(dateString: string, locale: string) {
   const [year, month, day] = dateString.split("-").map(Number);
   const date = new Date(year, month - 1, day);
-  return new Intl.DateTimeFormat("en-AU", {
+  return new Intl.DateTimeFormat(getDateLocale(locale), {
     weekday: "long",
     day: "numeric",
     month: "long",
@@ -164,6 +181,13 @@ function buildTimeSlots(
 }
 
 function getStepError(
+  messages: {
+    selectDateTime: string;
+    contactDetailsRequired: string;
+    pathwayDetailsRequired: string;
+    profileDetailsRequired: string;
+    consentRequired: string;
+  },
   currentStep: number,
   form: BookingFormState,
   selectedDate: string | null,
@@ -171,7 +195,7 @@ function getStepError(
 ) {
   if (currentStep === 0) {
     if (!selectedDate || !selectedTime) {
-      return "Please select a consultation date and time before continuing.";
+      return messages.selectDateTime;
     }
 
     if (
@@ -183,24 +207,24 @@ function getStepError(
       !form.preferredLanguage ||
       !form.source
     ) {
-      return "Please complete all required contact details.";
+      return messages.contactDetailsRequired;
     }
   }
 
   if (currentStep === 1) {
     if (!form.pathway || !form.nationality || !form.countryResidency || !form.dateOfBirth) {
-      return "Please complete the pathway and residency details before moving on.";
+      return messages.pathwayDetailsRequired;
     }
   }
 
   if (currentStep === 2) {
     if (!form.occupation || !form.educationLevel || !form.graduationYear || !form.workExperience || !form.englishTest) {
-      return "Please complete the profile details before moving on.";
+      return messages.profileDetailsRequired;
     }
   }
 
   if (currentStep === 3 && !form.consent) {
-    return "Please confirm consent before submitting your booking request.";
+    return messages.consentRequired;
   }
 
   return null;
@@ -210,35 +234,38 @@ function buildMailtoLink(
   form: BookingFormState,
   consultationLabel: string,
   slotLabel: string,
+  subjectPrefix: string,
+  heading: string,
+  fields: Record<string, string>,
 ) {
-  const subject = `Consultation Request - ${form.firstName} ${form.lastName}`.trim();
+  const subject = `${subjectPrefix} - ${form.firstName} ${form.lastName}`.trim();
   const body = [
-    "New consultation request",
+    heading,
     "",
-    `Name: ${form.firstName} ${form.lastName}`.trim(),
-    `Email: ${form.email}`,
-    `Mobile: ${form.mobile}`,
-    `Preferred contact: ${form.preferredContact}`,
-    `Preferred language: ${form.preferredLanguage}`,
-    `Source: ${form.source}`,
+    `${fields.name}: ${form.firstName} ${form.lastName}`.trim(),
+    `${fields.email}: ${form.email}`,
+    `${fields.mobile}: ${form.mobile}`,
+    `${fields.preferredContact}: ${form.preferredContact}`,
+    `${fields.preferredLanguage}: ${form.preferredLanguage}`,
+    `${fields.source}: ${form.source}`,
     "",
-    `Consultation type: ${consultationLabel}`,
-    `Selected slot: ${slotLabel}`,
-    `Pathway focus: ${form.pathway}`,
+    `${fields.consultationType}: ${consultationLabel}`,
+    `${fields.selectedSlot}: ${slotLabel}`,
+    `${fields.pathwayFocus}: ${form.pathway}`,
     "",
-    `Nationality: ${form.nationality}`,
-    `Country of residency: ${form.countryResidency}`,
-    `Date of birth: ${form.dateOfBirth}`,
-    `Current visa: ${form.currentVisa || "-"}`,
-    `Visa expiry: ${form.visaExpiry || "-"}`,
+    `${fields.nationality}: ${form.nationality}`,
+    `${fields.countryResidency}: ${form.countryResidency}`,
+    `${fields.dateOfBirth}: ${form.dateOfBirth}`,
+    `${fields.currentVisa}: ${form.currentVisa || "-"}`,
+    `${fields.visaExpiry}: ${form.visaExpiry || "-"}`,
     "",
-    `Occupation: ${form.occupation}`,
-    `Education level: ${form.educationLevel}`,
-    `Graduation year: ${form.graduationYear}`,
-    `Australian work experience: ${form.workExperience}`,
-    `English test: ${form.englishTest}`,
+    `${fields.occupation}: ${form.occupation}`,
+    `${fields.educationLevel}: ${form.educationLevel}`,
+    `${fields.graduationYear}: ${form.graduationYear}`,
+    `${fields.workExperience}: ${form.workExperience}`,
+    `${fields.englishTest}: ${form.englishTest}`,
     "",
-    "Notes:",
+    `${fields.notes}:`,
     form.notes || "-",
   ].join("\n");
 
@@ -246,6 +273,42 @@ function buildMailtoLink(
 }
 
 export function BookingExperience() {
+  const locale = useLocale();
+  const dataT = useTranslations("contactPage.data");
+  const messageT = useTranslations("contactPage.experience.messages");
+  const submittedT = useTranslations("contactPage.experience.submitted");
+  const mailT = useTranslations("contactPage.experience.mail");
+  const consultationTypes = dataT.raw("consultationTypes") as ConsultationTypeOption[];
+  const validationMessages = {
+    selectDateTime: messageT("selectDateTime"),
+    contactDetailsRequired: messageT("contactDetailsRequired"),
+    pathwayDetailsRequired: messageT("pathwayDetailsRequired"),
+    profileDetailsRequired: messageT("profileDetailsRequired"),
+    consentRequired: messageT("consentRequired"),
+  };
+  const mailFields = {
+    name: mailT("fields.name"),
+    email: mailT("fields.email"),
+    mobile: mailT("fields.mobile"),
+    preferredContact: mailT("fields.preferredContact"),
+    preferredLanguage: mailT("fields.preferredLanguage"),
+    source: mailT("fields.source"),
+    consultationType: mailT("fields.consultationType"),
+    selectedSlot: mailT("fields.selectedSlot"),
+    pathwayFocus: mailT("fields.pathwayFocus"),
+    nationality: mailT("fields.nationality"),
+    countryResidency: mailT("fields.countryResidency"),
+    dateOfBirth: mailT("fields.dateOfBirth"),
+    currentVisa: mailT("fields.currentVisa"),
+    visaExpiry: mailT("fields.visaExpiry"),
+    occupation: mailT("fields.occupation"),
+    educationLevel: mailT("fields.educationLevel"),
+    graduationYear: mailT("fields.graduationYear"),
+    workExperience: mailT("fields.workExperience"),
+    englishTest: mailT("fields.englishTest"),
+    notes: mailT("fields.notes"),
+  };
+
   const [form, setForm] = useState<BookingFormState>(initialFormState);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
@@ -253,7 +316,7 @@ export function BookingExperience() {
   const [currentStep, setCurrentStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [stageFilter, setStageFilter] = useState<ConsultationStage | null>(null);
-  const [selectedConsultationLabel, setSelectedConsultationLabel] = useState(consultationTypes[0].label);
+  const [selectedConsultationLabel, setSelectedConsultationLabel] = useState(() => consultationTypes[0]?.label ?? "");
   const [draftMessage, setDraftMessage] = useState<string | null>(null);
   const [stepError, setStepError] = useState<string | null>(null);
   const [clockTick, setClockTick] = useState(() => Date.now());
@@ -272,17 +335,21 @@ export function BookingExperience() {
   }, []);
 
   const melbourneNow = useMemo(() => getMelbourneNow(new Date(clockTick)), [clockTick]);
-  const localTimeLabel = useMemo(() => formatClockLabel(new Date(clockTick)), [clockTick]);
-  const melbourneTimeLabel = useMemo(() => formatClockLabel(new Date(clockTick), "Australia/Melbourne"), [clockTick]);
+  const localTimeLabel = useMemo(() => formatClockLabel(new Date(clockTick), locale), [clockTick, locale]);
+  const melbourneTimeLabel = useMemo(
+    () => formatClockLabel(new Date(clockTick), locale, "Australia/Melbourne"),
+    [clockTick, locale],
+  );
 
   const availableConsultationTypes = useMemo(
     () => (stageFilter ? consultationTypes.filter((type) => type.stage === stageFilter) : consultationTypes),
-    [stageFilter],
+    [consultationTypes, stageFilter],
   );
 
   const selectedConsultation =
     availableConsultationTypes.find((type) => type.label === selectedConsultationLabel) ??
     consultationTypes.find((type) => type.label === selectedConsultationLabel) ??
+    availableConsultationTypes[0] ??
     consultationTypes[0];
 
   useEffect(() => {
@@ -312,14 +379,14 @@ export function BookingExperience() {
         if (draft.selectedConsultationLabel) {
           setSelectedConsultationLabel(draft.selectedConsultationLabel);
         }
-        setDraftMessage("Saved draft loaded.");
+        setDraftMessage(messageT("savedDraftLoaded"));
       } catch {
         setDraftMessage(null);
       }
     }, 0);
 
     return () => window.clearTimeout(timer);
-  }, []);
+  }, [messageT]);
 
   useEffect(() => {
     if (!draftMessage) {
@@ -334,6 +401,7 @@ export function BookingExperience() {
     const baseMonth = new Date(melbourneNow.getFullYear(), melbourneNow.getMonth(), 1);
     return new Date(baseMonth.getFullYear(), baseMonth.getMonth() + monthOffset, 1);
   }, [melbourneNow, monthOffset]);
+
   const calendarDays = useMemo(
     () => buildCalendarDays(monthDate, selectedDate, melbourneNow),
     [monthDate, selectedDate, melbourneNow],
@@ -346,8 +414,8 @@ export function BookingExperience() {
 
   const selectedSlotLabel =
     selectedDate && activeSelectedTime
-      ? `${formatSelectedDateLabel(selectedDate)} at ${activeSelectedTime} (Melbourne time)`
-      : "Pending selection - choose a weekday date and time.";
+      ? `${formatSelectedDateLabel(selectedDate, locale)} ${getAtLabel(locale)} ${activeSelectedTime} (${getMelbourneTimeLabel(locale)})`
+      : messageT("pendingSelection");
 
   const saveDraft = () => {
     const draft: BookingDraft = {
@@ -361,7 +429,7 @@ export function BookingExperience() {
     };
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(draft));
-    setDraftMessage("Progress saved on this device.");
+    setDraftMessage(messageT("progressSaved"));
   };
 
   const handleChange = <K extends keyof BookingFormState>(key: K, value: BookingFormState[K]) => {
@@ -372,7 +440,7 @@ export function BookingExperience() {
   };
 
   const handleNext = () => {
-    const error = getStepError(currentStep, form, selectedDate, activeSelectedTime);
+    const error = getStepError(validationMessages, currentStep, form, selectedDate, activeSelectedTime);
     if (error) {
       setStepError(error);
       return;
@@ -388,7 +456,7 @@ export function BookingExperience() {
   };
 
   const handleSubmit = () => {
-    const error = getStepError(currentStep, form, selectedDate, activeSelectedTime);
+    const error = getStepError(validationMessages, currentStep, form, selectedDate, activeSelectedTime);
     if (error) {
       setStepError(error);
       return;
@@ -398,12 +466,15 @@ export function BookingExperience() {
       form,
       selectedConsultation.label,
       selectedSlotLabel,
+      mailT("subjectPrefix"),
+      mailT("heading"),
+      mailFields,
     );
 
     setSubmitted(true);
     setStepError(null);
     localStorage.removeItem(STORAGE_KEY);
-    window.location.href = mailtoLink;
+    window.location.assign(mailtoLink);
   };
 
   const resetBooking = () => {
@@ -414,41 +485,44 @@ export function BookingExperience() {
     setCurrentStep(0);
     setSubmitted(false);
     setStepError(null);
-    setSelectedConsultationLabel(availableConsultationTypes[0]?.label ?? consultationTypes[0].label);
+    setSelectedConsultationLabel(availableConsultationTypes[0]?.label ?? consultationTypes[0]?.label ?? "");
     localStorage.removeItem(STORAGE_KEY);
   };
+
+  if (!selectedConsultation) {
+    return null;
+  }
 
   if (submitted) {
     return (
       <section className="w-full bg-[var(--bg)] py-12 md:py-16">
         <div className="home-inner">
           <div className="mx-auto max-w-[780px] rounded-[28px] border border-[var(--border-soft)] bg-[var(--bg-card)] px-7 py-10 text-center shadow-[var(--shadow)] md:px-10">
-            <p className="section-eyebrow">Booking Confirmed</p>
+            <p className="section-eyebrow">{submittedT("eyebrow")}</p>
             <h2 className="mt-3 text-[2.7rem] leading-[0.98] text-[var(--text-main)] md:text-[3.2rem]">
-              Thanks, {form.firstName || "there"}.
+              {submittedT("title", { name: form.firstName || getFallbackName(locale) })}
             </h2>
             <p className="mx-auto mt-5 max-w-[620px] text-base leading-8 text-[var(--text-sub)]">
-              Your consultation request has been prepared for {selectedSlotLabel}. Your email app should now open a
-              draft addressed to {CONTACT_EMAIL} with all your details filled in.
+              {submittedT("description", { slotLabel: selectedSlotLabel, email: CONTACT_EMAIL })}
             </p>
 
             <div className="mt-8 rounded-[22px] border border-[var(--border-soft)] bg-[var(--bg)] px-5 py-5 text-left">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">Summary</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">{submittedT("summary")}</p>
               <div className="mt-4 space-y-2 text-sm leading-7 text-[var(--text-sub)]">
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">Name:</span> {form.firstName} {form.lastName}
+                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.name")}</span> {form.firstName} {form.lastName}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">Email:</span> {form.email}
+                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.email")}</span> {form.email}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">Pathway:</span> {form.pathway}
+                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.pathway")}</span> {form.pathway}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">Consultation:</span> {selectedConsultation.label}
+                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.consultation")}</span> {selectedConsultation.label}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">Slot:</span> {selectedSlotLabel}
+                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.slot")}</span> {selectedSlotLabel}
                 </p>
               </div>
             </div>
@@ -458,7 +532,7 @@ export function BookingExperience() {
               onClick={resetBooking}
               className="mt-8 inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#f9cf69_0%,#f7bf47_100%)] px-7 py-3.5 text-sm font-bold text-[var(--text-main)] shadow-[0_12px_24px_rgba(249,196,91,0.22)]"
             >
-              Book another consultation
+              {submittedT("button")}
             </button>
           </div>
         </div>
@@ -480,7 +554,7 @@ export function BookingExperience() {
             }}
             localTimeLabel={localTimeLabel}
             melbourneTimeLabel={melbourneTimeLabel}
-            monthLabel={formatMonthLabel(monthDate)}
+            monthLabel={formatMonthLabel(monthDate, locale)}
             canGoPrev={monthOffset > 0}
             canGoNext={monthOffset < 1}
             onMonthChange={(direction) => {
@@ -520,5 +594,3 @@ export function BookingExperience() {
     </section>
   );
 }
-
-

@@ -55,7 +55,8 @@ export default getRequestConfig(async ({requestLocale}) => {
   const messagesDir = path.join(process.cwd(), 'messages', locale);
   const files = getJsonFiles(messagesDir);
   const messages = files.reduce<Record<string, unknown>>((acc, file) => {
-    const content = JSON.parse(fs.readFileSync(file, 'utf-8')) as Record<
+    const raw = fs.readFileSync(file, 'utf-8').replace(/^\uFEFF/, '');
+    const content = JSON.parse(raw) as Record<
       string,
       unknown
     >;
