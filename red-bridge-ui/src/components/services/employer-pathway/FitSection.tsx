@@ -48,14 +48,14 @@ export default function FitSection() {
           <article className="rounded-[10px] border border-border bg-card p-8">
             <div className="mb-5 flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Check size={18} />
+                <Check size={18} className ="text-[#2d6a4f]"/>
               </div>
               <h3 className="text-[20px] font-semibold text-foreground">{yes.title}</h3>
             </div>
             <div className="space-y-3">
               {yesItems.map((item) => (
-                <p key={item} className="flex gap-3 text-[14px] leading-7 text-muted-foreground">
-                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                <p key={item} className="flex items-start gap-3 text-[14px] leading-7 text-muted-foreground">
+<Check size={14} className="mt-[4px] shrink-0 text-[#2d6a4f]" />
                   {item}
                 </p>
               ))}

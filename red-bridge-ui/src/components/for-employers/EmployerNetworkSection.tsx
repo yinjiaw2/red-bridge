@@ -48,7 +48,7 @@ export default function EmployerNetworkSection() {
             <div key={i} className="flex items-start gap-4">
               <div className="shrink-0 mt-0.5">
                 <CheckCircle
-                  className="h-5 w-5 text-highlight"
+                  className="h-5 w-5 text-[#2d6a4f]"
                   aria-hidden="true"
                 />
               </div>

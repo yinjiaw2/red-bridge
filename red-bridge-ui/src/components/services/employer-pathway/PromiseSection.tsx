@@ -40,7 +40,7 @@ export default function PromiseSection() {
                   key={item}
                   className="flex items-start gap-3 border-b border-border py-4 last:border-b-0"
                 >
-                  <CheckCircle2 size={18} className="mt-1 shrink-0 text-primary" />
+                  <CheckCircle2 size={18} className="mt-1 shrink-0 text-[#2d6a4f]" />
                   <p className="text-[14px] leading-7 text-muted-foreground">{item}</p>
                 </div>
               ))}

@@ -8,8 +8,7 @@ export default function ReviewedBanner() {
 
   return (
     <section className="border-y border-primary/20 bg-primary/5 px-6 py-3">
-      <div className="mx-auto flex max-w-[1100px] flex-wrap items-center gap-3 text-[13px] text-[rgba(42,31,20,0.72)]">
-        <CalendarCheck size={15} className="shrink-0 text-primary" />
+<div className="mx-auto flex max-w-[1100px] flex-wrap items-center justify-center gap-3 text-center text-[13px] text-[rgba(42,31,20,0.72)]">        <CalendarCheck size={15} className="shrink-0 text-primary" />
         <span>
           {t("textBefore")}
           <strong className="text-foreground">{t("date")}</strong>
