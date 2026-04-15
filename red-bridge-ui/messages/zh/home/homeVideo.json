@@ -8,8 +8,8 @@
     "close": "关闭视频",
     "cards": {
       "welcome": {
-        "title": "欢迎来到 RedBridge",
-        "description": "了解我们的故事、使命，以及我们为什么坚持做这件事。"
+        "title": "经历过最憋屈的一次撤签",
+        "description": "Andy老师带我们了解如何才能有效避免拒签。"
       },
       "process": {
         "title": "我们如何与您合作",
@@ -17,7 +17,7 @@
       },
       "stories": {
         "title": "成功案例分享",
-        "description": "听听我们的学生与专业人士是如何一步步实现目标的。"
+        "description": "听听我们的Andy教您如何被拒签后合理上诉。"
       }
     }
   }

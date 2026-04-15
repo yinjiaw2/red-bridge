@@ -86,7 +86,7 @@ export function VideoSection() {
                   key={card.key}
                   type="button"
                   onClick={() => setActiveVideo(card)}
-                  className="group overflow-hidden rounded-[18px] border border-border bg-card text-left shadow-md transition-transform duration-200 hover:-translate-y-0.5"
+                  className="group flex h-full flex-col overflow-hidden rounded-[18px] border border-border bg-card text-left shadow-md transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
@@ -109,11 +109,11 @@ export function VideoSection() {
                       </span>
                     </span>
                   </div>
-                  <div className="px-5 py-5">
-                    <h4 className="text-[1.52rem] leading-none text-foreground">
+                  <div className="flex flex-1 flex-col px-5 py-5">
+                    <h4 className="min-h-[3.25rem] text-[1.52rem] leading-none text-foreground">
                       {t(`cards.${card.key}.title`)}
                     </h4>
-                    <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                    <p className="mt-3 flex-1 text-sm leading-7 text-muted-foreground">
                       {t(`cards.${card.key}.description`)}
                     </p>
                   </div>
