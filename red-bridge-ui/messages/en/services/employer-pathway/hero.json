@@ -1,0 +1,37 @@
+{
+  "employerPathway": {
+    "hero": {
+      "eyebrow": "Employer Sponsored Visas",
+      "title1": "Your Skills",
+      "title2": "Deserve",
+      "title3": "a Real Sponsor",
+      "subtitle": "The 482 visa requires an employer. Most agencies sell you a job list and hope for the best. We give you direct access to a verified employer network where every position is confirmed before it reaches you, and we stay with you to the 186 PR finish line.",
+      "trust": [
+        "482 & 186 covered end-to-end",
+        "ICT & Marketing specialist network",
+        "Licensed legal partner - MARN: 1467870",
+        "Free eligibility assessment"
+      ],
+      "ctaPrimary": "Book My Free Assessment",
+      "ctaSecondary": "Am I eligible?",
+      "stats": [
+        {
+          "value": "200+",
+          "label": "Career placements"
+        },
+        {
+          "value": "150+",
+          "label": "Employer matches made"
+        },
+        {
+          "value": "3-12",
+          "label": "Months to visa"
+        },
+        {
+          "value": "4.9★",
+          "label": "Client rating"
+        }
+      ]
+    }
+  }
+}

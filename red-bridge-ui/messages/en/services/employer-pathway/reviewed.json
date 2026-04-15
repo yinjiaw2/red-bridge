@@ -1,0 +1,11 @@
+{
+  "employerPathway": {
+    "reviewed": {
+      "textBefore": "Information last reviewed ",
+      "date": "March 2026",
+      "textAfter": ". Immigration policy changes regularly.",
+      "linkHref": "https://immi.homeaffairs.gov.au",
+      "linkText": "Visit the Department of Home Affairs for the latest updates ->"
+    }
+  }
+}

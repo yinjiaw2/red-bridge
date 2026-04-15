@@ -1,0 +1,36 @@
+{
+  "employerPathway": {
+    "industries": {
+      "eyebrow": "Our Employer Network",
+      "title1": "Industries Where We Have",
+      "titleHighlight": "Real Reach",
+      "subtitle": "We only present you to employers we have personally vetted. Every organisation below holds current 482 sponsorship approval and has an active or ongoing need in your occupation.",
+      "cards": [
+        {
+          "title": "ICT & Technology",
+          "desc": "Our strongest network. We work with Australian businesses across software, systems infrastructure, project management, and digital transformation who consistently require ICT professionals.",
+          "tags": [
+            "Software Engineer",
+            "ICT Project Manager",
+            "Business Analyst",
+            "Systems Analyst",
+            "Developer"
+          ]
+        },
+        {
+          "title": "Marketing & Business",
+          "desc": "Our second core network. We place Marketing Specialists, Digital Marketing Managers, and Business Development professionals with employers across retail, services, and professional industries.",
+          "tags": [
+            "Marketing Specialist",
+            "Digital Marketing Mgr",
+            "Market Research Analyst",
+            "Business Dev Manager"
+          ]
+        }
+      ],
+      "note": "Don't see your occupation?",
+      "noteLinkText": "Book a free consult",
+      "noteLinkHref": "/booking?src=employer_network_other"
+    }
+  }
+}

@@ -18,7 +18,6 @@ const SERVICE_LINKS = [
   { key: "pathway190", href: "/services/190-pathway" },
   { key: "pathway491", href: "/services/491-pathway" },
   { key: "employerPathway", href: "/services/employer-pathway" },
-  { key: "emergency", href: "/services/emergency" },
 ] as const;
 
 const SOCIAL_LINKS = {

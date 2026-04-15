@@ -1,0 +1,33 @@
+{
+  "employerPathway": {
+    "fit": {
+      "eyebrow": "Eligibility Check",
+      "title1": "Is This",
+      "title2": "The Right Path",
+      "title3": "For You?",
+      "subtitle": "The 482/186 pathway suits some situations and not others. Here's a direct assessment, no jargon.",
+      "yes": {
+        "title": "This pathway suits you if...",
+        "items": [
+          "You have at least 1 year of paid, full-time work experience in a skilled occupation",
+          "Your occupation is on the MLTSSL or STSOL - ICT and Marketing roles typically qualify",
+          "You are working towards or already want Permanent Residency",
+          "You do not yet have employer sponsorship but want to find it",
+          "You are willing to commit to working with a single employer for at least 2 years for the 186 TRT pathway"
+        ]
+      },
+      "no": {
+        "title": "This may not suit you if...",
+        "items": [
+          "You have less than 1 year of relevant work experience - in that case, our Career Launch Program is the right first step",
+          "Your occupation is not currently on an eligible skilled occupation list",
+          "You have had a previous visa refused and haven't yet received legal advice about its impact",
+          "You need a solution in under 3 months - consider our Emergency Solutions instead"
+        ],
+        "note": "Not sure?",
+        "noteLinkText": "Book a free assessment",
+        "noteLinkHref": "/booking?src=employer_fit_unsure"
+      }
+    }
+  }
+}

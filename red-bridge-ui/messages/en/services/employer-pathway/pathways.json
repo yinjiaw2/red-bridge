@@ -1,0 +1,170 @@
+{
+  "employerPathway": {
+    "pathways": {
+      "eyebrow": "Your Options",
+      "title1": "Three Routes.",
+      "title2": "One Goal.",
+      "subtitle": "The right visa depends on how much experience you have right now. Select your situation below.",
+      "panels": [
+        {
+          "id": "under-1-year",
+          "label": "Under 1 Year Exp",
+          "badge": "Foundation Stage - Career Launch First",
+          "title": "You're 1 Year Away From 482 Eligibility",
+          "subtitle": "You don't qualify for a 482 visa yet, and any agency that suggests otherwise is misleading you. The good news: one year of genuine, verifiable Australian work experience changes everything. That's exactly what our Career Launch Program is built to produce.",
+          "leftTitle": "What you need",
+          "leftItems": [
+            {
+              "title": "1 year paid full-time experience",
+              "desc": "In an occupation on the MLTSSL or STSOL"
+            },
+            {
+              "title": "Verifiable employment records",
+              "desc": "Payslips, contract, reference letter - all documented"
+            },
+            {
+              "title": "Employer willing to sponsor",
+              "desc": "RedBridge connects you once experience is in place"
+            }
+          ],
+          "rightTitle": "RedBridge's approach",
+          "rightItems": [
+            {
+              "title": "Enrol in Career Launch",
+              "desc": "Gain 12 months of paid, structured work with our partner employers"
+            },
+            {
+              "title": "Skills assessment (occupation-dependent)",
+              "desc": "ACS (ICT) or AMI (Marketing) is not mandatory for all 482 occupations, but strongly recommended for 186 DE and Career Launch clients. Your consultant confirms if required."
+            },
+            {
+              "title": "Match to 482 sponsor",
+              "desc": "We transition you directly from Career Launch into employer sponsorship"
+            }
+          ],
+          "chips": [
+            "12-18 months to 482 readiness",
+            "Pathway: Career Launch -> 482 -> 186"
+          ],
+          "note": "Honest note: This is a longer path, but it's the right one. We would rather tell you this now and build your case properly than take your money for a visa you won't receive.",
+          "buttonText": "View Career Launch Program",
+          "buttonHref": "/services/career-launch"
+        },
+        {
+          "id": "one-to-three-years",
+          "label": "1-3 Years Exp (482)",
+          "badge": "Subclass 482 - Temporary Skill Shortage Visa",
+          "title": "Work in Australia With a Verified Employer Sponsor",
+          "subtitle": "You have the experience. What you need now is an employer who holds current 482 sponsorship approval and is genuinely looking to fill a role in your occupation. That's what our network provides, and it's verified before we introduce you.",
+          "leftTitle": "482 Visa - Key Requirements",
+          "leftItems": [
+            {
+              "title": "1 year relevant work experience",
+              "desc": "Full-time, in your nominated occupation"
+            },
+            {
+              "title": "Occupation on the CSOL",
+              "desc": "Core Skills Occupation List (replaced MLTSSL/STSOL from December 2024) - 456 eligible occupations"
+            },
+            {
+              "title": "Salary meets TSMIT",
+              "desc": "Temporary Skilled Migration Income Threshold - reviewed annually by the government"
+            },
+            {
+              "title": "English proficiency",
+              "desc": "IELTS, PTE, or TOEFL - minimum scores vary by occupation stream"
+            },
+            {
+              "title": "Approved employer sponsor",
+              "desc": "Your employer must hold current sponsorship approval from the Department"
+            },
+            {
+              "title": "Skills assessment - occupation-specific",
+              "desc": "Mandatory for only a small group of occupations, primarily trade roles. Most ICT and Marketing occupations do not require mandatory skills assessment for the 482 visa."
+            }
+          ],
+          "rightTitle": "What happens after 482?",
+          "rightItems": [
+            {
+              "title": "186 Transition Stream (TRT)",
+              "desc": "After 2 years with your 482 sponsor in an occupation on the CSOL, you can apply for Permanent Residency"
+            },
+            {
+              "title": "Regional option - 494 visa",
+              "desc": "If your employer is regional, the 494 pathway leads to 191 PR after 3 years"
+            },
+            {
+              "title": "Points-tested migration",
+              "desc": "Some clients transition to 189/190 if points-eligibility is established during employment"
+            }
+          ],
+          "chips": [
+            "3 months - 1 year to visa grant",
+            "Subclass 482",
+            "186 TRT PR after 2 years"
+          ],
+          "note": "Important: The SAF levy, nomination fees, and visa application charges are paid by your sponsoring employer, not you. RedBridge's fees cover placement and program support only.",
+          "buttonText": "Check My 482 Eligibility - Free",
+          "buttonHref": "/booking?src=employer_tab1yr_cta"
+        },
+        {
+          "id": "three-plus-years",
+          "label": "3+ Years Exp (186 Direct)",
+          "badge": "Subclass 186 - Employer Nomination Scheme (Direct Entry)",
+          "title": "Skip the Temporary Stage. Apply Directly for Permanent Residency.",
+          "subtitle": "With 3 or more years of relevant experience and a skills assessment, you may qualify to bypass the 482 stage entirely and lodge a 186 Direct Entry application, moving straight to Permanent Resident status if the nomination is approved.",
+          "leftTitle": "186 Direct Entry - Key Requirements",
+          "leftItems": [
+            {
+              "title": "3 years relevant work experience",
+              "desc": "In your nominated occupation - well-documented and verifiable"
+            },
+            {
+              "title": "Positive skills assessment - mandatory for 186 DE",
+              "desc": "Unlike the 482 visa where assessment is occupation-specific, skills assessment is required for the 186 Direct Entry stream."
+            },
+            {
+              "title": "Approved employer sponsor",
+              "desc": "Must nominate you for a genuine full-time position at market salary"
+            },
+            {
+              "title": "Under 45 years of age",
+              "desc": "Age requirement applies at the time of application lodgement"
+            },
+            {
+              "title": "English proficiency",
+              "desc": "Competent English required - vocational English in some circumstances"
+            }
+          ],
+          "rightTitle": "Why choose Direct Entry?",
+          "rightItems": [
+            {
+              "title": "Permanent Residency from day one",
+              "desc": "No temporary visa stage - you become a PR upon grant"
+            },
+            {
+              "title": "Full work rights",
+              "desc": "Not tied to a single employer after grant - work anywhere in Australia"
+            },
+            {
+              "title": "Immediate Medicare access",
+              "desc": "Full access to Australia's public health system from grant date"
+            },
+            {
+              "title": "Pathway to citizenship",
+              "desc": "You may apply for Australian citizenship when you become eligible under the residency rules in force at that time"
+            }
+          ],
+          "chips": [
+            "Permanent Residency on grant",
+            "Subclass 186 DE",
+            "6 months - 1 year to grant"
+          ],
+          "note": "Note: Direct Entry requires a skills assessment, which can add 2-4 months to your overall timeline. We begin this process in parallel with employer matching to minimise delays.",
+          "buttonText": "Check My 186 Direct Entry Eligibility",
+          "buttonHref": "/booking?src=employer_tab3yr_cta"
+        }
+      ]
+    }
+  }
+}

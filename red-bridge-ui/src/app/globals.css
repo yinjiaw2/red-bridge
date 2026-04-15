@@ -150,9 +150,10 @@
   --color-highlightyellow: #fdc365;
 
   /* Fonts */
-  --font-sans:  var(--font-geist-sans), 'Inter', sans-serif;
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
   --font-serif: 'Georgia', serif;
-  --font-mono:  var(--font-geist-mono), 'JetBrains Mono', monospace;
+  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
+  --font-app-sans: var(--font-sans);
 
   /* Radius */
   --radius-sm: calc(var(--radius) - 4px);
@@ -189,9 +190,17 @@
   body {
     @apply bg-background text-foreground;
     letter-spacing: var(--tracking-normal);
+    font-family: var(--font-sans);
   }
   html {
     @apply font-sans;
+  }
+
+  html[lang="zh"] em,
+  html[lang="zh"] i,
+  html[lang="zh"] .italic {
+    font-style: normal !important;
+    font-weight: 700;
   }
 }
 

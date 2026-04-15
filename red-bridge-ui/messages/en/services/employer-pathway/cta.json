@@ -1,0 +1,16 @@
+{
+  "employerPathway": {
+    "cta": {
+      "title1": "Your Sponsor is in Our",
+      "title2": "Network. Let's Find Them.",
+      "subtitle": "Your free eligibility assessment takes 30 minutes. You'll leave with a clear answer, not a brochure and a phone number.",
+      "trust": [
+        "Free - no obligation",
+        "Legal partner on every case",
+        "Honest verdict, not a sales pitch"
+      ],
+      "button": "Book My Free Assessment",
+      "phoneLabel": "Or call us directly:"
+    }
+  }
+}

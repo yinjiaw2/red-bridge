@@ -1,0 +1,36 @@
+{
+  "employerPathway": {
+    "faq": {
+      "eyebrow": "Common Questions",
+      "title1": "Frequently Asked ",
+      "titleHighlight": "Questions",
+      "subtitle": "Plain answers to the questions we get asked most often about the 482 and 186 process.",
+      "items": [
+        {
+          "question": "What is the minimum work experience required for a 482 visa?",
+          "answer": "You need at least 1 year of full-time work experience in an occupation closely related to your nominated position. The experience must be relevant, recent, and verifiable through payslips, employment contracts, and reference letters. Experience from overseas can count if it is documented to the same standard."
+        },
+        {
+          "question": "Can a 482 visa lead directly to Permanent Residency?",
+          "answer": "Yes. If your occupation is on the Medium and Long-term Strategic Skills List, you can apply for the 186 Transition Stream after 2 years of working for your sponsoring employer. If you have 3 or more years of experience, the 186 Direct Entry stream may let you apply for PR without first holding a 482 visa."
+        },
+        {
+          "question": "Does my employer pay for the 482 visa fees?",
+          "answer": "Your sponsoring employer is legally required to pay the Skilling Australians Fund levy and all nomination and sponsorship costs. Visa application charges are typically paid by the employer as well, although that can be negotiated. RedBridge's program and placement fees are separate from government fees."
+        },
+        {
+          "question": "What is TSMIT and does it affect me?",
+          "answer": "TSMIT is the Temporary Skilled Migration Income Threshold. It is the minimum salary a 482 visa holder must earn. Your nominated salary must meet or exceed this threshold and must also be equivalent to the market salary rate for the same role in Australia. The figure is reviewed annually by the Australian Government."
+        },
+        {
+          "question": "My occupation isn't in ICT or Marketing - can RedBridge still help?",
+          "answer": "Our employer network is strongest in ICT and Marketing, but we assess all occupations individually. If your occupation is on an eligible skilled list and we have employer connections in your field, we will tell you. If we don't have the right network for your occupation, we will tell you that too during the free consultation, before any commitment."
+        },
+        {
+          "question": "How long does the full 482 visa process take?",
+          "answer": "The typical timeline from your first consultation to 482 visa grant is 3 months to 1 year. The range depends on current Department processing times, whether your employer already holds standard business sponsorship approval, and how quickly your documentation is gathered. Your consultant will give you a current estimate during your free assessment."
+        }
+      ]
+    }
+  }
+}
