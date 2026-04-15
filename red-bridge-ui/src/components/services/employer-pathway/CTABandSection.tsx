@@ -44,7 +44,7 @@ export default function CTABandSection() {
         </div>
 
         <Link
-          href="/booking?src=employer_bottom_cta"
+          href="/contact?src=employer_bottom_cta"
           className="mt-8 inline-flex rounded-full bg-white px-8 py-3 font-semibold text-primary transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
         >
           {t("button")}
@@ -63,5 +63,6 @@ export default function CTABandSection() {
     </section>
   );
 }
+
 
 

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
@@ -51,7 +51,7 @@ export default function HeroSection() {
           asChild
           className="h-14 rounded-none bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
         >
-          <Link href="/booking?src=career_launch_hero_cta">
+          <Link href="/contact?src=career_launch_hero_cta">
             {t("primaryCta")}
             </Link>
           </Button>
@@ -87,3 +87,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

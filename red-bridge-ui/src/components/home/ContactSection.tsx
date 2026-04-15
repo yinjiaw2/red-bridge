@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import {
   MapPin,
@@ -113,7 +113,7 @@ export const ContactSection = () => {
         {/* CTA */}
         <div className="flex flex-col items-center gap-4">
           <Link
-            href="/booking"
+            href="/contact"
             className="inline-flex items-center gap-2 bg-[#A20000] hover:bg-[#8b0000] text-white px-10 py-4 rounded-full font-bold text-base transition-all hover:shadow-[0_0_24px_rgba(162,0,0,0.4)] active:scale-95"
           >
             <Calendar size={18} aria-hidden="true" />
@@ -140,3 +140,4 @@ export const ContactSection = () => {
 };
 
 export default ContactSection;
+

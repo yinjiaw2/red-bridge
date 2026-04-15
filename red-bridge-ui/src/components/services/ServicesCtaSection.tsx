@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -20,7 +20,7 @@ export function ServicesCtaSection() {
           <p className="mx-auto mt-5 max-w-[650px] text-lg leading-8 text-muted-foreground">{t("description")}</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/booking"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-highlight px-7 py-3.5 text-sm font-bold text-foreground shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:brightness-95"
             >
               {t("primaryCta")}
@@ -38,3 +38,4 @@ export function ServicesCtaSection() {
     </section>
   );
 }
+

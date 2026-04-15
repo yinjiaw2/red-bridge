@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import { X, Check, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -165,7 +165,7 @@ export const ComparisonSection = () => {
               asChild
               className="w-full sm:w-auto h-12 rounded-none bg-brandred px-8 text-sm font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
             >
-              <Link href="/booking">
+              <Link href="/contact">
                 <span>{t("cta.primaryBtn")}</span>
                 <ArrowRight size={18} className="ml-2" aria-hidden="true" />
               </Link>
@@ -188,3 +188,4 @@ export const ComparisonSection = () => {
 };
 
 export default ComparisonSection;
+

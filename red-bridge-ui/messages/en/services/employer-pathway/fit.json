@@ -1,4 +1,4 @@
-{
+﻿{
   "employerPathway": {
     "fit": {
       "eyebrow": "Eligibility Check",
@@ -26,8 +26,9 @@
         ],
         "note": "Not sure?",
         "noteLinkText": "Book a free assessment",
-        "noteLinkHref": "/booking?src=employer_fit_unsure"
+        "noteLinkHref": "/contact?src=employer_fit_unsure"
       }
     }
   }
 }
+

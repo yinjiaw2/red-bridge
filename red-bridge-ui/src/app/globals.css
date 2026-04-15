@@ -58,6 +58,16 @@
 
   /* Letter spacing baseline */
   --tracking-normal: -0.02em;
+
+  /* Legacy aliases used by migrated pages */
+  --bg: var(--background);
+  --bg-card: var(--card);
+  --border-soft: color-mix(in oklab, var(--border) 100%, transparent);
+  --text-main: var(--foreground);
+  --text-sub: var(--muted-foreground);
+  --text-dim: color-mix(in oklab, var(--muted-foreground) 75%, white);
+  --footer-bg: var(--secondary);
+  --sage: #2d6a4f;
 }
 
 .dark {
@@ -217,6 +227,10 @@
     @apply text-[0.75rem] font-bold tracking-widest uppercase whitespace-nowrap;
   }
 
+  .section-eyebrow {
+    @apply text-[0.75rem] font-bold tracking-widest uppercase whitespace-nowrap text-primary;
+  }
+
   /*
    * .heading-serif
    * Replaces style={{ fontFamily: "Georgia, serif" }} everywhere.
@@ -243,6 +257,10 @@
    */
   .section-inner {
     @apply max-w-300 mx-auto;
+  }
+
+  .home-inner {
+    @apply mx-auto max-w-7xl px-6;
   }
 
   /*

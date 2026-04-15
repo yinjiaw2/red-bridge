@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Calendar, Check, Shield } from "lucide-react";
@@ -41,7 +41,7 @@ export default function CTABandSection() {
         </div>
 
         <Link
-          href="/booking?src=491_bottom_cta"
+          href="/contact?src=491_bottom_cta"
           className="mt-8 inline-flex rounded-full bg-card px-8 py-3 font-semibold text-secondary transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
         >
           {t("button")}
@@ -60,3 +60,4 @@ export default function CTABandSection() {
     </section>
   );
 }
+

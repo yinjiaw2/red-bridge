@@ -1,4 +1,4 @@
-{
+﻿{
   "employerPathway": {
     "industries": {
       "eyebrow": "Our Employer Network",
@@ -30,7 +30,8 @@
       ],
       "note": "Don't see your occupation?",
       "noteLinkText": "Book a free consult",
-      "noteLinkHref": "/booking?src=employer_network_other"
+      "noteLinkHref": "/contact?src=employer_network_other"
     }
   }
 }
+

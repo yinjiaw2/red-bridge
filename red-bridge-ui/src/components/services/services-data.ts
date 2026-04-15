@@ -1,4 +1,4 @@
-export const servicesStats = [
+﻿export const servicesStats = [
   { value: "200+", label: "Career placements" },
   { value: "300+", label: "Skills assessments passed" },
   { value: "150+", label: "Employer matches made" },
@@ -162,8 +162,9 @@ export const finderCards = [
     title: "Not Sure Which Path Is Right",
     description:
       "Some clients qualify for more than one route. We map the strongest option during your free consultation.",
-    href: "/booking",
+    href: "/contact",
     cta: "Book Free Consultation",
     icon: "question",
   },
 ] as const;
+

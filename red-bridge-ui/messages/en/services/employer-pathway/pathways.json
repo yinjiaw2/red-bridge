@@ -1,4 +1,4 @@
-{
+﻿{
   "employerPathway": {
     "pathways": {
       "eyebrow": "Your Options",
@@ -105,7 +105,7 @@
           ],
           "note": "Important: The SAF levy, nomination fees, and visa application charges are paid by your sponsoring employer, not you. RedBridge's fees cover placement and program support only.",
           "buttonText": "Check My 482 Eligibility - Free",
-          "buttonHref": "/booking?src=employer_tab1yr_cta"
+          "buttonHref": "/contact?src=employer_tab1yr_cta"
         },
         {
           "id": "three-plus-years",
@@ -162,9 +162,10 @@
           ],
           "note": "Note: Direct Entry requires a skills assessment, which can add 2-4 months to your overall timeline. We begin this process in parallel with employer matching to minimise delays.",
           "buttonText": "Check My 186 Direct Entry Eligibility",
-          "buttonHref": "/booking?src=employer_tab3yr_cta"
+          "buttonHref": "/contact?src=employer_tab3yr_cta"
         }
       ]
     }
   }
 }
+

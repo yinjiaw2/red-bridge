@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -61,14 +61,14 @@ export function FaqContactSection() {
 
           <div className="mt-10 flex flex-col items-center gap-5 text-center">
             <Link
-              href="/booking"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-base font-bold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:brightness-95"
             >
               {t("primaryCta")}
             </Link>
             <p className="text-base text-muted-foreground">
               {t("secondaryPrefix")}{" "}
-              <Link href="/booking" className="font-semibold text-primary underline underline-offset-4">
+              <Link href="/contact" className="font-semibold text-primary underline underline-offset-4">
                 {t("secondaryLink")}
               </Link>
             </p>
@@ -78,3 +78,4 @@ export function FaqContactSection() {
     </section>
   );
 }
+

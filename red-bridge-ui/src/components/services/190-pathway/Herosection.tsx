@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -43,7 +43,7 @@ export default function HeroSection() {
 
         <div className="mb-12 flex flex-wrap justify-center gap-4">
           <Link
-            href="/booking?src=190"
+            href="/contact?src=190"
             className="rounded-full bg-primary px-8 py-3 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
           >
             {t("ctaPrimary")}
@@ -73,3 +73,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

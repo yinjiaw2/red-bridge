@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
-// ─── Constants ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const LOCALE_COOKIE = "NEXT_LOCALE";
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // 1 year
@@ -31,7 +31,7 @@ const SOCIAL_LINKS = {
 
 type QrTarget = "wechat" | "tiktok";
 
-// ─── Social SVG icons ─────────────────────────────────────────────────────────
+// â”€â”€â”€ Social SVG icons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function WhatsAppIcon() {
   return (
@@ -73,7 +73,7 @@ function InstagramIcon() {
   );
 }
 
-// ─── Component ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 export default function NavBar() {
   const t = useTranslations();
@@ -141,7 +141,7 @@ export default function NavBar() {
 
   return (
     <>
-      {/* ── Fixed header bar ── */}
+      {/* â”€â”€ Fixed header bar â”€â”€ */}
       <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-white shadow-sm font-(family-name:--font-geist-sans) font-semibold">
         <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 flex items-center justify-between gap-4">
           {/* Logo */}
@@ -160,7 +160,7 @@ export default function NavBar() {
             />
           </Link>
 
-          {/* ── Desktop navigation ── */}
+          {/* â”€â”€ Desktop navigation â”€â”€ */}
           <nav
             aria-label={t("nav.ariaLabel")}
             className="hidden md:flex items-center gap-6"
@@ -248,7 +248,7 @@ export default function NavBar() {
                 {t(`localeSwitch.${targetLocale}`)}
               </button>
               <Link
-                href="/booking"
+                href="/contact"
                 className="ml-8 px-4 py-2 rounded-lg text-sm font-medium text-[#1a1a1a] bg-[#FDC365] hover:bg-[#b88a10] hover:shadow-[0_0_12px_rgba(212,160,23,0.4)] transition-all shadow-sm whitespace-nowrap"
               >
                 {t("cta")}
@@ -256,7 +256,7 @@ export default function NavBar() {
             </div>
           </nav>
 
-          {/* ── Mobile: lang toggle + hamburger ── */}
+          {/* â”€â”€ Mobile: lang toggle + hamburger â”€â”€ */}
           <div className="flex items-center gap-3 md:hidden">
             <button
               onClick={switchLocale}
@@ -284,7 +284,7 @@ export default function NavBar() {
         </div>
       </header>
 
-      {/* ── Mobile drawer ── */}
+      {/* â”€â”€ Mobile drawer â”€â”€ */}
       {menuOpen && (
         <div
           id="mobile-menu"
@@ -364,7 +364,7 @@ export default function NavBar() {
               {/* CTA */}
               <li className="pt-4 pb-2">
                 <Link
-                  href="/booking"
+                  href="/contact"
                   className="block text-center py-3 rounded-full font-medium text-white bg-linear-to-r from-brandred to-brandred/80"
                   onClick={closeAll}
                 >
@@ -423,7 +423,7 @@ export default function NavBar() {
         </div>
       )}
 
-      {/* ── QR code modal ── */}
+      {/* â”€â”€ QR code modal â”€â”€ */}
       {qrModal && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
@@ -463,3 +463,4 @@ export default function NavBar() {
     </>
   );
 }
+

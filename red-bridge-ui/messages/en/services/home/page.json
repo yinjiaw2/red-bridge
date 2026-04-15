@@ -1,4 +1,4 @@
-{
+﻿{
   "servicesHome": {
     "hero": {
       "eyebrow": "Our Services",
@@ -148,7 +148,7 @@
         {
           "title": "Not Sure Which Path Is Right",
           "description": "Some clients qualify for more than one route. We map the strongest option during your free consultation.",
-          "href": "/booking",
+          "href": "/contact",
           "cta": "Book Free Consultation",
           "icon": "question"
         }
@@ -165,3 +165,4 @@
     }
   }
 }
+

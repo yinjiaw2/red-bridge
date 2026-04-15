@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import {
   Award,
@@ -51,7 +51,7 @@ export const TrustSafetySection = () => {
 
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/booking"
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-lg border border-[#D4A017] text-[#D4A017] px-5 py-2.5 text-sm font-semibold hover:bg-[#D4A017]/10 transition-colors"
             >
               {t("primaryCta")}
@@ -67,7 +67,7 @@ export const TrustSafetySection = () => {
           </div>
         </div>
 
-        {/* Right — verify cards */}
+        {/* Right â€” verify cards */}
         <div className="flex flex-col gap-3 w-full lg:w-95">
           {items.map((item, index) => {
             const Icon = iconMap[item.iconKey] ?? Mail;
@@ -116,3 +116,4 @@ export const TrustSafetySection = () => {
 };
 
 export default TrustSafetySection;
+
