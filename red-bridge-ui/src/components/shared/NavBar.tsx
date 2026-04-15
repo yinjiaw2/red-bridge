@@ -13,11 +13,13 @@ const LOCALE_COOKIE = "NEXT_LOCALE";
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // 1 year
 
 const SERVICE_LINKS = [
+  { key: "overview", href: "/services" },
   { key: "careerLaunch", href: "/services/career-launch" },
   { key: "pathway189", href: "/services/189-pathway" },
   { key: "pathway190", href: "/services/190-pathway" },
   { key: "pathway491", href: "/services/491-pathway" },
   { key: "employerPathway", href: "/services/employer-pathway" },
+  { key: "faq", href: "/faq" },
 ] as const;
 
 const SOCIAL_LINKS = {

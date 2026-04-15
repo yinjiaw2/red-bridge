@@ -4,11 +4,13 @@
     "home": "Home",
     "services": "Our Programs",
     "servicesDropdown": {
+      "overview": "All Programs",
       "careerLaunch": "Career Launch Program",
       "pathway189": "189 Skilled Independent Pathway",
       "pathway190": "190 State Nominated Pathway",
       "pathway491": "491 Regional Skilled Pathwya",
-      "employerPathway": "482/186 Employer Sponsored Pathway"
+      "employerPathway": "482/186 Employer Sponsored Pathway",
+      "faq": "FAQ"
     },
     "successCases": "Success Stories",
     "forEmployers": "Employers Partnership",

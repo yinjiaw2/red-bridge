@@ -1,0 +1,91 @@
+{
+  "faqPage": {
+    "hero": {
+      "eyebrow": "常见问题",
+      "title1": "你关心的",
+      "title2": "都在这里",
+      "description": "这里整理了我们最常被问到的问题，包括签证路径、职业评估、雇主担保，以及 RedBridge 的服务方式。"
+    },
+    "list": {
+      "items": {
+        "placements": {
+          "question": "RedBridge 提供的工作机会都是真实并经过核实的吗？",
+          "answer": "<p>是的。我们向客户推荐之前，会先核查雇主资质、担保条件、岗位内容和企业背景。只有在信息足够真实、经得起审核时，我们才会继续推进。</p>"
+        },
+        "visa482186": {
+          "question": "482 和 186 雇主担保签证有什么区别？",
+          "answer": "<p><strong>482</strong> 是临时雇主担保签证，<strong>186</strong> 是永久居留签证。很多客户会先通过 482 入境或工作，再在合适的时间转向 186 永居路径。</p>"
+        },
+        "process482": {
+          "question": "482 雇主担保签证一般要多久？",
+          "answer": "<p>482 的整体周期通常在 <strong>3 到 12 个月</strong>之间，具体会受到雇主是否已有担保资格、你的职业类别、材料准备情况以及移民局审理速度影响。</p>"
+        },
+        "victoria190": {
+          "question": "维州 190 州担保一般需要多久？",
+          "answer": "<p>维州 190 的时间并不固定。比较现实的范围通常是 <strong>2 到 12 个月</strong>，取决于你的分数、职业，以及当期邀请轮次的节奏。</p>"
+        },
+        "students": {
+          "question": "没有 PR 或没有工作 offer，留学生也可以开始申请吗？",
+          "answer": "<p>可以。有些客户会先从积累本地经验的路径开始，而不是一开始就直接走 PR 或雇主担保。<career>职业起航计划</career>就是为这个阶段设计的。</p>"
+        },
+        "cost": {
+          "question": "澳洲技术移民大概要花多少钱？",
+          "answer": "<p>你和 RedBridge 的首次咨询是免费的。不同路径、不同服务范围的费用会有差异，政府官方费用也会与我们的服务费分开。核心原则是：在你决定之前，费用会先讲清楚。</p>"
+        },
+        "payment": {
+          "question": "移民咨询费用可以分期付款吗？",
+          "answer": "<p>可以。我们的收费更倾向于按阶段分期，而不是一开始就要求全额付款。具体安排会根据不同服务和路径来确定。</p>"
+        },
+        "skillsAssessment": {
+          "question": "职业评估不过的保障是什么意思？",
+          "answer": "<p>如果你完成了对应项目，但职业评估结果没有通过，我们会继续协助你处理，直到评估要求被真正解决为止，这部分不会额外收费。</p>"
+        },
+        "pathwayFit": {
+          "question": "我现在的职业和情况，适合走哪条签证路径？",
+          "answer": "<p><strong>刚毕业、需要本地经验：</strong> <career>职业起航计划</career></p><p><strong>已经有雇主兴趣或想走担保：</strong> <employer>482/186 雇主担保</employer></p><p><strong>想走独立技术移民：</strong> <visa189>189 路径</visa189></p><p><strong>希望通过州担保加分：</strong> <visa190>190 路径</visa190></p><p><strong>适合偏远地区并获得额外加分：</strong> <visa491>491 路径</visa491></p><p>最快的方法还是预约一次免费咨询，我们会根据你的背景给你一个更具体、也更诚实的判断。</p>"
+        },
+        "legal": {
+          "question": "签证递交和移民法律事务由谁处理？",
+          "answer": "<p>所有正式的移民法律意见和签证递交，都会由我们的持牌法律合作方 <insight>Insight Idea</insight> 负责。RedBridge 负责职业规划、路径设计和雇主资源匹配，法律部分则由注册移民专业人士处理。</p>"
+        },
+        "industries": {
+          "question": "RedBridge 主要专注哪些行业和职业？",
+          "answer": "<p>我们目前最强的领域是 <strong>会计与金融</strong>、<strong>ICT 与科技</strong>、以及 <strong>市场营销与商业</strong>。这些行业也是我们雇主网络和职业评估辅导体系最成熟的方向。</p>"
+        },
+        "location": {
+          "question": "RedBridge 在哪里？可以线上咨询吗？",
+          "answer": "<p>我们的办公室位于 <strong>Level 9, Tower 3, 18-38 Siddeley Street, Docklands VIC 3008</strong>。同时也提供线上咨询，适合外州、海外，或者更习惯远程沟通的客户。</p>"
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "联系我们",
+      "title1": "还有",
+      "title2": "其他问题？",
+      "description": "预约一次无压力咨询吧。我们会给你一个诚实的评估，也会直接告诉你现在是否适合我们的项目。",
+      "cards": [
+        {
+          "title": "来访地址",
+          "lines": ["Level 9, Tower 3", "18-38 Siddeley Street", "Docklands VIC 3008"],
+          "caption": "可预约墨尔本办公室面谈",
+          "href": "https://maps.google.com/?q=Level+9+Tower+3+18-38+Siddeley+Street+Docklands+VIC+3008"
+        },
+        {
+          "title": "电话联系",
+          "lines": ["03 9961 7301"],
+          "caption": "工作日预约沟通",
+          "href": "tel:0399617301"
+        },
+        {
+          "title": "邮件联系",
+          "lines": ["info@redbridgeconsulting.com.au"],
+          "caption": "通常一个工作日内回复",
+          "href": "mailto:info@redbridgeconsulting.com.au"
+        }
+      ],
+      "primaryCta": "预约免费咨询",
+      "secondaryPrefix": "还不确定自己是否符合条件？",
+      "secondaryLink": "申请一次免费资格评估"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "faqPage": {
+    "hero": {
+      "eyebrow": "Support & Answers",
+      "title1": "Frequently Asked",
+      "title2": "Questions",
+      "description": "Straight answers to the questions we hear most about visas, skills assessments, employer sponsorship, and how RedBridge works."
+    },
+    "list": {
+      "items": {
+        "placements": {
+          "question": "Are RedBridge Consulting job placements genuine and verified?",
+          "answer": "<p>Yes. Every employer in our network is checked before we present them to clients. We only move forward when the sponsorship status, role details, and business context have been verified well enough to stand up to scrutiny.</p>"
+        },
+        "visa482186": {
+          "question": "What is the difference between a 482 and 186 employer sponsored visa?",
+          "answer": "<p>The <strong>482</strong> is a temporary employer-sponsored visa. The <strong>186</strong> is a permanent residency visa. Many clients start on a 482 and later transition to the 186 when the employer pathway and timing are right.</p>"
+        },
+        "process482": {
+          "question": "How long does the 482 employer sponsored visa process take in Australia?",
+          "answer": "<p>The 482 process usually falls somewhere between <strong>3 and 12 months</strong>. The range depends on the employer's sponsorship status, your occupation, document readiness, and current Department processing times.</p>"
+        },
+        "victoria190": {
+          "question": "How long does 190 state nomination take in Victoria?",
+          "answer": "<p>Victoria 190 timing varies. A realistic range is often <strong>2 to 12 months</strong>, depending on your points, occupation, and the pace of invitation rounds during that period.</p>"
+        },
+        "students": {
+          "question": "Can international students apply without permanent residency or a job offer?",
+          "answer": "<p>Yes. Some clients begin with work-experience-building routes rather than immediate PR or sponsorship routes. <career>Career Launch</career> is built for that earlier stage.</p>"
+        },
+        "cost": {
+          "question": "How much does skilled migration cost in Australia?",
+          "answer": "<p>Your initial consultation with RedBridge is free. Program costs vary by route and scope, and government fees sit separately from our service fees. The key principle is that costs are documented clearly before you commit.</p>"
+        },
+        "payment": {
+          "question": "Are there payment plans available for migration consultancy fees?",
+          "answer": "<p>Yes. We use milestone-based instalment structures rather than demanding full payment upfront. The exact timing depends on the service and the pathway being delivered.</p>"
+        },
+        "skillsAssessment": {
+          "question": "What is the skills assessment success guarantee?",
+          "answer": "<p>If you complete the relevant program and your skills assessment is not successful, we continue supporting you at no additional cost until the assessment requirement is properly resolved.</p>"
+        },
+        "pathwayFit": {
+          "question": "Which visa pathway is right for my occupation and situation?",
+          "answer": "<p><strong>Recent graduates needing local experience:</strong> <career>Career Launch Program</career></p><p><strong>Employer interest or sponsor route:</strong> <employer>482/186 Employer Sponsored</employer></p><p><strong>Independent points-based PR:</strong> <visa189>189 Pathway</visa189></p><p><strong>State-backed points boost:</strong> <visa190>190 Pathway</visa190></p><p><strong>Regional migration with extra points:</strong> <visa491>491 Pathway</visa491></p><p>The fastest way to know is to book the free consultation and get a tailored, no-pressure assessment.</p>"
+        },
+        "legal": {
+          "question": "Who handles visa lodgement and migration legal matters?",
+          "answer": "<p>All formal migration advice and visa lodgements are handled by <insight>Insight Idea</insight>, our licensed legal partner. RedBridge handles the career, pathway, and employer side of the work, while the legal migration work stays with the registered migration professionals.</p>"
+        },
+        "industries": {
+          "question": "What industries and occupations does RedBridge Consulting specialise in?",
+          "answer": "<p>Our strongest focus is in <strong>Accounting and Finance</strong>, <strong>ICT and Technology</strong>, and <strong>Marketing and Business</strong>. Those are the sectors around which our employer network and skills assessment preparation systems have been built.</p>"
+        },
+        "location": {
+          "question": "Where is RedBridge Consulting located and do you offer online consultations?",
+          "answer": "<p>Our office is at <strong>Level 9, Tower 3, 18-38 Siddeley Street, Docklands VIC 3008</strong>, and yes, we also offer online consultations for clients who are interstate, offshore, or simply prefer remote meetings.</p>"
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "Get In Touch",
+      "title1": "Still Have",
+      "title2": "Questions?",
+      "description": "Book a no-obligation consultation. We'll give you an honest assessment, including telling you if none of our programs are the right fit for your situation.",
+      "cards": [
+        {
+          "title": "Visit Us",
+          "lines": ["Level 9, Tower 3", "18-38 Siddeley Street", "Docklands VIC 3008"],
+          "caption": "Melbourne office consultations available",
+          "href": "https://maps.google.com/?q=Level+9+Tower+3+18-38+Siddeley+Street+Docklands+VIC+3008"
+        },
+        {
+          "title": "Call Us",
+          "lines": ["03 9961 7301"],
+          "caption": "Weekdays by appointment",
+          "href": "tel:0399617301"
+        },
+        {
+          "title": "Email Us",
+          "lines": ["info@redbridgeconsulting.com.au"],
+          "caption": "We usually respond within one business day",
+          "href": "mailto:info@redbridgeconsulting.com.au"
+        }
+      ],
+      "primaryCta": "Book Your Free Consultation",
+      "secondaryPrefix": "Not sure if you qualify?",
+      "secondaryLink": "Request a free eligibility check"
+    }
+  }
+}
