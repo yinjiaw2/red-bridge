@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import {
-  Award,
   Briefcase,
   GraduationCap,
   Languages,
@@ -36,31 +35,12 @@ function ValueText({
   muted?: boolean;
   highlight?: "accent" | "accent2" | "sage";
 }) {
-  if (muted) {
-    return <span className="text-sm font-medium text-gray-500">{value}</span>;
-  }
+  if (muted) return <span className="text-sm font-medium text-muted-foreground">{value}</span>;
+  if (highlight === "accent") return <span className="text-sm font-semibold text-secondary">{value}</span>;
+  if (highlight === "accent2") return <span className="text-sm font-semibold text-primary">{value}</span>;
+  if (highlight === "sage") return <span className="text-sm font-semibold text-secondary">{value}</span>;
 
-  if (highlight === "accent") {
-    return (
-      <span className="text-sm font-semibold text-highlight">{value}</span>
-    );
-  }
-
-  if (highlight === "accent2") {
-    return <span className="text-sm font-semibold text-brandred">{value}</span>;
-  }
-
-  if (highlight === "sage") {
-    return (
-      <span className="text-sm font-semibold text-green-600">{value}</span>
-    );
-  }
-
-  return (
-    <span className="whitespace-nowrap text-sm font-bold text-brandred">
-      {value}
-    </span>
-  );
+  return <span className="whitespace-nowrap text-sm font-bold text-primary">{value}</span>;
 }
 
 export default function PointsSection() {
@@ -68,201 +48,101 @@ export default function PointsSection() {
 
   const cards: Card[] = [
     {
-      icon: <Cake className="h-5 w-5 text-[#a8501e]" />,
+      icon: <Cake className="h-5 w-5 text-primary" />,
       title: t("cards.age.title"),
       max: t("cards.age.max"),
       note: t("cards.age.note"),
       rows: [
-        {
-          label: t("cards.age.rows.0.label"),
-          value: t("cards.age.rows.0.value"),
-        },
-        {
-          label: t("cards.age.rows.1.label"),
-          value: t("cards.age.rows.1.value"),
-        },
-        {
-          label: t("cards.age.rows.2.label"),
-          value: t("cards.age.rows.2.value"),
-        },
-        {
-          label: t("cards.age.rows.3.label"),
-          value: t("cards.age.rows.3.value"),
-        },
-        {
-          label: t("cards.age.rows.4.label"),
-          value: t("cards.age.rows.4.value"),
-          muted: true,
-        },
+        { label: t("cards.age.rows.0.label"), value: t("cards.age.rows.0.value") },
+        { label: t("cards.age.rows.1.label"), value: t("cards.age.rows.1.value") },
+        { label: t("cards.age.rows.2.label"), value: t("cards.age.rows.2.value") },
+        { label: t("cards.age.rows.3.label"), value: t("cards.age.rows.3.value") },
+        { label: t("cards.age.rows.4.label"), value: t("cards.age.rows.4.value"), muted: true },
       ],
     },
     {
-      icon: <Languages className="h-5 w-5 text-[#a8501e]" />,
+      icon: <Languages className="h-5 w-5 text-primary" />,
       title: t("cards.english.title"),
       max: t("cards.english.max"),
       note: t("cards.english.note"),
       rows: [
-        {
-          label: t("cards.english.rows.0.label"),
-          value: t("cards.english.rows.0.value"),
-        },
-        {
-          label: t("cards.english.rows.1.label"),
-          value: t("cards.english.rows.1.value"),
-        },
-        {
-          label: t("cards.english.rows.2.label"),
-          value: t("cards.english.rows.2.value"),
-          muted: true,
-        },
+        { label: t("cards.english.rows.0.label"), value: t("cards.english.rows.0.value") },
+        { label: t("cards.english.rows.1.label"), value: t("cards.english.rows.1.value") },
+        { label: t("cards.english.rows.2.label"), value: t("cards.english.rows.2.value"), muted: true },
       ],
     },
     {
-      icon: <Briefcase className="h-5 w-5 text-[#a8501e]" />,
+      icon: <Briefcase className="h-5 w-5 text-primary" />,
       title: t("cards.experience.title"),
       max: t("cards.experience.max"),
       note: t("cards.experience.note"),
       rows: [
-        {
-          label: t("cards.experience.rows.0.label"),
-          value: t("cards.experience.rows.0.value"),
-        },
-        {
-          label: t("cards.experience.rows.1.label"),
-          value: t("cards.experience.rows.1.value"),
-        },
-        {
-          label: t("cards.experience.rows.2.label"),
-          value: t("cards.experience.rows.2.value"),
-        },
-        {
-          label: t("cards.experience.rows.3.label"),
-          value: t("cards.experience.rows.3.value"),
-        },
-        {
-          label: t("cards.experience.rows.4.label"),
-          value: t("cards.experience.rows.4.value"),
-        },
-        {
-          label: t("cards.experience.rows.5.label"),
-          value: t("cards.experience.rows.5.value"),
-        },
-        {
-          label: t("cards.experience.rows.6.label"),
-          value: t("cards.experience.rows.6.value"),
-        },
+        { label: t("cards.experience.rows.0.label"), value: t("cards.experience.rows.0.value") },
+        { label: t("cards.experience.rows.1.label"), value: t("cards.experience.rows.1.value") },
+        { label: t("cards.experience.rows.2.label"), value: t("cards.experience.rows.2.value") },
+        { label: t("cards.experience.rows.3.label"), value: t("cards.experience.rows.3.value") },
+        { label: t("cards.experience.rows.4.label"), value: t("cards.experience.rows.4.value") },
+        { label: t("cards.experience.rows.5.label"), value: t("cards.experience.rows.5.value") },
+        { label: t("cards.experience.rows.6.label"), value: t("cards.experience.rows.6.value") },
       ],
     },
     {
-      icon: <GraduationCap className="h-5 w-5 text-[#a8501e]" />,
+      icon: <GraduationCap className="h-5 w-5 text-primary" />,
       title: t("cards.education.title"),
       max: t("cards.education.max"),
       note: t("cards.education.note"),
       rows: [
-        {
-          label: t("cards.education.rows.0.label"),
-          value: t("cards.education.rows.0.value"),
-        },
-        {
-          label: t("cards.education.rows.1.label"),
-          value: t("cards.education.rows.1.value"),
-        },
-        {
-          label: t("cards.education.rows.2.label"),
-          value: t("cards.education.rows.2.value"),
-        },
-        {
-          label: t("cards.education.rows.3.label"),
-          value: t("cards.education.rows.3.value"),
-        },
-        {
-          label: t("cards.education.rows.4.label"),
-          value: t("cards.education.rows.4.value"),
-        },
-        {
-          label: t("cards.education.rows.5.label"),
-          value: t("cards.education.rows.5.value"),
-        },
+        { label: t("cards.education.rows.0.label"), value: t("cards.education.rows.0.value") },
+        { label: t("cards.education.rows.1.label"), value: t("cards.education.rows.1.value") },
+        { label: t("cards.education.rows.2.label"), value: t("cards.education.rows.2.value") },
+        { label: t("cards.education.rows.3.label"), value: t("cards.education.rows.3.value") },
+        { label: t("cards.education.rows.4.label"), value: t("cards.education.rows.4.value") },
+        { label: t("cards.education.rows.5.label"), value: t("cards.education.rows.5.value") },
       ],
     },
     {
-      icon: <Users className="h-5 w-5 text-[#a8501e]" />,
+      icon: <Users className="h-5 w-5 text-primary" />,
       title: t("cards.partner.title"),
       max: t("cards.partner.max"),
       note: t("cards.partner.note"),
       rows: [
-        {
-          label: t("cards.partner.rows.0.label"),
-          value: t("cards.partner.rows.0.value"),
-        },
-        {
-          label: t("cards.partner.rows.1.label"),
-          value: t("cards.partner.rows.1.value"),
-        },
-        {
-          label: t("cards.partner.rows.2.label"),
-          value: t("cards.partner.rows.2.value"),
-        },
-        {
-          label: t("cards.partner.rows.3.label"),
-          value: t("cards.partner.rows.3.value"),
-        },
+        { label: t("cards.partner.rows.0.label"), value: t("cards.partner.rows.0.value") },
+        { label: t("cards.partner.rows.1.label"), value: t("cards.partner.rows.1.value") },
+        { label: t("cards.partner.rows.2.label"), value: t("cards.partner.rows.2.value") },
+        { label: t("cards.partner.rows.3.label"), value: t("cards.partner.rows.3.value") },
       ],
     },
     {
-      icon: <Star className="h-5 w-5 text-[#a8501e]" />,
+      icon: <Star className="h-5 w-5 text-primary" />,
       title: t("cards.total.title"),
       max: t("cards.total.max"),
       note: t("cards.total.note"),
       featured: true,
       rows: [
-        {
-          label: t("cards.total.rows.0.label"),
-          value: t("cards.total.rows.0.value"),
-          muted: true,
-        },
-        {
-          label: t("cards.total.rows.1.label"),
-          value: t("cards.total.rows.1.value"),
-          highlight: "accent",
-        },
-        {
-          label: t("cards.total.rows.2.label"),
-          value: t("cards.total.rows.2.value"),
-          highlight: "accent2",
-        },
-        {
-          label: t("cards.total.rows.3.label"),
-          value: t("cards.total.rows.3.value"),
-          highlight: "sage",
-        },
-        {
-          label: t("cards.total.rows.4.label"),
-          value: t("cards.total.rows.4.value"),
-          highlight: "sage",
-        },
+        { label: t("cards.total.rows.0.label"), value: t("cards.total.rows.0.value"), muted: true },
+        { label: t("cards.total.rows.1.label"), value: t("cards.total.rows.1.value"), highlight: "accent" },
+        { label: t("cards.total.rows.2.label"), value: t("cards.total.rows.2.value"), highlight: "accent2" },
+        { label: t("cards.total.rows.3.label"), value: t("cards.total.rows.3.value"), highlight: "sage" },
+        { label: t("cards.total.rows.4.label"), value: t("cards.total.rows.4.value"), highlight: "sage" },
       ],
     },
   ];
 
   return (
-    <section
-      id="points-table"
-      className="bg-gray-50 px-6 py-24 md:px-8 border-b border-gray-200"
-    >
+    <section id="points-table" className="border-b border-border bg-muted px-6 py-24 md:px-8">
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-brandred">
-            <span className="h-px w-6 bg-brandred" />
+          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-primary">
+            <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
 
-          <h2 className="text-4xl font-bold leading-tight font-serif text-naviblue md:text-5xl font-serif">
+          <h2 className="font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl">
             {t("title1")}
-            <em className="not-italic text-brandred">{t("titleHighlight")}</em>
+            <em className="not-italic text-primary">{t("titleHighlight")}</em>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-lg leading-8 text-gray-600">
+          <p className="mx-auto mt-5 max-w-[560px] text-lg leading-8 text-muted-foreground">
             {t("subtitle")}
           </p>
         </div>
@@ -272,27 +152,21 @@ export default function PointsSection() {
             <div
               key={index}
               className={`rounded-none border p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg ${
-                card.featured
-                  ? "border-brandred bg-brandred/5"
-                  : "border-gray-200 bg-white"
+                card.featured ? "border-primary bg-primary/5" : "border-border bg-card"
               }`}
             >
-              <div className="mb-6 flex items-center gap-4 border-b border-gray-200 pb-5">
+              <div className="mb-6 flex items-center gap-4 border-b border-border pb-5">
                 <div
                   className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-none ${
-                    card.featured ? "bg-brandred/10" : "bg-gray-100"
+                    card.featured ? "bg-primary/10" : "bg-muted"
                   }`}
                 >
                   {card.icon}
                 </div>
 
                 <div>
-                  <div className="text-xl font-bold text-naviblue font-serif">
-                    {card.title}
-                  </div>
-                  <div className="mt-1 text-sm font-semibold text-brandred">
-                    {card.max}
-                  </div>
+                  <div className="font-serif text-xl font-bold text-foreground">{card.title}</div>
+                  <div className="mt-1 text-sm font-semibold text-primary">{card.max}</div>
                 </div>
               </div>
 
@@ -300,22 +174,15 @@ export default function PointsSection() {
                 {card.rows.map((row, rowIndex) => (
                   <div
                     key={rowIndex}
-                    className="flex items-center justify-between rounded-none px-3 py-2 transition-colors hover:bg-gray-100"
+                    className="flex items-center justify-between rounded-none px-3 py-2 transition-colors hover:bg-muted"
                   >
-                    <span className="pr-4 text-base text-gray-600">
-                      {row.label}
-                    </span>
-
-                    <ValueText
-                      value={row.value}
-                      muted={row.muted}
-                      highlight={row.highlight}
-                    />
+                    <span className="pr-4 text-base text-muted-foreground">{row.label}</span>
+                    <ValueText value={row.value} muted={row.muted} highlight={row.highlight} />
                   </div>
                 ))}
               </div>
 
-              <p className="mt-5 border-t border-gray-200 pt-4 text-sm leading-relaxed text-gray-400">
+              <p className="mt-5 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
                 {card.note}
               </p>
             </div>

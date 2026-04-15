@@ -5,10 +5,10 @@
     "services": "服务项目",
     "servicesDropdown": {
       "careerLaunch": "职业起航计划",
-      "pathway189": "189 技术独立移民",
-      "pathway190": "190 州提名移民",
-      "pathway491": "491 偏远地区移民",
-      "employerPathway": "482/186 雇主担保移民"
+      "pathway189": "189 技术独立移民方案",
+      "pathway190": "190 州提名移民方案",
+      "pathway491": "491 偏远地区移民方案",
+      "employerPathway": "482/186 雇主担保移民方案"
     },
     "successCases": "成功案例",
     "forEmployers": "雇主合作",

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -33,18 +33,18 @@ export default function PathwaysSection() {
     <section
       id="pathways"
       style={{ fontFamily: font }}
-      className="bg-[#ede5d8] px-6 py-24 md:px-8"
+      className="bg-muted px-6 py-24 md:px-8"
     >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#a8501e]">
-            <span className="h-px w-6 bg-[#bf6b35]" />
+          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+            <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
-          <h2 className="text-[34px] font-semibold leading-tight text-[#2a1f14] md:text-[44px]">
-            {t("title1")} <em className="not-italic text-[#bf6b35]">{t("title2")}</em>
+          <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
+            {t("title1")} <em className="not-italic text-primary">{t("title2")}</em>
           </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-[15px] leading-7 text-[rgba(42,31,20,0.6)]">
+          <p className="mx-auto mt-4 max-w-[700px] text-[15px] leading-7 text-muted-foreground">
             {t("subtitle")}
           </p>
         </div>
@@ -56,8 +56,8 @@ export default function PathwaysSection() {
               onClick={() => setActiveId(panel.id)}
               className={`rounded-full border px-5 py-3 text-[13px] font-semibold ${
                 activeId === panel.id
-                  ? "border-transparent bg-[linear-gradient(135deg,#bf6b35,#8b3e18)] text-white shadow-[0_4px_18px_rgba(168,80,30,0.18)]"
-                  : "border-[rgba(42,31,20,0.1)] bg-[#faf6f0] text-[rgba(42,31,20,0.58)]"
+                  ? "border-transparent bg-primary text-white shadow-sm"
+                  : "border-border bg-card text-muted-foreground"
               }`}
             >
               {panel.label}
@@ -66,8 +66,8 @@ export default function PathwaysSection() {
         </div>
 
         {activePanel ? (
-          <div className="overflow-hidden rounded-[12px] border border-[rgba(42,31,20,0.09)] bg-[#faf6f0] shadow-[0_4px_24px_rgba(42,31,20,0.08)]">
-            <div className="bg-[linear-gradient(135deg,#bf6b35,#8b3e18)] px-8 py-10 text-white">
+          <div className="overflow-hidden rounded-[12px] border border-border bg-card shadow-[0_4px_24px_rgba(42,31,20,0.08)]">
+            <div className="bg-primary px-8 py-10 text-white">
               <div className="mb-3 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white/85">
                 {activePanel.badge}
               </div>
@@ -78,28 +78,28 @@ export default function PathwaysSection() {
             <div className="p-8 md:p-10">
               <div className="grid gap-8 md:grid-cols-2">
                 <div>
-                  <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.16em] text-[#a8501e]">
+                  <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">
                     {activePanel.leftTitle}
                   </h4>
                   <div className="space-y-4">
                     {activePanel.leftItems.map((item) => (
-                      <div key={item.title} className="rounded-[8px] border border-[rgba(42,31,20,0.09)] bg-[#f5efe4] p-4">
-                        <div className="text-[14px] font-semibold text-[#2a1f14]">{item.title}</div>
-                        <p className="mt-1 text-[13px] leading-6 text-[rgba(42,31,20,0.58)]">{item.desc}</p>
+                      <div key={item.title} className="rounded-[8px] border border-border bg-background p-4">
+                        <div className="text-[14px] font-semibold text-foreground">{item.title}</div>
+                        <p className="mt-1 text-[13px] leading-6 text-muted-foreground">{item.desc}</p>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.16em] text-[#a8501e]">
+                  <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">
                     {activePanel.rightTitle}
                   </h4>
                   <div className="space-y-4">
                     {activePanel.rightItems.map((item) => (
-                      <div key={item.title} className="rounded-[8px] border border-[rgba(42,31,20,0.09)] bg-[#f5efe4] p-4">
-                        <div className="text-[14px] font-semibold text-[#2a1f14]">{item.title}</div>
-                        <p className="mt-1 text-[13px] leading-6 text-[rgba(42,31,20,0.58)]">{item.desc}</p>
+                      <div key={item.title} className="rounded-[8px] border border-border bg-background p-4">
+                        <div className="text-[14px] font-semibold text-foreground">{item.title}</div>
+                        <p className="mt-1 text-[13px] leading-6 text-muted-foreground">{item.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -108,19 +108,19 @@ export default function PathwaysSection() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 {activePanel.chips.map((chip) => (
-                  <span key={chip} className="rounded-full border border-[rgba(168,80,30,0.15)] bg-[rgba(168,80,30,0.06)] px-4 py-2 text-[12px] font-medium text-[#a8501e]">
+                  <span key={chip} className="rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-[12px] font-medium text-primary">
                     {chip}
                   </span>
                 ))}
               </div>
 
-              <div className="mt-6 rounded-[8px] border-l-[3px] border-[#bf6b35] bg-[rgba(168,80,30,0.05)] px-5 py-4 text-[14px] leading-7 text-[rgba(42,31,20,0.68)]">
+              <div className="mt-6 rounded-[8px] border-l-[3px] border-primary bg-primary/5 px-5 py-4 text-[14px] leading-7 text-muted-foreground">
                 {activePanel.note}
               </div>
 
               <Link
                 href={activePanel.buttonHref}
-                className="mt-7 inline-flex rounded-full bg-[linear-gradient(135deg,#bf6b35,#8b3e18)] px-8 py-3 font-semibold text-white"
+                className="mt-7 inline-flex rounded-full bg-primary px-8 py-3 font-semibold text-white"
               >
                 {activePanel.buttonText}
               </Link>
@@ -131,3 +131,5 @@ export default function PathwaysSection() {
     </section>
   );
 }
+
+

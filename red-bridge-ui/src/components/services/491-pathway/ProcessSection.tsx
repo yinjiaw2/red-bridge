@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { AlertTriangle, Info } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -17,18 +17,18 @@ type Step = {
 };
 
 function getDotClass(type: Step["type"]) {
-  if (type === "ii") return "bg-[linear-gradient(135deg,#bf6b35,#8b3e18)]";
+  if (type === "ii") return "bg-primary";
   if (type === "state") return "bg-[linear-gradient(135deg,#4a3f8f,#2e2b6b)]";
   if (type === "you") return "bg-[linear-gradient(135deg,#2d6a4f,#1b4332)]";
   if (type === "final") return "bg-[linear-gradient(135deg,#2d6a4f,#1b4332)]";
-  return "bg-[linear-gradient(135deg,#5a7d5e,#3d5c40)]";
+  return "bg-primary";
 }
 
 function getWhoClass(type: Step["type"]) {
-  if (type === "ii") return "text-[#a8501e]";
+  if (type === "ii") return "text-primary";
   if (type === "state") return "text-[#4a3f8f]";
   if (type === "you") return "text-[rgba(42,31,20,0.45)]";
-  return "text-[#5a7d5e]";
+  return "text-primary";
 }
 
 export default function ProcessSection() {
@@ -40,26 +40,26 @@ export default function ProcessSection() {
     <section
       id="process"
       style={{ fontFamily: font }}
-      className="bg-[#f5efe4] px-6 py-24 md:px-8"
+      className="bg-background px-6 py-24 md:px-8"
     >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#5a7d5e]">
-            <span className="h-px w-6 bg-[#5a7d5e]" />
+          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+            <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
-          <h2 className="text-[34px] font-semibold leading-tight text-[#2a1f14] md:text-[44px]">
+          <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
             {t("title1")}
             <br />
-            <em className="not-italic text-[#5a7d5e]">{t("title2")}</em>
+            <em className="not-italic text-primary">{t("title2")}</em>
           </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-[15px] leading-7 text-[rgba(42,31,20,0.6)]">
+          <p className="mx-auto mt-4 max-w-[700px] text-[15px] leading-7 text-muted-foreground">
             {t("subtitle")}
           </p>
         </div>
 
         <div className="relative mx-auto max-w-[820px]">
-          <div className="absolute bottom-10 left-[21px] top-10 hidden w-[2px] bg-[linear-gradient(to_bottom,#5a7d5e,rgba(90,125,94,0.12))] md:block" />
+          <div className="absolute bottom-10 left-[21px] top-10 hidden w-[2px] bg-[linear-gradient(to_bottom,var(--color-primary),transparent)] md:block" />
 
           <div className="space-y-8">
             {steps.map((step) => (
@@ -74,7 +74,7 @@ export default function ProcessSection() {
                   <div className={`mb-1 text-[11px] font-bold uppercase tracking-[0.14em] ${getWhoClass(step.type)}`}>
                     {step.who}
                   </div>
-                  <h3 className="text-[22px] font-semibold text-[#2a1f14]">
+                  <h3 className="text-[22px] font-semibold text-foreground">
                     {step.title}
                   </h3>
                   <p className="mt-2 text-[14px] leading-7 text-[rgba(42,31,20,0.65)]">
@@ -84,7 +84,7 @@ export default function ProcessSection() {
                     className={`mt-3 inline-block rounded-full px-3 py-1 text-[11px] ${
                       step.type === "final"
                         ? "bg-[rgba(45,106,79,0.1)] text-[#2d6a4f]"
-                        : "bg-[#ede5d8] text-[rgba(42,31,20,0.55)]"
+                        : "bg-muted text-muted-foreground"
                     }`}
                   >
                     {step.time}
@@ -94,16 +94,16 @@ export default function ProcessSection() {
                     <div
                       className={`mt-4 flex gap-3 rounded-[10px] p-4 ${
                         step.alertKind === "info"
-                          ? "border border-[rgba(90,125,94,0.18)] bg-[rgba(90,125,94,0.06)]"
-                          : "border border-[rgba(168,80,30,0.18)] bg-[rgba(168,80,30,0.05)]"
+                          ? "border border-primary/20 bg-primary/5"
+                          : "border border-primary/20 bg-primary/5"
                       }`}
                     >
                       {step.alertKind === "info" ? (
-                        <Info size={18} className="mt-0.5 shrink-0 text-[#5a7d5e]" />
+                        <Info size={18} className="mt-0.5 shrink-0 text-primary" />
                       ) : (
-                        <AlertTriangle size={18} className="mt-0.5 shrink-0 text-[#a8501e]" />
+                        <AlertTriangle size={18} className="mt-0.5 shrink-0 text-primary" />
                       )}
-                      <p className="text-[13px] leading-6 text-[rgba(42,31,20,0.72)]">
+                      <p className="text-[13px] leading-6 text-muted-foreground">
                         {step.alert}
                       </p>
                     </div>
@@ -117,3 +117,5 @@ export default function ProcessSection() {
     </section>
   );
 }
+
+

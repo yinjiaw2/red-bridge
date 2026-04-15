@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Calendar, Check, Shield } from "lucide-react";
@@ -16,7 +16,7 @@ export default function CTABandSection() {
     <section
       id="book-now"
       style={{ fontFamily: font }}
-      className="relative overflow-hidden bg-[linear-gradient(140deg,#8b3e18,#a8501e,#bf6b35)] px-6 py-24 text-center text-[#faf6f0] md:px-8"
+      className="relative overflow-hidden bg-secondary px-6 py-24 text-center text-white md:px-8"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.07),transparent_50%),radial-gradient(circle_at_80%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
 
@@ -24,10 +24,10 @@ export default function CTABandSection() {
         <h2 className="text-[34px] font-semibold leading-tight md:text-[48px]">
           {t("title1")}
           <br />
-          <em className="not-italic text-[rgba(245,239,228,0.82)]">{t("title2")}</em>
+          <em className="not-italic text-white/90">{t("title2")}</em>
         </h2>
 
-        <p className="mx-auto mt-5 max-w-[720px] text-[15px] leading-7 text-[rgba(245,239,228,0.76)]">
+        <p className="mx-auto mt-5 max-w-[720px] text-[15px] leading-7 text-white/80">
           {t("subtitle")}
         </p>
 
@@ -50,7 +50,7 @@ export default function CTABandSection() {
           {t("button")}
         </Link>
 
-        <p className="mt-5 text-[13px] text-[rgba(245,239,228,0.5)]">
+        <p className="mt-5 text-[13px] text-white/70">
           {t("phoneLabel")}{" "}
           <a href="tel:0399617301" className="underline underline-offset-4">
             03 9961 7301
@@ -60,3 +60,5 @@ export default function CTABandSection() {
     </section>
   );
 }
+
+

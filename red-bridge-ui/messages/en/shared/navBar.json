@@ -2,17 +2,17 @@
   "nav": {
     "ariaLabel": "Main navigation",
     "home": "Home",
-    "services": "Programs",
+    "services": "Our Programs",
     "servicesDropdown": {
       "careerLaunch": "Career Launch Program",
-      "pathway189": "189 Skilled Independent",
-      "pathway190": "190 State Nominated",
-      "pathway491": "491 Regional Skilled",
-      "employerPathway": "482/186 Employer Sponsored"
+      "pathway189": "189 Skilled Independent Pathway",
+      "pathway190": "190 State Nominated Pathway",
+      "pathway491": "491 Regional Skilled Pathwya",
+      "employerPathway": "482/186 Employer Sponsored Pathway"
     },
     "successCases": "Success Stories",
-    "forEmployers": "Employers",
-    "about": "About"
+    "forEmployers": "Employers Partnership",
+    "about": "About Us"
   },
   "cta": "Free Consultation",
   "actions": {

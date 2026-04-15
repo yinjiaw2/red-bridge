@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Calendar, Check, Shield } from "lucide-react";
@@ -15,13 +15,13 @@ export default function CTABandSection() {
     <section
       id="book-now"
       style={{ fontFamily: font }}
-      className="bg-[#2a1f14] px-6 py-24 text-center text-[#f5efe4] md:px-8"
+      className="bg-secondary px-6 py-24 text-center text-white md:px-8"
     >
       <div className="mx-auto max-w-[860px]">
         <h2 className="text-[34px] font-semibold leading-tight md:text-[48px]">
           {t("title1")}
           <br />
-          <em className="not-italic text-[#c97a45]">{t("title2")}</em>
+          <em className="not-italic text-primary">{t("title2")}</em>
         </h2>
         <p className="mx-auto mt-5 max-w-[700px] text-[15px] leading-7 text-[rgba(245,239,228,0.7)]">
           {t("subtitle")}
@@ -32,7 +32,7 @@ export default function CTABandSection() {
             const Icon = icons[index] ?? Check;
             return (
               <span key={item} className="inline-flex items-center gap-2">
-                <Icon size={15} className="text-[#c97a45]" />
+                <Icon size={15} className="text-primary" />
                 {item}
               </span>
             );
@@ -41,12 +41,12 @@ export default function CTABandSection() {
 
         <Link
           href="/booking?src=190_bottom_cta"
-          className="mt-8 inline-flex rounded-full bg-white px-8 py-3 font-semibold text-[#2a1f14]"
+          className="mt-8 inline-flex rounded-full bg-white px-8 py-3 font-semibold text-foreground"
         >
           {t("button")}
         </Link>
 
-        <p className="mt-5 text-[13px] text-[rgba(245,239,228,0.45)]">
+        <p className="mt-5 text-[13px] text-white/70">
           {t("phoneLabel")}{" "}
           <a href="tel:0399617301" className="underline underline-offset-4">
             03 9961 7301
@@ -56,3 +56,5 @@ export default function CTABandSection() {
     </section>
   );
 }
+
+

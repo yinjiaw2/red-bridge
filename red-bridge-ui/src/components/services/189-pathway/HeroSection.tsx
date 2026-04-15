@@ -8,80 +8,58 @@ export default function HeroSection() {
   const t = useTranslations("visa189HeroSection");
 
   return (
-    <section className="relative flex min-h-[80vh] items-center justify-center bg-white px-6 py-28 text-center border-b border-gray-200">
-      <div className="max-w-[820px] w-full">
-        {/* eyebrow */}
-        <div className="text-sm font-bold tracking-widest uppercase text-brandred mb-4">
+    <section className="relative flex min-h-[80vh] items-center justify-center border-b border-border bg-background px-6 py-28 text-center">
+      <div className="w-full max-w-[820px]">
+        <div className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
           {t("eyebrow")}
         </div>
 
-        {/* title */}
-        <h1 className="text-[clamp(2.4rem,5.5vw,4.2rem)] font-serif leading-tight font-bold text-naviblue mb-6">
+        <h1 className="mb-6 font-serif text-[clamp(2.4rem,5.5vw,4.2rem)] font-bold leading-tight text-foreground">
           {t("title1")} <br />
-          <span className="text-brandred">{t("title2")}</span>
+          <span className="text-primary">{t("title2")}</span>
         </h1>
 
-        {/* subtitle */}
-        <p className="text-lg text-gray-600 leading-relaxed max-w-[600px] mx-auto mb-8">
+        <p className="mx-auto mb-8 max-w-[600px] text-lg leading-relaxed text-muted-foreground">
           {t("description")}
         </p>
 
-        {/* trust */}
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500 mb-10">
-          <span className="flex items-center gap-1">
-            <CheckCircle size={14} className="text-[#5a7d5e]" />
-            {t("trust1")}
-          </span>
-          <span className="flex items-center gap-1">
-            <CheckCircle size={14} className="text-[#5a7d5e]" />
-            {t("trust2")}
-          </span>
-          <span className="flex items-center gap-1">
-            <CheckCircle size={14} className="text-[#5a7d5e]" />
-            {t("trust3")}
-          </span>
-          <span className="flex items-center gap-1">
-            <CheckCircle size={14} className="text-[#5a7d5e]" />
-            {t("trust4")}
-          </span>
+        <div className="mb-10 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+          {[t("trust1"), t("trust2"), t("trust3"), t("trust4")].map((item) => (
+            <span key={item} className="flex items-center gap-1">
+              <CheckCircle size={14} className="text-primary" />
+              {item}
+            </span>
+          ))}
         </div>
 
-        {/* CTA */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {/* primary */}
-          <Button className="h-14 rounded-none bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md">
+        <div className="mb-10 flex flex-wrap justify-center gap-4">
+          <Button className="h-14 rounded-none bg-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary-foreground shadow-md transition-colors hover:opacity-90">
             <Calculator size={20} className="mr-2" />
             <span>{t("primary")}</span>
           </Button>
 
-          {/* secondary */}
           <Button
             variant="outline"
-            className="h-14 rounded-none border-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-brandred hover:bg-brandred/5 hover:text-brandred transition-colors"
+            className="h-14 rounded-none border-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary transition-colors hover:bg-primary/5 hover:text-primary"
           >
             <span>{t("secondary")}</span>
             <ArrowRight size={20} className="ml-2" />
           </Button>
         </div>
 
-        {/* stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 border border-gray-200 rounded-none overflow-hidden bg-gray-50 shadow-md">
+        <div className="grid grid-cols-2 overflow-hidden rounded-none border border-border bg-card shadow-md md:grid-cols-4">
           {[
             { num: "65+", label: t("stat1") },
             { num: "85+", label: t("stat2") },
-            { num: "4×", label: t("stat3") },
+            { num: "4x", label: t("stat3") },
             { num: "300+", label: t("stat4") },
           ].map((item, i) => (
             <div
               key={i}
-              className="p-5 border-r border-b border-gray-200 md:border-b-0 last:border-r-0 text-center"
+              className="border-b border-r border-border p-5 text-center last:border-r-0 md:border-b-0"
             >
-              <div className="text-3xl font-bold text-brandred mb-1">
-                {item.num}
-              </div>
-              <div className="text-xs text-gray-500 uppercase tracking-wider">
-                {item.label}
-              </div>
+              <div className="mb-1 text-3xl font-bold text-primary">{item.num}</div>
+              <div className="text-xs uppercase tracking-wider text-muted-foreground">{item.label}</div>
             </div>
           ))}
         </div>

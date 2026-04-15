@@ -20,21 +20,17 @@ export default function IndustrySection() {
   const cards = Array.isArray(rawCards) ? (rawCards as Card[]) : [];
 
   return (
-    <section
-      id="our-network"
-      style={{ fontFamily: font }}
-      className="bg-[#ede5d8] px-6 py-24 md:px-8"
-    >
+    <section id="our-network" style={{ fontFamily: font }} className="bg-muted px-6 py-24 md:px-8">
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#a8501e]">
-            <span className="h-px w-6 bg-[#bf6b35]" />
+          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+            <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
-          <h2 className="text-[34px] font-semibold leading-tight text-[#2a1f14] md:text-[44px]">
-            {t("title1")} <em className="not-italic text-[#bf6b35]">{t("titleHighlight")}</em>
+          <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
+            {t("title1")} <em className="not-italic text-primary">{t("titleHighlight")}</em>
           </h2>
-          <p className="mx-auto mt-4 max-w-[760px] text-[15px] leading-7 text-[rgba(42,31,20,0.6)]">
+          <p className="mx-auto mt-4 max-w-[760px] text-[15px] leading-7 text-muted-foreground">
             {t("subtitle")}
           </p>
         </div>
@@ -46,22 +42,20 @@ export default function IndustrySection() {
             return (
               <article
                 key={card.title}
-                className="group relative overflow-hidden rounded-[10px] border border-[rgba(42,31,20,0.09)] bg-[#faf6f0] p-7 transition hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(42,31,20,0.1)]"
+                className="group relative overflow-hidden rounded-[10px] border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="absolute inset-x-0 bottom-0 h-[3px] origin-left scale-x-0 bg-[linear-gradient(135deg,#bf6b35,#8b3e18)] transition-transform duration-300 group-hover:scale-x-100" />
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-[10px] bg-[rgba(168,80,30,0.07)] text-[#a8501e]">
+                <div className="absolute inset-x-0 bottom-0 h-[3px] origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100" />
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-[10px] bg-primary/10 text-primary">
                   <Icon size={22} />
                 </div>
-                <h3 className="text-[22px] font-semibold text-[#2a1f14]">{card.title}</h3>
-                <p className="mt-3 text-[14px] leading-7 text-[rgba(42,31,20,0.62)]">
-                  {card.desc}
-                </p>
+                <h3 className="text-[22px] font-semibold text-foreground">{card.title}</h3>
+                <p className="mt-3 text-[14px] leading-7 text-muted-foreground">{card.desc}</p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {card.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md bg-[#f1e8dc] px-3 py-1.5 text-[12px] font-medium text-[rgba(42,31,20,0.62)]"
+                      className="rounded-md bg-muted px-3 py-1.5 text-[12px] font-medium text-muted-foreground"
                     >
                       {tag}
                     </span>
@@ -72,12 +66,9 @@ export default function IndustrySection() {
           })}
         </div>
 
-        <p className="mt-8 text-center text-[14px] leading-7 text-[rgba(42,31,20,0.5)]">
+        <p className="mt-8 text-center text-[14px] leading-7 text-muted-foreground">
           {t("note")}{" "}
-          <Link
-            href={t("noteLinkHref")}
-            className="font-semibold text-[#a8501e] underline underline-offset-4"
-          >
+          <Link href={t("noteLinkHref")} className="font-semibold text-primary underline underline-offset-4">
             {t("noteLinkText")}
           </Link>
         </p>

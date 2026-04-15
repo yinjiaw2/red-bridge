@@ -7,13 +7,13 @@ export default function ReviewedBanner() {
   const t = useTranslations("visa189ReviewedBanner");
 
   return (
-    <section className="px-6 py-3 bg-gray-100 border-y border-gray-200">
-      <div className="max-w-[1100px] mx-auto flex flex-wrap items-center gap-3 text-sm text-gray-600 justify-center">
-        <CalendarCheck size={16} className="text-green-700 shrink-0" />
+    <section className="border-y border-border bg-muted px-6 py-3">
+      <div className="mx-auto flex max-w-[1100px] flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
+        <CalendarCheck size={16} className="shrink-0 text-primary" />
 
-        <span className="items-center justify-center">
+        <span>
           {t("textBefore")}
-          <strong className="text-gray-900">{t("date")}</strong>
+          <strong className="text-foreground">{t("date")}</strong>
           {t("textAfter")}
         </span>
 
@@ -21,7 +21,7 @@ export default function ReviewedBanner() {
           href="https://immi.homeaffairs.gov.au"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-naviblue underline underline-offset-4 hover:text-brandred transition-colors"
+          className="text-primary underline underline-offset-4 transition-colors hover:opacity-80"
         >
           {t("linkText")}
         </a>

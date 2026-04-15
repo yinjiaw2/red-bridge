@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Fragment } from "react";
 import { useTranslations } from "next-intl";
@@ -21,28 +21,28 @@ export default function TradeoffSection() {
     <section
       id="the-tradeoff"
       style={{ fontFamily: font }}
-      className="bg-[#ede5d8] px-6 py-24 md:px-8"
+      className="bg-muted px-6 py-24 md:px-8"
     >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#a8501e]">
-            <span className="h-px w-6 bg-[#bf6b35]" />
+          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+            <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
 
-          <h2 className="text-[34px] font-semibold leading-tight text-[#2a1f14] md:text-[44px]">
+          <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
             {t("title1")}
-            <em className="not-italic text-[#a8501e]">{t("titleHighlight")}</em>
+            <em className="not-italic text-primary">{t("titleHighlight")}</em>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-[700px] text-[15px] leading-7 text-[rgba(42,31,20,0.6)]">
+          <p className="mx-auto mt-4 max-w-[700px] text-[15px] leading-7 text-muted-foreground">
             {t("subtitle")}
           </p>
         </div>
 
         <div className="overflow-x-auto">
-          <div className="mx-auto grid min-w-[760px] max-w-[960px] grid-cols-[1.3fr_repeat(3,1fr)] overflow-hidden rounded-[10px] border border-[rgba(42,31,20,0.09)] shadow-[0_4px_24px_rgba(42,31,20,0.08)]">
-            <div className="bg-[#e8dfd2] px-5 py-4 text-[11px] font-bold uppercase tracking-[0.12em] text-[rgba(42,31,20,0.45)]">
+          <div className="mx-auto grid min-w-[760px] max-w-[960px] grid-cols-[1.3fr_repeat(3,1fr)] overflow-hidden rounded-[10px] border border-border shadow-[0_4px_24px_rgba(42,31,20,0.08)]">
+            <div className="bg-muted px-5 py-4 text-[11px] font-bold uppercase tracking-[0.12em] text-[rgba(42,31,20,0.45)]">
               {t("factorLabel")}
             </div>
             {columns.map((column, index) => (
@@ -50,10 +50,10 @@ export default function TradeoffSection() {
                 key={column.title}
                 className={`px-5 py-4 text-center text-[11px] font-bold uppercase tracking-[0.12em] ${
                   index === 0
-                    ? "bg-[linear-gradient(135deg,#5a7d5e,#3d5c40)] text-white"
+                    ? "bg-primary text-white"
                     : index === 1
-                      ? "bg-[linear-gradient(135deg,#bf6b35,#8b3e18)] text-white"
-                      : "bg-[rgba(42,31,20,0.08)] text-[rgba(42,31,20,0.62)]"
+                      ? "bg-primary text-white"
+                      : "bg-[rgba(42,31,20,0.08)] text-muted-foreground"
                 }`}
               >
                 {column.title}
@@ -63,19 +63,19 @@ export default function TradeoffSection() {
             {factors.map((factor, rowIndex) => (
               <Fragment key={factor}>
                 <div
-                  className="border-t border-[rgba(42,31,20,0.09)] bg-[#e8dfd2] px-5 py-4 text-[14px] font-semibold text-[#2a1f14]"
+                  className="border-t border-border bg-muted px-5 py-4 text-[14px] font-semibold text-foreground"
                 >
                   {factor}
                 </div>
                 {columns.map((column, colIndex) => (
                   <div
                     key={`${column.title}-${factor}`}
-                    className={`border-t border-[rgba(42,31,20,0.09)] px-5 py-4 text-[14px] leading-6 ${
+                    className={`border-t border-border px-5 py-4 text-[14px] leading-6 ${
                       colIndex === 0
-                        ? "bg-[rgba(90,125,94,0.06)] font-semibold text-[#5a7d5e]"
+                        ? "bg-primary/5 font-semibold text-primary"
                         : colIndex === 1
-                          ? "bg-[#faf6f0] text-[rgba(42,31,20,0.72)]"
-                          : "bg-[#faf6f0] text-[rgba(42,31,20,0.62)]"
+                          ? "bg-card text-muted-foreground"
+                          : "bg-card text-muted-foreground"
                     }`}
                   >
                     {column.rows[rowIndex] ?? ""}
@@ -86,10 +86,12 @@ export default function TradeoffSection() {
           </div>
         </div>
 
-        <p className="mt-6 text-center text-[13px] text-[rgba(42,31,20,0.52)]">
+        <p className="mt-6 text-center text-[13px] text-muted-foreground">
           {t("note")}
         </p>
       </div>
     </section>
   );
 }
+
+

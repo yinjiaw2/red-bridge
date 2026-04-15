@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Minus, Plus } from "lucide-react";
@@ -24,7 +24,7 @@ export default function FAQSection() {
     <section
       id="faq"
       style={{ fontFamily: font }}
-      className="bg-[#2a1f14] px-6 py-24 text-[#f5efe4] md:px-8"
+      className="bg-secondary px-6 py-24 text-white md:px-8"
     >
       <div className="mx-auto max-w-[960px]">
         <div className="mb-12 text-center">
@@ -77,3 +77,5 @@ export default function FAQSection() {
     </section>
   );
 }
+
+

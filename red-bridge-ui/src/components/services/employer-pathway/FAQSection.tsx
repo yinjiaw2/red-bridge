@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Minus, Plus } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -21,19 +21,19 @@ export default function FAQSection() {
     <section
       id="faq"
       style={{ fontFamily: font }}
-      className="bg-[#2a1f14] px-6 py-24 text-[#f5efe4] md:px-8"
+      className="bg-secondary px-6 py-24 text-white md:px-8"
     >
       <div className="mx-auto max-w-[960px]">
         <div className="mb-12 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#c97a45]">
-            <span className="h-px w-6 bg-[#c97a45]" />
+          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+            <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
           <h2 className="text-[34px] font-semibold leading-tight md:text-[44px]">
             {t("title1")}
-            <em className="not-italic text-[#c97a45]">{t("titleHighlight")}</em>
+            <em className="not-italic text-primary">{t("titleHighlight")}</em>
           </h2>
-          <p className="mx-auto mt-4 max-w-[720px] text-[15px] leading-7 text-[rgba(245,239,228,0.45)]">
+          <p className="mx-auto mt-4 max-w-[720px] text-[15px] leading-7 text-white/70">
             {t("subtitle")}
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function FAQSection() {
                 </button>
 
                 {isOpen ? (
-                  <div className="border-t border-white/10 px-5 py-4 text-[14px] leading-7 text-[rgba(245,239,228,0.76)]">
+                  <div className="border-t border-white/10 px-5 py-4 text-[14px] leading-7 text-white/80">
                     {item.answer}
                   </div>
                 ) : null}
@@ -68,3 +68,5 @@ export default function FAQSection() {
     </section>
   );
 }
+
+
