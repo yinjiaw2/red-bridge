@@ -44,7 +44,7 @@ export default function HeroSection() {
         <div className="mb-12 flex flex-wrap justify-center gap-4">
           <Link
             href="/booking?src=190"
-            className="rounded-full bg-primary px-8 py-3 font-semibold text-white"
+            className="rounded-full bg-primary px-8 py-3 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
           >
             {t("ctaPrimary")}
           </Link>
@@ -55,7 +55,7 @@ export default function HeroSection() {
                 .getElementById("how-190-differs")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="rounded-full border border-border px-8 py-3 text-foreground"
+            className="rounded-full border border-border px-8 py-3 text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary hover:shadow-md"
           >
             {t("ctaSecondary")} {"->"}
           </button>

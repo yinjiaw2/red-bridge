@@ -51,17 +51,17 @@ export default function PathwaysSection() {
 
         <div className="mb-10 flex flex-wrap justify-center gap-3">
           {panels.map((panel) => (
-            <button
-              key={panel.id}
-              onClick={() => setActiveId(panel.id)}
-              className={`rounded-full border px-5 py-3 text-[13px] font-semibold ${
-                activeId === panel.id
-                  ? "border-transparent bg-primary text-white shadow-sm"
-                  : "border-border bg-card text-muted-foreground"
-              }`}
-            >
-              {panel.label}
-            </button>
+                <button
+                  key={panel.id}
+                  onClick={() => setActiveId(panel.id)}
+                  className={`rounded-full border px-5 py-3 text-[13px] font-semibold transition-all duration-200 ${
+                    activeId === panel.id
+                      ? "border-transparent bg-primary text-white shadow-sm hover:-translate-y-0.5 hover:shadow-md hover:brightness-95"
+                      : "border-border bg-card text-muted-foreground hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary hover:shadow-md"
+                  }`}
+                >
+                  {panel.label}
+                </button>
           ))}
         </div>
 
@@ -118,12 +118,12 @@ export default function PathwaysSection() {
                 {activePanel.note}
               </div>
 
-              <Link
-                href={activePanel.buttonHref}
-                className="mt-7 inline-flex rounded-full bg-primary px-8 py-3 font-semibold text-white"
-              >
-                {activePanel.buttonText}
-              </Link>
+            <Link
+              href={activePanel.buttonHref}
+              className="mt-7 inline-flex rounded-full bg-primary px-8 py-3 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
+            >
+              {activePanel.buttonText}
+            </Link>
             </div>
           </div>
         ) : null}

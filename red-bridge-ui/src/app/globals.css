@@ -14,33 +14,33 @@
   --card-foreground: oklch(0.1763 0.0140 258.3572);
   --popover: oklch(1.0000 0 0);
   --popover-foreground: oklch(0.1763 0.0140 258.3572);
-  --primary: #e61919;
+  --primary: #B11217;
   --primary-foreground: oklch(1.0000 0 0);
   --secondary: oklch(0.3303 0.0753 267.1046);
   --secondary-foreground: oklch(1.0000 0 0);
   --muted: oklch(0.9674 0.0013 286.3752);
   --muted-foreground: oklch(0.5517 0.0138 285.9385);
   --accent: oklch(0.8342 0.0950 7.8239);
-  --accent-foreground: oklch(0.3155 0.1064 18.1157);
+  --accent-foreground: oklch(0.3155 0.1064 18.1157);  
   --destructive: oklch(0.3999 0.1641 29.2339);
   --destructive-foreground: oklch(1.0000 0 0);
   --border: oklch(0.9197 0.0040 286.3202);
   --input: oklch(0.9197 0.0040 286.3202);
-  --ring: #e61919;
+  --ring: #B11217;
   --radius: 0.75rem;
 
   /* Sidebar */
   --sidebar: oklch(1.0000 0 0);
   --sidebar-foreground: oklch(0.3703 0.0119 285.8054);
-  --sidebar-primary: #e61919;
+  --sidebar-primary: #B11217;
   --sidebar-primary-foreground: oklch(1.0000 0 0);
   --sidebar-accent: oklch(0.9674 0.0013 286.3752);
   --sidebar-accent-foreground: oklch(0.1763 0.0140 258.3572);
   --sidebar-border: oklch(0.9674 0.0013 286.3752);
-  --sidebar-ring: #e61919;
+  --sidebar-ring: #B11217;
 
   /* Charts */
-  --chart-1: #e61919;
+  --chart-1: #B11217;
   --chart-2: oklch(0.3303 0.0753 267.1046);
   --chart-3: oklch(0.8342 0.0950 7.8239);
   --chart-4: oklch(0.8948 0.0509 64.2066);
@@ -144,7 +144,7 @@
 
   /* Brand colors — use via bg-brandred, text-naviblue, etc. */
   --color-brandbackground: #f5f1ea;
-  --color-brandred:        #e61919;
+  --color-brandred:        #B11217;
   --color-naviblue:        #172d5d;
   --color-highlight:       #d4a017;
   --color-highlightyellow: #fdc365;

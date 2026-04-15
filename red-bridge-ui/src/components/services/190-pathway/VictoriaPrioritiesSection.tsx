@@ -55,25 +55,28 @@ export default function VictoriaPrioritiesSection() {
         </div>
 
         <p className="mt-6 text-center text-[13px] text-[rgba(42,31,20,0.5)]">
-          {t("sourceText")}{" "}
-          <a
-            href={t("sourceLink1Href")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[12px] font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-white hover:shadow-md"
-          >
-            {t("sourceLink1Text")}
-          </a>{" "}
-          Â·{" "}
-          <a
-            href={t("sourceLink2Href")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[12px] font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-white hover:shadow-md"
-          >
-            {t("sourceLink2Text")}
-          </a>
-        </p>
+  {t("sourceText")}{" "}
+
+  <a
+    href={t("sourceLink1Href")}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline text-primary hover:text-primary/80 transition-colors"
+  >
+    {t("sourceLink1Text")}
+  </a>
+
+  {" & "}
+
+  <a
+    href={t("sourceLink2Href")}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline text-primary hover:text-primary/80 transition-colors"
+  >
+    {t("sourceLink2Text")}
+  </a>
+</p>
       </div>
     </section>
   );

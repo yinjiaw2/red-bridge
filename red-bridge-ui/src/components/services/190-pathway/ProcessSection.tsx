@@ -28,6 +28,8 @@ function getWhoClass(type: Step["type"]) {
   return "text-primary";
 }
 
+
+
 export default function ProcessSection() {
   const t = useTranslations("visa190.process");
   const steps = t.raw("steps") as Step[];

@@ -41,7 +41,7 @@ export default function CTABandSection() {
 
         <Link
           href="/booking?src=190_bottom_cta"
-          className="mt-8 inline-flex rounded-full bg-white px-8 py-3 font-semibold text-foreground"
+          className="mt-8 inline-flex rounded-full bg-white px-8 py-3 font-semibold text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
         >
           {t("button")}
         </Link>
