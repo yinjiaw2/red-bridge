@@ -31,7 +31,7 @@ function getIcon(kind: RequirementItem["kind"]) {
     return <FileText size={16} className="mt-1 shrink-0 text-primary" />;
   }
 
-  return <CheckCircle2 size={16} className="mt-1 shrink-0 text-primary" />;
+  return <CheckCircle2 size={16} className="mt-1 shrink-0 text-[#2d6a4f]" />;
 }
 
 export default function RequirementsSection() {

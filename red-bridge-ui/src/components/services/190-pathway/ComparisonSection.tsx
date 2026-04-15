@@ -69,24 +69,32 @@ export default function ComparisonSection() {
 
               <div className="p-6">
                 <div className="space-y-4">
-                  {card.items.map((item) => (
-                    <div key={item} className="flex gap-3 border-b border-border pb-4 last:border-b-0 last:pb-0">
-                      {index === 0 ? (
-                        item.startsWith("No") || item.startsWith("æ— ") ? (
-                          <MinusCircle size={16} className="mt-1 shrink-0 text-[rgba(42,31,20,0.45)]" />
-                        ) : (
-                          <CheckCircle2 size={16} className="mt-1 shrink-0 text-primary" />
-                        )
-                      ) : item.startsWith("Must") || item.startsWith("èŽ·ç­¾åŽå¿…é¡»") || item.startsWith("Two-step") || item.startsWith("ä¸¤æ­¥æµç¨‹") ? (
-                        <CircleDot size={16} className="mt-1 shrink-0 text-primary" />
-                      ) : (
-                        <CheckCircle2 size={16} className="mt-1 shrink-0 text-primary" />
-                      )}
-                      <p className="text-[14px] leading-7 text-[rgba(42,31,20,0.65)]">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
+                  {card.items.map((item, i) => (
+  <div
+    key={item}
+    className="flex gap-3 border-b border-border pb-4 last:border-b-0 last:pb-0"
+  >
+    {/* 左边卡片 */}
+    {index === 0 ? (
+      i < 2 ? (
+        <MinusCircle size={16} className="mt-1 shrink-0 text-[rgba(42,31,20,0.45)]" />
+      ) : (
+        <CheckCircle2 size={16} className="mt-1 shrink-0 text-[#2d6a4f]" />
+      )
+    ) : (
+      /* 右边卡片 */
+      i === 2 || i === 4 ? (
+        <CircleDot size={16} className="mt-1 shrink-0 text-primary" />
+      ) : (
+        <CheckCircle2 size={16} className="mt-1 shrink-0 text-[#2d6a4f]" />
+      )
+    )}
+
+    <p className="text-[14px] leading-7 text-[rgba(42,31,20,0.65)]">
+      {item}
+    </p>
+  </div>
+))}
                 </div>
               </div>
             </article>

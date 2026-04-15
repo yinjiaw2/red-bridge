@@ -47,7 +47,7 @@ export default function RequirementsSection() {
               <div className="space-y-4">
                 {group.items.map((item) => (
                   <div key={item} className="flex gap-3">
-                    <Check size={16} className="mt-1 shrink-0 text-primary" />
+                    <Check size={16} className="mt-1 shrink-0 text-[#2d6a4f]" />
                     <p className="text-[14px] leading-7 text-[rgba(42,31,20,0.65)]">
                       {item}
                     </p>

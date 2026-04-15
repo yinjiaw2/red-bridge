@@ -60,7 +60,7 @@ export default function Pathway191Section() {
           <div className="space-y-4">
             {requirements.map((item) => (
               <div key={item.title} className="flex gap-3">
-                <CheckCircle2 size={18} className="mt-1 shrink-0 text-primary" />
+                <CheckCircle2 size={18} className="mt-1 shrink-0 text-[#2d6a4f]" />
                 <p className="text-[14px] leading-7 text-[rgba(42,31,20,0.68)]">
                   <strong className="text-foreground">{item.title}</strong>
                   {item.desc}
