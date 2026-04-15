@@ -46,14 +46,6 @@ function getMelbourneTimeLabel(locale: string) {
   return locale.startsWith("zh") ? "墨尔本时间" : "Melbourne time";
 }
 
-function getAtLabel(locale: string) {
-  return locale.startsWith("zh") ? "于" : "at";
-}
-
-function getFallbackName(locale: string) {
-  return locale.startsWith("zh") ? "朋友" : "there";
-}
-
 function formatClockLabel(date: Date, locale: string, timeZone?: string) {
   return new Intl.DateTimeFormat(getDateLocale(locale), {
     weekday: "short",
@@ -414,7 +406,7 @@ export function BookingExperience() {
 
   const selectedSlotLabel =
     selectedDate && activeSelectedTime
-      ? `${formatSelectedDateLabel(selectedDate, locale)} ${getAtLabel(locale)} ${activeSelectedTime} (${getMelbourneTimeLabel(locale)})`
+      ? `${formatSelectedDateLabel(selectedDate, locale)} at ${activeSelectedTime} (${getMelbourneTimeLabel(locale)})`
       : messageT("pendingSelection");
 
   const saveDraft = () => {
@@ -500,7 +492,7 @@ export function BookingExperience() {
           <div className="mx-auto max-w-[780px] rounded-[28px] border border-[var(--border-soft)] bg-[var(--bg-card)] px-7 py-10 text-center shadow-[var(--shadow)] md:px-10">
             <p className="section-eyebrow">{submittedT("eyebrow")}</p>
             <h2 className="mt-3 text-[2.7rem] leading-[0.98] text-[var(--text-main)] md:text-[3.2rem]">
-              {submittedT("title", { name: form.firstName || getFallbackName(locale) })}
+              {submittedT("title", { name: form.firstName || "there" })}
             </h2>
             <p className="mx-auto mt-5 max-w-[620px] text-base leading-8 text-[var(--text-sub)]">
               {submittedT("description", { slotLabel: selectedSlotLabel, email: CONTACT_EMAIL })}
