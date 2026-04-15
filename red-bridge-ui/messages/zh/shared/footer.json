@@ -14,6 +14,14 @@
       { "name": "482/186 雇主担保移民", "href": "/services/employer-pathway" },
       { "name": "紧急签证方案", "href": "/services/emergency" }
     ],
+    "companyTitle": "公司",
+"companyLinks": [
+  { "name": "关于我们", "href": "/about" },
+  { "name": "成功案例", "href": "/success-stories" },
+  { "name": "雇主合作", "href": "/for-employers" },
+  { "name": "常见问题", "href": "/faq" },
+  { "name": "免费咨询", "href": "/contact" }
+],
     "social": {
       "wechat": "微信",
       "tiktok": "TikTok",

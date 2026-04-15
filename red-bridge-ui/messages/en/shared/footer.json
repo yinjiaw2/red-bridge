@@ -14,6 +14,15 @@
       { "name": "482/186 Employer Sponsored Visa", "href": "/services/employer-pathway" },
       { "name": "Emergency Visa Solutions", "href": "/services/emergency" }
     ],
+    "companyTitle": "Company",
+    "companyLinks": [
+  { "name": "About Us", "href": "/about" },
+  { "name": "Success Stories", "href": "/success-stories" },
+  { "name": "For Employers", "href": "/for-employers" },
+  { "name": "FAQ", "href": "/faq" },
+  { "name": "Book a Consultation", "href": "/contact" }
+]
+    ,
     "social": {
       "wechat": "WeChat",
       "tiktok": "TikTok",

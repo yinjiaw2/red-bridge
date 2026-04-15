@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -13,6 +14,11 @@ import {
 import { useTranslations } from "next-intl";
 
 interface ServiceItem {
+  name: string;
+  href: string;
+}
+
+interface FooterLinkItem {
   name: string;
   href: string;
 }
@@ -32,6 +38,7 @@ const socialHrefs: Record<string, string> = {
 export const Footer = () => {
   const t = useTranslations("footer");
   const services = t.raw("services") as ServiceItem[];
+  const companyLinks = t.raw("companyLinks") as FooterLinkItem[];
 
   const socialKeys = ["wechat", "tiktok", "rednote", "instagram"] as const;
 
@@ -51,18 +58,21 @@ export const Footer = () => {
                 className="object-contain"
               />
             </div>
+
             <p className="text-[#D4A017] font-bold tracking-widest text-xs uppercase mb-4">
               {t("tagline")}
             </p>
+
             <p className="text-sm leading-relaxed max-w-md">
               {t("descriptionBefore")}
               <a
                 href="https://www.insightidea.com.au/en"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="text-gray-900 font-medium hover:underline mx-1 inline-flex items-center gap-1"
               >
-                {t("descriptionLink")} <ExternalLink size={12} />
+                {t("descriptionLink")}
+                <ExternalLink size={12} />
               </a>
               {t("descriptionAfter")}
             </p>
@@ -71,11 +81,31 @@ export const Footer = () => {
           {/* Services */}
           <div>
             <h5 className="text-gray-900 font-bold mb-4 flex items-center gap-2">
-              <span className="w-4 h-px bg-[#D4A017]"></span>
+              <span className="w-4 h-px bg-[#D4A017]" />
               {t("servicesTitle")}
             </h5>
             <ul className="space-y-3 text-sm">
               {services.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-gray-900 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h5 className="text-gray-900 font-bold mb-4 flex items-center gap-2">
+              <span className="w-4 h-px bg-[#D4A017]" />
+              {t("companyTitle")}
+            </h5>
+            <ul className="space-y-3 text-sm">
+              {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -99,6 +129,7 @@ export const Footer = () => {
                 const Icon = socialIconMap[key];
                 const href = socialHrefs[key];
                 const label = t(`social.${key}`);
+
                 const inner = (
                   <>
                     <span className="p-2 rounded-lg bg-gray-100 group-hover:bg-[#D4A017]/10 group-hover:text-[#D4A017] transition-all">
@@ -109,12 +140,13 @@ export const Footer = () => {
                     </span>
                   </>
                 );
+
                 return href ? (
                   <a
                     key={key}
                     href={href}
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-gray-900 transition-all group"
                   >
                     {inner}
@@ -122,6 +154,7 @@ export const Footer = () => {
                 ) : (
                   <button
                     key={key}
+                    type="button"
                     className="flex items-center gap-2 hover:text-gray-900 transition-all group"
                   >
                     {inner}
@@ -166,7 +199,7 @@ export const Footer = () => {
               <a
                 href="https://abr.business.gov.au/ABN/View?abn=97693501147"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="hover:text-gray-600 underline underline-offset-4"
               >
                 {t("siddeleyGroup")}
@@ -177,6 +210,7 @@ export const Footer = () => {
               <span className="mx-2 text-gray-300">|</span>
               {t("partner2")}
             </p>
+
             <div className="flex flex-col items-center gap-2">
               <div className="flex items-center gap-2 text-[0.7rem] text-gray-500">
                 <ShieldCheck size={14} className="text-[#D4A017]" />
