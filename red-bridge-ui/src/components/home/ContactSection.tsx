@@ -14,17 +14,19 @@ export const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="bg-[#0e0b07] px-5 py-14 sm:px-[5%] md:py-24"
+      className="relative overflow-hidden bg-secondary px-5 py-14 sm:px-[5%] md:py-24"
     >
-      <div className="max-w-275 mx-auto">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.08),transparent_50%),radial-gradient(circle_at_80%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
+
+      <div className="relative z-10 max-w-275 mx-auto">
         {/* Heading */}
         <div className="mb-10 text-center md:mb-14">
           <div className="flex items-center justify-center gap-3 mb-5">
-            <span className="w-8 h-px bg-[#A20000]" />
-            <span className="text-[0.7rem] font-bold tracking-[0.25em] text-[#A20000] uppercase">
+            <span className="w-8 h-px bg-primary" />
+            <span className="text-[0.7rem] font-bold tracking-[0.25em] text-primary uppercase">
               {t("eyebrow")}
             </span>
-            <span className="w-8 h-px bg-[#A20000]" />
+            <span className="w-8 h-px bg-primary" />
           </div>
           <h2 className="mb-4 font-serif text-[2.15rem] font-bold leading-tight text-white sm:text-4xl md:mb-5 md:text-5xl">
             {t("headingMain")}
@@ -111,7 +113,7 @@ export const ContactSection = () => {
         <div className="flex flex-col items-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#A20000] px-7 py-4 text-sm font-bold text-white transition-all hover:bg-[#8b0000] hover:shadow-[0_0_24px_rgba(162,0,0,0.4)] active:scale-95 sm:w-auto sm:px-10 sm:text-base"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-card px-7 py-4 text-sm font-bold text-secondary shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl hover:brightness-95 active:scale-95 sm:w-auto sm:px-10 sm:text-base"
           >
             <Calendar size={18} aria-hidden="true" />
             {t("ctaMain")}
