@@ -24,9 +24,7 @@ export default function SuccessCasesHero() {
         </div>
 
         {/* Heading */}
-        <h1
-          className="text-center font-bold text-naviblue leading-tight font-serif mb-7"
-        >
+        <h1 className="text-center font-bold text-naviblue leading-tight font-serif mb-7">
           <span className="block text-4xl md:text-5xl lg:text-[3.5rem]">
             {t("headingLine1")}
           </span>
@@ -42,15 +40,13 @@ export default function SuccessCasesHero() {
         </p>
 
         {/* Stats row */}
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="flex items-center gap-4 bg-white rounded-none border border-gray-200 shadow-sm px-8 py-5"
+              className="flex items-center justify-center gap-4 bg-white rounded-none border border-gray-200 shadow-sm px-4 lg:px-6 py-5"
             >
-              <span
-                className="text-3xl font-bold text-brandred"
-              >
+              <span className="text-3xl font-bold text-brandred">
                 {stat.value}
               </span>
               <span className="text-xs font-bold uppercase tracking-wider text-gray-500 leading-snug max-w-32">

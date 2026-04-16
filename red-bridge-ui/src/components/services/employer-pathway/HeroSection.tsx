@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { CalendarCheck, CheckCircle } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
 
@@ -10,6 +10,7 @@ type Stat = { value: string; label: string };
 
 export default function HeroSection() {
   const t = useTranslations("employerPathway.hero");
+  const locale = useLocale();
   const rawTrust = t.raw("trust");
   const rawStats = t.raw("stats");
   const trust = Array.isArray(rawTrust) ? (rawTrust as string[]) : [];
@@ -27,7 +28,7 @@ export default function HeroSection() {
           {t("eyebrow")}
         </div>
 
-        <h1 className="mb-5 text-[clamp(2.4rem,5.5vw,4.2rem)] font-semibold leading-[1.08] text-foreground">
+        <h1 className={`mb-5 text-[clamp(2.4rem,5.5vw,4.2rem)] leading-[1.08] text-foreground ${locale === "zh" ? "font-bold" : "font-semibold"}`}>
           {t("title1")} <span className="text-primary">{t("title2")}</span>
           <br />
           {t("title3")}

@@ -1,11 +1,12 @@
 ﻿"use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { LayersIcon } from "./icons";
 
 export function ServicesHero() {
   const t = useTranslations("servicesHome.hero");
+  const locale = useLocale();
 
   return (
     <section className="border-b border-border bg-[linear-gradient(180deg,var(--card)_0%,var(--background)_100%)] px-6 py-16 md:py-20">
@@ -14,7 +15,7 @@ export function ServicesHero() {
           <LayersIcon className="h-4 w-4" />
           {t("eyebrow")}
         </div>
-        <h1 className="mt-5 font-serif text-[3rem] leading-[0.96] text-foreground md:text-[4.25rem]">
+        <h1 className={`mt-5 font-serif text-[3rem] leading-[0.96] text-foreground md:text-[4.25rem]${locale === "zh" ? " font-bold" : ""}`}>
           {t("title1")}
           <br />
           <span className="text-primary">{t("title2")}</span>

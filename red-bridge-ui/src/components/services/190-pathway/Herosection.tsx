@@ -1,13 +1,14 @@
 ﻿"use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { CheckCircle } from "lucide-react";
 
 const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
 
 export default function HeroSection() {
   const t = useTranslations("visa190.hero");
+  const locale = useLocale();
   const trust = t.raw("trust") as string[];
   const stats = t.raw("stats") as Array<{ value: string; label: string }>;
 
@@ -22,7 +23,7 @@ export default function HeroSection() {
           {t("eyebrow")}
         </div>
 
-        <h1 className="mb-5 text-[clamp(2.4rem,5.5vw,4.2rem)] font-semibold leading-[1.1] text-foreground">
+        <h1 className={`mb-5 text-[clamp(2.4rem,5.5vw,4.2rem)] leading-[1.1] text-foreground ${locale === "zh" ? "font-bold" : "font-semibold"}`}>
           {t("title1")}
           <br />
           <span className="text-primary">{t("title2")}</span>

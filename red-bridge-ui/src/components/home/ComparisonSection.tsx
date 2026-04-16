@@ -1,7 +1,7 @@
 ﻿import React from "react";
 import Link from "next/link";
 import { X, Check, ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Table,
   TableBody,
@@ -15,6 +15,7 @@ import { comparisonMeta, ICON_MAP } from "@/lib/comparisonCategory";
 
 export const ComparisonSection = () => {
   const t = useTranslations("comparison");
+  const locale = useLocale();
 
   return (
     <section
@@ -32,10 +33,14 @@ export const ComparisonSection = () => {
             <span className="flex-1 max-w-16 h-px bg-brandred" />
           </div>
           <h2
-            className="text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-6"
+            className={`text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-6${locale === "zh" ? " font-bold" : ""}`}
           >
-            {t("headingMain")}{" "}
-            <span className="text-brandred">{t("headingHighlight")}</span>
+            {t("headingMain")}
+            <span
+              className={`text-brandred ${locale === "zh" ? " font-extrabold" : ""}`}
+            >
+              {t("headingHighlight")}
+            </span>
           </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
             {t("description")}
@@ -150,9 +155,7 @@ export const ComparisonSection = () => {
           <div className="absolute top-0 left-0 w-1.5 h-full bg-brandred" />
           <div className="flex items-start gap-4">
             <div>
-              <p
-                className="text-xl font-bold text-naviblue"
-              >
+              <p className="text-xl font-bold text-naviblue">
                 {t("cta.heading")}
               </p>
               <p className="text-base text-gray-600 mt-2">
@@ -188,4 +191,3 @@ export const ComparisonSection = () => {
 };
 
 export default ComparisonSection;
-
