@@ -76,7 +76,7 @@ export const SuccessTicker = () => {
         whileHover={{ animationPlayState: "paused" }}
       >
         {tickerData.map((item, index) => (
-          <div key={index} className="flex items-center mx-8 shrink-0">
+          <div key={index} className="flex items-center mx-5 shrink-0 sm:mx-8">
             <div className="flex items-center gap-2">
               <span className="font-bold text-[#7c5a43] text-sm md:text-base">
                 {item.name}

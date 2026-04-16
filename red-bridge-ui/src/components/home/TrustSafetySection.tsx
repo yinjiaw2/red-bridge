@@ -28,15 +28,15 @@ export const TrustSafetySection = () => {
   const items = t.raw("items") as VerifyItem[];
 
   return (
-    <section className="bg-[#172D5D] py-20 px-[5%] overflow-hidden">
-      <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-14">
+    <section className="bg-[#172D5D] px-5 py-14 overflow-hidden sm:px-[5%] md:py-20">
+      <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-9 md:gap-14">
         {/* Left */}
         <div className="flex-1 max-w-lg">
-          <span className="text-[#D4A017] text-xs font-bold tracking-[0.2em] uppercase block mb-5">
+          <span className="text-[#D4A017] text-[11px] sm:text-xs font-bold tracking-[0.18em] sm:tracking-[0.2em] uppercase block mb-4 sm:mb-5">
             {t("eyebrow")}
           </span>
 
-          <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight font-serif mb-6">
+          <h2 className="text-white text-[2.25rem] sm:text-4xl md:text-5xl font-bold leading-[1.05] sm:leading-tight font-serif mb-5 md:mb-6">
             {t("heading")}
             <br />
             <em className="text-[#D4A017] not-italic">
@@ -45,21 +45,21 @@ export const TrustSafetySection = () => {
             {t("headingSuffix")}
           </h2>
 
-          <p className="text-white/60 text-base leading-relaxed mb-8">
+          <p className="text-white/60 text-[15px] sm:text-base leading-relaxed mb-7 sm:mb-8">
             {t("description")}
           </p>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col gap-3 min-[420px]:flex-row min-[420px]:flex-wrap">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg border border-[#D4A017] text-[#D4A017] px-5 py-2.5 text-sm font-semibold hover:bg-[#D4A017]/10 transition-colors"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-[#D4A017] text-[#D4A017] px-4 py-2.5 text-sm font-semibold hover:bg-[#D4A017]/10 transition-colors sm:px-5"
             >
               {t("primaryCta")}
               <ArrowRight size={15} aria-hidden="true" />
             </Link>
             <Link
               href="#why-us"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/30 text-white px-5 py-2.5 text-sm font-semibold hover:bg-white/5 transition-colors"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-white/30 text-white px-4 py-2.5 text-sm font-semibold hover:bg-white/5 transition-colors sm:px-5"
             >
               {t("secondaryCta")}
               <ArrowRight size={15} aria-hidden="true" />
@@ -67,16 +67,16 @@ export const TrustSafetySection = () => {
           </div>
         </div>
 
-        {/* Right â€” verify cards */}
+        {/* Right - verify cards */}
         <div className="flex flex-col gap-3 w-full lg:w-95">
           {items.map((item, index) => {
             const Icon = iconMap[item.iconKey] ?? Mail;
             return (
               <div
                 key={index}
-                className="flex items-start gap-4 p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/8 transition-colors"
+                className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/8 transition-colors sm:gap-4 sm:p-5"
               >
-                <div className="shrink-0 mt-0.5 p-2 rounded-lg bg-[#D4A017]/15">
+                <div className="shrink-0 mt-0.5 rounded-lg bg-[#D4A017]/15 p-2">
                   <Icon
                     size={18}
                     className="text-[#D4A017]"
@@ -84,8 +84,8 @@ export const TrustSafetySection = () => {
                     aria-hidden="true"
                   />
                 </div>
-                <div className="flex flex-col gap-0.5">
-                  <span className="text-white/40 text-[0.65rem] font-bold uppercase tracking-widest">
+                <div className="flex min-w-0 flex-col gap-0.5">
+                  <span className="text-white/40 text-[0.62rem] sm:text-[0.65rem] font-bold uppercase tracking-widest">
                     {item.label}
                   </span>
                   <Link
@@ -98,7 +98,7 @@ export const TrustSafetySection = () => {
                         ? undefined
                         : "noopener noreferrer"
                     }
-                    className="text-white text-sm font-semibold hover:text-[#D4A017] transition-colors"
+                    className="text-white text-[13px] sm:text-sm font-semibold hover:text-[#D4A017] transition-colors break-words"
                   >
                     {item.linkText}
                   </Link>

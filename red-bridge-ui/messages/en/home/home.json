@@ -1,4 +1,4 @@
-﻿{
+{
   "HomePage": {
     "title": "Hello, World!"
   },
@@ -6,18 +6,18 @@
     "eyebrow": "Our Process",
     "headingMain": "Your migration journey",
     "headingHighlight": "4 steps",
-    "description": "A transparent, milestone-driven process â€” you pay at each successful stage, not upfront.",
-    "cta": "Learn more about the process and book a free consultation â†’",
+    "description": "A transparent, milestone-driven process - you pay at each successful stage, not upfront.",
+    "cta": "Learn more about the process and book a free consultation ->",
     "steps": [
       {
         "num": "01",
         "title": "Free Consultation",
-        "description": "We genuinely assess your background, goals, and eligibility. No obligation, no upfront fees. If you don't qualify or it doesn't make sense to proceed, we'll tell you honestly â€” no irresponsible upselling."
+        "description": "We genuinely assess your background, goals, and eligibility. No obligation, no upfront fees. If you don't qualify or it doesn't make sense to proceed, we'll tell you honestly - no irresponsible upselling."
       },
       {
         "num": "02",
         "title": "Pathway Matching",
-        "description": "We identify pathways that can actually work. Before any contract is signed, you'll see employer profiles and a clear fee schedule â€” no vague promises."
+        "description": "We identify pathways that can actually work. Before any contract is signed, you'll see employer profiles and a clear fee schedule - no vague promises."
       },
       {
         "num": "03",
@@ -48,10 +48,10 @@
       {
         "id": "p1",
         "category": "employer",
-        "badge": "â­ Most Popular",
+        "badge": "Most Popular",
         "price": "From AUD 250,000",
         "title": "482 / 186 Employer Sponsored",
-        "description": "The most direct path to PR through a genuine sponsored employer â€” with complete transparency on who the employer is before you commit.",
+        "description": "The most direct path to PR through a genuine sponsored employer - with complete transparency on who the employer is before you commit.",
         "features": [
           "Access to verified employer network",
           "Employer profiles shared before signing",
@@ -66,7 +66,7 @@
         "category": "graduate",
         "price": "From AUD 50,000",
         "title": "Career Launch Program",
-        "description": "For recent graduates who need genuine, paid Australian work experience to qualify for skilled migration â€” not unpaid internships.",
+        "description": "For recent graduates who need genuine, paid Australian work experience to qualify for skilled migration - not unpaid internships.",
         "features": [
           "400+ hours genuine paid project work",
           "CAANZ, ACS, AMI recognised timesheets",
@@ -96,7 +96,7 @@
         "category": "independent",
         "price": "From AUD 50,000",
         "title": "190 Skilled Nominated",
-        "description": "Boost your points through state nomination â€” matched to the right state based on your occupation and profile.",
+        "description": "Boost your points through state nomination - matched to the right state based on your occupation and profile.",
         "features": [
           "State-specific nomination strategies",
           "Target industry & region matching",
@@ -124,7 +124,7 @@
     ],
     "footerPrefix": "Not sure which pathway fits? ",
     "footerLink": "Book a free consultation",
-    "footerSuffix": " â€” we assess your options honestly, including telling you if there isn't a suitable option."
+    "footerSuffix": " - we assess your options honestly, including telling you if there isn't a suitable option."
   },
   "employerNetwork": {
     "eyebrow": "Our Employer Network",
@@ -132,7 +132,7 @@
     "headingHighlight": "real positions",
     "description": "Every employer in our network holds a current, active 482/186 sponsorship licence",
     "verifiedBadge": "All listed employers are verified",
-    "detailDescription": "Our employer partners prefer to keep their recruitment confidential â€” we provide full company profiles, available roles, and current sponsorship approval status during the consultation. No vague promises, no \"mystery\" employers.",
+    "detailDescription": "Our employer partners prefer to keep their recruitment confidential - we provide full company profiles, available roles, and current sponsorship approval status during the consultation. No vague promises, no \"mystery\" employers.",
     "verifiedLabel": "Verified employers",
     "disclaimer": "Employer profiles are provided during the consultation.",
     "cta": "Book a free consultation to find out which employers are hiring",
@@ -152,21 +152,21 @@
     "eyebrow": "Why RedBridge?",
     "heading": "We Know What You're",
     "headingHighlight": "Thinking",
-    "headingSuffix": "â€” Because We've Seen It All.",
-    "description": "This industry has its risks. Fake job listings. Hidden fees. Empty promises. We built RedBridge to be the verifiable opposite â€” transparent, professional, and results-driven.",
+    "headingSuffix": "- Because We've Seen It All.",
+    "description": "This industry has its risks. Fake job listings. Hidden fees. Empty promises. We built RedBridge to be the verifiable opposite - transparent, professional, and results-driven.",
     "primaryCta": "Book a Free Assessment",
     "secondaryCta": "See How We're Different",
     "items": [
       {
         "label": "Licensed Migration Law Partner",
-        "linkText": "Insight Idea â€” Registered Law Firm â†—",
+        "linkText": "Insight Idea - Registered Law Firm",
         "description": "Your pathway is designed and reviewed by qualified professionals.",
         "href": "https://www.insightidea.com.au/en/success",
         "iconKey": "certificate"
       },
       {
         "label": "Australian Registered Company",
-        "linkText": "Verify our ABN on the ABR â†—",
+        "linkText": "Verify our ABN on the ABR",
         "description": "We're a legitimate Australian business you can trust.",
         "href": "https://abr.business.gov.au/ABN/View?abn=88678186091",
         "iconKey": "building"
@@ -295,7 +295,7 @@
         "linkText": "Insight Idea",
         "linkHref": "https://www.insightidea.com.au/en/success",
         "isExternal": true,
-        "suffix": " â€” a registered law firm and MARA-licensed migration practice. RedBridge focuses on career planning and employer matching."
+        "suffix": " - a registered law firm and MARA-licensed migration practice. RedBridge focuses on career planning and employer matching."
       },
       {
         "question": "Which industries and occupations does RedBridge Consulting focus on?",
@@ -316,11 +316,11 @@
     "registeredCompany": "Registered Company",
     "companyName": "RedBridge Consulting Pty Ltd",
     "licensedPartner": "Licensed Immigration Lawyer Partner",
-    "partnerName": "Insight Idea â€” Registered Law Firm",
+    "partnerName": "Insight Idea - Registered Law Firm",
     "headquarters": "Headquarters",
     "hqAddress": "Docklands VIC 3008",
     "established": "Established",
-    "establishedText": "Founded in 2018 Â· Registered in 2024"
+    "establishedText": "Founded in 2018 - Registered in 2024"
   }
 }
 

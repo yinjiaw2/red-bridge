@@ -16,7 +16,7 @@ export default function HeroSection() {
   const locale = useLocale();
 
   return (
-    <section className="relative h-[88vh] min-h-[680px] w-full overflow-hidden bg-white">
+    <section className="relative min-h-[620px] w-full overflow-hidden bg-white sm:h-[88vh] sm:min-h-[680px]">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
@@ -34,17 +34,17 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="relative z-10 flex min-h-[620px] items-center px-5 py-14 sm:h-full sm:min-h-0 sm:px-8 md:px-12 lg:px-16 xl:px-20">
         <div className="max-w-[600px]">
           {/* Badge */}
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#ead6bf] bg-[#fbf4ec] px-5 py-2 text-[12px] font-semibold uppercase tracking-[0.08em] text-[#cc7d3f]">
+          <div className="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-[#ead6bf] bg-[#fbf4ec] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#cc7d3f] sm:mb-5 sm:px-5 sm:text-[12px]">
             <Shield className="h-4 w-4" aria-hidden="true" />
-            {t("badge")}
+            <span className="min-w-0 truncate">{t("badge")}</span>
           </div>
 
           {/* Title */}
           <h1
-            className={`text-[38px] leading-[1.05] text-[#22150f] md:text-[50px] xl:text-[56px]${locale === "zh" ? " font-bold" : ""}`}
+            className={`text-[34px] leading-[1.06] text-[#22150f] sm:text-[38px] md:text-[50px] xl:text-[56px]${locale === "zh" ? " font-bold" : ""}`}
           >
             {t.rich("title", {
               highlight: (chunks) => (
@@ -55,15 +55,15 @@ export default function HeroSection() {
           </h1>
 
           {/* Description */}
-          <p className="mt-5 text-[16px] leading-[1.7] text-[#6e6760] md:text-[17px]">
+          <p className="mt-4 text-[15px] leading-[1.65] text-[#6e6760] sm:mt-5 md:text-[17px]">
             {t("description")}
           </p>
 
           {/* Buttons */}
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row">
             <Link
               href="/contact"
-              className="flex h-[52px] items-center gap-2 rounded-lg bg-[#efb64f] px-6 text-[15px] font-semibold text-[#2a1f19]"
+              className="flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#efb64f] px-5 text-[14px] font-semibold text-[#2a1f19] sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px]"
             >
               {t("primaryButton")}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -71,50 +71,46 @@ export default function HeroSection() {
 
             <Link
               href="/services#find-your-path"
-              className="flex h-[52px] items-center rounded-lg border border-[#d9868f] px-6 text-[15px] font-semibold text-[#b63c46] sm:ml-4"
+              className="flex h-[48px] w-full items-center justify-center rounded-lg border border-[#d9868f] px-5 text-[14px] font-semibold text-[#b63c46] sm:ml-4 sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px]"
             >
               {t("secondaryButton")}
             </Link>
           </div>
 
           {/* Stats */}
-          <div className="mt-8 border-t border-[#ece5de] pt-6">
-            <div className="flex items-center whitespace-nowrap">
-              <div className="flex items-center gap-3 pr-6">
+          <div className="mt-7 border-t border-[#ece5de] pt-5 sm:mt-8 sm:pt-6">
+            <div className="grid grid-cols-1 gap-4 min-[420px]:grid-cols-3 min-[420px]:gap-0 min-[420px]:divide-x min-[420px]:divide-[#e2d9d0]">
+              <div className="flex items-center gap-3 min-[420px]:pr-4">
                 <Users className="h-6 w-6 text-[#b3131b]" aria-hidden="true" />
                 <div>
-                  <div className="text-2xl font-bold">200+</div>
-                  <div className="text-sm text-[#7a736d]">
+                  <div className="text-xl font-bold sm:text-2xl">200+</div>
+                  <div className="text-xs text-[#7a736d] sm:text-sm">
                     {t("stats.placements")}
                   </div>
                 </div>
               </div>
 
-              <div className="h-10 w-px bg-[#e2d9d0]" />
-
-              <div className="flex items-center gap-3 px-6">
+              <div className="flex items-center gap-3 min-[420px]:px-4">
                 <ClipboardCheck
                   className="h-6 w-6 text-[#b3131b]"
                   aria-hidden="true"
                 />
                 <div>
-                  <div className="text-2xl font-bold">300+</div>
-                  <div className="text-sm text-[#7a736d]">
+                  <div className="text-xl font-bold sm:text-2xl">300+</div>
+                  <div className="text-xs text-[#7a736d] sm:text-sm">
                     {t("stats.assessments")}
                   </div>
                 </div>
               </div>
 
-              <div className="h-10 w-px bg-[#e2d9d0]" />
-
-              <div className="flex items-center gap-3 pl-6">
+              <div className="flex items-center gap-3 min-[420px]:pl-4">
                 <HeartHandshake
                   className="h-6 w-6 text-[#b3131b]"
                   aria-hidden="true"
                 />
                 <div>
-                  <div className="text-2xl font-bold">10+</div>
-                  <div className="text-sm text-[#7a736d]">
+                  <div className="text-xl font-bold sm:text-2xl">10+</div>
+                  <div className="text-xs text-[#7a736d] sm:text-sm">
                     {t("stats.employerPartners")}
                   </div>
                 </div>

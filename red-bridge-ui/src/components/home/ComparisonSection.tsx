@@ -20,20 +20,20 @@ export const ComparisonSection = () => {
   return (
     <section
       id="why-us"
-      className="bg-gray-50 py-24 px-[5%] border-b border-gray-200"
+      className="bg-gray-50 border-b border-gray-200 px-5 py-14 sm:px-[5%] md:py-24"
     >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <div className="mb-14 text-center">
-          <div className="flex items-center justify-center gap-4 mb-8">
+        <div className="mb-9 text-center md:mb-14">
+          <div className="flex items-center justify-center gap-3 mb-5 sm:gap-4 md:mb-8">
             <span className="flex-1 max-w-16 h-px bg-brandred" />
-            <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
+            <span className="text-[0.68rem] sm:text-[0.75rem] font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
               {t("eyebrow")}
             </span>
             <span className="flex-1 max-w-16 h-px bg-brandred" />
           </div>
           <h2
-            className={`text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-6${locale === "zh" ? " font-bold" : ""}`}
+            className={`text-[2.15rem] sm:text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-4 md:mb-6${locale === "zh" ? " font-bold" : ""}`}
           >
             {t("headingMain")}
             <span
@@ -42,7 +42,7 @@ export const ComparisonSection = () => {
               {t("headingHighlight")}
             </span>
           </h2>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-gray-600 text-[15px] md:text-lg leading-relaxed max-w-2xl mx-auto">
             {t("description")}
           </p>
         </div>
@@ -52,7 +52,7 @@ export const ComparisonSection = () => {
           <Table>
             <TableHeader className="[&_tr]:border-b-0">
               <TableRow className="hover:bg-transparent border-b border-gray-200 align-top">
-                <TableHead className="py-6 px-6 text-gray-500 font-bold text-xs uppercase tracking-widest w-[22%] whitespace-normal h-auto border-b border-gray-200 bg-gray-100">
+                <TableHead className="py-4 px-3 sm:py-6 sm:px-6 text-gray-500 font-bold text-[10px] sm:text-xs uppercase tracking-widest w-[42%] md:w-[22%] whitespace-normal h-auto border-b border-gray-200 bg-gray-100">
                   {t("col1")}
                 </TableHead>
                 <TableHead className="hidden md:table-cell py-6 px-6 text-gray-600 font-bold text-xs uppercase tracking-widest w-[33%] border-l border-gray-300 bg-gray-200 whitespace-normal h-auto">
@@ -61,7 +61,7 @@ export const ComparisonSection = () => {
                     {t("col2")}
                   </div>
                 </TableHead>
-                <TableHead className="py-6 px-6 text-white font-bold text-xs uppercase tracking-widest w-[45%] border-l border-brandred whitespace-normal h-auto bg-brandred">
+                <TableHead className="py-4 px-3 sm:py-6 sm:px-6 text-white font-bold text-[10px] sm:text-xs uppercase tracking-widest w-[58%] md:w-[45%] border-l border-brandred whitespace-normal h-auto bg-brandred">
                   <div className="flex items-center gap-2">
                     <Check size={16} aria-hidden="true" />
                     {t("col3")}
@@ -76,8 +76,8 @@ export const ComparisonSection = () => {
                   className="border-b border-gray-200 last:border-b-0 hover:bg-gray-50/50 transition-colors align-top"
                 >
                   {/* You Deserve Better */}
-                  <TableCell className="py-6 px-6 text-gray-700 text-sm whitespace-normal bg-white">
-                    <div className="flex gap-3 items-start">
+                  <TableCell className="py-4 px-3 sm:py-6 sm:px-6 text-gray-700 text-sm whitespace-normal bg-white">
+                    <div className="flex gap-2 sm:gap-3 items-start">
                       <span className="mt-0.5 shrink-0 text-gray-400">
                         {ICON_MAP[meta.iconKey]}
                       </span>
@@ -112,8 +112,8 @@ export const ComparisonSection = () => {
                   </TableCell>
 
                   {/* RedBridge */}
-                  <TableCell className="py-6 px-6 text-sm whitespace-normal border-l border-red-100 bg-red-50/30">
-                    <div className="flex gap-3 items-start">
+                  <TableCell className="py-4 px-3 sm:py-6 sm:px-6 text-sm whitespace-normal border-l border-red-100 bg-red-50/30">
+                    <div className="flex gap-2 sm:gap-3 items-start">
                       <span className="mt-0.5 shrink-0 p-1 rounded-none bg-brandred/10">
                         <Check
                           size={14}
@@ -151,14 +151,14 @@ export const ComparisonSection = () => {
         </div>
 
         {/* CTA Card */}
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-8 rounded-none bg-white border border-gray-200 shadow-sm p-8 md:p-10 relative overflow-hidden">
+        <div className="mt-8 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 md:gap-8 rounded-none bg-white border border-gray-200 shadow-sm p-5 sm:p-8 md:p-10 relative overflow-hidden md:mt-12">
           <div className="absolute top-0 left-0 w-1.5 h-full bg-brandred" />
           <div className="flex items-start gap-4">
             <div>
-              <p className="text-xl font-bold text-naviblue">
+              <p className="text-lg sm:text-xl font-bold text-naviblue">
                 {t("cta.heading")}
               </p>
-              <p className="text-base text-gray-600 mt-2">
+              <p className="text-sm sm:text-base text-gray-600 mt-2">
                 {t("cta.subheading")}
               </p>
             </div>

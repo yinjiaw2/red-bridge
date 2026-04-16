@@ -66,21 +66,21 @@ export function VideoSection() {
     <>
       <section
         id="videos"
-        className="w-full bg-background px-[5%] py-14 md:py-16"
+        className="w-full bg-background px-5 py-12 sm:px-[5%] md:py-16"
       >
         <div className="mx-auto max-w-6xl">
-          <div className="rounded-[22px] border border-border bg-card p-6 shadow-md md:p-8">
+          <div className="rounded-[16px] border border-border bg-card p-4 shadow-md sm:rounded-[22px] sm:p-6 md:p-8">
             <div>
               <div>
                 <p className="text-[0.75rem] font-bold uppercase tracking-[0.22em] text-primary">
                   {t("eyebrow")}
                 </p>
                 <h3
-                  className={`mt-2 font-serif text-[2.25rem] leading-[0.98] text-foreground md:text-[2.75rem]${locale === "zh" ? " font-bold" : ""}`}
+                  className={`mt-2 font-serif text-[2rem] leading-[1.02] text-foreground sm:text-[2.25rem] md:text-[2.75rem]${locale === "zh" ? " font-bold" : ""}`}
                 >
                   {t("title")}
                 </h3>
-                <p className="mt-3 max-w-[560px] text-base leading-8 text-muted-foreground">
+                <p className="mt-3 max-w-[560px] text-[15px] leading-7 text-muted-foreground sm:text-base sm:leading-8">
                   {t("description")}
                 </p>
               </div>
@@ -116,7 +116,7 @@ export function VideoSection() {
                     </span>
                   </div>
                   <div className="flex flex-1 flex-col px-5 py-5">
-                    <h4 className="min-h-[3.25rem] text-[1.52rem] leading-none text-foreground">
+                    <h4 className="min-h-0 text-[1.3rem] leading-tight text-foreground sm:min-h-[3.25rem] sm:text-[1.52rem] sm:leading-none">
                       {t(`cards.${card.key}.title`)}
                     </h4>
                     <p className="mt-3 flex-1 text-sm leading-7 text-muted-foreground">
