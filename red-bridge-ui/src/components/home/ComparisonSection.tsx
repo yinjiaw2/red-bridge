@@ -114,7 +114,7 @@ export const ComparisonSection = () => {
                   {/* RedBridge */}
                   <TableCell className="py-4 px-3 sm:py-6 sm:px-6 text-sm whitespace-normal border-l border-red-100 bg-red-50/30">
                     <div className="flex gap-2 sm:gap-3 items-start">
-                      <span className="mt-0.5 shrink-0 p-1 rounded-none bg-brandred/10">
+                      <span className="mt-0.5 shrink-0 p-1 rounded-full bg-brandred/10">
                         <Check
                           size={14}
                           className="text-brandred"

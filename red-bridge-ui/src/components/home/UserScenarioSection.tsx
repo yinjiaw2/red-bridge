@@ -71,7 +71,7 @@ export const UserScenarioSection = () => {
                 onClick={() => handleCardClick(item.filterType)}
                 className="group flex flex-col items-center justify-start rounded-none border border-gray-200 bg-white px-5 py-7 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B5121B]/40 hover:shadow-lg sm:p-8 sm:pb-10 sm:pt-10"
               >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-none bg-[#B5121B]/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#B5121B]/20 sm:mb-8 sm:h-16 sm:w-16">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#B5121B]/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#B5121B]/20 sm:mb-8 sm:h-16 sm:w-16">
                   <Icon className="h-7 w-7 text-[#B5121B] sm:h-8 sm:w-8" strokeWidth={2} />
                 </div>
 

@@ -24,13 +24,13 @@ export default function SuccessCasesHero() {
         </div>
 
         {/* Heading */}
-        <h1 className="text-center font-bold text-naviblue leading-tight font-serif mb-7">
-          <span className="block text-4xl md:text-5xl lg:text-[3.5rem]">
+        <h1 className="text-center font-extrabold text-naviblue leading-tight font-serif mb-7">
+          <span className="block text-4xl font-extrabold md:text-5xl lg:text-[3.5rem]">
             {t("headingLine1")}
           </span>
-          <span className="block text-4xl md:text-5xl lg:text-[3.5rem]">
+          <span className="block text-4xl font-extrabold md:text-5xl lg:text-[3.5rem]">
             {t("headingLine2")}{" "}
-            <span className="text-brandred">{t("headingHighlight")}</span>
+            <span className="font-extrabold text-brandred">{t("headingHighlight")}</span>
           </span>
         </h1>
 
