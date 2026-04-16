@@ -8,14 +8,16 @@ export const RedBridgeIntro = () => {
 
   return (
     <section className="relative min-h-[560px] overflow-hidden border-b border-gray-200 bg-[#f8f6f2]">
-      <Image
-        src="/about-assets/redbridge-sydney-desk.png"
-        alt={t("imageAlt")}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-[62%_center]"
-      />
+      <div className="absolute inset-[-2%] translate-y-[-3%] scale-[0.94]">
+        <Image
+          src="/about-assets/redbridge-sydney-desk.png"
+          alt={t("imageAlt")}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[62%_center]"
+        />
+      </div>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,246,242,0.98)_0%,rgba(248,246,242,0.96)_36%,rgba(248,246,242,0.72)_52%,rgba(248,246,242,0.18)_75%,rgba(248,246,242,0)_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,246,242,0.18)_0%,rgba(248,246,242,0)_42%,rgba(248,246,242,0.16)_100%)]" />
 
