@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
@@ -249,7 +249,7 @@ export default function NavBar() {
               </button>
               <Link
                 href="/contact"
-                className="ml-8 px-4 py-2 rounded-lg text-sm font-medium text-[#1a1a1a] bg-[#FDC365] hover:bg-[#b88a10] hover:shadow-[0_0_12px_rgba(212,160,23,0.4)] transition-all shadow-sm whitespace-nowrap"
+                className="ml-8 px-4 py-2 rounded-full text-sm font-medium text-[#1a1a1a] bg-[#FDC365] hover:bg-[#b88a10] hover:shadow-[0_0_12px_rgba(212,160,23,0.4)] transition-all shadow-sm whitespace-nowrap"
               >
                 {t("cta")}
               </Link>

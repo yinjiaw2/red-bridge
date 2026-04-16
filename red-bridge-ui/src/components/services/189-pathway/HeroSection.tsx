@@ -33,14 +33,14 @@ export default function HeroSection() {
         </div>
 
         <div className="mb-10 flex flex-wrap justify-center gap-4">
-          <Button className="h-14 rounded-none bg-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary-foreground shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95">
+          <Button className="h-14 rounded-full bg-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary-foreground shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95">
             <Calculator size={20} className="mr-2" />
             <span>{t("primary")}</span>
           </Button>
 
           <Button
             variant="outline"
-            className="h-14 rounded-none border-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/5 hover:text-primary hover:shadow-md"
+            className="h-14 rounded-full border-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/5 hover:text-primary hover:shadow-md"
           >
             <span>{t("secondary")}</span>
             <ArrowRight size={20} className="ml-2" />

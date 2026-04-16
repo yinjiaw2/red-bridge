@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
@@ -49,7 +49,7 @@ export default function HeroSection() {
         <div className="mb-10 flex flex-wrap justify-center gap-4">
         <Button
           asChild
-          className="h-14 rounded-none bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
+          className="h-14 rounded-full bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
         >
           <Link href="/contact?src=career_launch_hero_cta">
             {t("primaryCta")}
@@ -62,7 +62,7 @@ export default function HeroSection() {
               .getElementById("overview")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="h-14 rounded-none border-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-brandred transition-all duration-200 hover:-translate-y-0.5 hover:border-brandred/50 hover:bg-brandred/5 hover:text-brandred hover:shadow-md"
+          className="h-14 rounded-full border-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-brandred transition-all duration-200 hover:-translate-y-0.5 hover:border-brandred/50 hover:bg-brandred/5 hover:text-brandred hover:shadow-md"
         >
           {t("secondaryCta")}
         </Button>

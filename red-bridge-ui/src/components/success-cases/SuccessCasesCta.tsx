@@ -23,7 +23,7 @@ export default function SuccessCasesCta() {
 
         <Button
           asChild
-          className="h-14 rounded-none bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-naviblue hover:bg-yellow-400 transition-colors shadow-lg"
+          className="h-14 rounded-full bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-naviblue hover:bg-yellow-400 transition-colors shadow-lg"
         >
           <Link href={t("buttonHref")}>{t("button")}</Link>
         </Button>

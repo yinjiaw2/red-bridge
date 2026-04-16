@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { CalendarCheck, CheckCircle2 } from "lucide-react";
@@ -29,7 +29,7 @@ export default function CTASection() {
         </p>
         <Button
           asChild
-          className="mt-8 h-14 rounded-none bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-naviblue shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-400 hover:shadow-xl"
+          className="mt-8 h-14 rounded-full bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-naviblue shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-400 hover:shadow-xl"
         >
           <Link href="/contact?src=career_launch_bottom_cta">
             {t("button")}

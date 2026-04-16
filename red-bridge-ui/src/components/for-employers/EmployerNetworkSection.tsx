@@ -73,14 +73,14 @@ export default function EmployerNetworkSection() {
                 .getElementById("enquiry")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="h-12 rounded-none bg-brandred px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
+            className="h-12 rounded-full bg-brandred px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
           >
             {t("primaryButton")}
           </Button>
           <Button
             asChild
             variant="outline"
-            className="h-12 rounded-none border border-white/30 bg-transparent px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-white/10 hover:border-white hover:text-white transition-colors"
+            className="h-12 rounded-full border border-white/30 bg-transparent px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-white/10 hover:border-white hover:text-white transition-colors"
           >
             <Link href={t("secondaryHref")}>{t("secondaryButton")}</Link>
           </Button>

@@ -194,14 +194,14 @@
         "filterType": "employer"
       },
       {
-        "title": "我想获得永久居留权",
+        "title": "我想获得永居",
         "description": "我想通过打分制技术移民系统独立申请PR。",
         "linkText": "189 / 190 / 491",
         "href": "/services",
         "filterType": "independent"
       },
       {
-        "title": "我的签证即将到期",
+        "title": "签证即将到期",
         "description": "我时间紧迫，需要关于过桥签证、签证延期或转换签证的紧急指导。",
         "linkText": "紧急签证方案",
         "href": "/contact",

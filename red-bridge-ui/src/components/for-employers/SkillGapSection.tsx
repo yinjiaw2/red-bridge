@@ -64,18 +64,6 @@ export default function SkillsgGapSection() {
             </div>
           ))}
         </div>
-
-        {/* Footer tagline */}
-        <div className="flex flex-col items-center gap-2 pt-8 border-t border-gray-200">
-          <p
-            className="text-naviblue text-lg md:text-xl font-bold text-center"
-          >
-            {t("footerLine1")}
-          </p>
-          <p className="text-gray-600 text-base text-center">
-            {t("footerLine2")}
-          </p>
-        </div>
       </div>
     </section>
   );

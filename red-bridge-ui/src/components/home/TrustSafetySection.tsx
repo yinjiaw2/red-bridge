@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Link from "next/link";
 import {
   Award,
@@ -52,14 +52,14 @@ export const TrustSafetySection = () => {
           <div className="flex flex-col gap-3 min-[420px]:flex-row min-[420px]:flex-wrap">
             <Link
               href="/contact"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-[#D4A017] text-[#D4A017] px-4 py-2.5 text-sm font-semibold hover:bg-[#D4A017]/10 transition-colors sm:px-5"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#D4A017] text-[#D4A017] px-4 py-2.5 text-sm font-semibold hover:bg-[#D4A017]/10 transition-colors sm:px-5"
             >
               {t("primaryCta")}
               <ArrowRight size={15} aria-hidden="true" />
             </Link>
             <Link
               href="#why-us"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-white/30 text-white px-4 py-2.5 text-sm font-semibold hover:bg-white/5 transition-colors sm:px-5"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/30 text-white px-4 py-2.5 text-sm font-semibold hover:bg-white/5 transition-colors sm:px-5"
             >
               {t("secondaryCta")}
               <ArrowRight size={15} aria-hidden="true" />

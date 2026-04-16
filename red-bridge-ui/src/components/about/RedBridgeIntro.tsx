@@ -40,14 +40,14 @@ export const RedBridgeIntro = () => {
           <div className="mt-8 flex flex-col gap-3 min-[460px]:flex-row">
             <Link
               href="/services"
-              className="inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-brandred px-7 text-sm font-bold text-white transition-colors hover:bg-red-800"
+              className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-brandred px-7 text-sm font-bold text-white transition-colors hover:bg-red-800"
             >
               {t("primaryCta")}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex min-h-12 items-center justify-center rounded-md border border-slate-400 bg-white/30 px-7 text-sm font-bold text-slate-800 backdrop-blur-[2px] transition-colors hover:bg-white/55"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-400 bg-white/30 px-7 text-sm font-bold text-slate-800 backdrop-blur-[2px] transition-colors hover:bg-white/55"
             >
               {t("secondaryCta")}
             </Link>

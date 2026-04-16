@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import { X, Check, ArrowRight } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
@@ -166,7 +166,7 @@ export const ComparisonSection = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full md:w-auto">
             <Button
               asChild
-              className="w-full sm:w-auto h-12 rounded-none bg-brandred px-8 text-sm font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
+              className="w-full sm:w-auto h-12 rounded-full bg-brandred px-8 text-sm font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
             >
               <Link href="/contact">
                 <span>{t("cta.primaryBtn")}</span>
@@ -176,7 +176,7 @@ export const ComparisonSection = () => {
             <Button
               asChild
               variant="outline"
-              className="w-full sm:w-auto h-12 rounded-none border border-brandred bg-transparent px-8 text-sm font-bold uppercase tracking-widest text-brandred hover:bg-brandred/5 transition-colors"
+              className="w-full sm:w-auto h-12 rounded-full border border-brandred bg-transparent px-8 text-sm font-bold uppercase tracking-widest text-brandred hover:bg-brandred/5 transition-colors"
             >
               <Link href="/services#how-it-works">
                 <span>{t("cta.secondaryBtn")}</span>

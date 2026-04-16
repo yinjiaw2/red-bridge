@@ -73,22 +73,6 @@ export default function EmployerFeesSection() {
             </div>
           ))}
         </div>
-
-        {/* Disclaimer */}
-        <p className="text-gray-400 text-sm leading-relaxed max-w-3xl mb-8">
-          {t("disclaimer")}
-        </p>
-
-        {/* Footer link */}
-        <a
-          href={t("footerLinkHref")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-highlight hover:text-white transition-colors"
-        >
-          {t("footerLinkText")}
-          <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        </a>
       </div>
     </section>
   );

@@ -63,7 +63,7 @@ export default function HeroSection() {
           <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row">
             <Link
               href="/contact"
-              className="flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#efb64f] px-5 text-[14px] font-semibold text-[#2a1f19] sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px]"
+              className="flex h-[48px] w-full items-center justify-center gap-2 rounded-full bg-[#efb64f] px-5 text-[14px] font-semibold text-[#2a1f19] sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px]"
             >
               {t("primaryButton")}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -71,7 +71,7 @@ export default function HeroSection() {
 
             <Link
               href="/services#find-your-path"
-              className="flex h-[48px] w-full items-center justify-center rounded-lg border border-[#d9868f] px-5 text-[14px] font-semibold text-[#b63c46] sm:ml-4 sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px]"
+              className="flex h-[48px] w-full items-center justify-center rounded-full border border-[#d9868f] px-5 text-[14px] font-semibold text-[#b63c46] sm:ml-4 sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px]"
             >
               {t("secondaryButton")}
             </Link>

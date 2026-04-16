@@ -107,7 +107,7 @@ export default function EmployerProcessSection() {
             href={footerLinkHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-12 items-center gap-2 rounded-none bg-brandred px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-brandred px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
           >
             {t("footerLinkText")}
             <ArrowRight className="h-5 w-5" aria-hidden="true" />

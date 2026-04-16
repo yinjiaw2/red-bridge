@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useTranslations } from "next-intl";
 import { ShieldCheck, FileCheck2, CalendarDays } from "lucide-react";
@@ -39,7 +39,7 @@ export default function CtaSection() {
         <div className="mt-9">
           <Button
             asChild
-            className="h-14 rounded-none bg-card px-10 text-[15px] font-bold uppercase tracking-widest text-secondary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:brightness-95"
+            className="h-14 rounded-full bg-card px-10 text-[15px] font-bold uppercase tracking-widest text-secondary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:brightness-95"
           >
             <a href="/contact?src=189_cta">{t("button")}</a>
           </Button>

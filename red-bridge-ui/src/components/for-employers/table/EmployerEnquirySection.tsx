@@ -436,7 +436,7 @@ export default function EmployerEnquirySection() {
               <div className="mt-12 pt-10 border-t border-gray-200 flex flex-col items-center text-center">
                 <Button
                   type="submit"
-                  className="h-14 rounded-none bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
+                  className="h-14 rounded-full bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
                 >
                   {t("submitButton")}
                 </Button>

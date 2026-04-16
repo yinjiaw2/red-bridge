@@ -26,7 +26,7 @@ export default function AboutCtaSection() {
         {/* Button */}
         <Link
           href="/contact"
-          className="mt-4 inline-flex h-12 items-center rounded-none bg-white px-10 text-[15px] font-bold uppercase tracking-widest text-brandred hover:bg-gray-100 transition-colors shadow-md"
+          className="mt-4 inline-flex h-12 items-center rounded-full bg-white px-10 text-[15px] font-bold uppercase tracking-widest text-brandred hover:bg-gray-100 transition-colors shadow-md"
         >
           {t("button")}
         </Link>

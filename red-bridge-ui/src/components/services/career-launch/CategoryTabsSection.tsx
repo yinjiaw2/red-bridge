@@ -61,7 +61,7 @@ const CareerTabsSection = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`rounded-none border px-10 py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
+            className={`rounded-full border px-10 py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
               activeTab === tab.id
                 ? "border-brandred bg-brandred text-white shadow-md hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
                 : "border-gray-300 bg-white text-gray-500 hover:-translate-y-0.5 hover:border-brandred hover:text-brandred hover:shadow-md"
