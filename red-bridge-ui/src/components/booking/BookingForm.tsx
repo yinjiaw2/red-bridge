@@ -332,7 +332,7 @@ export function BookingForm({
       </div>
 
       {stepError ? (
-        <p className="mt-6 rounded-[16px] border border-[rgba(168,32,48,0.18)] bg-[rgba(168,32,48,0.05)] px-4 py-3 text-sm leading-7 text-[var(--accent)]">
+        <p className="mt-6 rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-sm leading-7 text-[var(--accent)]">
           {stepError}
         </p>
       ) : null}

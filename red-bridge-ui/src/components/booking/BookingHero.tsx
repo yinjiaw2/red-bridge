@@ -11,12 +11,16 @@ export function BookingHero() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-[860px] text-center">
           <p className="eyebrow text-primary">{t("eyebrow")}</p>
-          <h1 className={`mt-4 font-serif text-[3rem] leading-[0.95] text-[var(--text-main)] md:text-[4.2rem]${locale === "zh" ? " font-bold" : ""}`}>
+          <h1
+            className={`mt-4 font-serif text-[3rem] leading-[0.95] text-[var(--text-main)] md:text-[4.2rem]${locale === "zh" ? " font-bold" : ""}`}
+          >
             {t("title1")}
             <br />
-            <span className="text-[var(--accent)]">{t("title2")}</span>
+            <span className="text-primary">{t("title2")}</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-[650px] text-lg leading-8 text-[var(--text-sub)]">{t("description")}</p>
+          <p className="mx-auto max-w-[650px] text-lg leading-8 text-[var(--text-sub)]">
+            {t("description")}
+          </p>
         </div>
       </div>
     </section>
