@@ -9,10 +9,11 @@ import {
   ClipboardCheck,
   HeartHandshake,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function HeroSection() {
   const t = useTranslations("homeHero");
+  const locale = useLocale();
 
   return (
     <section className="relative h-[88vh] min-h-[680px] w-full overflow-hidden bg-white">
@@ -43,7 +44,7 @@ export default function HeroSection() {
 
           {/* Title */}
           <h1
-            className="text-[38px] leading-[1.05] text-[#22150f] md:text-[50px] xl:text-[56px]"
+            className={`text-[38px] leading-[1.05] text-[#22150f] md:text-[50px] xl:text-[56px]${locale === "zh" ? " font-bold" : ""}`}
           >
             {t.rich("title", {
               highlight: (chunks) => (
