@@ -48,7 +48,10 @@ export function BookingForm({
       </div>
 
       <div className="mt-5 rounded-[18px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-4 text-sm leading-7 text-[var(--text-sub)]">
-        <span className="font-semibold text-[var(--text-main)]">{t("selectedConsultation")}</span> {selectedSlotLabel}
+        <span className="font-semibold text-[var(--text-main)]">
+          {t("selectedConsultation")}
+        </span>{" "}
+        {selectedSlotLabel}
       </div>
 
       <div className="mt-7 space-y-8">
@@ -97,7 +100,9 @@ export function BookingForm({
               <select
                 required
                 value={form.preferredContact}
-                onChange={(event) => onChange("preferredContact", event.target.value)}
+                onChange={(event) =>
+                  onChange("preferredContact", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
               >
                 <option value="">{t("placeholders.select")}</option>
@@ -113,7 +118,9 @@ export function BookingForm({
               <select
                 required
                 value={form.preferredLanguage}
-                onChange={(event) => onChange("preferredLanguage", event.target.value)}
+                onChange={(event) =>
+                  onChange("preferredLanguage", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
               >
                 <option value="">{t("placeholders.select")}</option>
@@ -166,7 +173,9 @@ export function BookingForm({
               <input
                 required
                 value={form.nationality}
-                onChange={(event) => onChange("nationality", event.target.value)}
+                onChange={(event) =>
+                  onChange("nationality", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
               />
             </label>
@@ -175,7 +184,9 @@ export function BookingForm({
               <input
                 required
                 value={form.countryResidency}
-                onChange={(event) => onChange("countryResidency", event.target.value)}
+                onChange={(event) =>
+                  onChange("countryResidency", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
               />
             </label>
@@ -185,7 +196,9 @@ export function BookingForm({
                 required
                 type="date"
                 value={form.dateOfBirth}
-                onChange={(event) => onChange("dateOfBirth", event.target.value)}
+                onChange={(event) =>
+                  onChange("dateOfBirth", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
               />
             </label>
@@ -193,7 +206,9 @@ export function BookingForm({
               {t("fields.currentVisa")}
               <input
                 value={form.currentVisa}
-                onChange={(event) => onChange("currentVisa", event.target.value)}
+                onChange={(event) =>
+                  onChange("currentVisa", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
                 placeholder={t("placeholders.currentVisa")}
               />
@@ -227,7 +242,9 @@ export function BookingForm({
               <select
                 required
                 value={form.educationLevel}
-                onChange={(event) => onChange("educationLevel", event.target.value)}
+                onChange={(event) =>
+                  onChange("educationLevel", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
               >
                 <option value="">{t("placeholders.select")}</option>
@@ -244,7 +261,9 @@ export function BookingForm({
                 required
                 type="number"
                 value={form.graduationYear}
-                onChange={(event) => onChange("graduationYear", event.target.value)}
+                onChange={(event) =>
+                  onChange("graduationYear", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
                 placeholder={t("placeholders.graduationYear")}
               />
@@ -254,7 +273,9 @@ export function BookingForm({
               <select
                 required
                 value={form.workExperience}
-                onChange={(event) => onChange("workExperience", event.target.value)}
+                onChange={(event) =>
+                  onChange("workExperience", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
               >
                 <option value="">{t("placeholders.select")}</option>
@@ -270,7 +291,9 @@ export function BookingForm({
               <select
                 required
                 value={form.englishTest}
-                onChange={(event) => onChange("englishTest", event.target.value)}
+                onChange={(event) =>
+                  onChange("englishTest", event.target.value)
+                }
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
               >
                 <option value="">{t("placeholders.select")}</option>
@@ -298,22 +321,39 @@ export function BookingForm({
             </label>
 
             <div className="rounded-[22px] border border-[var(--border-soft)] bg-[var(--bg)] px-5 py-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">{t("reviewSummary")}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+                {t("reviewSummary")}
+              </p>
               <div className="mt-4 grid gap-3 text-sm leading-7 text-[var(--text-sub)] md:grid-cols-2">
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">{t("summary.name")}</span> {form.firstName} {form.lastName}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {t("summary.name")}
+                  </span>{" "}
+                  {form.firstName} {form.lastName}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">{t("summary.email")}</span> {form.email}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {t("summary.email")}
+                  </span>{" "}
+                  {form.email}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">{t("summary.mobile")}</span> {form.mobile}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {t("summary.mobile")}
+                  </span>{" "}
+                  {form.mobile}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">{t("summary.pathway")}</span> {form.pathway}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {t("summary.pathway")}
+                  </span>{" "}
+                  {form.pathway}
                 </p>
                 <p className="md:col-span-2">
-                  <span className="font-semibold text-[var(--text-main)]">{t("summary.selectedSlot")}</span> {selectedSlotLabel}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {t("summary.selectedSlot")}
+                  </span>{" "}
+                  {selectedSlotLabel}
                 </p>
               </div>
             </div>
@@ -332,7 +372,7 @@ export function BookingForm({
       </div>
 
       {stepError ? (
-        <p className="mt-6 rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-sm leading-7 text-[var(--accent)]">
+        <p className="mt-6 rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-sm leading-7 text-primary">
           {stepError}
         </p>
       ) : null}
@@ -359,7 +399,7 @@ export function BookingForm({
           <button
             type="button"
             onClick={onNext}
-            className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#A82030_0%,#5C0E17_100%)] px-8 py-3.5 text-sm font-bold text-white shadow-[0_14px_32px_rgba(168,32,48,0.18)]"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-white shadow-[0_14px_32px_rgba(168,32,48,0.18)]"
           >
             {t("buttons.next")}
           </button>
