@@ -64,7 +64,7 @@ export default function HeroSection() {
             }
             className="rounded-full border border-border px-8 py-3 text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary hover:shadow-md"
           >
-            {t("ctaSecondary")} {"->"}
+            {t("ctaSecondary")} 
           </button>
         </div>
 
