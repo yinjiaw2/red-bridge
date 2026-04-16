@@ -2,7 +2,7 @@
   "employerEnquiry": {
     "eyebrow": "Get Started",
     "headingMain": "Submit an",
-    "headingHighlight": "Employer Enquiry.",
+    "headingHighlight": "Employer Enquiry",
     "description": "We review all enquiries within 1 business day. By law, all sponsorship costs must be borne by the employer — they cannot be charged to or recovered from visa holders.",
     "contactTitle": "Company & Contact Information",
     "labelCompanyName": "Company Name",
@@ -15,9 +15,16 @@
     "section1Number": "1",
     "section1Title": "Sponsorship History",
     "labelIsApprovedSponsor": "Is your business currently an approved Standard Business Sponsor?",
-    "optionsIsApprovedSponsor": ["Yes", "No", "Pending approval"],
+    "optionsIsApprovedSponsor": [
+      "Yes",
+      "No",
+      "Pending approval"
+    ],
     "labelHasPreviouslySponsored": "Have you previously sponsored overseas workers?",
-    "optionsYesNo": ["Yes", "No"],
+    "optionsYesNo": [
+      "Yes",
+      "No"
+    ],
     "labelIsAccreditedSponsor": "Are you an Accredited Sponsor?",
     "section2Number": "2",
     "section2Title": "Financial & Operational Eligibility",
@@ -27,16 +34,28 @@
     "section3Number": "3",
     "section3Title": "Role & Position Requirements",
     "labelIsOnCSOL": "Is the proposed occupation on the Core Skills Occupation List (CSOL)?",
-    "optionsYesNoUnsure": ["Yes", "No", "Unsure"],
+    "optionsYesNoUnsure": [
+      "Yes",
+      "No",
+      "Unsure"
+    ],
     "labelWillingToDoLMT": "Are you willing to undertake Labour Market Testing (4-week advertising on 2 platforms)?",
     "labelCanProvidePositionDescription": "Can you provide a detailed position description meeting ANZSCO skill level requirements?",
     "section4Number": "4",
     "section4Title": "Fees & Financial Responsibility",
     "labelWillCoverAllFees": "Will the business cover all sponsorship, nomination, and legal fees? (These costs must not be charged to visa holders.)",
-    "optionsWillCoverAllFees": ["Yes", "No", "Partial / Negotiable"],
+    "optionsWillCoverAllFees": [
+      "Yes",
+      "No",
+      "Partial / Negotiable"
+    ],
     "labelAwareOfSAFLevy": "Are you aware of the SAF (Skilling Australians Fund) levy requirements?",
     "labelWillCoverRelocation": "If required, will you cover relocation costs?",
-    "optionsRelocation": ["Yes", "No", "Negotiable"],
+    "optionsRelocation": [
+      "Yes",
+      "No",
+      "Negotiable"
+    ],
     "section5Number": "5",
     "section5Title": "Compliance & Commitment",
     "labelWillProvideFullTimeContract": "Will you provide a full-time, legally binding ongoing employment contract?",

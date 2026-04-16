@@ -1,4 +1,4 @@
-﻿{
+{
   "employerPathway": {
     "fit": {
       "eyebrow": "Eligibility Check",
@@ -7,7 +7,7 @@
       "title3": "For You?",
       "subtitle": "The 482/186 pathway suits some situations and not others. Here's a direct assessment, no jargon.",
       "yes": {
-        "title": "This pathway suits you if...",
+        "title": "This pathway suits you if",
         "items": [
           "You have at least 1 year of paid, full-time work experience in a skilled occupation",
           "Your occupation is on the MLTSSL or STSOL - ICT and Marketing roles typically qualify",
@@ -17,7 +17,7 @@
         ]
       },
       "no": {
-        "title": "This may not suit you if...",
+        "title": "This may not suit you if",
         "items": [
           "You have less than 1 year of relevant work experience - in that case, our Career Launch Program is the right first step",
           "Your occupation is not currently on an eligible skilled occupation list",
@@ -31,4 +31,3 @@
     }
   }
 }
-

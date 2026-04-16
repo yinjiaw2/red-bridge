@@ -33,8 +33,16 @@
           "description": "For confirmed next steps, timelines, and proposal walkthroughs."
         }
       ],
-      "contactMethods": ["Mobile", "Email", "WeChat", "WhatsApp"],
-      "languages": ["English", "Chinese"],
+      "contactMethods": [
+        "Mobile",
+        "Email",
+        "WeChat",
+        "WhatsApp"
+      ],
+      "languages": [
+        "English",
+        "Chinese"
+      ],
       "sources": [
         "Instagram Search",
         "Instagram Story Ad",
@@ -74,7 +82,11 @@
         "Master's",
         "Doctorate"
       ],
-      "workExperienceBands": ["Less than 1 year", "1-3 years", "3+ years"]
+      "workExperienceBands": [
+        "Less than 1 year",
+        "1-3 years",
+        "3+ years"
+      ]
     },
     "infoPanel": {
       "eyebrow": "Date & Time",
@@ -87,7 +99,15 @@
       },
       "yourLocalTime": "Your local time:",
       "melbourneTime": "Melbourne time:",
-      "days": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "days": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
       "previousMonth": "Previous month",
       "nextMonth": "Next month",
       "availableTimes": "Available Times",
@@ -163,7 +183,7 @@
       },
       "submitted": {
         "eyebrow": "Booking Confirmed",
-        "title": "Thanks, {name}.",
+        "title": "Thanks, {name}",
         "description": "Your consultation request has been prepared for {slotLabel}. Your email app should now open a draft addressed to {email} with all your details filled in.",
         "summary": "Summary",
         "fields": {

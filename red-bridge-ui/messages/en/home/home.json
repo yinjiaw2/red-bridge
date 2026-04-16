@@ -137,22 +137,38 @@
     "disclaimer": "Employer profiles are provided during the consultation.",
     "cta": "Book a free consultation to find out which employers are hiring",
     "categories": [
-      { "title": "Technology & ICT", "count": 12, "iconKey": "monitor" },
-      { "title": "Accounting & Finance", "count": 8, "iconKey": "trendingUp" },
+      {
+        "title": "Technology & ICT",
+        "count": 12,
+        "iconKey": "monitor"
+      },
+      {
+        "title": "Accounting & Finance",
+        "count": 8,
+        "iconKey": "trendingUp"
+      },
       {
         "title": "Marketing & Communications",
         "count": 6,
         "iconKey": "megaphone"
       },
-      { "title": "Engineering", "count": 5, "iconKey": "hardHat" },
-      { "title": "Healthcare", "count": 4, "iconKey": "heartPulse" }
+      {
+        "title": "Engineering",
+        "count": 5,
+        "iconKey": "hardHat"
+      },
+      {
+        "title": "Healthcare",
+        "count": 4,
+        "iconKey": "heartPulse"
+      }
     ]
   },
   "trustSafety": {
     "eyebrow": "Why RedBridge?",
     "heading": "We Know What You're",
     "headingHighlight": "Thinking",
-    "headingSuffix": "- Because We've Seen It All.",
+    "headingSuffix": "- Because We've Seen It All",
     "description": "This industry has its risks. Fake job listings. Hidden fees. Empty promises. We built RedBridge to be the verifiable opposite - transparent, professional, and results-driven.",
     "primaryCta": "Book a Free Assessment",
     "secondaryCta": "See How We're Different",
@@ -323,4 +339,3 @@
     "establishedText": "Founded in 2018 - Registered in 2024"
   }
 }
-

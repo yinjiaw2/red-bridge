@@ -3,8 +3,8 @@
     "eyebrow": "Process Breakdown",
     "headingLine1": "Three Phases:",
     "headingLine2": "From Gap to",
-    "headingHighlight": "Visa Grant.",
-    "description": "482 employer sponsorship can run concurrently across phases — you don't have to wait for one step to fully close before starting the next. Our process is designed to move efficiently without cutting corners.",
+    "headingHighlight": "Visa Grant",
+    "description": "482 sponsorship can run across phases in parallel, so you do not need to wait for one step to fully close before starting the next.",
     "tableHeaders": {
       "phase": "Phase",
       "title": "Title",
@@ -17,23 +17,23 @@
         "teamBadge": "REDBRIDGE + INSIGHT IDEA",
         "title": "Eligibility & Role Assessment",
         "bullets": [
-          "Confirm the role is on the Core Skills Occupation List (CSOL) or applicable list",
-          "Assess Labour Market Testing (LMT) requirements for the position",
-          "Determine sponsorship status — apply for Standard Business Sponsorship if not yet held",
-          "RedBridge matches pre-screened candidates from our verified talent pool"
+          "Confirm the role is on the CSOL or relevant occupation list",
+          "Assess Labour Market Testing requirements",
+          "Check sponsorship status and apply for SBS if needed",
+          "Match pre-screened candidates from our verified talent pool"
         ]
       },
       {
         "number": "02",
-        "teamBadge": "INSIGHT IDEA — LEGAL LODGEMENT",
-        "title": "Sponsorship & Nomination Application",
+        "teamBadge": "INSIGHT IDEA LEGAL",
+        "title": "Sponsorship & Nomination",
         "bullets": [
-          "Lodge Standard Business Sponsorship (SBS) — approval and DOHA registration",
-          "Compile the complete 482 nomination package — no client chasing required",
-          "Document and analyse Labour Market Testing reports (2 periods, 4 months apart)",
-          "Submit nomination (small business ~$1,200/yr · standard business ~$1,800/yr)",
-          "Lodge visa application jointly with the nominated candidate",
-          "Monitor application and respond to any Department requests"
+          "Lodge SBS application and DOHA registration",
+          "Compile the full 482 nomination package",
+          "Review Labour Market Testing reports",
+          "Submit nomination and SAF levy details",
+          "Lodge visa application with the nominated candidate",
+          "Respond to Department requests"
         ]
       },
       {
@@ -41,15 +41,15 @@
         "teamBadge": "REDBRIDGE + INSIGHT IDEA",
         "title": "Visa Grant & Ongoing Compliance",
         "bullets": [
-          "Visa granted — employee commences work under sponsorship conditions",
-          "Insight Idea tracks all visa milestone dates and compliance obligations",
-          "Sponsor notified of any material change obligations within the required 28-day window",
-          "RedBridge monitors placement alignment and flags any role or candidate changes",
-          "Optional pathway planning for 186 ENS transition after qualifying period"
+          "Employee starts work under sponsorship conditions",
+          "Track visa milestones and compliance obligations",
+          "Guide 28-day change notification duties",
+          "Monitor role and candidate alignment",
+          "Plan optional 186 ENS transition"
         ]
       }
     ],
-    "footerLinkText": "482 Visa — Learn More",
+    "footerLinkText": "482 Visa Learn More",
     "footerLinkHref": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482"
   }
 }

@@ -1,4 +1,4 @@
-﻿{
+{
   "employerPathway": {
     "pathways": {
       "eyebrow": "Your Options",
@@ -111,7 +111,7 @@
           "id": "three-plus-years",
           "label": "3+ Years Exp (186 Direct)",
           "badge": "Subclass 186 - Employer Nomination Scheme (Direct Entry)",
-          "title": "Skip the Temporary Stage. Apply Directly for Permanent Residency.",
+          "title": "Skip the Temporary Stage Apply Directly for Permanent Residency",
           "subtitle": "With 3 or more years of relevant experience and a skills assessment, you may qualify to bypass the 482 stage entirely and lodge a 186 Direct Entry application, moving straight to Permanent Resident status if the nomination is approved.",
           "leftTitle": "186 Direct Entry - Key Requirements",
           "leftItems": [
@@ -168,4 +168,3 @@
     }
   }
 }
-
