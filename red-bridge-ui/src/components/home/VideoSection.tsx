@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Play, X } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const videoCards = [
   {
@@ -33,6 +33,7 @@ type VideoCard = (typeof videoCards)[number];
 
 export function VideoSection() {
   const t = useTranslations("homeVideo");
+  const locale = useLocale();
   const [activeVideo, setActiveVideo] = useState<VideoCard | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -63,7 +64,10 @@ export function VideoSection() {
 
   return (
     <>
-      <section id="videos" className="w-full bg-background px-[5%] py-14 md:py-16">
+      <section
+        id="videos"
+        className="w-full bg-background px-[5%] py-14 md:py-16"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="rounded-[22px] border border-border bg-card p-6 shadow-md md:p-8">
             <div>
@@ -71,7 +75,9 @@ export function VideoSection() {
                 <p className="text-[0.75rem] font-bold uppercase tracking-[0.22em] text-primary">
                   {t("eyebrow")}
                 </p>
-                <h3 className="mt-2 font-serif text-[2.25rem] leading-[0.98] text-foreground md:text-[2.75rem]">
+                <h3
+                  className={`mt-2 font-serif text-[2.25rem] leading-[0.98] text-foreground md:text-[2.75rem]${locale === "zh" ? " font-bold" : ""}`}
+                >
                   {t("title")}
                 </h3>
                 <p className="mt-3 max-w-[560px] text-base leading-8 text-muted-foreground">
