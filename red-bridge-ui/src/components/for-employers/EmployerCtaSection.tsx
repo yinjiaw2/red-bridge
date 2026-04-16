@@ -8,10 +8,11 @@ export default function EmployerCtaSection() {
 
   return (
     <section
-      className="w-full py-28 px-[5%]"
-      style={{ background: "#1e160e" }}
+      className="relative w-full overflow-hidden bg-secondary py-28 px-[5%]"
     >
-      <div className="max-w-300 mx-auto flex flex-col items-center text-center gap-6">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.08),transparent_50%),radial-gradient(circle_at_80%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
+
+      <div className="relative mx-auto flex max-w-300 flex-col items-center gap-6 text-center">
         {/* Heading */}
         <h2
           className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight font-serif"

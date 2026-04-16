@@ -137,18 +137,38 @@
     "disclaimer": "雇主资料将于咨询期间提供。",
     "cta": "预约免费咨询了解哪些雇主正在招聘",
     "categories": [
-      { "title": "科技与ICT", "count": 12, "iconKey": "monitor" },
-      { "title": "会计与金融", "count": 8, "iconKey": "trendingUp" },
-      { "title": "市场营销与传播", "count": 6, "iconKey": "megaphone" },
-      { "title": "工程", "count": 5, "iconKey": "hardHat" },
-      { "title": "医疗保健", "count": 4, "iconKey": "heartPulse" }
+      {
+        "title": "科技与ICT",
+        "count": 12,
+        "iconKey": "monitor"
+      },
+      {
+        "title": "会计与金融",
+        "count": 8,
+        "iconKey": "trendingUp"
+      },
+      {
+        "title": "市场营销与传播",
+        "count": 6,
+        "iconKey": "megaphone"
+      },
+      {
+        "title": "工程",
+        "count": 5,
+        "iconKey": "hardHat"
+      },
+      {
+        "title": "医疗保健",
+        "count": 4,
+        "iconKey": "heartPulse"
+      }
     ]
   },
   "trustSafety": {
     "eyebrow": "为什么选择RedBridge？",
     "heading": "我们知道您",
     "headingHighlight": "在想什么",
-    "headingSuffix": "——因为我们见过所有情况。",
+    "headingSuffix": "——因为我们见过所有情况",
     "description": "这个行业存在风险：虚假职位、隐藏费用、空头承诺。我们创立RedBridge，正是为了成为可验证的反面——透明、专业、结果导向。",
     "primaryCta": "预约免费评估",
     "secondaryCta": "了解我们的不同之处",

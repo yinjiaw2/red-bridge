@@ -2,7 +2,7 @@
   "employerEnquiry": {
     "eyebrow": "立即开始",
     "headingMain": "提交",
-    "headingHighlight": "雇主咨询。",
+    "headingHighlight": "雇主咨询",
     "description": "我们在1个工作日内审核所有咨询。根据法律，所有担保费用必须由雇主承担——不得向签证持有人收取或追偿。",
     "contactTitle": "企业与联系信息",
     "labelCompanyName": "企业名称",
@@ -15,9 +15,16 @@
     "section1Number": "1",
     "section1Title": "担保历史",
     "labelIsApprovedSponsor": "您的企业目前是否为已批准的标准商业担保人？",
-    "optionsIsApprovedSponsor": ["是", "否", "审批中"],
+    "optionsIsApprovedSponsor": [
+      "是",
+      "否",
+      "审批中"
+    ],
     "labelHasPreviouslySponsored": "您之前是否担保过海外员工？",
-    "optionsYesNo": ["是", "否"],
+    "optionsYesNo": [
+      "是",
+      "否"
+    ],
     "labelIsAccreditedSponsor": "您是否为认可担保人？",
     "section2Number": "2",
     "section2Title": "财务与运营资格",
@@ -27,16 +34,28 @@
     "section3Number": "3",
     "section3Title": "岗位与职位要求",
     "labelIsOnCSOL": "拟议职业是否在核心技能职业清单（CSOL）上？",
-    "optionsYesNoUnsure": ["是", "否", "不确定"],
+    "optionsYesNoUnsure": [
+      "是",
+      "否",
+      "不确定"
+    ],
     "labelWillingToDoLMT": "您是否愿意进行劳动力市场测试（4周广告，2个平台）？",
     "labelCanProvidePositionDescription": "您能否提供满足ANZSCO技能水平的详细职位描述？",
     "section4Number": "4",
     "section4Title": "费用与财务责任",
     "labelWillCoverAllFees": "企业是否承担所有担保、提名和法律费用？（这些费用不得向签证持有人收取。）",
-    "optionsWillCoverAllFees": ["是", "否", "部分/可协商"],
+    "optionsWillCoverAllFees": [
+      "是",
+      "否",
+      "部分/可协商"
+    ],
     "labelAwareOfSAFLevy": "您是否了解SAF（技能澳洲基金）征收费要求？",
     "labelWillCoverRelocation": "如需要，您是否承担搬迁费用？",
-    "optionsRelocation": ["是", "否", "可协商"],
+    "optionsRelocation": [
+      "是",
+      "否",
+      "可协商"
+    ],
     "section5Number": "5",
     "section5Title": "合规与承诺",
     "labelWillProvideFullTimeContract": "您是否提供全职、具有法律约束力的持续雇佣合同？",
