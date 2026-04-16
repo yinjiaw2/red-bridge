@@ -46,7 +46,7 @@ export default function SuccessCasesWhy() {
               <div className="w-12 h-12 rounded-2xl bg-brandred/10 flex items-center justify-center text-brandred shrink-0">
                 {ICON_MAP[card.iconKey]}
               </div>
-              <h3 className="text-naviblue font-extrabold text-xl font-serif leading-snug">
+              <h3 className="font-sans text-xl font-black leading-snug tracking-tight text-naviblue">
                 {card.title}
               </h3>
               <p className="text-gray-600 text-base leading-relaxed flex-1">

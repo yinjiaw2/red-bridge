@@ -22,15 +22,15 @@ export const ContactSection = () => {
         {/* Heading */}
         <div className="mb-10 text-center md:mb-14">
           <div className="flex items-center justify-center gap-3 mb-5">
-            <span className="w-8 h-px bg-primary" />
-            <span className="text-[0.7rem] font-bold tracking-[0.25em] text-primary uppercase">
+            <span className="w-8 h-px bg-highlight" />
+            <span className="text-[0.7rem] font-bold tracking-[0.25em] text-highlight uppercase">
               {t("eyebrow")}
             </span>
-            <span className="w-8 h-px bg-primary" />
+            <span className="w-8 h-px bg-highlight" />
           </div>
           <h2 className="mb-4 font-serif text-[2.15rem] font-bold leading-tight text-white sm:text-4xl md:mb-5 md:text-5xl">
             {t("headingMain")}
-            <em className="text-[#D4A017] font-serif not-italic ml-2">
+            <em className="text-highlight font-serif not-italic ml-2">
               {t("headingHighlight")}
             </em>
           </h2>
@@ -48,8 +48,8 @@ export const ContactSection = () => {
             rel="noopener noreferrer"
             className="group bg-white/4 border border-white/8 rounded-2xl p-6 text-center hover:bg-white/[0.07] hover:border-white/[0.14] transition-all sm:p-8"
           >
-            <div className="inline-flex p-3 rounded-full bg-[#A20000]/15 mb-5 group-hover:bg-[#A20000]/25 transition-colors">
-              <MapPin size={22} className="text-[#c44040]" aria-hidden="true" />
+            <div className="inline-flex p-3 rounded-full bg-highlight/15 mb-5 group-hover:bg-highlight/25 transition-colors">
+              <MapPin size={22} className="text-highlight" aria-hidden="true" />
             </div>
             <h4 className="text-base font-bold text-white mb-3">
               {t("addressTitle")}
@@ -71,8 +71,8 @@ export const ContactSection = () => {
             href="tel:0399617301"
             className="group bg-white/4 border border-white/8 rounded-2xl p-6 text-center hover:bg-white/[0.07] hover:border-white/[0.14] transition-all sm:p-8"
           >
-            <div className="inline-flex p-3 rounded-full bg-[#A20000]/15 mb-5 group-hover:bg-[#A20000]/25 transition-colors">
-              <PhoneCall size={22} className="text-[#c44040]" aria-hidden="true" />
+            <div className="inline-flex p-3 rounded-full bg-highlight/15 mb-5 group-hover:bg-highlight/25 transition-colors">
+              <PhoneCall size={22} className="text-highlight" aria-hidden="true" />
             </div>
             <h4 className="text-base font-bold text-white mb-3">
               {t("phoneTitle")}
@@ -92,8 +92,8 @@ export const ContactSection = () => {
             href="mailto:info@red-bridge.com.au"
             className="group bg-white/4 border border-white/8 rounded-2xl p-6 text-center hover:bg-white/[0.07] hover:border-white/[0.14] transition-all sm:p-8"
           >
-            <div className="inline-flex p-3 rounded-full bg-[#A20000]/15 mb-5 group-hover:bg-[#A20000]/25 transition-colors">
-              <MailOpen size={22} className="text-[#c44040]" aria-hidden="true" />
+            <div className="inline-flex p-3 rounded-full bg-highlight/15 mb-5 group-hover:bg-highlight/25 transition-colors">
+              <MailOpen size={22} className="text-highlight" aria-hidden="true" />
             </div>
             <h4 className="text-base font-bold text-white mb-3">
               {t("emailTitle")}
