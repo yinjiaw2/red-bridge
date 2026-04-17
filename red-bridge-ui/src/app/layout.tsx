@@ -25,7 +25,7 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
-          <FloatingContactButton />
+          <FloatingContactButton locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>

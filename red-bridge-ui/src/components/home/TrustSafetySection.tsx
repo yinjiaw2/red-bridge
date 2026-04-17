@@ -71,9 +71,13 @@ export const TrustSafetySection = () => {
         <div className="flex flex-col gap-3 w-full lg:w-95">
           {items.map((item, index) => {
             const Icon = iconMap[item.iconKey] ?? Mail;
+            const isMailLink = item.href.startsWith("mailto");
             return (
-              <div
+              <a
                 key={index}
+                href={item.href}
+                target={isMailLink ? undefined : "_blank"}
+                rel={isMailLink ? undefined : "noopener noreferrer"}
                 className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/8 transition-colors sm:gap-4 sm:p-5"
               >
                 <div className="shrink-0 mt-0.5 rounded-full bg-[#D4A017]/15 p-2">
@@ -88,25 +92,14 @@ export const TrustSafetySection = () => {
                   <span className="text-white/40 text-[0.62rem] sm:text-[0.65rem] font-bold uppercase tracking-widest">
                     {item.label}
                   </span>
-                  <Link
-                    href={item.href}
-                    target={
-                      item.href.startsWith("mailto") ? undefined : "_blank"
-                    }
-                    rel={
-                      item.href.startsWith("mailto")
-                        ? undefined
-                        : "noopener noreferrer"
-                    }
-                    className="text-white text-[13px] sm:text-sm font-semibold hover:text-[#D4A017] transition-colors break-words"
-                  >
+                  <span className="text-white text-[13px] sm:text-sm font-semibold transition-colors break-words">
                     {item.linkText}
-                  </Link>
+                  </span>
                   <span className="text-white/50 text-xs leading-relaxed">
                     {item.description}
                   </span>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
