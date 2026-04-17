@@ -27,9 +27,7 @@ export default function EmployerNetworkSection() {
         </div>
 
         {/* Heading */}
-        <h2
-          className="text-center text-5xl md:text-6xl lg:text-[4rem] font-bold text-white leading-tight font-serif mb-7"
-        >
+        <h2 className="text-center text-5xl md:text-6xl lg:text-[4rem] font-bold text-white leading-tight font-serif mb-7">
           <span className="block">{t("headingLine1")}</span>
           <span className="block">
             {t("headingLine2")}{" "}
@@ -58,7 +56,7 @@ export default function EmployerNetworkSection() {
                 </span>
                 <span className="text-gray-300 text-[15px]">
                   {" "}
-                  — {item.detail}
+                  - {item.detail}
                 </span>
               </div>
             </div>

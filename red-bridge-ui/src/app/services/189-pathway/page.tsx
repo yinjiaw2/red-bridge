@@ -19,7 +19,6 @@ export default function Page() {
       <main className="pt-16">
         <HeroSection />
         <ReviewedBanner />
-        <ContextBand />
         <PointsSection />
         <OccupationRealitySection />
         <DateOfEffectSection />

@@ -1,69 +1,59 @@
 "use client";
 
+import Link from "next/link";
+import { ArrowRight, Calculator } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { CheckCircle, Calculator, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BackgroundHero } from "@/components/shared/BackgroundHero";
 
 export default function HeroSection() {
   const t = useTranslations("visa189HeroSection");
+  const trust = [t("trust1"), t("trust2"), t("trust3"), t("trust4")];
+  const stats = [
+    { value: "65+", label: t("stat1") },
+    { value: "85+", label: t("stat2") },
+    { value: "4x", label: t("stat3") },
+    { value: "300+", label: t("stat4") },
+  ];
 
   return (
-    <section className="relative flex min-h-[80vh] items-center justify-center border-b border-border bg-background px-6 py-28 text-center">
-      <div className="w-full max-w-[820px]">
-        <div className="mb-4 text-lg font-bold uppercase tracking-widest text-primary">
-          {t("eyebrow")}
-        </div>
-
-        <h1 className="mb-6 font-serif text-[clamp(2.4rem,5.5vw,4.2rem)] font-bold leading-tight text-foreground">
-          {t("title1")} <br />
-          <span className="text-primary">{t("title2")}</span>
-        </h1>
-
-        <p className="mx-auto mb-8 max-w-[600px] text-lg leading-relaxed text-muted-foreground">
-          {t("description")}
-        </p>
-
-        <div className="mb-10 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-          {[t("trust1"), t("trust2"), t("trust3"), t("trust4")].map((item) => (
-            <span key={item} className="flex items-center gap-1">
-              <CheckCircle size={14} className="text-primary" />
-              {item}
-            </span>
-          ))}
-        </div>
-
-        <div className="mb-10 flex flex-wrap justify-center gap-4">
-          <Button className="h-14 rounded-full bg-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary-foreground shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95">
-            <Calculator size={20} className="mr-2" />
+    <BackgroundHero
+      eyebrow={t("eyebrow")}
+      eyebrowIcon={<Calculator className="h-4 w-4" aria-hidden="true" />}
+      title={
+        <>
+          {t("title1")}
+          <br />
+          <span className="text-[#b3131b]">{t("title2")}</span>
+        </>
+      }
+      description={t("description")}
+      imageSrc="/home-assets/melbourne-city.jpg"
+      imageAlt={t("eyebrow")}
+      imagePositionClassName="object-[70%_center]"
+      trustItems={trust}
+      stats={stats}
+      actions={
+        <>
+          <Link
+            href="/contact?src=189_hero_cta"
+            className="flex h-[48px] w-full items-center justify-center gap-2 rounded-full bg-[#efb64f] px-5 text-[14px] font-semibold text-[#2a1f19] sm:h-[52px] sm:w-auto sm:px-6 sm:text-[15px]"
+          >
+            <Calculator size={16} />
             <span>{t("primary")}</span>
-          </Button>
-
-          <Button
-            variant="outline"
-            className="h-14 rounded-full border-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/5 hover:text-primary hover:shadow-md"
+          </Link>
+          <button
+            onClick={() =>
+              document
+                .getElementById("process")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="flex h-[48px] w-full items-center justify-center rounded-full border border-[#d9868f] px-5 text-[14px] font-semibold text-[#b63c46] sm:h-[52px] sm:w-auto sm:px-6 sm:text-[15px]"
           >
             <span>{t("secondary")}</span>
-            <ArrowRight size={20} className="ml-2" />
-          </Button>
-        </div>
-
-        <div className="grid grid-cols-2 overflow-hidden rounded-none border border-border bg-card shadow-md md:grid-cols-4">
-          {[
-            { num: "65+", label: t("stat1") },
-            { num: "85+", label: t("stat2") },
-            { num: "4x", label: t("stat3") },
-            { num: "300+", label: t("stat4") },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="border-b border-r border-border p-5 text-center last:border-r-0 md:border-b-0"
-            >
-              <div className="mb-1 text-3xl font-bold text-primary">{item.num}</div>
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">{item.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+            <ArrowRight size={16} className="ml-2" />
+          </button>
+        </>
+      }
+    />
   );
 }

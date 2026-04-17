@@ -1,26 +1,29 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { CircleHelp } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { BackgroundHero } from "@/components/shared/BackgroundHero";
 
 export function FaqHero() {
   const t = useTranslations("faqPage.hero");
-  const locale = useLocale();
 
   return (
-    <section className="relative flex min-h-[40vh] items-center justify-center border-b border-border bg-background px-6 py-14 text-center md:py-16">
-      <div className="w-full max-w-[820px]">
-        <p className="text-lg font-bold uppercase tracking-widest text-primary">
-          {t("eyebrow")}
-        </p>
-        <h1 className={`mt-4 font-serif text-[clamp(2.4rem,5.5vw,4.2rem)] font-bold leading-tight text-foreground${locale === "zh" ? " font-bold" : ""}`}>
+    <BackgroundHero
+      eyebrow={t("eyebrow")}
+      eyebrowIcon={<CircleHelp className="h-4 w-4" aria-hidden="true" />}
+      title={
+        <>
           {t("title1")}
           <br />
-          <span className="text-primary">{t("title2")}</span>
-        </h1>
-        <p className="mx-auto mt-6 max-w-[600px] text-lg leading-relaxed text-muted-foreground">
-          {t("description")}
-        </p>
-      </div>
-    </section>
+          <span className="text-[#b3131b]">{t("title2")}</span>
+        </>
+      }
+      description={t("description")}
+      imageSrc="/home-assets/melbourne-city.jpg"
+      imageAlt={t("eyebrow")}
+      imagePositionClassName="object-[72%_center]"
+      sizeClassName="min-h-[320px] sm:h-[44vh] sm:min-h-[340px]"
+      contentHeightClassName="min-h-[320px] sm:h-full sm:min-h-0"
+    />
   );
 }
