@@ -21,10 +21,10 @@
   { "name": "雇主合作", "href": "/for-employers" },
   { "name": "常见问题", "href": "/faq" },
   { "name": "免费咨询", "href": "/contact" }
-],
+    ],
     "social": {
-      "wechat": "微信",
-      "tiktok": "TikTok",
+      "wechat": "微信公众号",
+      "facebook": "Facebook",
       "rednote": "小红书",
       "instagram": "Instagram"
     },

@@ -66,9 +66,12 @@ export default function HeroSection() {
                 .getElementById("the-tradeoff")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="rounded-full border border-border px-8 py-3 text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-3 text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary hover:shadow-md"
           >
-            {t("ctaSecondary")} {"\u2192"}
+            <span>{t("ctaSecondary")}</span>
+            <span aria-hidden="true" className="text-lg font-bold leading-none">
+              {"\u2192"}
+            </span>
           </button>
         </div>
 
@@ -91,7 +94,5 @@ export default function HeroSection() {
     </section>
   );
 }
-
-
 
 

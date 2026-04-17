@@ -11,11 +11,11 @@ export function ServicesHero() {
   return (
     <section className="border-b border-border bg-[linear-gradient(180deg,var(--card)_0%,var(--background)_100%)] px-6 py-16 md:py-20">
       <div className="mx-auto max-w-[860px] text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-2 text-lg font-bold uppercase tracking-[0.16em] text-primary">
+        <div className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-7 py-3 text-lg font-bold uppercase tracking-[0.16em] text-primary">
           <LayersIcon className="h-4 w-4" />
           {t("eyebrow")}
         </div>
-        <h1 className={`mt-5 font-serif text-[3rem] leading-[0.96] text-foreground md:text-[4.25rem]${locale === "zh" ? " font-bold" : ""}`}>
+        <h1 className={`mt-5 font-serif text-[3rem] leading-[1.08] text-foreground md:text-[4.25rem]${locale === "zh" ? " font-bold" : ""}`}>
           {t("title1")}
           <br />
           <span className="text-primary">{t("title2")}</span>
@@ -41,4 +41,3 @@ export function ServicesHero() {
     </section>
   );
 }
-

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -160,8 +161,8 @@
   --color-highlightyellow: #fdc365;
 
   /* Fonts */
-  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
-  --font-serif: 'Georgia', serif;
+  --font-sans: "Open Sans", "Segoe UI", Arial, sans-serif;
+  --font-serif: "Open Sans", "Segoe UI", Arial, sans-serif;
   --font-mono: "JetBrains Mono", "Consolas", "SFMono-Regular", monospace;
   --font-zh: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Source Han Sans SC", sans-serif;
   --font-app-sans: var(--font-sans);

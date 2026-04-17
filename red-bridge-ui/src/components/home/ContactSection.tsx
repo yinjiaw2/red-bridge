@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 
 export const ContactSection = () => {
   const t = useTranslations("contact");
+  const emailAddress = t("emailLink");
 
   return (
     <section
@@ -89,7 +90,7 @@ export const ContactSection = () => {
 
           {/* Email Us */}
           <a
-            href="mailto:info@red-bridge.com.au"
+            href={`mailto:${emailAddress}`}
             className="group bg-white/4 border border-white/8 rounded-2xl p-6 text-center hover:bg-white/[0.07] hover:border-white/[0.14] transition-all sm:p-8"
           >
             <div className="inline-flex p-3 rounded-full bg-highlight/15 mb-5 group-hover:bg-highlight/25 transition-colors">
@@ -99,7 +100,7 @@ export const ContactSection = () => {
               {t("emailTitle")}
             </h4>
             <p className="text-white font-semibold text-sm mb-2 underline underline-offset-4 decoration-white/20">
-              info@red-bridge.com.au
+              {emailAddress}
             </p>
             <p className="text-white/55 text-sm leading-relaxed">
               {t("emailTime1")}
@@ -125,4 +126,3 @@ export const ContactSection = () => {
 };
 
 export default ContactSection;
-

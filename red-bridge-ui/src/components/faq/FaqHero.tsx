@@ -7,17 +7,17 @@ export function FaqHero() {
   const locale = useLocale();
 
   return (
-    <section className="border-b border-border bg-[linear-gradient(180deg,var(--background)_0%,var(--card)_100%)] px-6 py-16 md:py-20">
-      <div className="mx-auto max-w-[880px] text-center">
-        <p className="text-lg font-bold uppercase tracking-[0.25em] text-primary">
+    <section className="relative flex min-h-[80vh] items-center justify-center border-b border-border bg-background px-6 py-28 text-center">
+      <div className="w-full max-w-[820px]">
+        <p className="text-lg font-bold uppercase tracking-widest text-primary">
           {t("eyebrow")}
         </p>
-        <h1 className={`mt-4 font-serif text-[3rem] leading-[0.95] text-foreground md:text-[4.25rem]${locale === "zh" ? " font-bold" : ""}`}>
+        <h1 className={`mt-4 font-serif text-[clamp(2.4rem,5.5vw,4.2rem)] font-bold leading-tight text-foreground${locale === "zh" ? " font-bold" : ""}`}>
           {t("title1")}
           <br />
           <span className="text-primary">{t("title2")}</span>
         </h1>
-        <p className="mx-auto mt-5 max-w-[700px] text-lg leading-8 text-muted-foreground">
+        <p className="mx-auto mt-6 max-w-[600px] text-lg leading-relaxed text-muted-foreground">
           {t("description")}
         </p>
       </div>

@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import type { SVGProps } from "react";
 import {
   CircleStar,
   BookOpen,
   MessageCircle,
-  Hash,
   ExternalLink,
   ShieldCheck,
   type LucideIcon,
@@ -23,15 +23,35 @@ interface FooterLinkItem {
   href: string;
 }
 
-const socialIconMap: Record<string, LucideIcon> = {
+function FacebookIcon({
+  size = 24,
+  ...props
+}: SVGProps<SVGSVGElement> & { size?: number | string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="currentColor"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M13.5 21v-7.5H16l.5-3h-3V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.5c-.8-.1-1.6-.2-2.4-.2-2.5 0-4.2 1.5-4.2 4.1v2.1H7.5v3h2.6V21h3.4Z" />
+    </svg>
+  );
+}
+
+const socialIconMap: Record<string, LucideIcon | typeof FacebookIcon> = {
   wechat: MessageCircle,
-  tiktok: Hash,
+  facebook: FacebookIcon,
   rednote: BookOpen,
   instagram: CircleStar,
 };
 
 const socialHrefs: Record<string, string> = {
-  rednote: "https://www.xiaohongshu.com/user/profile/6363be4d000000001f017d2c",
+  facebook: "https://www.facebook.com/people/RedBridge-Consulting/61587635078885/",
+  rednote:
+    "https://www.xiaohongshu.com/user/profile/69c209f000000000260005c7?xsec_token=ABT65EPMLmwKVsY516MoVKZF6jFbDQVNlZBwnemdpNyfY%3D&xsec_source=pc_search",
   instagram: "https://www.instagram.com/redbridgeconsulting/",
 };
 
@@ -40,7 +60,7 @@ export const Footer = () => {
   const services = t.raw("services") as ServiceItem[];
   const companyLinks = t.raw("companyLinks") as FooterLinkItem[];
 
-  const socialKeys = ["wechat", "tiktok", "rednote", "instagram"] as const;
+  const socialKeys = ["wechat", "facebook", "rednote", "instagram"] as const;
 
   return (
     <footer className="bg-white text-gray-600 py-10 px-[5%] border-t border-gray-200">
@@ -155,9 +175,21 @@ export const Footer = () => {
                   <button
                     key={key}
                     type="button"
-                    className="flex items-center gap-2 hover:text-gray-900 transition-all group"
+                    className="relative flex items-center gap-2 hover:text-gray-900 transition-all group"
+                    aria-label={label}
                   >
                     {inner}
+                    {key === "wechat" ? (
+                      <span className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 rounded-md border border-gray-200 bg-white p-2 opacity-0 shadow-lg transition-all duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
+                        <Image
+                          src="/wechat-official-account-qr.jpg"
+                          alt={label}
+                          width={160}
+                          height={160}
+                          className="h-40 w-40 max-w-none"
+                        />
+                      </span>
+                    ) : null}
                   </button>
                 );
               })}
@@ -165,30 +197,15 @@ export const Footer = () => {
 
             {/* Legal links */}
             <div className="flex gap-6 text-xs font-medium text-gray-500">
-              <Link
-                href="/privacy"
-                className="hover:text-gray-900 transition-colors"
-              >
+              <span>
                 {t("legal.privacy")}
-              </Link>
-              <Link
-                href="/terms"
-                className="hover:text-gray-900 transition-colors"
-              >
+              </span>
+              <span>
                 {t("legal.terms")}
-              </Link>
-              <Link
-                href="/terms#copyright"
-                className="hover:text-gray-900 transition-colors"
-              >
+              </span>
+              <span>
                 {t("legal.copyright")}
-              </Link>
-              <Link
-                href="/sitemap"
-                className="hover:text-gray-900 transition-colors"
-              >
-                {t("legal.sitemap")}
-              </Link>
+              </span>
             </div>
           </div>
 

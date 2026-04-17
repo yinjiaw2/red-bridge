@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 
@@ -17,67 +17,68 @@ export default function HeroSection() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[72vh] items-center justify-center overflow-hidden bg-white border-b border-gray-200 px-6 py-24 text-center"
+      className="relative flex min-h-[80vh] items-center justify-center border-b border-border bg-background px-6 py-28 text-center"
     >
-      <div className="relative z-10 mx-auto max-w-[860px]">
-        <div className="mb-5 inline-flex items-center rounded-none border border-brandred bg-brandred/10 px-5 py-2 text-lg font-bold uppercase tracking-widest text-brandred">
+      <div className="w-full max-w-[820px]">
+        <div className="mb-4 text-lg font-bold uppercase tracking-widest text-primary">
           {t("eyebrow")}
         </div>
 
-        <h1 className="mb-6 text-6xl font-bold leading-tight font-serif text-naviblue font-serif">
+        <h1 className="mb-6 font-serif text-[clamp(2.4rem,5.5vw,4.2rem)] font-bold leading-tight text-foreground">
           {t("title1")}
           <br />
-          <span className="text-brandred">{t("title2")}</span>
+          <span className="text-primary">{t("title2")}</span>
         </h1>
 
-        <p className="mx-auto mb-6 max-w-[620px] text-lg leading-relaxed text-gray-600">
+        <p className="mx-auto mb-8 max-w-[600px] text-lg leading-relaxed text-muted-foreground">
           {t("subtitle")}
         </p>
 
-        <div className="mb-8 flex flex-wrap justify-center gap-3">
+        <div className="mb-10 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
           {pills.map((pill) => (
             <span
               key={pill}
-              className="inline-flex items-center gap-2 rounded-none border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600"
+              className="flex items-center gap-1"
             >
-              <CheckCircle2 size={16} className="text-green-600" />
+              <CheckCircle size={14} className="text-[#2d6a4f]" />
               {pill}
             </span>
           ))}
         </div>
 
         <div className="mb-10 flex flex-wrap justify-center gap-4">
-        <Button
-          asChild
-          className="h-14 rounded-full bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
-        >
-          <Link href="/contact?src=career_launch_hero_cta">
-            {t("primaryCta")}
+          <Button
+            asChild
+            className="h-14 rounded-full bg-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary-foreground shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
+          >
+            <Link href="/contact?src=career_launch_hero_cta">
+              {t("primaryCta")}
             </Link>
           </Button>
-        <Button
-          variant="outline"
-          onClick={() =>
-            document
-              .getElementById("overview")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-          className="h-14 rounded-full border-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-brandred transition-all duration-200 hover:-translate-y-0.5 hover:border-brandred/50 hover:bg-brandred/5 hover:text-brandred hover:shadow-md"
-        >
-          {t("secondaryCta")}
-        </Button>
+          <Button
+            variant="outline"
+            onClick={() =>
+              document
+                .getElementById("overview")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="h-14 rounded-full border-primary px-10 text-[15px] font-bold uppercase tracking-widest text-primary transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/5 hover:text-primary hover:shadow-md"
+          >
+            <span>{t("secondaryCta")}</span>
+            <ArrowRight size={20} className="ml-2" />
+          </Button>
         </div>
 
-        <div className="grid overflow-hidden rounded-none border border-gray-200 bg-gray-50 shadow-sm md:grid-cols-3">
+        <div className="grid overflow-hidden rounded-none border border-border bg-card shadow-md md:grid-cols-3">
           {stats.map((item) => (
             <div
               key={item.label}
-              className="border-b border-gray-200 p-6 text-center last:border-b-0 md:border-b-0 md:border-r last:md:border-r-0"
+              className="border-b border-r border-border p-5 text-center last:border-r-0 md:border-b-0"
             >
-              <div className="mb-1 text-3xl font-bold text-brandred">
+              <div className="mb-1 text-3xl font-bold text-primary">
                 {item.value}
               </div>
-              <div className="text-xs font-bold uppercase tracking-widest text-gray-500">
+              <div className="text-xs uppercase tracking-wider text-muted-foreground">
                 {item.label}
               </div>
             </div>
@@ -87,4 +88,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
