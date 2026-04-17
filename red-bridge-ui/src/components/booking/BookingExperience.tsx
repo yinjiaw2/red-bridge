@@ -5,7 +5,12 @@ import { useLocale, useTranslations } from "next-intl";
 import type { ConsultationStage, ConsultationTypeOption } from "./booking-data";
 import { BookingForm } from "./BookingForm";
 import { BookingInfoPanel } from "./BookingInfoPanel";
-import type { BookingDraft, BookingFormState, CalendarDay, TimeSlot } from "./types";
+import type {
+  BookingDraft,
+  BookingFormState,
+  CalendarDay,
+  TimeSlot,
+} from "./types";
 
 const STORAGE_KEY = "redbridge_booking_draft";
 const TOTAL_STEPS = 4;
@@ -16,7 +21,7 @@ const initialFormState: BookingFormState = {
   lastName: "",
   email: "",
   mobile: "",
- preferredContact: "",
+  preferredContact: "",
   preferredLanguage: "",
   source: "",
   pathway: "",
@@ -35,7 +40,9 @@ const initialFormState: BookingFormState = {
 };
 
 function getMelbourneNow(now = new Date()) {
-  return new Date(now.toLocaleString("en-US", { timeZone: "Australia/Melbourne" }));
+  return new Date(
+    now.toLocaleString("en-US", { timeZone: "Australia/Melbourne" }),
+  );
 }
 
 function getDateLocale(locale: string) {
@@ -89,12 +96,26 @@ function parseStageFromWindow(): ConsultationStage | null {
   }
 
   const stage = new URLSearchParams(window.location.search).get("stage");
-  return stage === "1" || stage === "2" || stage === "3" || stage === "4" ? stage : null;
+  return stage === "1" || stage === "2" || stage === "3" || stage === "4"
+    ? stage
+    : null;
 }
 
-function buildCalendarDays(monthDate: Date, selectedDate: string | null, melbourneNow: Date): CalendarDay[] {
-  const firstDay = new Date(monthDate.getFullYear(), monthDate.getMonth(), 1).getDay();
-  const daysInMonth = new Date(monthDate.getFullYear(), monthDate.getMonth() + 1, 0).getDate();
+function buildCalendarDays(
+  monthDate: Date,
+  selectedDate: string | null,
+  melbourneNow: Date,
+): CalendarDay[] {
+  const firstDay = new Date(
+    monthDate.getFullYear(),
+    monthDate.getMonth(),
+    1,
+  ).getDay();
+  const daysInMonth = new Date(
+    monthDate.getFullYear(),
+    monthDate.getMonth() + 1,
+    0,
+  ).getDate();
   const todayString = formatDateString(melbourneNow);
   const maxDate = new Date(melbourneNow);
   maxDate.setMonth(maxDate.getMonth() + 1);
@@ -147,7 +168,8 @@ function buildTimeSlots(
   const endTime = weekday === 5 ? 16.5 : 17.5;
   const step = consultation.durationMinutes === 60 ? 1.25 : 0.5;
   const todayString = formatDateString(melbourneNow);
-  const currentHourDecimal = melbourneNow.getHours() + melbourneNow.getMinutes() / 60;
+  const currentHourDecimal =
+    melbourneNow.getHours() + melbourneNow.getMinutes() / 60;
   const isToday = selectedDate === todayString;
   const slots: TimeSlot[] = [];
 
@@ -204,13 +226,24 @@ function getStepError(
   }
 
   if (currentStep === 1) {
-    if (!form.pathway || !form.nationality || !form.countryResidency || !form.dateOfBirth) {
+    if (
+      !form.pathway ||
+      !form.nationality ||
+      !form.countryResidency ||
+      !form.dateOfBirth
+    ) {
       return messages.pathwayDetailsRequired;
     }
   }
 
   if (currentStep === 2) {
-    if (!form.occupation || !form.educationLevel || !form.graduationYear || !form.workExperience || !form.englishTest) {
+    if (
+      !form.occupation ||
+      !form.educationLevel ||
+      !form.graduationYear ||
+      !form.workExperience ||
+      !form.englishTest
+    ) {
       return messages.profileDetailsRequired;
     }
   }
@@ -260,7 +293,9 @@ export function BookingExperience() {
   const messageT = useTranslations("contactPage.experience.messages");
   const submittedT = useTranslations("contactPage.experience.submitted");
   const mailT = useTranslations("contactPage.experience.mail");
-  const consultationTypes = dataT.raw("consultationTypes") as ConsultationTypeOption[];
+  const consultationTypes = dataT.raw(
+    "consultationTypes",
+  ) as ConsultationTypeOption[];
   const validationMessages = {
     selectDateTime: messageT("selectDateTime"),
     contactDetailsRequired: messageT("contactDetailsRequired"),
@@ -274,8 +309,12 @@ export function BookingExperience() {
   const [monthOffset, setMonthOffset] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
-  const [stageFilter, setStageFilter] = useState<ConsultationStage | null>(null);
-  const [selectedConsultationLabel, setSelectedConsultationLabel] = useState(() => consultationTypes[0]?.label ?? "");
+  const [stageFilter, setStageFilter] = useState<ConsultationStage | null>(
+    null,
+  );
+  const [selectedConsultationLabel, setSelectedConsultationLabel] = useState(
+    () => consultationTypes[0]?.label ?? "",
+  );
   const [draftMessage, setDraftMessage] = useState<string | null>(null);
   const [stepError, setStepError] = useState<string | null>(null);
   const [clockTick, setClockTick] = useState(() => Date.now());
@@ -293,21 +332,34 @@ export function BookingExperience() {
     return () => window.clearInterval(timer);
   }, []);
 
-  const melbourneNow = useMemo(() => getMelbourneNow(new Date(clockTick)), [clockTick]);
-  const localTimeLabel = useMemo(() => formatClockLabel(new Date(clockTick), locale), [clockTick, locale]);
+  const melbourneNow = useMemo(
+    () => getMelbourneNow(new Date(clockTick)),
+    [clockTick],
+  );
+  const localTimeLabel = useMemo(
+    () => formatClockLabel(new Date(clockTick), locale),
+    [clockTick, locale],
+  );
   const melbourneTimeLabel = useMemo(
     () => formatClockLabel(new Date(clockTick), locale, "Australia/Melbourne"),
     [clockTick, locale],
   );
 
   const availableConsultationTypes = useMemo(
-    () => (stageFilter ? consultationTypes.filter((type) => type.stage === stageFilter) : consultationTypes),
+    () =>
+      stageFilter
+        ? consultationTypes.filter((type) => type.stage === stageFilter)
+        : consultationTypes,
     [consultationTypes, stageFilter],
   );
 
   const selectedConsultation =
-    availableConsultationTypes.find((type) => type.label === selectedConsultationLabel) ??
-    consultationTypes.find((type) => type.label === selectedConsultationLabel) ??
+    availableConsultationTypes.find(
+      (type) => type.label === selectedConsultationLabel,
+    ) ??
+    consultationTypes.find(
+      (type) => type.label === selectedConsultationLabel,
+    ) ??
     availableConsultationTypes[0] ??
     consultationTypes[0];
 
@@ -330,7 +382,9 @@ export function BookingExperience() {
           setSelectedTime(draft.selectedTime);
         }
         if (typeof draft.currentStep === "number") {
-          setCurrentStep(Math.min(Math.max(draft.currentStep, 0), TOTAL_STEPS - 1));
+          setCurrentStep(
+            Math.min(Math.max(draft.currentStep, 0), TOTAL_STEPS - 1),
+          );
         }
         if (typeof draft.monthOffset === "number") {
           setMonthOffset(Math.min(Math.max(draft.monthOffset, 0), 1));
@@ -357,8 +411,16 @@ export function BookingExperience() {
   }, [draftMessage]);
 
   const monthDate = useMemo(() => {
-    const baseMonth = new Date(melbourneNow.getFullYear(), melbourneNow.getMonth(), 1);
-    return new Date(baseMonth.getFullYear(), baseMonth.getMonth() + monthOffset, 1);
+    const baseMonth = new Date(
+      melbourneNow.getFullYear(),
+      melbourneNow.getMonth(),
+      1,
+    );
+    return new Date(
+      baseMonth.getFullYear(),
+      baseMonth.getMonth() + monthOffset,
+      1,
+    );
   }, [melbourneNow, monthOffset]);
 
   const calendarDays = useMemo(
@@ -366,10 +428,17 @@ export function BookingExperience() {
     [monthDate, selectedDate, melbourneNow],
   );
   const timeSlots = useMemo(
-    () => buildTimeSlots(selectedDate, selectedTime, selectedConsultation, melbourneNow),
+    () =>
+      buildTimeSlots(
+        selectedDate,
+        selectedTime,
+        selectedConsultation,
+        melbourneNow,
+      ),
     [selectedDate, selectedTime, selectedConsultation, melbourneNow],
   );
-  const activeSelectedTime = timeSlots.find((slot) => slot.isSelected)?.label ?? null;
+  const activeSelectedTime =
+    timeSlots.find((slot) => slot.isSelected)?.label ?? null;
 
   const selectedSlotLabel =
     selectedDate && activeSelectedTime
@@ -391,7 +460,10 @@ export function BookingExperience() {
     setDraftMessage(messageT("progressSaved"));
   };
 
-  const handleChange = <K extends keyof BookingFormState>(key: K, value: BookingFormState[K]) => {
+  const handleChange = <K extends keyof BookingFormState>(
+    key: K,
+    value: BookingFormState[K],
+  ) => {
     setForm((current) => ({ ...current, [key]: value }));
     if (stepError) {
       setStepError(null);
@@ -399,7 +471,13 @@ export function BookingExperience() {
   };
 
   const handleNext = () => {
-    const error = getStepError(validationMessages, currentStep, form, selectedDate, activeSelectedTime);
+    const error = getStepError(
+      validationMessages,
+      currentStep,
+      form,
+      selectedDate,
+      activeSelectedTime,
+    );
     if (error) {
       setStepError(error);
       return;
@@ -415,7 +493,13 @@ export function BookingExperience() {
   };
 
   const handleSubmit = async () => {
-    const error = getStepError(validationMessages, currentStep, form, selectedDate, activeSelectedTime);
+    const error = getStepError(
+      validationMessages,
+      currentStep,
+      form,
+      selectedDate,
+      activeSelectedTime,
+    );
     if (error) {
       setStepError(error);
       return;
@@ -445,7 +529,9 @@ export function BookingExperience() {
     setCurrentStep(0);
     setSubmitted(false);
     setStepError(null);
-    setSelectedConsultationLabel(availableConsultationTypes[0]?.label ?? consultationTypes[0]?.label ?? "");
+    setSelectedConsultationLabel(
+      availableConsultationTypes[0]?.label ?? consultationTypes[0]?.label ?? "",
+    );
     localStorage.removeItem(STORAGE_KEY);
   };
 
@@ -463,26 +549,46 @@ export function BookingExperience() {
               {submittedT("title", { name: form.firstName || "there" })}
             </h2>
             <p className="mx-auto mt-5 max-w-[620px] text-base leading-8 text-[var(--text-sub)]">
-              {submittedT("description", { slotLabel: selectedSlotLabel, email: CONTACT_EMAIL })}
+              {submittedT("description", {
+                slotLabel: selectedSlotLabel,
+                email: CONTACT_EMAIL,
+              })}
             </p>
 
             <div className="mt-8 rounded-[22px] border border-[var(--border-soft)] bg-[var(--bg)] px-5 py-5 text-left">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">{submittedT("summary")}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-primary">
+                {submittedT("summary")}
+              </p>
               <div className="mt-4 space-y-2 text-sm leading-7 text-[var(--text-sub)]">
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.name")}</span> {form.firstName} {form.lastName}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {submittedT("fields.name")}
+                  </span>{" "}
+                  {form.firstName} {form.lastName}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.email")}</span> {form.email}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {submittedT("fields.email")}
+                  </span>{" "}
+                  {form.email}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.pathway")}</span> {form.pathway}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {submittedT("fields.pathway")}
+                  </span>{" "}
+                  {form.pathway}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.consultation")}</span> {selectedConsultation.label}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {submittedT("fields.consultation")}
+                  </span>{" "}
+                  {selectedConsultation.label}
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--text-main)]">{submittedT("fields.slot")}</span> {selectedSlotLabel}
+                  <span className="font-semibold text-[var(--text-main)]">
+                    {submittedT("fields.slot")}
+                  </span>{" "}
+                  {selectedSlotLabel}
                 </p>
               </div>
             </div>
@@ -518,7 +624,9 @@ export function BookingExperience() {
             canGoPrev={monthOffset > 0}
             canGoNext={monthOffset < 1}
             onMonthChange={(direction) => {
-              setMonthOffset((current) => Math.min(Math.max(current + direction, 0), 1));
+              setMonthOffset((current) =>
+                Math.min(Math.max(current + direction, 0), 1),
+              );
               setStepError(null);
             }}
             calendarDays={calendarDays}
