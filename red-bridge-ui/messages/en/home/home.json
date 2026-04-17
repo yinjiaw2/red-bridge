@@ -191,7 +191,7 @@
         "label": "Direct Contact",
         "linkText": "info@red-bridge.com.au",
         "description": "Talk to real people who care about your outcome.",
-        "href": "mailto:info@red-bridge.com.au",
+        "href": "https://mail.google.com/mail/?view=cm&fs=1&to=info%40red-bridge.com.au",
         "iconKey": "envelope"
       }
     ]

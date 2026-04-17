@@ -191,7 +191,7 @@
         "label": "直接联系",
         "linkText": "info@red-bridge.com.au",
         "description": "与真正关心您结果的人直接沟通。",
-        "href": "mailto:info@red-bridge.com.au",
+        "href": "https://mail.google.com/mail/?view=cm&fs=1&to=info%40red-bridge.com.au",
         "iconKey": "envelope"
       }
     ]
