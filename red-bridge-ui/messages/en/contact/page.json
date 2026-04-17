@@ -179,6 +179,7 @@
         "pathwayDetailsRequired": "Please complete the pathway and residency details before moving on.",
         "profileDetailsRequired": "Please complete the profile details before moving on.",
         "consentRequired": "Please confirm consent before submitting your booking request.",
+        "submitError": "Something went wrong while submitting your booking. Please try again.",
         "pendingSelection": "Pending selection - choose a weekday date and time."
       },
       "submitted": {

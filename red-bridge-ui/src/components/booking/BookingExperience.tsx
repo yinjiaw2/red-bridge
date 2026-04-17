@@ -222,46 +222,36 @@ function getStepError(
   return null;
 }
 
-function buildMailtoLink(
+const BOOKING_SHEET_URL = process.env.NEXT_PUBLIC_BOOKING_SHEET_URL!;
+
+async function submitBooking(
   form: BookingFormState,
   consultationLabel: string,
   slotLabel: string,
   subjectPrefix: string,
   heading: string,
-  fields: Record<string, string>,
 ) {
-  const subject = `${subjectPrefix} - ${form.firstName} ${form.lastName}`.trim();
-  const body = [
+  const payload = {
+    ...form,
+    consultationLabel,
+    slotLabel,
+    subjectPrefix,
     heading,
-    "",
-    `${fields.name}: ${form.firstName} ${form.lastName}`.trim(),
-    `${fields.email}: ${form.email}`,
-    `${fields.mobile}: ${form.mobile}`,
-    `${fields.preferredContact}: ${form.preferredContact}`,
-    `${fields.preferredLanguage}: ${form.preferredLanguage}`,
-    `${fields.source}: ${form.source}`,
-    "",
-    `${fields.consultationType}: ${consultationLabel}`,
-    `${fields.selectedSlot}: ${slotLabel}`,
-    `${fields.pathwayFocus}: ${form.pathway}`,
-    "",
-    `${fields.nationality}: ${form.nationality}`,
-    `${fields.countryResidency}: ${form.countryResidency}`,
-    `${fields.dateOfBirth}: ${form.dateOfBirth}`,
-    `${fields.currentVisa}: ${form.currentVisa || "-"}`,
-    `${fields.visaExpiry}: ${form.visaExpiry || "-"}`,
-    "",
-    `${fields.occupation}: ${form.occupation}`,
-    `${fields.educationLevel}: ${form.educationLevel}`,
-    `${fields.graduationYear}: ${form.graduationYear}`,
-    `${fields.workExperience}: ${form.workExperience}`,
-    `${fields.englishTest}: ${form.englishTest}`,
-    "",
-    `${fields.notes}:`,
-    form.notes || "-",
-  ].join("\n");
+  };
 
-  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const res = await fetch(BOOKING_SHEET_URL, {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Submission failed: ${res.status}`);
+  }
+
+  const json = await res.json();
+  if (json.result !== "success") {
+    throw new Error(json.error ?? "Unknown error");
+  }
 }
 
 export function BookingExperience() {
@@ -278,29 +268,6 @@ export function BookingExperience() {
     profileDetailsRequired: messageT("profileDetailsRequired"),
     consentRequired: messageT("consentRequired"),
   };
-  const mailFields = {
-    name: mailT("fields.name"),
-    email: mailT("fields.email"),
-    mobile: mailT("fields.mobile"),
-    preferredContact: mailT("fields.preferredContact"),
-    preferredLanguage: mailT("fields.preferredLanguage"),
-    source: mailT("fields.source"),
-    consultationType: mailT("fields.consultationType"),
-    selectedSlot: mailT("fields.selectedSlot"),
-    pathwayFocus: mailT("fields.pathwayFocus"),
-    nationality: mailT("fields.nationality"),
-    countryResidency: mailT("fields.countryResidency"),
-    dateOfBirth: mailT("fields.dateOfBirth"),
-    currentVisa: mailT("fields.currentVisa"),
-    visaExpiry: mailT("fields.visaExpiry"),
-    occupation: mailT("fields.occupation"),
-    educationLevel: mailT("fields.educationLevel"),
-    graduationYear: mailT("fields.graduationYear"),
-    workExperience: mailT("fields.workExperience"),
-    englishTest: mailT("fields.englishTest"),
-    notes: mailT("fields.notes"),
-  };
-
   const [form, setForm] = useState<BookingFormState>(initialFormState);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
@@ -447,26 +414,27 @@ export function BookingExperience() {
     setCurrentStep((step) => Math.max(step - 1, 0));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const error = getStepError(validationMessages, currentStep, form, selectedDate, activeSelectedTime);
     if (error) {
       setStepError(error);
       return;
     }
 
-    const mailtoLink = buildMailtoLink(
-      form,
-      selectedConsultation.label,
-      selectedSlotLabel,
-      mailT("subjectPrefix"),
-      mailT("heading"),
-      mailFields,
-    );
-
-    setSubmitted(true);
-    setStepError(null);
-    localStorage.removeItem(STORAGE_KEY);
-    window.location.assign(mailtoLink);
+    try {
+      await submitBooking(
+        form,
+        selectedConsultation.label,
+        selectedSlotLabel,
+        mailT("subjectPrefix"),
+        mailT("heading"),
+      );
+      setSubmitted(true);
+      setStepError(null);
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      setStepError(messageT("submitError"));
+    }
   };
 
   const resetBooking = () => {

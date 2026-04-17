@@ -179,6 +179,7 @@
         "pathwayDetailsRequired": "请先填写完整的路径和居住信息。",
         "profileDetailsRequired": "请先填写完整的个人背景信息。",
         "consentRequired": "请先确认同意条款，再提交预约申请。",
+        "submitError": "提交预约时出现错误，请重试。",
         "pendingSelection": "尚未选择时段，请先选择工作日日期和时间。"
       },
       "submitted": {
