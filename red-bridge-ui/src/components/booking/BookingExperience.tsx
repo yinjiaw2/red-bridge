@@ -609,15 +609,8 @@ export function BookingExperience() {
   return (
     <section className="w-full bg-[var(--bg)] py-12 md:py-16">
       <div className="home-inner">
-        <div className="grid gap-6 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+        <div className="grid gap-6 lg:grid-cols-[minmax(340px,410px)_minmax(0,1fr)] lg:items-start">
           <BookingInfoPanel
-            availableConsultationTypes={availableConsultationTypes}
-            selectedConsultation={selectedConsultation}
-            onConsultationChange={(label) => {
-              setSelectedConsultationLabel(label);
-              setSelectedTime(null);
-              setStepError(null);
-            }}
             localTimeLabel={localTimeLabel}
             melbourneTimeLabel={melbourneTimeLabel}
             monthLabel={formatMonthLabel(monthDate, locale)}

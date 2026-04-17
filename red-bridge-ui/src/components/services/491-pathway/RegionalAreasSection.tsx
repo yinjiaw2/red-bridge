@@ -28,11 +28,6 @@ export default function RegionalAreasSection() {
             <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
-          <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
-            {t("title1")}
-            <br />
-            <em className="not-italic text-primary">{t("title2")}</em>
-          </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-[15px] leading-7 text-muted-foreground">
             {t("subtitle")}
           </p>
@@ -82,5 +77,4 @@ export default function RegionalAreasSection() {
     </section>
   );
 }
-
 

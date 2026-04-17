@@ -11,7 +11,6 @@ export default function CareerLaunchPage() {
       <NavBar />
       <main className="pt-16">
         <HeroSection />
-        <CareerTabsSection />
         <TimelineSection />
         <CTASection />
       </main>

@@ -4,9 +4,6 @@ import { useTranslations } from "next-intl";
 import type { BookingInfoPanelProps } from "./types";
 
 export function BookingInfoPanel({
-  availableConsultationTypes,
-  selectedConsultation,
-  onConsultationChange,
   localTimeLabel,
   melbourneTimeLabel,
   monthLabel,
@@ -27,7 +24,7 @@ export function BookingInfoPanel({
 
   return (
     <div className="space-y-5 lg:sticky lg:top-28">
-      <section className="rounded-[24px] border border-[var(--border-soft)] bg-[var(--bg-card)] px-6 py-7 shadow-[var(--shadow)]">
+      <section className="rounded-[24px] border border-[var(--border-soft)] bg-[var(--bg-card)] px-5 py-7 shadow-[var(--shadow)] md:px-6">
         <div className="flex items-start justify-between gap-4">
           <div>
             <p className="section-eyebrow">{t("eyebrow")}</p>
@@ -44,55 +41,7 @@ export function BookingInfoPanel({
           </button>
         </div>
 
-        <p className="mt-4 text-base leading-8 text-[var(--text-sub)]">
-          {t("description")}
-        </p>
-
-        <div className="mt-6 grid gap-3">
-          {availableConsultationTypes.map((type) => (
-            <button
-              key={type.label}
-              type="button"
-              onClick={() => onConsultationChange(type.label)}
-              className={[
-                "rounded-[18px] border px-4 py-4 text-left",
-                selectedConsultation.label === type.label
-                  ? "border-transparent bg-primary text-white shadow-[0_12px_24px_rgba(168,32,48,0.18)]"
-                  : "border-[var(--border-soft)] text-[var(--text-main)]",
-              ].join(" ")}
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <p className="text-sm font-semibold ">{type.label}</p>
-                  <p
-                    className={[
-                      "mt-1 text-sm leading-6",
-                      selectedConsultation.label === type.label
-                        ? "text-white/78"
-                        : "text-black",
-                    ].join(" ")}
-                  >
-                    {type.description}
-                  </p>
-                </div>
-                <span
-                  className={[
-                    "whitespace-nowrap rounded-full px-3 py-1 text-[11px] font-bold tracking-[0.06em]",
-                    selectedConsultation.label === type.label
-                      ? "bg-white/14 text-white"
-                      : "bg-gray-100 text-gray-800",
-                  ].join(" ")}
-                >
-                  {type.durationMinutes === 60
-                    ? t("duration.oneHour")
-                    : t("duration.halfHour")}
-                </span>
-              </div>
-            </button>
-          ))}
-        </div>
-
-        <div className="mt-6 rounded-[18px]  bg-gray-100 px-4 py-4 text-sm leading-7 text-[var(--text-sub)]">
+        <div className="mt-6 rounded-[18px] bg-gray-100 px-4 py-4 text-sm leading-7 text-[var(--text-sub)]">
           <p>
             <span className="font-semibold text-[var(--text-main)]">
               {t("yourLocalTime")}
@@ -113,28 +62,28 @@ export function BookingInfoPanel({
               type="button"
               onClick={() => onMonthChange(-1)}
               disabled={!canGoPrev}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-soft)] bg-[var(--bg)] text-[var(--text-main)] disabled:cursor-not-allowed disabled:opacity-35"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-soft)] bg-[var(--bg)] text-[var(--text-main)] disabled:cursor-not-allowed disabled:opacity-35"
               aria-label={t("previousMonth")}
             >
               {"\u2190"}
             </button>
-            <h3 className="text-[1.35rem] leading-tight text-black">
+            <h3 className="text-[1.2rem] leading-tight text-black">
               {monthLabel}
             </h3>
             <button
               type="button"
               onClick={() => onMonthChange(1)}
               disabled={!canGoNext}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-soft)] bg-[var(--bg)] text-[var(--text-main)] disabled:cursor-not-allowed disabled:opacity-35"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-soft)] bg-[var(--bg)] text-[var(--text-main)] disabled:cursor-not-allowed disabled:opacity-35"
               aria-label={t("nextMonth")}
             >
               {"\u2192"}
             </button>
           </div>
 
-          <div className="mt-5 grid grid-cols-7 gap-2 text-center text-xs font-semibold uppercase tracking-[0.12em] text-[var(--text-dim)]">
+          <div className="mx-auto mt-4 grid max-w-[330px] grid-cols-7 gap-1.5 text-center text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--text-dim)]">
             {days.map((day) => (
-              <span key={day} className="py-2">
+              <span key={day} className="py-1.5">
                 {day}
               </span>
             ))}
@@ -152,7 +101,7 @@ export function BookingInfoPanel({
                   disabled={day.disabled}
                   onClick={() => onDateSelect(day.date)}
                   className={[
-                    "aspect-square rounded-[14px] border text-sm font-semibold",
+                    "aspect-square rounded-[10px] border text-[13px] font-semibold",
                     day.isSelected
                       ? "border-transparent bg-primary text-white"
                       : day.disabled

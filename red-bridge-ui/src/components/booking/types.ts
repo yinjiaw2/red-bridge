@@ -1,4 +1,4 @@
-﻿import type { ConsultationStage, ConsultationTypeOption } from "./booking-data";
+﻿import type { ConsultationStage } from "./booking-data";
 
 export type BookingFormState = {
   firstName: string;
@@ -48,9 +48,6 @@ export type TimeSlot = {
 };
 
 export type BookingInfoPanelProps = {
-  availableConsultationTypes: readonly ConsultationTypeOption[];
-  selectedConsultation: ConsultationTypeOption;
-  onConsultationChange: (label: string) => void;
   localTimeLabel: string;
   melbourneTimeLabel: string;
   monthLabel: string;

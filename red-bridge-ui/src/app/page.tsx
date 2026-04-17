@@ -15,12 +15,13 @@ export default function Home() {
       <NavBar />
       <main className="pt-16">
         <HeroSection />
+        <VideoSection />
         <UserScenarioSection />
         <TrustSafetySection />
         <SuccessTicker />
         <ComparisonSection />
         <EmployerNetwork />
-        <VideoSection />
+   
         <ContactSection />
         <Footer />
       </main>
