@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CalendarCheck, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 
@@ -17,10 +17,6 @@ export default function CTASection() {
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.05),transparent_50%),radial-gradient(circle_at_80%_50%,rgba(255,255,255,0.04),transparent_50%)]" />
       <div className="relative z-10 mx-auto max-w-[760px]">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-highlight/40 bg-highlight/10 px-5 py-2 text-lg font-bold uppercase tracking-widest text-highlight">
-          <CalendarCheck size={14} />
-          {t("eyebrow")}
-        </div>
         <h2 className="text-4xl font-bold leading-tight font-serif text-white md:text-5xl font-serif">
           {t("title")}
         </h2>
@@ -47,4 +43,3 @@ export default function CTASection() {
     </section>
   );
 }
-
