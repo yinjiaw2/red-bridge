@@ -132,7 +132,7 @@ export default function PointsSection() {
     <section id="points-table" className="border-b border-border bg-muted px-6 py-24 md:px-8">
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="mb-4 inline-flex items-center gap-3 text-lg font-bold uppercase tracking-widest text-primary">
             <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
@@ -157,7 +157,7 @@ export default function PointsSection() {
             >
               <div className="mb-6 flex items-center gap-4 border-b border-border pb-5">
                 <div
-                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-none ${
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${
                     card.featured ? "bg-primary/10" : "bg-muted"
                   }`}
                 >

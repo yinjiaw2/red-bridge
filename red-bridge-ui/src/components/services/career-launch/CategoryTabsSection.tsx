@@ -40,7 +40,7 @@ const CareerTabsSection = () => {
       <div className="mb-12 text-center">
         <div className="mb-3 flex items-center justify-center gap-2">
           <div className="h-[1px] w-8 bg-brandred" />
-          <div className="text-sm font-bold uppercase tracking-widest text-brandred">
+          <div className="text-lg font-bold uppercase tracking-widest text-brandred">
             {t("eyebrow")}
           </div>
           <div className="h-[1px] w-8 bg-brandred" />

@@ -18,7 +18,7 @@ export default function EmployerCtaSection() {
           className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight font-serif"
         >
           <span className="block">{t("headingLine1")}</span>
-          <span className="block">{t("headingLine2")}</span>
+          <span className="block text-highlight">{t("headingLine2")}</span>
         </h2>
 
         {/* Description */}
@@ -29,7 +29,7 @@ export default function EmployerCtaSection() {
         {/* Button */}
         <Link
           href={t("buttonHref")}
-          className="mt-2 inline-flex h-12 items-center rounded-full bg-white/10 border border-white/25 px-10 text-[15px] font-semibold text-white hover:bg-white/20 transition-colors"
+          className="mt-2 inline-flex h-12 items-center rounded-full bg-highlight px-10 text-[15px] font-bold text-secondary shadow-lg transition-colors hover:bg-yellow-400"
         >
           {t("button")}
         </Link>

@@ -160,9 +160,10 @@
   --color-highlightyellow: #fdc365;
 
   /* Fonts */
-  --font-sans: var(--font-inter), 'Inter', sans-serif;
+  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
   --font-serif: 'Georgia', serif;
-  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
+  --font-mono: "JetBrains Mono", "Consolas", "SFMono-Regular", monospace;
+  --font-zh: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Source Han Sans SC", sans-serif;
   --font-app-sans: var(--font-sans);
 
   /* Radius */
@@ -206,6 +207,22 @@
     @apply font-sans;
   }
 
+  html[lang="zh"] {
+    --font-sans: var(--font-zh);
+    --font-serif: var(--font-zh);
+    --font-app-sans: var(--font-zh);
+    font-family: var(--font-zh);
+  }
+
+  html[lang="zh"] body {
+    font-family: var(--font-zh);
+  }
+
+  html[lang="zh"] h1,
+  html[lang="zh"] h2 {
+    line-height: 1.18 !important;
+  }
+
   h1,
   h2,
   h3,
@@ -233,11 +250,11 @@
    * Usage: <span className="eyebrow text-brandred">Our Services</span>
    */
   .eyebrow {
-    @apply text-[0.75rem] font-bold tracking-widest uppercase whitespace-nowrap;
+    @apply text-lg font-bold tracking-widest uppercase whitespace-nowrap;
   }
 
   .section-eyebrow {
-    @apply text-[0.75rem] font-bold tracking-widest uppercase whitespace-nowrap text-primary;
+    @apply text-lg font-bold tracking-widest uppercase whitespace-nowrap text-primary;
   }
 
   /*

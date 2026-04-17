@@ -35,7 +35,7 @@ export default function EmployerDifferenceSection() {
         {/* Eyebrow */}
         <div className="flex items-center justify-center gap-4 mb-10">
           <span className="flex-1 max-w-16 h-px bg-gray-300" />
-          <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
+          <span className="text-lg font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
             {t("eyebrow")}
           </span>
           <span className="flex-1 max-w-16 h-px bg-gray-300" />
@@ -49,7 +49,7 @@ export default function EmployerDifferenceSection() {
           <span className="text-brandred">{t("headingHighlight")}</span>
         </h2>
 
-        {/* 3×2 card grid */}
+        {/* 3Ã—2 card grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card, i) => (
             <div
@@ -57,7 +57,7 @@ export default function EmployerDifferenceSection() {
               className="bg-white rounded-none border-t-4 border-t-naviblue shadow-md p-8 flex flex-col gap-5"
             >
               {/* Icon */}
-              <div className="w-12 h-12 rounded-none bg-gray-100 flex items-center justify-center text-brandred shrink-0">
+              <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-brandred shrink-0">
                 {ICON_MAP[card.iconKey]}
               </div>
 

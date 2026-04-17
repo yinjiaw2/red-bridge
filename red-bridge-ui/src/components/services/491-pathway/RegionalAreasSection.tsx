@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useTranslations } from "next-intl";
 
@@ -24,7 +24,7 @@ export default function RegionalAreasSection() {
     >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+          <div className="mb-3 inline-flex items-center gap-2 text-lg font-semibold uppercase tracking-[0.22em] text-primary">
             <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>

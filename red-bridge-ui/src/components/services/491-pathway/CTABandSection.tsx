@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { Calendar, Check, Shield } from "lucide-react";
@@ -24,7 +24,7 @@ export default function CTABandSection() {
         <h2 className="text-[34px] font-semibold leading-tight md:text-[48px]">
           {t("title1")}
           <br />
-          <em className="not-italic text-white/70">{t("title2")}</em>
+          <em className="not-italic text-highlight">{t("title2")}</em>
         </h2>
         <p className="mx-auto mt-5 max-w-[700px] text-[15px] leading-7 text-white/80">{t("subtitle")}</p>
 
@@ -33,7 +33,7 @@ export default function CTABandSection() {
             const Icon = icons[index] ?? Check;
             return (
               <span key={item} className="inline-flex items-center gap-2">
-                <Icon size={15} className="text-white/70" />
+                <Icon size={15} className="text-highlight" />
                 {item}
               </span>
             );
@@ -42,7 +42,7 @@ export default function CTABandSection() {
 
         <Link
           href="/contact?src=491_bottom_cta"
-          className="mt-8 inline-flex rounded-full bg-card px-8 py-3 font-semibold text-secondary transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
+          className="mt-8 inline-flex rounded-full bg-highlight px-8 py-3 font-semibold text-secondary transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-400 hover:shadow-lg"
         >
           {t("button")}
         </Link>

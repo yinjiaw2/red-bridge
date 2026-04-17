@@ -33,7 +33,7 @@ export default function StrategySection() {
     <section id="strategy" className="border-b border-border bg-muted px-6 py-24 md:px-8">
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="mb-4 inline-flex items-center gap-3 text-lg font-bold uppercase tracking-widest text-primary">
             <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
@@ -52,7 +52,7 @@ export default function StrategySection() {
               key={index}
               className="group relative overflow-hidden rounded-none border border-border border-t-4 border-t-secondary bg-card p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-none bg-primary/10">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 {card.icon}
               </div>
 

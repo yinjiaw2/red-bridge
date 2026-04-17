@@ -69,7 +69,7 @@ function TextInput({
 function SectionHeading({ number, title }: { number: string; title: string }) {
   return (
     <div className="flex items-center gap-4 pt-10 mb-8 border-t border-gray-200">
-      <div className="w-8 h-8 rounded-none bg-brandred flex items-center justify-center text-white text-sm font-bold shrink-0">
+      <div className="w-8 h-8 rounded-full bg-brandred flex items-center justify-center text-white text-sm font-bold shrink-0">
         {number}
       </div>
       <h3 className="text-naviblue font-bold text-base uppercase tracking-wider">
@@ -112,7 +112,7 @@ export default function EmployerEnquirySection() {
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-10">
           <span className="w-6 h-px bg-brandred" />
-          <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase">
+          <span className="text-lg font-bold tracking-widest text-brandred uppercase">
             {t("eyebrow")}
           </span>
         </div>
@@ -141,7 +141,7 @@ export default function EmployerEnquirySection() {
             </div>
           ) : (
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
-              {/* ── Contact ── */}
+              {/* ------ Contact ------ */}
               <h3 className="text-naviblue font-bold text-base uppercase tracking-wider mb-6">
                 {t("contactTitle")}
               </h3>
@@ -220,7 +220,7 @@ export default function EmployerEnquirySection() {
                 />
               </div>
 
-              {/* ── Section 1 ── */}
+              {/* ------ Section 1 ------ */}
               <SectionHeading
                 number={t("section1Number")}
                 title={t("section1Title")}
@@ -261,7 +261,7 @@ export default function EmployerEnquirySection() {
                 </div>
               </div>
 
-              {/* ── Section 2 ── */}
+              {/* ------ Section 2 ------ */}
               <SectionHeading
                 number={t("section2Number")}
                 title={t("section2Title")}
@@ -303,7 +303,7 @@ export default function EmployerEnquirySection() {
                 />
               </div>
 
-              {/* ── Section 3 ── */}
+              {/* ------ Section 3 ------ */}
               <SectionHeading
                 number={t("section3Number")}
                 title={t("section3Title")}
@@ -347,7 +347,7 @@ export default function EmployerEnquirySection() {
                 </div>
               </div>
 
-              {/* ── Section 4 ── */}
+              {/* ------ Section 4 ------ */}
               <SectionHeading
                 number={t("section4Number")}
                 title={t("section4Title")}
@@ -388,7 +388,7 @@ export default function EmployerEnquirySection() {
                 </div>
               </div>
 
-              {/* ── Section 5 ── */}
+              {/* ------ Section 5 ------ */}
               <SectionHeading
                 number={t("section5Number")}
                 title={t("section5Title")}
@@ -432,7 +432,7 @@ export default function EmployerEnquirySection() {
                 </div>
               </div>
 
-              {/* ── Submit ── */}
+              {/* ------ Submit ------ */}
               <div className="mt-12 pt-10 border-t border-gray-200 flex flex-col items-center text-center">
                 <Button
                   type="submit"

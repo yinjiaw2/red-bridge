@@ -26,7 +26,7 @@ export default function ProcessSection() {
     <section id="process" className="border-b border-border bg-background px-6 py-24 md:px-8">
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="mb-4 inline-flex items-center gap-3 text-lg font-bold uppercase tracking-widest text-primary">
             <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
@@ -46,7 +46,7 @@ export default function ProcessSection() {
             {steps.map((item, index) => (
               <div key={index} className="relative grid grid-cols-[52px_1fr] gap-6">
                 <div
-                  className={`z-10 flex h-12 w-12 items-center justify-center rounded-none text-base font-bold text-white shadow-md ${
+                  className={`z-10 flex h-12 w-12 items-center justify-center rounded-full text-base font-bold text-white shadow-md ${
                     item.type === "rb" ? "bg-primary" : "bg-secondary"
                   }`}
                 >

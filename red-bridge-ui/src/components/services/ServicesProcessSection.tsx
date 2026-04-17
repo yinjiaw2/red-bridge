@@ -14,7 +14,7 @@ export function ServicesProcessSection() {
     <section id="how-it-works" className="bg-card px-6 py-14 md:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-[780px] text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">{t("eyebrow")}</p>
+          <p className="text-lg font-bold uppercase tracking-[0.25em] text-primary">{t("eyebrow")}</p>
           <h2 className="mt-3 font-serif text-[2.6rem] leading-[0.98] text-foreground md:text-[3.2rem]">
             {t("title1")} <span className="text-primary">{t("title2")}</span>
           </h2>

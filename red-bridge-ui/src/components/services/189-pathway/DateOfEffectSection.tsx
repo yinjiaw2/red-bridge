@@ -10,7 +10,7 @@ export default function DateOfEffectSection() {
     <section id="doe" className="border-b border-border bg-background px-6 py-24 md:px-8">
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="mb-4 inline-flex items-center gap-3 text-lg font-bold uppercase tracking-widest text-primary">
             <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
@@ -24,7 +24,7 @@ export default function DateOfEffectSection() {
         </div>
 
         <div className="mx-auto grid max-w-[820px] grid-cols-1 gap-8 rounded-none border border-border bg-muted px-8 py-12 md:grid-cols-[auto_1fr] md:px-12">
-          <div className="flex h-16 w-16 items-center justify-center rounded-none bg-primary/10">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
             <Clock3 className="h-8 w-8 text-primary" />
           </div>
 

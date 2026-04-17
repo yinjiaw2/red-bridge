@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
@@ -19,7 +19,7 @@ export default function HeroSection() {
       className="relative flex min-h-[88vh] items-center justify-center bg-background px-6 pt-28 pb-20 text-center"
     >
       <div className="mx-auto max-w-[820px]">
-        <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
+        <div className="mb-3 text-lg font-semibold uppercase tracking-[0.2em] text-primary">
           {t("eyebrow")}
         </div>
 

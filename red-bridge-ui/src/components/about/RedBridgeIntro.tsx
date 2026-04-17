@@ -25,7 +25,7 @@ export const RedBridgeIntro = () => {
         <div className="max-w-[610px]">
           <div className="mb-7 flex items-center gap-4">
             <span className="h-px w-7 bg-brandred" />
-            <span className="text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brandred">
+            <span className="text-lg font-bold uppercase tracking-[0.18em] text-brandred">
               {t("eyebrow")}
             </span>
           </div>

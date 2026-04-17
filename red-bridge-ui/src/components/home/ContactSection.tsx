@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Link from "next/link";
 import {
   MapPin,
@@ -23,7 +23,7 @@ export const ContactSection = () => {
         <div className="mb-10 text-center md:mb-14">
           <div className="flex items-center justify-center gap-3 mb-5">
             <span className="w-8 h-px bg-highlight" />
-            <span className="text-[0.7rem] font-bold tracking-[0.25em] text-highlight uppercase">
+            <span className="text-lg font-bold tracking-[0.25em] text-highlight uppercase">
               {t("eyebrow")}
             </span>
             <span className="w-8 h-px bg-highlight" />
@@ -113,7 +113,7 @@ export const ContactSection = () => {
         <div className="flex flex-col items-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-card px-7 py-4 text-sm font-bold text-secondary shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl hover:brightness-95 active:scale-95 sm:w-auto sm:px-10 sm:text-base"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-highlight px-7 py-4 text-sm font-bold text-secondary shadow-lg transition-all hover:-translate-y-0.5 hover:bg-yellow-400 hover:shadow-xl active:scale-95 sm:w-auto sm:px-10 sm:text-base"
           >
             <Calendar size={18} aria-hidden="true" />
             {t("ctaMain")}

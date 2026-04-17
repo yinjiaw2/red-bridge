@@ -72,7 +72,7 @@ export function VideoSection() {
           <div className="rounded-[16px] border border-border bg-card p-4 shadow-md sm:rounded-[22px] sm:p-6 md:p-8">
             <div>
               <div>
-                <p className="text-[0.75rem] font-bold uppercase tracking-[0.22em] text-primary">
+                <p className="text-lg font-bold uppercase tracking-[0.22em] text-primary">
                   {t("eyebrow")}
                 </p>
                 <h3

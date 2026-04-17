@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <section className="relative flex min-h-[80vh] items-center justify-center border-b border-border bg-background px-6 py-28 text-center">
       <div className="w-full max-w-[820px]">
-        <div className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
+        <div className="mb-4 text-lg font-bold uppercase tracking-widest text-primary">
           {t("eyebrow")}
         </div>
 

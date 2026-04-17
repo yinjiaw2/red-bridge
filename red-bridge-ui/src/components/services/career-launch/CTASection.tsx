@@ -13,11 +13,11 @@ export default function CTASection() {
   return (
     <section
       id="cta"
-      className="relative overflow-hidden bg-naviblue px-6 py-24 text-center md:px-8"
+      className="relative overflow-hidden bg-secondary px-6 py-24 text-center md:px-8"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.05),transparent_50%),radial-gradient(circle_at_80%_50%,rgba(255,255,255,0.04),transparent_50%)]" />
       <div className="relative z-10 mx-auto max-w-[760px]">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-none border border-white/30 bg-white/10 px-5 py-2 text-xs font-bold uppercase tracking-widest text-white">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-highlight/40 bg-highlight/10 px-5 py-2 text-lg font-bold uppercase tracking-widest text-highlight">
           <CalendarCheck size={14} />
           {t("eyebrow")}
         </div>
@@ -29,7 +29,7 @@ export default function CTASection() {
         </p>
         <Button
           asChild
-          className="mt-8 h-14 rounded-full bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-naviblue shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-400 hover:shadow-xl"
+          className="mt-8 h-14 rounded-full bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-secondary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-400 hover:shadow-xl"
         >
           <Link href="/contact?src=career_launch_bottom_cta">
             {t("button")}

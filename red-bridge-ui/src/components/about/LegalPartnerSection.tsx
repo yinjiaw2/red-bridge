@@ -13,7 +13,7 @@ export default function LegalPartnerSection() {
         {/* Eyebrow */}
         <div className="flex items-center justify-center gap-4 mb-8">
           <span className="flex-1 max-w-16 h-px bg-gray-300" />
-          <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
+          <span className="text-lg font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
             {t("eyebrow")}
           </span>
           <span className="flex-1 max-w-16 h-px bg-gray-300" />
@@ -39,7 +39,7 @@ export default function LegalPartnerSection() {
           <div className="absolute top-0 left-0 w-full h-2 bg-brandred" />
           {/* Card eyebrow + icon */}
           <div className="flex items-center gap-3 mb-5">
-            <div className="w-10 h-10 rounded-none bg-gray-100 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
               <Scale
                 className="h-5 w-5 text-brandred"
                 aria-hidden="true"

@@ -30,7 +30,7 @@ export function ServicesGridSection() {
     <section id="services" className="bg-background px-6 py-14 md:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">{t("eyebrow")}</p>
+          <p className="text-lg font-bold uppercase tracking-[0.25em] text-primary">{t("eyebrow")}</p>
           <h2 className="mt-3 font-serif text-[2.6rem] leading-[0.98] text-foreground md:text-[3.2rem]">
             {t("title1")} <span className="text-primary">{t("title2")}</span>
           </h2>
@@ -57,7 +57,7 @@ export function ServicesGridSection() {
                     isFeatured ? "bg-[linear-gradient(180deg,rgba(230,25,25,0.05)_0%,transparent_100%)]" : "",
                   ].join(" ")}
                 >
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-[14px] bg-primary/8 text-primary">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/8 text-primary">
                     <Icon className="h-6 w-6" />
                   </span>
                   <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-primary">{card.eyebrow}</p>

@@ -86,7 +86,7 @@ export const CredentialsBarSection = () => {
               <div className="flex items-center gap-4 min-w-fit">
                 {/* 图标容器 */}
                 <div
-                  className={`p-3 rounded-2xl transition-transform hover:scale-105 ${item.color}`}
+                  className={`p-3 rounded-full transition-transform hover:scale-105 ${item.color}`}
                 >
                   {item.icon}
                 </div>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { CheckCircle, MapPin } from "lucide-react";
@@ -28,7 +28,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(163,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(163,0,0,0.04)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_90%_80%_at_50%_40%,black_0%,transparent_100%)]" />
 
       <div className="relative mx-auto max-w-[820px]">
-        <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
+        <div className="mb-3 text-lg font-semibold uppercase tracking-[0.2em] text-primary">
           {t("eyebrow")}
         </div>
 

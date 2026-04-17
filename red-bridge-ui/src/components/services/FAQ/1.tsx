@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { BriefcaseBusiness, ChartNoAxesColumn, LaptopMinimal } from "lucide-react";
@@ -23,7 +23,7 @@ export default function IndustrySection() {
     <section id="our-network" style={{ fontFamily: font }} className="bg-muted px-6 py-24 md:px-8">
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+          <div className="mb-3 inline-flex items-center gap-2 text-lg font-semibold uppercase tracking-[0.22em] text-primary">
             <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>
@@ -45,7 +45,7 @@ export default function IndustrySection() {
                 className="group relative overflow-hidden rounded-[10px] border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="absolute inset-x-0 bottom-0 h-[3px] origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100" />
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-[10px] bg-primary/10 text-primary">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Icon size={22} />
                 </div>
                 <h3 className="text-[22px] font-semibold text-foreground">{card.title}</h3>
@@ -79,4 +79,3 @@ export default function IndustrySection() {
     </section>
   );
 }
-

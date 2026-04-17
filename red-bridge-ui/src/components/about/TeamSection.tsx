@@ -42,7 +42,7 @@ export default function TeamSection() {
               >
                 {/* Avatar */}
                 <div
-                  className="w-12 h-12 rounded-none flex items-center justify-center text-sm font-bold shrink-0"
+                  className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
                   style={{ backgroundColor: color.bg, color: color.text }}
                 >
                   {member.initials}

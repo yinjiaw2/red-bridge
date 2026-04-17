@@ -26,7 +26,7 @@ export default function SkillsgGapSection() {
         {/* Eyebrow */}
         <div className="flex items-center justify-center gap-4 mb-10">
           <span className="flex-1 max-w-16 h-px bg-brandred" />
-          <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
+          <span className="text-lg font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
             {t("eyebrow")}
           </span>
           <span className="flex-1 max-w-16 h-px bg-brandred" />
@@ -52,7 +52,7 @@ export default function SkillsgGapSection() {
               key={i}
               className="bg-white rounded-none p-8 shadow-lg border-t-4 border-t-naviblue flex flex-col gap-4"
             >
-              <div className="w-12 h-12 rounded-none bg-gray-100 flex items-center justify-center text-brandred shrink-0">
+              <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-brandred shrink-0">
                 {ICON_MAP[card.iconKey]}
               </div>
               <h3 className="text-naviblue font-bold text-lg font-serif leading-snug">

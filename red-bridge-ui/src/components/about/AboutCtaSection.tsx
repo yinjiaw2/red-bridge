@@ -7,14 +7,14 @@ export default function AboutCtaSection() {
   const t = useTranslations("aboutCta");
 
   return (
-    <section className="w-full py-24 px-[5%] bg-naviblue">
+    <section className="w-full py-24 px-[5%] bg-secondary">
       <div className="max-w-300 mx-auto flex flex-col items-center text-center gap-6">
         {/* Heading */}
         <h2
           className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight font-serif"
         >
           {t("headingMain")}
-          <span className="text-white">{t("headingHighlight")}</span>
+          <span className="text-highlight">{t("headingHighlight")}</span>
           {t("headingSuffix")}
         </h2>
 
@@ -26,7 +26,7 @@ export default function AboutCtaSection() {
         {/* Button */}
         <Link
           href="/contact"
-          className="mt-4 inline-flex h-12 items-center rounded-full bg-white px-10 text-[15px] font-bold uppercase tracking-widest text-brandred hover:bg-gray-100 transition-colors shadow-md"
+          className="mt-4 inline-flex h-12 items-center rounded-full bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-secondary shadow-md transition-colors hover:bg-yellow-400"
         >
           {t("button")}
         </Link>

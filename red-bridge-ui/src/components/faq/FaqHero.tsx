@@ -9,7 +9,7 @@ export function FaqHero() {
   return (
     <section className="border-b border-border bg-[linear-gradient(180deg,var(--background)_0%,var(--card)_100%)] px-6 py-16 md:py-20">
       <div className="mx-auto max-w-[880px] text-center">
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">
+        <p className="text-lg font-bold uppercase tracking-[0.25em] text-primary">
           {t("eyebrow")}
         </p>
         <h1 className={`mt-4 font-serif text-[3rem] leading-[0.95] text-foreground md:text-[4.25rem]${locale === "zh" ? " font-bold" : ""}`}>

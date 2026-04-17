@@ -19,7 +19,7 @@ export default function EmployerFeesSection() {
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-10">
           <span className="w-6 h-px bg-highlight" />
-          <span className="text-[0.75rem] font-bold tracking-widest text-highlight uppercase">
+          <span className="text-lg font-bold tracking-widest text-highlight uppercase">
             {t("eyebrow")}
           </span>
         </div>

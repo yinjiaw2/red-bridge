@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Footer } from "@/components/shared/Footer";
 import { BookingExperience } from "@/components/booking/BookingExperience";
 import NavBar from "@/components/shared/NavBar";

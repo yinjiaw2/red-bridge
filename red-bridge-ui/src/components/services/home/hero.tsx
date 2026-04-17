@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useTranslations } from "next-intl";
 
@@ -21,7 +21,7 @@ export default function TimelineSection() {
     >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-highlight">
+          <div className="mb-4 inline-flex items-center gap-3 text-lg font-bold uppercase tracking-widest text-highlight">
             <span className="h-px w-6 bg-highlight" />
             {t("eyebrow")}
           </div>
@@ -40,7 +40,7 @@ export default function TimelineSection() {
           <div className="space-y-10">
             {steps.map((step, index) => (
               <div key={step.title} className="relative z-10 flex gap-6">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-none bg-brandred font-bold text-white shadow-md">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brandred font-bold text-white shadow-md">
                   {(index + 1).toString().padStart(2, "0")}
                 </div>
                 <div className="pt-2">
@@ -72,4 +72,3 @@ export default function TimelineSection() {
     </section>
   );
 }
-

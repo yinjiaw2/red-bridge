@@ -20,7 +20,7 @@ export default function CtaSection() {
       <div className="relative z-10 mx-auto max-w-[920px]">
         <h2 className="font-serif text-[34px] font-bold leading-tight text-white md:text-[52px]">
           {t("title1")}
-          <em className="not-italic text-accent">{t("titleHighlight")}</em>
+          <em className="not-italic text-highlight">{t("titleHighlight")}</em>
         </h2>
 
         <p className="mx-auto mt-4 max-w-[560px] text-base leading-8 text-white/80 md:text-lg">
@@ -30,7 +30,7 @@ export default function CtaSection() {
         <div className="mt-7 flex flex-wrap items-center justify-center gap-5">
           {trustItems.map((item, index) => (
             <span key={index} className="inline-flex items-center gap-2 text-sm text-white/80">
-              <span className="text-accent">{item.icon}</span>
+              <span className="text-highlight">{item.icon}</span>
               {item.text}
             </span>
           ))}
@@ -39,7 +39,7 @@ export default function CtaSection() {
         <div className="mt-9">
           <Button
             asChild
-            className="h-14 rounded-full bg-card px-10 text-[15px] font-bold uppercase tracking-widest text-secondary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:brightness-95"
+            className="h-14 rounded-full bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-secondary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-400 hover:shadow-xl"
           >
             <a href="/contact?src=189_cta">{t("button")}</a>
           </Button>

@@ -22,7 +22,7 @@ export default function StorySection() {
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-8">
               <span className="w-6 h-px bg-brandred" />
-              <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase">
+              <span className="text-lg font-bold tracking-widest text-brandred uppercase">
                 {t("eyebrow")}
               </span>
             </div>
@@ -47,7 +47,7 @@ export default function StorySection() {
             </div>
           </div>
 
-          {/* Right column — stats */}
+          {/* Right column - stats */}
           <div className="flex flex-col justify-center">
             {stats.map((stat, i) => (
               <div key={i}>

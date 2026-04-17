@@ -26,10 +26,10 @@ export default function EmployerProcessSection() {
   return (
     <section className="bg-white py-24 px-[5%] border-b border-gray-200">
       <div className="max-w-300 mx-auto">
-        {/* Eyebrow — left-aligned with single line */}
+        {/* Eyebrow - left-aligned with single line */}
         <div className="flex items-center gap-3 mb-10">
           <span className="w-6 h-px bg-brandred" />
-          <span className="text-[0.75rem] font-bold tracking-widest text-brandred uppercase">
+          <span className="text-lg font-bold tracking-widest text-brandred uppercase">
             {t("eyebrow")}
           </span>
         </div>

@@ -32,7 +32,7 @@ export const TrustSafetySection = () => {
       <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-9 md:gap-14">
         {/* Left */}
         <div className="flex-1 max-w-lg">
-          <span className="text-[#D4A017] text-[11px] sm:text-xs font-bold tracking-[0.18em] sm:tracking-[0.2em] uppercase block mb-4 sm:mb-5">
+          <span className="text-[#D4A017] text-lg sm:text-lg font-bold tracking-[0.18em] sm:tracking-[0.2em] uppercase block mb-4 sm:mb-5">
             {t("eyebrow")}
           </span>
 
@@ -76,7 +76,7 @@ export const TrustSafetySection = () => {
                 key={index}
                 className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/8 transition-colors sm:gap-4 sm:p-5"
               >
-                <div className="shrink-0 mt-0.5 rounded-lg bg-[#D4A017]/15 p-2">
+                <div className="shrink-0 mt-0.5 rounded-full bg-[#D4A017]/15 p-2">
                   <Icon
                     size={18}
                     className="text-[#D4A017]"
@@ -116,4 +116,3 @@ export const TrustSafetySection = () => {
 };
 
 export default TrustSafetySection;
-

@@ -43,7 +43,7 @@ export default function SuccessCasesWhy() {
               key={i}
               className="bg-white rounded-none border-t-4 border-t-naviblue shadow-md border border-gray-100 p-8 flex flex-col gap-5 transition-shadow hover:shadow-lg"
             >
-              <div className="w-12 h-12 rounded-2xl bg-brandred/10 flex items-center justify-center text-brandred shrink-0">
+              <div className="w-12 h-12 rounded-full bg-brandred/10 flex items-center justify-center text-brandred shrink-0">
                 {ICON_MAP[card.iconKey]}
               </div>
               <h3 className="font-sans text-xl font-black leading-snug tracking-tight text-naviblue">

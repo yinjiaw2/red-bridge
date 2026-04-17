@@ -17,10 +17,10 @@ export default function EmployerNetworkSection() {
   return (
     <section className="bg-naviblue py-24 px-[5%]">
       <div className="max-w-300 mx-auto">
-        {/* Eyebrow — lines on both sides */}
+        {/* Eyebrow - lines on both sides */}
         <div className="flex items-center justify-center gap-4 mb-10">
           <span className="flex-1 max-w-16 h-px bg-white/20" />
-          <span className="text-[0.75rem] font-bold tracking-widest text-highlight uppercase whitespace-nowrap">
+          <span className="text-lg font-bold tracking-widest text-highlight uppercase whitespace-nowrap">
             {t("eyebrow")}
           </span>
           <span className="flex-1 max-w-16 h-px bg-white/20" />

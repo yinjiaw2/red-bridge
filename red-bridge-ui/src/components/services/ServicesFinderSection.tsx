@@ -35,7 +35,7 @@ export function ServicesFinderSection() {
     <section id="find-your-path" className="bg-card px-6 py-14 md:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">{t("eyebrow")}</p>
+          <p className="text-lg font-bold uppercase tracking-[0.25em] text-primary">{t("eyebrow")}</p>
           <h2 className="mt-3 font-serif text-[2.6rem] leading-[0.98] text-foreground md:text-[3.2rem]">
             {t("title1")} <span className="text-primary">{t("title2")}</span>
           </h2>
@@ -52,7 +52,7 @@ export function ServicesFinderSection() {
                 className="rounded-[18px] border border-border bg-background px-5 py-5 shadow-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg"
               >
                 <div className="flex gap-4">
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] bg-primary/8 text-primary">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/8 text-primary">
                     <Icon className="h-5 w-5" />
                   </span>
                   <div>

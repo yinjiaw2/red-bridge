@@ -38,7 +38,7 @@ export default function OccupationRealitySection() {
     <section id="competition" className="border-b border-border bg-background px-6 py-24 md:px-8">
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="mb-4 inline-flex items-center gap-3 text-lg font-bold uppercase tracking-widest text-primary">
             <span className="h-px w-6 bg-primary" />
             {t("eyebrow")}
           </div>

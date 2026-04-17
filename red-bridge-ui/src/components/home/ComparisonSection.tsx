@@ -26,18 +26,18 @@ export const ComparisonSection = () => {
         {/* Heading */}
         <div className="mb-9 text-center md:mb-14">
           <div className="flex items-center justify-center gap-3 mb-5 sm:gap-4 md:mb-8">
-            <span className="flex-1 max-w-16 h-px bg-brandred" />
-            <span className="text-[0.68rem] sm:text-[0.75rem] font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
+            <span className="flex-1 max-w-16 h-px bg-primary" />
+            <span className="text-lg sm:text-lg font-bold tracking-widest text-primary uppercase whitespace-nowrap">
               {t("eyebrow")}
             </span>
-            <span className="flex-1 max-w-16 h-px bg-brandred" />
+            <span className="flex-1 max-w-16 h-px bg-primary" />
           </div>
           <h2
             className={`text-[2.15rem] sm:text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-4 md:mb-6${locale === "zh" ? " font-bold" : ""}`}
           >
             {t("headingMain")}
             <span
-              className={`text-brandred ${locale === "zh" ? " font-extrabold" : ""}`}
+              className={`text-primary ${locale === "zh" ? " font-extrabold" : ""}`}
             >
               {t("headingHighlight")}
             </span>
@@ -61,7 +61,7 @@ export const ComparisonSection = () => {
                     {t("col2")}
                   </div>
                 </TableHead>
-                <TableHead className="py-4 px-3 sm:py-6 sm:px-6 text-white font-bold text-[10px] sm:text-xs uppercase tracking-widest w-[58%] md:w-[45%] border-l border-brandred whitespace-normal h-auto bg-brandred">
+                <TableHead className="py-4 px-3 sm:py-6 sm:px-6 text-white font-bold text-[10px] sm:text-xs uppercase tracking-widest w-[58%] md:w-[45%] border-l border-primary whitespace-normal h-auto bg-primary">
                   <div className="flex items-center gap-2">
                     <Check size={16} aria-hidden="true" />
                     {t("col3")}
@@ -112,17 +112,17 @@ export const ComparisonSection = () => {
                   </TableCell>
 
                   {/* RedBridge */}
-                  <TableCell className="py-4 px-3 sm:py-6 sm:px-6 text-sm whitespace-normal border-l border-red-100 bg-red-50/30">
+                  <TableCell className="py-4 px-3 sm:py-6 sm:px-6 text-sm whitespace-normal border-l border-primary/15 bg-primary/5">
                     <div className="flex gap-2 sm:gap-3 items-start">
-                      <span className="mt-0.5 shrink-0 p-1 rounded-full bg-brandred/10">
+                      <span className="mt-0.5 shrink-0 p-1 rounded-full bg-primary/10">
                         <Check
                           size={14}
-                          className="text-brandred"
+                          className="text-primary"
                           aria-hidden="true"
                         />
                       </span>
                       <div>
-                        <p className="font-bold text-brandred leading-snug mb-1">
+                        <p className="font-bold text-primary leading-snug mb-1">
                           {t(`rows.${index}.redBridge.title`)}
                         </p>
                         <p className="text-sm text-gray-700 leading-relaxed">
@@ -133,7 +133,7 @@ export const ComparisonSection = () => {
                                     href="https://www.insightidea.com.au/en/success"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="font-bold text-brandred underline underline-offset-4 hover:text-red-800 transition-colors"
+                                    className="font-bold text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
                                   >
                                     {chunks}
                                   </a>
@@ -151,14 +151,14 @@ export const ComparisonSection = () => {
         </div>
 
         {/* CTA Card */}
-        <div className="mt-8 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 md:gap-8 rounded-none bg-white border border-gray-200 shadow-sm p-5 sm:p-8 md:p-10 relative overflow-hidden md:mt-12">
-          <div className="absolute top-0 left-0 w-1.5 h-full bg-brandred" />
+        <div className="mt-8 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 md:gap-8 rounded-2xl bg-secondary border border-white/10 shadow-sm p-5 sm:p-8 md:p-10 relative overflow-hidden md:mt-12">
+          <div className="absolute top-0 left-0 w-1.5 h-full bg-highlight" />
           <div className="flex items-start gap-4">
             <div>
-              <p className="text-lg sm:text-xl font-bold text-naviblue">
+              <p className="text-lg sm:text-xl font-bold text-white">
                 {t("cta.heading")}
               </p>
-              <p className="text-sm sm:text-base text-gray-600 mt-2">
+              <p className="text-sm sm:text-base text-white/70 mt-2">
                 {t("cta.subheading")}
               </p>
             </div>
@@ -166,7 +166,7 @@ export const ComparisonSection = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full md:w-auto">
             <Button
               asChild
-              className="w-full sm:w-auto h-12 rounded-full bg-brandred px-8 text-sm font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
+              className="w-full sm:w-auto h-12 rounded-full bg-highlight px-8 text-sm font-bold uppercase tracking-widest text-secondary shadow-md transition-colors hover:bg-yellow-400"
             >
               <Link href="/contact">
                 <span>{t("cta.primaryBtn")}</span>
@@ -176,7 +176,7 @@ export const ComparisonSection = () => {
             <Button
               asChild
               variant="outline"
-              className="w-full sm:w-auto h-12 rounded-full border border-brandred bg-transparent px-8 text-sm font-bold uppercase tracking-widest text-brandred hover:bg-brandred/5 transition-colors"
+              className="w-full sm:w-auto h-12 rounded-full border border-white/25 bg-transparent px-8 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-white/10"
             >
               <Link href="/services#how-it-works">
                 <span>{t("cta.secondaryBtn")}</span>

@@ -23,16 +23,16 @@ export default function ValuesSection() {
   return (
     <section className="bg-naviblue py-24 px-[5%]">
       <div className="max-w-300 mx-auto">
-        {/* Eyebrow — lines on both sides */}
+        {/* Eyebrow - lines on both sides */}
         <div className="flex items-center justify-center gap-4 mb-12">
           <span className="flex-1 max-w-16 h-px bg-white/20" />
-          <span className="text-[0.75rem] font-bold tracking-widest text-white uppercase whitespace-nowrap">
+          <span className="text-lg font-bold tracking-widest text-white uppercase whitespace-nowrap">
             {t("eyebrow")}
           </span>
           <span className="flex-1 max-w-16 h-px bg-white/20" />
         </div>
 
-        {/* Header — heading left, description right */}
+        {/* Header - heading left, description right */}
         <div className="flex flex-col md:flex-row md:items-end gap-4 md:gap-12 mb-14">
           <h2
             className="text-4xl md:text-5xl font-bold text-white shrink-0"
@@ -52,7 +52,7 @@ export default function ValuesSection() {
               className="bg-white rounded-none p-8 shadow-lg border-t-4 border-t-gray-900"
             >
               {/* Icon */}
-              <div className="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-none bg-gray-100 text-brandred">
+              <div className="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-brandred">
                 {ICON_MAP[item.iconKey]}
               </div>
 

@@ -14,10 +14,10 @@ export default function SuccessCasesHero() {
   return (
     <section className="bg-gray-50 py-24 px-[5%] border-b border-gray-200">
       <div className="max-w-300 mx-auto">
-        {/* Eyebrow — lines on both sides */}
+        {/* Eyebrow - lines on both sides */}
         <div className="flex items-center justify-center gap-4 mb-10">
           <span className="flex-1 max-w-16 h-px bg-brandred" />
-          <span className="text-sm font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
+          <span className="text-lg font-bold tracking-widest text-brandred uppercase whitespace-nowrap">
             {t("eyebrow")}
           </span>
           <span className="flex-1 max-w-16 h-px bg-brandred" />

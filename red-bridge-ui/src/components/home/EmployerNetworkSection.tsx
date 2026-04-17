@@ -64,7 +64,7 @@ export default function EmployerNetwork() {
         <div className="mb-8 grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Left */}
           <div>
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8A1523] md:text-[12px]">
+            <p className="mb-3 text-lg font-semibold uppercase tracking-[0.18em] text-[#8A1523] md:text-lg">
               {t("eyebrow")}
             </p>
 
