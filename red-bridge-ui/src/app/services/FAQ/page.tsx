@@ -7,6 +7,6 @@ export const metadata: Metadata = {
     "Straight answers about employer sponsorship, points-tested migration, skills assessments, and how RedBridge works.",
 };
 
-export default function FAQServicePage() {
+export default function FAQPageRoute() {
   return <FaqPage />;
 }
