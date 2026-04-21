@@ -62,7 +62,8 @@ export const UserScenarioSection = () => {
         <div className="grid grid-cols-1 gap-4 mb-10 sm:gap-6 md:grid-cols-2 lg:grid-cols-4 md:mb-16">
           {scenarios.map((item, index) => {
             const Icon = scenarioIcons[item.filterType ?? "urgent"] ?? Clock3;
-            const href = scenarioHrefMap[item.filterType ?? "urgent"] ?? item.href;
+            const href =
+              scenarioHrefMap[item.filterType ?? "urgent"] ?? item.href;
 
             return (
               <Link
@@ -72,7 +73,10 @@ export const UserScenarioSection = () => {
                 className="group flex flex-col items-center justify-start rounded-none border border-gray-200 bg-white px-5 py-7 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B5121B]/40 hover:shadow-lg sm:p-8 sm:pb-10 sm:pt-10"
               >
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#B5121B]/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#B5121B]/20 sm:mb-8 sm:h-16 sm:w-16">
-                  <Icon className="h-7 w-7 text-[#B5121B] sm:h-8 sm:w-8" strokeWidth={2} />
+                  <Icon
+                    className="h-7 w-7 text-[#B5121B] sm:h-8 sm:w-8"
+                    strokeWidth={2}
+                  />
                 </div>
 
                 <h4 className="mb-3 font-serif text-[1.55rem] font-bold leading-tight text-gray-900 sm:mb-4 sm:text-[2rem] xl:text-[1.85rem]">
@@ -85,7 +89,11 @@ export const UserScenarioSection = () => {
 
                 <span className="inline-flex items-center gap-1.5 border-b border-[#B5121B]/40 pb-px text-[11px] font-bold uppercase tracking-widest text-[#B5121B] transition-colors group-hover:border-[#B5121B]">
                   {item.linkText}
-                  <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+                  <ArrowRight
+                    size={12}
+                    className="transition-transform duration-200 group-hover:translate-x-0.5"
+                    aria-hidden="true"
+                  />
                 </span>
               </Link>
             );
@@ -108,7 +116,7 @@ export const UserScenarioSection = () => {
               variant="outline"
               className="h-10 w-full gap-2 rounded-full border-[#B5121B] px-5 text-[13px] font-semibold text-[#B5121B] transition-colors hover:bg-[#B5121B] hover:text-white sm:w-auto sm:px-6"
             >
-              <Link href={t("footer.learnMoreHref")}>
+              <Link href="/services#find-your-path">
                 {t("footer.learnMore")}
                 <ArrowRight size={14} aria-hidden="true" />
               </Link>
