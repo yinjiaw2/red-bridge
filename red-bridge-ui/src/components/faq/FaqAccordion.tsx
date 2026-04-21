@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState, type ReactNode } from "react";
+import { AnalyticsEvent, trackEvent } from "@/lib/analytics";
 
 type AccordionItem = {
   question: string;
@@ -73,7 +74,18 @@ function AccordionRow({
 }
 
 export function FaqAccordion({ items }: FaqAccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number>(0);
+  const [openIndex, setOpenIndex] = useState<number>(-1);
+
+  function handleToggle(index: number, question: string) {
+    const isOpening = openIndex !== index;
+    setOpenIndex(isOpening ? index : -1);
+    if (isOpening) {
+      trackEvent(AnalyticsEvent.FAQ_QUESTION_OPENED, {
+        event_category: "FAQ",
+        event_label: question,
+      });
+    }
+  }
 
   return (
     <div className="space-y-3">
@@ -82,7 +94,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
           key={`${index}-${item.question}`}
           item={item}
           isOpen={openIndex === index}
-          onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
+          onToggle={() => handleToggle(index, item.question)}
         />
       ))}
     </div>
