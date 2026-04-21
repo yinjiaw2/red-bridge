@@ -82,7 +82,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
     if (isOpening) {
       trackEvent(AnalyticsEvent.FAQ_QUESTION_OPENED, {
         event_category: "FAQ",
-        event_label: question,
+        question_text: question,
       });
     }
   }
