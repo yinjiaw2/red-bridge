@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { FaqPage } from "@/components/faq/FaqPage";
+import NavBar from "@/components/shared/NavBar";
+import { FaqHero } from "@/components/faq/FaqHero";
+import { FaqListSection } from "@/components/faq/FaqListSection";
+import { FaqContactSection } from "@/components/faq/FaqContactSection";
+import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | RedBridge Consulting",
@@ -8,5 +12,15 @@ export const metadata: Metadata = {
 };
 
 export default function FAQPageRoute() {
-  return <FaqPage />;
+  return (
+    <>
+      <NavBar />
+      <main className="min-h-full bg-background pt-16">
+        <FaqHero />
+        <FaqListSection />
+        <FaqContactSection />
+      </main>
+      <Footer />
+    </>
+  );
 }
