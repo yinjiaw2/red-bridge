@@ -49,9 +49,9 @@
         "iconKey": "hardHat"
       },
       {
-        "title": "Healthcare",
+        "title": "Automotive",
         "count": 4,
-        "iconKey": "heartPulse"
+        "iconKey": "car"
       }
     ]
   }

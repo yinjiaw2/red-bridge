@@ -49,9 +49,9 @@
         "iconKey": "hardHat"
       },
       {
-        "title": "医疗健康",
+        "title": "汽车行业",
         "count": 4,
-        "iconKey": "heartPulse"
+        "iconKey": "car"
       }
     ]
   }

@@ -6,7 +6,7 @@ import {
   Calculator,
   Megaphone,
   HardHat,
-  HeartPulse,
+  Car,
   ShieldCheck,
   BadgeCheck,
   Lock,
@@ -25,7 +25,7 @@ const iconMap: Record<string, LucideIcon> = {
   calculator: Calculator,
   megaphone: Megaphone,
   hardHat: HardHat,
-  heartPulse: HeartPulse,
+  car: Car,
 };
 
 export default function EmployerNetwork() {
