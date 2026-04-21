@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <BackgroundHero
       id="top"
-      sizeClassName="py-4 md:py-24"
+      sizeClassName="py-4"
       eyebrow={t("eyebrow")}
       eyebrowIcon={<BriefcaseBusiness className="h-4 w-4" aria-hidden="true" />}
       title={
@@ -41,17 +41,13 @@ export default function HeroSection() {
           >
             {t("primaryCta")}
           </Link>
-          <button
-            onClick={() =>
-              document
-                .getElementById("overview")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
+          <Link
+            href="/#employer-network"
             className="flex h-[48px] w-full items-center justify-center rounded-full border border-[#d9868f] px-5 text-[14px] font-semibold text-[#b63c46] sm:h-[52px] sm:w-auto sm:px-6 sm:text-[15px]"
           >
             <span>{t("secondaryCta")}</span>
             <ArrowRight size={16} className="ml-2" />
-          </button>
+          </Link>
         </>
       }
     />
