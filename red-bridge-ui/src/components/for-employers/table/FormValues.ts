@@ -49,7 +49,7 @@ export const createEmployerEnquirySchema = (
     abn: requiredString,
     contactName: requiredString,
     contactTitle: requiredString,
-    email: z.string().trim().min(1, requiredMsg).email(emailMsg),
+    email: z.string().trim().min(1, requiredMsg).pipe(z.email(emailMsg)),
     phone: requiredString,
     address: requiredString,
     isApprovedSponsor: requiredString,

@@ -61,7 +61,12 @@ function FormSelectInput({
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
             </FormControl>
-            <SelectContent>
+            <SelectContent
+              position="popper"
+              align="start"
+              sideOffset={4}
+              className="w-(--radix-select-trigger-width)"
+            >
               {options.map((option) => (
                 <SelectItem key={option} value={option}>
                   {option}
