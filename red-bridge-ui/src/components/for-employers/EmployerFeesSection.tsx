@@ -47,10 +47,10 @@ export default function EmployerFeesSection() {
           <Table className="w-full table-fixed">
             <TableHeader className="bg-gray-50">
               <TableRow>
-                <TableHead className="w-[70%] px-8 py-4 text-[12px] font-bold tracking-wider uppercase text-naviblue wrap-break-word">
+                <TableHead className="w-[64%] px-4 py-4 text-[12px] font-bold tracking-wider uppercase text-naviblue whitespace-normal break-words sm:w-[70%] sm:px-8">
                   {t("tableHeaderLabel")}
                 </TableHead>
-                <TableHead className="w-[30%] px-8 py-4 text-[12px] font-bold tracking-wider uppercase text-naviblue text-right wrap-break-word">
+                <TableHead className="w-[36%] px-4 py-4 text-right text-[12px] font-bold tracking-wider uppercase text-naviblue whitespace-normal break-words sm:w-[30%] sm:px-8">
                   {t("tableHeaderAmount")}
                 </TableHead>
               </TableRow>
@@ -58,18 +58,18 @@ export default function EmployerFeesSection() {
             <TableBody>
               {rows.map((row, i) => (
                 <TableRow key={i} className="border-gray-100">
-                  <TableCell className="px-8 py-5 align-top">
-                    <p className="text-naviblue font-bold text-base leading-snug mb-1 wrap-break-word">
+                  <TableCell className="px-4 py-5 align-top whitespace-normal sm:px-8">
+                    <p className="mb-1 text-base font-bold leading-snug text-naviblue break-words">
                       {row.title}
                     </p>
-                    <p className="text-gray-500 text-sm leading-relaxed wrap-break-word">
+                    <p className="text-sm leading-relaxed text-gray-500 break-words">
                       {row.note}
                     </p>
                   </TableCell>
-                  <TableCell className="px-8 py-5 text-right align-top">
-                    <span className="text-brandred font-bold text-lg wrap-break-word">
+                  <TableCell className="px-4 py-5 text-right align-top whitespace-normal sm:px-8">
+                    <p className="text-base font-bold text-brandred break-words sm:text-lg">
                       {row.amount}
-                    </span>
+                    </p>
                   </TableCell>
                 </TableRow>
               ))}
