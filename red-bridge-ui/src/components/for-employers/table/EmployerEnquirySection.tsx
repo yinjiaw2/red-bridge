@@ -2,97 +2,17 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
-import { useForm, type UseFormReturn } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  FieldName,
   FormValues,
   createEmployerEnquirySchema,
   defaultValues,
 } from "./FormValues";
-import { RequiredMark } from "./RequiredMark";
 import { FormTextInput } from "./FormTextInput";
-
-function FormSelectInput({
-  form,
-  name,
-  label,
-  options,
-  placeholder,
-}: {
-  form: UseFormReturn<FormValues>;
-  name: FieldName;
-  label: string;
-  options: string[];
-  placeholder: string;
-}) {
-  return (
-    <FormField
-      control={form.control}
-      name={name}
-      render={({ field, fieldState }) => (
-        <FormItem>
-          <FormLabel className="text-sm font-bold text-naviblue">
-            {label}
-            <RequiredMark />
-          </FormLabel>
-          <Select onValueChange={field.onChange} value={field.value}>
-            <FormControl>
-              <SelectTrigger
-                className={`w-full h-11 rounded-none border px-4 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brandred/20 ${
-                  fieldState.error ? "border-brandred" : "border-gray-300"
-                }`}
-              >
-                <SelectValue placeholder={placeholder} />
-              </SelectTrigger>
-            </FormControl>
-            <SelectContent
-              position="popper"
-              align="start"
-              sideOffset={4}
-              className="w-(--radix-select-trigger-width)"
-            >
-              {options.map((option) => (
-                <SelectItem key={option} value={option}>
-                  {option}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <FormMessage className="mt-1.5" />
-        </FormItem>
-      )}
-    />
-  );
-}
-
-function SectionHeading({ number, title }: { number: string; title: string }) {
-  return (
-    <div className="flex items-center gap-4 pt-10 mb-8 border-t border-gray-200">
-      <div className="w-8 h-8 rounded-full bg-brandred flex items-center justify-center text-white text-sm font-bold shrink-0">
-        {number}
-      </div>
-      <h3 className="text-naviblue font-bold text-base uppercase tracking-wider">
-        {title}
-      </h3>
-    </div>
-  );
-}
+import { FormSelectInput } from "./FormSelect";
+import { SectionHeading } from "./SectionHeading";
 
 export default function EmployerEnquirySection() {
   const t = useTranslations("employerEnquiry");
