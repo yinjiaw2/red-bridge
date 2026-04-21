@@ -19,11 +19,9 @@ export default function EmployerNetworkSection() {
       <div className="max-w-300 mx-auto">
         {/* Eyebrow - lines on both sides */}
         <div className="flex items-center justify-center gap-4 mb-10">
-          <span className="flex-1 max-w-16 h-px bg-white/20" />
-          <span className="text-lg font-bold tracking-widest text-highlight uppercase whitespace-nowrap">
+          <p className="text-lg font-bold tracking-widest text-highlight uppercase">
             {t("eyebrow")}
-          </span>
-          <span className="flex-1 max-w-16 h-px bg-white/20" />
+          </p>
         </div>
 
         {/* Heading */}
