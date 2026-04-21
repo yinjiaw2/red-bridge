@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
+import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
@@ -16,6 +17,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export default function EmployerEnquirySection() {
   const t = useTranslations("employerEnquiry");
+  const sectionRef = useRef<HTMLElement>(null);
 
   const yesNo = t.raw("optionsYesNo") as string[];
   const yesNoUnsure = t.raw("optionsYesNoUnsure") as string[];
@@ -32,8 +34,18 @@ export default function EmployerEnquirySection() {
     defaultValues,
   });
 
+  useEffect(() => {
+    if (!form.formState.isSubmitSuccessful) return;
+
+    requestAnimationFrame(() => {
+      sectionRef.current?.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
+    });
+  }, [form.formState.isSubmitSuccessful]);
+
   const onSubmit = async (data: FormValues) => {
-    console.log("🚀 Form data to submit:", data);
     const res = await fetch(process.env.NEXT_PUBLIC_BOOKING_SHEET_URL!, {
       method: "POST",
       body: JSON.stringify({ ...data, type: "EmployerEnquiry" }),
@@ -41,18 +53,13 @@ export default function EmployerEnquirySection() {
     if (!res.ok) {
       throw new Error(`Submission failed: ${res.status}`);
     }
-    const json = await res.json();
-    console.log("🥳 Submission response:", json);
-  };
-
-  const onInvalid = (errors: typeof form.formState.errors) => {
-    console.log("❌ Employer enquiry validation errors:", errors);
   };
 
   return (
     <section
+      ref={sectionRef}
       id="enquiry"
-      className="bg-gray-50 py-24 px-[5%] border-b border-gray-200"
+      className="scroll-mt-20 bg-gray-50 py-24 px-[5%] border-b border-gray-200"
     >
       <div className="max-w-300 mx-auto">
         <div className="flex items-center gap-3 mb-10">
@@ -82,10 +89,7 @@ export default function EmployerEnquirySection() {
             </div>
           ) : (
             <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit, onInvalid)}
-                noValidate
-              >
+              <form onSubmit={form.handleSubmit(onSubmit)} noValidate>
                 <h3 className="text-naviblue font-bold text-base uppercase tracking-wider mb-6">
                   {t("contactTitle")}
                 </h3>
