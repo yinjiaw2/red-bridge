@@ -17,6 +17,7 @@ export default function HeroSection() {
   return (
     <BackgroundHero
       id="top"
+      sizeClassName="py-4 md:py-24"
       eyebrow={t("eyebrow")}
       eyebrowIcon={<BriefcaseBusiness className="h-4 w-4" aria-hidden="true" />}
       title={
