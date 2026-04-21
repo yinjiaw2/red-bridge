@@ -1,86 +1,23 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
+import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
-import FormSelectInput from "./FormSelectInput";
 import { Button } from "@/components/ui/button";
-
-interface FormValues {
-  companyName: string;
-  abn: string;
-  contactName: string;
-  contactTitle: string;
-  email: string;
-  phone: string;
-  address: string;
-  isApprovedSponsor: string;
-  hasPreviouslySponsored: string;
-  isAccreditedSponsor: string;
-  canProvideBusinessEvidence: string;
-  canDemonstrateFinancialCapacity: string;
-  localOverseasRatio: string;
-  isOnCSOL: string;
-  willingToDoLMT: string;
-  canProvidePositionDescription: string;
-  willCoverAllFees: string;
-  awareOfSAFLevy: string;
-  willCoverRelocation: string;
-  willProvideFullTimeContract: string;
-  preparedForCompliance: string;
-  offersPRPathway: string;
-}
-
-function Label({ text, required }: { text: string; required?: boolean }) {
-  return (
-    <label className="block text-sm font-bold text-naviblue mb-2">
-      {text}
-      {required && <span className="text-brandred ml-1">*</span>}
-    </label>
-  );
-}
-
-function TextInput({
-  field,
-  type = "text",
-  register,
-  rules,
-  error,
-}: {
-  field: keyof FormValues;
-  type?: string;
-  register: ReturnType<typeof useForm<FormValues>>["register"];
-  rules: object;
-  error?: string;
-}) {
-  return (
-    <>
-      <input
-        type={type}
-        {...register(field, rules)}
-        className={`w-full h-11 rounded-none border px-4 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brandred/20 ${
-          error ? "border-brandred" : "border-gray-300"
-        }`}
-      />
-      {error && <p className="mt-1.5 text-xs text-brandred">{error}</p>}
-    </>
-  );
-}
-
-function SectionHeading({ number, title }: { number: string; title: string }) {
-  return (
-    <div className="flex items-center gap-4 pt-10 mb-8 border-t border-gray-200">
-      <div className="w-8 h-8 rounded-full bg-brandred flex items-center justify-center text-white text-sm font-bold shrink-0">
-        {number}
-      </div>
-      <h3 className="text-naviblue font-bold text-base uppercase tracking-wider">
-        {title}
-      </h3>
-    </div>
-  );
-}
+import { Form } from "@/components/ui/form";
+import {
+  FormValues,
+  createEmployerEnquirySchema,
+  defaultValues,
+} from "./FormValues";
+import { FormTextInput } from "./FormTextInput";
+import { FormSelectInput } from "./FormSelect";
+import { SectionHeading } from "./SectionHeading";
 
 export default function EmployerEnquirySection() {
   const t = useTranslations("employerEnquiry");
+  const sectionRef = useRef<HTMLElement>(null);
 
   const yesNo = t.raw("optionsYesNo") as string[];
   const yesNoUnsure = t.raw("optionsYesNoUnsure") as string[];
@@ -90,15 +27,25 @@ export default function EmployerEnquirySection() {
   const placeholder = t("selectPlaceholder");
   const requiredMsg = t("validationRequired");
 
-  const {
-    register,
-    handleSubmit,
-    control,
-    formState: { errors, isSubmitSuccessful, isSubmitting },
-  } = useForm<FormValues>();
+  const form = useForm<FormValues>({
+    resolver: zodResolver(
+      createEmployerEnquirySchema(requiredMsg, t("validationEmail")),
+    ),
+    defaultValues,
+  });
+
+  useEffect(() => {
+    if (!form.formState.isSubmitSuccessful) return;
+
+    requestAnimationFrame(() => {
+      sectionRef.current?.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
+    });
+  }, [form.formState.isSubmitSuccessful]);
 
   const onSubmit = async (data: FormValues) => {
-    console.log("🚀 Form data to submit:", data);
     const res = await fetch(process.env.NEXT_PUBLIC_BOOKING_SHEET_URL!, {
       method: "POST",
       body: JSON.stringify({ ...data, type: "EmployerEnquiry" }),
@@ -106,22 +53,15 @@ export default function EmployerEnquirySection() {
     if (!res.ok) {
       throw new Error(`Submission failed: ${res.status}`);
     }
-    const json = await res.json();
-    console.log("🥳 Submission response:", json);
   };
-
-  const err = (field: keyof FormValues) =>
-    errors[field]
-      ? (errors[field]?.message as string) || requiredMsg
-      : undefined;
 
   return (
     <section
+      ref={sectionRef}
       id="enquiry"
-      className="bg-gray-50 py-24 px-[5%] border-b border-gray-200"
+      className="scroll-mt-20 bg-gray-50 py-24 px-[5%] border-b border-gray-200"
     >
       <div className="max-w-300 mx-auto">
-        {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-10">
           <span className="w-6 h-px bg-brandred" />
           <span className="text-lg font-bold tracking-widest text-brandred uppercase">
@@ -129,7 +69,6 @@ export default function EmployerEnquirySection() {
           </span>
         </div>
 
-        {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-5">
           {t("headingMain")}{" "}
           <span className="text-brandred">{t("headingHighlight")}</span>
@@ -139,10 +78,9 @@ export default function EmployerEnquirySection() {
           {t("description")}
         </p>
 
-        {/* Form card */}
         <div className="bg-white rounded-none border border-gray-200 shadow-md p-8 md:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-2 bg-brandred" />
-          {isSubmitSuccessful ? (
+          {form.formState.isSubmitSuccessful ? (
             <div className="py-16 text-center">
               <p className="text-naviblue font-bold text-2xl mb-4">
                 {t("successTitle")}
@@ -150,312 +88,206 @@ export default function EmployerEnquirySection() {
               <p className="text-gray-600 text-base">{t("successMessage")}</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit(onSubmit)} noValidate>
-              {/* ------ Contact ------ */}
-              <h3 className="text-naviblue font-bold text-base uppercase tracking-wider mb-6">
-                {t("contactTitle")}
-              </h3>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} noValidate>
+                <h3 className="text-naviblue font-bold text-base uppercase tracking-wider mb-6">
+                  {t("contactTitle")}
+                </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
-                <div>
-                  <Label text={t("labelCompanyName")} required />
-                  <TextInput
-                    field="companyName"
-                    register={register}
-                    rules={{ required: requiredMsg }}
-                    error={err("companyName")}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+                  <FormTextInput
+                    form={form}
+                    name="companyName"
+                    label={t("labelCompanyName")}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelAbn")} required />
-                  <TextInput
-                    field="abn"
-                    register={register}
-                    rules={{ required: requiredMsg }}
-                    error={err("abn")}
+                  <FormTextInput form={form} name="abn" label={t("labelAbn")} />
+                  <FormTextInput
+                    form={form}
+                    name="contactName"
+                    label={t("labelContactName")}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelContactName")} required />
-                  <TextInput
-                    field="contactName"
-                    register={register}
-                    rules={{ required: requiredMsg }}
-                    error={err("contactName")}
+                  <FormTextInput
+                    form={form}
+                    name="contactTitle"
+                    label={t("labelContactTitle")}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelContactTitle")} required />
-                  <TextInput
-                    field="contactTitle"
-                    register={register}
-                    rules={{ required: requiredMsg }}
-                    error={err("contactTitle")}
-                  />
-                </div>
-                <div>
-                  <Label text={t("labelEmail")} required />
-                  <TextInput
-                    field="email"
+                  <FormTextInput
+                    form={form}
+                    name="email"
                     type="email"
-                    register={register}
-                    rules={{
-                      required: requiredMsg,
-                      pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: t("validationEmail"),
-                      },
-                    }}
-                    error={err("email")}
+                    label={t("labelEmail")}
+                  />
+                  <FormTextInput
+                    form={form}
+                    name="phone"
+                    label={t("labelPhone")}
                   />
                 </div>
-                <div>
-                  <Label text={t("labelPhone")} required />
-                  <TextInput
-                    field="phone"
-                    register={register}
-                    rules={{ required: requiredMsg }}
-                    error={err("phone")}
-                  />
-                </div>
-              </div>
 
-              <div className="mt-6">
-                <Label text={t("labelAddress")} required />
-                <TextInput
-                  field="address"
-                  register={register}
-                  rules={{ required: requiredMsg }}
-                  error={err("address")}
+                <div className="mt-6">
+                  <FormTextInput
+                    form={form}
+                    name="address"
+                    label={t("labelAddress")}
+                  />
+                </div>
+
+                <SectionHeading
+                  number={t("section1Number")}
+                  title={t("section1Title")}
                 />
-              </div>
-
-              {/* ------ Section 1 ------ */}
-              <SectionHeading
-                number={t("section1Number")}
-                title={t("section1Title")}
-              />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
-                <div>
-                  <Label text={t("labelIsApprovedSponsor")} required />
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                   <FormSelectInput
+                    form={form}
                     name="isApprovedSponsor"
-                    control={control}
+                    label={t("labelIsApprovedSponsor")}
                     options={optionsApprovedSponsor}
                     placeholder={placeholder}
-                    error={err("isApprovedSponsor")}
-                    rules={{ required: requiredMsg }}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelHasPreviouslySponsored")} required />
                   <FormSelectInput
+                    form={form}
                     name="hasPreviouslySponsored"
-                    control={control}
+                    label={t("labelHasPreviouslySponsored")}
                     options={yesNo}
                     placeholder={placeholder}
-                    error={err("hasPreviouslySponsored")}
-                    rules={{ required: requiredMsg }}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelIsAccreditedSponsor")} required />
                   <FormSelectInput
+                    form={form}
                     name="isAccreditedSponsor"
-                    control={control}
+                    label={t("labelIsAccreditedSponsor")}
                     options={yesNo}
                     placeholder={placeholder}
-                    error={err("isAccreditedSponsor")}
-                    rules={{ required: requiredMsg }}
                   />
                 </div>
-              </div>
 
-              {/* ------ Section 2 ------ */}
-              <SectionHeading
-                number={t("section2Number")}
-                title={t("section2Title")}
-              />
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
-                <div>
-                  <Label text={t("labelCanProvideBusinessEvidence")} required />
-                  <FormSelectInput
-                    name="canProvideBusinessEvidence"
-                    control={control}
-                    options={yesNo}
-                    placeholder={placeholder}
-                    error={err("canProvideBusinessEvidence")}
-                    rules={{ required: requiredMsg }}
-                  />
-                </div>
-                <div>
-                  <Label
-                    text={t("labelCanDemonstrateFinancialCapacity")}
-                    required
-                  />
-                  <FormSelectInput
-                    name="canDemonstrateFinancialCapacity"
-                    control={control}
-                    options={yesNo}
-                    placeholder={placeholder}
-                    error={err("canDemonstrateFinancialCapacity")}
-                    rules={{ required: requiredMsg }}
-                  />
-                </div>
-              </div>
-              <div className="mt-6">
-                <Label text={t("labelLocalOverseasRatio")} required />
-                <TextInput
-                  field="localOverseasRatio"
-                  register={register}
-                  rules={{ required: requiredMsg }}
-                  error={err("localOverseasRatio")}
+                <SectionHeading
+                  number={t("section2Number")}
+                  title={t("section2Title")}
                 />
-              </div>
-
-              {/* ------ Section 3 ------ */}
-              <SectionHeading
-                number={t("section3Number")}
-                title={t("section3Title")}
-              />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
-                <div>
-                  <Label text={t("labelIsOnCSOL")} required />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                   <FormSelectInput
+                    form={form}
+                    name="canProvideBusinessEvidence"
+                    label={t("labelCanProvideBusinessEvidence")}
+                    options={yesNo}
+                    placeholder={placeholder}
+                  />
+                  <FormSelectInput
+                    form={form}
+                    name="canDemonstrateFinancialCapacity"
+                    label={t("labelCanDemonstrateFinancialCapacity")}
+                    options={yesNo}
+                    placeholder={placeholder}
+                  />
+                </div>
+                <div className="mt-6">
+                  <FormTextInput
+                    form={form}
+                    name="localOverseasRatio"
+                    label={t("labelLocalOverseasRatio")}
+                  />
+                </div>
+
+                <SectionHeading
+                  number={t("section3Number")}
+                  title={t("section3Title")}
+                />
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
+                  <FormSelectInput
+                    form={form}
                     name="isOnCSOL"
-                    control={control}
+                    label={t("labelIsOnCSOL")}
                     options={yesNoUnsure}
                     placeholder={placeholder}
-                    error={err("isOnCSOL")}
-                    rules={{ required: requiredMsg }}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelWillingToDoLMT")} required />
                   <FormSelectInput
+                    form={form}
                     name="willingToDoLMT"
-                    control={control}
+                    label={t("labelWillingToDoLMT")}
                     options={yesNo}
                     placeholder={placeholder}
-                    error={err("willingToDoLMT")}
-                    rules={{ required: requiredMsg }}
-                  />
-                </div>
-                <div>
-                  <Label
-                    text={t("labelCanProvidePositionDescription")}
-                    required
                   />
                   <FormSelectInput
+                    form={form}
                     name="canProvidePositionDescription"
-                    control={control}
+                    label={t("labelCanProvidePositionDescription")}
                     options={yesNo}
                     placeholder={placeholder}
-                    error={err("canProvidePositionDescription")}
-                    rules={{ required: requiredMsg }}
                   />
                 </div>
-              </div>
 
-              {/* ------ Section 4 ------ */}
-              <SectionHeading
-                number={t("section4Number")}
-                title={t("section4Title")}
-              />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
-                <div>
-                  <Label text={t("labelWillCoverAllFees")} required />
+                <SectionHeading
+                  number={t("section4Number")}
+                  title={t("section4Title")}
+                />
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                   <FormSelectInput
+                    form={form}
                     name="willCoverAllFees"
-                    control={control}
+                    label={t("labelWillCoverAllFees")}
                     options={optionsFees}
                     placeholder={placeholder}
-                    error={err("willCoverAllFees")}
-                    rules={{ required: requiredMsg }}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelAwareOfSAFLevy")} required />
                   <FormSelectInput
+                    form={form}
                     name="awareOfSAFLevy"
-                    control={control}
+                    label={t("labelAwareOfSAFLevy")}
                     options={yesNo}
                     placeholder={placeholder}
-                    error={err("awareOfSAFLevy")}
-                    rules={{ required: requiredMsg }}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelWillCoverRelocation")} required />
                   <FormSelectInput
+                    form={form}
                     name="willCoverRelocation"
-                    control={control}
+                    label={t("labelWillCoverRelocation")}
                     options={optionsRelocation}
                     placeholder={placeholder}
-                    error={err("willCoverRelocation")}
-                    rules={{ required: requiredMsg }}
                   />
                 </div>
-              </div>
 
-              {/* ------ Section 5 ------ */}
-              <SectionHeading
-                number={t("section5Number")}
-                title={t("section5Title")}
-              />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
-                <div>
-                  <Label
-                    text={t("labelWillProvideFullTimeContract")}
-                    required
-                  />
+                <SectionHeading
+                  number={t("section5Number")}
+                  title={t("section5Title")}
+                />
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                   <FormSelectInput
+                    form={form}
                     name="willProvideFullTimeContract"
-                    control={control}
+                    label={t("labelWillProvideFullTimeContract")}
                     options={yesNo}
                     placeholder={placeholder}
-                    error={err("willProvideFullTimeContract")}
-                    rules={{ required: requiredMsg }}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelPreparedForCompliance")} required />
                   <FormSelectInput
+                    form={form}
                     name="preparedForCompliance"
-                    control={control}
+                    label={t("labelPreparedForCompliance")}
                     options={yesNo}
                     placeholder={placeholder}
-                    error={err("preparedForCompliance")}
-                    rules={{ required: requiredMsg }}
                   />
-                </div>
-                <div>
-                  <Label text={t("labelOffersPRPathway")} required />
                   <FormSelectInput
+                    form={form}
                     name="offersPRPathway"
-                    control={control}
+                    label={t("labelOffersPRPathway")}
                     options={yesNoUnsure}
                     placeholder={placeholder}
-                    error={err("offersPRPathway")}
-                    rules={{ required: requiredMsg }}
                   />
                 </div>
-              </div>
 
-              {/* ------ Submit ------ */}
-              <div className="mt-12 pt-10 border-t border-gray-200 flex flex-col items-center text-center">
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="h-14 rounded-full bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? t("submittingButton") : t("submitButton")}
-                </Button>
-                <p className="mt-5 text-sm text-gray-500 leading-relaxed max-w-xl">
-                  {t("disclaimer")}
-                </p>
-              </div>
-            </form>
+                <div className="mt-12 pt-10 border-t border-gray-200 flex flex-col items-center text-center">
+                  <Button
+                    type="submit"
+                    disabled={form.formState.isSubmitting}
+                    className="h-14 rounded-full bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {form.formState.isSubmitting
+                      ? t("submittingButton")
+                      : t("submitButton")}
+                  </Button>
+                  <p className="mt-5 text-sm text-gray-500 leading-relaxed max-w-xl">
+                    {t("disclaimer")}
+                  </p>
+                </div>
+              </form>
+            </Form>
           )}
         </div>
       </div>
