@@ -155,7 +155,7 @@ export default function NavBar() {
               alt="RedBridge Consulting"
               width={140}
               height={40}
-              className="object-contain"
+              className="h-auto object-contain"
               priority
             />
           </Link>

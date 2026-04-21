@@ -33,7 +33,7 @@ export default function FormSelectInput<T extends FieldValues>({
         control={control}
         rules={rules}
         render={({ field }) => (
-          <Select onValueChange={field.onChange} value={field.value}>
+          <Select onValueChange={field.onChange} value={field.value ?? ""}>
             <SelectTrigger
               className={`w-full h-11 rounded-none border px-4 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brandred/20 ${
                 error ? "border-brandred" : "border-gray-300"

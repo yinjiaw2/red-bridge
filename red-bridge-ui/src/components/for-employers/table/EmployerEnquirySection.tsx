@@ -94,11 +94,20 @@ export default function EmployerEnquirySection() {
     register,
     handleSubmit,
     control,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => {
-    console.log("Employer enquiry submitted:", data);
+  const onSubmit = async (data: FormValues) => {
+    console.log("🚀 Form data to submit:", data);
+    const res = await fetch(process.env.NEXT_PUBLIC_BOOKING_SHEET_URL!, {
+      method: "POST",
+      body: JSON.stringify({ ...data, type: "EmployerEnquiry" }),
+    });
+    if (!res.ok) {
+      throw new Error(`Submission failed: ${res.status}`);
+    }
+    const json = await res.json();
+    console.log("🥳 Submission response:", json);
   };
 
   const err = (field: keyof FormValues) =>
@@ -107,7 +116,10 @@ export default function EmployerEnquirySection() {
       : undefined;
 
   return (
-    <section id="enquiry" className="bg-gray-50 py-24 px-[5%] border-b border-gray-200">
+    <section
+      id="enquiry"
+      className="bg-gray-50 py-24 px-[5%] border-b border-gray-200"
+    >
       <div className="max-w-300 mx-auto">
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-10">
@@ -118,9 +130,7 @@ export default function EmployerEnquirySection() {
         </div>
 
         {/* Heading */}
-        <h2
-          className="text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-5"
-        >
+        <h2 className="text-4xl md:text-5xl font-bold text-naviblue leading-tight font-serif mb-5">
           {t("headingMain")}{" "}
           <span className="text-brandred">{t("headingHighlight")}</span>
         </h2>
@@ -436,9 +446,10 @@ export default function EmployerEnquirySection() {
               <div className="mt-12 pt-10 border-t border-gray-200 flex flex-col items-center text-center">
                 <Button
                   type="submit"
-                  className="h-14 rounded-full bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md"
+                  disabled={isSubmitting}
+                  className="h-14 rounded-full bg-brandred px-10 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-red-800 transition-colors shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {t("submitButton")}
+                  {isSubmitting ? t("submittingButton") : t("submitButton")}
                 </Button>
                 <p className="mt-5 text-sm text-gray-500 leading-relaxed max-w-xl">
                   {t("disclaimer")}

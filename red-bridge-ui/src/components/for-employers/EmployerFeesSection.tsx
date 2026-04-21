@@ -1,7 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 interface FeeRow {
   title: string;
@@ -25,9 +32,7 @@ export default function EmployerFeesSection() {
         </div>
 
         {/* Heading */}
-        <h2
-          className="text-4xl md:text-5xl font-bold text-white leading-tight font-serif mb-5"
-        >
+        <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight font-serif mb-5">
           {t("headingMain")}{" "}
           <span className="text-highlight">{t("headingHighlight")}</span>
         </h2>
@@ -37,41 +42,39 @@ export default function EmployerFeesSection() {
           {t("description")}
         </p>
 
-        {/* Fee table card */}
-        <div className="bg-white rounded-none border border-gray-200 overflow-hidden mb-6 shadow-lg">
-          {/* Table header */}
-          <div className="grid grid-cols-[1fr_auto] items-center px-8 py-4 bg-gray-50 border-b border-gray-200">
-            <span className="text-[12px] font-bold tracking-wider uppercase text-naviblue">
-              {t("tableHeaderLabel")}
-            </span>
-            <span className="text-[12px] font-bold tracking-wider uppercase text-naviblue">
-              {t("tableHeaderAmount")}
-            </span>
-          </div>
-
-          {/* Rows */}
-          {rows.map((row, i) => (
-            <div
-              key={i}
-              className={`grid grid-cols-[1fr_auto] items-center gap-6 px-8 py-5 ${
-                i < rows.length - 1 ? "border-b border-gray-100" : ""
-              }`}
-            >
-              <div>
-                <p className="text-naviblue font-bold text-base leading-snug mb-1">
-                  {row.title}
-                </p>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {row.note}
-                </p>
-              </div>
-              <div className="text-right shrink-0">
-                <span className="text-brandred font-bold text-lg whitespace-nowrap">
-                  {row.amount}
-                </span>
-              </div>
-            </div>
-          ))}
+        {/* Fee table */}
+        <div className="bg-white shadow-lg mb-6 overflow-hidden">
+          <Table className="w-full table-fixed">
+            <TableHeader className="bg-gray-50">
+              <TableRow>
+                <TableHead className="w-[70%] px-8 py-4 text-[12px] font-bold tracking-wider uppercase text-naviblue wrap-break-word">
+                  {t("tableHeaderLabel")}
+                </TableHead>
+                <TableHead className="w-[30%] px-8 py-4 text-[12px] font-bold tracking-wider uppercase text-naviblue text-right wrap-break-word">
+                  {t("tableHeaderAmount")}
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {rows.map((row, i) => (
+                <TableRow key={i} className="border-gray-100">
+                  <TableCell className="px-8 py-5 align-top">
+                    <p className="text-naviblue font-bold text-base leading-snug mb-1 wrap-break-word">
+                      {row.title}
+                    </p>
+                    <p className="text-gray-500 text-sm leading-relaxed wrap-break-word">
+                      {row.note}
+                    </p>
+                  </TableCell>
+                  <TableCell className="px-8 py-5 text-right align-top">
+                    <span className="text-brandred font-bold text-lg wrap-break-word">
+                      {row.amount}
+                    </span>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         </div>
       </div>
     </section>

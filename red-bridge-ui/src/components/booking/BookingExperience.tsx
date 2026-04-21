@@ -264,8 +264,10 @@ async function submitBooking(
   subjectPrefix: string,
   heading: string,
 ) {
+  const type = "contact";
   const payload = {
     ...form,
+    type,
     consultationLabel,
     slotLabel,
     subjectPrefix,

@@ -75,7 +75,7 @@ export const Footer = () => {
                 alt={t("logoAlt")}
                 width={160}
                 height={44}
-                className="object-contain"
+                className="h-auto object-contain"
               />
             </div>
 
