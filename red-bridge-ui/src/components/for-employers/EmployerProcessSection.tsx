@@ -49,19 +49,19 @@ export default function EmployerProcessSection() {
         </p>
 
         {/* Phase cards */}
-        <Table className="mb-10 w-full table-fixed border">
+        <Table className="mb-10 w-full table-auto md:table-fixed border">
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[8%] text-sm">
+              <TableHead className="w-16 md:w-[8%] text-sm shrink-0">
                 {t("tableHeaders.phase")}
               </TableHead>
-              <TableHead className="w-[22%] text-sm">
+              <TableHead className="md:w-[22%] text-sm">
                 {t("tableHeaders.title")}
               </TableHead>
-              <TableHead className="w-[18%] text-sm">
+              <TableHead className="hidden md:table-cell md:w-[18%] text-sm">
                 {t("tableHeaders.team")}
               </TableHead>
-              <TableHead className="w-[52%] text-sm">
+              <TableHead className="hidden md:table-cell md:w-[52%] text-sm">
                 {t("tableHeaders.details")}
               </TableHead>
             </TableRow>
@@ -72,15 +72,19 @@ export default function EmployerProcessSection() {
                 <TableCell className="font-bold text-3xl text-brandred font-serif pt-5">
                   {phase.number}
                 </TableCell>
-                <TableCell className="align-top pt-5 text-base font-bold leading-snug text-naviblue break-words">
+                <TableCell className="pt-5 text-base font-bold leading-snug text-naviblue wrap-break-word">
                   {phase.title}
-                </TableCell>
-                <TableCell className="align-top pt-5">
-                  <span className="inline-block max-w-full whitespace-normal break-words border border-brandred bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brandred">
+                  <br></br>
+                  <span className="md:hidden mt-2 inline-block border border-brandred bg-white px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-brandred break-words">
                     {phase.teamBadge}
                   </span>
                 </TableCell>
-                <TableCell className="align-top pt-5 overflow-hidden">
+                <TableCell className="hidden md:table-cell pt-5">
+                  <span className="inline-block max-w-full whitespace-normal wrap-break-word border border-brandred bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brandred">
+                    {phase.teamBadge}
+                  </span>
+                </TableCell>
+                <TableCell className="hidden md:table-cell align-top pt-5 overflow-hidden">
                   <ul className="flex flex-col gap-3">
                     {phase.bullets.map((bullet, j) => (
                       <li key={j} className="flex min-w-0 items-start gap-2.5">
