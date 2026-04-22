@@ -33,6 +33,7 @@ export default function HeroSection() {
       imageSrc="/home-assets/melbourne-city.jpg"
       imageAlt={t("eyebrow")}
       imagePositionClassName="object-[74%_center]"
+      contentClassName="max-w-[720px]"
       trustItems={trust}
       stats={stats}
       actions={

@@ -10,6 +10,7 @@ import RequirementsSection from "@/components/services/491-pathway/RequirementsS
 import ReviewedBanner from "@/components/services/491-pathway/ReviewedBanner";
 import TradeoffSection from "@/components/services/491-pathway/TradeoffSection";
 import Footer from "@/components/shared/Footer";
+import InsightIdeaLinkBar from "@/components/services/InsightIdeaLinkBar";
 import NavBar from "@/components/shared/NavBar";
 
 export default function Page() {
@@ -28,6 +29,7 @@ export default function Page() {
         <ProcessSection />
         <Pathway191Section />
         <RelatedPathwaysSection />
+        <InsightIdeaLinkBar />
         <CTABandSection />
       </main>
 

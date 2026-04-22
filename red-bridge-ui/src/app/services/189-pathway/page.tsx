@@ -8,6 +8,7 @@ import StrategySection from "@/components/services/189-pathway/StrategySection";
 import ProcessSection from "@/components/services/189-pathway/ProcessSection";
 import RelatedPathwaysSection from "@/components/services/189-pathway/RelatedPathwaysSection";
 import CTABandSection from "@/components/services/189-pathway/CTABandSection";
+import InsightIdeaLinkBar from "@/components/services/InsightIdeaLinkBar";
 import NavBar from "@/components/shared/NavBar";
 import Footer from "@/components/shared/Footer";
 
@@ -25,6 +26,7 @@ export default function Page() {
         <StrategySection />
         <ProcessSection />
         <RelatedPathwaysSection />
+        <InsightIdeaLinkBar />
         <CTABandSection />
       </main>
 

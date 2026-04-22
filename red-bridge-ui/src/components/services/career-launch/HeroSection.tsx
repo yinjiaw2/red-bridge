@@ -9,6 +9,9 @@ export default function HeroSection() {
   const t = useTranslations("careerLaunch.hero");
   const rawPills = t.raw("pills");
   const rawStats = t.raw("stats");
+  const title2 = t("title2");
+  const assessmentPhrase = "Assessment Pathway";
+  const assessmentIndex = title2.indexOf(assessmentPhrase);
   const pills = Array.isArray(rawPills) ? (rawPills as string[]) : [];
   const stats = Array.isArray(rawStats)
     ? (rawStats as Array<{ value: string; label: string }>)
@@ -24,7 +27,18 @@ export default function HeroSection() {
         <>
           {t("title1")}
           <br />
-          <span className="text-[#b3131b]">{t("title2")}</span>
+          <span className="text-[#b3131b]">
+            {assessmentIndex >= 0 ? (
+              <>
+                {title2.slice(0, assessmentIndex)}
+                <span className="sm:whitespace-nowrap">
+                  {title2.slice(assessmentIndex)}
+                </span>
+              </>
+            ) : (
+              title2
+            )}
+          </span>
         </>
       }
       description={t("subtitle")}

@@ -10,6 +10,7 @@ import ProcessSection from "@/components/services/190-pathway/ProcessSection";
 import CTABandSection from "@/components/services/190-pathway/CTABandSection";
 import RelatedPathwaysSection from "@/components/services/190-pathway/RelatedPathwaysSection";
 import Footer from "@/components/shared/Footer";
+import InsightIdeaLinkBar from "@/components/services/InsightIdeaLinkBar";
 import NavBar from "@/components/shared/NavBar";
 
 export default function Page() {
@@ -27,6 +28,7 @@ export default function Page() {
         <VictoriaPrioritiesSection />
         <SelectionFactorsSection />
         <ProcessSection />
+        <InsightIdeaLinkBar />
         <CTABandSection />
         <RelatedPathwaysSection />
       </main>

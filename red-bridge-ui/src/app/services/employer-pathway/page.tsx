@@ -8,6 +8,7 @@ import PathwaysSection from "@/components/services/employer-pathway/PathwaysSect
 import ProcessSection from "@/components/services/employer-pathway/ProcessSection";
 import PromiseSection from "@/components/services/employer-pathway/PromiseSection";
 import ReviewedBanner from "@/components/services/employer-pathway/ReviewedBanner";
+import InsightIdeaLinkBar from "@/components/services/InsightIdeaLinkBar";
 
 export default function Page() {
   return (
@@ -22,6 +23,7 @@ export default function Page() {
         <ProcessSection />
         <IndustrySection />
         <PromiseSection />
+        <InsightIdeaLinkBar />
         <CTABandSection />
       </main>
 
