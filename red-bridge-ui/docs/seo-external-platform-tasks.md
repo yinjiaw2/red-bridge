@@ -76,14 +76,40 @@ These tasks cannot be done in code. Complete them manually in their respective p
 
 ---
 
-## 6. Cloudflare Configuration (after domain migration)
+## 6. Cloudflare Pages Build Configuration (CRITICAL — fix before deploy)
 
-1. **DNS**: Point `redbridge-consulting.com.au` A/CNAME record to your hosting
-2. **HTTPS**: Enable "Always Use HTTPS" and "Automatic HTTPS Rewrites"
-3. **www redirect**: Set up a redirect rule: `www.redbridge-consulting.com.au` → `redbridge-consulting.com.au` (301)
-4. **Caching**: Enable Cloudflare caching for static assets; set Cache-Control headers
-5. **Speed → Minification**: Enable HTML, CSS, JS minification
-6. **Analytics**: Enable Cloudflare Web Analytics for a privacy-first secondary data source
+The build was failing because of a wrong root directory setting and a deprecated adapter. Both are now fixed in the codebase. Update these settings in Cloudflare Pages → your project → Settings → Build & Deploy:
+
+| Setting | Old value (broken) | New value |
+|---|---|---|
+| **Root directory** | *(empty)* | `red-bridge-ui` |
+| **Build command** | `npx @cloudflare/next-on-pages@1` | `npm run build:cloudflare` |
+| **Output directory** | `.vercel/output/static` | `.open-next` |
+| **Node.js version** | any | 20.x |
+
+### Environment Variables (add in Cloudflare Pages → Settings → Environment Variables)
+
+These must be added manually — they are NOT read from the `.env` file:
+
+| Variable | Value | Environment |
+|---|---|---|
+| `NEXT_PUBLIC_GA_ID` | `G-B7DWL6EMN4` | Production + Preview |
+| `NEXT_PUBLIC_META_PIXEL_ID` | `1603950367696460` | Production + Preview |
+| `META_PIXEL_CAPI_TOKEN` | *(your CAPI token from .env)* | Production only |
+| `NEXT_PUBLIC_BOOKING_SHEET_URL` | *(your Google Sheets URL from .env)* | Production + Preview |
+
+### Domain Setup (after build is green)
+
+1. **DNS**: In Cloudflare DNS, add a CNAME pointing `redbridge-consulting.com.au` to your Pages project URL
+2. **Custom domain**: Cloudflare Pages → Custom domains → Add `redbridge-consulting.com.au`
+3. **HTTPS**: Enabled automatically by Cloudflare Pages
+4. **www redirect**: Add a Cloudflare Redirect Rule: `www.redbridge-consulting.com.au` → `redbridge-consulting.com.au` (301)
+
+### Post-deploy checks
+
+5. **Caching**: Enable Cloudflare caching for static assets
+6. **Speed → Minification**: Enable HTML, CSS, JS minification
+7. **Analytics**: Enable Cloudflare Web Analytics as a secondary privacy-first analytics source
 
 ---
 
