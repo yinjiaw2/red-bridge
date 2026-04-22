@@ -1,4 +1,4 @@
-name = "red-bridge-ui"
+name = "red-bridge-new"
 compatibility_date = "2025-04-01"
 compatibility_flags = ["nodejs_compat"]
 main = ".open-next/worker.js"
