@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# AI training and search bots — allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+Sitemap: https://redbridge-consulting.com.au/sitemap.xml
