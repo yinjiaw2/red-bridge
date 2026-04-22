@@ -2,8 +2,8 @@
   "employerPathway": {
     "industries": {
       "eyebrow": "我们的雇主资源",
-      "title1": "我们有",
-      "titleHighlight": "真实资源",
+      "title1": "我们专精的",
+      "titleHighlight": "职业方向",
       "subtitle": "我们只向您推荐经过严格审核的雇主。以下合作企业均持有有效的482担保资质，并在您的职业领域具备持续招聘需求。",
       "cards": [
         {
@@ -28,7 +28,7 @@
           ]
         }
       ],
-      "note": "没看到您的职业？",
+      "note": "想了解更多行业和职位？",
       "noteLinkText": "预约免费咨询",
       "noteLinkHref": "/booking?src=employer_network_other"
     }
