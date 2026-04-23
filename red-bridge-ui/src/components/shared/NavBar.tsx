@@ -125,8 +125,8 @@ export default function NavBar() {
   return (
     <>
       {/* â”€â”€ Fixed header bar â”€â”€ */}
-      <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-white shadow-sm font-(family-name:--font-geist-sans) font-semibold">
-        <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 flex items-center justify-between gap-4">
+      <header className="fixed top-0 left-0 right-0 z-50 h-16 2xl:h-20 bg-white shadow-sm font-(family-name:--font-geist-sans) font-semibold">
+        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto h-full px-4 sm:px-6 flex items-center justify-between gap-4">
           {/* Logo */}
           <Link
             href="/"
@@ -136,9 +136,9 @@ export default function NavBar() {
             <Image
               src="/rb-logo.png"
               alt="RedBridge Consulting"
-              width={140}
+              width={160}
               height={40}
-              className="h-auto object-contain"
+              className="h-auto object-contain 2xl:w-[180px]"
               priority
             />
           </Link>
