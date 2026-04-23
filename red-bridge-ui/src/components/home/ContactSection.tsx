@@ -44,29 +44,48 @@ export const ContactSection = () => {
         {/* Contact cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 md:mb-10">
           {/* Visit Us */}
-          <a
-            href="https://maps.google.com/?q=Level+9+Tower+3+18-38+Siddeley+Street+Docklands+VIC+3008"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-white/4 border border-white/8 rounded-2xl p-6 text-center hover:bg-white/[0.07] hover:border-white/[0.14] transition-all sm:p-8"
-          >
+          <div className="group bg-white/4 border border-white/8 rounded-2xl p-6 text-center hover:bg-white/[0.07] hover:border-white/[0.14] transition-all sm:p-8">
             <div className="inline-flex p-3 rounded-full bg-highlight/15 mb-5 group-hover:bg-highlight/25 transition-colors">
               <MapPin size={22} className="text-highlight" aria-hidden="true" />
             </div>
-            <h4 className="text-base font-bold text-white mb-3">
+            <h4 className="text-base font-bold text-white mb-4">
               {t("addressTitle")}
             </h4>
-            <p className="text-white/55 text-sm leading-relaxed mb-2">
-              {t("addressLine1")}
-              <br />
-              {t("addressLine2")}
-              <br />
-              {t("addressLine3")}
+
+            {/* Australia */}
+            <p className="text-highlight/80 text-xs font-semibold uppercase tracking-widest mb-1">
+              {t("addressAuLabel")}
             </p>
-            <p className="text-white/30 text-xs font-medium">
-              {t("addressSub")}
+            <a
+              href="https://maps.google.com/?q=Level+9+Tower+3+18-38+Siddeley+Street+Docklands+VIC+3008"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <p className="text-white/55 text-sm leading-relaxed mb-1 hover:text-white/75 transition-colors">
+                {t("addressLine1")}
+                <br />
+                {t("addressLine2")}
+                <br />
+                {t("addressLine3")}
+              </p>
+              <p className="text-white/30 text-xs font-medium">
+                {t("addressSub")}
+              </p>
+            </a>
+
+            <div className="my-4 border-t border-white/10" />
+
+            {/* China HQ */}
+            <p className="text-highlight/80 text-xs font-semibold uppercase tracking-widest mb-1">
+              {t("addressCnLabel")}
             </p>
-          </a>
+            <p className="text-white/55 text-sm leading-relaxed">
+              {t("addressCnLine1")}
+              <br />
+              {t("addressCnLine2")}
+            </p>
+          </div>
 
           {/* Call Us */}
           <a
@@ -84,8 +103,6 @@ export const ContactSection = () => {
             </p>
             <p className="text-white/55 text-sm leading-relaxed">
               {t("phoneTime1")}
-              <br />
-              {t("phoneTime2")}
             </p>
           </a>
 
