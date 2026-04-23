@@ -81,8 +81,22 @@ import visa189RelatedPathways from './visa-189/visa189-related-pathways-section.
 import visa189Strategy from './visa-189/visa189-strategy-section.json';
 import visa189ReviewedBanner from './visa-189/visa189ReviewedBanner.json';
 
-export default Object.assign(
-  {},
+type Obj = Record<string, unknown>;
+
+function deepMerge(target: Obj, source: Obj): Obj {
+  const result = { ...target };
+  for (const [key, value] of Object.entries(source)) {
+    const existing = result[key];
+    result[key] =
+      existing !== null && typeof existing === 'object' && !Array.isArray(existing) &&
+      value !== null && typeof value === 'object' && !Array.isArray(value)
+        ? deepMerge(existing as Obj, value as Obj)
+        : value;
+  }
+  return result;
+}
+
+const allMessages: Obj[] = [
   comparison190, contextBand190, ctaBand190, faq190, hero190,
   priorities190, process190, related190, requirements190, reviewedBanner190,
   roiExplainer190, selectionFactors190,
@@ -104,4 +118,6 @@ export default Object.assign(
   visa189ContextBand, visa189CtaBand, visa189DateOfEffect, visa189Hero,
   visa189OccupationReality, visa189Points, visa189Process, visa189RelatedPathways,
   visa189Strategy, visa189ReviewedBanner,
-);
+];
+
+export default allMessages.reduce((acc, msg) => deepMerge(acc, msg as Obj), {} as Obj);
