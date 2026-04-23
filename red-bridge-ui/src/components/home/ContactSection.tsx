@@ -88,23 +88,42 @@ export const ContactSection = () => {
           </div>
 
           {/* Call Us */}
-          <a
-            href="tel:0399617301"
-            className="group bg-white/4 border border-white/8 rounded-2xl p-6 text-center hover:bg-white/[0.07] hover:border-white/[0.14] transition-all sm:p-8"
-          >
+          <div className="group bg-white/4 border border-white/8 rounded-2xl p-6 text-center hover:bg-white/[0.07] hover:border-white/[0.14] transition-all sm:p-8">
             <div className="inline-flex p-3 rounded-full bg-highlight/15 mb-5 group-hover:bg-highlight/25 transition-colors">
               <PhoneCall size={22} className="text-highlight" aria-hidden="true" />
             </div>
-            <h4 className="text-base font-bold text-white mb-3">
+            <h4 className="text-base font-bold text-white mb-4">
               {t("phoneTitle")}
             </h4>
-            <p className="text-xl font-bold text-white mb-2 sm:text-2xl">
-              {t("phoneNumber")}
+
+            {/* Australia */}
+            <p className="text-highlight/80 text-xs font-semibold uppercase tracking-widest mb-1">
+              {t("phoneAuLabel")}
             </p>
+            <a href="tel:0399617301" className="block">
+              <p className="text-xl font-bold text-white mb-1 sm:text-2xl hover:text-white/80 transition-colors">
+                {t("phoneNumber")}
+              </p>
+            </a>
             <p className="text-white/55 text-sm leading-relaxed">
               {t("phoneTime1")}
             </p>
-          </a>
+
+            <div className="my-4 border-t border-white/10" />
+
+            {/* China HQ */}
+            <p className="text-highlight/80 text-xs font-semibold uppercase tracking-widest mb-1">
+              {t("phoneCnLabel")}
+            </p>
+            <a href="tel:13084409464" className="block">
+              <p className="text-xl font-bold text-white mb-1 sm:text-2xl hover:text-white/80 transition-colors">
+                {t("phoneCnNumber")}
+              </p>
+            </a>
+            <p className="text-white/55 text-sm leading-relaxed">
+              {t("phoneCnTime")}
+            </p>
+          </div>
 
           {/* Email Us */}
           <a
