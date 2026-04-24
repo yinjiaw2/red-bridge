@@ -13,11 +13,6 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-interface ServiceItem {
-  name: string;
-  href: string;
-}
-
 interface FooterLinkItem {
   name: string;
   href: string;
@@ -57,33 +52,32 @@ const socialHrefs: Record<string, string> = {
 
 export const Footer = () => {
   const t = useTranslations("footer");
-  const services = t.raw("services") as ServiceItem[];
   const companyLinks = t.raw("companyLinks") as FooterLinkItem[];
 
   const socialKeys = ["wechat", "facebook", "rednote", "instagram"] as const;
 
   return (
-    <footer className="bg-white text-gray-600 py-10 px-[5%] border-t border-gray-200">
-      <div className="max-w-300 mx-auto">
+    <footer className="bg-white text-gray-600 py-9 px-5 md:px-8 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto">
         {/* Top content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,520px)_minmax(320px,420px)] gap-10 lg:gap-20 xl:gap-28 mb-9 items-start justify-center">
           {/* Brand */}
-          <div className="lg:col-span-2 pr-0 lg:pr-20">
-            <div className="mb-4">
+          <div className="max-w-xl text-center lg:text-left">
+            <div className="mb-3">
               <Image
                 src="/rb-logo.png"
                 alt={t("logoAlt")}
-                width={160}
-                height={44}
-                className="h-auto object-contain"
+                width={144}
+                height={40}
+                className="h-auto object-contain mx-auto lg:mx-0"
               />
             </div>
 
-            <p className="text-[#D4A017] font-bold tracking-widest text-xs uppercase mb-4">
+            <p className="text-[#D4A017] font-bold tracking-[0.22em] text-[11px] uppercase mb-3">
               {t("tagline")}
             </p>
 
-            <p className="text-sm leading-relaxed max-w-md">
+            <p className="text-[13px] leading-6 max-w-lg mx-auto lg:mx-0">
               {t("descriptionBefore")}
               <a
                 href="https://www.insightidea.com.au/en"
@@ -98,38 +92,18 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* Services */}
-          <div>
-            <h5 className="text-gray-900 font-bold mb-4 flex items-center gap-2">
-              <span className="w-4 h-px bg-[#D4A017]" />
-              {t("servicesTitle")}
-            </h5>
-            <ul className="space-y-3 text-sm">
-              {services.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="hover:text-gray-900 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Company */}
-          <div>
-            <h5 className="text-gray-900 font-bold mb-4 flex items-center gap-2">
+          <div className="w-full max-w-md text-center lg:text-left">
+            <h5 className="text-gray-900 font-bold text-sm mb-4 flex items-center justify-center lg:justify-start gap-2">
               <span className="w-4 h-px bg-[#D4A017]" />
               {t("companyTitle")}
             </h5>
-            <ul className="space-y-3 text-sm">
+            <ul className="grid grid-cols-2 gap-x-8 gap-y-2.5 text-[13px] leading-5 justify-items-center lg:justify-items-start">
               {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-gray-900 transition-colors"
+                    className="block py-1 text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     {link.name}
                   </Link>

@@ -5,24 +5,15 @@
     "descriptionBefore": "A registered Australian consulting company dedicated to genuine career development and migration pathway support. All migration services are provided by ",
     "descriptionLink": "Insight Idea",
     "descriptionAfter": " — licensed migration agents and registered Australian law firm.",
-    "servicesTitle": "Services",
-    "services": [
-      { "name": "Career Launch Program", "href": "/services/career-launch" },
-      { "name": "189 Skilled Independent Visa", "href": "/services/189-pathway" },
-      { "name": "190 Skilled Nominated Visa", "href": "/services/190-pathway" },
-      { "name": "491 Skilled Work Regional Visa", "href": "/services/491-pathway" },
-      { "name": "482/186 Employer Sponsored Visa", "href": "/services/employer-pathway" },
-      { "name": "Emergency Visa Solutions", "href": "/services/emergency" }
-    ],
-    "companyTitle": "Company",
+    "companyTitle": "Our Company",
     "companyLinks": [
-  { "name": "About Us", "href": "/about" },
-  { "name": "Success Stories", "href": "/success-stories" },
-  { "name": "For Employers", "href": "/for-employers" },
-  { "name": "FAQ", "href": "/faq" },
-  { "name": "Book a Consultation", "href": "/contact" }
-]
-    ,
+      { "name": "482/186 Employer Sponsored Visa", "href": "/services/employer-pathway" },
+      { "name": "About Us", "href": "/about" },
+      { "name": "Success Stories", "href": "/success-cases" },
+      { "name": "For Employers", "href": "/for-employers" },
+      { "name": "FAQ", "href": "/services/faq" },
+      { "name": "Book a Consultation", "href": "/contact" }
+    ],
     "social": {
       "wechat": "WeChat Official Account",
       "facebook": "Facebook",

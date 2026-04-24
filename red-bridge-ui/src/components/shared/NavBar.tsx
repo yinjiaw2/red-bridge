@@ -1,25 +1,16 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 // â”€â”€â”€ Constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const LOCALE_COOKIE = "NEXT_LOCALE";
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // 1 year
-
-const SERVICE_LINKS = [
-  { key: "overview", href: "/services" },
-  { key: "careerLaunch", href: "/services/career-launch" },
-  { key: "pathway189", href: "/services/189-pathway" },
-  { key: "pathway190", href: "/services/190-pathway" },
-  { key: "pathway491", href: "/services/491-pathway" },
-  { key: "employerPathway", href: "/services/employer-pathway" },
-] as const;
 
 const SOCIAL_LINKS = {
   whatsapp: "https://wa.me/61400000000",
@@ -66,35 +57,16 @@ export default function NavBar() {
   const pathname = usePathname();
 
   const isActive = (href: string) => pathname === href;
-  const isServicesActive = pathname.startsWith("/services");
+  const isEmployeeSponsorshipActive = pathname === "/services/employer-pathway";
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
   const [qrModal, setQrModal] = useState<QrTarget | null>(null);
-
-  const servicesRef = useRef<HTMLLIElement>(null);
-
-  // Close services dropdown on outside click
-  useEffect(() => {
-    if (!servicesOpen) return;
-    function handleOutsideClick(e: MouseEvent) {
-      if (
-        servicesRef.current &&
-        !servicesRef.current.contains(e.target as Node)
-      ) {
-        setServicesOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, [servicesOpen]);
 
   // Close mobile menu on desktop resize
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth >= 768) {
         setMenuOpen(false);
-        setServicesOpen(false);
       }
     }
     window.addEventListener("resize", handleResize);
@@ -119,7 +91,6 @@ export default function NavBar() {
 
   function closeAll() {
     setMenuOpen(false);
-    setServicesOpen(false);
   }
 
   return (
@@ -158,39 +129,14 @@ export default function NavBar() {
                 </Link>
               </li>
 
-              {/* Services with dropdown */}
-              <li ref={servicesRef} className="relative">
-                <button
-                  className={`flex items-center gap-1 text-sm transition-colors hover:text-brandred cursor-pointer ${isServicesActive ? "text-brandred" : "text-gray-700"}`}
-                  onClick={() => setServicesOpen((v) => !v)}
-                  aria-expanded={servicesOpen}
-                  aria-haspopup="menu"
+              <li>
+                <Link
+                  href="/services/employer-pathway"
+                  className={`text-sm transition-colors hover:text-brandred ${isEmployeeSponsorshipActive ? "text-brandred" : "text-gray-700"}`}
+                  onClick={closeAll}
                 >
-                  {t("nav.services")}
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
-                  />
-                </button>
-
-                {servicesOpen && (
-                  <ul
-                    role="menu"
-                    className="absolute top-full left-0 mt-2 w-52 bg-white rounded-xl shadow-lg border border-gray-100 py-1.5 z-10"
-                  >
-                    {SERVICE_LINKS.map(({ key, href }) => (
-                      <li key={key} role="none">
-                        <Link
-                          href={href}
-                          role="menuitem"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-brandred/10 hover:text-brandred transition-colors"
-                          onClick={() => setServicesOpen(false)}
-                        >
-                          {t(`nav.servicesDropdown.${key}`)}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  {t("nav.employeeSponsorship")}
+                </Link>
               </li>
 
               <li>
@@ -294,33 +240,14 @@ export default function NavBar() {
                 </Link>
               </li>
 
-              {/* Services accordion */}
               <li>
-                <button
-                  className={`flex items-center justify-between w-full py-4 font-medium ${isServicesActive ? "text-brandred" : "text-gray-800"}`}
-                  onClick={() => setServicesOpen((v) => !v)}
-                  aria-expanded={servicesOpen}
+                <Link
+                  href="/services/employer-pathway"
+                  className={`block py-4 font-medium ${isEmployeeSponsorshipActive ? "text-brandred" : "text-gray-800"}`}
+                  onClick={closeAll}
                 >
-                  {t("nav.services")}
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
-                  />
-                </button>
-                {servicesOpen && (
-                  <ul className="pb-2 pl-3 space-y-1 list-none">
-                    {SERVICE_LINKS.map(({ key, href }) => (
-                      <li key={key}>
-                        <Link
-                          href={href}
-                          className="block py-2 text-sm text-gray-600 hover:text-brandred"
-                          onClick={closeAll}
-                        >
-                          {t(`nav.servicesDropdown.${key}`)}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  {t("nav.employeeSponsorship")}
+                </Link>
               </li>
 
               <li>
