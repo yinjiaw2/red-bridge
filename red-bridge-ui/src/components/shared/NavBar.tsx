@@ -93,6 +93,9 @@ export default function NavBar() {
     setMenuOpen(false);
   }
 
+  const desktopNavLinkClass =
+    "inline-flex items-center justify-center text-sm transition-colors hover:text-brandred whitespace-nowrap";
+
   return (
     <>
       {/* â”€â”€ Fixed header bar â”€â”€ */}
@@ -123,7 +126,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/"
-                  className={`text-sm transition-colors hover:text-brandred ${isActive("/") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} w-14 ${isActive("/") ? "text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.home")}
                 </Link>
@@ -132,7 +135,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/services/employer-pathway"
-                  className={`text-sm transition-colors hover:text-brandred ${isEmployeeSponsorshipActive ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} w-40 ${isEmployeeSponsorshipActive ? "text-brandred" : "text-gray-700"}`}
                   onClick={closeAll}
                 >
                   {t("nav.employeeSponsorship")}
@@ -142,7 +145,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/success-cases"
-                  className={`text-sm transition-colors hover:text-brandred ${isActive("/success-cases") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} w-28 ${isActive("/success-cases") ? "text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.successCases")}
                 </Link>
@@ -151,7 +154,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/for-employers"
-                  className={`text-sm transition-colors hover:text-brandred ${isActive("/for-employers") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} w-28 ${isActive("/for-employers") ? "text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.forEmployers")}
                 </Link>
@@ -160,7 +163,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/about"
-                  className={`text-sm transition-colors hover:text-brandred ${isActive("/about") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} w-20 ${isActive("/about") ? "text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.about")}
                 </Link>
@@ -169,7 +172,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/services/faq"
-                  className={`text-sm transition-colors hover:text-brandred ${isActive("/services/faq") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} w-16 ${isActive("/services/faq") ? "text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.faq")}
                 </Link>
@@ -181,13 +184,13 @@ export default function NavBar() {
               <button
                 onClick={switchLocale}
                 aria-label={t("localeSwitch.ariaLabel")}
-                className="text-sm text-gray-500 hover:text-brandred transition-colors whitespace-nowrap"
+                className="w-16 text-center text-sm text-gray-500 hover:text-brandred transition-colors whitespace-nowrap"
               >
                 {t(`localeSwitch.${targetLocale}`)}
               </button>
               <Link
                 href="/contact"
-                className="ml-8 px-4 py-2 rounded-full text-sm font-medium text-[#1a1a1a] bg-[#FDC365] hover:bg-[#b88a10] hover:shadow-[0_0_12px_rgba(212,160,23,0.4)] transition-all shadow-sm whitespace-nowrap"
+                className="ml-8 inline-flex min-w-36 items-center justify-center px-4 py-2 rounded-full text-sm font-medium text-[#1a1a1a] bg-[#FDC365] hover:bg-[#b88a10] hover:shadow-[0_0_12px_rgba(212,160,23,0.4)] transition-all shadow-sm whitespace-nowrap"
               >
                 {t("cta")}
               </Link>
@@ -199,7 +202,7 @@ export default function NavBar() {
             <button
               onClick={switchLocale}
               aria-label={t("localeSwitch.ariaLabel")}
-              className="text-sm text-gray-500"
+              className="w-16 text-center text-sm text-gray-500"
             >
               {t(`localeSwitch.${targetLocale}`)}
             </button>
