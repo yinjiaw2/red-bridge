@@ -20,14 +20,6 @@
           "question": "How long does the 482 employer sponsored visa process take in Australia?",
           "answer": "<p>The 482 process usually falls somewhere between <strong>3 and 12 months</strong>. The range depends on the employer's sponsorship status, your occupation, document readiness, and current Department processing times.</p>"
         },
-        "victoria190": {
-          "question": "How long does 190 state nomination take in Victoria?",
-          "answer": "<p>Victoria 190 timing varies. A realistic range is often <strong>2 to 12 months</strong>, depending on your points, occupation, and the pace of invitation rounds during that period.</p>"
-        },
-        "students": {
-          "question": "Can international students apply without permanent residency or a job offer?",
-          "answer": "<p>Yes. Some clients begin with work-experience-building routes rather than immediate PR or sponsorship routes. <career>Career Launch</career> is built for that earlier stage.</p>"
-        },
         "cost": {
           "question": "How much does skilled migration cost in Australia?",
           "answer": "<p>Your initial consultation with RedBridge is free. Program costs vary by route and scope, and government fees sit separately from our service fees. The key principle is that costs are documented clearly before you commit.</p>"
@@ -39,10 +31,6 @@
         "skillsAssessment": {
           "question": "What is the skills assessment success guarantee?",
           "answer": "<p>If you complete the relevant program and your skills assessment is not successful, we continue supporting you at no additional cost until the assessment requirement is properly resolved.</p>"
-        },
-        "pathwayFit": {
-          "question": "Which visa pathway is right for my occupation and situation?",
-          "answer": "<p><strong>Recent graduates needing local experience:</strong> <career>Career Launch Program</career></p><p><strong>Employer interest or sponsor route:</strong> <employer>482/186 Employer Sponsored</employer></p><p><strong>Independent points-based PR:</strong> <visa189>189 Pathway</visa189></p><p><strong>State-backed points boost:</strong> <visa190>190 Pathway</visa190></p><p><strong>Regional migration with extra points:</strong> <visa491>491 Pathway</visa491></p><p>The fastest way to know is to book the free consultation and get a tailored, no-pressure assessment.</p>"
         },
         "legal": {
           "question": "Who handles visa lodgement and migration legal matters?",
