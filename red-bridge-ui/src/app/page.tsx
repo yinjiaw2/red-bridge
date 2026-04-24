@@ -37,7 +37,6 @@ export default function Home() {
       <main className="pt-16">
         <HeroSection />
         <VideoSection />
-        <UserScenarioSection />
         <TrustSafetySection />
         <SuccessTicker />
         <ComparisonSection />
