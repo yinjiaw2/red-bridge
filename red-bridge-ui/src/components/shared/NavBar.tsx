@@ -94,7 +94,7 @@ export default function NavBar() {
   }
 
   const desktopNavLinkClass =
-    "inline-flex items-center justify-center text-sm transition-colors hover:text-brandred whitespace-nowrap";
+    "inline-flex items-center justify-center rounded-full px-2.5 py-1.5 text-sm transition-all hover:bg-primary/5 hover:text-brandred whitespace-nowrap lg:px-3";
 
   return (
     <>
@@ -120,13 +120,13 @@ export default function NavBar() {
           {/* â”€â”€ Desktop navigation â”€â”€ */}
           <nav
             aria-label={t("nav.ariaLabel")}
-            className="hidden md:flex items-center gap-6"
+            className="hidden md:flex items-center gap-4 lg:gap-5"
           >
-            <ul className="flex items-center gap-6 list-none m-0 p-0">
+            <ul className="flex items-center gap-1 lg:gap-2 list-none m-0 p-0">
               <li>
                 <Link
                   href="/"
-                  className={`${desktopNavLinkClass} w-14 ${isActive("/") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} ${isActive("/") ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.home")}
                 </Link>
@@ -135,7 +135,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/services/employer-pathway"
-                  className={`${desktopNavLinkClass} w-40 ${isEmployeeSponsorshipActive ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} ${isEmployeeSponsorshipActive ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
                   onClick={closeAll}
                 >
                   {t("nav.employeeSponsorship")}
@@ -145,7 +145,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/success-cases"
-                  className={`${desktopNavLinkClass} w-28 ${isActive("/success-cases") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} ${isActive("/success-cases") ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.successCases")}
                 </Link>
@@ -154,7 +154,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/for-employers"
-                  className={`${desktopNavLinkClass} w-28 ${isActive("/for-employers") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} ${isActive("/for-employers") ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.forEmployers")}
                 </Link>
@@ -163,7 +163,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/about"
-                  className={`${desktopNavLinkClass} w-20 ${isActive("/about") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} ${isActive("/about") ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.about")}
                 </Link>
@@ -172,7 +172,7 @@ export default function NavBar() {
               <li>
                 <Link
                   href="/services/faq"
-                  className={`${desktopNavLinkClass} w-16 ${isActive("/services/faq") ? "text-brandred" : "text-gray-700"}`}
+                  className={`${desktopNavLinkClass} ${isActive("/services/faq") ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.faq")}
                 </Link>

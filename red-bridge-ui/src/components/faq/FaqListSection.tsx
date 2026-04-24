@@ -8,14 +8,10 @@ const itemKeys = [
   "placements",
   "visa482186",
   "process482",
-  "victoria190",
-  "students",
   "cost",
   "payment",
   "skillsAssessment",
-  "pathwayFit",
   "legal",
-  "industries",
   "location",
 ] as const;
 

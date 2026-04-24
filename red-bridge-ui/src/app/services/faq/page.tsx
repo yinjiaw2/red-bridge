@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
     {
       title: "FAQ | Visas, Sponsorship & How RedBridge Works",
       description:
-        "Straight answers about employer sponsorship, points-tested migration, skills assessments, and how RedBridge works — including 482, 186, 189, 190, and 491 visa questions.",
+        "Straight answers about employer sponsorship, skills assessments, and how RedBridge works — including 482 and 186 visa questions.",
     },
     {
       title: "常见问题 | 签证、担保与红桥咨询服务 | 红桥咨询",
@@ -52,14 +52,6 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "The 482 process usually falls somewhere between 3 and 12 months. The range depends on the employer's sponsorship status, your occupation, document readiness, and current Department processing times.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does 190 state nomination take in Victoria?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Victoria 190 timing varies. A realistic range is often 2 to 12 months, depending on your points, occupation, and the pace of invitation rounds during that period.",
       },
     },
     {
@@ -108,14 +100,6 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "All formal migration advice and visa lodgements are handled by Insight Idea, our licensed legal partner. RedBridge handles the career, pathway, and employer side of the work.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What industries and occupations does RedBridge Consulting specialise in?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our strongest focus is in Accounting and Finance, ICT and Technology, and Marketing and Business — the sectors around which our employer network and skills assessment preparation systems have been built.",
       },
     },
     {
