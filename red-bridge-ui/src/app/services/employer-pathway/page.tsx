@@ -42,10 +42,10 @@ export default function Page() {
         <ReviewedBanner />
         <FitSection />
         <PathwaysSection />
-
+        <ServiceIntroSection />
         <IndustrySection />
         <PromiseSection />
-        <ServiceIntroSection />
+
         <InsightIdeaLinkBar />
         <CTABandSection />
       </main>
