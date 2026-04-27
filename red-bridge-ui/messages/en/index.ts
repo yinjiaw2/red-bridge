@@ -40,6 +40,7 @@ import employerObligations from './for-employers/employerObligations.json';
 import employerPartnership from './for-employers/employerPartnership.json';
 import employerProcess from './for-employers/employerProcess.json';
 import employerWhy from './for-employers/employerWhy.json';
+import employerServiceIntro from './for-employers/employerServiceIntro.json';
 import home from './home/home.json';
 import homeCaseStudy from './home/homeCaseStudy.json';
 import homeContact from './home/homeContact.json';
@@ -105,7 +106,7 @@ const allMessages: Obj[] = [
   aboutCta, aboutEmployer, aboutLegal, aboutStory, aboutTeam, aboutUs, aboutValues,
   contactPage, faqPage,
   employerCta, employerDifference, employerEnquiry, employerFaq, employerFees,
-  employerObligations, employerPartnership, employerProcess, employerWhy,
+  employerObligations, employerPartnership, employerProcess, employerWhy, employerServiceIntro,
   home, homeCaseStudy, homeContact, homeEmployerNetwork, homeVideo, homehero,
   careerLaunchCta, careerLaunchHero, careerLaunchMajors, careerLaunchTimeline,
   employerPathwayCta, employerPathwayFaq, employerPathwayFit, employerPathwayHero,

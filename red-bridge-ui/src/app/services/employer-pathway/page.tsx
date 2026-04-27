@@ -11,6 +11,7 @@ import PathwaysSection from "@/components/services/employer-pathway/PathwaysSect
 import ProcessSection from "@/components/services/employer-pathway/ProcessSection";
 import PromiseSection from "@/components/services/employer-pathway/PromiseSection";
 import ReviewedBanner from "@/components/services/employer-pathway/ReviewedBanner";
+import ServiceIntroSection from "@/components/services/employer-pathway/ServiceIntroSection";
 import InsightIdeaLinkBar from "@/components/services/InsightIdeaLinkBar";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -18,7 +19,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata(
     locale,
     {
-      title: "482 Employer Sponsored Visa | From Work Visa to Permanent Residency",
+      title:
+        "482 Employer Sponsored Visa | From Work Visa to Permanent Residency",
       description:
         "RedBridge connects skilled professionals with verified Australian employers for 482 TSS visa sponsorship and the 186 permanent residency pathway. Melbourne & Sydney-based placements in Accounting, ICT, and Marketing.",
     },
@@ -41,9 +43,10 @@ export default function Page() {
         <ReviewedBanner />
         <FitSection />
         <PathwaysSection />
-        <ProcessSection />
+
         <IndustrySection />
         <PromiseSection />
+        <ServiceIntroSection />
         <InsightIdeaLinkBar />
         <CTABandSection />
       </main>

@@ -1,0 +1,27 @@
+{
+  "employerPathway": {
+    "serviceIntro": {
+      "eyebrow": "Service Structure",
+      "title1": "What Your Service",
+      "titleHighlight": "Covers",
+      "subtitle": "Our service is structured in two parts: core visa placement services and a five-year employment guarantee. Here is what each part includes.",
+      "mainTitle": "Core Service",
+      "mainSubtitle": "Covered by the primary service fee",
+      "mainItems": [
+        "Provide and secure a 482 employer nomination on your behalf",
+        "Provide and secure a 186 employer nomination on your behalf",
+        "RedBridge does not participate in salary negotiations between you and the employer",
+        "Your specific job duties and compensation are determined directly between you and the employer",
+        "A 5-year employment contract is included as part of the arrangement"
+      ],
+      "guaranteeTitle": "Service Guarantee",
+      "guaranteeSubtitle": "5-year employment support & continuity",
+      "guaranteeDesc": "The service guarantee covers employment continuity and proactive management throughout your five-year service period, ensuring you remain in genuine, paid employment.",
+      "guaranteeItems": [
+        "Regular check-ins with the employer to confirm your active on-site presence and role performance",
+        "Periodic salary review every 3–6 months to ensure continued compliance and market alignment",
+        "If you are unable to continue in your current position due to a role mismatch, we will assist with a job adjustment or employer transfer to maintain your genuine employment status throughout the service period"
+      ]
+    }
+  }
+}
