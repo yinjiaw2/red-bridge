@@ -13,7 +13,6 @@ export default function PaymentNodeSection() {
   const t = useTranslations("employerPathway.paymentNode");
   const rawSteps = t.raw("steps");
   const steps = Array.isArray(rawSteps) ? (rawSteps as PaymentStep[]) : [];
-  const lastStepIndex = steps.length - 1;
 
   return (
     <section
@@ -36,36 +35,70 @@ export default function PaymentNodeSection() {
           </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-6">
-          {steps.map((step, index) => {
-            const isLast = index === lastStepIndex;
+        <div className="mx-auto max-w-[900px]">
+          <div className="relative space-y-0 before:absolute before:bottom-0 before:left-[23px] before:top-4 before:w-[2px] before:bg-border md:before:left-1/2 md:before:-ml-[1px]">
+            {steps.map((step, index) => {
+              const isHighlighted = step.number === "5" || step.number === "7";
+              const isLeft = index % 2 === 0;
 
-            return (
-              <article
-                key={step.number}
-                className={[
-                  "relative flex items-start gap-4 rounded-[10px] border p-6",
-                  isLast
-                    ? "md:col-span-2 xl:col-start-2 xl:col-span-4 border-primary/20 bg-primary/[0.04] shadow-[0_18px_40px_rgba(164,28,40,0.08)]"
-                    : "border-border bg-card xl:col-span-2",
-                ].join(" ")}
-              >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-[14px] font-bold text-white shadow-sm">
-                  {step.number}
-                </div>
-                <div className="pt-1">
-                  <h3
+              return (
+                <div
+                  key={step.number}
+                  className={[
+                    "relative flex w-full items-center py-4",
+                    isLeft ? "md:flex-row-reverse" : "md:flex-row",
+                  ].join(" ")}
+                >
+                  {/* Timeline dot */}
+                  <div
                     className={[
-                      "mt-1 text-[17px] font-semibold leading-7 text-foreground",
-                      isLast ? "text-[20px]" : "",
+                      "absolute left-[24px] flex h-[40px] w-[40px] -translate-x-1/2 items-center justify-center rounded-full border-[4px] border-background text-[14px] font-bold transition-all duration-300 md:left-1/2",
+                      isHighlighted
+                        ? "z-10 scale-110 bg-primary text-white"
+                        : "z-10 bg-background text-primary",
                     ].join(" ")}
                   >
-                    {step.label}
-                  </h3>
+                    {!isHighlighted && (
+                      <div className="absolute inset-0 rounded-full bg-primary/10" />
+                    )}
+                    <span className="relative z-10">{step.number}</span>
+                  </div>
+
+                  {/* Empty space for alternating layout on desktop */}
+                  <div className="hidden md:block md:w-1/2" />
+
+                  {/* Content Card */}
+                  <div
+                    className={[
+                      "ml-[60px] w-full md:ml-0 md:w-1/2",
+                      isLeft ? "md:pr-10 lg:pr-12" : "md:pl-10 lg:pl-12",
+                    ].join(" ")}
+                  >
+                    <article
+                      className={[
+                        "relative rounded-[10px] border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
+                        isLeft ? "md:text-right" : "text-left",
+                        isHighlighted
+                          ? "border-primary/40  shadow-md ring-1 ring-primary/20"
+                          : "border-border bg-card",
+                      ].join(" ")}
+                    >
+                      <h3
+                        className={[
+                          "font-semibold leading-7",
+                          isHighlighted
+                            ? "text-[18px] text-primary"
+                            : "text-[17px] text-foreground",
+                        ].join(" ")}
+                      >
+                        {step.label}
+                      </h3>
+                    </article>
+                  </div>
                 </div>
-              </article>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
