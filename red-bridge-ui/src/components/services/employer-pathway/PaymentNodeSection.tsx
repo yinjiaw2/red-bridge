@@ -54,12 +54,9 @@ export default function PaymentNodeSection() {
                   {step.number}
                 </div>
                 <div className="pt-1">
-                  <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-primary/75">
-                    {t("stepLabel")}
-                  </p>
                   <h3
                     className={[
-                      "mt-2 text-[17px] font-semibold leading-7 text-foreground",
+                      "mt-1 text-[17px] font-semibold leading-7 text-foreground",
                       isLast ? "text-[20px]" : "",
                     ].join(" ")}
                   >
