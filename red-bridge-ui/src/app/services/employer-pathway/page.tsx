@@ -4,7 +4,6 @@ import { buildMetadata } from "@/lib/seo";
 import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
 import CTABandSection from "@/components/services/employer-pathway/CTABandSection";
-import FitSection from "@/components/services/employer-pathway/FitSection";
 import HeroSection from "@/components/services/employer-pathway/HeroSection";
 import IndustrySection from "@/components/services/employer-pathway/IndustrySection";
 import PathwaysSection from "@/components/services/employer-pathway/PathwaysSection";
@@ -41,7 +40,7 @@ export default function Page() {
       <main className="overflow-hidden pt-[70px]">
         <HeroSection />
         <ReviewedBanner />
-        <FitSection />
+
         <PathwaysSection />
         <ServiceIntroSection />
         <PaymentNodeSection />

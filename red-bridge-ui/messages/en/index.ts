@@ -53,7 +53,6 @@ import careerLaunchMajors from './services/career-launch/majors.json';
 import careerLaunchTimeline from './services/career-launch/timeline.json';
 import employerPathwayCta from './services/employer-pathway/cta.json';
 import employerPathwayFaq from './services/employer-pathway/faq.json';
-import employerPathwayFit from './services/employer-pathway/fit.json';
 import employerPathwayHero from './services/employer-pathway/hero.json';
 import employerPathwayIndustries from './services/employer-pathway/industries.json';
 import employerPathwayPathways from './services/employer-pathway/pathways.json';
@@ -109,7 +108,7 @@ const allMessages: Obj[] = [
   employerObligations, employerPartnership, employerProcess, employerWhy, employerServiceIntro,
   home, homeCaseStudy, homeContact, homeEmployerNetwork, homeVideo, homehero,
   careerLaunchCta, careerLaunchHero, careerLaunchMajors, careerLaunchTimeline,
-  employerPathwayCta, employerPathwayFaq, employerPathwayFit, employerPathwayHero,
+  employerPathwayCta, employerPathwayFaq, employerPathwayHero,
   employerPathwayIndustries, employerPathwayPathways, employerPathwayPaymentNode,
   employerPathwayPromise, employerPathwayReviewed,
   servicesHomePage, serviceCareerLaunch,
