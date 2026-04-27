@@ -57,7 +57,6 @@ import employerPathwayFit from './services/employer-pathway/fit.json';
 import employerPathwayHero from './services/employer-pathway/hero.json';
 import employerPathwayIndustries from './services/employer-pathway/industries.json';
 import employerPathwayPathways from './services/employer-pathway/pathways.json';
-import employerPathwayProcess from './services/employer-pathway/process.json';
 import employerPathwayPromise from './services/employer-pathway/promise.json';
 import employerPathwayReviewed from './services/employer-pathway/reviewed.json';
 import servicesHomePage from './services/home/page.json';
@@ -110,7 +109,7 @@ const allMessages: Obj[] = [
   home, homeCaseStudy, homeContact, homeEmployerNetwork, homeVideo, homehero,
   careerLaunchCta, careerLaunchHero, careerLaunchMajors, careerLaunchTimeline,
   employerPathwayCta, employerPathwayFaq, employerPathwayFit, employerPathwayHero,
-  employerPathwayIndustries, employerPathwayPathways, employerPathwayProcess,
+  employerPathwayIndustries, employerPathwayPathways,
   employerPathwayPromise, employerPathwayReviewed,
   servicesHomePage, serviceCareerLaunch,
   sharedComparison, sharedFooter, insightIdeaLinkBar, navBar,
