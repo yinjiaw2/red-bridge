@@ -20,17 +20,19 @@ export default function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/home-hero-bg.png"
+          src="/home-hero-bg.jpg"
           alt={t("imageAlt")}
           fill
           priority
+          quality={100}
+          unoptimized
           sizes="100vw"
-          className="object-cover object-right"
+          className="object-cover object-center md:object-right"
         />
 
-        <div className="absolute inset-y-0 left-0 w-[35%] bg-linear-to-r from-white/90 via-white/40 to-transparent" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.93)_35%,rgba(255,255,255,0.75)_55%,rgba(255,255,255,0.2)_75%,rgba(255,255,255,0)_100%)]" />
-        <div className="absolute inset-y-0 left-[45%] w-[20%] bg-white/30 blur-3xl" />
+        <div className="absolute inset-y-0 left-0 w-[34%] bg-linear-to-r from-white/92 via-white/34 to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.84)_24%,rgba(255,255,255,0.46)_38%,rgba(255,255,255,0.08)_52%,rgba(255,255,255,0)_62%)]" />
+        <div className="absolute inset-y-0 left-0 w-[18%] bg-white/18 blur-3xl" />
       </div>
 
       {/* Content */}
@@ -55,7 +57,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Description */}
-          <p className="mt-4 text-[15px] leading-[1.65] text-[#6e6760] sm:mt-5 md:text-[17px]">
+          <p className="mt-4 text-[15px] leading-[1.65] text-[#1f1f1f] sm:mt-5 md:text-[17px]">
             {t("description")}
           </p>
 
@@ -84,7 +86,7 @@ export default function HeroSection() {
                 <Users className="h-6 w-6 text-[#b3131b]" aria-hidden="true" />
                 <div>
                   <div className="text-xl font-bold sm:text-2xl">200+</div>
-                  <div className="text-xs text-[#7a736d] sm:text-sm">
+                  <div className="text-xs text-[#1f1f1f] sm:text-sm">
                     {t("stats.placements")}
                   </div>
                 </div>
@@ -97,7 +99,7 @@ export default function HeroSection() {
                 />
                 <div>
                   <div className="text-xl font-bold sm:text-2xl">300+</div>
-                  <div className="text-xs text-[#7a736d] sm:text-sm">
+                  <div className="text-xs text-[#1f1f1f] sm:text-sm">
                     {t("stats.assessments")}
                   </div>
                 </div>
@@ -109,8 +111,8 @@ export default function HeroSection() {
                   aria-hidden="true"
                 />
                 <div>
-                  <div className="text-xl font-bold sm:text-2xl">10+</div>
-                  <div className="text-xs text-[#7a736d] sm:text-sm">
+                  <div className="text-xl font-bold text-[#1f1f1f] md:text-white sm:text-2xl">10+</div>
+                  <div className="text-xs text-[#1f1f1f] md:text-white sm:text-sm">
                     {t("stats.employerPartners")}
                   </div>
                 </div>
