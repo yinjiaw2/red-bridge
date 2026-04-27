@@ -1,0 +1,41 @@
+{
+  "employerPathway": {
+    "paymentNode": {
+      "eyebrow": "Payment Structure",
+      "title1": "Main Service Contract",
+      "titleHighlight": "Payment Milestones",
+      "subtitle": "The main service contract is paid in stages. Each payment point is tied to a clear delivery milestone so fees are aligned with actual progress.",
+      "stepLabel": "Milestone",
+      "steps": [
+        {
+          "number": "1",
+          "label": "Contract signing"
+        },
+        {
+          "number": "2",
+          "label": "Client meets the employer and confirms satisfaction"
+        },
+        {
+          "number": "3",
+          "label": "Placement delivered to the employer"
+        },
+        {
+          "number": "4",
+          "label": "482 visa application lodged"
+        },
+        {
+          "number": "5",
+          "label": "482 visa granted"
+        },
+        {
+          "number": "6",
+          "label": "186 visa application lodged"
+        },
+        {
+          "number": "7",
+          "label": "186 visa approved"
+        }
+      ]
+    }
+  }
+}

@@ -8,6 +8,7 @@ import FitSection from "@/components/services/employer-pathway/FitSection";
 import HeroSection from "@/components/services/employer-pathway/HeroSection";
 import IndustrySection from "@/components/services/employer-pathway/IndustrySection";
 import PathwaysSection from "@/components/services/employer-pathway/PathwaysSection";
+import PaymentNodeSection from "@/components/services/employer-pathway/PaymentNodeSection";
 import PromiseSection from "@/components/services/employer-pathway/PromiseSection";
 import ReviewedBanner from "@/components/services/employer-pathway/ReviewedBanner";
 import ServiceIntroSection from "@/components/services/employer-pathway/ServiceIntroSection";
@@ -43,6 +44,7 @@ export default function Page() {
         <FitSection />
         <PathwaysSection />
         <ServiceIntroSection />
+        <PaymentNodeSection />
         <IndustrySection />
         <PromiseSection />
 
