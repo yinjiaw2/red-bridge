@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
 
@@ -10,6 +10,8 @@ type PaymentStep = {
 };
 
 export default function PaymentNodeSection() {
+  const locale = useLocale();
+  const isChinese = locale.startsWith("zh");
   const t = useTranslations("employerPathway.paymentNode");
   const rawSteps = t.raw("steps");
   const steps = Array.isArray(rawSteps) ? (rawSteps as PaymentStep[]) : [];
@@ -27,7 +29,8 @@ export default function PaymentNodeSection() {
             {t("eyebrow")}
           </div>
           <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
-            {t("title1")}{" "}
+            {t("title1")}
+            {!isChinese ? " " : ""}
             <em className="not-italic text-primary">{t("titleHighlight")}</em>
           </h2>
           <p className="mx-auto mt-4 max-w-[760px] text-[15px] leading-7 text-muted-foreground">

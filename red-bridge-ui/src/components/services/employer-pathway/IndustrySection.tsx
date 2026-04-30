@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { BriefcaseBusiness, ChartNoAxesColumn, LaptopMinimal } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
 
@@ -15,6 +15,8 @@ type Card = {
 const icons = [LaptopMinimal, ChartNoAxesColumn, BriefcaseBusiness];
 
 export default function IndustrySection() {
+  const locale = useLocale();
+  const isChinese = locale.startsWith("zh");
   const t = useTranslations("employerPathway.industries");
   const rawCards = t.raw("cards");
   const cards = Array.isArray(rawCards) ? (rawCards as Card[]) : [];
@@ -28,7 +30,9 @@ export default function IndustrySection() {
             {t("eyebrow")}
           </div>
           <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
-            {t("title1")} <em className="not-italic text-primary">{t("titleHighlight")}</em>
+            {t("title1")}
+            {!isChinese ? " " : ""}
+            <em className="not-italic text-primary">{t("titleHighlight")}</em>
           </h2>
           <p className="mx-auto mt-4 max-w-[760px] text-[15px] leading-7 text-muted-foreground">
             {t("subtitle")}

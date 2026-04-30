@@ -1,11 +1,13 @@
 "use client";
 
 import { CheckCircle2, XCircle } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
 
 export default function PromiseSection() {
+  const locale = useLocale();
+  const isChinese = locale.startsWith("zh");
   const t = useTranslations("employerPathway.promise");
   const rawDoItems = t.raw("doItems");
   const rawDontItems = t.raw("dontItems");
@@ -25,7 +27,9 @@ export default function PromiseSection() {
             {t("eyebrow")}
           </div>
           <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
-            {t("title1")} <em className="not-italic text-primary">{t("titleHighlight")}</em>
+            {t("title1")}
+            {!isChinese ? " " : ""}
+            <em className="not-italic text-primary">{t("titleHighlight")}</em>
           </h2>
         </div>
 
@@ -68,5 +72,4 @@ export default function PromiseSection() {
     </section>
   );
 }
-
 

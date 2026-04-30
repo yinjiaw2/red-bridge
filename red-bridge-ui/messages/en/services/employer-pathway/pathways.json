@@ -48,7 +48,8 @@
           ],
           "note": "Honest note: This is a longer path, but it's the right one. We would rather tell you this now and build your case properly than take your money for a visa you won't receive.",
           "buttonText": "View Career Launch Program",
-          "buttonHref": "/services/career-launch"
+          "buttonHref": "https://siddeley-talent-link.vercel.app/",
+          "buttonNote": "This recruitment service is provided by our partner Siddeley Talent Link. Click the button for details."
         },
         {
           "id": "one-to-three-years",

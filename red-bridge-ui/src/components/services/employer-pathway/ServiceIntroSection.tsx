@@ -1,11 +1,13 @@
 "use client";
 
 import { CheckCircle2, ShieldCheck } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
 
 export default function ServiceIntroSection() {
+  const locale = useLocale();
+  const isChinese = locale.startsWith("zh");
   const t = useTranslations("employerPathway.serviceIntro");
   const rawMainItems = t.raw("mainItems");
   const rawGuaranteeItems = t.raw("guaranteeItems");
@@ -25,7 +27,9 @@ export default function ServiceIntroSection() {
             {t("eyebrow")}
           </div>
           <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
-            {t("title1")} <em className="not-italic text-primary">{t("titleHighlight")}</em>
+            {t("title1")}
+            {!isChinese ? " " : ""}
+            <em className="not-italic text-primary">{t("titleHighlight")}</em>
           </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-[15px] leading-7 text-muted-foreground">
             {t("subtitle")}

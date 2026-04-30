@@ -48,7 +48,8 @@
           ],
           "note": "重要说明：这个方案整体耗时会更长一些，但这是更稳妥、也更有把握的选择。我们会先把您的真实情况讲清楚，帮您把条件准备扎实，而不是在条件还不成熟时贸然递交申请。",
           "buttonText": "查看职业起航计划",
-          "buttonHref": "/services/career-launch"
+          "buttonHref": "https://siddeley-talent-link.vercel.app/",
+          "buttonNote": "这是我们合作伙伴 Siddeley Talent Link 提供的猎聘服务，点击了解详情。"
         },
         {
           "id": "one-to-three-years",

@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { ArrowRight, CalendarCheck } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { BackgroundHero } from "@/components/shared/BackgroundHero";
 
 type Stat = { value: string; label: string };
 
 export default function HeroSection() {
+  const locale = useLocale();
+  const isChinese = locale.startsWith("zh");
   const t = useTranslations("employerPathway.hero");
   const rawTrust = t.raw("trust");
   const rawStats = t.raw("stats");
@@ -21,7 +23,9 @@ export default function HeroSection() {
       eyebrowIcon={<CalendarCheck className="h-4 w-4" aria-hidden="true" />}
       title={
         <>
-          {t("title1")} <span className="text-[#b3131b]">{t("title2")}</span>
+          {t("title1")}
+          {!isChinese ? " " : ""}
+          <span className="text-[#b3131b]">{t("title2")}</span>
           <br />
           {t("title3")}
         </>

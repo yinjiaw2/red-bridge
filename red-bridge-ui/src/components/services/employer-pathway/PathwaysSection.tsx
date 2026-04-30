@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const font = "var(--font-app-sans), Arial, Helvetica, sans-serif";
 
@@ -20,9 +20,12 @@ type Panel = {
   note: string;
   buttonText: string;
   buttonHref: string;
+  buttonNote?: string;
 };
 
 export default function PathwaysSection() {
+  const locale = useLocale();
+  const isChinese = locale.startsWith("zh");
   const t = useTranslations("employerPathway.pathways");
   const rawPanels = t.raw("panels");
   const panels = Array.isArray(rawPanels) ? (rawPanels as Panel[]) : [];
@@ -42,7 +45,9 @@ export default function PathwaysSection() {
             {t("eyebrow")}
           </div>
           <h2 className="text-[34px] font-semibold leading-tight text-foreground md:text-[44px]">
-            {t("title1")} <em className="not-italic text-primary">{t("title2")}</em>
+            {t("title1")}
+            {!isChinese ? " " : ""}
+            <em className="not-italic text-primary">{t("title2")}</em>
           </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-[15px] leading-7 text-muted-foreground">
             {t("subtitle")}
@@ -118,12 +123,21 @@ export default function PathwaysSection() {
                 {activePanel.note}
               </div>
 
-            <Link
-              href={activePanel.buttonHref}
-              className="mt-7 inline-flex rounded-full bg-primary px-8 py-3 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
-            >
-              {activePanel.buttonText}
-            </Link>
+              <div className="mt-7 flex flex-col gap-3 md:flex-row md:items-center">
+                <Link
+                  href={activePanel.buttonHref}
+                  target={activePanel.buttonHref.startsWith("http") ? "_blank" : undefined}
+                  rel={activePanel.buttonHref.startsWith("http") ? "noreferrer" : undefined}
+                  className="inline-flex rounded-full bg-primary px-8 py-3 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-95"
+                >
+                  {activePanel.buttonText}
+                </Link>
+                {activePanel.buttonNote ? (
+                  <p className="max-w-[560px] text-[13px] leading-6 text-muted-foreground">
+                    {activePanel.buttonNote}
+                  </p>
+                ) : null}
+              </div>
             </div>
           </div>
         ) : null}
@@ -131,5 +145,3 @@ export default function PathwaysSection() {
     </section>
   );
 }
-
-
