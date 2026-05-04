@@ -30,9 +30,9 @@ export default function HeroSection() {
           className="object-cover object-center md:object-right"
         />
 
-        <div className="absolute inset-y-0 left-0 w-[34%] bg-linear-to-r from-white/92 via-white/34 to-transparent" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.84)_24%,rgba(255,255,255,0.46)_38%,rgba(255,255,255,0.08)_52%,rgba(255,255,255,0)_62%)]" />
-        <div className="absolute inset-y-0 left-0 w-[18%] bg-white/18 blur-3xl" />
+        <div className="absolute inset-y-0 left-0 w-[46%] bg-linear-to-r from-white/92 via-white/34 to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.94)_0%,rgba(255,255,255,0.88)_28%,rgba(255,255,255,0.56)_46%,rgba(255,255,255,0.14)_62%,rgba(255,255,255,0)_74%)]" />
+        <div className="absolute inset-y-0 left-0 w-[24%] bg-white/18 blur-3xl" />
       </div>
 
       {/* Content */}
@@ -111,8 +111,10 @@ export default function HeroSection() {
                   aria-hidden="true"
                 />
                 <div>
-                  <div className="text-xl font-bold text-[#1f1f1f] md:text-white sm:text-2xl">10+</div>
-                  <div className="text-xs text-[#1f1f1f] md:text-white sm:text-sm">
+                  <div className="text-xl font-bold text-[#1f1f1f] sm:text-2xl">
+                    10+
+                  </div>
+                  <div className="text-xs text-[#1f1f1f] sm:text-sm">
                     {t("stats.employerPartners")}
                   </div>
                 </div>
