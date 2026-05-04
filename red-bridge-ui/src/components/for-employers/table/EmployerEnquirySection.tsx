@@ -46,7 +46,7 @@ export default function EmployerEnquirySection() {
   }, [form.formState.isSubmitSuccessful]);
 
   const onSubmit = async (data: FormValues) => {
-    const res = await fetch(process.env.NEXT_PUBLIC_BOOKING_SHEET_URL!, {
+    const res = await fetch("/api/submit", {
       method: "POST",
       body: JSON.stringify({ ...data, type: "EmployerEnquiry" }),
     });

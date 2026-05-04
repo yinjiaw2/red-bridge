@@ -255,8 +255,6 @@ function getStepError(
   return null;
 }
 
-const BOOKING_SHEET_URL = process.env.NEXT_PUBLIC_BOOKING_SHEET_URL!;
-
 async function submitBooking(
   form: BookingFormState,
   consultationLabel: string,
@@ -274,7 +272,7 @@ async function submitBooking(
     heading,
   };
 
-  const res = await fetch(BOOKING_SHEET_URL, {
+  const res = await fetch("/api/submit", {
     method: "POST",
     body: JSON.stringify(payload),
   });
