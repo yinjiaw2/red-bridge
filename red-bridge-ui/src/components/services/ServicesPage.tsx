@@ -9,7 +9,7 @@ export function ServicesPage() {
   return (
     <>
       <NavBar />
-      <main className="min-h-full bg-background pt-16">
+      <main className="min-h-full bg-background pt-16 md:pt-24">
         <ServicesHero />
         <ServicesProcessSection />
         <ServicesFinderSection />

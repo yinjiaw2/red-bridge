@@ -30,7 +30,7 @@ export default function CareerLaunchPage() {
   return (
     <>
       <NavBar />
-      <main className="pt-16">
+      <main className="pt-16 md:pt-24">
         <HeroSection />
         <TimelineSection />
         <CTASection />

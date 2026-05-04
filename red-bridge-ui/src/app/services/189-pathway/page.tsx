@@ -38,7 +38,7 @@ export default function Page() {
     <>
       <NavBar />
 
-      <main className="pt-16">
+      <main className="pt-16 md:pt-24">
         <HeroSection />
         <ReviewedBanner />
         <PointsSection />

@@ -39,7 +39,7 @@ export default function Page() {
     <>
       <NavBar />
 
-      <main className="pt-[70px] overflow-hidden">
+      <main className="overflow-hidden pt-[70px] md:pt-24">
         <HeroSection />
         <ReviewedBanner />
         <ComparisonSection />

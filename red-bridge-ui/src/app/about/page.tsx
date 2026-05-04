@@ -32,7 +32,7 @@ export default function AboutUsPage() {
   return (
     <>
       <NavBar />
-      <main className="pt-16">
+      <main className="pt-16 md:pt-24">
         <RedBridgeIntro />
         <StorySection />
         <ValuesSection />

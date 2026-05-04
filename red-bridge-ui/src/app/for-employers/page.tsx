@@ -36,7 +36,7 @@ export default function EmployersPage() {
   return (
     <>
       <NavBar />
-      <main className="pt-16">
+      <main className="pt-16 md:pt-24">
         <EmployerNetworkSection />
         <SkillsgGapSection />
         <EmployerProcessSection />
