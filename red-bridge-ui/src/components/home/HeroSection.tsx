@@ -73,7 +73,7 @@ export default function HeroSection() {
 
             <Link
               href="/services#find-your-path"
-              className="flex h-[48px] w-full items-center justify-center rounded-full border border-brandred bg-brandred px-5 text-[14px] font-semibold text-white sm:ml-4 sm:h-[52px] sm:w-auto sm:justify-start sm:bg-transparent sm:px-6 sm:text-[15px] sm:text-brandred"
+              className="flex h-[48px] w-full items-center justify-center rounded-full border border-brandred bg-transparent px-5 text-[14px] font-semibold text-brandred [@media(pointer:coarse)]:bg-brandred [@media(pointer:coarse)]:text-white sm:ml-4 sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px] [@media(pointer:fine)]:bg-transparent [@media(pointer:fine)]:text-brandred"
             >
               {t("secondaryButton")}
             </Link>
@@ -82,7 +82,7 @@ export default function HeroSection() {
           {/* Stats */}
           <div className="mt-7 border-t border-[#ece5de] pt-5 sm:mt-8 sm:pt-6">
             <div className="grid grid-cols-1 gap-4 min-[420px]:grid-cols-3 min-[420px]:gap-0 min-[420px]:divide-x min-[420px]:divide-[#e2d9d0]">
-              <div className="flex flex-col items-start gap-2 min-[420px]:flex-row min-[420px]:items-center min-[420px]:gap-3 min-[420px]:pr-4">
+              <div className="flex flex-row items-center gap-3 [@media(pointer:coarse)]:flex-col [@media(pointer:coarse)]:items-start [@media(pointer:coarse)]:gap-2 min-[420px]:pr-4">
                 <Users className="h-6 w-6 text-[#b3131b]" aria-hidden="true" />
                 <div>
                   <div className="text-xl font-bold sm:text-2xl">200+</div>
@@ -92,7 +92,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start gap-2 min-[420px]:flex-row min-[420px]:items-center min-[420px]:gap-3 min-[420px]:px-4">
+              <div className="flex flex-row items-center gap-3 [@media(pointer:coarse)]:flex-col [@media(pointer:coarse)]:items-start [@media(pointer:coarse)]:gap-2 min-[420px]:px-4">
                 <ClipboardCheck
                   className="h-6 w-6 text-[#b3131b]"
                   aria-hidden="true"
@@ -105,7 +105,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start gap-2 min-[420px]:flex-row min-[420px]:items-center min-[420px]:gap-3 min-[420px]:pl-4">
+              <div className="flex flex-row items-center gap-3 [@media(pointer:coarse)]:flex-col [@media(pointer:coarse)]:items-start [@media(pointer:coarse)]:gap-2 min-[420px]:pl-4">
                 <HeartHandshake
                   className="h-6 w-6 text-[#b3131b]"
                   aria-hidden="true"
