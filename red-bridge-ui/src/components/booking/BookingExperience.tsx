@@ -24,7 +24,7 @@ const initialFormState: BookingFormState = {
   preferredContact: "",
   preferredLanguage: "",
   source: "",
-  pathway: "",
+  pathway: "482/186",
   nationality: "",
   countryResidency: "",
   dateOfBirth: "",
@@ -288,6 +288,10 @@ export function BookingExperience() {
   const consultationTypes = dataT.raw(
     "consultationTypes",
   ) as ConsultationTypeOption[];
+  const lockedPathway =
+    (dataT.raw("pathwayOptions") as string[]).find((option) =>
+      option.startsWith("482/186"),
+    ) ?? "482/186";
   const validationMessages = {
     selectDateTime: messageT("selectDateTime"),
     contactDetailsRequired: messageT("contactDetailsRequired"),
@@ -392,6 +396,14 @@ export function BookingExperience() {
 
     return () => window.clearTimeout(timer);
   }, [messageT]);
+
+  useEffect(() => {
+    setForm((current) =>
+      current.pathway === lockedPathway
+        ? current
+        : { ...current, pathway: lockedPathway },
+    );
+  }, [lockedPathway]);
 
   useEffect(() => {
     if (!draftMessage) {
@@ -514,7 +526,7 @@ export function BookingExperience() {
   };
 
   const resetBooking = () => {
-    setForm(initialFormState);
+    setForm({ ...initialFormState, pathway: lockedPathway });
     setSelectedDate(null);
     setSelectedTime(null);
     setMonthOffset(0);

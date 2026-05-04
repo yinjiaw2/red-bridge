@@ -20,7 +20,10 @@ export function BookingForm({
   const contactMethods = dataT.raw("contactMethods") as string[];
   const languages = dataT.raw("languages") as string[];
   const sources = dataT.raw("sources") as string[];
-  const pathwayOptions = dataT.raw("pathwayOptions") as string[];
+  const lockedPathway =
+    (dataT.raw("pathwayOptions") as string[]).find((option) =>
+      option.startsWith("482/186"),
+    ) ?? "482/186";
   const educationLevels = dataT.raw("educationLevels") as string[];
   const workExperienceBands = dataT.raw("workExperienceBands") as string[];
   const englishTests = dataT.raw("englishTests") as string[];
@@ -154,19 +157,12 @@ export function BookingForm({
           <div className="grid gap-5 md:grid-cols-2">
             <label className="space-y-2 text-sm font-medium text-[var(--text-main)]">
               {t("fields.pathway")}
-              <select
+              <input
                 required
-                value={form.pathway}
-                onChange={(event) => onChange("pathway", event.target.value)}
+                value={form.pathway || lockedPathway}
+                readOnly
                 className="w-full rounded-[16px] border border-[var(--border-soft)] bg-[var(--bg)] px-4 py-3 text-base outline-none"
-              >
-                <option value="">{t("placeholders.select")}</option>
-                {pathwayOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
+              />
             </label>
             <label className="space-y-2 text-sm font-medium text-[var(--text-main)]">
               {t("fields.nationality")}
