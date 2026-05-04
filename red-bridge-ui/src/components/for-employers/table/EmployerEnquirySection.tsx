@@ -46,13 +46,14 @@ export default function EmployerEnquirySection() {
   }, [form.formState.isSubmitSuccessful]);
 
   const onSubmit = async (data: FormValues) => {
-    const res = await fetch("/api/submit", {
+    const sheetUrl = process.env.NEXT_PUBLIC_BOOKING_SHEET_URL;
+    if (!sheetUrl) throw new Error("Missing sheet URL");
+
+    await fetch(sheetUrl, {
       method: "POST",
+      mode: "no-cors",
       body: JSON.stringify({ ...data, type: "EmployerEnquiry" }),
     });
-    if (!res.ok) {
-      throw new Error(`Submission failed: ${res.status}`);
-    }
   };
 
   return (

@@ -262,29 +262,21 @@ async function submitBooking(
   subjectPrefix: string,
   heading: string,
 ) {
-  const type = "contact";
-  const payload = {
-    ...form,
-    type,
-    consultationLabel,
-    slotLabel,
-    subjectPrefix,
-    heading,
-  };
+  const sheetUrl = process.env.NEXT_PUBLIC_BOOKING_SHEET_URL;
+  if (!sheetUrl) throw new Error("Missing sheet URL");
 
-  const res = await fetch("/api/submit", {
+  await fetch(sheetUrl, {
     method: "POST",
-    body: JSON.stringify(payload),
+    mode: "no-cors",
+    body: JSON.stringify({
+      ...form,
+      type: "contact",
+      consultationLabel,
+      slotLabel,
+      subjectPrefix,
+      heading,
+    }),
   });
-
-  if (!res.ok) {
-    throw new Error(`Submission failed: ${res.status}`);
-  }
-
-  const json = await res.json();
-  if (json.result !== "success") {
-    throw new Error(json.error ?? "Unknown error");
-  }
 }
 
 export function BookingExperience() {
