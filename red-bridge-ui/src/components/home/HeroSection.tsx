@@ -73,7 +73,7 @@ export default function HeroSection() {
 
             <Link
               href="/services#find-your-path"
-              className="flex h-[48px] w-full items-center justify-center rounded-full border border-[#d9868f] px-5 text-[14px] font-semibold text-[#b63c46] sm:ml-4 sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px]"
+              className="flex h-[48px] w-full items-center justify-center rounded-full border border-brandred bg-brandred px-5 text-[14px] font-semibold text-white sm:ml-4 sm:h-[52px] sm:w-auto sm:justify-start sm:bg-transparent sm:px-6 sm:text-[15px] sm:text-brandred"
             >
               {t("secondaryButton")}
             </Link>
