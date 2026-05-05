@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { AnalyticsEvent, trackEvent } from "@/lib/analytics";
 import type { ConsultationStage, ConsultationTypeOption } from "./booking-data";
 import { BookingForm } from "./BookingForm";
 import { BookingInfoPanel } from "./BookingInfoPanel";
@@ -99,6 +100,11 @@ function parseStageFromWindow(): ConsultationStage | null {
   return stage === "1" || stage === "2" || stage === "3" || stage === "4"
     ? stage
     : null;
+}
+
+function parseSrcFromWindow(): string | null {
+  if (typeof window === "undefined") return null;
+  return new URLSearchParams(window.location.search).get("src");
 }
 
 function buildCalendarDays(
@@ -261,6 +267,7 @@ async function submitBooking(
   slotLabel: string,
   subjectPrefix: string,
   heading: string,
+  src: string | null,
 ) {
   const sheetUrl = process.env.NEXT_PUBLIC_BOOKING_SHEET_URL;
   if (!sheetUrl) throw new Error("Missing sheet URL");
@@ -275,6 +282,7 @@ async function submitBooking(
       slotLabel,
       subjectPrefix,
       heading,
+      ...(src ? { ctaSrc: src } : {}),
     }),
   });
 }
@@ -308,6 +316,7 @@ export function BookingExperience() {
   const [stageFilter, setStageFilter] = useState<ConsultationStage | null>(
     null,
   );
+  const [ctaSrc, setCtaSrc] = useState<string | null>(null);
   const [selectedConsultationLabel, setSelectedConsultationLabel] = useState(
     () => consultationTypes[0]?.label ?? "",
   );
@@ -318,6 +327,7 @@ export function BookingExperience() {
   useEffect(() => {
     const timer = window.setTimeout(() => {
       setStageFilter(parseStageFromWindow());
+      setCtaSrc(parseSrcFromWindow());
     }, 0);
 
     return () => window.clearTimeout(timer);
@@ -516,10 +526,15 @@ export function BookingExperience() {
         selectedSlotLabel,
         mailT("subjectPrefix"),
         mailT("heading"),
+        ctaSrc,
       );
       setSubmitted(true);
       setStepError(null);
       localStorage.removeItem(STORAGE_KEY);
+      trackEvent(AnalyticsEvent.GENERATE_LEAD, {
+        form_type: "booking",
+        ...(ctaSrc ? { cta_source: ctaSrc } : {}),
+      });
     } catch {
       setStepError(messageT("submitError"));
     }

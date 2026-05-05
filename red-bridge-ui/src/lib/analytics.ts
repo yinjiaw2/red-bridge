@@ -1,5 +1,6 @@
 export const AnalyticsEvent = {
   FAQ_QUESTION_OPENED: "faq_question_opened",
+  GENERATE_LEAD: "generate_lead",
 } as const;
 
 export function trackEvent(

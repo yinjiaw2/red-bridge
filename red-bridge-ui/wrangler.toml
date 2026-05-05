@@ -9,3 +9,8 @@ binding = "ASSETS"
 
 [observability]
 enabled = true
+
+[vars]
+NEXT_PUBLIC_GA_ID = "G-B7DWL6EMN4"
+NEXT_PUBLIC_META_PIXEL_ID = "1603950367696460"
+NEXT_PUBLIC_BOOKING_SHEET_URL = "https://script.google.com/macros/s/AKfycbyFt1JgSJjAKNhmY0OupDR5Ft6wGHF0MIQiY-kyJjGvy4Iu9-8d0JOJMb4XiZDYS08AZQ/exec"

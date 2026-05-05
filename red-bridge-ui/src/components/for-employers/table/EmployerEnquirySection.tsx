@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
+import { AnalyticsEvent, trackEvent } from "@/lib/analytics";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
@@ -49,10 +50,20 @@ export default function EmployerEnquirySection() {
     const sheetUrl = process.env.NEXT_PUBLIC_BOOKING_SHEET_URL;
     if (!sheetUrl) throw new Error("Missing sheet URL");
 
+    const src = new URLSearchParams(window.location.search).get("src");
+
     await fetch(sheetUrl, {
       method: "POST",
       mode: "no-cors",
-      body: JSON.stringify({ ...data, type: "EmployerEnquiry" }),
+      body: JSON.stringify({
+        ...data,
+        type: "EmployerEnquiry",
+        ...(src ? { ctaSrc: src } : {}),
+      }),
+    });
+    trackEvent(AnalyticsEvent.GENERATE_LEAD, {
+      form_type: "employer_enquiry",
+      ...(src ? { cta_source: src } : {}),
     });
   };
 
