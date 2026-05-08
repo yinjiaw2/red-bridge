@@ -8,9 +8,9 @@ const csp = [
   "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://static.cloudflareinsights.com https://signals.birch.events",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
-  "img-src 'self' data: https://www.facebook.com https://www.google-analytics.com",
-  "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://connect.facebook.net https://www.facebook.com https://signals.birch.events https://script.google.com",
-  "frame-src 'self'",
+  "img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net",
+  "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googleadservices.com https://googleads.g.doubleclick.net https://connect.facebook.net https://www.facebook.com https://signals.birch.events https://script.google.com",
+  "frame-src 'self' https://www.googletagmanager.com https://td.doubleclick.net",
   "object-src 'none'",
   "base-uri 'self'",
 ].join("; ");
