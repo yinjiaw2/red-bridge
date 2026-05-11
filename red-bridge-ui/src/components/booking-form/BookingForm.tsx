@@ -101,6 +101,7 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify({
+          type: "contact",
           ...s1,
           pathway: s2.pathway,
           nationality: s2.nationality,
@@ -112,7 +113,6 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
           visaExpiry: s2.visaExpiry ? format(s2.visaExpiry, "dd/MM/yyyy") : "",
           ...s3,
           notes: stepFourData.notes,
-          consultationSlot: consultationSlot ?? "",
         }),
       });
       setSubmitted(true);
