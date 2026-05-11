@@ -19,40 +19,53 @@ export function BookingStepOne({ form }: BookingStepOneProps) {
   const sources = dataT.raw("sources") as string[];
 
   return (
-    <div className="grid gap-5 md:grid-cols-2">
-      <TextField
-        form={form}
-        name="firstName"
-        label={formT("fields.firstName")}
-      />
-      <TextField form={form} name="lastName" label={formT("fields.lastName")} />
-      <TextField
-        form={form}
-        name="email"
-        type="email"
-        label={formT("fields.email")}
-      />
-      <TextField
-        form={form}
-        name="mobile"
-        type="tel"
-        label={formT("fields.mobile")}
-      />
-      <SelectField
-        form={form}
-        name="preferredContact"
-        label={formT("fields.preferredContact")}
-        placeholder={formT("placeholders.select")}
-        options={contactMethods}
-      />
-      <SelectField
-        form={form}
-        name="preferredLanguage"
-        label={formT("fields.preferredLanguage")}
-        placeholder={formT("placeholders.select")}
-        options={languages}
-      />
-      <div className="md:col-span-2">
+    <div className="flex flex-col gap-5">
+      <div className="flex flex-row w-full gap-6">
+        <TextField
+          form={form}
+          name="firstName"
+          label={formT("fields.firstName")}
+        />
+
+        <TextField
+          form={form}
+          name="lastName"
+          label={formT("fields.lastName")}
+        />
+      </div>
+      <div className="w-full flex flex-row  gap-6">
+        <TextField
+          form={form}
+          name="email"
+          type="email"
+          label={formT("fields.email")}
+        />
+
+        <TextField
+          form={form}
+          name="mobile"
+          type="tel"
+          label={formT("fields.mobile")}
+        />
+      </div>
+      <div className="w-full flex flex-row gap-6">
+        <SelectField
+          form={form}
+          name="preferredContact"
+          label={formT("fields.preferredContact")}
+          placeholder={formT("placeholders.select")}
+          options={contactMethods}
+        />
+
+        <SelectField
+          form={form}
+          name="preferredLanguage"
+          label={formT("fields.preferredLanguage")}
+          placeholder={formT("placeholders.select")}
+          options={languages}
+        />
+      </div>
+      <div className="w-full">
         <SelectField
           form={form}
           name="source"
