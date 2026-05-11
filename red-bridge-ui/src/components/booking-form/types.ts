@@ -1,21 +1,3 @@
-export type BookingStepTwoValues = {
-  pathway: string;
-  nationality: string;
-  countryOfResidency: string;
-  dateOfBirth: Date;
-  currentVisa: string;
-  visaExpiry?: Date;
-};
-
-export const bookingStepTwoDefaultValues = {
-  pathway: "",
-  nationality: "",
-  countryOfResidency: "",
-  dateOfBirth: undefined,
-  currentVisa: "",
-  visaExpiry: undefined,
-};
-
 export type BookingStepOneValues = {
   firstName: string;
   lastName: string;
@@ -34,4 +16,22 @@ export const bookingStepOneDefaultValues: BookingStepOneValues = {
   preferredContact: "",
   preferredLanguage: "",
   source: "",
+};
+
+export type BookingStepTwoValues = {
+  pathway: string;
+  nationality: string;
+  countryOfResidency: string;
+  dateOfBirth: Date;
+  currentVisa: string;
+  visaExpiry?: Date;
+};
+
+export const bookingStepTwoDefaultValues = {
+  pathway: "",
+  nationality: "",
+  countryOfResidency: "",
+  dateOfBirth: undefined,
+  currentVisa: "",
+  visaExpiry: undefined,
 };
