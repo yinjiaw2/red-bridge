@@ -79,7 +79,7 @@ export function BookingForm({ onStepOneSubmit }: BookingFormProps) {
           <form
             onSubmit={handleSubmit}
             noValidate
-            className="mt-7 space-y-8"
+            className="mt-7 space-y-8 w-full"
           >
             <BookingStepOne form={form} />
 
