@@ -3,7 +3,7 @@ import { getLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
 import { Footer } from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
-import { BookingHero } from "@/components/booking/BookingHero";
+import { BookingHero } from "@/components/booking-form/BookingHero";
 import { BookingForm } from "@/components/booking-form/BookingForm";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -30,7 +30,6 @@ export default function ContactPage() {
       <NavBar />
       <main className="min-h-full bg-[var(--bg)] pt-16 md:pt-24">
         <BookingHero />
-        {/* <BookingExperience /> */}
         <BookingForm />
       </main>
       <Footer />
