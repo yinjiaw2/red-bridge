@@ -124,7 +124,19 @@
       "buttons": {
         "back": "返回",
         "next": "下一步",
-        "submit": "提交"
+        "submit": "提交",
+        "submitting": "提交中…"
+      },
+      "submitted": {
+        "eyebrow": "申请已收到",
+        "title": "谢谢你，{name}！",
+        "description": "我们已收到您的预约申请，团队将尽快与您联系确认预约。",
+        "fields": {
+          "name": "姓名：",
+          "email": "邮箱：",
+          "pathway": "路径：",
+          "slot": "咨询时段："
+        }
       },
       "review": {
         "selectedConsultation": "已选咨询时段",
@@ -139,7 +151,8 @@
       "validation": {
         "required": "此字段为必填项。",
         "invalidEmail": "请输入有效的邮箱地址。",
-        "mustAgree": "请勾选同意后继续。"
+        "mustAgree": "请勾选同意后继续。",
+        "submitError": "提交失败，请检查网络连接后重试。"
       }
     }
   }

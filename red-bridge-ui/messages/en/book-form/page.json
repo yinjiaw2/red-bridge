@@ -129,7 +129,19 @@
       "buttons": {
         "back": "Back",
         "next": "Next Step",
-        "submit": "Submit"
+        "submit": "Submit",
+        "submitting": "Submitting…"
+      },
+      "submitted": {
+        "eyebrow": "Request Received",
+        "title": "Thanks, {name}!",
+        "description": "We've received your booking request. Our team will be in touch to confirm your appointment.",
+        "fields": {
+          "name": "Name:",
+          "email": "Email:",
+          "pathway": "Pathway:",
+          "slot": "Consultation:"
+        }
       },
       "review": {
         "selectedConsultation": "Selected Consultation",
@@ -144,7 +156,8 @@
       "validation": {
         "required": "This field is required.",
         "invalidEmail": "Please enter a valid email address.",
-        "mustAgree": "You must agree to continue."
+        "mustAgree": "You must agree to continue.",
+        "submitError": "Something went wrong. Please check your connection and try again."
       }
     }
   }

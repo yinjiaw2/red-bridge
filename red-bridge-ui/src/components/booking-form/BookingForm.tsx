@@ -5,7 +5,9 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
+import { SubmitSuccessCard } from "./SubmitSuccessCard";
 import { BookingStepOne } from "./BookingStepOne";
 import { BookingStepTwo } from "./BookingStepTwo";
 import { BookingStepThree } from "./BookingStepThree";
@@ -32,6 +34,8 @@ const TOTAL_STEPS = 4;
 export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
   const formT = useTranslations("bookingForm.form");
   const [step, setStep] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const stepTitles = formT.raw("steps") as string[];
 
@@ -79,9 +83,57 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
   const handleStepOneNext = formOne.handleSubmit(() => setStep(1));
   const handleStepTwoNext = formTwo.handleSubmit(() => setStep(2));
   const handleStepThreeNext = formThree.handleSubmit(() => setStep(3));
-  const handleSubmit = formFour.handleSubmit(() => {
-    // TODO: submit all form data
+  const handleSubmit = formFour.handleSubmit(async (stepFourData) => {
+    setSubmitError(false);
+
+    const sheetUrl = process.env.NEXT_PUBLIC_BOOKING_SHEET_URL;
+    if (!sheetUrl) {
+      setSubmitError(true);
+      return;
+    }
+
+    const s1 = formOne.getValues();
+    const s2 = formTwo.getValues();
+    const s3 = formThree.getValues();
+
+    try {
+      await fetch(sheetUrl, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify({
+          ...s1,
+          pathway: s2.pathway,
+          nationality: s2.nationality,
+          countryResidency: s2.countryOfResidency,
+          dateOfBirth: s2.dateOfBirth
+            ? format(s2.dateOfBirth, "dd/MM/yyyy")
+            : "",
+          currentVisa: s2.currentVisa,
+          visaExpiry: s2.visaExpiry ? format(s2.visaExpiry, "dd/MM/yyyy") : "",
+          ...s3,
+          notes: stepFourData.notes,
+          consultationSlot: consultationSlot ?? "",
+        }),
+      });
+      setSubmitted(true);
+    } catch {
+      setSubmitError(true);
+    }
   });
+
+  if (submitted) {
+    return (
+      <section className="w-full py-12">
+        <div className="mx-auto flex w-full max-w-3xl flex-col rounded-lg border border-border bg-card px-6 py-8 shadow-sm">
+          <SubmitSuccessCard
+            name={formOne.getValues("firstName")}
+            email={formOne.getValues("email")}
+            pathway={formTwo.getValues("pathway")}
+          />
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="w-full py-12">
@@ -119,34 +171,28 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
             </form>
           )}
 
-          {step === 3 && (
+          {step === 1 && (
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                void handleSubmit();
+                void handleStepTwoNext();
               }}
               noValidate
               className="space-y-8"
             >
-              <BookingStepFour
-                form={formFour}
-                consultationSlot={consultationSlot}
-                stepOneValues={formOne.getValues()}
-                stepTwoValues={formTwo.getValues()}
-                stepThreeValues={formThree.getValues()}
-              />
+              <BookingStepTwo form={formTwo} />
               <div className="flex justify-between">
                 <Button
                   type="button"
                   size="lg"
                   variant="outline"
                   className="px-8"
-                  onClick={() => setStep(2)}
+                  onClick={() => setStep(0)}
                 >
                   {formT("buttons.back")}
                 </Button>
                 <Button type="submit" size="lg" className="px-8">
-                  {formT("buttons.submit")}
+                  {formT("buttons.next")}
                 </Button>
               </div>
             </form>
@@ -179,28 +225,46 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
             </form>
           )}
 
-          {step === 1 && (
+          {step === 3 && (
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                void handleStepTwoNext();
+                void handleSubmit();
               }}
               noValidate
               className="space-y-8"
             >
-              <BookingStepTwo form={formTwo} />
+              <BookingStepFour
+                form={formFour}
+                consultationSlot={consultationSlot}
+                stepOneValues={formOne.getValues()}
+                stepTwoValues={formTwo.getValues()}
+                stepThreeValues={formThree.getValues()}
+              />
+              {submitError && (
+                <p className="text-center text-sm text-destructive">
+                  {formT("validation.submitError")}
+                </p>
+              )}
               <div className="flex justify-between">
                 <Button
                   type="button"
                   size="lg"
                   variant="outline"
                   className="px-8"
-                  onClick={() => setStep(0)}
+                  onClick={() => setStep(2)}
                 >
                   {formT("buttons.back")}
                 </Button>
-                <Button type="submit" size="lg" className="px-8">
-                  {formT("buttons.next")}
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="px-8"
+                  disabled={formFour.formState.isSubmitting}
+                >
+                  {formFour.formState.isSubmitting
+                    ? formT("buttons.submitting")
+                    : formT("buttons.submit")}
                 </Button>
               </div>
             </form>
