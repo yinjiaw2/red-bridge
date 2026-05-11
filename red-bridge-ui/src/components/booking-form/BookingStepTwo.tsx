@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useId } from "react";
+import { Controller } from "react-hook-form";
 import type { UseFormReturn } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import type { BookingStepTwoValues } from "./types";
@@ -11,12 +13,16 @@ type BookingStepTwoProps = {
 };
 
 export function BookingStepTwo({ form }: BookingStepTwoProps) {
+  const pathwayId = useId();
   const formT = useTranslations("bookingForm.form");
   const dataT = useTranslations("bookingForm.data");
 
-  const pathways = dataT.raw("pathways") as string[];
   const countries = dataT.raw("countries") as string[];
   const visaTypes = dataT.raw("visaTypes") as string[];
+  const lockedPathway =
+    ((dataT.raw("pathways") as string[]).find((pathway) =>
+      pathway.startsWith("482"),
+    ) as string | undefined) ?? "482/186 Employer Sponsored";
 
   const today = new Date();
   const twentyYearsFromNow = new Date(
@@ -25,14 +31,38 @@ export function BookingStepTwo({ form }: BookingStepTwoProps) {
     today.getDate(),
   );
 
+  useEffect(() => {
+    if (form.getValues("pathway") !== lockedPathway) {
+      form.setValue("pathway", lockedPathway, {
+        shouldDirty: false,
+        shouldTouch: false,
+        shouldValidate: true,
+      });
+    }
+  }, [form, lockedPathway]);
+
   return (
     <div className="flex flex-col gap-5">
-      <SelectField
-        form={form}
+      <Controller
         name="pathway"
-        label={formT("fields.pathway")}
-        placeholder={formT("placeholders.select")}
-        options={pathways}
+        control={form.control}
+        render={({ field }) => (
+          <div className="flex w-full flex-col gap-2">
+            <label
+              htmlFor={pathwayId}
+              className="text-sm font-medium text-foreground"
+            >
+              {formT("fields.pathway")}
+            </label>
+            <input
+              id={pathwayId}
+              value={field.value || lockedPathway}
+              readOnly
+              aria-readonly="true"
+              className="flex h-10 w-full cursor-not-allowed rounded-lg border border-input bg-muted px-3 py-2 text-sm text-muted-foreground outline-none"
+            />
+          </div>
+        )}
       />
 
       <div className="flex flex-row gap-6">

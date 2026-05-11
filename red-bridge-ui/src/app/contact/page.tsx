@@ -34,7 +34,6 @@ export default function ContactPage() {
         <BookingHero />
         {/* <BookingExperience /> */}
         <BookingForm />
-        <SelectDemo />
       </main>
       <Footer />
     </>

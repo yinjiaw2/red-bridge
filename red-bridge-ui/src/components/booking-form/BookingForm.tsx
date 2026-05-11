@@ -95,7 +95,16 @@ export function BookingForm() {
               className="space-y-8"
             >
               <BookingStepTwo form={formTwo} />
-              <div className="flex justify-end">
+              <div className="flex justify-between">
+                <Button
+                  type="button"
+                  size="lg"
+                  variant="outline"
+                  className="px-8"
+                  onClick={() => setStep(0)}
+                >
+                  {formT("buttons.back")}
+                </Button>
                 <Button type="submit" size="lg" className="px-8">
                   {formT("buttons.next")}
                 </Button>

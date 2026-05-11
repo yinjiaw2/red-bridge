@@ -109,6 +109,7 @@
         "pickDate": "Select a date"
       },
       "buttons": {
+        "back": "Back",
         "next": "Next Step"
       },
       "validation": {
