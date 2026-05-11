@@ -170,6 +170,13 @@
         "next": "下一步"
       }
     },
+    "stepForm": {
+      "eyebrow": "客户资料",
+      "validation": {
+        "required": "此字段为必填项。",
+        "invalidEmail": "请输入有效的邮箱地址。"
+      }
+    },
     "experience": {
       "messages": {
         "savedDraftLoaded": "已读取之前保存的草稿。",

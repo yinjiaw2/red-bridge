@@ -1,0 +1,58 @@
+{
+  "bookingForm": {
+    "data": {
+      "contactMethods": [
+        "Mobile",
+        "Email",
+        "WeChat",
+        "WhatsApp"
+      ],
+      "languages": [
+        "English",
+        "Chinese"
+      ],
+      "sources": [
+        "Instagram Search",
+        "Instagram Story Ad",
+        "Instagram Feed Ad",
+        "Organic Instagram Post",
+        "Facebook Ad",
+        "TikTok",
+        "RedNote / XiaoHongShu",
+        "Web Search",
+        "Word of Mouth",
+        "Referral",
+        "Other"
+      ]
+    },
+    "form": {
+      "eyebrow": "Client Profile",
+      "steps": [
+        "Contact Details",
+        "Pathway Snapshot",
+        "Profile Details",
+        "Review & Confirm"
+      ],
+      "stepOf": "Step {current} of {total}",
+      "fields": {
+        "firstName": "First Name*",
+        "lastName": "Last Name*",
+        "email": "Email*",
+        "mobile": "Mobile Number*",
+        "preferredContact": "Preferred Contact*",
+        "preferredLanguage": "Preferred Language*",
+        "source": "How Did You Hear About Us?*"
+      },
+      "placeholders": {
+        "select": "Select"
+      },
+      "buttons": {
+        "next": "Next Step"
+      },
+      "validation": {
+        "required": "This field is required.",
+        "invalidEmail": "Please enter a valid email address."
+      }
+    }
+  }
+}

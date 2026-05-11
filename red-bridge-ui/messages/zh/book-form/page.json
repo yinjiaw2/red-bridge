@@ -1,0 +1,58 @@
+{
+  "bookingForm": {
+    "data": {
+      "contactMethods": [
+        "电话",
+        "邮箱",
+        "微信",
+        "WhatsApp"
+      ],
+      "languages": [
+        "英文",
+        "中文"
+      ],
+      "sources": [
+        "Instagram 搜索",
+        "Instagram Story 广告",
+        "Instagram Feed 广告",
+        "Instagram 自然帖文",
+        "Facebook 广告",
+        "TikTok",
+        "小红书 / RedNote",
+        "网页搜索",
+        "朋友介绍",
+        "转介绍",
+        "其他"
+      ]
+    },
+    "form": {
+      "eyebrow": "客户资料",
+      "steps": [
+        "联系方式",
+        "路径概况",
+        "个人背景",
+        "确认提交"
+      ],
+      "stepOf": "第 {current} 步 / 共 {total} 步",
+      "fields": {
+        "firstName": "名字*",
+        "lastName": "姓氏*",
+        "email": "邮箱*",
+        "mobile": "手机号*",
+        "preferredContact": "偏好联系方式*",
+        "preferredLanguage": "偏好语言*",
+        "source": "你是如何知道我们的？*"
+      },
+      "placeholders": {
+        "select": "请选择"
+      },
+      "buttons": {
+        "next": "下一步"
+      },
+      "validation": {
+        "required": "此字段为必填项。",
+        "invalidEmail": "请输入有效的邮箱地址。"
+      }
+    }
+  }
+}
