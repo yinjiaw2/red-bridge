@@ -34,7 +34,7 @@ export function SelectField<TFieldValues extends FieldValues>({
       control={form.control}
       name={name}
       render={({ field }) => (
-        <FormItem>
+        <FormItem className="w-full">
           <FormLabel className="text-sm font-medium text-foreground">
             {label}
           </FormLabel>
@@ -44,12 +44,7 @@ export function SelectField<TFieldValues extends FieldValues>({
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
             </FormControl>
-            <SelectContent
-              position="popper"
-              align="start"
-              sideOffset={4}
-              className="w-(--radix-select-trigger-width)"
-            >
+            <SelectContent>
               {options.map((option) => (
                 <SelectItem key={option} value={option}>
                   {option}

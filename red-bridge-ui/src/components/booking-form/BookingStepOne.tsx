@@ -19,7 +19,7 @@ export function BookingStepOne({ form }: BookingStepOneProps) {
   const sources = dataT.raw("sources") as string[];
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 items-center">
       <div className="flex flex-row w-full gap-6">
         <TextField
           form={form}

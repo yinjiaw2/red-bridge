@@ -41,9 +41,9 @@ export function BookingForm({ onStepOneSubmit }: BookingFormProps) {
   };
 
   return (
-    <section className="w-full flex flex-col items-center">
-      <div className="flex flex-col w-6/7 rounded-lg border border-border bg-card px-6 py-8 shadow-sm">
-        <div className="flex flex-col gap-3 border-b border-border pb-6 sm:flex-row sm:items-end sm:justify-between">
+    <section className="w-full py-12">
+      <div className="mx-auto w-full max-w-3xl flex flex-col rounded-lg border border-border bg-card px-6 py-8 shadow-sm">
+        <div className="flex flex-col gap-3 border-b border-border pb-6 ">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground">
               {formT("eyebrow")}
@@ -64,7 +64,7 @@ export function BookingForm({ onStepOneSubmit }: BookingFormProps) {
           <form
             onSubmit={form.handleSubmit(handleSubmit)}
             noValidate
-            className="mt-7 space-y-8"
+            className="mt-7 space-y-8 items-center"
           >
             <BookingStepOne form={form} />
 
