@@ -31,7 +31,7 @@ export default function ContactPage() {
       <NavBar />
       <main className="min-h-full bg-[var(--bg)] pt-16 md:pt-24">
         <BookingHero />
-        <BookingExperience />
+        {/* <BookingExperience /> */}
         <BookingForm />
       </main>
       <Footer />

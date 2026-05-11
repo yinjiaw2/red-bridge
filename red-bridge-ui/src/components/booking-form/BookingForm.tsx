@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -22,9 +23,13 @@ type BookingFormProps = {
 
 export function BookingForm({ onStepOneSubmit }: BookingFormProps) {
   const formT = useTranslations("bookingForm.form");
+  const [step, setStep] = useState(INITIAL_STEP_INDEX);
+  const [formData, setFormData] = useState<BookingStepOneValues>(
+    bookingStepOneDefaultValues,
+  );
 
   const stepTitles = formT.raw("steps") as string[];
-  const currentStepTitle = stepTitles[INITIAL_STEP_INDEX] ?? "";
+  const currentStepTitle = stepTitles[step] ?? "";
   const schema = createBookingStepOneSchema({
     required: formT("validation.required"),
     invalidEmail: formT("validation.invalidEmail"),
@@ -36,8 +41,18 @@ export function BookingForm({ onStepOneSubmit }: BookingFormProps) {
     mode: "onTouched",
   });
 
-  const handleSubmit = (values: BookingStepOneValues) => {
-    onStepOneSubmit?.(values);
+  const onNext = form.handleSubmit((data) => {
+    const nextFormData = { ...formData, ...data };
+
+    setFormData(nextFormData);
+    onStepOneSubmit?.(nextFormData);
+    setStep((currentStep) => Math.min(currentStep + 1, TOTAL_STEPS - 1));
+    form.reset(nextFormData);
+  });
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    void onNext();
   };
 
   return (
@@ -54,7 +69,7 @@ export function BookingForm({ onStepOneSubmit }: BookingFormProps) {
           </div>
           <span className="inline-flex w-fit rounded-full border border-border bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
             {formT("stepOf", {
-              current: INITIAL_STEP_INDEX + 1,
+              current: step + 1,
               total: TOTAL_STEPS,
             })}
           </span>
@@ -62,14 +77,14 @@ export function BookingForm({ onStepOneSubmit }: BookingFormProps) {
 
         <Form {...form}>
           <form
-            onSubmit={form.handleSubmit(handleSubmit)}
+            onSubmit={handleSubmit}
             noValidate
-            className="mt-7 space-y-8 items-center"
+            className="mt-7 space-y-8"
           >
             <BookingStepOne form={form} />
 
-            <div className="flex justify-end">
-              <Button type="submit" size="lg" className="px-8">
+            <div className="flex w-full justify-end">
+              <Button type="button" size="lg" className="px-8" onClick={onNext}>
                 {formT("buttons.next")}
               </Button>
             </div>

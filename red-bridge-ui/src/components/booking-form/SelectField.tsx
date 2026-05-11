@@ -1,11 +1,9 @@
+"use client";
+
+import { useId } from "react";
+import { Controller } from "react-hook-form";
 import type { FieldPath, FieldValues, UseFormReturn } from "react-hook-form";
-import {
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Field, FieldTitle, FieldError } from "@/components/ui/field";
 import {
   Select,
   SelectContent,
@@ -29,22 +27,29 @@ export function SelectField<TFieldValues extends FieldValues>({
   placeholder,
   options,
 }: SelectFieldProps<TFieldValues>) {
+  const labelId = useId();
+
   return (
-    <FormField
-      control={form.control}
+    <Controller
       name={name}
-      render={({ field }) => (
-        <FormItem className="w-full">
-          <FormLabel className="text-sm font-medium text-foreground">
-            {label}
-          </FormLabel>
-          <Select onValueChange={field.onChange} value={field.value}>
-            <FormControl>
-              <SelectTrigger className="h-10 w-full rounded-lg">
-                <SelectValue placeholder={placeholder} />
-              </SelectTrigger>
-            </FormControl>
-            <SelectContent>
+      control={form.control}
+      render={({ field, fieldState }) => (
+        <Field className="w-full" data-invalid={fieldState.invalid}>
+          <FieldTitle id={labelId}>{label}</FieldTitle>
+          <Select
+            name={field.name}
+            value={field.value || undefined}
+            onValueChange={field.onChange}
+          >
+            <SelectTrigger
+              ref={field.ref}
+              aria-labelledby={labelId}
+              aria-invalid={fieldState.invalid}
+              className="h-10 w-full rounded-lg"
+            >
+              <SelectValue placeholder={placeholder} />
+            </SelectTrigger>
+            <SelectContent position="popper" align="start" sideOffset={4}>
               {options.map((option) => (
                 <SelectItem key={option} value={option}>
                   {option}
@@ -52,8 +57,8 @@ export function SelectField<TFieldValues extends FieldValues>({
               ))}
             </SelectContent>
           </Select>
-          <FormMessage />
-        </FormItem>
+          {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
+        </Field>
       )}
     />
   );
