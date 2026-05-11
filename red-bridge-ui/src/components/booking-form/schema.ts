@@ -1,13 +1,22 @@
 import { z } from "zod";
 
+export function createBookingStepFourSchema(messages: { mustAgree: string }) {
+  return z.object({
+    notes: z.string().trim(),
+    agreedToContact: z
+      .boolean()
+      .refine((val) => val === true, { message: messages.mustAgree }),
+  });
+}
+
 export function createBookingStepThreeSchema(messages: { required: string }) {
   return z.object({
     occupation: z.string().trim().min(1, messages.required),
     targetOccupation: z.string().trim().min(1, messages.required),
     educationLevel: z.string().trim().min(1, messages.required),
-    yearOfGraduation: z.string().trim().min(1, messages.required),
-    australianWorkExperience: z.string().trim().min(1, messages.required),
-    latestEnglishTest: z.string().trim().min(1, messages.required),
+    graduationYear: z.string().trim().min(1, messages.required),
+    workExperience: z.string().trim().min(1, messages.required),
+    englishTest: z.string().trim().min(1, messages.required),
   });
 }
 

@@ -18,22 +18,32 @@ export const bookingStepOneDefaultValues: BookingStepOneValues = {
   source: "",
 };
 
+export type BookingStepFourValues = {
+  notes: string;
+  agreedToContact: boolean;
+};
+
+export const bookingStepFourDefaultValues: BookingStepFourValues = {
+  notes: "",
+  agreedToContact: false,
+};
+
 export type BookingStepThreeValues = {
   occupation: string;
   targetOccupation: string;
   educationLevel: string;
-  yearOfGraduation: string;
-  australianWorkExperience: string;
-  latestEnglishTest: string;
+  graduationYear: string;
+  workExperience: string;
+  englishTest: string;
 };
 
 export const bookingStepThreeDefaultValues: BookingStepThreeValues = {
   occupation: "",
   targetOccupation: "",
   educationLevel: "",
-  yearOfGraduation: "",
-  australianWorkExperience: "",
-  latestEnglishTest: "",
+  graduationYear: "",
+  workExperience: "",
+  englishTest: "",
 };
 
 export type BookingStepTwoValues = {

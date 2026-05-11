@@ -1,16 +1,8 @@
 {
   "bookingForm": {
     "data": {
-      "contactMethods": [
-        "Mobile",
-        "Email",
-        "WeChat",
-        "WhatsApp"
-      ],
-      "languages": [
-        "English",
-        "Chinese"
-      ],
+      "contactMethods": ["Mobile", "Email", "WeChat", "WhatsApp"],
+      "languages": ["English", "Chinese"],
       "sources": [
         "Instagram Search",
         "Instagram Story Ad",
@@ -87,11 +79,7 @@
         "Master's",
         "Doctorate"
       ],
-      "workExperienceOptions": [
-        "Less than 1 year",
-        "1–3 years",
-        "3+ years"
-      ],
+      "workExperienceOptions": ["Less than 1 year", "1–3 years", "3+ years"],
       "englishTests": [
         "IELTS Academic",
         "IELTS General Training",
@@ -128,21 +116,35 @@
         "occupation": "Occupation*",
         "targetOccupation": "Target Occupation*",
         "educationLevel": "Highest Level of Education*",
-        "yearOfGraduation": "Year of Graduation*",
-        "australianWorkExperience": "Australian Work Experience*",
-        "latestEnglishTest": "Latest English Test*"
+        "graduationYear": "Year of Graduation*",
+        "workExperience": "Australian Work Experience*",
+        "englishTest": "Latest English Test*",
+        "notes": "Briefly Describe Your Situation"
       },
       "placeholders": {
         "select": "Select",
-        "pickDate": "Select a date"
+        "pickDate": "Select a date",
+        "notes": "e.g. I'm on a 485 expiring in 6 months, working in ICT in Melbourne, and aiming for PR…"
       },
       "buttons": {
         "back": "Back",
-        "next": "Next Step"
+        "next": "Next Step",
+        "submit": "Submit"
+      },
+      "review": {
+        "selectedConsultation": "Selected Consultation",
+        "summary": "Review Summary",
+        "sections": {
+          "contact": "Contact Details",
+          "pathway": "Pathway Snapshot",
+          "profile": "Profile Details"
+        },
+        "consentLabel": "I agree to be contacted by RedBridge about this booking request and understand that submitting this form does not confirm the appointment until the team replies."
       },
       "validation": {
         "required": "This field is required.",
-        "invalidEmail": "Please enter a valid email address."
+        "invalidEmail": "Please enter a valid email address.",
+        "mustAgree": "You must agree to continue."
       }
     }
   }

@@ -26,11 +26,6 @@ export function BookingStepThree({ form }: BookingStepThreeProps) {
           name="occupation"
           label={formT("fields.occupation")}
         />
-        <TextField
-          form={form}
-          name="targetOccupation"
-          label={formT("fields.targetOccupation")}
-        />
       </div>
 
       <SelectField
@@ -44,14 +39,14 @@ export function BookingStepThree({ form }: BookingStepThreeProps) {
       <div className="flex flex-row gap-6">
         <TextField
           form={form}
-          name="yearOfGraduation"
-          label={formT("fields.yearOfGraduation")}
+          name="graduationYear"
+          label={formT("fields.graduationYear")}
           type="number"
         />
         <SelectField
           form={form}
-          name="australianWorkExperience"
-          label={formT("fields.australianWorkExperience")}
+          name="workExperience"
+          label={formT("fields.workExperience")}
           placeholder={formT("placeholders.select")}
           options={workExperienceOptions}
         />
@@ -59,8 +54,8 @@ export function BookingStepThree({ form }: BookingStepThreeProps) {
 
       <SelectField
         form={form}
-        name="latestEnglishTest"
-        label={formT("fields.latestEnglishTest")}
+        name="englishTest"
+        label={formT("fields.englishTest")}
         placeholder={formT("placeholders.select")}
         options={englishTests}
       />

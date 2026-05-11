@@ -9,20 +9,27 @@ import { Button } from "@/components/ui/button";
 import { BookingStepOne } from "./BookingStepOne";
 import { BookingStepTwo } from "./BookingStepTwo";
 import { BookingStepThree } from "./BookingStepThree";
+import { BookingStepFour } from "./BookingStepFour";
 import {
   createBookingStepOneSchema,
   createBookingStepTwoSchema,
   createBookingStepThreeSchema,
+  createBookingStepFourSchema,
 } from "./schema";
 import {
   bookingStepOneDefaultValues,
   bookingStepTwoDefaultValues,
   bookingStepThreeDefaultValues,
+  bookingStepFourDefaultValues,
 } from "./types";
+
+type BookingFormProps = {
+  consultationSlot?: string;
+};
 
 const TOTAL_STEPS = 4;
 
-export function BookingForm() {
+export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
   const formT = useTranslations("bookingForm.form");
   const [step, setStep] = useState(0);
 
@@ -39,6 +46,10 @@ export function BookingForm() {
 
   const stepThreeSchema = createBookingStepThreeSchema({
     required: formT("validation.required"),
+  });
+
+  const stepFourSchema = createBookingStepFourSchema({
+    mustAgree: formT("validation.mustAgree"),
   });
 
   const formOne = useForm<z.infer<typeof stepOneSchema>>({
@@ -59,9 +70,18 @@ export function BookingForm() {
     mode: "onTouched",
   });
 
+  const formFour = useForm<z.infer<typeof stepFourSchema>>({
+    resolver: zodResolver(stepFourSchema),
+    defaultValues: bookingStepFourDefaultValues,
+    mode: "onTouched",
+  });
+
   const handleStepOneNext = formOne.handleSubmit(() => setStep(1));
   const handleStepTwoNext = formTwo.handleSubmit(() => setStep(2));
   const handleStepThreeNext = formThree.handleSubmit(() => setStep(3));
+  const handleSubmit = formFour.handleSubmit(() => {
+    // TODO: submit all form data
+  });
 
   return (
     <section className="w-full py-12">
@@ -94,6 +114,39 @@ export function BookingForm() {
               <div className="flex justify-end">
                 <Button type="submit" size="lg" className="px-8">
                   {formT("buttons.next")}
+                </Button>
+              </div>
+            </form>
+          )}
+
+          {step === 3 && (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                void handleSubmit();
+              }}
+              noValidate
+              className="space-y-8"
+            >
+              <BookingStepFour
+                form={formFour}
+                consultationSlot={consultationSlot}
+                stepOneValues={formOne.getValues()}
+                stepTwoValues={formTwo.getValues()}
+                stepThreeValues={formThree.getValues()}
+              />
+              <div className="flex justify-between">
+                <Button
+                  type="button"
+                  size="lg"
+                  variant="outline"
+                  className="px-8"
+                  onClick={() => setStep(2)}
+                >
+                  {formT("buttons.back")}
+                </Button>
+                <Button type="submit" size="lg" className="px-8">
+                  {formT("buttons.submit")}
                 </Button>
               </div>
             </form>
