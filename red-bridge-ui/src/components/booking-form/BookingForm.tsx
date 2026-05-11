@@ -41,7 +41,7 @@ export function BookingForm({ onStepOneSubmit }: BookingFormProps) {
   };
 
   return (
-    <section className="rounded-[26px] border border-border bg-card px-6 py-8 shadow-sm md:px-8 md:py-9">
+    <section className="mx-auto flex w-full flex-col rounded-lg border border-border bg-card px-6 py-8 shadow-sm">
       <div className="flex flex-col gap-3 border-b border-border pb-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground">
