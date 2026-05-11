@@ -20,13 +20,11 @@ export function BookingStepThree({ form }: BookingStepThreeProps) {
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="flex flex-row gap-6">
-        <TextField
-          form={form}
-          name="occupation"
-          label={formT("fields.occupation")}
-        />
-      </div>
+      <TextField
+        form={form}
+        name="occupation"
+        label={formT("fields.occupation")}
+      />
 
       <SelectField
         form={form}

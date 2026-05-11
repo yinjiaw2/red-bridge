@@ -30,7 +30,6 @@ export const bookingStepFourDefaultValues: BookingStepFourValues = {
 
 export type BookingStepThreeValues = {
   occupation: string;
-  targetOccupation: string;
   educationLevel: string;
   graduationYear: string;
   workExperience: string;
@@ -39,7 +38,6 @@ export type BookingStepThreeValues = {
 
 export const bookingStepThreeDefaultValues: BookingStepThreeValues = {
   occupation: "",
-  targetOccupation: "",
   educationLevel: "",
   graduationYear: "",
   workExperience: "",

@@ -122,10 +122,6 @@ export function BookingStepFour({
             value={stepThreeValues.occupation}
           />
           <ReviewRow
-            label={formT("fields.targetOccupation")}
-            value={stepThreeValues.targetOccupation}
-          />
-          <ReviewRow
             label={formT("fields.educationLevel")}
             value={stepThreeValues.educationLevel}
           />

@@ -12,7 +12,6 @@ export function createBookingStepFourSchema(messages: { mustAgree: string }) {
 export function createBookingStepThreeSchema(messages: { required: string }) {
   return z.object({
     occupation: z.string().trim().min(1, messages.required),
-    targetOccupation: z.string().trim().min(1, messages.required),
     educationLevel: z.string().trim().min(1, messages.required),
     graduationYear: z.string().trim().min(1, messages.required),
     workExperience: z.string().trim().min(1, messages.required),
