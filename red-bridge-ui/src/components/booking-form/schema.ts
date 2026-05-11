@@ -1,5 +1,16 @@
 import { z } from "zod";
 
+export function createBookingStepThreeSchema(messages: { required: string }) {
+  return z.object({
+    occupation: z.string().trim().min(1, messages.required),
+    targetOccupation: z.string().trim().min(1, messages.required),
+    educationLevel: z.string().trim().min(1, messages.required),
+    yearOfGraduation: z.string().trim().min(1, messages.required),
+    australianWorkExperience: z.string().trim().min(1, messages.required),
+    latestEnglishTest: z.string().trim().min(1, messages.required),
+  });
+}
+
 export function createBookingStepTwoSchema(messages: { required: string }) {
   return z.object({
     pathway: z.string().trim().min(1, messages.required),

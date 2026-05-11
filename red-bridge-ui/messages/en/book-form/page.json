@@ -78,6 +78,28 @@
         "Citizen",
         "Other",
         "None / Not Applicable"
+      ],
+      "educationLevels": [
+        "High School",
+        "Certificate I–IV",
+        "Diploma",
+        "Bachelor's",
+        "Master's",
+        "Doctorate"
+      ],
+      "workExperienceOptions": [
+        "Less than 1 year",
+        "1–3 years",
+        "3+ years"
+      ],
+      "englishTests": [
+        "IELTS Academic",
+        "IELTS General Training",
+        "PTE Academic",
+        "TOEFL iBT",
+        "OET",
+        "Cambridge C1 Advanced",
+        "No recent test yet"
       ]
     },
     "form": {
@@ -102,7 +124,13 @@
         "countryOfResidency": "Country of Residency*",
         "dateOfBirth": "Date of Birth*",
         "currentVisa": "Current Visa",
-        "visaExpiry": "Visa Expiry"
+        "visaExpiry": "Visa Expiry",
+        "occupation": "Occupation*",
+        "targetOccupation": "Target Occupation*",
+        "educationLevel": "Highest Level of Education*",
+        "yearOfGraduation": "Year of Graduation*",
+        "australianWorkExperience": "Australian Work Experience*",
+        "latestEnglishTest": "Latest English Test*"
       },
       "placeholders": {
         "select": "Select",

@@ -78,6 +78,28 @@
         "公民",
         "其他",
         "无 / 不适用"
+      ],
+      "educationLevels": [
+        "高中",
+        "证书 I–IV",
+        "大专 / 文凭",
+        "本科",
+        "硕士",
+        "博士"
+      ],
+      "workExperienceOptions": [
+        "不足 1 年",
+        "1–3 年",
+        "3 年以上"
+      ],
+      "englishTests": [
+        "雅思学术类 (IELTS Academic)",
+        "雅思培训类 (IELTS General Training)",
+        "PTE 学术类",
+        "托福 iBT",
+        "OET",
+        "剑桥 C1 高级",
+        "暂无近期考试成绩"
       ]
     },
     "form": {
@@ -102,7 +124,13 @@
         "countryOfResidency": "目前居住国家*",
         "dateOfBirth": "出生日期*",
         "currentVisa": "当前签证",
-        "visaExpiry": "签证到期日"
+        "visaExpiry": "签证到期日",
+        "occupation": "当前职业*",
+        "targetOccupation": "目标职业*",
+        "educationLevel": "最高学历*",
+        "yearOfGraduation": "毕业年份*",
+        "australianWorkExperience": "澳洲工作经验*",
+        "latestEnglishTest": "最近英语考试*"
       },
       "placeholders": {
         "select": "请选择",

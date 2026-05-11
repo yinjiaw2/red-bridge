@@ -8,13 +8,16 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { BookingStepOne } from "./BookingStepOne";
 import { BookingStepTwo } from "./BookingStepTwo";
+import { BookingStepThree } from "./BookingStepThree";
 import {
   createBookingStepOneSchema,
   createBookingStepTwoSchema,
+  createBookingStepThreeSchema,
 } from "./schema";
 import {
   bookingStepOneDefaultValues,
   bookingStepTwoDefaultValues,
+  bookingStepThreeDefaultValues,
 } from "./types";
 
 const TOTAL_STEPS = 4;
@@ -34,6 +37,10 @@ export function BookingForm() {
     required: formT("validation.required"),
   });
 
+  const stepThreeSchema = createBookingStepThreeSchema({
+    required: formT("validation.required"),
+  });
+
   const formOne = useForm<z.infer<typeof stepOneSchema>>({
     resolver: zodResolver(stepOneSchema),
     defaultValues: bookingStepOneDefaultValues,
@@ -46,8 +53,15 @@ export function BookingForm() {
     mode: "onTouched",
   });
 
+  const formThree = useForm<z.infer<typeof stepThreeSchema>>({
+    resolver: zodResolver(stepThreeSchema),
+    defaultValues: bookingStepThreeDefaultValues,
+    mode: "onTouched",
+  });
+
   const handleStepOneNext = formOne.handleSubmit(() => setStep(1));
   const handleStepTwoNext = formTwo.handleSubmit(() => setStep(2));
+  const handleStepThreeNext = formThree.handleSubmit(() => setStep(3));
 
   return (
     <section className="w-full py-12">
@@ -78,6 +92,33 @@ export function BookingForm() {
             >
               <BookingStepOne form={formOne} />
               <div className="flex justify-end">
+                <Button type="submit" size="lg" className="px-8">
+                  {formT("buttons.next")}
+                </Button>
+              </div>
+            </form>
+          )}
+
+          {step === 2 && (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                void handleStepThreeNext();
+              }}
+              noValidate
+              className="space-y-8"
+            >
+              <BookingStepThree form={formThree} />
+              <div className="flex justify-between">
+                <Button
+                  type="button"
+                  size="lg"
+                  variant="outline"
+                  className="px-8"
+                  onClick={() => setStep(1)}
+                >
+                  {formT("buttons.back")}
+                </Button>
                 <Button type="submit" size="lg" className="px-8">
                   {formT("buttons.next")}
                 </Button>

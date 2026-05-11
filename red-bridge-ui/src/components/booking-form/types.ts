@@ -18,6 +18,24 @@ export const bookingStepOneDefaultValues: BookingStepOneValues = {
   source: "",
 };
 
+export type BookingStepThreeValues = {
+  occupation: string;
+  targetOccupation: string;
+  educationLevel: string;
+  yearOfGraduation: string;
+  australianWorkExperience: string;
+  latestEnglishTest: string;
+};
+
+export const bookingStepThreeDefaultValues: BookingStepThreeValues = {
+  occupation: "",
+  targetOccupation: "",
+  educationLevel: "",
+  yearOfGraduation: "",
+  australianWorkExperience: "",
+  latestEnglishTest: "",
+};
+
 export type BookingStepTwoValues = {
   pathway: string;
   nationality: string;
