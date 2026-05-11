@@ -23,6 +23,61 @@
         "Word of Mouth",
         "Referral",
         "Other"
+      ],
+      "pathways": [
+        "482 / 186 Employer Sponsored",
+        "189 Independent Skilled",
+        "190 State Nominated",
+        "491 Regional Skilled",
+        "Student / Graduate Options",
+        "Partner Visa",
+        "Other / Not Sure"
+      ],
+      "countries": [
+        "Australia",
+        "Bangladesh",
+        "Brazil",
+        "Cambodia",
+        "Canada",
+        "China",
+        "Egypt",
+        "France",
+        "Germany",
+        "Hong Kong",
+        "India",
+        "Indonesia",
+        "Italy",
+        "Japan",
+        "Kenya",
+        "Malaysia",
+        "Myanmar",
+        "Nepal",
+        "New Zealand",
+        "Nigeria",
+        "Pakistan",
+        "Philippines",
+        "Singapore",
+        "South Africa",
+        "South Korea",
+        "Spain",
+        "Sri Lanka",
+        "Taiwan",
+        "Thailand",
+        "United Kingdom",
+        "United States",
+        "Vietnam",
+        "Other"
+      ],
+      "visaTypes": [
+        "Student (500)",
+        "Graduate (485)",
+        "Employer Sponsored (482)",
+        "Bridging Visa",
+        "Tourist (600)",
+        "Permanent Resident",
+        "Citizen",
+        "Other",
+        "None / Not Applicable"
       ]
     },
     "form": {
@@ -41,10 +96,17 @@
         "mobile": "Mobile Number*",
         "preferredContact": "Preferred Contact*",
         "preferredLanguage": "Preferred Language*",
-        "source": "How Did You Hear About Us?*"
+        "source": "How Did You Hear About Us?*",
+        "pathway": "Pathway / Consultation Focus*",
+        "nationality": "Nationality*",
+        "countryOfResidency": "Country of Residency*",
+        "dateOfBirth": "Date of Birth*",
+        "currentVisa": "Current Visa",
+        "visaExpiry": "Visa Expiry"
       },
       "placeholders": {
-        "select": "Select"
+        "select": "Select",
+        "pickDate": "Select a date"
       },
       "buttons": {
         "next": "Next Step"

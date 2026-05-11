@@ -6,90 +6,103 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
 import { BookingStepOne } from "./BookingStepOne";
-import { createBookingStepOneSchema } from "./schema";
+import { BookingStepTwo } from "./BookingStepTwo";
+import {
+  createBookingStepOneSchema,
+  createBookingStepTwoSchema,
+} from "./schema";
 import {
   bookingStepOneDefaultValues,
-  type BookingStepOneValues,
+  bookingStepTwoDefaultValues,
 } from "./types";
 
 const TOTAL_STEPS = 4;
-const INITIAL_STEP_INDEX = 0;
 
-type BookingFormProps = {
-  onStepOneSubmit?: (values: BookingStepOneValues) => void;
-};
-
-export function BookingForm({ onStepOneSubmit }: BookingFormProps) {
+export function BookingForm() {
   const formT = useTranslations("bookingForm.form");
-  const [step, setStep] = useState(INITIAL_STEP_INDEX);
-  const [formData, setFormData] = useState<BookingStepOneValues>(
-    bookingStepOneDefaultValues,
-  );
+  const [step, setStep] = useState(0);
 
   const stepTitles = formT.raw("steps") as string[];
-  const currentStepTitle = stepTitles[step] ?? "";
-  const schema = createBookingStepOneSchema({
+
+  const stepOneSchema = createBookingStepOneSchema({
     required: formT("validation.required"),
     invalidEmail: formT("validation.invalidEmail"),
   });
 
-  const form = useForm<z.infer<typeof schema>>({
-    resolver: zodResolver(schema),
+  const stepTwoSchema = createBookingStepTwoSchema({
+    required: formT("validation.required"),
+  });
+
+  const formOne = useForm<z.infer<typeof stepOneSchema>>({
+    resolver: zodResolver(stepOneSchema),
     defaultValues: bookingStepOneDefaultValues,
     mode: "onTouched",
   });
 
-  const onNext = form.handleSubmit((data) => {
-    const nextFormData = { ...formData, ...data };
-
-    setFormData(nextFormData);
-    onStepOneSubmit?.(nextFormData);
-    setStep((currentStep) => Math.min(currentStep + 1, TOTAL_STEPS - 1));
-    form.reset(nextFormData);
+  const formTwo = useForm<z.infer<typeof stepTwoSchema>>({
+    resolver: zodResolver(stepTwoSchema),
+    defaultValues: bookingStepTwoDefaultValues,
+    mode: "onTouched",
   });
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    void onNext();
-  };
+  const handleStepOneNext = formOne.handleSubmit(() => setStep(1));
+  const handleStepTwoNext = formTwo.handleSubmit(() => setStep(2));
 
   return (
     <section className="w-full py-12">
-      <div className="mx-auto w-full max-w-3xl flex flex-col rounded-lg border border-border bg-card px-6 py-8 shadow-sm">
-        <div className="flex flex-col gap-3 border-b border-border pb-6 ">
+      <div className="mx-auto flex w-full max-w-3xl flex-col rounded-lg border border-border bg-card px-6 py-8 shadow-sm">
+        <div className="flex flex-col gap-3 border-b border-border pb-6">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground">
               {formT("eyebrow")}
             </p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-foreground">
-              {currentStepTitle}
+              {stepTitles[step] ?? ""}
             </h2>
           </div>
           <span className="inline-flex w-fit rounded-full border border-border bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-            {formT("stepOf", {
-              current: step + 1,
-              total: TOTAL_STEPS,
-            })}
+            {formT("stepOf", { current: step + 1, total: TOTAL_STEPS })}
           </span>
         </div>
 
-        <Form {...form}>
-          <form
-            onSubmit={handleSubmit}
-            noValidate
-            className="mt-7 space-y-8 w-full"
-          >
-            <BookingStepOne form={form} />
+        <div className="mt-7">
+          {step === 0 && (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                void handleStepOneNext();
+              }}
+              noValidate
+              className="space-y-8"
+            >
+              <BookingStepOne form={formOne} />
+              <div className="flex justify-end">
+                <Button type="submit" size="lg" className="px-8">
+                  {formT("buttons.next")}
+                </Button>
+              </div>
+            </form>
+          )}
 
-            <div className="flex w-full justify-end">
-              <Button type="button" size="lg" className="px-8" onClick={onNext}>
-                {formT("buttons.next")}
-              </Button>
-            </div>
-          </form>
-        </Form>
+          {step === 1 && (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                void handleStepTwoNext();
+              }}
+              noValidate
+              className="space-y-8"
+            >
+              <BookingStepTwo form={formTwo} />
+              <div className="flex justify-end">
+                <Button type="submit" size="lg" className="px-8">
+                  {formT("buttons.next")}
+                </Button>
+              </div>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   );
