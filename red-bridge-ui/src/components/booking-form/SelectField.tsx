@@ -3,6 +3,13 @@
 import { useId } from "react";
 import { Controller } from "react-hook-form";
 import type { FieldPath, FieldValues, UseFormReturn } from "react-hook-form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 type SelectFieldProps<TFieldValues extends FieldValues> = {
   form: UseFormReturn<TFieldValues>;
@@ -27,27 +34,28 @@ export function SelectField<TFieldValues extends FieldValues>({
       control={form.control}
       render={({ field, fieldState }) => (
         <div className="flex w-full flex-col gap-2">
-          <label
-            htmlFor={id}
-            className="text-sm font-medium text-foreground"
-          >
+          <label htmlFor={id} className="text-sm font-medium text-foreground">
             {label}
           </label>
-          <select
-            {...field}
-            id={id}
-            aria-invalid={fieldState.invalid}
-            className="flex h-10 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none transition-colors focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
+          <Select
+            value={field.value ?? ""}
+            onValueChange={field.onChange}
           >
-            <option value="" disabled>
-              {placeholder}
-            </option>
-            {options.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+            <SelectTrigger
+              id={id}
+              aria-invalid={fieldState.invalid}
+              className="h-10 w-full rounded-lg"
+            >
+              <SelectValue placeholder={placeholder} />
+            </SelectTrigger>
+            <SelectContent>
+              {options.map((option) => (
+                <SelectItem key={option} value={option}>
+                  {option}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
           {fieldState.invalid && (
             <p className="text-xs text-destructive">
               {fieldState.error?.message}

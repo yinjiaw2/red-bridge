@@ -22,7 +22,7 @@ export function BookingStepTwo({ form }: BookingStepTwoProps) {
   const twentyYearsFromNow = new Date(
     today.getFullYear() + 20,
     today.getMonth(),
-    today.getDate()
+    today.getDate(),
   );
 
   return (
@@ -58,7 +58,7 @@ export function BookingStepTwo({ form }: BookingStepTwoProps) {
         label={formT("fields.dateOfBirth")}
         placeholder={formT("placeholders.pickDate")}
         disabled={{ after: today }}
-        fromYear={1900}
+        fromYear={1920}
         toYear={today.getFullYear()}
       />
 
@@ -75,7 +75,7 @@ export function BookingStepTwo({ form }: BookingStepTwoProps) {
           name="visaExpiry"
           label={formT("fields.visaExpiry")}
           placeholder={formT("placeholders.pickDate")}
-          fromYear={today.getFullYear()}
+          fromYear={2000}
           toYear={twentyYearsFromNow.getFullYear()}
         />
       </div>
