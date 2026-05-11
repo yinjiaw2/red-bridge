@@ -29,6 +29,7 @@ import aboutStory from './about/aboutStory.json';
 import aboutTeam from './about/aboutTeam.json';
 import aboutUs from './about/aboutUs.json';
 import aboutValues from './about/aboutValues.json';
+import bookingFormPage from './book-form/page.json';
 import contactPage from './contact/page.json';
 import faqPage from './faq/page.json';
 import employerCta from './for-employers/employerCta.json';
@@ -103,6 +104,7 @@ const allMessages: Obj[] = [
   pathway191, process491, regionalAreas491, related491, requirements491,
   reviewedBanner491, tradeoff491,
   aboutCta, aboutEmployer, aboutLegal, aboutStory, aboutTeam, aboutUs, aboutValues,
+  bookingFormPage,
   contactPage, faqPage,
   employerCta, employerDifference, employerEnquiry, employerFaq, employerFees,
   employerObligations, employerPartnership, employerProcess, employerWhy, employerServiceIntro,

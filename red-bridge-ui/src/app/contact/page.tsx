@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
 import { Footer } from "@/components/shared/Footer";
-import { BookingExperience } from "@/components/booking/BookingExperience";
 import NavBar from "@/components/shared/NavBar";
 import { BookingHero } from "@/components/booking/BookingHero";
+import { BookingForm } from "@/components/booking-form/BookingForm";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -30,7 +30,8 @@ export default function ContactPage() {
       <NavBar />
       <main className="min-h-full bg-[var(--bg)] pt-16 md:pt-24">
         <BookingHero />
-        <BookingExperience />
+        {/* <BookingExperience /> */}
+        <BookingForm />
       </main>
       <Footer />
     </>

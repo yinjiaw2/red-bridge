@@ -1,0 +1,159 @@
+{
+  "bookingForm": {
+    "data": {
+      "contactMethods": ["电话", "邮箱", "微信", "WhatsApp"],
+      "languages": ["英文", "中文"],
+      "sources": [
+        "Instagram 搜索",
+        "Instagram Story 广告",
+        "Instagram Feed 广告",
+        "Instagram 自然帖文",
+        "Facebook 广告",
+        "TikTok",
+        "小红书 / RedNote",
+        "网页搜索",
+        "朋友介绍",
+        "转介绍",
+        "其他"
+      ],
+      "pathways": [
+        "482 / 186 雇主担保签证",
+        "189 独立技术移民",
+        "190 州担保技术移民",
+        "491 区域技术移民",
+        "学生 / 毕业生路径",
+        "配偶签证",
+        "其他 / 暂不确定"
+      ],
+      "countries": [
+        "澳大利亚",
+        "孟加拉国",
+        "巴西",
+        "柬埔寨",
+        "加拿大",
+        "中国",
+        "埃及",
+        "法国",
+        "德国",
+        "香港",
+        "印度",
+        "印度尼西亚",
+        "意大利",
+        "日本",
+        "肯尼亚",
+        "马来西亚",
+        "缅甸",
+        "尼泊尔",
+        "新西兰",
+        "尼日利亚",
+        "巴基斯坦",
+        "菲律宾",
+        "新加坡",
+        "南非",
+        "韩国",
+        "西班牙",
+        "斯里兰卡",
+        "台湾",
+        "泰国",
+        "英国",
+        "美国",
+        "越南",
+        "其他"
+      ],
+      "visaTypes": [
+        "学生签证 (500)",
+        "毕业生签证 (485)",
+        "雇主担保签证 (482)",
+        "过桥签证",
+        "旅游签证 (600)",
+        "永久居民",
+        "公民",
+        "其他",
+        "无 / 不适用"
+      ],
+      "educationLevels": [
+        "高中",
+        "证书 I–IV",
+        "大专 / 文凭",
+        "本科",
+        "硕士",
+        "博士"
+      ],
+      "workExperienceOptions": ["不足 1 年", "1–3 年", "3 年以上"],
+      "englishTests": [
+        "雅思学术类 (IELTS Academic)",
+        "雅思培训类 (IELTS General Training)",
+        "PTE 学术类",
+        "托福 iBT",
+        "OET",
+        "剑桥 C1 高级",
+        "暂无近期考试成绩"
+      ]
+    },
+    "form": {
+      "eyebrow": "客户资料",
+      "steps": ["联系方式", "路径概况", "个人背景", "确认提交"],
+      "stepOf": "第 {current} 步 / 共 {total} 步",
+      "fields": {
+        "firstName": "名字*",
+        "lastName": "姓氏*",
+        "email": "邮箱*",
+        "mobile": "手机号*",
+        "preferredContact": "偏好联系方式*",
+        "preferredLanguage": "偏好语言*",
+        "source": "你是如何知道我们的？*",
+        "pathway": "移民路径 / 咨询方向*",
+        "nationality": "国籍*",
+        "countryOfResidency": "目前居住国家*",
+        "dateOfBirth": "出生日期*",
+        "currentVisa": "当前签证",
+        "visaExpiry": "签证到期日",
+        "occupation": "当前职业*",
+        "targetOccupation": "目标职业*",
+        "educationLevel": "最高学历*",
+        "graduationYear": "毕业年份*",
+        "workExperience": "澳洲工作经验*",
+        "englishTest": "最近英语考试*",
+        "notes": "简要描述您的情况"
+      },
+      "placeholders": {
+        "select": "请选择",
+        "pickDate": "选择日期",
+        "notes": "例如：我持有 485 签证，还有 6 个月到期，在墨尔本从事 IT 行业，目标是获得永居…"
+      },
+      "buttons": {
+        "back": "返回",
+        "next": "下一步",
+        "submit": "提交",
+        "submitting": "提交中…"
+      },
+      "submitted": {
+        "eyebrow": "申请已收到",
+        "title": "谢谢你，{name}！",
+        "description": "我们已收到您的预约申请，团队将尽快与您联系确认预约。",
+        "fields": {
+          "name": "姓名：",
+          "email": "邮箱：",
+          "pathway": "路径：",
+          "slot": "咨询时段："
+        }
+      },
+      "review": {
+        "selectedConsultation": "已选咨询时段",
+        "summary": "信息确认",
+        "sections": {
+          "contact": "联系方式",
+          "pathway": "路径概况",
+          "profile": "个人背景"
+        },
+        "consentLabel": "我同意 RedBridge 就此预约请求与我联系，并了解提交此表格并不代表预约已确认，需等待团队回复。"
+      },
+      "validation": {
+        "required": "此字段为必填项。",
+        "invalidEmail": "请输入有效的邮箱地址。",
+        "mustAgree": "请勾选同意后继续。",
+        "submitError": "提交失败，请检查网络连接后重试。"
+      }
+    }
+  }
+}
