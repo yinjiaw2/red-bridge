@@ -3,7 +3,6 @@ import { getLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
 import NavBar from "@/components/shared/NavBar";
 import HeroSection from "@/components/home/HeroSection";
-import UserScenarioSection from "@/components/home/UserScenarioSection";
 import TrustSafetySection from "@/components/home/TrustSafetySection";
 import SuccessTicker from "@/components/home/OutcomeTickerSection";
 import ComparisonSection from "@/components/home/ComparisonSection";
@@ -17,7 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata(
     locale,
     {
-      title: "RedBridge Consulting | Australia Career and Recruitment Specialists",
+      title:
+        "RedBridge Consulting | Australia Career and Recruitment Specialists",
       description:
         "Get placed with verified employers. Gain the right experience. Move from study to 482 visa and PR with confidence. Melbourne & Sydney's leading migration and career consultancy.",
     },
