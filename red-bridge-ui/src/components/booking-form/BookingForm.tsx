@@ -4,10 +4,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import { z } from "zod";
 import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
-import { SubmitSuccessCard } from "./SubmitSuccessCard";
 import { BookingStepOne } from "./BookingStepOne";
 import { BookingStepTwo } from "./BookingStepTwo";
 import { BookingStepThree } from "./BookingStepThree";
@@ -33,8 +33,8 @@ const TOTAL_STEPS = 4;
 
 export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
   const formT = useTranslations("bookingForm.form");
+  const router = useRouter();
   const [step, setStep] = useState(0);
-  const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
 
   const stepTitles = formT.raw("steps") as string[];
@@ -115,25 +115,16 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
           notes: stepFourData.notes,
         }),
       });
-      setSubmitted(true);
+      const params = new URLSearchParams({
+        name: formOne.getValues("firstName"),
+        email: formOne.getValues("email"),
+        pathway: formTwo.getValues("pathway"),
+      });
+      router.push(`/contact/success?${params.toString()}`);
     } catch {
       setSubmitError(true);
     }
   });
-
-  if (submitted) {
-    return (
-      <section className="w-full py-12">
-        <div className="mx-auto flex w-full max-w-3xl flex-col rounded-lg border border-border bg-card px-6 py-8 shadow-sm">
-          <SubmitSuccessCard
-            name={formOne.getValues("firstName")}
-            email={formOne.getValues("email")}
-            pathway={formTwo.getValues("pathway")}
-          />
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section className="w-full py-12">
