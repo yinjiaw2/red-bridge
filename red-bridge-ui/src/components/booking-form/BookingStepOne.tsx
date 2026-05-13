@@ -10,6 +10,9 @@ type BookingStepOneProps = {
   form: UseFormReturn<BookingStepOneValues>;
 };
 
+const WECHAT_VALUES = ["WeChat", "微信"];
+const WHATSAPP_VALUES = ["WhatsApp"];
+
 export function BookingStepOne({ form }: BookingStepOneProps) {
   const formT = useTranslations("bookingForm.form");
   const dataT = useTranslations("bookingForm.data");
@@ -17,6 +20,14 @@ export function BookingStepOne({ form }: BookingStepOneProps) {
   const contactMethods = dataT.raw("contactMethods") as string[];
   const languages = dataT.raw("languages") as string[];
   const sources = dataT.raw("sources") as string[];
+
+  const preferredContact = form.watch("preferredContact");
+  const isWeChat = WECHAT_VALUES.includes(preferredContact);
+  const isWhatsApp = WHATSAPP_VALUES.includes(preferredContact);
+  const showContactHandle = isWeChat || isWhatsApp;
+  const contactHandleLabel = isWeChat
+    ? formT("fields.wechatId")
+    : formT("fields.whatsappNumber");
 
   return (
     <div className="flex flex-col gap-5 items-center">
@@ -65,6 +76,15 @@ export function BookingStepOne({ form }: BookingStepOneProps) {
           options={languages}
         />
       </div>
+      {showContactHandle && (
+        <div className="w-full">
+          <TextField
+            form={form}
+            name="contactHandle"
+            label={contactHandleLabel}
+          />
+        </div>
+      )}
       <div className="w-full">
         <SelectField
           form={form}

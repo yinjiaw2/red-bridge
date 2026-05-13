@@ -13,4 +13,4 @@ enabled = true
 [vars]
 NEXT_PUBLIC_GA_ID = "G-B7DWL6EMN4"
 NEXT_PUBLIC_META_PIXEL_ID = "1603950367696460"
-NEXT_PUBLIC_BOOKING_SHEET_URL = "https://script.google.com/macros/s/AKfycbyFt1JgSJjAKNhmY0OupDR5Ft6wGHF0MIQiY-kyJjGvy4Iu9-8d0JOJMb4XiZDYS08AZQ/exec"
+NEXT_PUBLIC_BOOKING_SHEET_URL = "https://script.google.com/macros/s/AKfycbzs5GTaVuCK-eRJFa8jVVhV5SYX-2vwoP5yO0C4JI_vKUuUwWqWhYQh0Qu-8VEx5NK_iQ/exec"

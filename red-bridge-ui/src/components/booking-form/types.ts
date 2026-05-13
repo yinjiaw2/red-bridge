@@ -6,6 +6,7 @@ export type BookingStepOneValues = {
   preferredContact: string;
   preferredLanguage: string;
   source: string;
+  contactHandle?: string;
 };
 
 export const bookingStepOneDefaultValues: BookingStepOneValues = {
@@ -16,6 +17,7 @@ export const bookingStepOneDefaultValues: BookingStepOneValues = {
   preferredContact: "",
   preferredLanguage: "",
   source: "",
+  contactHandle: "",
 };
 
 export type BookingStepFourValues = {

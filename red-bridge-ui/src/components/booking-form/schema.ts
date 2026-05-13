@@ -30,21 +30,37 @@ export function createBookingStepTwoSchema(messages: { required: string }) {
   });
 }
 
+const CONTACT_HANDLE_METHODS = ["WeChat", "WhatsApp", "微信"];
+
 export function createBookingStepOneSchema(messages: {
   required: string;
   invalidEmail: string;
 }) {
-  return z.object({
-    firstName: z.string().trim().min(1, messages.required),
-    lastName: z.string().trim().min(1, messages.required),
-    email: z
-      .string()
-      .trim()
-      .min(1, messages.required)
-      .email({ message: messages.invalidEmail }),
-    mobile: z.string().trim().min(1, messages.required),
-    preferredContact: z.string().trim().min(1, messages.required),
-    preferredLanguage: z.string().trim().min(1, messages.required),
-    source: z.string().trim().min(1, messages.required),
-  });
+  return z
+    .object({
+      firstName: z.string().trim().min(1, messages.required),
+      lastName: z.string().trim().min(1, messages.required),
+      email: z
+        .string()
+        .trim()
+        .min(1, messages.required)
+        .email({ message: messages.invalidEmail }),
+      mobile: z.string().trim().min(1, messages.required),
+      preferredContact: z.string().trim().min(1, messages.required),
+      preferredLanguage: z.string().trim().min(1, messages.required),
+      source: z.string().trim().min(1, messages.required),
+      contactHandle: z.string().optional(),
+    })
+    .superRefine((data, ctx) => {
+      if (
+        CONTACT_HANDLE_METHODS.includes(data.preferredContact) &&
+        !data.contactHandle?.trim()
+      ) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: messages.required,
+          path: ["contactHandle"],
+        });
+      }
+    });
 }

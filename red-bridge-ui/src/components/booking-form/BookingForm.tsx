@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { z } from "zod";
@@ -31,11 +31,37 @@ type BookingFormProps = {
 
 const TOTAL_STEPS = 4;
 
+function getUrlParam(key: string): string {
+  if (typeof window === "undefined") return "";
+  return new URLSearchParams(window.location.search).get(key) ?? "";
+}
+
+function getMetaFbc(): string {
+  if (typeof document === "undefined") return "";
+  const match = document.cookie.match(/_fbc=([^;]+)/);
+  return match ? decodeURIComponent(match[1]) : "";
+}
+
 export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
   const formT = useTranslations("bookingForm.form");
   const router = useRouter();
   const [step, setStep] = useState(0);
   const [submitError, setSubmitError] = useState(false);
+  const [trackingData, setTrackingData] = useState({
+    ctaSrc: "",
+    utmSource: "",
+    utmCampaign: "",
+    metaFbc: "",
+  });
+
+  useEffect(() => {
+    setTrackingData({
+      ctaSrc: getUrlParam("src"),
+      utmSource: getUrlParam("utm_source"),
+      utmCampaign: getUrlParam("utm_campaign"),
+      metaFbc: getMetaFbc(),
+    });
+  }, []);
 
   const stepTitles = formT.raw("steps") as string[];
 
@@ -113,6 +139,10 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
           visaExpiry: s2.visaExpiry ? format(s2.visaExpiry, "dd/MM/yyyy") : "",
           ...s3,
           notes: stepFourData.notes,
+          ...(trackingData.ctaSrc ? { ctaSrc: trackingData.ctaSrc } : {}),
+          ...(trackingData.utmSource ? { utmSource: trackingData.utmSource } : {}),
+          ...(trackingData.utmCampaign ? { utmCampaign: trackingData.utmCampaign } : {}),
+          ...(trackingData.metaFbc ? { metaFbc: trackingData.metaFbc } : {}),
         }),
       });
       const params = new URLSearchParams({
