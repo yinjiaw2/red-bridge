@@ -122,13 +122,20 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
     const s2 = formTwo.getValues();
     const s3 = formThree.getValues();
 
+    const { contactHandle, ...s1Rest } = s1;
+    const isWeChat = ["WeChat", "微信"].includes(s1.preferredContact);
+    const contactHandleField = contactHandle
+      ? (isWeChat ? { wechatID: contactHandle } : { whatsappNum: contactHandle })
+      : {};
+
     try {
       await fetch(sheetUrl, {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify({
           type: "contact",
-          ...s1,
+          ...s1Rest,
+          ...contactHandleField,
           pathway: s2.pathway,
           nationality: s2.nationality,
           countryResidency: s2.countryOfResidency,
