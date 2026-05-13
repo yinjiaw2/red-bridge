@@ -40,6 +40,8 @@ export function BookingStepThree({ form }: BookingStepThreeProps) {
           name="graduationYear"
           label={formT("fields.graduationYear")}
           type="number"
+          min={1000}
+          max={new Date().getFullYear()}
         />
         <SelectField
           form={form}

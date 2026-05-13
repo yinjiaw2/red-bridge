@@ -76,6 +76,7 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
 
   const stepThreeSchema = createBookingStepThreeSchema({
     required: formT("validation.required"),
+    invalidYear: formT("validation.invalidYear"),
   });
 
   const stepFourSchema = createBookingStepFourSchema({

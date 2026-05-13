@@ -10,6 +10,8 @@ type TextFieldProps<TFieldValues extends FieldValues> = {
   name: FieldPath<TFieldValues>;
   label: string;
   type?: "text" | "email" | "tel" | "number";
+  min?: number;
+  max?: number;
 };
 
 export function TextField<TFieldValues extends FieldValues>({
@@ -17,6 +19,8 @@ export function TextField<TFieldValues extends FieldValues>({
   name,
   label,
   type = "text",
+  min,
+  max,
 }: TextFieldProps<TFieldValues>) {
   const id = useId();
 
@@ -31,6 +35,8 @@ export function TextField<TFieldValues extends FieldValues>({
             {...field}
             id={id}
             type={type}
+            min={min}
+            max={max}
             aria-invalid={fieldState.invalid}
             className="flex h-10 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none transition-colors focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
           />

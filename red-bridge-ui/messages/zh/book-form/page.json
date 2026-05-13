@@ -155,6 +155,7 @@
       "validation": {
         "required": "此字段为必填项。",
         "invalidEmail": "请输入有效的邮箱地址。",
+        "invalidYear": "请输入有效的4位年份。",
         "mustAgree": "请勾选同意后继续。",
         "submitError": "提交失败，请检查网络连接后重试。"
       }

@@ -9,11 +9,16 @@ export function createBookingStepFourSchema(messages: { mustAgree: string }) {
   });
 }
 
-export function createBookingStepThreeSchema(messages: { required: string }) {
+export function createBookingStepThreeSchema(messages: { required: string; invalidYear: string }) {
   return z.object({
     occupation: z.string().trim().min(1, messages.required),
     educationLevel: z.string().trim().min(1, messages.required),
-    graduationYear: z.string().trim().min(1, messages.required),
+    graduationYear: z
+      .string()
+      .trim()
+      .min(1, messages.required)
+      .regex(/^[1-9]\d{3}$/, messages.invalidYear)
+      .refine((val) => parseInt(val) <= new Date().getFullYear(), { message: messages.invalidYear }),
     workExperience: z.string().trim().min(1, messages.required),
     englishTest: z.string().trim().min(1, messages.required),
   });

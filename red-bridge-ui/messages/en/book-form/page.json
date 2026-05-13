@@ -160,6 +160,7 @@
       "validation": {
         "required": "This field is required.",
         "invalidEmail": "Please enter a valid email address.",
+        "invalidYear": "Please enter a valid 4-digit year.",
         "mustAgree": "You must agree to continue.",
         "submitError": "Something went wrong. Please check your connection and try again."
       }
