@@ -31,13 +31,7 @@ function WhatsAppIcon() {
   );
 }
 
-function XiaohongshuIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" aria-hidden>
-      <path d="M21 2H3a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zm-3.5 5h-4v1.5h3.5v2h-3.5v1h3.5V13h-3.5v1.5H17V16H7v-1.5h3.5V13H7v-1.5h3.5v-1H7V8.5h3.5V7H7V5.5h10.5V7zM9 18.5H7.5v-2H9v2zm7.5 0H15v-2h1.5v2z" />
-    </svg>
-  );
-}
+// XiaohongshuIcon replaced by PNG logo
 
 function InstagramIcon() {
   return (
@@ -322,9 +316,15 @@ export default function NavBar() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={t("social.xiaohongshu")}
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-[#FF2442] text-white"
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-[#FF2442] text-white overflow-hidden"
                   >
-                    <XiaohongshuIcon />
+                    <Image
+                      src="/home-assets/xhs-logo.png"
+                      alt="Xiaohongshu"
+                      width={40}
+                      height={40}
+                      className="w-full h-full object-cover"
+                    />
                   </a>
                   <a
                     href={SOCIAL_LINKS.instagram}
