@@ -49,6 +49,7 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
   const [submitError, setSubmitError] = useState(false);
   const [trackingData, setTrackingData] = useState({
     ctaSrc: "",
+    locale: "",
     utmSource: "",
     utmCampaign: "",
     metaFbc: "",
@@ -56,7 +57,8 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
 
   useEffect(() => {
     setTrackingData({
-      ctaSrc: getUrlParam("src"),
+      ctaSrc: getUrlParam("ctasrc"),
+      locale: getUrlParam("locale"),
       utmSource: getUrlParam("utm_source"),
       utmCampaign: getUrlParam("utm_campaign"),
       metaFbc: getMetaFbc(),
@@ -148,6 +150,7 @@ export function BookingForm({ consultationSlot }: BookingFormProps = {}) {
           ...s3,
           notes: stepFourData.notes,
           ...(trackingData.ctaSrc ? { ctaSrc: trackingData.ctaSrc } : {}),
+          ...(trackingData.locale ? { locale: trackingData.locale } : {}),
           ...(trackingData.utmSource ? { utmSource: trackingData.utmSource } : {}),
           ...(trackingData.utmCampaign ? { utmCampaign: trackingData.utmCampaign } : {}),
           ...(trackingData.metaFbc ? { metaFbc: trackingData.metaFbc } : {}),
