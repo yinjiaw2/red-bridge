@@ -2,10 +2,10 @@ import { getRequestConfig } from 'next-intl/server';
 import { routing } from '../src/i18n/routing';
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  let locale = await requestLocale;
-  if (!routing.locales.includes(locale as 'en' | 'zh')) {
-    locale = routing.defaultLocale;
-  }
+  const requested = await requestLocale;
+  const locale: 'en' | 'zh' = routing.locales.includes(requested as 'en' | 'zh')
+    ? (requested as 'en' | 'zh')
+    : routing.defaultLocale;
 
   // Static imports are bundled at build time — no filesystem access at runtime.
   // This is required for Cloudflare Workers compatibility.
