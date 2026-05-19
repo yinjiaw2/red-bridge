@@ -10,8 +10,8 @@ import type {
   BookingStepTwoValues,
   BookingStepThreeValues,
 } from "./types";
-import { TextareaField } from "./TextareaField";
-import { CheckboxField } from "./CheckboxField";
+import { TextareaField } from "./form-field/TextareaField";
+import { CheckboxField } from "./form-field/CheckboxField";
 
 type BookingStepFourProps = {
   form: UseFormReturn<BookingStepFourValues>;

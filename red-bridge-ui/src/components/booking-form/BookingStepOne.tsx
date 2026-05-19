@@ -3,8 +3,8 @@
 import type { UseFormReturn } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import type { BookingStepOneValues } from "./types";
-import { TextField } from "./TextField";
-import { SelectField } from "./SelectField";
+import { TextField } from "./form-field/TextField";
+import { SelectField } from "./form-field/SelectField";
 
 type BookingStepOneProps = {
   form: UseFormReturn<BookingStepOneValues>;

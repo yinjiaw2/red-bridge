@@ -5,8 +5,8 @@ import { Controller } from "react-hook-form";
 import type { UseFormReturn } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import type { BookingStepTwoValues } from "./types";
-import { SelectField } from "./SelectField";
-import { DateField } from "./DateField";
+import { SelectField } from "./form-field/SelectField";
+import { DateField } from "./form-field/DateField";
 
 type BookingStepTwoProps = {
   form: UseFormReturn<BookingStepTwoValues>;

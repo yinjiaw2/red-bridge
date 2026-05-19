@@ -39,14 +39,16 @@ export function CheckboxField<TFieldValues extends FieldValues>({
               htmlFor={id}
               className={cn(
                 "cursor-pointer text-sm leading-relaxed text-muted-foreground",
-                fieldState.invalid && "text-destructive"
+                fieldState.invalid && "text-destructive",
               )}
             >
               {label}
             </label>
           </div>
           {fieldState.invalid && (
-            <p className="text-xs text-destructive">{fieldState.error?.message}</p>
+            <p className="text-xs text-destructive">
+              {fieldState.error?.message}
+            </p>
           )}
         </div>
       )}

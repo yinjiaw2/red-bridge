@@ -60,7 +60,7 @@ export function DateField<TFieldValues extends FieldValues>({
                 className={cn(
                   "flex h-10 w-full items-center justify-between rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none transition-colors focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
                   !field.value && "text-muted-foreground",
-                  fieldState.invalid && "border-destructive"
+                  fieldState.invalid && "border-destructive",
                 )}
               >
                 <span>
