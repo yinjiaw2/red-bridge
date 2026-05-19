@@ -4,13 +4,10 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 
-// â”€â”€â”€ Constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
-const LOCALE_COOKIE = "NEXT_LOCALE";
-const COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // 1 year
+// --- Constants ---
 
 const SOCIAL_LINKS = {
   whatsapp: "https://wa.me/61400000000",
@@ -21,7 +18,7 @@ const SOCIAL_LINKS = {
 
 type QrTarget = "wechat" | "tiktok";
 
-// â”€â”€â”€ Social SVG icons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Social SVG icons ---
 
 function WhatsAppIcon() {
   return (
@@ -41,7 +38,7 @@ function InstagramIcon() {
   );
 }
 
-// â”€â”€â”€ Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Component ---
 
 export default function NavBar() {
   const t = useTranslations();
@@ -77,9 +74,8 @@ export default function NavBar() {
 
   const switchLocale = useCallback(() => {
     const next = locale === "zh" ? "en" : "zh";
-    document.cookie = `${LOCALE_COOKIE}=${next}; path=/; max-age=${COOKIE_MAX_AGE}`;
-    router.refresh();
-  }, [locale, router]);
+    router.replace(pathname, { locale: next });
+  }, [locale, pathname, router]);
 
   const targetLocale = locale === "zh" ? "en" : "zh";
 
@@ -92,7 +88,7 @@ export default function NavBar() {
 
   return (
     <>
-      {/* â”€â”€ Fixed header bar â”€â”€ */}
+      {/* -- Fixed header bar -- */}
       <header className="fixed top-0 left-0 right-0 z-50 h-16 md:h-24 bg-white shadow-sm font-(family-name:--font-geist-sans) font-semibold">
         <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto h-full px-4 sm:px-6 flex items-center justify-between gap-4">
           {/* Logo */}
@@ -111,7 +107,7 @@ export default function NavBar() {
             />
           </Link>
 
-          {/* â”€â”€ Desktop navigation â”€â”€ */}
+          {/* -- Desktop navigation -- */}
           <nav
             aria-label={t("nav.ariaLabel")}
             className="hidden md:flex items-center gap-4 lg:gap-5"
@@ -183,7 +179,7 @@ export default function NavBar() {
                 {t(`localeSwitch.${targetLocale}`)}
               </button>
               <Link
-                href="/contact"
+                href={`/contact?ctasrc=nav_bar_cta&locale=${locale}`}
                 className="ml-8 inline-flex min-w-36 items-center justify-center px-4 py-2 rounded-full text-sm font-medium text-[#1a1a1a] bg-[#FDC365] hover:bg-[#b88a10] hover:shadow-[0_0_12px_rgba(212,160,23,0.4)] transition-all shadow-sm whitespace-nowrap"
               >
                 {t("cta")}
@@ -191,7 +187,7 @@ export default function NavBar() {
             </div>
           </nav>
 
-          {/* â”€â”€ Mobile: lang toggle + hamburger â”€â”€ */}
+          {/* -- Mobile: lang toggle + hamburger -- */}
           <div className="flex items-center gap-3 md:hidden">
             <button
               onClick={switchLocale}
@@ -219,7 +215,7 @@ export default function NavBar() {
         </div>
       </header>
 
-      {/* â”€â”€ Mobile drawer â”€â”€ */}
+      {/* -- Mobile drawer -- */}
       {menuOpen && (
         <div
           id="mobile-menu"
@@ -290,7 +286,7 @@ export default function NavBar() {
               {/* CTA */}
               <li className="pt-4 pb-2">
                 <Link
-                  href="/contact"
+                  href={`/contact?ctasrc=nav_bar_cta&locale=${locale}`}
                   className="block text-center py-3 rounded-full font-medium text-white bg-linear-to-r from-brandred to-brandred/80"
                   onClick={closeAll}
                 >
@@ -342,7 +338,7 @@ export default function NavBar() {
         </div>
       )}
 
-      {/* â”€â”€ QR code modal â”€â”€ */}
+      {/* -- QR code modal -- */}
       {qrModal && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"

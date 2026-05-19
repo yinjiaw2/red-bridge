@@ -9,7 +9,7 @@ import {
   ArrowRight,
   type LucideIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 
 // Card data shape.
@@ -34,12 +34,13 @@ const scenarioIcons: Record<string, LucideIcon> = {
 const scenarioHrefMap: Record<string, string> = {
   graduate: "/services/career-launch",
   employer: "/services/employer-pathway",
-  independent: "/services",
+  independent: "/contact",
   urgent: "/contact",
 };
 
 export const UserScenarioSection = () => {
   const t = useTranslations("userScenario");
+  const locale = useLocale();
   const scenarios = t.raw("scenarios") as ScenarioMessage[];
 
   // Placeholder interaction hook.
@@ -113,19 +114,9 @@ export const UserScenarioSection = () => {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
             <Button
               asChild
-              variant="outline"
-              className="h-10 w-full gap-2 rounded-full border-[#B5121B] px-5 text-[13px] font-semibold text-[#B5121B] transition-colors hover:bg-[#B5121B] hover:text-white sm:w-auto sm:px-6"
-            >
-              <Link href="/services#find-your-path">
-                {t("footer.learnMore")}
-                <ArrowRight size={14} aria-hidden="true" />
-              </Link>
-            </Button>
-            <Button
-              asChild
               className="h-10 w-full gap-2 rounded-full bg-[#B5121B] px-5 text-[13px] font-semibold text-white shadow-sm transition-colors hover:bg-[#981018] sm:w-auto sm:px-6"
             >
-              <Link href={t("footer.bookingHref")}>
+              <Link href={`/contact?ctasrc=home_scenario_booking_cta&locale=${locale}`}>
                 {t("footer.booking")}
                 <ArrowRight size={14} aria-hidden="true" />
               </Link>

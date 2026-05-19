@@ -7,7 +7,7 @@ import {
   ArrowRight,
   type LucideIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 interface VerifyItem {
   label: string;
@@ -25,6 +25,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export const TrustSafetySection = () => {
   const t = useTranslations("trustSafety");
+  const locale = useLocale();
   const items = t.raw("items") as VerifyItem[];
 
   return (
@@ -51,7 +52,7 @@ export const TrustSafetySection = () => {
 
           <div className="flex flex-col gap-3 min-[420px]:flex-row min-[420px]:flex-wrap">
             <Link
-              href="/contact"
+              href={`/contact?ctasrc=home_trust_section_cta&locale=${locale}`}
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#D4A017] text-[#D4A017] px-4 py-2.5 text-sm font-semibold hover:bg-[#D4A017]/10 transition-colors sm:px-5"
             >
               {t("primaryCta")}

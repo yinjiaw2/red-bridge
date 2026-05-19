@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const contactIcons = [MapPin, Phone, Mail];
 
 export function FaqContactSection() {
   const t = useTranslations("faqPage.contact");
+  const locale = useLocale();
   const cards = t.raw("cards") as Array<{
     title: string;
     lines: string[];
@@ -61,7 +62,7 @@ export function FaqContactSection() {
 
           <div className="mt-10 flex flex-col items-center gap-5 text-center">
             <Link
-              href="/contact"
+              href={`/contact?ctasrc=faqs_footer_cta&locale=${locale}`}
               className="inline-flex items-center justify-center rounded-full bg-highlight px-8 py-4 text-base font-bold text-secondary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-400 hover:shadow-xl"
             >
               {t("primaryCta")}

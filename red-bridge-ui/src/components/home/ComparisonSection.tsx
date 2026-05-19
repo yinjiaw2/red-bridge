@@ -168,7 +168,7 @@ export const ComparisonSection = () => {
               asChild
               className="w-full sm:w-auto h-12 rounded-full bg-highlight px-8 text-sm font-bold uppercase tracking-widest text-secondary shadow-md transition-colors hover:bg-yellow-400"
             >
-              <Link href="/contact">
+              <Link href={`/contact?ctasrc=home_how_we_are_different_section_cta&locale=${locale}`}>
                 <span>{t("cta.primaryBtn")}</span>
                 <ArrowRight size={18} className="ml-2" aria-hidden="true" />
               </Link>

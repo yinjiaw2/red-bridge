@@ -1,12 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MessageCircle } from "lucide-react";
 
 export function FloatingContactButton({ locale }: { locale: string }) {
   const label = locale === "zh" ? "联系我们" : "Contact us";
+  const pathname = usePathname();
+  const href = `/contact?ctasrc=chat_widget_cta&locale=${locale}&page=${encodeURIComponent(pathname)}`;
 
   return (
     <Link
-      href="/contact"
+      href={href}
       aria-label={label}
       title={label}
       className="group fixed bottom-9 right-5 z-50 inline-flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-primary text-white shadow-[0_14px_35px_rgba(177,18,23,0.32)] transition-all duration-300 hover:w-44 hover:-translate-y-1 hover:bg-primary/90 hover:shadow-[0_18px_45px_rgba(177,18,23,0.42)] focus-visible:w-44 focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25 md:bottom-12 md:right-7 md:h-16 md:w-16 md:hover:w-48 md:focus-visible:w-48"

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, CalendarCheck } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { BackgroundHero } from "@/components/shared/BackgroundHero";
 
@@ -39,23 +39,12 @@ export default function HeroSection() {
       actions={
         <>
           <Link
-            href="/contact?src=employer_hero_cta"
+            href={`/contact?ctasrc=employer_hero_cta&locale=${locale}`}
             className="flex h-[48px] w-full items-center justify-center gap-2 rounded-full bg-[#efb64f] px-5 text-[14px] font-semibold text-[#2a1f19] sm:h-[52px] sm:w-auto sm:px-6 sm:text-[15px]"
           >
             <CalendarCheck size={16} />
             {t("ctaPrimary")}
           </Link>
-          <button
-            onClick={() =>
-              document
-                .getElementById("is-this-for-you")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="flex h-[48px] w-full items-center justify-center rounded-full border border-[#d9868f] px-5 text-[14px] font-semibold text-[#b63c46] sm:h-[52px] sm:w-auto sm:px-6 sm:text-[15px]"
-          >
-            {t("ctaSecondary")}
-            <ArrowRight size={16} className="ml-2" />
-          </button>
         </>
       }
     />

@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function AboutCtaSection() {
   const t = useTranslations("aboutCta");
+  const locale = useLocale();
 
   return (
     <section className="w-full py-24 px-[5%] bg-secondary">
@@ -25,7 +26,7 @@ export default function AboutCtaSection() {
 
         {/* Button */}
         <Link
-          href="/contact"
+          href={`/contact?ctasrc=about_footer_cta&locale=${locale}`}
           className="mt-4 inline-flex h-12 items-center rounded-full bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-secondary shadow-md transition-colors hover:bg-yellow-400"
         >
           {t("button")}

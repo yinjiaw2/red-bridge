@@ -73,13 +73,6 @@ export default function EmployerNetworkSection() {
           >
             {t("primaryButton")}
           </Button>
-          <Button
-            asChild
-            variant="outline"
-            className="h-12 rounded-full border border-white/30 bg-transparent px-8 text-[15px] font-bold uppercase tracking-widest text-white hover:bg-white/10 hover:border-white hover:text-white transition-colors"
-          >
-            <Link href={t("secondaryHref")}>{t("secondaryButton")}</Link>
-          </Button>
         </div>
       </div>
     </section>

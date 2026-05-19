@@ -12,7 +12,7 @@ import {
   Lock,
   type LucideIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 interface EmployerCategory {
   title: string;
@@ -30,6 +30,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function EmployerNetwork() {
   const t = useTranslations("homeEmployerNetwork");
+  const locale = useLocale();
 
   const rawCategories = t.raw("categories");
   const categories: EmployerCategory[] = Array.isArray(rawCategories)
@@ -190,7 +191,7 @@ export default function EmployerNetwork() {
           </div>
 
           <Link
-            href="/contact"
+            href={`/contact?ctasrc=home_employer_network_cta&locale=${locale}`}
             className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#A82030_0%,#5C0E17_100%)] px-5 py-3 text-[13px] font-semibold text-white shadow-[0_4px_18px_rgba(138,21,35,0.15)] transition hover:-translate-y-0.5"
           >
             {t("privateCta")}

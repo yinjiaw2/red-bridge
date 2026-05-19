@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 
 export default function SuccessCasesCta() {
   const t = useTranslations("successCasesCta");
+  const locale = useLocale();
 
   return (
     <section className="w-full py-28 px-[5%] bg-secondary">
@@ -25,7 +26,7 @@ export default function SuccessCasesCta() {
           asChild
           className="h-14 rounded-full bg-highlight px-10 text-[15px] font-bold uppercase tracking-widest text-naviblue hover:bg-yellow-400 transition-colors shadow-lg"
         >
-          <Link href={t("buttonHref")}>{t("button")}</Link>
+          <Link href={`${t("buttonHref")}&locale=${locale}`}>{t("button")}</Link>
         </Button>
 
         <p className="text-gray-400 text-sm mt-2 tracking-wide">

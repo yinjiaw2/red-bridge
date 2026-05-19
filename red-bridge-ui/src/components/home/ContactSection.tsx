@@ -6,10 +6,11 @@ import {
   MailOpen,
   Calendar,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export const ContactSection = () => {
   const t = useTranslations("contact");
+  const locale = useLocale();
   const emailAddress = t("emailLink");
   const gmailComposeHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailAddress)}`;
 
@@ -152,7 +153,7 @@ export const ContactSection = () => {
         {/* CTA */}
         <div className="flex flex-col items-center gap-4">
           <Link
-            href="/contact"
+            href={`/contact?ctasrc=home_footer_cta&locale=${locale}`}
             className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-highlight px-7 py-4 text-sm font-bold text-secondary shadow-lg transition-all hover:-translate-y-0.5 hover:bg-yellow-400 hover:shadow-xl active:scale-95 sm:w-auto sm:px-10 sm:text-base"
           >
             <Calendar size={18} aria-hidden="true" />

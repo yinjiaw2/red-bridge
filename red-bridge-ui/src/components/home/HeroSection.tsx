@@ -91,23 +91,11 @@ export default function HeroSection() {
           {/* Buttons */}
           <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row">
             <Link
-              href="/contact"
+              href={`/contact?ctasrc=home_hero_cta&locale=${locale}`}
               className="flex h-[48px] w-full items-center justify-center gap-2 rounded-full bg-[#efb64f] px-5 text-[14px] font-semibold text-[#2a1f19] sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px]"
             >
               {t("primaryButton")}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-
-            <Link
-              href="/services#find-your-path"
-              className={cn(
-                "flex h-[48px] w-full items-center justify-center rounded-full border border-brandred px-5 text-[14px] font-semibold sm:ml-4 sm:h-[52px] sm:w-auto sm:justify-start sm:px-6 sm:text-[15px]",
-                isMobile
-                  ? "bg-brandred text-white"
-                  : "bg-transparent text-brandred",
-              )}
-            >
-              {t("secondaryButton")}
             </Link>
           </div>
 
