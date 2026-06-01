@@ -19,25 +19,21 @@
         "chengduHQLabel": "Chengdu HQ",
         "chengduHQAddress": "成都市成华区杉板桥路1号\n多弗国际中心写字楼",
         "emailContact": "info@red-bridge.com.au · Response within 24 hours",
-        "followUsLabel": "Follow Us",
+        "followUsLabel": "关注我们",
+        "followUsChatLabel": "关注我们 · 中英文均可咨询",
+        "wechatQrScanLabel": "扫码关注微信公众号",
+        "rednoteQrScanLabel": "扫码关注小红书账号",
+        "closeLabel": "关闭",
         "trustLabels": [
-          "Free, no obligation",
-          "Honest verdict, not a sales pitch",
-          "Legal partner on every case"
+          "免费，无需承诺",
+          "诚实评估，非销售话术",
+          "每个案件均有法律合作伙伴"
         ],
         "socials": [
-          {
-            "label": "Facebook",
-            "href": "https://www.facebook.com/people/RedBridge-Consulting/61587635078885/"
-          },
-          {
-            "label": "小红书 RedNote",
-            "href": "https://www.xiaohongshu.com/user/profile/69c209f000000000260005c7"
-          },
-          {
-            "label": "Instagram",
-            "href": "https://www.instagram.com/redbridgeconsulting/"
-          }
+          { "label": "微信",          "key": "wechat",    "href": null },
+          { "label": "小红书",        "key": "rednote",   "href": "https://www.xiaohongshu.com/user/profile/69c209f000000000260005c7?xsec_token=ABT65EPMLmwKVsY516MoVKZF6jFbDQVNlZBwnemdpNyfY%3D&xsec_source=pc_search" },
+          { "label": "Instagram",     "key": "instagram", "href": "https://www.instagram.com/redbridgeconsulting/" },
+          { "label": "Facebook",      "key": "facebook",  "href": "https://www.facebook.com/people/RedBridge-Consulting/61587635078885/" }
         ]
       }
     }

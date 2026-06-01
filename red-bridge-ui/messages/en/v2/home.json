@@ -222,6 +222,26 @@
           { "key": "rednote",   "label": "小红书 RedNote" },
           { "key": "instagram", "label": "Instagram" }
         ]
+      },
+      "video": {
+        "eyebrow": "Expert Insights",
+        "heading": "Expert Insights",
+        "subheading": "Real case studies and strategies for securing your visa and your dream job.",
+        "close": "Close video",
+        "cards": {
+          "welcome": {
+            "title": "Almost Banned for 3 Years! The Danger of a Fake Birth Certificate",
+            "duration": "02:45"
+          },
+          "process": {
+            "title": "Skip the Points Race! Why the 186 Visa is the Ultimate PR Pathway",
+            "duration": "03:12"
+          },
+          "stories": {
+            "title": "Zero Experience? How a Fresh Grad Landed a Job at a $10M+ Company",
+            "duration": "04:08"
+          }
+        }
       }
     }
   }

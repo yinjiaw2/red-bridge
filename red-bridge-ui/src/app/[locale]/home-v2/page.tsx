@@ -6,6 +6,7 @@ import HomeEmployerNetwork from "@/components/v2/home/HomeEmployerNetwork";
 import V2TrustSection from "@/components/v2/home/V2TrustSection";
 import V2WhySection from "@/components/v2/home/V2WhySection";
 import V2ComparisonSection from "@/components/v2/home/V2ComparisonSection";
+import V2VideoSection from "@/components/v2/home/V2VideoSection";
 import PageCTA from "@/components/v2/shared/PageCTA";
 
 export default function HomeV2() {
@@ -19,6 +20,7 @@ export default function HomeV2() {
         <V2TrustSection />
         <V2WhySection />
         <V2ComparisonSection />
+        <V2VideoSection />
         <PageCTA />
         <Footer />
       </main>

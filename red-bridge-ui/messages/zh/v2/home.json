@@ -373,6 +373,26 @@
             "label": "Instagram"
           }
         ]
+      },
+      "video": {
+        "eyebrow": "专家视点",
+        "heading": "专家视点",
+        "subheading": "为您解析真实的移民避坑指南与名企求职策略",
+        "close": "关闭视频",
+        "cards": {
+          "welcome": {
+            "title": "险被禁签三年！为图省事提供虚假出生证的惨痛教训",
+            "duration": "02:45"
+          },
+          "process": {
+            "title": "告别EOI无底洞内卷！为什么186雇主担保是拿澳洲PR的最优选?",
+            "duration": "03:12"
+          },
+          "stories": {
+            "title": "留学生零经验无从下手？3个月助你斩获千万级名企Offer!",
+            "duration": "04:08"
+          }
+        }
       }
     }
   }
