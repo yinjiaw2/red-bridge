@@ -1,47 +1,29 @@
 'use client';
 
 import { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
 const B = {
   red: '#b11217',
   redLight: '#fdf0f0',
   navy: '#172d5d',
-  bg: '#f5f1ea',
-  cream: '#fbf4ec',
+  bg: '#f4f4f5',
+  cream: '#ffffff',
   amber: '#efb64f',
-  textDeep: '#22150f',
-  textMuted: '#7a6a60',
-  divider: '#ece5de',
+  textDeep: '#18181b',
+  textMuted: '#71717a',
+  divider: '#e4e4e7',
 };
 
 const VISA_COLORS: Record<string, { bg: string; border: string; text: string }> = {
   '482': { bg: '#fdf0f0', border: '#f5d5d6', text: B.red },
   '186': { bg: '#eef1f8', border: '#c8d3e8', text: B.navy },
-  '190': { bg: '#eef1f8', border: '#c8d3e8', text: B.navy },
-  '491': { bg: '#eef1f8', border: '#c8d3e8', text: B.navy },
-  'ACS': { bg: '#fdf7ee', border: '#f0d9a0', text: '#7a5000' },
-  'AMI': { bg: '#fdf7ee', border: '#f0d9a0', text: '#7a5000' },
-  'CAANZ': { bg: '#fdf7ee', border: '#f0d9a0', text: '#7a5000' },
-  'EA':   { bg: '#eef3ee', border: '#b8d4b8', text: '#2d6a4f' },
+  '485→482': { bg: '#fdf7ee', border: '#f0d9a0', text: '#7a5000' },
 };
 
-const ENTRIES = [
-  { name: 'Arjun S.',  outcome: '482 visa lodged',          type: '482',   occupation: 'ICT Business Analyst',     timeline: '4 months' },
-  { name: 'Wei L.',    outcome: '190 nominated',             type: '190',   occupation: 'Accountant · NSW',          timeline: '6 months' },
-  { name: 'Priya M.',  outcome: 'CAANZ assessment passed',   type: 'CAANZ', occupation: 'Career Launch Program',     timeline: '1st attempt' },
-  { name: 'Ming H.',   outcome: '186 permanent residency',   type: '186',   occupation: 'Software Engineer',         timeline: '2 years' },
-  { name: 'Linh T.',   outcome: 'ACS assessment passed',     type: 'ACS',   occupation: '3 live projects built',     timeline: '3 months' },
-  { name: 'Rajesh K.', outcome: '491 regional approved',     type: '491',   occupation: 'Marketing Specialist · SA', timeline: 'SA nomination' },
-  { name: 'Sasha R.',  outcome: 'Career Launch placed',      type: 'AMI',   occupation: 'Digital Marketer',          timeline: 'AMI eligible' },
-  { name: 'Chen Y.',   outcome: '482 employer matched',      type: '482',   occupation: 'Systems Analyst',           timeline: '3 months' },
-  { name: 'Amy K.',    outcome: 'AMI assessment passed',     type: 'AMI',   occupation: 'Marketing Coordinator',     timeline: '1st attempt' },
-  { name: 'David T.',  outcome: '186 nomination lodged',     type: '186',   occupation: 'Accountant · VIC',          timeline: '26 months' },
-];
+type EntryType = { name: string; outcome: string; type: string; occupation: string; timeline: string };
 
-// Duplicate for seamless loop
-const ALL = [...ENTRIES, ...ENTRIES];
-
-function TickerCard({ entry }: { entry: typeof ENTRIES[number] }) {
+function TickerCard({ entry }: { entry: EntryType }) {
   const vc = VISA_COLORS[entry.type] ?? VISA_COLORS['482'];
 
   return (
@@ -117,7 +99,11 @@ function TickerCard({ entry }: { entry: typeof ENTRIES[number] }) {
 }
 
 export default function HomeTicker() {
+  const t = useTranslations('v2.home.ticker');
   const trackRef = useRef<HTMLDivElement>(null);
+
+  const ENTRIES = t.raw('entries') as EntryType[];
+  const ALL = [...ENTRIES, ...ENTRIES];
 
   return (
     <section
@@ -140,7 +126,7 @@ export default function HomeTicker() {
             margin: 0,
           }}
         >
-          Real clients · Real outcomes · Updated regularly
+          {t('label')}
         </p>
       </div>
 

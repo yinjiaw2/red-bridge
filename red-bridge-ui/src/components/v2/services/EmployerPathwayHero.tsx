@@ -3,42 +3,32 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const B = {
   red: '#b11217',
   redLight: '#fdf0f0',
   navy: '#172d5d',
-  bg: '#f5f1ea',
-  cream: '#fbf4ec',
+  bg: '#f4f4f5',
+  cream: '#ffffff',
   amber: '#efb64f',
   amberDeep: '#d4a017',
-  textDeep: '#22150f',
-  textMuted: '#7a6a60',
-  divider: '#ece5de',
+  textDeep: '#18181b',
+  textMuted: '#71717a',
+  divider: '#e4e4e7',
 };
 
-const BADGES = [
-  '482 & 186 covered end-to-end',
-  'ICT & Marketing specialist network',
-  'MARN: 1467870 — licensed legal partner',
-  'Free eligibility assessment',
+// Static numeric values and flags; display text comes from translations
+const STAT_META = [
+  { value: 200,  isText: false, isRating: false, href: undefined },
+  { value: 150,  isText: false, isRating: false, href: undefined },
+  { value: null, isText: true,  isRating: false, href: undefined },
+  { value: null, isText: false, isRating: true,  href: 'https://www.google.com/maps/search/?api=1&query=RedBridge+Consulting+Docklands' },
 ];
 
-const STATS = [
-  { value: 200, suffix: '+', label: 'Career placements' },
-  { value: 150, suffix: '+', label: 'Employer matches made' },
-  { label: '3–12', suffix: '', display: '3–12', unit: 'months', subLabel: 'Typical time to visa', isText: true },
-  {
-    isRating: true,
-    display: '4.9★',
-    label: 'Google Reviews',
-    sublabel: '47 reviews',
-    href: 'https://www.google.com/maps/search/?api=1&query=RedBridge+Consulting+Docklands',
-  },
-];
+type StatEntry = { label: string; suffix?: string; display?: string; unit?: string; sublabel?: string };
 
-function useCountUp(target: number | undefined, active: boolean, duration: number = 1200) {
+function useCountUp(target: number | undefined | null, active: boolean, duration: number = 1200) {
   const [count, setCount] = useState(0);
   useEffect(() => {
     if (!active || !target) return;
@@ -55,8 +45,8 @@ function useCountUp(target: number | undefined, active: boolean, duration: numbe
   return count;
 }
 
-function StatCard({ stat, index, active }: { stat: typeof STATS[number]; index: number; active: boolean }) {
-  const count = useCountUp('value' in stat ? stat.value : undefined, active, 1200 + index * 100);
+function StatCard({ stat, meta, index, active }: { stat: StatEntry; meta: typeof STAT_META[number]; index: number; active: boolean }) {
+  const count = useCountUp(meta.value ?? undefined, active, 1200 + index * 100);
 
   return (
     <div
@@ -69,25 +59,18 @@ function StatCard({ stat, index, active }: { stat: typeof STATS[number]; index: 
         backdropFilter: 'blur(4px)',
       }}
     >
-      {stat.isRating ? (
-        <a
-          href={stat.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: 'none' }}
-        >
-          <p style={{ fontSize: 24, fontWeight: 800, color: B.red, margin: '0 0 2px', letterSpacing: '-0.03em' }}>
-            {stat.display}
-          </p>
+      {meta.isRating ? (
+        <a href={meta.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+          <p style={{ fontSize: 24, fontWeight: 800, color: B.red, margin: '0 0 2px', letterSpacing: '-0.03em' }}>{stat.display}</p>
           <p style={{ fontSize: 11.5, color: B.textMuted, margin: 0, lineHeight: 1.4 }}>{stat.label}</p>
           <p style={{ fontSize: 10.5, color: B.textMuted, margin: 0, opacity: 0.7 }}>{stat.sublabel}</p>
         </a>
-      ) : stat.isText ? (
+      ) : meta.isText ? (
         <>
           <p style={{ fontSize: 24, fontWeight: 800, color: B.red, margin: '0 0 4px', letterSpacing: '-0.03em' }}>
             {stat.display} <span style={{ fontSize: 13, fontWeight: 600 }}>{stat.unit}</span>
           </p>
-          <p style={{ fontSize: 11.5, color: B.textMuted, margin: 0 }}>{stat.subLabel}</p>
+          <p style={{ fontSize: 11.5, color: B.textMuted, margin: 0 }}>{stat.label}</p>
         </>
       ) : (
         <>
@@ -103,6 +86,10 @@ function StatCard({ stat, index, active }: { stat: typeof STATS[number]; index: 
 
 export default function EmployerPathwayHero() {
   const locale = useLocale();
+  const t = useTranslations('v2.services.employerPathwayHero');
+  const BADGES = t.raw('badges') as string[];
+  const STATS = t.raw('stats') as StatEntry[];
+
   const statsRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(false);
 
@@ -155,17 +142,8 @@ export default function EmployerPathwayHero() {
           width: '100%',
         }}
       >
-        <p
-          style={{
-            fontSize: 11,
-            fontWeight: 700,
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-            color: B.amber,
-            marginBottom: 14,
-          }}
-        >
-          Employer Sponsored Visas
+        <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.amber, marginBottom: 14 }}>
+          {t('eyebrow')}
         </p>
 
         <h1
@@ -179,8 +157,8 @@ export default function EmployerPathwayHero() {
             maxWidth: 620,
           }}
         >
-          Your Skills Deserve{' '}
-          <em style={{ fontStyle: 'italic', color: B.amber }}>a Real Sponsor</em>
+          {t('heading')}{' '}
+          <em style={{ fontStyle: 'italic', color: B.amber }}>{t('headingEm')}</em>
         </h1>
 
         <p
@@ -192,10 +170,7 @@ export default function EmployerPathwayHero() {
             margin: '0 0 28px',
           }}
         >
-          The 482 visa requires an employer. Most agencies sell you a job list and
-          hope for the best. We give you direct access to a verified employer
-          network where every position is confirmed before it reaches you — and
-          we stay with you to the 186 PR finish line.
+          {t('subheading')}
         </p>
 
         {/* Feature badges */}
@@ -237,16 +212,13 @@ export default function EmployerPathwayHero() {
           onMouseEnter={(e) => (e.currentTarget.style.background = B.amberDeep)}
           onMouseLeave={(e) => (e.currentTarget.style.background = B.amber)}
         >
-          Book My Free Assessment
+          {t('cta')}
         </Link>
 
         {/* Stats row */}
-        <div
-          ref={statsRef}
-          style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}
-        >
+        <div ref={statsRef} style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
           {STATS.map((stat, i) => (
-            <StatCard key={stat.label} stat={stat} index={i} active={active} />
+            <StatCard key={i} stat={stat} meta={STAT_META[i]} index={i} active={active} />
           ))}
         </div>
 
@@ -264,14 +236,14 @@ export default function EmployerPathwayHero() {
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
           </svg>
-          Information last reviewed <strong style={{ color: 'rgba(255,255,255,0.6)' }}>March 2026</strong>. Immigration policy changes regularly.{' '}
+          {t('reviewNote')} <strong style={{ color: 'rgba(255,255,255,0.6)' }}>{t('reviewDate')}</strong>{t('reviewSuffix')}{' '}
           <a
             href="https://immi.homeaffairs.gov.au"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: B.amber, textDecoration: 'none' }}
           >
-            Visit DOHA for the latest →
+            {t('dohaLink')}
           </a>
         </p>
       </div>

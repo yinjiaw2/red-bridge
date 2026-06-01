@@ -27,10 +27,10 @@
     "legal": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "copyright": "Copyright Notice",
-      "sitemap": "Sitemap"
+      "copyright": "Copyright Notice"
     },
-    "copyrightText": "© 2026 RedBridge Consulting Pty Ltd · ABN: 88 678 186 091",
-    "disclaimer": "Docklands VIC 3008 · Migration services provided by Insight Idea (licensed migration agent) · All rights reserved."
+    "copyrightText": "© 2026 RedBridge Consulting Pty Ltd · ABN: 88 678 186 091 · All rights reserved.",
+    "websiteInterest": "Interested in a website like this?",
+    "websiteInterestLink": "Let's chat"
   }
 }

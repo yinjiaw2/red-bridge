@@ -1,0 +1,124 @@
+{
+  "v2": {
+    "employers": {
+      "hero": {
+        "eyebrow": "Employer Sponsorship Network · 482 / 186",
+        "heading": "The talent you need",
+        "headingEm": "is right here",
+        "subheading": "Hundreds of skilled visa holders in ICT, accounting, and marketing are actively seeking sponsorship. RedBridge handles candidate screening. Insight Idea manages the full 482 legal process.",
+        "ctaEnquiry": "Submit an Employer Enquiry",
+        "ctaPhone": "03 9961 7301 · English & Mandarin",
+        "stats": [
+          { "num": "150+", "label": "Pre-screened candidates" },
+          { "num": "10+",  "label": "Verified sponsoring employers" },
+          { "num": "4",    "label": "Key industry sectors" },
+          { "num": "1",    "label": "Legal firm, same office" }
+        ]
+      },
+      "hiringPainPoints": {
+        "eyebrow": "Hiring Pain Points",
+        "heading": "Why Australian Businesses",
+        "headingEm": "Choose Sponsorship",
+        "painPoints": [
+          {
+            "title": "No qualified local candidates",
+            "detail": "ICT, engineering, and accounting roles consistently attract few or no suitable local applicants. Genuine experience with specific certifications is structurally scarce domestically."
+          },
+          {
+            "title": "Extended vacancies cost real money",
+            "detail": "Every month a critical role stays open means lost productivity, increased load on existing staff, and ground lost to competitors who have already filled theirs."
+          },
+          {
+            "title": "Compliance complexity discourages action",
+            "detail": "SBS applications, Labour Market Testing, nomination obligations, and ongoing sponsor duties feel overwhelming. With the right guidance, they don't have to be."
+          },
+          {
+            "title": "Hard to find the right sponsored candidate",
+            "detail": "Sponsorship only works when skills, visa eligibility, and long-term commitment all align. Finding that match without a trusted network is a genuine challenge."
+          }
+        ]
+      },
+      "threePhases": {
+        "eyebrow": "Process Breakdown",
+        "heading": "Three Phases: From Gap to",
+        "headingEm": "Visa Grant",
+        "subheading": "Phases can run in parallel. You don't wait for one to close before the next begins.",
+        "phasePrefix": "PHASE ",
+        "dohaLink": "Learn more about the 482 Skills in Demand Visa on the DOHA website →",
+        "phases": [
+          {
+            "num": "01",
+            "title": "Eligibility & Role Assessment",
+            "who": "RedBridge + Insight Idea",
+            "items": [
+              "Confirm occupation is on CSOL",
+              "Labour Market Testing scope review",
+              "Candidate pre-screening against role requirements"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Sponsorship & Nomination",
+            "who": "Insight Idea Legal",
+            "items": [
+              "Standard Business Sponsorship (SBS) application",
+              "Labour Market Testing advertising compliance",
+              "482 nomination lodgement with DOHA"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Visa Grant & Ongoing Compliance",
+            "who": "RedBridge + Insight Idea",
+            "items": [
+              "Visa holder onboarding and milestone tracking",
+              "Quarterly salary and compliance reviews",
+              "186 ENS transition planning at 2-year mark"
+            ]
+          }
+        ]
+      },
+      "feesTable": {
+        "eyebrow": "Fee Breakdown",
+        "heading": "Sponsorship Actual Costs",
+        "subheading": "Government fees are mandatory and non-negotiable. RedBridge and Insight Idea service fees are provided as a fixed quote after your role assessment.",
+        "byLawLabel": "By law",
+        "byLawNote": " all sponsorship costs must be borne by the employer. They cannot be charged to or recovered from visa holders. Insight Idea and RedBridge service fees are quoted separately and confirmed in writing before any work begins.",
+        "fees": [
+          { "label": "Standard Business Sponsorship (SBS)",              "note": "One-off. Not required if already an approved sponsor.",            "amount": "AUD $420" },
+          { "label": "Nomination Fee: 482 (Skills in Demand)",           "note": "Per nomination. Non-refundable.",                                  "amount": "AUD $330" },
+          { "label": "Nomination Fee: 186 (ENS)",                        "note": "Per nomination. Non-refundable.",                                  "amount": "AUD $540" },
+          { "label": "SAF Levy: Small Business (<$10M turnover)",        "note": "Per visa year. Paid at nomination lodgement.",                     "amount": "AUD $1,200/yr" },
+          { "label": "SAF Levy: Large Business (≥$10M turnover)",        "note": "Per visa year. Paid at nomination lodgement.",                     "amount": "AUD $1,800/yr" },
+          { "label": "Minimum Salary: Core Skills Stream",               "note": "TSMIT as at current year. Add AMM where applicable.",             "amount": "$76,515+ super" },
+          { "label": "Minimum Salary: Specialist Skills Stream",         "note": "For CSOL Specialist Tier. Subject to applicable determination.",   "amount": "$135,000+ super" }
+        ]
+      },
+      "divisionRoles": {
+        "eyebrow": "Our Partnership",
+        "heading": "RedBridge + Insight Idea:",
+        "headingEm": "Clear Division of Roles",
+        "subheading": "RedBridge finds and prepares candidates. Insight Idea handles all migration law and compliance. Both teams are co-located at the same Docklands address.",
+        "redbridgeLabel": "Talent & Employer",
+        "redbridgeName": "RedBridge Consulting",
+        "insightLabel": "Law & Migration · MARN: 1467870",
+        "insightName": "Insight Idea",
+        "redbridgeItems": [
+          "Match candidates from our pool to role requirements and visa-eligible occupation levels",
+          "Pre-screen skills assessment eligibility (ACS, AMI, Engineers Australia) before referral",
+          "Coordinate candidate documentation and career preparation",
+          "Manage employer–candidate communication and milestone support end-to-end",
+          "CRM milestone tracking, flagging the 2-year milestone for 186 ENS transition eligibility"
+        ],
+        "insightItems": [
+          "Standard Business Sponsorship (SBS) application and DOHA approval",
+          "Labour Market Testing: advertising compliance and documentation records",
+          "Nomination preparation and lodgement (482 Core Skills / Specialist stream)",
+          "Visa application support and internal document management",
+          "Ongoing compliance monitoring and DOHA notifications",
+          "2-year milestone 186 ENS transition lodgement and pathway planning"
+        ]
+      }
+    }
+  }
+}

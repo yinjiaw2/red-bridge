@@ -34,7 +34,7 @@ export function BookingStepFour({
   const dateFormat = locale === "zh" ? "yyyy年MM月dd日" : "dd/MM/yyyy";
 
   const formatDate = (date: Date | undefined) =>
-    date ? format(date, dateFormat, { locale: calendarLocale }) : "—";
+    date ? format(date, dateFormat, { locale: calendarLocale }) : "-";
 
   return (
     <div className="flex flex-col gap-6">
@@ -179,7 +179,7 @@ function ReviewRow({
         {label.replace("*", "")}
       </span>
       <span className="text-sm font-medium text-foreground">
-        {value || "—"}
+        {value || "-"}
       </span>
     </div>
   );

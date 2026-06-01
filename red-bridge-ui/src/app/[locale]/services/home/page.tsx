@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
     {
       title: "Migration & Career Services | 189, 190, 491, 482, Career Launch",
       description:
-        "Explore RedBridge Consulting's full suite of Australian migration and career pathways — Career Launch, 189, 190, 491 visa, and 482/186 employer-sponsored support.",
+        "Explore RedBridge Consulting's full suite of Australian migration and career pathways: Career Launch, 189, 190, 491 visa, and 482/186 employer-sponsored support.",
     },
     {
       title: "移民与职业服务总览 | 红桥咨询",

@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 const B = {
   red: '#b11217', redLight: '#fdf0f0', redMid: '#f5d5d6', navy: '#172d5d',
-  bg: '#f5f1ea', cream: '#fbf4ec', amber: '#efb64f', textDeep: '#22150f',
-  textBody: '#1f1f1f', textMuted: '#7a6a60', divider: '#ece5de',
+  bg: '#f4f4f5', cream: '#ffffff', amber: '#efb64f', textDeep: '#18181b',
+  textBody: '#27272a', textMuted: '#71717a', divider: '#e4e4e7',
 };
 
 const VISA_STYLES: Record<string, { bg: string; border: string; text: string; label: string }> = {
@@ -25,14 +25,15 @@ const STATUS_STYLES: Record<string, { bg: string; border: string; text: string; 
   'Ongoing':     { bg: '#eef1f8', border: '#c8d3e8', text: B.navy,    dot: B.navy },
 };
 
-const CASES = [
-  { category: 'Employer Sponsorship', headline: 'Accountant secures 482 sponsorship within 4 months', body: 'After two years on a 485 with no success applying independently, RedBridge matched her to a 482-eligible accounting firm. With CAANZ already complete, visa grant took under 4 months.', visa: '482', timeline: '4 months', assessment: 'CAANZ', status: 'Approved' },
-  { category: 'Employer Sponsorship', headline: 'Marketing manager on employer-sponsored pathway to 186 PR', body: 'Client had an existing employer but no formal sponsorship. RedBridge lodged the SBS and 482 nomination concurrently. Now 18 months into a 482 and on track for 186 ENS transition.', visa: '482 → 186', timeline: 'Ongoing', assessment: 'AMI', status: 'In Progress' },
-  { category: 'Skilled Independent', headline: 'IT engineer achieves permanent residency via 189 in 7 months', body: 'With a strong score and completed ACS assessment, the client\'s barrier was EOI strategy. RedBridge provided a points gap analysis — an invitation arrived within 7 months.', visa: '189', timeline: '~7 months', assessment: 'ACS', status: 'Approved' },
-  { category: 'Career Launch', headline: 'Engineering graduate builds ANZSCO-aligned experience', body: 'Fresh out of university with no local work history, this client joined the Career Launch Program and accumulated 400+ hours of ANZSCO-aligned project work recognised by Engineers Australia over 12 months.', visa: 'Career Launch', timeline: '12 months', assessment: 'Engineers Australia', status: 'In Progress' },
-  { category: 'Employer Sponsorship', headline: 'ICT specialist transitions from 485 to employer-sponsored 482', body: 'With 8 months left on his 485, RedBridge matched him with a Melbourne tech employer and lodged the nomination with a Bridging Visa A in place. The 482 was granted before the 485 expired.', visa: '486 → 482', timeline: '5 months', assessment: 'ACS', status: 'Approved' },
-  { category: 'Skilled Independent', headline: 'International student uses marketing degree to reach 190 nomination', body: 'Consulting RedBridge while completing her marketing master\'s, this client was guided onto Victoria\'s 190 nomination pathway. A 24-month AMI-aligned career plan was designed and the invitation arrived on schedule.', visa: '190', timeline: '24 months', assessment: 'AMI', status: 'Approved' },
-];
+type CaseEntry = {
+  category: string;
+  headline: string;
+  body: string;
+  visa: string;
+  timeline: string;
+  assessment: string;
+  status: string;
+};
 
 function useStaggerReveal() {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
@@ -53,6 +54,8 @@ function useStaggerReveal() {
 }
 
 export default function SuccessCards() {
+  const t = useTranslations('v2.success.cards');
+  const CASES = t.raw('cases') as CaseEntry[];
   const refs = useStaggerReveal();
 
   return (
@@ -99,7 +102,7 @@ export default function SuccessCards() {
           })}
         </div>
         <p style={{ fontSize: 12, color: B.textMuted, textAlign: 'center', lineHeight: 1.6, maxWidth: 640, margin: '0 auto' }}>
-          All cases are representative of real client outcomes. Client identities are presented using initials and occupation only to protect privacy. All visa results and project completions are verified against RedBridge internal records.
+          {t('privacyNote')}
         </p>
       </div>
     </section>

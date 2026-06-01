@@ -1,0 +1,118 @@
+{
+  "v2": {
+    "success": {
+      "cards": {
+        "privacyNote": "All cases are representative of real client outcomes. Client identities are presented using initials and occupation only to protect privacy. All visa results and project completions are verified against RedBridge internal records.",
+        "cases": [
+          {
+            "category": "Employer Sponsorship",
+            "headline": "Accountant secures 482 sponsorship within 4 months",
+            "body": "After two years on a 485 with no success applying independently, RedBridge matched her to a 482-eligible accounting firm. With CAANZ already complete, visa grant took under 4 months.",
+            "visa": "482",
+            "timeline": "4 months",
+            "assessment": "CAANZ",
+            "status": "Approved"
+          },
+          {
+            "category": "Employer Sponsorship",
+            "headline": "Marketing manager on employer-sponsored pathway to 186 PR",
+            "body": "Client had an existing employer but no formal sponsorship. RedBridge lodged the SBS and 482 nomination concurrently. Now 18 months into a 482 and on track for 186 ENS transition.",
+            "visa": "482 → 186",
+            "timeline": "Ongoing",
+            "assessment": "AMI",
+            "status": "In Progress"
+          },
+          {
+            "category": "Skilled Independent",
+            "headline": "IT engineer achieves permanent residency via 189 in 7 months",
+            "body": "With a strong score and completed ACS assessment, the client's barrier was EOI strategy. RedBridge provided a points gap analysis. An invitation arrived within 7 months.",
+            "visa": "189",
+            "timeline": "~7 months",
+            "assessment": "ACS",
+            "status": "Approved"
+          },
+          {
+            "category": "Career Launch",
+            "headline": "Engineering graduate builds ANZSCO-aligned experience",
+            "body": "Fresh out of university with no local work history, this client joined the Career Launch Program and accumulated 400+ hours of ANZSCO-aligned project work recognised by Engineers Australia over 12 months.",
+            "visa": "Career Launch",
+            "timeline": "12 months",
+            "assessment": "Engineers Australia",
+            "status": "In Progress"
+          },
+          {
+            "category": "Employer Sponsorship",
+            "headline": "ICT specialist transitions from 485 to employer-sponsored 482",
+            "body": "With 8 months left on his 485, RedBridge matched him with a Melbourne tech employer and lodged the nomination with a Bridging Visa A in place. The 482 was granted before the 485 expired.",
+            "visa": "486 → 482",
+            "timeline": "5 months",
+            "assessment": "ACS",
+            "status": "Approved"
+          },
+          {
+            "category": "Skilled Independent",
+            "headline": "International student uses marketing degree to reach 190 nomination",
+            "body": "Consulting RedBridge while completing her marketing master's, this client was guided onto Victoria's 190 nomination pathway. A 24-month AMI-aligned career plan was designed and the invitation arrived on schedule.",
+            "visa": "190",
+            "timeline": "24 months",
+            "assessment": "AMI",
+            "status": "Approved"
+          }
+        ]
+      },
+      "quote": {
+        "eyebrow": "In Their Own Words",
+        "subheading": "Real clients. Real feedback. Unscripted.",
+        "footerNote": "Clients quoted with initials, occupation, and city only. All testimonials are genuine, collected as written feedback from verified RedBridge clients.",
+        "primaryQuote": {
+          "quote": "Two agencies had taken my money and given me nothing I could use. RedBridge was the first to tell me exactly what I didn't qualify for, before I paid a cent. That honesty is why I trust them with my PR.",
+          "name": "W.L.",
+          "role": "Accountant",
+          "city": "Melbourne",
+          "visaType": "482 → 186",
+          "initials": "WL"
+        },
+        "secondaryQuote": {
+          "quote": "The ACS assessment process felt impossible until RedBridge structured my project portfolio correctly. First attempt, no rejections.",
+          "name": "L.T.",
+          "role": "Software Engineer",
+          "city": "Sydney",
+          "visaType": "189 (ACS)",
+          "initials": "LT"
+        }
+      },
+      "trustPillars": {
+        "eyebrow": "Why Our Outcomes Are Real",
+        "heading": "The Difference Between",
+        "headingEm": "a Case and a Claim",
+        "subheading": "Anyone can publish outcomes. Here's what makes ours verifiable.",
+        "pillars": [
+          {
+            "title": "Employer verification before introduction",
+            "detail": "Every employer in our network is confirmed as an approved sponsor with DOHA before any candidate is introduced. There are no \"potential\" sponsors on our list."
+          },
+          {
+            "title": "Migration law on every case",
+            "detail": "Insight Idea (MARN 1467870) is co-located at the same address. Your case is reviewed by a licensed migration agent at every stage, not managed remotely or outsourced."
+          },
+          {
+            "title": "Named consultant, not a case number",
+            "detail": "You're assigned one consultant who manages your entire pathway. No handoffs to junior staff mid-process, no account managers rotating out after your first payment."
+          },
+          {
+            "title": "Fees tied to milestones",
+            "detail": "You don't pay lump sums upfront and hope for the best. Payment gates are structured around outcomes: employer match, visa lodgement, visa grant."
+          },
+          {
+            "title": "Honest \"no\" before a costly mistake",
+            "detail": "If your free consultation reveals you don't qualify, we say so clearly. No reframing, no selling you an inferior product, no deferred payment for work that won't succeed."
+          },
+          {
+            "title": "Documented, verifiable timelines",
+            "detail": "Every case summary shows real lodgement and grant timelines. We don't cherry-pick exceptional outliers. The range shown is representative of standard processing."
+          }
+        ]
+      }
+    }
+  }
+}

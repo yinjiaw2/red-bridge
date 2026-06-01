@@ -2,12 +2,19 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 const B = {
-  red: '#b11217', redLight: '#fdf0f0', navy: '#172d5d', bg: '#f5f1ea',
-  cream: '#fbf4ec', amber: '#efb64f', textDeep: '#22150f', textBody: '#1f1f1f',
-  textMuted: '#7a6a60', divider: '#ece5de',
+  red: '#b11217', redLight: '#fdf0f0', navy: '#172d5d', bg: '#f4f4f5',
+  cream: '#ffffff', amber: '#efb64f', textDeep: '#18181b', textBody: '#27272a',
+  textMuted: '#71717a', divider: '#e4e4e7',
 };
+
+const CREDENTIAL_META = [
+  { link: 'https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=4a87bac4-9b52-e411-9402-005056ab0eca' },
+  { link: 'https://abr.business.gov.au/ABN/View?abn=97693501147' },
+  { link: 'https://maps.google.com/?q=Level+9+Tower+3+18-38+Siddeley+Street+Docklands+VIC+3008' },
+];
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,34 +33,26 @@ function useReveal() {
   return ref;
 }
 
-const CREDENTIALS = [
-  { label: 'MARN', value: '1467870', note: 'Migration Agents Registration Number', link: 'https://www.mara.gov.au/search-the-register-of-migration-agents/?marn=1467870', linkLabel: 'Verify on MARA →' },
-  { label: 'ABN', value: '97 693 501 147', note: 'Australian Business Number', link: 'https://abr.business.gov.au/ABN/View?abn=97693501147', linkLabel: 'Verify on ABR →' },
-  { label: 'Address', value: 'Level 9, Tower 3', note: '18–38 Siddeley Street, Docklands VIC 3008', link: 'https://maps.google.com/?q=Level+9+Tower+3+18-38+Siddeley+Street+Docklands+VIC+3008', linkLabel: 'View on Maps →' },
-];
-
-const SERVICES_PROVIDED = [
-  'Migration advice under MARA registration (MARN: 1467870)',
-  '482 TSS Skills in Demand nomination and visa lodgement',
-  '186 ENS nomination and permanent residency lodgement',
-  'Standard Business Sponsorship (SBS) applications',
-  'Labour Market Testing compliance and advertising records',
-  'Ongoing sponsor compliance monitoring and DOHA notifications',
-];
-
 export default function AboutLegalPartner() {
   const ref = useReveal();
+  const t = useTranslations('v2.about.legalPartner');
+
+  const CREDENTIALS = (t.raw('credentials') as { label: string; value: string; note: string; linkLabel: string }[]).map((c, i) => ({
+    ...c,
+    link: CREDENTIAL_META[i].link,
+  }));
+  const SERVICES_PROVIDED = t.raw('services') as string[];
 
   return (
     <section style={{ background: B.bg, borderTop: `1px solid ${B.divider}`, padding: '88px 24px', fontFamily: 'var(--font-dm-sans, "DM Sans", system-ui, sans-serif)' }}>
       <div ref={ref} style={{ maxWidth: 1060, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 44 }}>
-          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 14 }}>Legal Partner</span>
+          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 14 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(24px, 3.4vw, 34px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: '0 0 12px' }}>
-            Migration Law —{' '}<em style={{ fontStyle: 'italic', color: B.red }}>on the Same Floor</em>
+            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
           <p style={{ fontSize: 15, color: B.textMuted, maxWidth: 480, margin: '0 auto', lineHeight: 1.65 }}>
-            Every piece of migration-related advice at RedBridge is reviewed by or delivered through Insight Idea — a licensed Australian migration law firm.
+            {t('subheading')}
           </p>
         </div>
 
@@ -61,12 +60,11 @@ export default function AboutLegalPartner() {
           <div style={{ padding: '36px 36px 32px', borderRight: `1px solid ${B.divider}` }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 7, background: '#eaf4ee', border: '1px solid #b8d4b8', borderRadius: 7, padding: '6px 12px', marginBottom: 20 }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
-              <span style={{ fontSize: 11, fontWeight: 700, color: '#2d6a4f' }}>MARA-registered migration agent</span>
+              <span style={{ fontSize: 11, fontWeight: 700, color: '#2d6a4f' }}>{t('maraTag')}</span>
             </div>
-            <h3 style={{ fontSize: 22, fontWeight: 800, color: B.textDeep, margin: '0 0 4px', letterSpacing: '-0.02em' }}>Insight Idea</h3>
-            <p style={{ fontSize: 13.5, color: B.textMuted, margin: '0 0 24px', lineHeight: 1.5 }}>
-              Licensed migration law firm and registered legal practice<br />
-              Co-located with RedBridge at Docklands VIC 3008
+            <h3 style={{ fontSize: 22, fontWeight: 800, color: B.textDeep, margin: '0 0 4px', letterSpacing: '-0.02em' }}>{t('firmName')}</h3>
+            <p style={{ fontSize: 13.5, color: B.textMuted, margin: '0 0 24px', lineHeight: 1.5, whiteSpace: 'pre-line' }}>
+              {t('firmDesc')}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {CREDENTIALS.map((c) => (
@@ -85,7 +83,7 @@ export default function AboutLegalPartner() {
           </div>
 
           <div style={{ padding: '36px 36px 32px' }}>
-            <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.textMuted, marginBottom: 16 }}>What Insight Idea Handles</p>
+            <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.textMuted, marginBottom: 16 }}>{t('servicesLabel')}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 28 }}>
               {SERVICES_PROVIDED.map((service) => (
                 <div key={service} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
@@ -96,7 +94,7 @@ export default function AboutLegalPartner() {
             </div>
             <div style={{ background: '#eef1f8', border: '1px solid #c8d3e8', borderRadius: 10, padding: '14px 16px', marginBottom: 16 }}>
               <p style={{ fontSize: 13, color: B.navy, margin: 0, lineHeight: 1.6 }}>
-                <strong>Co-location advantage:</strong> RedBridge and Insight Idea share Level 9, Tower 3 at 18–38 Siddeley Street. Questions between your placement consultant and your migration agent are resolved in minutes — not emails.
+                {t('coLocationNote')}
               </p>
             </div>
             <a
@@ -107,7 +105,7 @@ export default function AboutLegalPartner() {
               onMouseEnter={(e) => (e.currentTarget.style.color = B.red)}
               onMouseLeave={(e) => (e.currentTarget.style.color = B.navy)}
             >
-              Visit Insight Idea&apos;s website
+              {t('visitWebsite')}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg>
             </a>
           </div>
@@ -116,9 +114,14 @@ export default function AboutLegalPartner() {
         <div style={{ marginTop: 20, padding: '14px 20px', background: B.cream, border: `1px solid ${B.divider}`, borderRadius: 10, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={B.textMuted} strokeWidth="2" strokeLinecap="round" aria-hidden="true" style={{ flexShrink: 0, marginTop: 2 }}><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
           <p style={{ fontSize: 12.5, color: B.textMuted, margin: 0, lineHeight: 1.6 }}>
-            RedBridge Consulting, Insight Idea Law Firm, and Good Mood Studio are all operating entities within the{' '}
-            <a href="https://abr.business.gov.au/ABN/View?abn=97693501147" target="_blank" rel="noopener noreferrer" style={{ color: B.navy, fontWeight: 600, textDecoration: 'none' }}>Siddeley Group</a>{' '}
-            (ABN: 97 693 501 147), operating from Level 9, Tower 3, 18–38 Siddeley Street, Docklands VIC 3008. Placement recruitment under the Career Launch program is managed through Siddeley Talent Link.
+            {t('groupNote').split(t('siddeleylinkLabel')).map((part, i, arr) =>
+              i < arr.length - 1 ? (
+                <span key={i}>
+                  {part}
+                  <a href="https://abr.business.gov.au/ABN/View?abn=97693501147" target="_blank" rel="noopener noreferrer" style={{ color: B.navy, fontWeight: 600, textDecoration: 'none' }}>{t('siddeleylinkLabel')}</a>
+                </span>
+              ) : <span key={i}>{part}</span>
+            )}
           </p>
         </div>
       </div>

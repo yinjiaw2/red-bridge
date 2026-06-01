@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
     {
       title: "Subclass 189 Skilled Independent Visa | Points-Tested PR Pathway",
       description:
-        "Apply for the Australian subclass 189 skilled independent visa — no employer or state sponsor required. RedBridge explains points requirements, eligible occupations, and your strategy to reach PR.",
+        "Apply for the Australian subclass 189 skilled independent visa. No employer or state sponsor required. RedBridge explains points requirements, eligible occupations, and your strategy to reach PR.",
     },
     {
       title: "189技术独立签证 | 积分制永居申请路径 | 红桥咨询",

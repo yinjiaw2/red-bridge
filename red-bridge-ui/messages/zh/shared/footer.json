@@ -27,10 +27,10 @@
     "legal": {
       "privacy": "隐私政策",
       "terms": "服务条款",
-      "copyright": "版权声明",
-      "sitemap": "网站地图"
+      "copyright": "版权声明"
     },
-    "copyrightText": "© 2026 RedBridge Consulting Pty Ltd · ABN: 88 678 186 091",
-    "disclaimer": "Docklands VIC 3008 · 移民服务由 Insight Idea（持牌移民代理）提供 · 版权所有"
+    "copyrightText": "© 2026 RedBridge Consulting Pty Ltd · ABN: 88 678 186 091 · 版权所有",
+    "websiteInterest": "对这个网站感兴趣？",
+    "websiteInterestLink": "联系我们"
   }
 }

@@ -1,0 +1,198 @@
+{
+  "v2": {
+    "services": {
+      "employerPathwayHero": {
+        "eyebrow": "Employer Sponsored Visas",
+        "heading": "Your Skills Deserve",
+        "headingEm": "a Real Sponsor",
+        "subheading": "The 482 visa requires an employer. Most agencies sell you a job list and hope for the best. We give you direct access to a verified employer network where every position is confirmed before it reaches you, and we stay with you to the 186 PR finish line.",
+        "cta": "Book My Free Assessment",
+        "reviewNote": "Information last reviewed",
+        "reviewDate": "March 2026",
+        "reviewSuffix": ". Immigration policy changes regularly.",
+        "dohaLink": "Visit DOHA for the latest →",
+        "badges": [
+          "482 & 186 covered end-to-end",
+          "ICT & Marketing specialist network",
+          "MARN: 1467870, licensed legal partner",
+          "Free eligibility assessment"
+        ],
+        "stats": [
+          { "label": "Career placements",    "suffix": "+" },
+          { "label": "Employer matches made", "suffix": "+" },
+          { "label": "Typical time to visa",  "display": "3–12", "unit": "months" },
+          { "label": "Google Reviews",        "display": "4.9★", "sublabel": "47 reviews" }
+        ]
+      },
+      "industryNetwork": {
+        "eyebrow": "Employer Network",
+        "heading": "We Match by",
+        "headingEm": "Industry, Not Category",
+        "subheading": "Employers in our network operate in four sectors where 482 sponsorship is both common and viable.",
+        "verifiedBadge": "All employers individually verified",
+        "employersUnit": "employers",
+        "skillsAssessmentLabel": "Skills assessment: ",
+        "verifyHeading": "Our 4-Step Employer Verification Process",
+        "cta": "Book a free assessment to see who's hiring for your occupation",
+        "sectors": [
+          {
+            "label": "Technology & ICT",
+            "assessingBody": "ACS",
+            "highlight": ["Software engineers & developers", "ICT business & systems analysts", "Database administrators", "ICT project managers"]
+          },
+          {
+            "label": "Accounting & Finance",
+            "assessingBody": "CAANZ or CPA",
+            "highlight": ["Management accountants", "Financial analysts", "Tax accountants", "External auditors"]
+          },
+          {
+            "label": "Marketing & Communications",
+            "assessingBody": "AMI",
+            "highlight": ["Marketing specialists", "Digital marketing managers", "Market research analysts", "Business development managers"]
+          },
+          {
+            "label": "Engineering",
+            "assessingBody": "Engineers Australia",
+            "highlight": ["Civil & structural engineers", "Mechanical engineers", "Electrical engineers", "Project engineers"]
+          }
+        ],
+        "verifySteps": [
+          {
+            "label": "DOHA Sponsorship Check",
+            "detail": "Active SBS confirmed against department records before any introduction."
+          },
+          {
+            "label": "Business Legitimacy Review",
+            "detail": "ABN verification, trading history, and genuine vacancy review for each role."
+          },
+          {
+            "label": "TSMIT Salary Compliance",
+            "detail": "Confirmed against current Temporary Skilled Migration Income Threshold before match."
+          },
+          {
+            "label": "Ongoing Recheck",
+            "detail": "Status confirmed again at nomination stage. Sponsorship can be revoked between checks."
+          }
+        ]
+      },
+      "paymentMilestones": {
+        "eyebrow": "Payment Structure",
+        "heading": "Main Service Contract",
+        "headingEm": "Payment Milestones",
+        "subheading": "Each payment point is tied to a clear delivery milestone. Fees are aligned with actual progress. You pay when we deliver.",
+        "feeMilestonesNote": "Fee milestones are documented in your Client Agreement",
+        "feeMilestonesSuffix": " before any work begins. No payment is requested before you have reviewed, agreed to, and signed the terms.",
+        "milestones": [
+          { "num": 1, "label": "Contract Signing",      "note": "Client Agreement executed. Pathway confirmed.",                            "phase": "Start" },
+          { "num": 2, "label": "Client Meets Employer", "note": "You meet the employer and confirm satisfaction before proceeding.",          "phase": "Placement" },
+          { "num": 3, "label": "Placement Delivered",   "note": "You commence in your role with the sponsoring employer.",                   "phase": "Placement" },
+          { "num": 4, "label": "482 Visa Lodged",        "note": "Insight Idea lodges your 482 visa application with DOHA.",                 "phase": "482" },
+          { "num": 5, "label": "482 Visa Granted",       "note": "Your 482 TSS visa is approved. 5-year service guarantee active.",          "phase": "482" },
+          { "num": 6, "label": "186 Visa Lodged",        "note": "At the 2-year mark, Insight Idea initiates your permanent residency application.",    "phase": "186" },
+          { "num": 7, "label": "186 Visa Approved",      "note": "Permanent residency granted. Your Australian career is secured.",          "phase": "186 ✓" }
+        ]
+      },
+      "threeRoutes": {
+        "eyebrow": "Your Options",
+        "heading": "Three Routes.",
+        "headingEm": "One Goal.",
+        "subheading": "The right visa depends on how much experience you have right now.",
+        "requirementsLabel": "What You Need",
+        "approachLabel": "RedBridge's Approach",
+        "timelineLabel": "Timeline",
+        "pathwayLabel": "Pathway",
+        "honestNoteLabel": "Honest note: ",
+        "siddeleylinkLabel": "Career Launch Recruitment Partner: ",
+        "siddeleyNote": "Career Launch placements are managed through Siddeley Talent Link, a specialist recruitment company within the Siddeley Group, the same group that operates RedBridge Consulting.",
+        "siddeleyLinkText": "Learn more about our group structure →",
+        "tabs": [
+          { "id": "under1", "label": "Under 1 Year Exp",  "labelShort": "< 1 Year"  },
+          { "id": "one3",   "label": "1–3 Years (482)",   "labelShort": "1–3 Years" },
+          { "id": "three",  "label": "3+ Years (186 DE)", "labelShort": "3+ Years"  }
+        ],
+        "content": {
+          "under1": {
+            "headline": "You're 1 Year Away From 482 Eligibility",
+            "subhead": "Foundation Stage: Career Launch First",
+            "intro": "You don't qualify for a 482 visa yet, and any agency that suggests otherwise is misleading you. The good news: one year of genuine, verifiable Australian work experience changes everything.",
+            "timeline": "12–18 months to 482 readiness",
+            "pathway": "Career Launch → 482 → 186",
+            "honestNote": "This is a longer path, but it's the right one. We would rather tell you this now and build your case properly than take your money for a visa you won't receive.",
+            "ctaLabel": "Ask about Career Launch",
+            "requirements": [
+              { "label": "1 year paid full-time experience",  "detail": "In an occupation on the MLTSSL or STSOL" },
+              { "label": "Verifiable employment records",     "detail": "Payslips, contract, reference letter, all documented" },
+              { "label": "Employer willing to sponsor",       "detail": "RedBridge connects you once experience is in place" }
+            ],
+            "steps": [
+              { "num": "01", "label": "Enrol in Career Launch",    "detail": "Gain 12 months of paid, structured work with our partner employers" },
+              { "num": "02", "label": "Skills assessment",          "detail": "ACS (ICT) or AMI (Marketing). Your consultant confirms if required for your occupation" },
+              { "num": "03", "label": "Match to 482 sponsor",       "detail": "We transition you directly from Career Launch into employer sponsorship" }
+            ]
+          },
+          "one3": {
+            "headline": "You Qualify for a 482 Employer Sponsorship",
+            "subhead": "1–3 Years Experience: Direct 482 Pathway",
+            "intro": "With 1–3 years of relevant experience and the right occupation, you are eligible for a 482 TSS visa via employer sponsorship. RedBridge will match you to a verified employer and manage the pathway to 186 PR.",
+            "timeline": "3–12 months to 482 grant",
+            "pathway": "482 → 186 ENS (at 2-year mark)",
+            "honestNote": null,
+            "ctaLabel": "Check My 482 Eligibility",
+            "requirements": [
+              { "label": "Minimum 1 year full-time experience",     "detail": "In your nominated ANZSCO occupation" },
+              { "label": "Occupation on CSOL or MLTSSL",           "detail": "Your consultant confirms your specific occupation" },
+              { "label": "Skills assessment (where required)",      "detail": "ACS, AMI, CAANZ, confirmed at free assessment" }
+            ],
+            "steps": [
+              { "num": "01", "label": "Free eligibility assessment",        "detail": "We confirm your occupation, experience, and employer match potential" },
+              { "num": "02", "label": "Employer match",                     "detail": "Introduction to verified 482-approved employers in your industry" },
+              { "num": "03", "label": "482 nomination & visa lodgement",    "detail": "Insight Idea handles the full legal lodgement process" },
+              { "num": "04", "label": "186 PR transition at 2 years",       "detail": "We plan your 186 ENS from day one, not as an afterthought" }
+            ]
+          },
+          "three": {
+            "headline": "3+ Years? You May Qualify for Direct 186 Entry",
+            "subhead": "3+ Years Experience: 186 Direct Entry Stream",
+            "intro": "With 3+ years of recent experience in an eligible occupation, you may not need to spend time on a 482 first. The 186 Direct Entry (DE) stream can get you to permanent residency faster, if your skills assessment and employer are both in place.",
+            "timeline": "6–18 months to 186 grant",
+            "pathway": "186 Direct Entry → PR",
+            "honestNote": "Not all experienced candidates qualify for 186 DE directly. Your skills assessment result and occupation code matter significantly. We confirm at your free consultation.",
+            "ctaLabel": "Check My 186 DE Eligibility",
+            "requirements": [
+              { "label": "3 years full-time recent experience",        "detail": "In the nominated ANZSCO occupation within the past 5 years" },
+              { "label": "Completed skills assessment",                "detail": "CAANZ, ACS, AMI, or Engineers Australia depending on occupation" },
+              { "label": "Employer willing to nominate for 186",       "detail": "Must hold current SBS and nominate directly for permanent residency" }
+            ],
+            "steps": [
+              { "num": "01", "label": "Skills assessment review",              "detail": "We audit your existing assessment, or help you apply if not yet done" },
+              { "num": "02", "label": "Employer match (186-nominated)",        "detail": "We identify employers willing to nominate for 186 DE directly" },
+              { "num": "03", "label": "186 DE lodgement via Insight Idea",     "detail": "Full legal handling of nomination and visa application" }
+            ]
+          }
+        }
+      },
+      "whatWeDo": {
+        "eyebrow": "Transparency",
+        "heading": "What RedBridge Does",
+        "headingEm": "(And Doesn't)",
+        "weDoHeader": "What we do",
+        "weDontHeader": "What we don't do",
+        "legalPartnerNote": "Legal partner: Migration advice and visa lodgement are handled exclusively by Insight Idea, RedBridge's licensed legal partner (MARN: 1467870).",
+        "insightIdeaLinkLabel": "Insight Idea",
+        "weDo": [
+          { "title": "Verify every employer before presenting them",         "detail": "Sponsorship approval status, genuine vacancy, and TSMIT salary compliance are all checked before any client introduction." },
+          { "title": "Give honest eligibility assessments",                 "detail": "At the free consultation, including telling you clearly if you don't yet qualify for a 482 application." },
+          { "title": "Work with a MARA-registered legal partner",           "detail": "Insight Idea (MARN: 1467870) is based at the same Docklands address. No outsourced handoffs, no information gaps." },
+          { "title": "Structure fees across milestones",                    "detail": "You pay as outcomes are delivered, not as a single upfront sum before work has begun." },
+          { "title": "Plan your 186 PR from day one",                      "detail": "We map your 186 ENS transition from the moment your 482 is granted, not as a last-minute scramble." }
+        ],
+        "weDont": [
+          { "title": "Send unverified job lists",                           "detail": "Every employer introduction is personal and specific to your profile, not a spreadsheet of possibilities." },
+          { "title": "Guarantee visa outcomes",                             "detail": "No agency legally can. If one tells you otherwise, that is a red flag worth taking seriously." },
+          { "title": "Take your money if you don't qualify",               "detail": "If your free assessment reveals the pathway isn't achievable, we say so before any fees are discussed." },
+          { "title": "Fabricate work experience",                          "detail": "False histories fail and can create serious legal consequences. Every record we produce is genuine and traceable." }
+        ]
+      }
+    }
+  }
+}

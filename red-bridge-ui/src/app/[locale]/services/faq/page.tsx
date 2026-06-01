@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
     {
       title: "FAQ | Visas, Sponsorship & How RedBridge Works",
       description:
-        "Straight answers about employer sponsorship, skills assessments, and how RedBridge works — including 482 and 186 visa questions.",
+        "Straight answers about employer sponsorship, skills assessments, and how RedBridge works, including 482 and 186 visa questions.",
     },
     {
       title: "常见问题 | 签证、担保与红桥咨询服务 | 红桥咨询",

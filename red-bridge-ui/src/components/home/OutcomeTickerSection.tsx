@@ -81,7 +81,7 @@ export const SuccessTicker = () => {
               <span className="font-bold text-[#7c5a43] text-sm md:text-base">
                 {item.name}
               </span>
-              <span className="text-[#a28e7e]">—</span>
+              <span className="text-[#a28e7e]">·</span>
               <span className="font-bold text-[#b45309] text-sm md:text-base">
                 {item.result}
               </span>

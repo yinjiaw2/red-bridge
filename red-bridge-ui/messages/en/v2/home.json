@@ -1,0 +1,228 @@
+{
+  "v2": {
+    "home": {
+      "hero": {
+        "eyebrow": "Melbourne · Employer Sponsorship Specialists",
+        "abn": "Registered Australian Consultancy · ABN 88 678 186 091",
+        "headingLine1": "Build Your Career",
+        "headingLine2": "in Australia.",
+        "headingLine3": "We Make It Real.",
+        "subheading": "Get placed with verified employers. Gain the right experience. Move from study to 482 visa and PR, with a legal partner at every step.",
+        "ctaPrimary": "Book Free Consultation",
+        "ctaSecondary": "See How We Work",
+        "chips": [
+          { "display": "Free", "label": "No-obligation\nconsultation" },
+          { "display": "3",    "label": "Visa\npathways" },
+          { "display": "MARA","label": "Licensed\npartner" }
+        ]
+      },
+      "ticker": {
+        "label": "Real clients · Real outcomes · Updated regularly",
+        "entries": [
+          { "name": "Arjun S.",  "outcome": "482 visa granted",       "type": "482",     "occupation": "ICT Business Analyst · Melbourne",   "timeline": "5 months" },
+          { "name": "Wei L.",    "outcome": "485 → 482 lodged",        "type": "485→482", "occupation": "Software Engineer · Docklands VIC",  "timeline": "4 months" },
+          { "name": "Ming H.",   "outcome": "186 PR granted",          "type": "186",     "occupation": "Systems Analyst · Melbourne VIC",    "timeline": "2 years" },
+          { "name": "Priya M.",  "outcome": "482 nomination lodged",   "type": "482",     "occupation": "Business Analyst · Melbourne VIC",   "timeline": "3 months" },
+          { "name": "Chen Y.",   "outcome": "485 → 482 granted",       "type": "485→482", "occupation": "ICT Project Manager · VIC",          "timeline": "6 months" },
+          { "name": "David T.",  "outcome": "186 ENS granted",         "type": "186",     "occupation": "Accountant · Docklands VIC",         "timeline": "26 months" },
+          { "name": "Linh T.",   "outcome": "482 employer matched",    "type": "482",     "occupation": "Financial Analyst · Melbourne VIC",  "timeline": "3 months" },
+          { "name": "Sasha R.",  "outcome": "186 nomination lodged",   "type": "186",     "occupation": "Software Developer · Melbourne VIC", "timeline": "24 months" },
+          { "name": "Amy K.",    "outcome": "485 → 482 lodged",        "type": "485→482", "occupation": "Marketing Manager · VIC",            "timeline": "5 months" },
+          { "name": "Raj K.",    "outcome": "482 visa granted",        "type": "482",     "occupation": "Management Accountant · VIC",        "timeline": "4 months" }
+        ]
+      },
+      "employerNetwork": {
+        "eyebrow": "Our Employer Network",
+        "stat": "10+",
+        "statLabel": "verified employers on our books",
+        "description": "Every employer is individually verified for active 482 sponsorship approval before we introduce them to any client.",
+        "privateBadge": "Private & Protected",
+        "privateNote": "Employer profiles are shared privately during your consultation, not publicly listed, to protect hiring relationships and your introduction.",
+        "verificationLabel": "Our Verification Process",
+        "cta": "Book your free consultation to see who's hiring",
+        "fields": [
+          {
+            "label": "Technology & ICT",
+            "roles": ["Software Engineer", "ICT Project Manager", "Business Analyst", "Systems Analyst"]
+          },
+          {
+            "label": "Accounting & Finance",
+            "roles": ["Management Accountant", "Financial Analyst", "Tax Accountant", "Auditor"]
+          },
+          {
+            "label": "Marketing & Comms",
+            "roles": ["Marketing Specialist", "Digital Marketing Mgr", "Market Research Analyst", "Business Dev Manager"]
+          },
+          {
+            "label": "Engineering",
+            "roles": ["Civil Engineer", "Structural Engineer", "Mechanical Engineer", "Project Engineer"]
+          },
+          {
+            "label": "Automotive",
+            "roles": ["Automotive Technician", "Service Manager", "Parts Interpreter", "Workshop Manager"]
+          }
+        ],
+        "verifySteps": [
+          {
+            "num": "01",
+            "title": "Check Sponsorship Approval",
+            "detail": "Confirm active 482 status against official DOHA records."
+          },
+          {
+            "num": "02",
+            "title": "Review Company & Role",
+            "detail": "Assess business legitimacy, job duties, and TSMIT salary compliance."
+          },
+          {
+            "num": "03",
+            "title": "Ongoing Monitoring",
+            "detail": "Regularly recheck status so it stays valid throughout your placement."
+          }
+        ]
+      },
+      "trust": {
+        "eyebrow": "Licensed & Verified",
+        "heading": "Trust, Verified.",
+        "headingEm": "Not Just Claimed",
+        "subheading": "Every migration service at RedBridge is backed by formal registration and verifiable credentials. These aren't marketing claims. They're public records you can check right now.",
+        "ctaBottom": "Get Your Free Eligibility Assessment",
+        "credentials": [
+          {
+            "title": "MARA Registered Agent",
+            "badge": "MARN 1467870",
+            "desc": "Insight Idea holds active MARA registration. Migration advice without MARA registration is illegal in Australia. Every piece of advice we deliver is legally compliant.",
+            "ctaLabel": "Verify on MARA →"
+          },
+          {
+            "title": "ABN Registered",
+            "badge": "ABN 88 678 186 091",
+            "desc": "RedBridge Consulting is a registered Australian company (ABN 88 678 186 091), operating from Level 9, Tower 3, 18–38 Siddeley Street, Docklands VIC 3008.",
+            "ctaLabel": "Verify on ABR →"
+          },
+          {
+            "title": "Verified Employer Network",
+            "badge": "10+ Active Sponsors",
+            "desc": "Every employer in our network is individually confirmed as holding active 482 Standard Business Sponsorship before any client introduction. No unverified leads.",
+            "ctaLabel": "Book a consultation →"
+          }
+        ]
+      },
+      "why": {
+        "eyebrow": "Why RedBridge",
+        "heading": "The Difference Is",
+        "headingEm": "How We Work",
+        "subheading": "Six commitments that separate us from the agencies that take your money and disappear.",
+        "ctaPrompt": "Ready to see if you qualify?",
+        "cta": "Check My Eligibility Free →",
+        "differentiators": [
+          {
+            "title": "Named consultant, no handoffs",
+            "body": "One consultant manages your case from first call to PR. No account manager rotations, no 'your consultant is away' delays."
+          },
+          {
+            "title": "Employer-first matching",
+            "body": "We match you to verified employers with active 482 approval. Not job boards. Direct introductions to hiring sponsors."
+          },
+          {
+            "title": "Legal partner on site",
+            "body": "Insight Idea migration law firm is co-located on the same floor. Legal sign-off is minutes away, not an email chain."
+          },
+          {
+            "title": "Milestone-based fees",
+            "body": "Fees are structured around delivery: employer match, visa lodgement, visa grant. No large upfront payments for activity."
+          },
+          {
+            "title": "Genuine documentation",
+            "body": "We only help prepare documentation that is real, traceable, and yours. No fabricated, inflated, or backdated records."
+          },
+          {
+            "title": "Honest if you don't qualify",
+            "body": "A free consultation that ends with 'you don't qualify yet' is still a useful consultation. We would rather tell you that now."
+          }
+        ]
+      },
+      "comparison": {
+        "eyebrow": "Why RedBridge",
+        "heading": "How We Are",
+        "headingEm": "Different",
+        "subheading": "The migration industry has a trust problem. We built RedBridge to be the verifiable opposite.",
+        "colTopic": "What you deserve",
+        "colOthers": "Other agencies",
+        "colRedBridge": "RedBridge Consulting",
+        "ctaStripHeading": "Still have questions? Let's talk.",
+        "ctaStripSub": "Free consultation. Clear answers. No pressure.",
+        "ctaPrimary": "Book Free Consultation",
+        "ctaSecondary": "See How We Work",
+        "rows": [
+          {
+            "topic": "Job listings you can verify",
+            "others": { "title": "Unverified employer details", "desc": "No proof of active sponsorship approval." },
+            "rb": { "title": "Verified employers, upfront", "desc": "We share employer names, industry, and 482 sponsorship approval status during your free consultation, before you commit." }
+          },
+          {
+            "topic": "Transparent, milestone-based fees",
+            "others": { "title": "Large upfront payments", "desc": "Thousands charged before any work begins." },
+            "rb": { "title": "Pay as we progress", "desc": "Fees are documented in a Client Agreement and split across 3 to 4 milestone stages." }
+          },
+          {
+            "topic": "Licensed migration advice",
+            "others": { "title": "Unregistered migration advice", "desc": "No regulatory oversight or legal accountability." },
+            "rb": { "title": "Licensed migration law partner", "desc": "All visa lodgements are handled by Insight Idea, a registered Australian law firm and MARA migration agent (MARN 1467870)." }
+          },
+          {
+            "topic": "Genuine, verifiable work experience",
+            "others": { "title": "Hard-to-verify work experience", "desc": "Fabricated or inflated records that fail skills assessments." },
+            "rb": { "title": "Documented, paid work placement", "desc": "We deliver genuine paid timesheets in the format required for CAANZ, ACS, and AMI skills assessments." }
+          },
+          {
+            "topic": "A pathway that fits your situation",
+            "others": { "title": "One-size-fits-all recommendations", "desc": "Everyone gets the same program regardless of eligibility." },
+            "rb": { "title": "Honest assessment first", "desc": "If a pathway does not suit you, we say so at the free consultation. No sales pitch." }
+          },
+          {
+            "topic": "Support throughout your journey",
+            "others": { "title": "Support ends after payment", "desc": "You are left to navigate visa requirements alone." },
+            "rb": { "title": "Ongoing support at every stage", "desc": "One named consultant manages your case from first call to PR. No handoffs, no gaps." }
+          }
+        ]
+      },
+      "contact": {
+        "eyebrow": "Get Started",
+        "heading": "Book Your Free Consultation,",
+        "headingEm": "No Obligation",
+        "subheading": "Tell us where you are. We'll tell you what's possible, honestly.",
+        "ctaPrimary": "Book Free Consultation",
+        "responseNote": "Usually responded to within 2 business hours",
+        "followUsLabel": "Follow us",
+        "wechatQrAlt": "WeChat QR",
+        "wechatAccountLabel": "WeChat Official Account",
+        "cards": [
+          {
+            "title": "Docklands Office",
+            "eyebrow": "Visit Us",
+            "lines": ["Level 9, Tower 3", "18–38 Siddeley Street", "Docklands VIC 3008"],
+            "sub": "Co-located with Insight Idea"
+          },
+          {
+            "title": "Phone",
+            "eyebrow": "Call Us",
+            "lines": ["(03) 9961 7301"],
+            "sub": "Mon–Fri 9am–5pm AEDT"
+          },
+          {
+            "title": "Email",
+            "eyebrow": "Email Us",
+            "lines": ["info@redbridgeconsulting.com.au"],
+            "sub": null
+          }
+        ],
+        "socials": [
+          { "key": "wechat",    "label": "WeChat" },
+          { "key": "facebook",  "label": "Facebook" },
+          { "key": "rednote",   "label": "小红书 RedNote" },
+          { "key": "instagram", "label": "Instagram" }
+        ]
+      }
+    }
+  }
+}

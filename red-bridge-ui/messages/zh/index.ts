@@ -1,3 +1,10 @@
+import v2Home from './v2/home.json';
+import v2Shared from './v2/shared.json';
+import v2About from './v2/about.json';
+import v2Services from './v2/services.json';
+import v2Employers from './v2/employers.json';
+import v2Success from './v2/success.json';
+import v2Faq from './v2/faq.json';
 import comparison190 from './190/comparison.json';
 import contextBand190 from './190/context-band.json';
 import ctaBand190 from './190/cta-band.json';
@@ -98,6 +105,7 @@ function deepMerge(target: Obj, source: Obj): Obj {
 }
 
 const allMessages: Obj[] = [
+  v2Home, v2Shared, v2About, v2Services, v2Employers, v2Success, v2Faq,
   comparison190, contextBand190, ctaBand190, faq190, hero190,
   priorities190, process190, related190, requirements190, reviewedBanner190,
   roiExplainer190, selectionFactors190,

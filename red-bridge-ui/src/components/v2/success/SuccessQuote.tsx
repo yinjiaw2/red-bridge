@@ -1,15 +1,15 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
 const B = {
-  red: '#b11217', redLight: '#fdf0f0', navy: '#172d5d', bg: '#f5f1ea',
-  cream: '#fbf4ec', amber: '#efb64f', textDeep: '#22150f', textMuted: '#7a6a60',
-  divider: '#ece5de', badgeBg: '#ead6bf',
+  red: '#b11217', redLight: '#fdf0f0', navy: '#172d5d', bg: '#f4f4f5',
+  cream: '#ffffff', amber: '#efb64f', textDeep: '#18181b', textMuted: '#71717a',
+  divider: '#e4e4e7', badgeBg: '#e4e4e7',
 };
 
-const PRIMARY_QUOTE = { quote: "Two agencies had taken my money and given me nothing I could use. RedBridge was the first to tell me exactly what I didn't qualify for — before I paid a cent. That honesty is why I trust them with my PR.", name: 'W.L.', role: 'Accountant', city: 'Melbourne', visaType: '482 → 186', initials: 'WL' };
-const SECONDARY_QUOTE = { quote: 'The ACS assessment process felt impossible until RedBridge structured my project portfolio correctly. First attempt, no rejections.', name: 'L.T.', role: 'Software Engineer', city: 'Sydney', visaType: '189 — ACS', initials: 'LT' };
+type QuoteData = { quote: string; name: string; role: string; city: string; visaType: string; initials: string };
 
 function useReveal(delay = 0) {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,15 +28,15 @@ function useReveal(delay = 0) {
   return ref;
 }
 
-function QuoteCard({ q, isFeatured, delay }: { q: typeof PRIMARY_QUOTE; isFeatured: boolean; delay: number }) {
+function QuoteCard({ q, isFeatured, delay }: { q: QuoteData; isFeatured: boolean; delay: number }) {
   const ref = useReveal(delay);
   return (
     <div ref={ref} style={{ background: isFeatured ? B.navy : B.cream, border: `1px solid ${isFeatured ? 'transparent' : B.divider}`, borderRadius: 18, padding: '32px 32px 28px', display: 'flex', flexDirection: 'column', gap: 20, position: 'relative', overflow: 'hidden' }}>
-      <span aria-hidden="true" style={{ position: 'absolute', top: 12, right: 24, fontSize: 96, lineHeight: 1, color: isFeatured ? 'rgba(255,255,255,0.07)' : 'rgba(34,21,15,0.06)', fontFamily: 'Georgia, serif', userSelect: 'none', pointerEvents: 'none' }}>"</span>
+      <span aria-hidden="true" style={{ position: 'absolute', top: 12, right: 24, fontSize: 96, lineHeight: 1, color: isFeatured ? 'rgba(255,255,255,0.07)' : 'rgba(34,21,15,0.06)', fontFamily: 'Georgia, serif', userSelect: 'none', pointerEvents: 'none' }}>&quot;</span>
       <span style={{ display: 'inline-flex', alignSelf: 'flex-start', fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: isFeatured ? B.amber : B.red, background: isFeatured ? 'rgba(239,182,79,0.15)' : B.redLight, border: `1px solid ${isFeatured ? 'rgba(239,182,79,0.3)' : '#f5d5d6'}`, borderRadius: 5, padding: '3px 9px' }}>
         {q.visaType}
       </span>
-      <blockquote style={{ fontSize: isFeatured ? 18 : 15, fontStyle: 'italic', color: isFeatured ? 'rgba(255,255,255,0.9)' : '#1f1f1f', lineHeight: 1.7, margin: 0, position: 'relative', zIndex: 1, letterSpacing: '-0.01em' }}>
+      <blockquote style={{ fontSize: isFeatured ? 18 : 15, fontStyle: 'italic', color: isFeatured ? 'rgba(255,255,255,0.9)' : '#27272a', lineHeight: 1.7, margin: 0, position: 'relative', zIndex: 1, letterSpacing: '-0.01em' }}>
         &ldquo;{q.quote}&rdquo;
       </blockquote>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 'auto' }}>
@@ -51,20 +51,24 @@ function QuoteCard({ q, isFeatured, delay }: { q: typeof PRIMARY_QUOTE; isFeatur
 }
 
 export default function SuccessQuote() {
+  const t = useTranslations('v2.success.quote');
+  const primaryQuote = t.raw('primaryQuote') as QuoteData;
+  const secondaryQuote = t.raw('secondaryQuote') as QuoteData;
   const headerRef = useReveal(0);
+
   return (
     <section style={{ background: B.bg, padding: '72px 24px 64px', fontFamily: 'var(--font-dm-sans, "DM Sans", system-ui, sans-serif)' }}>
       <div style={{ maxWidth: 960, margin: '0 auto' }}>
         <div ref={headerRef} style={{ textAlign: 'center', marginBottom: 36 }}>
-          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red }}>In Their Own Words</span>
-          <p style={{ fontSize: 15, color: B.textMuted, margin: '10px auto 0', lineHeight: 1.6, maxWidth: 440 }}>Real clients. Real feedback. Unscripted.</p>
+          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red }}>{t('eyebrow')}</span>
+          <p style={{ fontSize: 15, color: B.textMuted, margin: '10px auto 0', lineHeight: 1.6, maxWidth: 440 }}>{t('subheading')}</p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 18 }}>
-          <QuoteCard q={PRIMARY_QUOTE} isFeatured delay={0.05} />
-          <QuoteCard q={SECONDARY_QUOTE} isFeatured={false} delay={0.15} />
+          <QuoteCard q={primaryQuote} isFeatured delay={0.05} />
+          <QuoteCard q={secondaryQuote} isFeatured={false} delay={0.15} />
         </div>
         <p style={{ textAlign: 'center', fontSize: 11.5, color: B.textMuted, marginTop: 20, lineHeight: 1.5 }}>
-          Clients quoted with initials, occupation, and city only. All testimonials are genuine — collected as written feedback from verified RedBridge clients.
+          {t('footerNote')}
         </p>
       </div>
     </section>

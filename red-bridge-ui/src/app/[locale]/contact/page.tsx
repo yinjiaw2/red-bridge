@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     {
       title: "Free Consultation | Book Your Migration & Career Assessment",
       description:
-        "Book a free consultation with RedBridge. Share your migration or career profile and receive a tailored assessment — no obligation.",
+        "Book a free consultation with RedBridge. Share your migration or career profile and receive a tailored assessment, no obligation.",
     },
     {
       title: "预约免费咨询 | 移民与职业评估 | 红桥咨询",

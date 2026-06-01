@@ -4,10 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import type { SVGProps } from "react";
 import {
-  CircleStar,
   BookOpen,
   MessageCircle,
-  ExternalLink,
   ShieldCheck,
   type LucideIcon,
 } from "lucide-react";
@@ -36,11 +34,35 @@ function FacebookIcon({
   );
 }
 
-const socialIconMap: Record<string, LucideIcon | typeof FacebookIcon> = {
+function InstagramIcon({
+  size = 24,
+  ...props
+}: SVGProps<SVGSVGElement> & { size?: number | string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
+const socialIconMap: Record<string, LucideIcon | typeof FacebookIcon | typeof InstagramIcon> = {
   wechat: MessageCircle,
   facebook: FacebookIcon,
   rednote: BookOpen,
-  instagram: CircleStar,
+  instagram: InstagramIcon,
 };
 
 const socialHrefs: Record<string, string> = {
@@ -50,60 +72,69 @@ const socialHrefs: Record<string, string> = {
   instagram: "https://www.instagram.com/redbridgeconsulting/",
 };
 
+const GROUP_LINKS = [
+  { label: "Siddeley Group", href: "https://siddeleygroup-v.pages.dev/" },
+  { label: "Insight Idea Law Firm", href: "https://www.insightidea.com.au/en" },
+  { label: "Good Mood Studio", href: "https://goodmood-self.vercel.app/" },
+];
+
 export const Footer = () => {
   const t = useTranslations("footer");
   const companyLinks = t.raw("companyLinks") as FooterLinkItem[];
-
   const socialKeys = ["wechat", "facebook", "rednote", "instagram"] as const;
 
   return (
-    <footer className="bg-white text-gray-600 py-9 px-5 md:px-8 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto">
-        {/* Top content */}
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,520px)_minmax(320px,420px)] gap-10 lg:gap-20 xl:gap-28 mb-9 items-start justify-center">
-          {/* Brand */}
-          <div className="max-w-xl text-center lg:text-left">
-            <div className="mb-3">
+    <footer className="bg-[#0f1c38] text-white/70">
+      {/* ── Main content ── */}
+      <div className="max-w-7xl mx-auto px-5 md:px-8 pt-14 pb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_auto] gap-10 lg:gap-16 xl:gap-24">
+
+          {/* Brand column */}
+          <div className="max-w-sm">
+            <div className="mb-5 inline-block bg-white rounded-lg px-3 py-2">
               <Image
                 src="/rb-logo.png"
                 alt={t("logoAlt")}
-                width={144}
-                height={40}
-                className="h-auto object-contain mx-auto lg:mx-0"
+                width={132}
+                height={36}
+                className="h-auto object-contain"
               />
             </div>
-
-            <p className="text-[#D4A017] font-bold tracking-[0.22em] text-[11px] uppercase mb-3">
+            <p className="text-[#D4A017] font-bold tracking-[0.18em] text-[10px] uppercase mb-4">
               {t("tagline")}
             </p>
-
-            <p className="text-[13px] leading-6 max-w-lg mx-auto lg:mx-0">
+            <p className="text-[13px] leading-[1.7] text-white/50 mb-6">
               {t("descriptionBefore")}
               <a
                 href="https://www.insightidea.com.au/en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-900 font-medium hover:underline mx-1 inline-flex items-center gap-1"
+                className="text-white/80 hover:text-[#D4A017] transition-colors font-medium mx-1 underline underline-offset-4 decoration-white/20"
               >
                 {t("descriptionLink")}
-                <ExternalLink size={12} />
               </a>
               {t("descriptionAfter")}
             </p>
+            {/* MARA badge */}
+            <div className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2">
+              <ShieldCheck size={14} className="text-[#D4A017] shrink-0" />
+              <span className="text-[11px] font-semibold text-white/60">
+                MARA Registered · MARN 1467870
+              </span>
+            </div>
           </div>
 
-          {/* Company */}
-          <div className="w-full max-w-md text-center lg:text-left">
-            <h5 className="text-gray-900 font-bold text-sm mb-4 flex items-center justify-center lg:justify-start gap-2">
-              <span className="w-4 h-px bg-[#D4A017]" />
+          {/* Navigation column */}
+          <div className="min-w-[160px]">
+            <h5 className="text-white font-bold text-[11px] uppercase tracking-[0.12em] mb-5">
               {t("companyTitle")}
             </h5>
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-2.5 text-[13px] leading-5 justify-items-center lg:justify-items-start">
+            <ul className="flex flex-col gap-3">
               {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block py-1 text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-[13px] text-white/50 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -111,28 +142,25 @@ export const Footer = () => {
               ))}
             </ul>
           </div>
-        </div>
 
-        {/* Divider */}
-        <div className="border-t border-gray-200 pt-8">
-          {/* Social + legal */}
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-6 mb-8">
-            {/* Social */}
-            <div className="flex flex-wrap justify-center gap-6">
+          {/* Social column */}
+          <div className="min-w-[180px]">
+            <h5 className="text-white font-bold text-[11px] uppercase tracking-[0.12em] mb-5">
+              Follow Us
+            </h5>
+            <div className="flex flex-col gap-3">
               {socialKeys.map((key) => {
                 const Icon = socialIconMap[key];
                 const href = socialHrefs[key];
                 const label = t(`social.${key}`);
 
-                const inner = (
-                  <>
-                    <span className="p-2 rounded-lg bg-gray-100 group-hover:bg-[#D4A017]/10 group-hover:text-[#D4A017] transition-all">
-                      <Icon size={18} aria-hidden="true" />
+                const content = (
+                  <span className="flex items-center gap-3 text-[13px] text-white/50 hover:text-white transition-colors group">
+                    <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-white/8 group-hover:bg-[#D4A017]/15 group-hover:text-[#D4A017] transition-all">
+                      <Icon size={14} aria-hidden="true" />
                     </span>
-                    <span className="text-xs font-bold uppercase tracking-wider">
-                      {label}
-                    </span>
-                  </>
+                    {label}
+                  </span>
                 );
 
                 return href ? (
@@ -141,77 +169,93 @@ export const Footer = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:text-gray-900 transition-all group"
+                    aria-label={label}
                   >
-                    {inner}
+                    {content}
                   </a>
                 ) : (
                   <button
                     key={key}
                     type="button"
-                    className="relative flex items-center gap-2 hover:text-gray-900 transition-all group"
+                    className="relative text-left"
                     aria-label={label}
                   >
-                    {inner}
-                    {key === "wechat" ? (
-                      <span className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 rounded-md border border-gray-200 bg-white p-2 opacity-0 shadow-lg transition-all duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
+                    {content}
+                    {key === "wechat" && (
+                      <span className="pointer-events-none absolute bottom-full left-0 z-20 mb-2 rounded-lg border border-white/10 bg-[#0f1c38] p-2 opacity-0 shadow-xl transition-all duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
                         <Image
                           src="/wechat-official-account-qr.jpg"
                           alt={label}
-                          width={160}
-                          height={160}
-                          className="h-40 w-40 max-w-none"
+                          width={140}
+                          height={140}
+                          className="h-35 w-35 max-w-none"
                         />
                       </span>
-                    ) : null}
+                    )}
                   </button>
                 );
               })}
             </div>
-
-            {/* Legal links */}
-            <div className="flex gap-6 text-xs font-medium text-gray-500">
-              <span>
-                {t("legal.privacy")}
-              </span>
-              <span>
-                {t("legal.terms")}
-              </span>
-              <span>
-                {t("legal.copyright")}
-              </span>
-            </div>
           </div>
+        </div>
+      </div>
 
-          {/* Copyright */}
-          <div className="text-center space-y-3">
-            <p className="text-[0.7rem] uppercase tracking-widest text-gray-400">
-              A{" "}
+      {/* ── Divider ── */}
+      <div className="border-t border-white/8 mx-5 md:mx-8" />
+
+      {/* ── Bottom bar ── */}
+      <div className="max-w-7xl mx-auto px-5 md:px-8 py-6 flex flex-col gap-4">
+        {/* Group affiliates */}
+        <div className="flex flex-wrap items-center gap-x-1 gap-y-2 text-[11px] text-white/35">
+          <span>Part of the</span>
+          {GROUP_LINKS.map((item, i) => (
+            <span key={item.href} className="flex items-center gap-1">
               <a
-                href="https://abr.business.gov.au/ABN/View?abn=97693501147"
+                href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-600 underline underline-offset-4"
+                className="text-white/50 hover:text-[#D4A017] transition-colors font-medium underline underline-offset-4 decoration-white/15"
               >
-                {t("siddeleyGroup")}
-              </a>{" "}
-              {t("affiliationSuffix")}
-              <span className="mx-2 text-gray-300">|</span>
-              {t("partner1")}
-              <span className="mx-2 text-gray-300">|</span>
-              {t("partner2")}
-            </p>
+                {item.label}
+              </a>
+              {i < GROUP_LINKS.length - 1 && (
+                <span className="text-white/20 mx-1">·</span>
+              )}
+            </span>
+          ))}
+        </div>
 
-            <div className="flex flex-col items-center gap-2">
-              <div className="flex items-center gap-2 text-[0.7rem] text-gray-500">
-                <ShieldCheck size={14} className="text-[#D4A017]" />
-                {t("copyrightText")}
-              </div>
-              <p className="text-[0.7rem] text-gray-400 max-w-2xl mx-auto">
-                {t("disclaimer")}
-              </p>
-            </div>
+        {/* Legal links row */}
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px]">
+          <Link href="/privacy" className="text-white/40 hover:text-white/70 transition-colors">
+            {t("legal.privacy")}
+          </Link>
+          <Link href="/terms" className="text-white/40 hover:text-white/70 transition-colors">
+            {t("legal.terms")}
+          </Link>
+          <Link href="/copyright" className="text-white/40 hover:text-white/70 transition-colors">
+            {t("legal.copyright")}
+          </Link>
+        </div>
+
+        {/* Copyright + website interest row */}
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-2 text-[11px] text-white/30">
+            <ShieldCheck size={12} className="text-[#D4A017]/60 shrink-0" />
+            <span>{t("copyrightText")}</span>
           </div>
+          <p className="text-[11px] text-white/25">
+            {t("websiteInterest")}{" "}
+            <a
+              href="https://www.linkedin.com/in/vanessachs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/50 hover:text-[#D4A017] transition-colors underline underline-offset-2 decoration-white/20"
+            >
+              {t("websiteInterestLink")}
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>

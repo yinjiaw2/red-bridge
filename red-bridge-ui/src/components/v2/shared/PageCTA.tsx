@@ -1,20 +1,40 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+
+const SOCIAL_ICONS: Record<string, React.ReactNode> = {
+  'Facebook': (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+    </svg>
+  ),
+  '小红书 RedNote': (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 6.5h-2v1h2v1.5h-2v5h-1.5v-5h-1V8h1V7a2 2 0 012-2h1.5v1.5z" />
+    </svg>
+  ),
+  'Instagram': (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  ),
+};
 
 const B = {
   red: '#b11217',
   navy: '#172d5d',
   amber: '#efb64f',
   amberDeep: '#d4a017',
-  bg: '#f5f1ea',
-  cream: '#fbf4ec',
-  textDeep: '#22150f',
-  textMuted: '#7a6a60',
-  divider: '#ece5de',
+  bg: '#f4f4f5',
+  cream: '#ffffff',
+  textDeep: '#18181b',
+  textMuted: '#71717a',
+  divider: '#e4e4e7',
 };
 
 function useReveal() {
@@ -40,13 +60,17 @@ function useReveal() {
 
 export default function PageCTA() {
   const locale = useLocale();
+  const t = useTranslations('v2.shared.pageCTA');
   const ref = useReveal();
+
+  const trustLabels = t.raw('trustLabels') as string[];
+  const socials = t.raw('socials') as { label: string; href: string }[];
 
   return (
     <section
       style={{
         background: B.bg,
-        backgroundImage: `radial-gradient(ellipse 70% 80% at 50% 100%, #ead6bf44 0%, transparent 70%)`,
+        backgroundImage: `radial-gradient(ellipse 70% 80% at 50% 100%, #e4e4e744 0%, transparent 70%)`,
         padding: '80px 24px',
         fontFamily: 'var(--font-dm-sans, "DM Sans", system-ui, sans-serif)',
       }}
@@ -76,7 +100,7 @@ export default function PageCTA() {
               marginBottom: 14,
             }}
           >
-            Get In Touch
+            {t('eyebrow')}
           </span>
 
           <h2
@@ -89,8 +113,8 @@ export default function PageCTA() {
               letterSpacing: '-0.02em',
             }}
           >
-            Your first step is{' '}
-            <em style={{ fontStyle: 'italic', color: B.amber }}>free.</em>
+            {t('heading')}{' '}
+            <em style={{ fontStyle: 'italic', color: B.amber }}>{t('headingEm')}</em>
           </h2>
 
           <p
@@ -101,9 +125,7 @@ export default function PageCTA() {
               margin: '0 0 28px',
             }}
           >
-            A no-obligation consultation. We'll give you an honest assessment —
-            including telling you if none of our programs are the right fit for
-            your situation.
+            {t('body')}
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
@@ -124,7 +146,7 @@ export default function PageCTA() {
               onMouseEnter={(e) => (e.currentTarget.style.background = B.amberDeep)}
               onMouseLeave={(e) => (e.currentTarget.style.background = B.amber)}
             >
-              Book Free Consultation
+              {t('ctaPrimary')}
             </Link>
 
             <a
@@ -149,13 +171,13 @@ export default function PageCTA() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121 15l.92 1.92z" />
               </svg>
-              03 9961 7301
+              {t('ctaPhone')}
             </a>
           </div>
 
           {/* Trust micro-labels */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 20px', marginTop: 20 }}>
-            {['Free — no obligation', 'Honest verdict, not a sales pitch', 'Legal partner on every case'].map((label) => (
+            {trustLabels.map((label) => (
               <span key={label} style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', display: 'flex', alignItems: 'center', gap: 5 }}>
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke={B.amber} strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
                   <path d="M20 6L9 17l-5-5" />
@@ -189,7 +211,7 @@ export default function PageCTA() {
                 marginBottom: 12,
               }}
             >
-              Chat in Mandarin 普通话咨询
+              {t('wechatSectionLabel')}
             </p>
             <div
               style={{
@@ -204,17 +226,17 @@ export default function PageCTA() {
             >
               <Image
                 src="/wechat-official-account-qr.jpg"
-                alt="Scan to contact us on WeChat"
+                alt={t('wechatQrAlt')}
                 width={60}
                 height={60}
                 style={{ borderRadius: 6, flexShrink: 0 }}
               />
               <div>
                 <p style={{ fontSize: 13, fontWeight: 700, color: '#fff', margin: '0 0 3px' }}>
-                  WeChat 微信
+                  {t('wechatTitle')}
                 </p>
                 <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', lineHeight: 1.5, margin: 0 }}>
-                  Scan the QR to follow our official account or message us directly.
+                  {t('wechatDesc')}
                 </p>
               </div>
             </div>
@@ -232,26 +254,25 @@ export default function PageCTA() {
                 marginBottom: 12,
               }}
             >
-              Visit Us
+              {t('visitUsLabel')}
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <div>
-                <p style={{ fontSize: 11, fontWeight: 600, color: B.amber, margin: '0 0 4px' }}>Melbourne HQ</p>
+                <p style={{ fontSize: 11, fontWeight: 600, color: B.amber, margin: '0 0 4px' }}>{t('melbourneHQLabel')}</p>
                 <a
                   href="https://maps.google.com/?q=Level+9+Tower+3+18-38+Siddeley+Street+Docklands+VIC+3008"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, textDecoration: 'none', display: 'block' }}
+                  style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, textDecoration: 'none', display: 'block', whiteSpace: 'pre-line' }}
                 >
-                  Level 9, Tower 3 · 18–38 Siddeley Street<br />
-                  Docklands VIC 3008 · 5 min from Southern Cross
+                  {t('melbourneHQAddress')}
                 </a>
               </div>
               <div>
-                <p style={{ fontSize: 11, fontWeight: 600, color: B.amber, margin: '0 0 4px' }}>Chengdu HQ</p>
-                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, margin: 0 }}>
-                  成都市成华区杉板桥路1号<br />多弗国际中心写字楼
+                <p style={{ fontSize: 11, fontWeight: 600, color: B.amber, margin: '0 0 4px' }}>{t('chengduHQLabel')}</p>
+                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, margin: 0, whiteSpace: 'pre-line' }}>
+                  {t('chengduHQAddress')}
                 </p>
               </div>
             </div>
@@ -275,8 +296,51 @@ export default function PageCTA() {
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
             </svg>
-            info@red-bridge.com.au · Response within 24 hours
+            {t('emailContact')}
           </a>
+
+          {/* Other socials */}
+          <div>
+            <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 10 }}>
+              {t('followUsLabel')}
+            </p>
+            <div style={{ display: 'flex', gap: 8 }}>
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: 8,
+                    background: 'rgba(255,255,255,0.07)',
+                    border: '1px solid rgba(255,255,255,0.12)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'rgba(255,255,255,0.5)',
+                    textDecoration: 'none',
+                    transition: 'background 0.15s ease, color 0.15s ease, border-color 0.15s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(239,182,79,0.15)';
+                    e.currentTarget.style.borderColor = 'rgba(239,182,79,0.4)';
+                    e.currentTarget.style.color = B.amber;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.07)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)';
+                    e.currentTarget.style.color = 'rgba(255,255,255,0.5)';
+                  }}
+                >
+                  {SOCIAL_ICONS[s.label]}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

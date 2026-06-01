@@ -1,0 +1,168 @@
+{
+  "_todo": "zh translations pending",
+  "v2": {
+    "about": {
+      "legalPartner": {
+        "eyebrow": "Legal Partner",
+        "heading": "Migration Law,",
+        "headingEm": "on the Same Floor",
+        "subheading": "Every piece of migration-related advice at RedBridge is reviewed by or delivered through Insight Idea, a licensed Australian migration law firm.",
+        "maraTag": "MARA-registered migration agent",
+        "firmName": "Insight Idea",
+        "firmDesc": "Licensed migration law firm and registered legal practice\nCo-located with RedBridge at Docklands VIC 3008",
+        "servicesLabel": "What Insight Idea Handles",
+        "coLocationNote": "Co-location advantage: RedBridge and Insight Idea share Level 9, Tower 3 at 18–38 Siddeley Street. Questions between your placement consultant and your migration agent are resolved in minutes, not emails.",
+        "visitWebsite": "Visit Insight Idea's website",
+        "groupNote": "RedBridge Consulting, Insight Idea Law Firm, and Good Mood Studio are all operating entities within the Siddeley Group (ABN: 97 693 501 147), operating from Level 9, Tower 3, 18–38 Siddeley Street, Docklands VIC 3008. Placement recruitment under the Career Launch program is managed through Siddeley Talent Link.",
+        "siddeleylinkLabel": "Siddeley Group",
+        "credentials": [
+          {
+            "label": "MARN",
+            "value": "1467870",
+            "note": "Migration Agents Registration Number",
+            "linkLabel": "Verify on MARA →"
+          },
+          {
+            "label": "ABN",
+            "value": "97 693 501 147",
+            "note": "Australian Business Number",
+            "linkLabel": "Verify on ABR →"
+          },
+          {
+            "label": "Address",
+            "value": "Level 9, Tower 3",
+            "note": "18–38 Siddeley Street, Docklands VIC 3008",
+            "linkLabel": "View on Maps →"
+          }
+        ],
+        "services": [
+          "Migration advice under MARA registration (MARN: 1467870)",
+          "482 TSS Skills in Demand nomination and visa lodgement",
+          "186 ENS nomination and permanent residency lodgement",
+          "Standard Business Sponsorship (SBS) applications",
+          "Labour Market Testing compliance and advertising records",
+          "Ongoing sponsor compliance monitoring and DOHA notifications"
+        ]
+      },
+      "story": {
+        "eyebrow": "Our Story",
+        "heading": "Built for the gap",
+        "headingEm": "big agencies don't fill",
+        "para1": "RedBridge was founded by people who had watched skilled professionals from China and Southeast Asia spend years navigating an employer sponsorship system that is opaque at best, and predatory at worst.",
+        "para2": "We're not a large agency with a case management department. We're a small, deliberate team, and that is a feature, not a limitation. Every client is assigned a named consultant who sees their case from the first free call to the 186 PR grant. There are no handoffs, no \"your case manager is away\" delays, no re-explaining your situation to someone new.",
+        "para3": "Our Docklands office shares a floor with Insight Idea, our licensed migration law partner (MARN: 1467870). Not in the same building, but on the same floor. That proximity means your legal questions are answered immediately, not via email chain to a firm you've never met.",
+        "insightIdeaLinkLabel": "Insight Idea",
+        "honestNoteLabel": "Honest note: ",
+        "honestNote": "We don't take every client. At your free consultation, we will tell you honestly whether our programs match your current situation. If they don't, we'll tell you what does, even if that means recommending you wait six months or speak to a different firm. That assessment costs nothing. Acting on bad advice costs a great deal more.",
+        "statsLabel": "By the Numbers",
+        "companyNote": "RedBridge Consulting Pty Ltd is a registered Australian company (ABN: 88 678 186 091). Incorporated in Victoria and operating from Docklands VIC 3008, co-located with Insight Idea law firm and Siddeley Group.",
+        "stats": [
+          {
+            "value": 200,
+            "suffix": "+",
+            "label": "Successful placements",
+            "subLabel": "Clients who moved from assessment to visa grant"
+          },
+          {
+            "value": 300,
+            "suffix": "+",
+            "label": "Skills assessments passed",
+            "subLabel": "First-attempt pass rate for ACS, AMI, and CAANZ clients"
+          },
+          {
+            "value": 3,
+            "suffix": "",
+            "label": "Consultants",
+            "subLabel": "You'll speak to the same person from first call to visa grant"
+          },
+          {
+            "value": null,
+            "display": "0",
+            "suffix": "",
+            "label": "Outsourced handoffs",
+            "subLabel": "Legal partner Insight Idea is co-located at the same Docklands address"
+          }
+        ]
+      },
+      "team": {
+        "eyebrow": "Meet the Team",
+        "heading": "The Consultants Who",
+        "headingEm": "Actually Work Your Case",
+        "subheading": "You will speak to the same person throughout your pathway, not a rotated account manager or a support ticket queue.",
+        "teamPhotoCaption": "Team photo, Docklands Office",
+        "teamPhotoHint": "Replace with: /team/team-docklands.jpg",
+        "officeLabel": "Level 9, Tower 3 · Docklands VIC 3008",
+        "officeSub": "Co-located with Insight Idea Migration Law",
+        "bookCta": "Book a consultation",
+        "howItWorksLabel": "How it works: ",
+        "howItWorks": "At your free consultation, you'll be matched to the consultant best suited to your occupation and visa pathway. That person manages your case end-to-end. All legal work is handled by Insight Idea, on the same floor.",
+        "members": [
+          {
+            "name": "Ryan B.",
+            "role": "Founder & Lead Consultant",
+            "languages": "English · Mandarin",
+            "description": "Employer network development, client eligibility strategy, and pathway design. Ryan manages all 482 employer relationships directly.",
+            "specialties": [
+              "482 TSS",
+              "186 ENS",
+              "Employer partnerships"
+            ]
+          },
+          {
+            "name": "Cindy C.",
+            "role": "Migration Consultant",
+            "languages": "Mandarin · Cantonese · English",
+            "description": "Skilled assessment applications (ACS, AMI, CAANZ) and client documentation. Cindy leads all Career Launch client onboarding.",
+            "specialties": [
+              "ACS",
+              "AMI",
+              "Career Launch"
+            ]
+          },
+          {
+            "name": "Brook A.",
+            "role": "Client Success & Operations",
+            "languages": "English",
+            "description": "Milestone tracking, employer–candidate communication, and ongoing compliance calendar management throughout each placement.",
+            "specialties": [
+              "Client management",
+              "Compliance tracking"
+            ]
+          }
+        ]
+      },
+      "values": {
+        "eyebrow": "How We Work",
+        "heading": "Our Principles,",
+        "headingEm": "In Practice",
+        "subheading": "The things we commit to because they matter, not because they make good marketing copy.",
+        "values": [
+          {
+            "label": "Honesty first",
+            "body": "We tell clients what they don't want to hear when the alternative is wasting their time and money. A free consultation that ends with \"you don't qualify yet\" is still a useful consultation."
+          },
+          {
+            "label": "Verification, not promises",
+            "body": "Every employer we introduce is confirmed as an active sponsor before any client meets them. We don't share \"potential\" leads. Every introduction is a verified opportunity."
+          },
+          {
+            "label": "Named responsibility",
+            "body": "Every client is assigned one named consultant. There are no handoffs, no \"your case manager has changed\", no restarting from scratch when someone leaves the team."
+          },
+          {
+            "label": "Legal compliance, always",
+            "body": "Migration advice without MARA registration is illegal in Australia. Every piece of migration-related advice at RedBridge is reviewed or delivered by Insight Idea, licensed agents on the same floor."
+          },
+          {
+            "label": "Milestone-based fees",
+            "body": "We don't take large upfront payments. Fees are structured around delivery: employer match, visa lodgement, visa grant. You're paying for outcomes, not activity."
+          },
+          {
+            "label": "Genuine documentation",
+            "body": "Every work record, project portfolio, and skills assessment submission we help prepare is real, traceable, and yours. We do not fabricate, inflate, or backdate employment histories."
+          }
+        ]
+      }
+    }
+  }
+}
