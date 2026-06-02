@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const B = {
   red: '#b11217', redLight: '#fdf0f0', navy: '#172d5d', bg: '#f4f4f5',
@@ -28,7 +28,7 @@ function useReveal(delay = 0) {
   return ref;
 }
 
-function QuoteCard({ q, isFeatured, delay }: { q: QuoteData; isFeatured: boolean; delay: number }) {
+function QuoteCard({ q, isFeatured, delay, locale }: { q: QuoteData; isFeatured: boolean; delay: number; locale: string }) {
   const ref = useReveal(delay);
   return (
     <div ref={ref} style={{ background: isFeatured ? B.navy : B.cream, border: `1px solid ${isFeatured ? 'transparent' : B.divider}`, borderRadius: 18, padding: '32px 32px 28px', display: 'flex', flexDirection: 'column', gap: 20, position: 'relative', overflow: 'hidden' }}>
@@ -36,7 +36,7 @@ function QuoteCard({ q, isFeatured, delay }: { q: QuoteData; isFeatured: boolean
       <span style={{ display: 'inline-flex', alignSelf: 'flex-start', fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: isFeatured ? B.amber : B.red, background: isFeatured ? 'rgba(239,182,79,0.15)' : B.redLight, border: `1px solid ${isFeatured ? 'rgba(239,182,79,0.3)' : '#f5d5d6'}`, borderRadius: 5, padding: '3px 9px' }}>
         {q.visaType}
       </span>
-      <blockquote style={{ fontSize: isFeatured ? 18 : 15, fontStyle: 'italic', color: isFeatured ? 'rgba(255,255,255,0.9)' : '#27272a', lineHeight: 1.7, margin: 0, position: 'relative', zIndex: 1, letterSpacing: '-0.01em' }}>
+      <blockquote style={{ fontSize: isFeatured ? 18 : 15, fontStyle: locale === 'zh' ? 'normal' : 'italic', color: isFeatured ? 'rgba(255,255,255,0.9)' : '#27272a', lineHeight: 1.7, margin: 0, position: 'relative', zIndex: 1, letterSpacing: '-0.01em' }}>
         &ldquo;{q.quote}&rdquo;
       </blockquote>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 'auto' }}>
@@ -52,6 +52,7 @@ function QuoteCard({ q, isFeatured, delay }: { q: QuoteData; isFeatured: boolean
 
 export default function SuccessQuote() {
   const t = useTranslations('v2.success.quote');
+  const locale = useLocale();
   const primaryQuote = t.raw('primaryQuote') as QuoteData;
   const secondaryQuote = t.raw('secondaryQuote') as QuoteData;
   const headerRef = useReveal(0);
@@ -64,8 +65,8 @@ export default function SuccessQuote() {
           <p style={{ fontSize: 15, color: B.textMuted, margin: '10px auto 0', lineHeight: 1.6, maxWidth: 440 }}>{t('subheading')}</p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 18 }}>
-          <QuoteCard q={primaryQuote} isFeatured delay={0.05} />
-          <QuoteCard q={secondaryQuote} isFeatured={false} delay={0.15} />
+          <QuoteCard q={primaryQuote} isFeatured delay={0.05} locale={locale} />
+          <QuoteCard q={secondaryQuote} isFeatured={false} delay={0.15} locale={locale} />
         </div>
         <p style={{ textAlign: 'center', fontSize: 11.5, color: B.textMuted, marginTop: 20, lineHeight: 1.5 }}>
           {t('footerNote')}

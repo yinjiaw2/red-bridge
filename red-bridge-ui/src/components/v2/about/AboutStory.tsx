@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const B = {
   red: '#b11217', redLight: '#fdf0f0', navy: '#172d5d', bg: '#f4f4f5',
@@ -62,6 +62,7 @@ function useReveal() {
 
 export default function AboutStory() {
   const t = useTranslations('v2.about.story');
+  const locale = useLocale();
   const STATS = t.raw('stats') as StatItem[];
 
   const statsRef = useRef<HTMLDivElement>(null);
@@ -84,7 +85,7 @@ export default function AboutStory() {
         <div ref={leftRef}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 16 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 36px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: '0 0 20px', lineHeight: 1.15 }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             <p style={{ fontSize: 15, color: B.textBody, lineHeight: 1.7, margin: 0 }}>

@@ -1,163 +1,123 @@
 {
-  "_todo": "zh translations pending",
+  "_todo": "review zh translations with native speaker",
   "v2": {
     "employers": {
       "hero": {
-        "eyebrow": "Employer Sponsorship Network · 482 / 186",
-        "heading": "The talent you need",
-        "headingEm": "is right here",
-        "subheading": "Hundreds of skilled visa holders in ICT, accounting, and marketing are actively seeking sponsorship. RedBridge handles candidate screening. Insight Idea manages the full 482 legal process.",
-        "ctaEnquiry": "Submit an Employer Enquiry",
-        "ctaPhone": "03 9961 7301 · English & Mandarin",
+        "eyebrow": "雇主担保网络 · 482 / 186",
+        "heading": "您所需要的人才",
+        "headingEm": "就在这里",
+        "subheading": "数百名来自ICT、会计和市场营销领域的技术签证持有人正在积极寻求担保。RedBridge负责候选人筛选，Insight Idea处理完整的482法律流程。",
+        "ctaEnquiry": "提交雇主咨询",
+        "ctaPhone": "03 9961 7301 · 中英文均可",
         "stats": [
-          {
-            "num": "150+",
-            "label": "Pre-screened candidates"
-          },
-          {
-            "num": "10+",
-            "label": "Verified sponsoring employers"
-          },
-          {
-            "num": "4",
-            "label": "Key industry sectors"
-          },
-          {
-            "num": "1",
-            "label": "Legal firm, same office"
-          }
+          { "num": "150+", "label": "预筛选候选人" },
+          { "num": "10+",  "label": "经核实担保雇主" },
+          { "num": "4",    "label": "核心行业领域" },
+          { "num": "1",    "label": "同一办公室法律团队" }
         ]
       },
       "hiringPainPoints": {
-        "eyebrow": "Hiring Pain Points",
-        "heading": "Why Australian Businesses",
-        "headingEm": "Choose Sponsorship",
+        "eyebrow": "招聘痛点",
+        "heading": "为什么澳大利亚企业",
+        "headingEm": "选择担保招聘",
         "painPoints": [
           {
-            "title": "No qualified local candidates",
-            "detail": "ICT, engineering, and accounting roles consistently attract few or no suitable local applicants. Genuine experience with specific certifications is structurally scarce domestically."
+            "title": "缺乏合格的本地候选人",
+            "detail": "ICT、工程和会计职位始终难以吸引足够数量的合适本地申请者。拥有特定认证的真实工作经验在国内结构性短缺。"
           },
           {
-            "title": "Extended vacancies cost real money",
-            "detail": "Every month a critical role stays open means lost productivity, increased load on existing staff, and ground lost to competitors who have already filled theirs."
+            "title": "长期空缺意味着真实损失",
+            "detail": "每多一个月关键职位空缺，就意味着生产力损失、现有员工负担加重，以及在已招募到位的竞争对手面前落后。"
           },
           {
-            "title": "Compliance complexity discourages action",
-            "detail": "SBS applications, Labour Market Testing, nomination obligations, and ongoing sponsor duties feel overwhelming. With the right guidance, they don't have to be."
+            "title": "合规复杂性让人望而却步",
+            "detail": "SBS申请、劳动力市场测试、提名义务及持续的担保方职责让人感到不堪重负。有了正确指导，这些其实并不复杂。"
           },
           {
-            "title": "Hard to find the right sponsored candidate",
-            "detail": "Sponsorship only works when skills, visa eligibility, and long-term commitment all align. Finding that match without a trusted network is a genuine challenge."
+            "title": "难以找到合适的担保候选人",
+            "detail": "担保招聘只有在技能、签证资格和长期承诺三者高度契合时才能奏效。没有可信赖的网络，找到这种匹配确实是一大挑战。"
           }
         ]
       },
       "threePhases": {
-        "eyebrow": "Process Breakdown",
-        "heading": "Three Phases: From Gap to",
-        "headingEm": "Visa Grant",
-        "subheading": "Phases can run in parallel. You don't wait for one to close before the next begins.",
-        "phasePrefix": "PHASE ",
-        "dohaLink": "Learn more about the 482 Skills in Demand Visa on the DOHA website →",
+        "eyebrow": "流程分解",
+        "heading": "三个阶段：从空缺到",
+        "headingEm": "签证获批",
+        "subheading": "各阶段可并行推进，无需等待前一阶段完成后再开始下一阶段。",
+        "phasePrefix": "第",
+        "dohaLink": "在DOHA官网了解更多482紧缺技能签证信息 →",
         "phases": [
           {
             "num": "01",
-            "title": "Eligibility & Role Assessment",
+            "title": "资格与职位评估",
             "who": "RedBridge + Insight Idea",
             "items": [
-              "Confirm occupation is on CSOL",
-              "Labour Market Testing scope review",
-              "Candidate pre-screening against role requirements"
+              "确认职业在CSOL上",
+              "劳动力市场测试范围审查",
+              "候选人根据职位要求进行预筛选"
             ]
           },
           {
             "num": "02",
-            "title": "Sponsorship & Nomination",
-            "who": "Insight Idea Legal",
+            "title": "担保资格与提名",
+            "who": "Insight Idea法律团队",
             "items": [
-              "Standard Business Sponsorship (SBS) application",
-              "Labour Market Testing advertising compliance",
-              "482 nomination lodgement with DOHA"
+              "标准商业担保（SBS）申请",
+              "劳动力市场测试广告合规",
+              "向DOHA提交482提名"
             ]
           },
           {
             "num": "03",
-            "title": "Visa Grant & Ongoing Compliance",
+            "title": "签证获批与持续合规",
             "who": "RedBridge + Insight Idea",
             "items": [
-              "Visa holder onboarding and milestone tracking",
-              "Quarterly salary and compliance reviews",
-              "186 ENS transition planning at 2-year mark"
+              "签证持有人入职及里程碑跟踪",
+              "季度薪资及合规审查",
+              "满2年时的186 ENS过渡规划"
             ]
           }
         ]
       },
       "feesTable": {
-        "eyebrow": "Fee Breakdown",
-        "heading": "Sponsorship Actual Costs",
-        "subheading": "Government fees are mandatory and non-negotiable. RedBridge and Insight Idea service fees are provided as a fixed quote after your role assessment.",
-        "byLawLabel": "By law",
-        "byLawNote": " all sponsorship costs must be borne by the employer. They cannot be charged to or recovered from visa holders. Insight Idea and RedBridge service fees are quoted separately and confirmed in writing before any work begins.",
+        "eyebrow": "费用明细",
+        "heading": "担保实际费用",
+        "subheading": "政府费用是强制性且不可变更的。RedBridge和Insight Idea的服务费在职位评估后以固定报价提供。",
+        "byLawLabel": "根据法律",
+        "byLawNote": "，所有担保费用必须由雇主承担，不得向签证申请人收取或转嫁。Insight Idea和RedBridge的服务费单独报价，并在任何工作开始前以书面形式确认。",
         "fees": [
-          {
-            "label": "Standard Business Sponsorship (SBS)",
-            "note": "One-off. Not required if already an approved sponsor.",
-            "amount": "AUD $420"
-          },
-          {
-            "label": "Nomination Fee: 482 (Skills in Demand)",
-            "note": "Per nomination. Non-refundable.",
-            "amount": "AUD $330"
-          },
-          {
-            "label": "Nomination Fee: 186 (ENS)",
-            "note": "Per nomination. Non-refundable.",
-            "amount": "AUD $540"
-          },
-          {
-            "label": "SAF Levy: Small Business (<$10M turnover)",
-            "note": "Per visa year. Paid at nomination lodgement.",
-            "amount": "AUD $1,200/yr"
-          },
-          {
-            "label": "SAF Levy: Large Business (≥$10M turnover)",
-            "note": "Per visa year. Paid at nomination lodgement.",
-            "amount": "AUD $1,800/yr"
-          },
-          {
-            "label": "Minimum Salary: Core Skills Stream",
-            "note": "TSMIT as at current year. Add AMM where applicable.",
-            "amount": "$76,515+ super"
-          },
-          {
-            "label": "Minimum Salary: Specialist Skills Stream",
-            "note": "For CSOL Specialist Tier. Subject to applicable determination.",
-            "amount": "$135,000+ super"
-          }
+          { "label": "标准商业担保（SBS）", "note": "一次性费用。已是批准担保方则无需支付。", "amount": "AUD $420" },
+          { "label": "提名费：482（紧缺技能）", "note": "每次提名收取，不可退款。", "amount": "AUD $330" },
+          { "label": "提名费：186（ENS）", "note": "每次提名收取，不可退款。", "amount": "AUD $540" },
+          { "label": "SAF征税：小型企业（营业额<$10M）", "note": "按签证有效年收取，在提名申请时支付。", "amount": "AUD $1,200/年" },
+          { "label": "SAF征税：大型企业（营业额≥$10M）", "note": "按签证有效年收取，在提名申请时支付。", "amount": "AUD $1,800/年" },
+          { "label": "最低薪资：核心技能流", "note": "以当年TSMIT为准，如适用需加上AMM。", "amount": "$76,515+养老金" },
+          { "label": "最低薪资：专业技能流", "note": "适用于CSOL专业层级，以适用裁定为准。", "amount": "$135,000+养老金" }
         ]
       },
       "divisionRoles": {
-        "eyebrow": "Our Partnership",
-        "heading": "RedBridge + Insight Idea:",
-        "headingEm": "Clear Division of Roles",
-        "subheading": "RedBridge finds and prepares candidates. Insight Idea handles all migration law and compliance. Both teams are co-located at the same Docklands address.",
-        "redbridgeLabel": "Talent & Employer",
+        "eyebrow": "我们的合作",
+        "heading": "RedBridge + Insight Idea：",
+        "headingEm": "明确的职责分工",
+        "subheading": "RedBridge寻找并准备候选人。Insight Idea处理所有移民法律及合规事务。两个团队均位于Docklands同一地址。",
+        "redbridgeLabel": "人才与雇主",
         "redbridgeName": "RedBridge Consulting",
-        "insightLabel": "Law & Migration · MARN: 1467870",
+        "insightLabel": "法律与移民 · MARN: 1467870",
         "insightName": "Insight Idea",
         "redbridgeItems": [
-          "Match candidates from our pool to role requirements and visa-eligible occupation levels",
-          "Pre-screen skills assessment eligibility (ACS, AMI, Engineers Australia) before referral",
-          "Coordinate candidate documentation and career preparation",
-          "Manage employer–candidate communication and milestone support end-to-end",
-          "CRM milestone tracking, flagging the 2-year milestone for 186 ENS transition eligibility"
+          "将我们候选人库中的候选人与职位要求及签证合格职业级别匹配",
+          "在推荐前预筛选技能评估资格（ACS、AMI、Engineers Australia）",
+          "协调候选人材料准备和职业规划",
+          "全程管理雇主与候选人的沟通及里程碑支持",
+          "CRM里程碑跟踪，标记2年里程碑以触发186 ENS过渡资格"
         ],
         "insightItems": [
-          "Standard Business Sponsorship (SBS) application and DOHA approval",
-          "Labour Market Testing: advertising compliance and documentation records",
-          "Nomination preparation and lodgement (482 Core Skills / Specialist stream)",
-          "Visa application support and internal document management",
-          "Ongoing compliance monitoring and DOHA notifications",
-          "2-year milestone 186 ENS transition lodgement and pathway planning"
+          "标准商业担保（SBS）申请及DOHA审批",
+          "劳动力市场测试：广告合规及文件记录",
+          "提名准备及申请（482核心技能/专业流）",
+          "签证申请支持及内部文件管理",
+          "持续的合规监控及DOHA通知",
+          "满2年里程碑时的186 ENS过渡申请及路径规划"
         ]
       }
     }

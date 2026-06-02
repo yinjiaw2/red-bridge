@@ -158,7 +158,7 @@ export default function EmployerPathwayHero() {
           }}
         >
           {t('heading')}{' '}
-          <em style={{ fontStyle: 'italic', color: B.amber }}>{t('headingEm')}</em>
+          <em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.amber }}>{t('headingEm')}</em>
         </h1>
 
         <p

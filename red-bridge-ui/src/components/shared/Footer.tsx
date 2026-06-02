@@ -60,10 +60,10 @@ export const Footer = () => {
       <footer className="bg-[#0f1c38] text-white/70">
         {/* ── Main content ── */}
         <div className="max-w-7xl mx-auto px-5 md:px-8 pt-14 pb-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_auto] gap-10 lg:gap-16 xl:gap-24">
+          <div className="grid grid-cols-1 min-[500px]:grid-cols-2 lg:grid-cols-[1fr_auto_auto] gap-10 lg:gap-16 xl:gap-24">
 
             {/* Brand column */}
-            <div className="max-w-sm relative overflow-hidden">
+            <div className="max-w-sm relative overflow-hidden min-[500px]:col-span-2 lg:col-span-1">
               {/* Decorative watermark — red 紅 icon, semi-transparent, behind content */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

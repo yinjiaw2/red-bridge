@@ -16,114 +16,103 @@ const B = {
   divider: '#e4e4e7',
 };
 
-const CIRC = 2 * Math.PI * 90; // ≈ 565.5
+const TILT = 38 * Math.PI / 180; // orbital plane tilt angle
+const ORBIT_R = 92;
+const SPEED_DEG_PER_SEC = 28; // one full orbit ≈ 13 s
 
-const CHIP_POSITIONS = [
-  {
-    ringX: 150, ringY: 60,       // angle -90° (top)
-    wrapStyle: { top: 2, left: 0, right: 0 } as React.CSSProperties,
-    textAlign: 'center' as const,
-    fadeY: -8,
-  },
-  {
-    ringX: 228, ringY: 195,      // angle 30° (bottom-right)
-    wrapStyle: { bottom: 2, right: 8 } as React.CSSProperties,
-    textAlign: 'right' as const,
-    fadeY: 8,
-  },
-  {
-    ringX: 72, ringY: 195,       // angle 150° (bottom-left)
-    wrapStyle: { bottom: 2, left: 8 } as React.CSSProperties,
-    textAlign: 'left' as const,
-    fadeY: 8,
-  },
-];
+function OrbitStats({ active, chips }: { active: boolean; chips: { display: string; label: string }[] }) {
+  const angleRef = useRef(0);
+  const lastTsRef = useRef<number | null>(null);
+  const rafRef = useRef<number | null>(null);
+  const [tick, setTick] = useState(0);
 
-function RingStats({ active, chips }: { active: boolean; chips: { display: string; label: string; ringX: number; ringY: number; wrapStyle: React.CSSProperties; textAlign: 'center' | 'left' | 'right'; fadeY: number }[] }) {
+  useEffect(() => {
+    if (!active) return;
+    const animate = (ts: number) => {
+      if (lastTsRef.current !== null) {
+        angleRef.current = (angleRef.current + (ts - lastTsRef.current) * SPEED_DEG_PER_SEC / 1000) % 360;
+      }
+      lastTsRef.current = ts;
+      setTick(t => t + 1);
+      rafRef.current = requestAnimationFrame(animate);
+    };
+    rafRef.current = requestAnimationFrame(animate);
+    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+  }, [active]);
+
   const CX = 150, CY = 150;
 
+  const positioned = chips.map((chip, i) => {
+    const a = (angleRef.current + i * 120) * Math.PI / 180;
+    const x = CX + ORBIT_R * Math.cos(a);
+    const y = CY + ORBIT_R * Math.sin(a) * Math.sin(TILT);
+    const depth = ORBIT_R * Math.sin(a) * Math.cos(TILT); // –R … +R, +R = front
+    const dn = (depth + ORBIT_R) / (2 * ORBIT_R); // 0–1
+    return { chip, x, y, dn, depth };
+  }).sort((a, b) => a.depth - b.depth); // paint back → front
+
   return (
-    <div style={{ position: 'relative', width: 300, height: 300, flexShrink: 0 }}>
-      <svg width="300" height="300" viewBox="0 0 300 300" aria-hidden="true">
-        {/* Decorative background rings */}
-        <circle cx={CX} cy={CY} r={40}  fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
-        <circle cx={CX} cy={CY} r={65}  fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
-        <circle cx={CX} cy={CY} r={115} fill="none" stroke="rgba(255,255,255,0.04)" strokeWidth="1" />
+    <div style={{ position: 'relative', width: 300, height: 300, flexShrink: 0, overflow: 'visible' }}>
+      {/* Implied centre — tiny amber glow, no visible ball */}
+      <div style={{
+        position: 'absolute', top: '50%', left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 10, height: 10, borderRadius: '50%',
+        background: B.amber,
+        opacity: active ? 0.55 : 0,
+        boxShadow: '0 0 28px 14px rgba(239,182,79,0.13)',
+        transition: 'opacity 1.2s ease',
+        pointerEvents: 'none',
+      }} />
 
-        {/* Ghost track */}
-        <circle cx={CX} cy={CY} r={90} fill="none" stroke="rgba(255,255,255,0.09)" strokeWidth="1.5" />
+      {positioned.map(({ chip, x, y, dn }, idx) => {
+        const scale = 0.68 + 0.32 * dn;
+        const opacity = active ? 0.42 + 0.58 * dn : 0;
+        const borderAlpha = (0.15 + 0.35 * dn).toFixed(2);
 
-        {/* Animated amber ring */}
-        <circle
-          cx={CX} cy={CY} r={90}
-          fill="none"
-          stroke={B.amber}
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeDasharray={CIRC}
-          strokeDashoffset={active ? 0 : CIRC}
-          transform={`rotate(-90, ${CX}, ${CY})`}
-          style={{ transition: 'stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1)' }}
-        />
-
-        {/* Amber dots at stat positions on ring */}
-        {chips.map((c, i) => (
-          <circle
-            key={i}
-            cx={c.ringX} cy={c.ringY} r="3"
-            fill={B.amber}
+        return (
+          <div
+            key={idx}
             style={{
-              opacity: active ? 1 : 0,
-              transition: `opacity 0.4s ease ${1 + i * 0.18}s`,
+              position: 'absolute',
+              left: x,
+              top: y,
+              transform: `translate(-50%, -50%) scale(${scale.toFixed(3)})`,
+              opacity,
+              transition: 'opacity 0.6s ease',
+              background: 'rgba(15,28,56,0.72)',
+              backdropFilter: 'blur(10px)',
+              border: `1px solid rgba(239,182,79,${borderAlpha})`,
+              borderRadius: 'clamp(6px, 0.8vw, 10px)',
+              padding: 'clamp(5px, 0.6vw, 8px) clamp(8px, 1vw, 13px)',
+              textAlign: 'center',
+              whiteSpace: 'nowrap',
+              pointerEvents: 'none',
+              boxShadow: dn > 0.55 ? '0 4px 18px rgba(0,0,0,0.35)' : 'none',
             }}
-          />
-        ))}
-
-        {/* Short tick lines outward from each dot */}
-        {chips.map((c, i) => {
-          const dx = (c.ringX - CX) / 90;
-          const dy = (c.ringY - CY) / 90;
-          return (
-            <line
-              key={i}
-              x1={c.ringX} y1={c.ringY}
-              x2={c.ringX + dx * 14} y2={c.ringY + dy * 14}
-              stroke="rgba(239,182,79,0.45)"
-              strokeWidth="1"
-              style={{
-                opacity: active ? 1 : 0,
-                transition: `opacity 0.4s ease ${1.1 + i * 0.18}s`,
-              }}
-            />
-          );
-        })}
-
-        {/* Centre dot */}
-        <circle cx={CX} cy={CY} r="4" fill="rgba(239,182,79,0.2)" />
-        <circle cx={CX} cy={CY} r="2" fill={B.amber} />
-      </svg>
-
-      {/* Stat chips — absolutely positioned within the 300×300 container */}
-      {chips.map((c, i) => (
-        <div
-          key={i}
-          style={{
-            position: 'absolute',
-            ...c.wrapStyle,
-            textAlign: c.textAlign,
-            opacity: active ? 1 : 0,
-            transform: `translateY(${active ? 0 : c.fadeY}px)`,
-            transition: `opacity 0.5s ease ${0.7 + i * 0.18}s, transform 0.5s ease ${0.7 + i * 0.18}s`,
-          }}
-        >
-          <p style={{ fontSize: 26, fontWeight: 800, color: B.amber, margin: 0, letterSpacing: '-0.03em', lineHeight: 1 }}>
-            {c.display}
-          </p>
-          <p style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.5)', margin: '4px 0 0', lineHeight: 1.45, whiteSpace: 'pre-line' }}>
-            {c.label}
-          </p>
-        </div>
-      ))}
+          >
+            <p style={{
+              fontSize: chip.display.length > 4 ? 'clamp(11px, 1.4vw, 16px)' : 'clamp(15px, 2vw, 22px)',
+              fontWeight: 800,
+              color: B.amber,
+              margin: 0,
+              letterSpacing: '-0.02em',
+              lineHeight: 1,
+            }}>
+              {chip.display}
+            </p>
+            <p style={{
+              fontSize: 'clamp(8px, 0.85vw, 10px)',
+              color: 'rgba(255,255,255,0.55)',
+              margin: '4px 0 0',
+              lineHeight: 1.45,
+              whiteSpace: 'pre-line',
+            }}>
+              {chip.label}
+            </p>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -131,21 +120,6 @@ function RingStats({ active, chips }: { active: boolean; chips: { display: strin
 export default function HomeHero() {
   const locale = useLocale();
   const t = useTranslations('v2.home.hero');
-  const ringRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState(false);
-
-  const chipData = (t.raw('chips') as { display: string; label: string }[]);
-  const CHIPS = chipData.map((c, i) => ({ ...c, ...CHIP_POSITIONS[i] }));
-
-  useEffect(() => {
-    const el = ringRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) { setActive(true); obs.disconnect(); }
-    }, { threshold: 0.15 });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
 
   return (
     <section
@@ -246,7 +220,7 @@ export default function HomeHero() {
             <br />
             <span style={{ color: B.amber }}>{t('headingLine2')}</span>
             <br />
-            <span style={{ fontStyle: 'italic', fontWeight: 700 }}>{t('headingLine3')}</span>
+            <span style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', fontWeight: 700 }}>{t('headingLine3')}</span>
           </h1>
 
           {/* Subheading */}
@@ -277,7 +251,7 @@ export default function HomeHero() {
               {t('ctaPrimary')}
             </Link>
             <Link
-              href="/services/employer-pathway"
+              href="/services/employer-pathway-v2"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 6,
                 padding: '14px 24px', background: 'rgba(255,255,255,0.1)', color: '#fff',
@@ -296,10 +270,6 @@ export default function HomeHero() {
           </div>
         </div>
 
-        {/* Right: animated ring (hidden on mobile) */}
-        <div ref={ringRef} className="rb-ring-col">
-          <RingStats active={active} chips={CHIPS} />
-        </div>
       </div>
 
       <style>{`
@@ -315,10 +285,6 @@ export default function HomeHero() {
         .rb-hero-content {
           flex: 1;
           padding: 0 24px;
-        }
-        .rb-ring-col { display: block; }
-        @media (max-width: 740px) {
-          .rb-ring-col { display: none !important; }
         }
       `}</style>
     </section>

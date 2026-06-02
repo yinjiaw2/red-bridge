@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const B = {
   red: '#b11217', redLight: '#fdf0f0', navy: '#172d5d', bg: '#f4f4f5',
@@ -36,6 +36,7 @@ function useReveal() {
 
 export default function PaymentMilestones() {
   const t = useTranslations('v2.services.paymentMilestones');
+  const locale = useLocale();
   const MILESTONES = t.raw('milestones') as { num: number; label: string; note: string; phase: string }[];
   const ref = useReveal();
 
@@ -45,7 +46,7 @@ export default function PaymentMilestones() {
         <div style={{ textAlign: 'center', marginBottom: 52 }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 12 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(24px, 3.2vw, 34px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: '0 0 12px' }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
           <p style={{ fontSize: 15, color: B.textMuted, maxWidth: 480, margin: '0 auto', lineHeight: 1.6 }}>
             {t('subheading')}

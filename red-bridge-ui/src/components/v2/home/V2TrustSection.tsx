@@ -97,7 +97,7 @@ export default function V2TrustSection() {
           }}
         >
           {t('heading')}{' '}
-          <em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+          <em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
         </h2>
 
         <p

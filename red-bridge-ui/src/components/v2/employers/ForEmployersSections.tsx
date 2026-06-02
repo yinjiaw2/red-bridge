@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const B = {
   red: '#b11217', navy: '#172d5d', bg: '#f4f4f5', cream: '#ffffff',
@@ -19,6 +19,7 @@ const PAIN_POINT_ICON_PATHS = [
 
 export function ForEmployersHero() {
   const t = useTranslations('v2.employers.hero');
+  const locale = useLocale();
   const STATS = t.raw('stats') as { num: string; label: string }[];
 
   return (
@@ -32,7 +33,7 @@ export function ForEmployersHero() {
           {t('eyebrow')}
         </span>
         <h1 style={{ fontSize: 'clamp(28px, 4.5vw, 48px)', fontWeight: 800, color: '#fff', lineHeight: 1.12, margin: '0 0 16px', letterSpacing: '-0.025em', maxWidth: 560 }}>
-          {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.amber }}>{t('headingEm')}</em>
+          {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.amber }}>{t('headingEm')}</em>
         </h1>
         <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', lineHeight: 1.65, maxWidth: 540, margin: '0 0 32px' }}>
           {t('subheading')}
@@ -60,6 +61,7 @@ export function ForEmployersHero() {
 
 export function HiringPainPoints() {
   const t = useTranslations('v2.employers.hiringPainPoints');
+  const locale = useLocale();
   const PAIN_POINTS = (t.raw('painPoints') as { title: string; detail: string }[]).map((p, i) => ({
     ...p,
     icon: PAIN_POINT_ICON_PATHS[i],
@@ -71,7 +73,7 @@ export function HiringPainPoints() {
         <div style={{ textAlign: 'center', marginBottom: 44 }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 12 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: 0 }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 18 }}>
@@ -92,6 +94,7 @@ export function HiringPainPoints() {
 
 export function ThreePhases() {
   const t = useTranslations('v2.employers.threePhases');
+  const locale = useLocale();
   const PHASES = t.raw('phases') as { num: string; title: string; who: string; items: string[] }[];
 
   return (
@@ -100,7 +103,7 @@ export function ThreePhases() {
         <div style={{ textAlign: 'center', marginBottom: 44 }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.amber, display: 'block', marginBottom: 12 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 700, color: '#fff', letterSpacing: '-0.02em', margin: '0 0 10px' }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.amber }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.amber }}>{t('headingEm')}</em>
           </h2>
           <p style={{ fontSize: 14.5, color: 'rgba(255,255,255,0.55)', margin: 0 }}>{t('subheading')}</p>
         </div>
@@ -171,6 +174,7 @@ export function FeesTable() {
 
 export function DivisionRoles() {
   const t = useTranslations('v2.employers.divisionRoles');
+  const locale = useLocale();
   const REDBRIDGE_ITEMS = t.raw('redbridgeItems') as string[];
   const INSIGHT_ITEMS = t.raw('insightItems') as string[];
 
@@ -180,7 +184,7 @@ export function DivisionRoles() {
         <div style={{ textAlign: 'center', marginBottom: 44 }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 12 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: '0 0 10px' }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
           <p style={{ fontSize: 14.5, color: B.textMuted, margin: '0 auto', maxWidth: 480 }}>
             {t('subheading')}

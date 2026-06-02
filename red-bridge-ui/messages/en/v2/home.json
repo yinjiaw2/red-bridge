@@ -12,7 +12,7 @@
         "ctaSecondary": "See How We Work",
         "chips": [
           { "display": "Free", "label": "No-obligation\nconsultation" },
-          { "display": "3",    "label": "Visa\npathways" },
+          { "display": "Tailored", "label": "Visa\nPathway" },
           { "display": "MARA","label": "Licensed\npartner" }
         ]
       },
@@ -228,6 +228,9 @@
         "heading": "Expert Insights",
         "subheading": "Real case studies and strategies for securing your visa and your dream job.",
         "close": "Close video",
+        "previous": "Previous",
+        "next": "Next",
+        "goToSlide": "Go to slide {n}",
         "cards": {
           "welcome": {
             "title": "Almost Banned for 3 Years! The Danger of a Fake Birth Certificate",

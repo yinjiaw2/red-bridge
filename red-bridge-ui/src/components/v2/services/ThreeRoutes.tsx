@@ -72,7 +72,7 @@ export default function ThreeRoutes() {
             {t('eyebrow')}
           </span>
           <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 36px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: '0 0 10px' }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
           <p style={{ fontSize: 15, color: B.textMuted, margin: 0 }}>{t('subheading')}</p>
         </div>

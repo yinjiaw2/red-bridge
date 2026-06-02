@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const B = {
   red: '#b11217', redLight: '#fdf0f0', navy: '#172d5d', bg: '#f4f4f5',
@@ -36,6 +36,7 @@ function useReveal() {
 export default function AboutLegalPartner() {
   const ref = useReveal();
   const t = useTranslations('v2.about.legalPartner');
+  const locale = useLocale();
 
   const CREDENTIALS = (t.raw('credentials') as { label: string; value: string; note: string; linkLabel: string }[]).map((c, i) => ({
     ...c,
@@ -49,7 +50,7 @@ export default function AboutLegalPartner() {
         <div style={{ textAlign: 'center', marginBottom: 44 }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 14 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(24px, 3.4vw, 34px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: '0 0 12px' }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
           <p style={{ fontSize: 15, color: B.textMuted, maxWidth: 480, margin: '0 auto', lineHeight: 1.65 }}>
             {t('subheading')}

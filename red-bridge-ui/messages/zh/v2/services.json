@@ -1,371 +1,371 @@
 {
-  "_todo": "zh translations pending",
+  "_todo": "review zh translations with native speaker",
   "v2": {
     "services": {
       "employerPathwayHero": {
-        "eyebrow": "Employer Sponsored Visas",
-        "heading": "Your Skills Deserve",
-        "headingEm": "a Real Sponsor",
-        "subheading": "The 482 visa requires an employer. Most agencies sell you a job list and hope for the best. We give you direct access to a verified employer network where every position is confirmed before it reaches you, and we stay with you to the 186 PR finish line.",
-        "cta": "Book My Free Assessment",
-        "reviewNote": "Information last reviewed",
-        "reviewDate": "March 2026",
-        "reviewSuffix": ". Immigration policy changes regularly.",
-        "dohaLink": "Visit DOHA for the latest →",
+        "eyebrow": "雇主担保签证",
+        "heading": "您的技能值得",
+        "headingEm": "一个真正的担保方",
+        "subheading": "482签证需要雇主。大多数中介给您一份职位列表，然后听天由命。我们为您提供直接进入经核实雇主网络的通道，每个职位在到达您之前均经过确认，并全程陪伴您到186永居终点线。",
+        "cta": "预约免费评估",
+        "reviewNote": "信息最后审核时间",
+        "reviewDate": "2026年3月",
+        "reviewSuffix": "。移民政策变化频繁。",
+        "dohaLink": "访问DOHA获取最新信息 →",
         "badges": [
-          "482 & 186 covered end-to-end",
-          "ICT & Marketing specialist network",
-          "MARN: 1467870, licensed legal partner",
-          "Free eligibility assessment"
+          "482和186全程覆盖",
+          "ICT与市场营销专业网络",
+          "MARN: 1467870，持牌法律合作伙伴",
+          "免费资格评估"
         ],
         "stats": [
           {
-            "label": "Career placements",
+            "label": "职业实习案例",
             "suffix": "+"
           },
           {
-            "label": "Employer matches made",
+            "label": "雇主匹配完成",
             "suffix": "+"
           },
           {
-            "label": "Typical time to visa",
+            "label": "签证典型耗时",
             "display": "3–12",
-            "unit": "months"
+            "unit": "个月"
           },
           {
-            "label": "Google Reviews",
+            "label": "Google评分",
             "display": "4.9★",
-            "sublabel": "47 reviews"
+            "sublabel": "47条评价"
           }
         ]
       },
       "industryNetwork": {
-        "eyebrow": "Employer Network",
-        "heading": "We Match by",
-        "headingEm": "Industry, Not Category",
-        "subheading": "Employers in our network operate in four sectors where 482 sponsorship is both common and viable.",
-        "verifiedBadge": "All employers individually verified",
-        "employersUnit": "employers",
-        "skillsAssessmentLabel": "Skills assessment: ",
-        "verifyHeading": "Our 4-Step Employer Verification Process",
-        "cta": "Book a free assessment to see who's hiring for your occupation",
+        "eyebrow": "雇主网络",
+        "heading": "按行业匹配，",
+        "headingEm": "而非笼统分类",
+        "subheading": "我们网络中的雇主活跃于四个482担保普遍且可行的行业领域。",
+        "verifiedBadge": "所有雇主经个别核实",
+        "employersUnit": "名雇主",
+        "skillsAssessmentLabel": "技能评估机构：",
+        "verifyHeading": "我们的4步雇主核实流程",
+        "cta": "预约免费评估，了解您职业方向的招聘情况",
         "sectors": [
           {
-            "label": "Technology & ICT",
+            "label": "信息技术",
             "assessingBody": "ACS",
             "highlight": [
-              "Software engineers & developers",
-              "ICT business & systems analysts",
-              "Database administrators",
-              "ICT project managers"
+              "软件工程师及开发者",
+              "ICT业务及系统分析师",
+              "数据库管理员",
+              "ICT项目经理"
             ]
           },
           {
-            "label": "Accounting & Finance",
-            "assessingBody": "CAANZ or CPA",
+            "label": "会计与财务",
+            "assessingBody": "CAANZ或CPA",
             "highlight": [
-              "Management accountants",
-              "Financial analysts",
-              "Tax accountants",
-              "External auditors"
+              "管理会计",
+              "财务分析师",
+              "税务会计",
+              "外部审计师"
             ]
           },
           {
-            "label": "Marketing & Communications",
+            "label": "市场营销与传播",
             "assessingBody": "AMI",
             "highlight": [
-              "Marketing specialists",
-              "Digital marketing managers",
-              "Market research analysts",
-              "Business development managers"
+              "市场营销专员",
+              "数字营销经理",
+              "市场调研分析师",
+              "业务拓展经理"
             ]
           },
           {
-            "label": "Engineering",
+            "label": "工程",
             "assessingBody": "Engineers Australia",
             "highlight": [
-              "Civil & structural engineers",
-              "Mechanical engineers",
-              "Electrical engineers",
-              "Project engineers"
+              "土木及结构工程师",
+              "机械工程师",
+              "电气工程师",
+              "项目工程师"
             ]
           }
         ],
         "verifySteps": [
           {
-            "label": "DOHA Sponsorship Check",
-            "detail": "Active SBS confirmed against department records before any introduction."
+            "label": "DOHA担保资格核查",
+            "detail": "在任何引荐之前，对照移民局记录确认有效SBS状态。"
           },
           {
-            "label": "Business Legitimacy Review",
-            "detail": "ABN verification, trading history, and genuine vacancy review for each role."
+            "label": "公司合法性审查",
+            "detail": "核实ABN、经营历史，并审查每个职位的真实空缺情况。"
           },
           {
-            "label": "TSMIT Salary Compliance",
-            "detail": "Confirmed against current Temporary Skilled Migration Income Threshold before match."
+            "label": "TSMIT薪资合规确认",
+            "detail": "在匹配之前，对照当前临时技术移民薪资门槛进行确认。"
           },
           {
-            "label": "Ongoing Recheck",
-            "detail": "Status confirmed again at nomination stage. Sponsorship can be revoked between checks."
+            "label": "持续复查",
+            "detail": "在提名阶段再次确认状态。担保资格可能在两次核查之间被撤销。"
           }
         ]
       },
       "paymentMilestones": {
-        "eyebrow": "Payment Structure",
-        "heading": "Main Service Contract",
-        "headingEm": "Payment Milestones",
-        "subheading": "Each payment point is tied to a clear delivery milestone. Fees are aligned with actual progress. You pay when we deliver.",
-        "feeMilestonesNote": "Fee milestones are documented in your Client Agreement",
-        "feeMilestonesSuffix": " before any work begins. No payment is requested before you have reviewed, agreed to, and signed the terms.",
+        "eyebrow": "付款结构",
+        "heading": "主服务合同",
+        "headingEm": "付款里程碑",
+        "subheading": "每个付款节点均与明确的交付里程碑挂钩。费用与实际进度一致。我们交付成果后您再付款。",
+        "feeMilestonesNote": "费用里程碑在您的客户协议中记录",
+        "feeMilestonesSuffix": "，在任何工作开始之前。在您审阅、同意并签署条款之前，不会收取任何费用。",
         "milestones": [
           {
             "num": 1,
-            "label": "Contract Signing",
-            "note": "Client Agreement executed. Pathway confirmed.",
+            "label": "签署合同",
+            "note": "客户协议执行完毕，路径确认。",
             "phase": "Start"
           },
           {
             "num": 2,
-            "label": "Client Meets Employer",
-            "note": "You meet the employer and confirm satisfaction before proceeding.",
+            "label": "客户与雇主会面",
+            "note": "您与雇主会面，在继续之前确认满意度。",
             "phase": "Placement"
           },
           {
             "num": 3,
-            "label": "Placement Delivered",
-            "note": "You commence in your role with the sponsoring employer.",
+            "label": "实习开始",
+            "note": "您在担保雇主处开始工作。",
             "phase": "Placement"
           },
           {
             "num": 4,
-            "label": "482 Visa Lodged",
-            "note": "Insight Idea lodges your 482 visa application with DOHA.",
+            "label": "482签证申请",
+            "note": "Insight Idea向DOHA提交您的482签证申请。",
             "phase": "482"
           },
           {
             "num": 5,
-            "label": "482 Visa Granted",
-            "note": "Your 482 TSS visa is approved. 5-year service guarantee active.",
+            "label": "482签证获批",
+            "note": "您的482 TSS签证获批。5年服务保证生效。",
             "phase": "482"
           },
           {
             "num": 6,
-            "label": "186 Visa Lodged",
-            "note": "At the 2-year mark, Insight Idea initiates your permanent residency application.",
+            "label": "186签证申请",
+            "note": "满2年时，Insight Idea启动您的永久居留权申请。",
             "phase": "186"
           },
           {
             "num": 7,
-            "label": "186 Visa Approved",
-            "note": "Permanent residency granted. Your Australian career is secured.",
+            "label": "186签证获批",
+            "note": "永久居留权获批，您在澳大利亚的职业生涯正式确立。",
             "phase": "186 ✓"
           }
         ]
       },
       "threeRoutes": {
-        "eyebrow": "Your Options",
-        "heading": "Three Routes.",
-        "headingEm": "One Goal.",
-        "subheading": "The right visa depends on how much experience you have right now.",
-        "requirementsLabel": "What You Need",
-        "approachLabel": "RedBridge's Approach",
-        "timelineLabel": "Timeline",
-        "pathwayLabel": "Pathway",
-        "honestNoteLabel": "Honest note: ",
-        "siddeleylinkLabel": "Career Launch Recruitment Partner: ",
-        "siddeleyNote": "Career Launch placements are managed through Siddeley Talent Link, a specialist recruitment company within the Siddeley Group, the same group that operates RedBridge Consulting.",
-        "siddeleyLinkText": "Learn more about our group structure →",
+        "eyebrow": "您的选择",
+        "heading": "三条路径，",
+        "headingEm": "一个目标。",
+        "subheading": "适合您的签证取决于您目前的工作经验年限。",
+        "requirementsLabel": "所需条件",
+        "approachLabel": "RedBridge的方法",
+        "timelineLabel": "时间线",
+        "pathwayLabel": "路径",
+        "honestNoteLabel": "坦诚说明：",
+        "siddeleylinkLabel": "Career Launch招募合作伙伴：",
+        "siddeleyNote": "Career Launch实习由Siddeley Group旗下专业招聘公司Siddeley Talent Link管理，与RedBridge Consulting同属一个集团。",
+        "siddeleyLinkText": "了解我们的集团架构 →",
         "tabs": [
           {
             "id": "under1",
-            "label": "Under 1 Year Exp",
-            "labelShort": "< 1 Year"
+            "label": "不足1年经验",
+            "labelShort": "< 1年"
           },
           {
             "id": "one3",
-            "label": "1–3 Years (482)",
-            "labelShort": "1–3 Years"
+            "label": "1–3年（482）",
+            "labelShort": "1–3年"
           },
           {
             "id": "three",
-            "label": "3+ Years (186 DE)",
-            "labelShort": "3+ Years"
+            "label": "3年以上（186 DE）",
+            "labelShort": "3年以上"
           }
         ],
         "content": {
           "under1": {
-            "headline": "You're 1 Year Away From 482 Eligibility",
-            "subhead": "Foundation Stage: Career Launch First",
-            "intro": "You don't qualify for a 482 visa yet, and any agency that suggests otherwise is misleading you. The good news: one year of genuine, verifiable Australian work experience changes everything.",
-            "timeline": "12–18 months to 482 readiness",
+            "headline": "距482资格，您还差1年",
+            "subhead": "基础阶段：先参加Career Launch",
+            "intro": "您目前尚不具备482签证资格，任何中介如果另有说法，都是在误导您。好消息是：一年真实可核实的澳大利亚工作经验，将改变一切。",
+            "timeline": "12–18个月后具备482申请条件",
             "pathway": "Career Launch → 482 → 186",
-            "honestNote": "This is a longer path, but it's the right one. We would rather tell you this now and build your case properly than take your money for a visa you won't receive.",
-            "ctaLabel": "Ask about Career Launch",
+            "honestNote": "这是一条较长的路，但也是正确的路。我们宁愿现在告诉您这些，妥善建立您的案件，也不愿为一个您无法获得的签证收取费用。",
+            "ctaLabel": "了解Career Launch",
             "requirements": [
               {
-                "label": "1 year paid full-time experience",
-                "detail": "In an occupation on the MLTSSL or STSOL"
+                "label": "1年带薪全职工作经验",
+                "detail": "在MLTSSL或STSOL上的职业"
               },
               {
-                "label": "Verifiable employment records",
-                "detail": "Payslips, contract, reference letter, all documented"
+                "label": "可核实的就业记录",
+                "detail": "工资单、合同、推荐信，全部留档"
               },
               {
-                "label": "Employer willing to sponsor",
-                "detail": "RedBridge connects you once experience is in place"
+                "label": "愿意担保的雇主",
+                "detail": "一旦具备工作经验，RedBridge为您对接"
               }
             ],
             "steps": [
               {
                 "num": "01",
-                "label": "Enrol in Career Launch",
-                "detail": "Gain 12 months of paid, structured work with our partner employers"
+                "label": "加入Career Launch",
+                "detail": "在我们的合作雇主处获得12个月的带薪、结构化工作经验"
               },
               {
                 "num": "02",
-                "label": "Skills assessment",
-                "detail": "ACS (ICT) or AMI (Marketing). Your consultant confirms if required for your occupation"
+                "label": "技能评估",
+                "detail": "ACS（ICT）或AMI（市场营销）。您的顾问确认是否为您的职业所必需"
               },
               {
                 "num": "03",
-                "label": "Match to 482 sponsor",
-                "detail": "We transition you directly from Career Launch into employer sponsorship"
+                "label": "匹配482担保方",
+                "detail": "我们将您直接从Career Launch过渡到雇主担保"
               }
             ]
           },
           "one3": {
-            "headline": "You Qualify for a 482 Employer Sponsorship",
-            "subhead": "1–3 Years Experience: Direct 482 Pathway",
-            "intro": "With 1–3 years of relevant experience and the right occupation, you are eligible for a 482 TSS visa via employer sponsorship. RedBridge will match you to a verified employer and manage the pathway to 186 PR.",
-            "timeline": "3–12 months to 482 grant",
-            "pathway": "482 → 186 ENS (at 2-year mark)",
+            "headline": "您符合482雇主担保资格",
+            "subhead": "1–3年经验：直接482路径",
+            "intro": "凭借1–3年的相关工作经验和正确的职业类别，您有资格通过雇主担保申请482 TSS签证。RedBridge将为您匹配经核实的雇主，并管理通往186永居的全程路径。",
+            "timeline": "3–12个月获得482签证",
+            "pathway": "482 → 186 ENS（满2年时）",
             "honestNote": null,
-            "ctaLabel": "Check My 482 Eligibility",
+            "ctaLabel": "检查我的482资格",
             "requirements": [
               {
-                "label": "Minimum 1 year full-time experience",
-                "detail": "In your nominated ANZSCO occupation"
+                "label": "至少1年全职工作经验",
+                "detail": "在您提名的ANZSCO职业类别中"
               },
               {
-                "label": "Occupation on CSOL or MLTSSL",
-                "detail": "Your consultant confirms your specific occupation"
+                "label": "职业在CSOL或MLTSSL上",
+                "detail": "您的顾问确认您的具体职业"
               },
               {
-                "label": "Skills assessment (where required)",
-                "detail": "ACS, AMI, CAANZ, confirmed at free assessment"
+                "label": "技能评估（如适用）",
+                "detail": "ACS、AMI、CAANZ，在免费评估中确认"
               }
             ],
             "steps": [
               {
                 "num": "01",
-                "label": "Free eligibility assessment",
-                "detail": "We confirm your occupation, experience, and employer match potential"
+                "label": "免费资格评估",
+                "detail": "我们确认您的职业、工作经验及雇主匹配潜力"
               },
               {
                 "num": "02",
-                "label": "Employer match",
-                "detail": "Introduction to verified 482-approved employers in your industry"
+                "label": "雇主匹配",
+                "detail": "引荐至您所在行业的经核实482批准雇主"
               },
               {
                 "num": "03",
-                "label": "482 nomination & visa lodgement",
-                "detail": "Insight Idea handles the full legal lodgement process"
+                "label": "482提名及签证申请",
+                "detail": "Insight Idea处理完整的法律申请流程"
               },
               {
                 "num": "04",
-                "label": "186 PR transition at 2 years",
-                "detail": "We plan your 186 ENS from day one, not as an afterthought"
+                "label": "2年时过渡到186 PR",
+                "detail": "我们从第一天起就规划您的186 ENS，而非事后补救"
               }
             ]
           },
           "three": {
-            "headline": "3+ Years? You May Qualify for Direct 186 Entry",
-            "subhead": "3+ Years Experience: 186 Direct Entry Stream",
-            "intro": "With 3+ years of recent experience in an eligible occupation, you may not need to spend time on a 482 first. The 186 Direct Entry (DE) stream can get you to permanent residency faster, if your skills assessment and employer are both in place.",
-            "timeline": "6–18 months to 186 grant",
-            "pathway": "186 Direct Entry → PR",
-            "honestNote": "Not all experienced candidates qualify for 186 DE directly. Your skills assessment result and occupation code matter significantly. We confirm at your free consultation.",
-            "ctaLabel": "Check My 186 DE Eligibility",
+            "headline": "3年以上经验？您可能直接符合186资格",
+            "subhead": "3年以上经验：186直接入境流",
+            "intro": "凭借3年以上的近期工作经验，且职业类别符合要求，您可能无需先申请482签证。如果您的技能评估和雇主都已就绪，186直接入境（DE）流可以让您更快获得永久居留权。",
+            "timeline": "6–18个月获得186签证",
+            "pathway": "186直接入境 → 永居",
+            "honestNote": "并非所有有经验的候选人都能直接获得186 DE资格。您的技能评估结果和职业代码至关重要。我们将在免费咨询中确认。",
+            "ctaLabel": "检查我的186 DE资格",
             "requirements": [
               {
-                "label": "3 years full-time recent experience",
-                "detail": "In the nominated ANZSCO occupation within the past 5 years"
+                "label": "3年近期全职工作经验",
+                "detail": "在过去5年内从事提名ANZSCO职业"
               },
               {
-                "label": "Completed skills assessment",
-                "detail": "CAANZ, ACS, AMI, or Engineers Australia depending on occupation"
+                "label": "已完成技能评估",
+                "detail": "根据职业，可为CAANZ、ACS、AMI或Engineers Australia"
               },
               {
-                "label": "Employer willing to nominate for 186",
-                "detail": "Must hold current SBS and nominate directly for permanent residency"
+                "label": "愿意为186提名的雇主",
+                "detail": "必须持有当前SBS并直接提名永久居留"
               }
             ],
             "steps": [
               {
                 "num": "01",
-                "label": "Skills assessment review",
-                "detail": "We audit your existing assessment, or help you apply if not yet done"
+                "label": "技能评估审查",
+                "detail": "我们审核您现有的评估，或在尚未完成时协助申请"
               },
               {
                 "num": "02",
-                "label": "Employer match (186-nominated)",
-                "detail": "We identify employers willing to nominate for 186 DE directly"
+                "label": "雇主匹配（186提名）",
+                "detail": "我们寻找愿意直接为186 DE提名的雇主"
               },
               {
                 "num": "03",
-                "label": "186 DE lodgement via Insight Idea",
-                "detail": "Full legal handling of nomination and visa application"
+                "label": "通过Insight Idea申请186 DE",
+                "detail": "由专业团队全程处理提名和签证申请的法律事务"
               }
             ]
           }
         }
       },
       "whatWeDo": {
-        "eyebrow": "Transparency",
-        "heading": "What RedBridge Does",
-        "headingEm": "(And Doesn't)",
-        "weDoHeader": "What we do",
-        "weDontHeader": "What we don't do",
-        "legalPartnerNote": "Legal partner: Migration advice and visa lodgement are handled exclusively by Insight Idea, RedBridge's licensed legal partner (MARN: 1467870).",
+        "eyebrow": "透明度",
+        "heading": "RedBridge做什么",
+        "headingEm": "（以及不做什么）",
+        "weDoHeader": "我们做的",
+        "weDontHeader": "我们不做的",
+        "legalPartnerNote": "法律合作伙伴：移民建议和签证申请由RedBridge的持牌法律合作伙伴Insight Idea（MARN: 1467870）独家处理。",
         "insightIdeaLinkLabel": "Insight Idea",
         "weDo": [
           {
-            "title": "Verify every employer before presenting them",
-            "detail": "Sponsorship approval status, genuine vacancy, and TSMIT salary compliance are all checked before any client introduction."
+            "title": "在介绍之前核实每位雇主",
+            "detail": "担保批准状态、真实空缺及TSMIT薪资合规情况，均在任何客户引荐之前完成核查。"
           },
           {
-            "title": "Give honest eligibility assessments",
-            "detail": "At the free consultation, including telling you clearly if you don't yet qualify for a 482 application."
+            "title": "提供诚实的资格评估",
+            "detail": "在免费咨询中，包括明确告知您是否尚不具备482申请资格。"
           },
           {
-            "title": "Work with a MARA-registered legal partner",
-            "detail": "Insight Idea (MARN: 1467870) is based at the same Docklands address. No outsourced handoffs, no information gaps."
+            "title": "与MARA注册法律合作伙伴合作",
+            "detail": "Insight Idea（MARN: 1467870）位于同一Docklands地址。无外包转接，无信息断层。"
           },
           {
-            "title": "Structure fees across milestones",
-            "detail": "You pay as outcomes are delivered, not as a single upfront sum before work has begun."
+            "title": "按里程碑结构化收费",
+            "detail": "您在成果交付时付款，而非在工作开始前一次性预付。"
           },
           {
-            "title": "Plan your 186 PR from day one",
-            "detail": "We map your 186 ENS transition from the moment your 482 is granted, not as a last-minute scramble."
+            "title": "从第一天起规划186 PR",
+            "detail": "我们在482签证获批的那一刻就开始规划您的186 ENS过渡，而非到最后再匆忙应对。"
           }
         ],
         "weDont": [
           {
-            "title": "Send unverified job lists",
-            "detail": "Every employer introduction is personal and specific to your profile, not a spreadsheet of possibilities."
+            "title": "发送未经核实的职位列表",
+            "detail": "每次雇主引荐都是针对您个人资料的，而非可能性的电子表格。"
           },
           {
-            "title": "Guarantee visa outcomes",
-            "detail": "No agency legally can. If one tells you otherwise, that is a red flag worth taking seriously."
+            "title": "保证签证结果",
+            "detail": "任何中介在法律上都无法做到这一点。如果有中介这样告诉您，这是值得认真对待的危险信号。"
           },
           {
-            "title": "Take your money if you don't qualify",
-            "detail": "If your free assessment reveals the pathway isn't achievable, we say so before any fees are discussed."
+            "title": "在您不符合条件时收费",
+            "detail": "如果免费评估显示该路径无法实现，我们会在讨论任何费用之前如实告知。"
           },
           {
-            "title": "Fabricate work experience",
-            "detail": "False histories fail and can create serious legal consequences. Every record we produce is genuine and traceable."
+            "title": "伪造工作经验",
+            "detail": "虚假记录会失败，并可能造成严重的法律后果。我们制作的每份记录都是真实且可追溯的。"
           }
         ]
       }

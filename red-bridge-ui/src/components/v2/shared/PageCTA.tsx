@@ -1,11 +1,20 @@
+
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
-import { MessageCircle, BookOpen, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import type { SVGProps } from 'react';
+
+function WeChatIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true">
+      <path d="M9.5 4C5.36 4 2 6.92 2 10.5c0 2.03 1.05 3.84 2.7 5.04L3.5 18l2.7-1.35A8.2 8.2 0 0 0 9.5 17c.34 0 .68-.02 1.01-.06A5.5 5.5 0 0 1 10 14.5C10 11.46 12.91 9 16.5 9c.18 0 .36.01.54.02C16.17 6.2 13.13 4 9.5 4zm-2 4.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM16.5 10C13.46 10 11 12.01 11 14.5S13.46 19 16.5 19c.7 0 1.37-.12 1.98-.34L21 20l-1.04-2.18A4.28 4.28 0 0 0 21 14.5C21 12.01 19.54 10 16.5 10zm-2 3a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm4 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z" />
+    </svg>
+  );
+}
 
 function FacebookIcon({ size = 15, ...props }: SVGProps<SVGSVGElement> & { size?: number }) {
   return (
@@ -27,11 +36,17 @@ function InstagramIcon({ size = 15, ...props }: SVGProps<SVGSVGElement> & { size
 
 type SocialKey = 'wechat' | 'rednote' | 'instagram' | 'facebook';
 
-const SOCIAL_ICON_MAP: Record<SocialKey, React.ComponentType<{ size?: number }>> = {
-  wechat: MessageCircle,
-  rednote: BookOpen,
+const SOCIAL_ICON_MAP: Partial<Record<SocialKey, React.ComponentType<{ size?: number }>>> = {
+  wechat: WeChatIcon,
   instagram: InstagramIcon,
   facebook: FacebookIcon,
+};
+
+const SOCIAL_BG: Record<SocialKey, string> = {
+  wechat: '#07C160',
+  rednote: '#FF2442',
+  instagram: 'linear-gradient(135deg, #a855f7, #ec4899, #fb923c)',
+  facebook: '#1877F2',
 };
 
 const QR_IMAGE_MAP: Partial<Record<SocialKey, string>> = {
@@ -140,7 +155,7 @@ export default function PageCTA() {
               }}
             >
               {t('heading')}{' '}
-              <em style={{ fontStyle: 'italic', color: B.amber }}>{t('headingEm')}</em>
+              <em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.amber }}>{t('headingEm')}</em>
             </h2>
 
             <p
@@ -214,7 +229,7 @@ export default function PageCTA() {
             </div>
           </div>
 
-          {/* Right — office details + socials */}
+          {/* Right — socials + office details */}
           <div
             style={{
               background: 'rgba(255,255,255,0.05)',
@@ -222,9 +237,78 @@ export default function PageCTA() {
               padding: '44px 36px',
               display: 'flex',
               flexDirection: 'column',
-              gap: 24,
+              justifyContent: 'space-between',
+              gap: 28,
             }}
           >
+            {/* Follow us — all 4 socials (replaces WeChat QR card) */}
+            <div>
+              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 12 }}>
+                {t('followUsChatLabel')}
+              </p>
+              <div style={{ display: 'flex', gap: 10 }}>
+                {socials.map((s) => {
+                  const key = s.key as SocialKey;
+                  const Icon = SOCIAL_ICON_MAP[key];
+                  const isQr = !s.href;
+
+                  const inner = (
+                    <span style={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      background: SOCIAL_BG[key],
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#fff',
+                      flexShrink: 0,
+                      overflow: 'hidden',
+                    }}>
+                      {key === 'rednote' ? (
+                        <Image src="/home-assets/xhs-logo.png" alt="小红书" width={40} height={40} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      ) : (
+                        Icon && <Icon size={16} />
+                      )}
+                    </span>
+                  );
+
+                  const hoverStyle: React.CSSProperties = { background: 'none', border: 'none', padding: 0, cursor: 'pointer', textDecoration: 'none', transition: 'opacity 0.15s ease', minWidth: 0 };
+
+                  if (isQr) {
+                    return (
+                      <button
+                        key={key}
+                        type="button"
+                        aria-label={s.label}
+                        onClick={() => setQrModal(key)}
+                        style={hoverStyle}
+                        onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.75'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+                      >
+                        {inner}
+                      </button>
+                    );
+                  }
+
+                  return (
+                    <a
+                      key={key}
+                      href={s.href!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={s.label}
+                      style={hoverStyle}
+                      onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.75'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+                    >
+                      {inner}
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+
             {/* Office locations */}
             <div>
               <p
@@ -239,7 +323,6 @@ export default function PageCTA() {
               >
                 {t('visitUsLabel')}
               </p>
-
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
                 <div>
                   <p style={{ fontSize: 11, fontWeight: 600, color: B.amber, margin: '0 0 4px' }}>{t('melbourneHQLabel')}</p>
@@ -262,120 +345,29 @@ export default function PageCTA() {
             </div>
 
             {/* Email */}
-            <a
-              href="mailto:info@red-bridge.com.au"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 8,
-                fontSize: 13,
-                color: 'rgba(255,255,255,0.6)',
-                textDecoration: 'none',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              {t('emailContact')}
-            </a>
-
-            {/* Follow us — all 4 socials */}
             <div>
-              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 12 }}>
-                {t('followUsChatLabel')}
+              <a
+                href="mailto:info@red-bridge.com.au"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  fontSize: 13,
+                  color: 'rgba(255,255,255,0.6)',
+                  textDecoration: 'none',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                {t('emailAddress')}
+              </a>
+              <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', margin: '4px 0 0 22px' }}>
+                {t('emailResponseTime')}
               </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                {socials.map((s) => {
-                  const key = s.key as SocialKey;
-                  const Icon = SOCIAL_ICON_MAP[key];
-                  const isQr = !s.href;
-
-                  const iconContent = (
-                    <span style={{
-                      width: 40,
-                      height: 40,
-                      borderRadius: 10,
-                      background: 'rgba(255,255,255,0.07)',
-                      border: '1px solid rgba(255,255,255,0.12)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: 3,
-                      color: 'rgba(255,255,255,0.55)',
-                      cursor: 'pointer',
-                      transition: 'background 0.15s ease, color 0.15s ease, border-color 0.15s ease',
-                    }}>
-                      {Icon && <Icon size={15} />}
-                      <span style={{ fontSize: 8, fontWeight: 600, letterSpacing: '0.03em', lineHeight: 1 }}>
-                        {s.label}
-                      </span>
-                    </span>
-                  );
-
-                  if (isQr) {
-                    return (
-                      <button
-                        key={key}
-                        type="button"
-                        aria-label={s.label}
-                        onClick={() => setQrModal(key)}
-                        style={{ background: 'none', border: 'none', padding: 0 }}
-                        onMouseEnter={(e) => {
-                          const span = e.currentTarget.querySelector('span') as HTMLSpanElement;
-                          if (span) {
-                            span.style.background = 'rgba(239,182,79,0.15)';
-                            span.style.borderColor = 'rgba(239,182,79,0.4)';
-                            span.style.color = B.amber;
-                          }
-                        }}
-                        onMouseLeave={(e) => {
-                          const span = e.currentTarget.querySelector('span') as HTMLSpanElement;
-                          if (span) {
-                            span.style.background = 'rgba(255,255,255,0.07)';
-                            span.style.borderColor = 'rgba(255,255,255,0.12)';
-                            span.style.color = 'rgba(255,255,255,0.55)';
-                          }
-                        }}
-                      >
-                        {iconContent}
-                      </button>
-                    );
-                  }
-
-                  return (
-                    <a
-                      key={key}
-                      href={s.href!}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={s.label}
-                      style={{ textDecoration: 'none' }}
-                      onMouseEnter={(e) => {
-                        const span = e.currentTarget.querySelector('span') as HTMLSpanElement;
-                        if (span) {
-                          span.style.background = 'rgba(239,182,79,0.15)';
-                          span.style.borderColor = 'rgba(239,182,79,0.4)';
-                          span.style.color = B.amber;
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        const span = e.currentTarget.querySelector('span') as HTMLSpanElement;
-                        if (span) {
-                          span.style.background = 'rgba(255,255,255,0.07)';
-                          span.style.borderColor = 'rgba(255,255,255,0.12)';
-                          span.style.color = 'rgba(255,255,255,0.55)';
-                        }
-                      }}
-                    >
-                      {iconContent}
-                    </a>
-                  );
-                })}
-              </div>
             </div>
           </div>
         </div>

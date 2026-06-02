@@ -1,377 +1,227 @@
 {
-  "_todo": "zh translations pending",
+  "_todo": "review zh translations with native speaker",
   "v2": {
     "home": {
       "hero": {
-        "eyebrow": "Melbourne · Employer Sponsorship Specialists",
-        "abn": "Registered Australian Consultancy · ABN 88 678 186 091",
-        "headingLine1": "Build Your Career",
-        "headingLine2": "in Australia.",
-        "headingLine3": "We Make It Real.",
-        "subheading": "Get placed with verified employers. Gain the right experience. Move from study to 482 visa and PR, with a legal partner at every step.",
-        "ctaPrimary": "Book Free Consultation",
-        "ctaSecondary": "See How We Work",
+        "eyebrow": "墨尔本 · 雇主担保签证专家",
+        "abn": "澳大利亚注册咨询公司 · ABN 88 678 186 091",
+        "headingLine1": "在澳大利亚",
+        "headingLine2": "开启职业新篇章。",
+        "headingLine3": "我们助您成真。",
+        "subheading": "匹配经核实的雇主，积累正规工作经验，从留学到482签证再到永居，全程有持牌法律伙伴保驾护航。",
+        "ctaPrimary": "预约免费咨询",
+        "ctaSecondary": "了解我们的工作方式",
         "chips": [
-          {
-            "display": "Free",
-            "label": "No-obligation\nconsultation"
-          },
-          {
-            "display": "3",
-            "label": "Visa\npathways"
-          },
-          {
-            "display": "MARA",
-            "label": "Licensed\npartner"
-          }
+          { "display": "免费", "label": "无义务\n咨询" },
+          { "display": "定制化", "label": "签证方案" },
+          { "display": "MARA", "label": "持牌\n合作伙伴" }
         ]
       },
       "ticker": {
-        "label": "Real clients · Real outcomes · Updated regularly",
+        "label": "真实客户 · 真实结果 · 定期更新",
         "entries": [
-          {
-            "name": "Arjun S.",
-            "outcome": "482 visa granted",
-            "type": "482",
-            "occupation": "ICT Business Analyst · Melbourne",
-            "timeline": "5 months"
-          },
-          {
-            "name": "Wei L.",
-            "outcome": "485 → 482 lodged",
-            "type": "485→482",
-            "occupation": "Software Engineer · Docklands VIC",
-            "timeline": "4 months"
-          },
-          {
-            "name": "Ming H.",
-            "outcome": "186 PR granted",
-            "type": "186",
-            "occupation": "Systems Analyst · Melbourne VIC",
-            "timeline": "2 years"
-          },
-          {
-            "name": "Priya M.",
-            "outcome": "482 nomination lodged",
-            "type": "482",
-            "occupation": "Business Analyst · Melbourne VIC",
-            "timeline": "3 months"
-          },
-          {
-            "name": "Chen Y.",
-            "outcome": "485 → 482 granted",
-            "type": "485→482",
-            "occupation": "ICT Project Manager · VIC",
-            "timeline": "6 months"
-          },
-          {
-            "name": "David T.",
-            "outcome": "186 ENS granted",
-            "type": "186",
-            "occupation": "Accountant · Docklands VIC",
-            "timeline": "26 months"
-          },
-          {
-            "name": "Linh T.",
-            "outcome": "482 employer matched",
-            "type": "482",
-            "occupation": "Financial Analyst · Melbourne VIC",
-            "timeline": "3 months"
-          },
-          {
-            "name": "Sasha R.",
-            "outcome": "186 nomination lodged",
-            "type": "186",
-            "occupation": "Software Developer · Melbourne VIC",
-            "timeline": "24 months"
-          },
-          {
-            "name": "Amy K.",
-            "outcome": "485 → 482 lodged",
-            "type": "485→482",
-            "occupation": "Marketing Manager · VIC",
-            "timeline": "5 months"
-          },
-          {
-            "name": "Raj K.",
-            "outcome": "482 visa granted",
-            "type": "482",
-            "occupation": "Management Accountant · VIC",
-            "timeline": "4 months"
-          }
+          { "name": "Arjun S.",  "outcome": "482签证获批",       "type": "482",     "occupation": "ICT Business Analyst · 墨尔本",   "timeline": "5个月" },
+          { "name": "Wei L.",    "outcome": "485 → 482 已申请",  "type": "485→482", "occupation": "Software Engineer · Docklands VIC",  "timeline": "4个月" },
+          { "name": "Ming H.",   "outcome": "186 PR获批",         "type": "186",     "occupation": "Systems Analyst · 墨尔本VIC",    "timeline": "2年" },
+          { "name": "Priya M.",  "outcome": "482提名已申请",      "type": "482",     "occupation": "Business Analyst · 墨尔本VIC",   "timeline": "3个月" },
+          { "name": "Chen Y.",   "outcome": "485 → 482 已获批",  "type": "485→482", "occupation": "ICT Project Manager · VIC",          "timeline": "6个月" },
+          { "name": "David T.",  "outcome": "186 ENS获批",        "type": "186",     "occupation": "Accountant · Docklands VIC",         "timeline": "26个月" },
+          { "name": "Linh T.",   "outcome": "482雇主已匹配",      "type": "482",     "occupation": "Financial Analyst · 墨尔本VIC",  "timeline": "3个月" },
+          { "name": "Sasha R.",  "outcome": "186提名已申请",      "type": "186",     "occupation": "Software Developer · 墨尔本VIC", "timeline": "24个月" },
+          { "name": "Amy K.",    "outcome": "485 → 482 已申请",  "type": "485→482", "occupation": "Marketing Manager · VIC",            "timeline": "5个月" },
+          { "name": "Raj K.",    "outcome": "482签证获批",        "type": "482",     "occupation": "Management Accountant · VIC",        "timeline": "4个月" }
         ]
       },
       "employerNetwork": {
-        "eyebrow": "Our Employer Network",
+        "eyebrow": "我们的雇主网络",
         "stat": "10+",
-        "statLabel": "verified employers on our books",
-        "description": "Every employer is individually verified for active 482 sponsorship approval before we introduce them to any client.",
-        "privateBadge": "Private & Protected",
-        "privateNote": "Employer profiles are shared privately during your consultation, not publicly listed, to protect hiring relationships and your introduction.",
-        "verificationLabel": "Our Verification Process",
-        "cta": "Book your free consultation to see who's hiring",
+        "statLabel": "经核实的在册雇主",
+        "description": "在向任何客户介绍之前，我们会对每位雇主进行个别核实，确认其持有有效的482担保资格。",
+        "privateBadge": "私密且受保护",
+        "privateNote": "雇主档案在咨询期间私密分享，不公开列出，以保护招聘关系和您的引荐机会。",
+        "verificationLabel": "我们的核实流程",
+        "cta": "预约免费咨询，了解正在招聘的雇主",
         "fields": [
           {
-            "label": "Technology & ICT",
-            "roles": [
-              "Software Engineer",
-              "ICT Project Manager",
-              "Business Analyst",
-              "Systems Analyst"
-            ]
+            "label": "信息技术",
+            "roles": ["软件工程师", "ICT项目经理", "业务分析师", "系统分析师"]
           },
           {
-            "label": "Accounting & Finance",
-            "roles": [
-              "Management Accountant",
-              "Financial Analyst",
-              "Tax Accountant",
-              "Auditor"
-            ]
+            "label": "会计与财务",
+            "roles": ["管理会计", "财务分析师", "税务会计", "审计师"]
           },
           {
-            "label": "Marketing & Comms",
-            "roles": [
-              "Marketing Specialist",
-              "Digital Marketing Mgr",
-              "Market Research Analyst",
-              "Business Dev Manager"
-            ]
+            "label": "市场营销",
+            "roles": ["市场营销专员", "数字营销经理", "市场调研分析师", "业务拓展经理"]
           },
           {
-            "label": "Engineering",
-            "roles": [
-              "Civil Engineer",
-              "Structural Engineer",
-              "Mechanical Engineer",
-              "Project Engineer"
-            ]
+            "label": "工程",
+            "roles": ["土木工程师", "结构工程师", "机械工程师", "项目工程师"]
           },
           {
-            "label": "Automotive",
-            "roles": [
-              "Automotive Technician",
-              "Service Manager",
-              "Parts Interpreter",
-              "Workshop Manager"
-            ]
+            "label": "汽车行业",
+            "roles": ["汽车技师", "服务经理", "零件顾问", "车间经理"]
           }
         ],
         "verifySteps": [
           {
             "num": "01",
-            "title": "Check Sponsorship Approval",
-            "detail": "Confirm active 482 status against official DOHA records."
+            "title": "核查担保资格",
+            "detail": "对照DOHA官方记录确认482担保状态有效。"
           },
           {
             "num": "02",
-            "title": "Review Company & Role",
-            "detail": "Assess business legitimacy, job duties, and TSMIT salary compliance."
+            "title": "审查公司及职位",
+            "detail": "评估公司合法性、职位职责及TSMIT薪资合规情况。"
           },
           {
             "num": "03",
-            "title": "Ongoing Monitoring",
-            "detail": "Regularly recheck status so it stays valid throughout your placement."
+            "title": "持续监控",
+            "detail": "定期复查状态，确保在整个实习期间保持有效。"
           }
         ]
       },
       "trust": {
-        "eyebrow": "Licensed & Verified",
-        "heading": "Trust, Verified.",
-        "headingEm": "Not Just Claimed",
-        "subheading": "Every migration service at RedBridge is backed by formal registration and verifiable credentials. These aren't marketing claims. They're public records you can check right now.",
-        "ctaBottom": "Get Your Free Eligibility Assessment",
+        "eyebrow": "持牌且经核实",
+        "heading": "信誉，经核实，",
+        "headingEm": "绝非夸大其词",
+        "subheading": "RedBridge的每项移民服务均有正式注册和可验证资质背书。这不是营销宣传，而是您现在就可以查证的公开记录。",
+        "ctaBottom": "获取免费资格评估",
         "credentials": [
           {
-            "title": "MARA Registered Agent",
+            "title": "MARA注册移民代理",
             "badge": "MARN 1467870",
-            "desc": "Insight Idea holds active MARA registration. Migration advice without MARA registration is illegal in Australia. Every piece of advice we deliver is legally compliant.",
-            "ctaLabel": "Verify on MARA →"
+            "desc": "Insight Idea持有有效的MARA注册资质。在澳大利亚，未经MARA注册提供移民建议是违法的。我们提供的每一条建议均符合法律规定。",
+            "ctaLabel": "在MARA官网核实 →"
           },
           {
-            "title": "ABN Registered",
+            "title": "ABN注册公司",
             "badge": "ABN 88 678 186 091",
-            "desc": "RedBridge Consulting is a registered Australian company (ABN 88 678 186 091), operating from Level 9, Tower 3, 18–38 Siddeley Street, Docklands VIC 3008.",
-            "ctaLabel": "Verify on ABR →"
+            "desc": "RedBridge Consulting是一家注册澳大利亚公司（ABN 88 678 186 091），办公地址位于Level 9, Tower 3, 18–38 Siddeley Street, Docklands VIC 3008。",
+            "ctaLabel": "在ABR官网核实 →"
           },
           {
-            "title": "Verified Employer Network",
-            "badge": "10+ Active Sponsors",
-            "desc": "Every employer in our network is individually confirmed as holding active 482 Standard Business Sponsorship before any client introduction. No unverified leads.",
-            "ctaLabel": "Book a consultation →"
+            "title": "经核实雇主网络",
+            "badge": "10+名活跃担保商",
+            "desc": "我们网络中的每位雇主，在向任何客户介绍之前，均经过个别确认，持有有效的482标准商业担保资格。无未核实的线索。",
+            "ctaLabel": "预约咨询 →"
           }
         ]
       },
       "why": {
-        "eyebrow": "Why RedBridge",
-        "heading": "The Difference Is",
-        "headingEm": "How We Work",
-        "subheading": "Six commitments that separate us from the agencies that take your money and disappear.",
-        "ctaPrompt": "Ready to see if you qualify?",
-        "cta": "Check My Eligibility Free →",
+        "eyebrow": "选择RedBridge的理由",
+        "heading": "不同之处在于",
+        "headingEm": "我们的工作方式",
+        "subheading": "六项承诺，让我们与那些收了钱就消失的中介截然不同。",
+        "ctaPrompt": "准备好确认资格了吗？",
+        "cta": "免费检查我的资格 →",
         "differentiators": [
           {
-            "title": "Named consultant, no handoffs",
-            "body": "One consultant manages your case from first call to PR. No account manager rotations, no 'your consultant is away' delays."
+            "title": "固定顾问，无转接",
+            "body": "一位顾问从首次通话到永居全程管理您的案件。无轮换客户经理，无\"您的顾问不在\"的延误。"
           },
           {
-            "title": "Employer-first matching",
-            "body": "We match you to verified employers with active 482 approval. Not job boards. Direct introductions to hiring sponsors."
+            "title": "以雇主匹配为核心",
+            "body": "我们将您与持有有效482批准的核实雇主匹配。不是招聘平台，而是直接介绍给招聘担保商。"
           },
           {
-            "title": "Legal partner on site",
-            "body": "Insight Idea migration law firm is co-located on the same floor. Legal sign-off is minutes away, not an email chain."
+            "title": "现场法律合作伙伴",
+            "body": "Insight Idea移民律师事务所与我们同处一楼。法律审批就在几步之遥，而非漫长的邮件往来。"
           },
           {
-            "title": "Milestone-based fees",
-            "body": "Fees are structured around delivery: employer match, visa lodgement, visa grant. No large upfront payments for activity."
+            "title": "按里程碑收费",
+            "body": "费用与交付挂钩：雇主匹配、签证申请、签证获批。无大额预付款。"
           },
           {
-            "title": "Genuine documentation",
-            "body": "We only help prepare documentation that is real, traceable, and yours. No fabricated, inflated, or backdated records."
+            "title": "真实材料",
+            "body": "我们只协助准备真实、可追溯、属于您的材料。无伪造、虚报或倒填的就业记录。"
           },
           {
-            "title": "Honest if you don't qualify",
-            "body": "A free consultation that ends with 'you don't qualify yet' is still a useful consultation. We would rather tell you that now."
+            "title": "如实告知不符合条件",
+            "body": "以\"您暂不符合条件\"结束的免费咨询仍是有价值的咨询。我们宁愿现在就告诉您。"
           }
         ]
       },
       "comparison": {
-        "eyebrow": "Why RedBridge",
-        "heading": "How We Are",
-        "headingEm": "Different",
-        "subheading": "The migration industry has a trust problem. We built RedBridge to be the verifiable opposite.",
-        "colTopic": "What you deserve",
-        "colOthers": "Other agencies",
+        "eyebrow": "选择RedBridge的理由",
+        "heading": "我们的",
+        "headingEm": "不同之处",
+        "subheading": "移民行业存在信任危机。我们创立RedBridge，成为可验证的对立面。",
+        "colTopic": "您应得的服务",
+        "colOthers": "其他中介",
         "colRedBridge": "RedBridge Consulting",
-        "ctaStripHeading": "Still have questions? Let's talk.",
-        "ctaStripSub": "Free consultation. Clear answers. No pressure.",
-        "ctaPrimary": "Book Free Consultation",
-        "ctaSecondary": "See How We Work",
+        "ctaStripHeading": "还有疑问？让我们来聊聊。",
+        "ctaStripSub": "免费咨询，清晰解答，无任何压力。",
+        "ctaPrimary": "预约免费咨询",
+        "ctaSecondary": "了解我们的工作方式",
         "rows": [
           {
-            "topic": "Job listings you can verify",
-            "others": {
-              "title": "Unverified employer details",
-              "desc": "No proof of active sponsorship approval."
-            },
-            "rb": {
-              "title": "Verified employers, upfront",
-              "desc": "We share employer names, industry, and 482 sponsorship approval status during your free consultation, before you commit."
-            }
+            "topic": "可核实的职位信息",
+            "others": { "title": "无法核实的雇主详情", "desc": "无活跃担保资格证明。" },
+            "rb": { "title": "可核实的雇主，提前告知", "desc": "在您承诺之前，我们在免费咨询中分享雇主名称、行业及482担保资格状态。" }
           },
           {
-            "topic": "Transparent, milestone-based fees",
-            "others": {
-              "title": "Large upfront payments",
-              "desc": "Thousands charged before any work begins."
-            },
-            "rb": {
-              "title": "Pay as we progress",
-              "desc": "Fees are documented in a Client Agreement and split across 3 to 4 milestone stages."
-            }
+            "topic": "透明的里程碑收费",
+            "others": { "title": "大额预付款", "desc": "工作开始前收取数千元。" },
+            "rb": { "title": "随进度付款", "desc": "费用在客户协议中记录，分3至4个里程碑阶段收取。" }
           },
           {
-            "topic": "Licensed migration advice",
-            "others": {
-              "title": "Unregistered migration advice",
-              "desc": "No regulatory oversight or legal accountability."
-            },
-            "rb": {
-              "title": "Licensed migration law partner",
-              "desc": "All visa lodgements are handled by Insight Idea, a registered Australian law firm and MARA migration agent (MARN 1467870)."
-            }
+            "topic": "持牌移民建议",
+            "others": { "title": "未注册的移民建议", "desc": "无监管或法律责任。" },
+            "rb": { "title": "持牌移民法律合作伙伴", "desc": "所有签证申请由Insight Idea处理，这是一家注册澳大利亚律师事务所和MARA移民代理（MARN 1467870）。" }
           },
           {
-            "topic": "Genuine, verifiable work experience",
-            "others": {
-              "title": "Hard-to-verify work experience",
-              "desc": "Fabricated or inflated records that fail skills assessments."
-            },
-            "rb": {
-              "title": "Documented, paid work placement",
-              "desc": "We deliver genuine paid timesheets in the format required for CAANZ, ACS, and AMI skills assessments."
-            }
+            "topic": "真实可核实的工作经验",
+            "others": { "title": "难以核实的工作经验", "desc": "伪造或虚报的记录在技能评估中会失败。" },
+            "rb": { "title": "有记录的带薪工作实习", "desc": "我们提供真实的带薪工时记录，符合CAANZ、ACS和AMI技能评估所需格式。" }
           },
           {
-            "topic": "A pathway that fits your situation",
-            "others": {
-              "title": "One-size-fits-all recommendations",
-              "desc": "Everyone gets the same program regardless of eligibility."
-            },
-            "rb": {
-              "title": "Honest assessment first",
-              "desc": "If a pathway does not suit you, we say so at the free consultation. No sales pitch."
-            }
+            "topic": "适合您情况的移民路径",
+            "others": { "title": "一刀切的建议", "desc": "无论资格如何，所有人获得相同方案。" },
+            "rb": { "title": "首先进行诚实评估", "desc": "如果某条路径不适合您，我们会在免费咨询中直接告知。无销售话术。" }
           },
           {
-            "topic": "Support throughout your journey",
-            "others": {
-              "title": "Support ends after payment",
-              "desc": "You are left to navigate visa requirements alone."
-            },
-            "rb": {
-              "title": "Ongoing support at every stage",
-              "desc": "One named consultant manages your case from first call to PR. No handoffs, no gaps."
-            }
+            "topic": "全程持续支持",
+            "others": { "title": "付款后支持结束", "desc": "您需要独自面对签证要求。" },
+            "rb": { "title": "每个阶段持续支持", "desc": "一位固定顾问从首次通话到永居管理您的案件。无转接，无断层。" }
           }
         ]
       },
       "contact": {
-        "eyebrow": "Get Started",
-        "heading": "Book Your Free Consultation,",
-        "headingEm": "No Obligation",
-        "subheading": "Tell us where you are. We'll tell you what's possible, honestly.",
-        "ctaPrimary": "Book Free Consultation",
-        "responseNote": "Usually responded to within 2 business hours",
-        "followUsLabel": "Follow us",
-        "wechatQrAlt": "WeChat QR",
-        "wechatAccountLabel": "WeChat Official Account",
+        "eyebrow": "开始行动",
+        "heading": "预约免费咨询，",
+        "headingEm": "零义务",
+        "subheading": "告诉我们您的现状，我们会如实告诉您有哪些可能。",
+        "ctaPrimary": "预约免费咨询",
+        "responseNote": "通常在2个工作小时内回复",
+        "followUsLabel": "关注我们",
+        "wechatQrAlt": "微信二维码",
+        "wechatAccountLabel": "微信公众号",
         "cards": [
           {
-            "title": "Docklands Office",
-            "eyebrow": "Visit Us",
-            "lines": [
-              "Level 9, Tower 3",
-              "18–38 Siddeley Street",
-              "Docklands VIC 3008"
-            ],
-            "sub": "Co-located with Insight Idea"
+            "title": "Docklands办公室",
+            "eyebrow": "拜访我们",
+            "lines": ["Level 9, Tower 3", "18–38 Siddeley Street", "Docklands VIC 3008"],
+            "sub": "与Insight Idea同处一地"
           },
           {
-            "title": "Phone",
-            "eyebrow": "Call Us",
-            "lines": [
-              "(03) 9961 7301"
-            ],
-            "sub": "Mon–Fri 9am–5pm AEDT"
+            "title": "电话",
+            "eyebrow": "致电我们",
+            "lines": ["(03) 9961 7301"],
+            "sub": "周一至周五 上午9点至下午5点 AEDT"
           },
           {
-            "title": "Email",
-            "eyebrow": "Email Us",
-            "lines": [
-              "info@redbridgeconsulting.com.au"
-            ],
+            "title": "邮件",
+            "eyebrow": "发邮件给我们",
+            "lines": ["info@redbridgeconsulting.com.au"],
             "sub": null
           }
         ],
         "socials": [
-          {
-            "key": "wechat",
-            "label": "WeChat"
-          },
-          {
-            "key": "facebook",
-            "label": "Facebook"
-          },
-          {
-            "key": "rednote",
-            "label": "小红书 RedNote"
-          },
-          {
-            "key": "instagram",
-            "label": "Instagram"
-          }
+          { "key": "wechat",    "label": "微信" },
+          { "key": "facebook",  "label": "Facebook" },
+          { "key": "rednote",   "label": "小红书 RedNote" },
+          { "key": "instagram", "label": "Instagram" }
         ]
       },
       "video": {
@@ -379,6 +229,9 @@
         "heading": "专家视点",
         "subheading": "为您解析真实的移民避坑指南与名企求职策略",
         "close": "关闭视频",
+        "previous": "上一个",
+        "next": "下一个",
+        "goToSlide": "跳转至第 {n} 张",
         "cards": {
           "welcome": {
             "title": "险被禁签三年！为图省事提供虚假出生证的惨痛教训",

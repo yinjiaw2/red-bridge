@@ -83,7 +83,7 @@ export default function IndustryNetwork() {
           <div>
             <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 12 }}>{t('eyebrow')}</span>
             <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 36px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: '0 0 8px' }}>
-              {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+              {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
             </h2>
             <p style={{ fontSize: 14.5, color: B.textMuted, margin: 0, maxWidth: 440, lineHeight: 1.6 }}>{t('subheading')}</p>
           </div>

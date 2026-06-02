@@ -119,7 +119,7 @@ export default function V2ContactSection() {
             }}
           >
             {t('heading')}{' '}
-            <em style={{ fontStyle: 'italic', color: B.amber }}>{t('headingEm')}</em>
+            <em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.amber }}>{t('headingEm')}</em>
           </h2>
 
           <p

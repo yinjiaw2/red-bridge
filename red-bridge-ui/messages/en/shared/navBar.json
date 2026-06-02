@@ -19,11 +19,11 @@
     "ariaLabel": "Switch language"
   },
   "social": {
-    "whatsapp": "WhatsApp",
     "wechat": "WeChat",
     "tiktok": "TikTok",
     "xiaohongshu": "Xiaohongshu",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "facebook": "Facebook"
   },
   "qrModal": {
     "close": "Close",

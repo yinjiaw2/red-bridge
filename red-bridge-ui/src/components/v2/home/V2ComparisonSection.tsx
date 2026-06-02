@@ -103,7 +103,7 @@ export default function V2ComparisonSection() {
             }}
           >
             {t('heading')}{' '}
-            <em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            <em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
           <p style={{ fontSize: 15.5, color: B.textMuted, lineHeight: 1.65, margin: 0 }}>
             {t('subheading')}

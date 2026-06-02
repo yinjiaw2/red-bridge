@@ -165,14 +165,14 @@ export default function V2VideoSection() {
                   <ArrowBtn
                     onClick={prev}
                     disabled={currentIndex === 0}
-                    label="Previous"
+                    label={t('previous')}
                   >
                     <ChevronLeft size={20} aria-hidden="true" />
                   </ArrowBtn>
                   <ArrowBtn
                     onClick={next}
                     disabled={currentIndex >= maxIndex}
-                    label="Next"
+                    label={t('next')}
                   >
                     <ChevronRight size={20} aria-hidden="true" />
                   </ArrowBtn>
@@ -284,7 +284,7 @@ export default function V2VideoSection() {
                     key={i}
                     type="button"
                     onClick={() => setCurrentIndex(i)}
-                    aria-label={`Go to slide ${i + 1}`}
+                    aria-label={t('goToSlide', { n: i + 1 })}
                     style={{
                       width: i === currentIndex ? 24 : 8,
                       height: 8,

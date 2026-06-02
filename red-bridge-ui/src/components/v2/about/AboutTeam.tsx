@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const B = {
   red: '#b11217', redLight: '#fdf0f0', redMid: '#f5d5d6', navy: '#172d5d',
@@ -89,6 +89,7 @@ function TeamCard({ member, photo, initials, delay, bookCta }: { member: MemberD
 
 export default function AboutTeam() {
   const t = useTranslations('v2.about.team');
+  const locale = useLocale();
   const MEMBERS = t.raw('members') as MemberData[];
   const headerRef = useReveal(0);
 
@@ -98,7 +99,7 @@ export default function AboutTeam() {
         <div ref={headerRef} style={{ marginBottom: 44, textAlign: 'center' }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 14 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 36px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: '0 0 12px' }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
           <p style={{ fontSize: 15, color: B.textMuted, maxWidth: 520, margin: '0 auto', lineHeight: 1.65 }}>
             {t('subheading')}

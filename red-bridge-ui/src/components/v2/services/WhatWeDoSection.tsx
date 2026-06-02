@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const B = {
   red: '#b11217', redLight: '#fdf0f0', redMid: '#f5d5d6', navy: '#172d5d',
@@ -30,6 +30,7 @@ function useReveal() {
 
 export default function WhatWeDoSection() {
   const t = useTranslations('v2.services.whatWeDo');
+  const locale = useLocale();
   const WE_DO = t.raw('weDo') as { title: string; detail: string }[];
   const WE_DONT = t.raw('weDont') as { title: string; detail: string }[];
   const ref = useReveal();
@@ -40,7 +41,7 @@ export default function WhatWeDoSection() {
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 12 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(24px, 3.2vw, 34px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: 0 }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
         </div>
 

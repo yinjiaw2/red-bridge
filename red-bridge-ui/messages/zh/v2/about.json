@@ -1,165 +1,154 @@
 {
-  "_todo": "zh translations pending",
+  "_todo": "review zh translations with native speaker",
   "v2": {
     "about": {
       "legalPartner": {
-        "eyebrow": "Legal Partner",
-        "heading": "Migration Law,",
-        "headingEm": "on the Same Floor",
-        "subheading": "Every piece of migration-related advice at RedBridge is reviewed by or delivered through Insight Idea, a licensed Australian migration law firm.",
-        "maraTag": "MARA-registered migration agent",
+        "eyebrow": "法律合作伙伴",
+        "heading": "移民法务，",
+        "headingEm": "就在同一楼层",
+        "subheading": "RedBridge提供的每一项移民相关建议，均由持牌澳大利亚移民律师事务所Insight Idea审核或直接提供。",
+        "maraTag": "MARA注册移民代理",
         "firmName": "Insight Idea",
-        "firmDesc": "Licensed migration law firm and registered legal practice\nCo-located with RedBridge at Docklands VIC 3008",
-        "servicesLabel": "What Insight Idea Handles",
-        "coLocationNote": "Co-location advantage: RedBridge and Insight Idea share Level 9, Tower 3 at 18–38 Siddeley Street. Questions between your placement consultant and your migration agent are resolved in minutes, not emails.",
-        "visitWebsite": "Visit Insight Idea's website",
-        "groupNote": "RedBridge Consulting, Insight Idea Law Firm, and Good Mood Studio are all operating entities within the Siddeley Group (ABN: 97 693 501 147), operating from Level 9, Tower 3, 18–38 Siddeley Street, Docklands VIC 3008. Placement recruitment under the Career Launch program is managed through Siddeley Talent Link.",
+        "firmDesc": "持牌移民律师事务所及注册法律机构\n与RedBridge同处Docklands VIC 3008",
+        "servicesLabel": "Insight Idea处理的事项",
+        "coLocationNote": "同楼层优势：RedBridge与Insight Idea共同在18–38 Siddeley Street的Level 9, Tower 3办公。您的实习顾问与移民代理之间的问题可在数分钟内解决，无需邮件往来。",
+        "visitWebsite": "访问Insight Idea官网",
+        "groupNote": "RedBridge Consulting、Insight Idea Law Firm和Good Mood Studio均为Siddeley Group（ABN: 97 693 501 147）旗下运营实体，办公地址位于Level 9, Tower 3, 18–38 Siddeley Street, Docklands VIC 3008。Career Launch项目下的实习招募由Siddeley Talent Link管理。",
         "siddeleylinkLabel": "Siddeley Group",
         "credentials": [
           {
             "label": "MARN",
             "value": "1467870",
-            "note": "Migration Agents Registration Number",
-            "linkLabel": "Verify on MARA →"
+            "note": "移民代理注册编号",
+            "linkLabel": "在MARA官网核实 →"
           },
           {
             "label": "ABN",
             "value": "97 693 501 147",
-            "note": "Australian Business Number",
-            "linkLabel": "Verify on ABR →"
+            "note": "澳大利亚商业号码",
+            "linkLabel": "在ABR官网核实 →"
           },
           {
-            "label": "Address",
+            "label": "地址",
             "value": "Level 9, Tower 3",
             "note": "18–38 Siddeley Street, Docklands VIC 3008",
-            "linkLabel": "View on Maps →"
+            "linkLabel": "在地图上查看 →"
           }
         ],
         "services": [
-          "Migration advice under MARA registration (MARN: 1467870)",
-          "482 TSS Skills in Demand nomination and visa lodgement",
-          "186 ENS nomination and permanent residency lodgement",
-          "Standard Business Sponsorship (SBS) applications",
-          "Labour Market Testing compliance and advertising records",
-          "Ongoing sponsor compliance monitoring and DOHA notifications"
+          "依据MARA注册提供移民建议（MARN: 1467870）",
+          "482 TSS紧缺技能签证提名及签证申请",
+          "186 ENS提名及永久居留权申请",
+          "标准商业担保（SBS）申请",
+          "劳动力市场测试合规及广告记录",
+          "持续的担保方合规监控及DOHA通知"
         ]
       },
       "story": {
-        "eyebrow": "Our Story",
-        "heading": "Built for the gap",
-        "headingEm": "big agencies don't fill",
-        "para1": "RedBridge was founded by people who had watched skilled professionals from China and Southeast Asia spend years navigating an employer sponsorship system that is opaque at best, and predatory at worst.",
-        "para2": "We're not a large agency with a case management department. We're a small, deliberate team, and that is a feature, not a limitation. Every client is assigned a named consultant who sees their case from the first free call to the 186 PR grant. There are no handoffs, no \"your case manager is away\" delays, no re-explaining your situation to someone new.",
-        "para3": "Our Docklands office shares a floor with Insight Idea, our licensed migration law partner (MARN: 1467870). Not in the same building, but on the same floor. That proximity means your legal questions are answered immediately, not via email chain to a firm you've never met.",
+        "eyebrow": "我们的故事",
+        "heading": "填补",
+        "headingEm": "大型机构所忽视的空白",
+        "para1": "RedBridge的创始人亲眼目睹了来自中国和东南亚的技术移民，在一个不透明甚至带有掠夺性的雇主担保体系中挣扎多年。正是这段经历，促使我们创立了RedBridge。",
+        "para2": "我们不是拥有案件管理部门的大型机构。我们是一支精干、专注的小团队——这是我们的优势，而非局限。每位客户都有一名固定顾问，从第一次免费通话到186永居获批，全程跟进。无转接，无\"您的案件经理不在\"的延误，无需向新人重复解释自己的情况。",
+        "para3": "我们的Docklands办公室与持牌移民法律合作伙伴Insight Idea（MARN: 1467870）共处同一楼层。不仅在同一栋楼，而是在同一层。这种近距离意味着您的法律问题可以即时得到解答，而不是通过邮件与一家从未谋面的律所沟通。",
         "insightIdeaLinkLabel": "Insight Idea",
-        "honestNoteLabel": "Honest note: ",
-        "honestNote": "We don't take every client. At your free consultation, we will tell you honestly whether our programs match your current situation. If they don't, we'll tell you what does, even if that means recommending you wait six months or speak to a different firm. That assessment costs nothing. Acting on bad advice costs a great deal more.",
-        "statsLabel": "By the Numbers",
-        "companyNote": "RedBridge Consulting Pty Ltd is a registered Australian company (ABN: 88 678 186 091). Incorporated in Victoria and operating from Docklands VIC 3008, co-located with Insight Idea law firm and Siddeley Group.",
+        "honestNoteLabel": "坦诚说明：",
+        "honestNote": "我们不接受每一位客户。在免费咨询中，我们会如实告诉您我们的项目是否适合您目前的情况。如果不适合，我们会告诉您什么更适合，即使这意味着建议您再等六个月或咨询其他机构。评估是免费的，而错误建议的代价则高昂得多。",
+        "statsLabel": "数据说话",
+        "companyNote": "RedBridge Consulting Pty Ltd是一家注册澳大利亚公司（ABN: 88 678 186 091），在维多利亚州注册成立，办公于Docklands VIC 3008，与Insight Idea律师事务所及Siddeley Group同处一地。",
         "stats": [
           {
             "value": 200,
             "suffix": "+",
-            "label": "Successful placements",
-            "subLabel": "Clients who moved from assessment to visa grant"
+            "label": "成功实习案例",
+            "subLabel": "从评估到签证获批的客户"
           },
           {
             "value": 300,
             "suffix": "+",
-            "label": "Skills assessments passed",
-            "subLabel": "First-attempt pass rate for ACS, AMI, and CAANZ clients"
+            "label": "技能评估通过",
+            "subLabel": "ACS、AMI和CAANZ客户首次通过率"
           },
           {
             "value": 3,
             "suffix": "",
-            "label": "Consultants",
-            "subLabel": "You'll speak to the same person from first call to visa grant"
+            "label": "名顾问",
+            "subLabel": "从首次通话到签证获批，您始终与同一人沟通"
           },
           {
             "value": null,
             "display": "0",
             "suffix": "",
-            "label": "Outsourced handoffs",
-            "subLabel": "Legal partner Insight Idea is co-located at the same Docklands address"
+            "label": "次外包转接",
+            "subLabel": "法律合作伙伴Insight Idea与我们同处Docklands同一地址"
           }
         ]
       },
       "team": {
-        "eyebrow": "Meet the Team",
-        "heading": "The Consultants Who",
-        "headingEm": "Actually Work Your Case",
-        "subheading": "You will speak to the same person throughout your pathway, not a rotated account manager or a support ticket queue.",
-        "teamPhotoCaption": "Team photo, Docklands Office",
-        "teamPhotoHint": "Replace with: /team/team-docklands.jpg",
+        "eyebrow": "认识我们的团队",
+        "heading": "真正负责",
+        "headingEm": "您案件的顾问",
+        "subheading": "在整个移民路径中，您将始终与同一位顾问沟通，而不是轮换的客户经理或支持工单队列。",
+        "teamPhotoCaption": "团队合照，Docklands办公室",
+        "teamPhotoHint": "请替换为: /team/team-docklands.jpg",
         "officeLabel": "Level 9, Tower 3 · Docklands VIC 3008",
-        "officeSub": "Co-located with Insight Idea Migration Law",
-        "bookCta": "Book a consultation",
-        "howItWorksLabel": "How it works: ",
-        "howItWorks": "At your free consultation, you'll be matched to the consultant best suited to your occupation and visa pathway. That person manages your case end-to-end. All legal work is handled by Insight Idea, on the same floor.",
+        "officeSub": "与Insight Idea移民法律机构同处一地",
+        "bookCta": "预约咨询",
+        "howItWorksLabel": "工作方式：",
+        "howItWorks": "在免费咨询中，我们将为您匹配最适合您职业和签证路径的顾问。该顾问将全程端到端管理您的案件。所有法律工作由同一楼层的Insight Idea负责处理。",
         "members": [
           {
             "name": "Ryan B.",
-            "role": "Founder & Lead Consultant",
-            "languages": "English · Mandarin",
-            "description": "Employer network development, client eligibility strategy, and pathway design. Ryan manages all 482 employer relationships directly.",
-            "specialties": [
-              "482 TSS",
-              "186 ENS",
-              "Employer partnerships"
-            ]
+            "role": "创始人兼首席顾问",
+            "languages": "英语 · 普通话",
+            "description": "雇主网络建设、客户资格策略及路径规划。Ryan直接管理所有482雇主关系。",
+            "specialties": ["482 TSS", "186 ENS", "雇主合作关系"]
           },
           {
             "name": "Cindy C.",
-            "role": "Migration Consultant",
-            "languages": "Mandarin · Cantonese · English",
-            "description": "Skilled assessment applications (ACS, AMI, CAANZ) and client documentation. Cindy leads all Career Launch client onboarding.",
-            "specialties": [
-              "ACS",
-              "AMI",
-              "Career Launch"
-            ]
+            "role": "移民顾问",
+            "languages": "普通话 · 粤语 · 英语",
+            "description": "技能评估申请（ACS、AMI、CAANZ）及客户文件准备。Cindy负责所有Career Launch客户的入职工作。",
+            "specialties": ["ACS", "AMI", "Career Launch"]
           },
           {
             "name": "Brook A.",
-            "role": "Client Success & Operations",
-            "languages": "English",
-            "description": "Milestone tracking, employer–candidate communication, and ongoing compliance calendar management throughout each placement.",
-            "specialties": [
-              "Client management",
-              "Compliance tracking"
-            ]
+            "role": "客户成功与运营",
+            "languages": "英语",
+            "description": "里程碑跟踪、雇主与候选人沟通，以及整个实习期间的持续合规日历管理。",
+            "specialties": ["客户管理", "合规跟踪"]
           }
         ]
       },
       "values": {
-        "eyebrow": "How We Work",
-        "heading": "Our Principles,",
-        "headingEm": "In Practice",
-        "subheading": "The things we commit to because they matter, not because they make good marketing copy.",
+        "eyebrow": "我们的工作方式",
+        "heading": "我们的原则，",
+        "headingEm": "付诸实践",
+        "subheading": "我们坚守这些承诺，因为它们真正重要，而非仅为营销噱头。",
         "values": [
           {
-            "label": "Honesty first",
-            "body": "We tell clients what they don't want to hear when the alternative is wasting their time and money. A free consultation that ends with \"you don't qualify yet\" is still a useful consultation."
+            "label": "诚实为先",
+            "body": "当替代方案是浪费客户时间和金钱时，我们会说出他们不愿听到的话。以\"您暂不符合条件\"结束的免费咨询，仍然是有价值的咨询。"
           },
           {
-            "label": "Verification, not promises",
-            "body": "Every employer we introduce is confirmed as an active sponsor before any client meets them. We don't share \"potential\" leads. Every introduction is a verified opportunity."
+            "label": "核实，而非承诺",
+            "body": "每位我们介绍的雇主，在任何客户与其见面之前，均经确认为活跃担保方。我们不分享\"潜在\"线索。每次引荐都是经过核实的机会。"
           },
           {
-            "label": "Named responsibility",
-            "body": "Every client is assigned one named consultant. There are no handoffs, no \"your case manager has changed\", no restarting from scratch when someone leaves the team."
+            "label": "明确责任归属",
+            "body": "每位客户均配有一名固定顾问。无转接，无\"您的案件经理已更换\"，无需在有人离职时从头重来。"
           },
           {
-            "label": "Legal compliance, always",
-            "body": "Migration advice without MARA registration is illegal in Australia. Every piece of migration-related advice at RedBridge is reviewed or delivered by Insight Idea, licensed agents on the same floor."
+            "label": "始终合法合规",
+            "body": "在澳大利亚，未经MARA注册提供移民建议是违法的。RedBridge提供的每一条移民相关建议，均由同一楼层的持牌代理Insight Idea审核或直接提供。"
           },
           {
-            "label": "Milestone-based fees",
-            "body": "We don't take large upfront payments. Fees are structured around delivery: employer match, visa lodgement, visa grant. You're paying for outcomes, not activity."
+            "label": "按里程碑收费",
+            "body": "我们不收取大额预付款。费用围绕交付成果结构化：雇主匹配、签证申请、签证获批。您为结果付费，而非为活动付费。"
           },
           {
-            "label": "Genuine documentation",
-            "body": "Every work record, project portfolio, and skills assessment submission we help prepare is real, traceable, and yours. We do not fabricate, inflate, or backdate employment histories."
+            "label": "真实材料",
+            "body": "我们协助准备的每份工作记录、项目作品集和技能评估材料，都是真实的、可追溯的、属于您的。我们不伪造、夸大或倒填就业历史。"
           }
         ]
       }

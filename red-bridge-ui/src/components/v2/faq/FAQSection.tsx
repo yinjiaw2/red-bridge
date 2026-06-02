@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const B = {
   red: '#b11217', redLight: '#fdf0f0', redMid: '#f5d5d6', navy: '#172d5d',
@@ -54,6 +54,7 @@ function useReveal() {
 
 export default function FAQSection() {
   const t = useTranslations('v2.faq');
+  const locale = useLocale();
   const CATEGORIES = t.raw('categories') as string[];
   const FAQS_RAW = t.raw('faqs') as Record<string, FAQEntry[]>;
 
@@ -68,7 +69,7 @@ export default function FAQSection() {
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.red, display: 'block', marginBottom: 14 }}>{t('eyebrow')}</span>
           <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 36px)', fontWeight: 700, color: B.textDeep, letterSpacing: '-0.02em', margin: '0 0 12px' }}>
-            {t('heading')}{' '}<em style={{ fontStyle: 'italic', color: B.red }}>{t('headingEm')}</em>
+            {t('heading')}{' '}<em style={{ fontStyle: locale === 'zh' ? 'normal' : 'italic', color: B.red }}>{t('headingEm')}</em>
           </h2>
           <p style={{ fontSize: 15, color: B.textMuted, margin: 0, lineHeight: 1.6 }}>{t('subheading')}</p>
         </div>
