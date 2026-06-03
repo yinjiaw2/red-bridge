@@ -96,7 +96,13 @@ export default function ThreeRoutes() {
           <div style={{ background: B.red, padding: '28px 32px', color: '#fff' }}>
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', margin: '0 0 6px' }}>{content.subhead}</p>
             <h3 style={{ fontSize: 'clamp(18px, 2.8vw, 24px)', fontWeight: 700, margin: '0 0 8px', letterSpacing: '-0.02em' }}>{content.headline}</h3>
-            <p style={{ fontSize: 14.5, color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, margin: 0, maxWidth: 560 }}>{content.intro}</p>
+            <p style={{ fontSize: 14.5, color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, margin: '0 0 16px', maxWidth: 560 }}>{content.intro}</p>
+            <Link
+              href={`/${locale}${SPOKE_HREFS[active]}`}
+              style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.35)' }}
+            >
+              {t('guideLabel')}
+            </Link>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 0 }}>
@@ -140,12 +146,6 @@ export default function ThreeRoutes() {
                 <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: B.textMuted, margin: '0 0 2px' }}>{t('pathwayLabel')}</p>
                 <p style={{ fontSize: 14, fontWeight: 700, color: B.red, margin: 0 }}>{content.pathway}</p>
               </div>
-              <Link
-                href={`/${locale}${SPOKE_HREFS[active]}`}
-                style={{ fontSize: 13, fontWeight: 600, color: B.navy, textDecoration: 'none', borderBottom: `1px solid ${B.navy}`, lineHeight: 1.2, marginTop: 2 }}
-              >
-                {t('guideLabel')}
-              </Link>
             </div>
             <a
               href={ctaHref ?? `/contact?ctasrc=employer_v2_three_routes_${active}_cta&locale=${locale}`}
