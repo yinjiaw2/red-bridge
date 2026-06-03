@@ -1,27 +1,19 @@
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
-import EmployerNetworkSection from "@/components/for-employers/EmployerNetworkSection";
-import SkillsgGapSection from "@/components/for-employers/SkillGapSection";
-import EmployerProcessSection from "@/components/for-employers/EmployerProcessSection";
-import EmployerFeesSection from "@/components/for-employers/EmployerFeesSection";
-import EmployerObligationsSection from "@/components/for-employers/EmployerObligationsSection";
-import EmployerPartnershipSection from "@/components/for-employers/EmployerPartnershipSection";
-import EmployerDifferenceSection from "@/components/for-employers/EmployerDifferenceSection";
-import EmployerFaqSection from "@/components/for-employers/EmployerFaqSection";
-import EmployerEnquirySection from "@/components/for-employers/table/EmployerEnquirySection";
-import EmployerCtaSection from "@/components/for-employers/EmployerCtaSection";
-import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
+import Footer from "@/components/shared/Footer";
+import { ForEmployersHero, HiringPainPoints, ThreePhases, FeesTable, DivisionRoles } from "@/components/v2/employers/ForEmployersSections";
+import EmployerEnquirySection from "@/components/for-employers/table/EmployerEnquirySection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   return buildMetadata(
     locale,
     {
-      title: "For Employers | Hire & Sponsor Skilled Workers in Australia",
+      title: "Hire & Sponsor Skilled Migrants | 482 Visa Employer Guide | RedBridge",
       description:
-        "Partner with RedBridge to hire pre-vetted international talent, manage Standard Business Sponsorship (SBS), Labour Market Testing, and 482/186 visa nominations in Melbourne and Sydney.",
+        "RedBridge connects Melbourne employers with work-ready ICT, accounting, and marketing professionals. We manage the complete 482 sponsorship process—from standard business sponsorship to nomination and visa grant.",
       keywords: [
         "employer sponsored visa", "482 visa", "482 employer sponsored visa",
         "employer sponsorship", "sponsor visa australia 482", "tss visa",
@@ -33,31 +25,27 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     {
-      title: "雇主专区 | 招募与担保技术人才 | 红桥咨询",
+      title: "雇用并担保技术人才 | 482签证雇主指南 | 红桥咨询",
       description:
-        "与RedBridge合作，招募经核实的国际技术人才，管理标准商业担保（SBS）、劳动力市场测试及482/186签证提名。墨尔本与悉尼全覆盖。",
+        "红桥咨询为墨尔本雇主提供现成可用的ICT、会计和市场营销专业人才。我们全程管理482担保流程——从标准商业担保到提名申请，直至签证获批。",
     },
     "/for-employers",
   );
 }
 
-export default function EmployersPage() {
+export default function ForEmployersPage() {
   return (
     <>
       <NavBar />
       <main className="pt-16 md:pt-24">
-        <EmployerNetworkSection />
-        <SkillsgGapSection />
-        <EmployerProcessSection />
-        <EmployerFeesSection />
-        <EmployerObligationsSection />
-        <EmployerPartnershipSection />
-        <EmployerDifferenceSection />
-        <EmployerFaqSection />
+        <ForEmployersHero />
+        <HiringPainPoints />
+        <ThreePhases />
+        <DivisionRoles />
+        <FeesTable />
         <EmployerEnquirySection />
-        <EmployerCtaSection />
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 }

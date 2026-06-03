@@ -29,6 +29,15 @@ const nextConfig: NextConfig = {
   images: {
     minimumCacheTTL: 86400,
   },
+  async redirects() {
+    return [
+      { source: "/:locale/home-v2", destination: "/:locale", permanent: true },
+      { source: "/:locale/about-v2", destination: "/:locale/about", permanent: true },
+      { source: "/:locale/for-employers-v2", destination: "/:locale/for-employers", permanent: true },
+      { source: "/:locale/success-cases-v2", destination: "/:locale/success-cases", permanent: true },
+      { source: "/:locale/services/faq-v2", destination: "/:locale/services/faq", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

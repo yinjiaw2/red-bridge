@@ -3,19 +3,17 @@ import { getLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import NavBar from "@/components/shared/NavBar";
-import { FaqHero } from "@/components/faq/FaqHero";
-import { FaqListSection } from "@/components/faq/FaqListSection";
-import { FaqContactSection } from "@/components/faq/FaqContactSection";
 import Footer from "@/components/shared/Footer";
+import FAQSection from "@/components/v2/faq/FAQSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   return buildMetadata(
     locale,
     {
-      title: "FAQ | Visas, Sponsorship & How RedBridge Works",
+      title: "482 & 186 Visa FAQ | Employer Sponsorship Questions Answered | RedBridge",
       description:
-        "Straight answers about employer sponsorship, skills assessments, and how RedBridge works, including 482 and 186 visa questions.",
+        "Honest answers to the most common questions about the 482 TSS visa, 186 ENS transition, SAF levy, skills assessments, and employer sponsorship pathways in Australia.",
       keywords: [
         "what is 482 visa", "482 visa requirements", "482 visa conditions",
         "482 visa", "482 visa australia", "186 visa requirements", "186 visa",
@@ -25,9 +23,9 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     {
-      title: "常见问题 | 签证、担保与红桥咨询服务 | 红桥咨询",
+      title: "482与186签证常见问题解答 | 雇主担保移民FAQ | 红桥咨询",
       description:
-        "关于482、186、189、190、491签证、技能评估、雇主担保及RedBridge服务方式的直接解答。这里整理了我们最常被问到的问题。",
+        "关于482临时技术短缺签证、186雇主提名过渡、SAF征税、技能评估及澳洲雇主担保路径最常见问题的权威解答。",
     },
     "/services/faq",
   );
@@ -39,98 +37,80 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Are RedBridge Consulting job placements genuine and verified?",
+      name: "What is the minimum experience required for a 482 visa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Every employer in our network is checked before we present them to clients. We only move forward when the sponsorship status, role details, and business context have been verified well enough to stand up to scrutiny.",
+        text: "You need at least 1 year of full-time, paid work experience in your nominated ANZSCO occupation within the last 5 years. The experience must be verifiable and in a role that matches your nominated occupation.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the difference between a 482 and 186 employer sponsored visa?",
+      name: "What if I don't have enough experience for a 482 visa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The 482 is a temporary employer-sponsored visa. The 186 is a permanent residency visa. Many clients start on a 482 and later transition to the 186 when the employer pathway and timing are right.",
+        text: "RedBridge's Career Launch Program places you in a verified Australian role to legally build your experience record. Once you meet the threshold, we match you with a 482 sponsor.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does the 482 employer sponsored visa process take in Australia?",
+      name: "Can my employer pass the SAF levy cost to me?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The 482 process usually falls somewhere between 3 and 12 months. The range depends on the employer's sponsorship status, your occupation, document readiness, and current Department processing times.",
+        text: "No. Australian law prohibits employers from passing the Skilling Australians Fund (SAF) levy to visa applicants. If any party asks you to pay it, that is illegal.",
       },
     },
     {
       "@type": "Question",
-      name: "Can international students apply without permanent residency or a job offer?",
+      name: "How do I transition from a 482 visa to permanent residency?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Some clients begin with work-experience-building routes rather than immediate PR or sponsorship routes. The Career Launch Program is built for that earlier stage.",
+        text: "After 2 years on a 482 visa with the same employer, you become eligible for the 186 Employer Nomination Scheme (TRT stream). RedBridge tracks this milestone from day one and manages the transition process.",
       },
     },
     {
       "@type": "Question",
-      name: "How much does skilled migration cost in Australia?",
+      name: "How much does the 482 sponsorship process cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Your initial consultation with RedBridge is free. Program costs vary by route and scope, and government fees sit separately from our service fees. Costs are documented clearly before you commit.",
+        text: "Your initial consultation with RedBridge is free. Government fees, the SAF levy (paid by employer), and our service fees are itemised clearly before you commit. We use milestone-based payment structures.",
       },
     },
     {
       "@type": "Question",
-      name: "Are there payment plans available for migration consultancy fees?",
+      name: "Is there an age limit for the 186 Direct Entry visa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We use milestone-based instalment structures rather than demanding full payment upfront. The exact timing depends on the service and the pathway being delivered.",
+        text: "Yes. You must be under 45 years of age at the time of visa application for the 186 ENS Direct Entry stream.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the skills assessment success guarantee?",
+      name: "Which occupations are eligible for employer sponsorship?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If you complete the relevant program and your skills assessment is not successful, we continue supporting you at no additional cost until the assessment requirement is properly resolved.",
+        text: "Occupations must appear on the Medium and Long-term Strategic Skills List (MLTSSL) or relevant skilled occupation list. RedBridge confirms your occupation eligibility during the free assessment.",
       },
     },
     {
       "@type": "Question",
-      name: "Which visa pathway is right for my occupation and situation?",
+      name: "Can my family members be included in my employer-sponsored visa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Recent graduates needing local experience should consider the Career Launch Program. Those with employer interest should look at the 482/186 Employer Sponsored pathway. For independent points-based PR, the 189 Pathway applies. For a state-backed points boost, the 190 Pathway is ideal. For regional migration with extra points, the 491 Pathway applies. Book the free consultation for a tailored assessment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who handles visa lodgement and migration legal matters?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "All formal migration advice and visa lodgements are handled by Insight Idea, our licensed legal partner. RedBridge handles the career, pathway, and employer side of the work.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Where is RedBridge Consulting located and do you offer online consultations?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our office is at Level 9, Tower 3, 18-38 Siddeley Street, Docklands VIC 3008, and yes, we also offer online consultations for clients who are interstate, offshore, or simply prefer remote meetings.",
+        text: "Yes. Eligible family members — including your spouse and dependent children — can be included as secondary applicants on both the 482 TSS and 186 ENS visa applications.",
       },
     },
   ],
 };
 
-export default function FAQPageRoute() {
+export default function FAQPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
       <NavBar />
-      <main className="min-h-full bg-background pt-16 md:pt-24">
-        <FaqHero />
-        <FaqListSection />
-        <FaqContactSection />
+      <main className="pt-16 md:pt-24">
+        <FAQSection />
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 }

@@ -2,24 +2,24 @@ import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
 import NavBar from "@/components/shared/NavBar";
-import HeroSection from "@/components/home/HeroSection";
-import TrustSafetySection from "@/components/home/TrustSafetySection";
-import SuccessTicker from "@/components/home/OutcomeTickerSection";
-import ComparisonSection from "@/components/home/ComparisonSection";
-import EmployerNetwork from "@/components/home/EmployerNetworkSection";
-import VideoSection from "@/components/home/VideoSection";
 import Footer from "@/components/shared/Footer";
-import { ContactSection } from "@/components/home/ContactSection";
+import HomeHero from "@/components/v2/home/HomeHero";
+import HomeTicker from "@/components/v2/home/HomeTicker";
+import HomeEmployerNetwork from "@/components/v2/home/HomeEmployerNetwork";
+import V2TrustSection from "@/components/v2/home/V2TrustSection";
+import V2WhySection from "@/components/v2/home/V2WhySection";
+import V2ComparisonSection from "@/components/v2/home/V2ComparisonSection";
+import V2VideoSection from "@/components/v2/home/V2VideoSection";
+import PageCTA from "@/components/v2/shared/PageCTA";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   return buildMetadata(
     locale,
     {
-      title:
-        "RedBridge Consulting | Australia Career and Recruitment Specialists",
+      title: "RedBridge Consulting | Employer Sponsored Visa & Career Placement Australia",
       description:
-        "Get placed with verified employers. Gain the right experience. Move from study to 482 visa and PR with confidence. Melbourne & Sydney's leading migration and career consultancy.",
+        "Melbourne-based migration and career consultancy specialising in 482 employer sponsorship, 186 PR pathways, and skilled migration. Matched to verified employers in ICT, accounting, and marketing.",
       keywords: [
         "482 visa australia", "employer sponsored visa", "employer sponsorship",
         "visa sponsorship", "migration services", "immigration consulting",
@@ -29,9 +29,9 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     {
-      title: "红桥咨询 | 澳洲职业与招聘专家",
+      title: "红桥咨询 | 澳洲雇主担保签证与职业发展专家",
       description:
-        "对接真实雇主，积累关键经验。从留学毕业求职到PR路径，走得更稳、更清晰。墨尔本与悉尼专业移民及职业咨询机构。",
+        "墨尔本专业移民与职业咨询机构。对接经核实的482雇主担保，技能评估支持，482→186永居全程规划。覆盖ICT、会计与市场营销方向。",
     },
     "/",
   );
@@ -41,15 +41,15 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main className="pt-16 md:pt-24">
-        <HeroSection />
-        <VideoSection />
-        <TrustSafetySection />
-        <SuccessTicker />
-        <ComparisonSection />
-        <EmployerNetwork />
-
-        <ContactSection />
+      <main>
+        <HomeHero />
+        <HomeTicker />
+        <HomeEmployerNetwork />
+        <V2TrustSection />
+        <V2WhySection />
+        <V2ComparisonSection />
+        <V2VideoSection />
+        <PageCTA />
         <Footer />
       </main>
     </>
