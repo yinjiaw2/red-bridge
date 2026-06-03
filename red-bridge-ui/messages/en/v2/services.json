@@ -100,6 +100,7 @@
         "approachLabel": "RedBridge's Approach",
         "timelineLabel": "Timeline",
         "pathwayLabel": "Pathway",
+        "guideLabel": "Full pathway guide →",
         "honestNoteLabel": "Honest note: ",
         "siddeleylinkLabel": "Career Launch Recruitment Partner: ",
         "siddeleyNote": "Career Launch placements are managed through Siddeley Talent Link, a specialist recruitment company within the Siddeley Group, the same group that operates RedBridge Consulting.",
@@ -114,7 +115,7 @@
             "headline": "You're 1 Year Away From 482 Eligibility",
             "subhead": "Foundation Stage: Career Launch First",
             "intro": "You don't qualify for a 482 visa yet, and any agency that suggests otherwise is misleading you. The good news: one year of genuine, verifiable Australian work experience changes everything.",
-            "timeline": "12–18 months to 482 readiness",
+            "timeline": "12–24 months to 482 readiness",
             "pathway": "Career Launch → 482 → 186",
             "honestNote": "This is a longer path, but it's the right one. We would rather tell you this now and build your case properly than take your money for a visa you won't receive.",
             "ctaLabel": "Ask about Career Launch",
@@ -125,7 +126,7 @@
             ],
             "steps": [
               { "num": "01", "label": "Enrol in Career Launch",    "detail": "Gain 12 months of paid, structured work with our partner employers" },
-              { "num": "02", "label": "Skills assessment",          "detail": "ACS (ICT) or AMI (Marketing). Your consultant confirms if required for your occupation" },
+              { "num": "02", "label": "Skills assessment",          "detail": "ACS (ICT), AMI (Marketing), VETASSES, or Engineers Australia (EA). English language requirement applies. Your consultant confirms the relevant body and whether a formal assessment is required for your occupation." },
               { "num": "03", "label": "Match to 482 sponsor",       "detail": "We transition you directly from Career Launch into employer sponsorship" }
             ]
           },
@@ -140,7 +141,8 @@
             "requirements": [
               { "label": "Minimum 1 year full-time experience",     "detail": "In your nominated ANZSCO occupation" },
               { "label": "Occupation on CSOL or MLTSSL",           "detail": "Your consultant confirms your specific occupation" },
-              { "label": "Skills assessment (where required)",      "detail": "ACS, AMI, CAANZ, confirmed at free assessment" }
+              { "label": "Skills assessment (where required)",      "detail": "ACS, AMI, CAANZ, or VETASSES — confirmed at free assessment" },
+              { "label": "English language requirement met",         "detail": "IELTS, PTE, or equivalent — your consultant confirms the applicable benchmark" }
             ],
             "steps": [
               { "num": "01", "label": "Free eligibility assessment",        "detail": "We confirm your occupation, experience, and employer match potential" },
@@ -159,8 +161,9 @@
             "ctaLabel": "Check My 186 DE Eligibility",
             "requirements": [
               { "label": "3 years full-time recent experience",        "detail": "In the nominated ANZSCO occupation within the past 5 years" },
-              { "label": "Completed skills assessment",                "detail": "CAANZ, ACS, AMI, or Engineers Australia depending on occupation" },
-              { "label": "Employer willing to nominate for 186",       "detail": "Must hold current SBS and nominate directly for permanent residency" }
+              { "label": "Completed skills assessment",                "detail": "CAANZ, ACS, AMI, or Engineers Australia (EA) — confirmed at your assessment" },
+              { "label": "Employer willing to nominate for 186",       "detail": "Must hold current SBS and nominate directly for permanent residency" },
+              { "label": "English language requirement met",           "detail": "IELTS, PTE, or equivalent — confirmed at your free assessment" }
             ],
             "steps": [
               { "num": "01", "label": "Skills assessment review",              "detail": "We audit your existing assessment, or help you apply if not yet done" },
@@ -172,24 +175,54 @@
       },
       "successStrip": {
         "label": "Client Outcomes",
+        "storyCta": "Read full story →",
         "stories": [
           {
             "initials": "M.L.",
             "role": "Marketing Graduate",
             "tag": "Career Launch → 482",
+            "href": "/services/employer-pathway/career-launch-program",
             "quote": "I had the degree but zero full-time experience. RedBridge placed me in a structured role, handled my skills assessment, and had me 482-sponsored inside 14 months."
           },
           {
             "initials": "J.W.",
             "role": "ICT Support Analyst · 2 years exp",
             "tag": "482 Employer Match",
+            "href": "/services/employer-pathway/482-visa-employer-matching",
             "quote": "I qualified on paper but no employer wanted to deal with the sponsorship admin. RedBridge matched me with a verified sponsor in three weeks. 482 approved five months later."
           },
           {
             "initials": "S.K.",
             "role": "Senior Accountant · 4 years exp",
             "tag": "186 Direct Entry PR",
+            "href": "/services/employer-pathway/186-direct-entry-sponsorship",
             "quote": "I didn't need a 482. RedBridge found an employer ready to nominate directly for permanent residency. 186 PR granted eleven months from first contact."
+          }
+        ]
+      },
+      "spokeNavCards": {
+        "eyebrow": "Explore the Full Guide",
+        "cards": [
+          {
+            "tag": "< 1 Year Experience",
+            "title": "Career Launch Program",
+            "desc": "Build the verifiable work experience record you need before a 482 sponsorship application is viable.",
+            "cta": "Read the full guide →",
+            "href": "/services/employer-pathway/career-launch-program"
+          },
+          {
+            "tag": "1–3 Years Experience",
+            "title": "482 Employer Matching",
+            "desc": "You qualify. Let us connect you to a verified employer and manage the entire sponsorship process.",
+            "cta": "Read the full guide →",
+            "href": "/services/employer-pathway/482-visa-employer-matching"
+          },
+          {
+            "tag": "3+ Years Experience",
+            "title": "186 Direct Entry",
+            "desc": "Skip the temporary visa. We identify employers ready to nominate you directly for permanent residency.",
+            "cta": "Read the full guide →",
+            "href": "/services/employer-pathway/186-direct-entry-sponsorship"
           }
         ]
       },

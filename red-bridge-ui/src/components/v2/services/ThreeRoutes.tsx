@@ -13,6 +13,12 @@ const B = {
 
 const CAREER_LAUNCH_HREF = 'https://sidtalentlink.com';
 
+const SPOKE_HREFS: Record<string, string> = {
+  under1: '/services/employer-pathway/career-launch-program',
+  one3: '/services/employer-pathway/482-visa-employer-matching',
+  three: '/services/employer-pathway/186-direct-entry-sponsorship',
+};
+
 type TabId = 'under1' | 'one3' | 'three';
 
 type ContentEntry = {
@@ -125,7 +131,7 @@ export default function ThreeRoutes() {
           </div>
 
           <div style={{ borderTop: `1px solid ${B.divider}`, padding: '18px 32px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'space-between', background: '#f4f4f5' }}>
-            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', alignItems: 'center' }}>
               <div>
                 <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: B.textMuted, margin: '0 0 2px' }}>{t('timelineLabel')}</p>
                 <p style={{ fontSize: 14, fontWeight: 700, color: B.textDeep, margin: 0 }}>{content.timeline}</p>
@@ -134,6 +140,12 @@ export default function ThreeRoutes() {
                 <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: B.textMuted, margin: '0 0 2px' }}>{t('pathwayLabel')}</p>
                 <p style={{ fontSize: 14, fontWeight: 700, color: B.red, margin: 0 }}>{content.pathway}</p>
               </div>
+              <Link
+                href={`/${locale}${SPOKE_HREFS[active]}`}
+                style={{ fontSize: 13, fontWeight: 600, color: B.navy, textDecoration: 'none', borderBottom: `1px solid ${B.navy}`, lineHeight: 1.2, marginTop: 2 }}
+              >
+                {t('guideLabel')}
+              </Link>
             </div>
             <a
               href={ctaHref ?? `/contact?ctasrc=employer_v2_three_routes_${active}_cta&locale=${locale}`}

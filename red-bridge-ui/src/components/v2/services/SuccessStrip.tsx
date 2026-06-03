@@ -1,16 +1,19 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 
 const B = {
   navy: '#172d5d', amber: '#efb64f', bg: '#f4f4f5', cream: '#ffffff',
   divider: '#e4e4e7', textDeep: '#18181b', textBody: '#27272a', textMuted: '#71717a',
+  red: '#b11217',
 };
 
-type Story = { initials: string; role: string; tag: string; quote: string };
+type Story = { initials: string; role: string; tag: string; quote: string; href: string };
 
 export default function SuccessStrip() {
   const t = useTranslations('v2.services.successStrip');
+  const locale = useLocale();
   const stories = t.raw('stories') as Story[];
 
   return (
@@ -21,9 +24,10 @@ export default function SuccessStrip() {
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
           {stories.map((s) => (
-            <div
+            <Link
               key={s.initials}
-              style={{ background: B.cream, border: `1px solid ${B.divider}`, borderRadius: 16, padding: '24px 24px 20px', display: 'flex', flexDirection: 'column', gap: 14 }}
+              href={`/${locale}${s.href}`}
+              style={{ background: B.cream, border: `1px solid ${B.divider}`, borderRadius: 16, padding: '24px 24px 20px', display: 'flex', flexDirection: 'column', gap: 14, textDecoration: 'none' }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: '50%', background: B.navy, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, flexShrink: 0, letterSpacing: '0.02em' }}>
@@ -39,7 +43,8 @@ export default function SuccessStrip() {
               <p style={{ fontSize: 14, color: B.textBody, lineHeight: 1.7, margin: 0, fontStyle: 'italic' }}>
                 "{s.quote}"
               </p>
-            </div>
+              <span style={{ fontSize: 12.5, fontWeight: 700, color: B.red, marginTop: 2 }}>{t('storyCta')}</span>
+            </Link>
           ))}
         </div>
       </div>

@@ -170,6 +170,7 @@
         "approachLabel": "RedBridge的方法",
         "timelineLabel": "时间线",
         "pathwayLabel": "路径",
+        "guideLabel": "完整路径指南 →",
         "honestNoteLabel": "坦诚说明：",
         "siddeleylinkLabel": "Career Launch招募合作伙伴：",
         "siddeleyNote": "Career Launch实习由Siddeley Group旗下专业招聘公司Siddeley Talent Link管理，与RedBridge Consulting同属一个集团。",
@@ -196,7 +197,7 @@
             "headline": "距482资格，您还差1年",
             "subhead": "基础阶段：先参加Career Launch",
             "intro": "您目前尚不具备482签证资格，任何中介如果另有说法，都是在误导您。好消息是：一年真实可核实的澳大利亚工作经验，将改变一切。",
-            "timeline": "12–18个月后具备482申请条件",
+            "timeline": "12–24个月后具备482申请条件",
             "pathway": "Career Launch → 482 → 186",
             "honestNote": "这是一条较长的路，但也是正确的路。我们宁愿现在告诉您这些，妥善建立您的案件，也不愿为一个您无法获得的签证收取费用。",
             "ctaLabel": "了解Career Launch",
@@ -223,7 +224,7 @@
               {
                 "num": "02",
                 "label": "技能评估",
-                "detail": "ACS（ICT）或AMI（市场营销）。您的顾问确认是否为您的职业所必需"
+                "detail": "ACS（ICT）、AMI（市场营销）、VETASSES或Engineers Australia（EA）。英语语言要求适用。您的顾问确认相关评估机构及您的职业是否需要完成正式技能评估。"
               },
               {
                 "num": "03",
@@ -251,7 +252,11 @@
               },
               {
                 "label": "技能评估（如适用）",
-                "detail": "ACS、AMI、CAANZ，在免费评估中确认"
+                "detail": "ACS、AMI、CAANZ或VETASSES——在免费评估中确认"
+              },
+              {
+                "label": "英语语言要求已达标",
+                "detail": "雅思、PTE或同等证书——您的顾问确认具体适用要求"
               }
             ],
             "steps": [
@@ -292,11 +297,15 @@
               },
               {
                 "label": "已完成技能评估",
-                "detail": "根据职业，可为CAANZ、ACS、AMI或Engineers Australia"
+                "detail": "根据职业，可为CAANZ、ACS、AMI或Engineers Australia（EA）——在评估中确认"
               },
               {
                 "label": "愿意为186提名的雇主",
                 "detail": "必须持有当前SBS并直接提名永久居留"
+              },
+              {
+                "label": "英语语言要求已达标",
+                "detail": "雅思、PTE或同等证书——在免费评估中确认具体要求"
               }
             ],
             "steps": [
@@ -321,24 +330,54 @@
       },
       "successStrip": {
         "label": "客户成果",
+        "storyCta": "阅读完整案例 →",
         "stories": [
           {
             "initials": "M.L.",
             "role": "市场营销应届毕业生",
             "tag": "职业起航 → 482签证",
+            "href": "/services/employer-pathway/career-launch-program",
             "quote": "我有学位但没有全职工作经验。红桥咨询为我安置了结构化岗位，完成了技能评估，14个月内为我拿到了482担保。"
           },
           {
             "initials": "J.W.",
             "role": "ICT支持分析师 · 2年经验",
             "tag": "482雇主匹配",
+            "href": "/services/employer-pathway/482-visa-employer-matching",
             "quote": "我在纸面上符合资格，但没有雇主愿意处理担保手续。红桥咨询三周内为我匹配到经核实的担保方，五个月后482签证获批。"
           },
           {
             "initials": "S.K.",
             "role": "高级会计师 · 4年经验",
             "tag": "186直接入境永居",
+            "href": "/services/employer-pathway/186-direct-entry-sponsorship",
             "quote": "我根本不需要482签证。红桥咨询找到了一家愿意直接为永居提名的雇主，首次联系后11个月，186永居获批。"
+          }
+        ]
+      },
+      "spokeNavCards": {
+        "eyebrow": "深入了解完整指南",
+        "cards": [
+          {
+            "tag": "不足1年经验",
+            "title": "职业起航计划",
+            "desc": "在482签证担保申请可行之前，先建立可核实的工作经历记录。",
+            "cta": "阅读完整指南 →",
+            "href": "/services/employer-pathway/career-launch-program"
+          },
+          {
+            "tag": "1–3年经验",
+            "title": "482雇主匹配",
+            "desc": "您已符合资格。让我们为您对接经核实的担保雇主，并全程管理担保流程。",
+            "cta": "阅读完整指南 →",
+            "href": "/services/employer-pathway/482-visa-employer-matching"
+          },
+          {
+            "tag": "3年以上经验",
+            "title": "186直接入境",
+            "desc": "跳过临时签证。我们为您寻找愿意直接为永居提名的雇主。",
+            "cta": "阅读完整指南 →",
+            "href": "/services/employer-pathway/186-direct-entry-sponsorship"
           }
         ]
       },
