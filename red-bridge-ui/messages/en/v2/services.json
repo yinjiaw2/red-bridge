@@ -170,6 +170,29 @@
           }
         }
       },
+      "successStrip": {
+        "label": "Client Outcomes",
+        "stories": [
+          {
+            "initials": "M.L.",
+            "role": "Marketing Graduate",
+            "tag": "Career Launch → 482",
+            "quote": "I had the degree but zero full-time experience. RedBridge placed me in a structured role, handled my skills assessment, and had me 482-sponsored inside 14 months."
+          },
+          {
+            "initials": "J.W.",
+            "role": "ICT Support Analyst · 2 years exp",
+            "tag": "482 Employer Match",
+            "quote": "I qualified on paper but no employer wanted to deal with the sponsorship admin. RedBridge matched me with a verified sponsor in three weeks. 482 approved five months later."
+          },
+          {
+            "initials": "S.K.",
+            "role": "Senior Accountant · 4 years exp",
+            "tag": "186 Direct Entry PR",
+            "quote": "I didn't need a 482. RedBridge found an employer ready to nominate directly for permanent residency. 186 PR granted eleven months from first contact."
+          }
+        ]
+      },
       "whatWeDo": {
         "eyebrow": "Transparency",
         "heading": "What RedBridge Does",

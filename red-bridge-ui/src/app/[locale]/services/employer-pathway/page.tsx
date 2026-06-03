@@ -9,6 +9,7 @@ import PaymentMilestones from "@/components/v2/services/PaymentMilestones";
 import WhatWeDoSection from "@/components/v2/services/WhatWeDoSection";
 import IndustryNetwork from "@/components/v2/services/IndustryNetwork";
 import PageCTA from "@/components/v2/shared/PageCTA";
+import SuccessStrip from "@/components/v2/services/SuccessStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 const faqSchema = {
@@ -124,6 +125,7 @@ export default function EmployerPathwayPage() {
       <main className="pt-16 md:pt-24">
         <EmployerPathwayHero />
         <ThreeRoutes />
+        <SuccessStrip />
         <WhatWeDoSection />
         <IndustryNetwork />
         <PaymentMilestones />

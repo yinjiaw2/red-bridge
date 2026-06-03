@@ -87,6 +87,32 @@ export default function SpokeLayout({
         </div>
       </section>
 
+      {/* Case Study */}
+      <section style={{ background: B.bg, padding: '72px 24px' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto' }}>
+          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.textMuted, margin: '0 0 24px' }}>{t('caseStudyLabel')}</p>
+          <div style={{ background: B.cream, border: `1px solid ${B.divider}`, borderRadius: 16, padding: '28px 32px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
+              <div style={{ width: 48, height: 48, borderRadius: '50%', background: B.navy, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, flexShrink: 0, letterSpacing: '0.02em' }}>
+                {t('caseStudyInitials')}
+              </div>
+              <div>
+                <p style={{ fontSize: 14, fontWeight: 700, color: B.textDeep, margin: '0 0 5px' }}>{t('caseStudyRole')}</p>
+                <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.05em', color: B.amber, background: B.navy, borderRadius: 4, padding: '2px 7px', display: 'inline-block' }}>
+                  {t('caseStudyTimeline')}
+                </span>
+              </div>
+            </div>
+            <p style={{ fontSize: 13, color: B.textMuted, lineHeight: 1.65, margin: '0 0 14px', fontStyle: 'italic' }}>
+              "{t('caseStudyChallenge')}"
+            </p>
+            <p style={{ fontSize: 15, color: B.textBody, lineHeight: 1.7, margin: 0, fontWeight: 600 }}>
+              "{t('caseStudyQuote')}"
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Requirements + Timeline */}
       <section style={{ background: B.bg, padding: '72px 24px' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, alignItems: 'start' }}>
