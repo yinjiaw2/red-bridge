@@ -1,0 +1,109 @@
+{
+  "spokes": {
+    "careerLaunch": {
+      "eyebrow": "482签证无经验路径",
+      "heading": "还没有经验？",
+      "headingEm": "不是死路。",
+      "subheading": "482签证要求在提名职业中拥有2年经过核实的有薪全职工作经验。大多数应届毕业生、度假打工者和转行人士都不满足条件。我们的职业起航计划为您提供合法、有结构的方式来积累所需经验。",
+      "problemLabel": "为什么您目前被锁在门外",
+      "problemBody": "没有2年的岗位相关工作经验，任何诚实的移民代理都无法为您推荐直接申请482签证的路径。忽视此要求的中介机构，只会让您面临拒签风险，并损失不菲的申请费用。",
+      "solutionLabel": "职业起航——经验过渡方案",
+      "solutionBody": "红桥咨询将您安置于经过核实的澳洲企业中，从事有薪酬的结构化岗位。您在积累工作经历的同时，我们同步准备您的技能评估——当2年节点到来时，您将以完备的材料直接进入482担保申请流程。",
+      "stepsLabel": "具体流程",
+      "steps": [
+        { "num": "01", "label": "免费资格评估", "detail": "我们确认您的职业、相关技能评估机构，以及在482申请可行之前您还需要积累多少工作经验。" },
+        { "num": "02", "label": "结构化实习安置", "detail": "在经核实的澳洲企业中担任您提名ANZSCO职业的有薪职位，为期12个月，有据可查且在签证申请时经得起审查。" },
+        { "num": "03", "label": "技能评估准备", "detail": "ACS、AMI或CAANZ——我们在您工作期间同步准备并递交您的技能评估，确保所有材料在关键节点前到位。" },
+        { "num": "04", "label": "482雇主匹配", "detail": "一旦您的工作经验核实完毕且技能评估通过，我们将把您介绍给我们核实过的482担保雇主网络。" }
+      ],
+      "requirementsLabel": "适合人群",
+      "requirements": [
+        { "label": "持打工度假签证、毕业生签证或学生签证" },
+        { "label": "拥有ICT、会计或市场营销相关学位或资质" },
+        { "label": "岗位相关工作经验不足2年" },
+        { "label": "目标是通过482雇主担保在澳洲长期发展" }
+      ],
+      "timelineLabel": "预计时间线",
+      "timeline": "从首次评估到482签证获批：约18至24个月",
+      "honestNoteLabel": "诚实提示：",
+      "honestNote": "如果有中介承诺您凭借极少经验在几周内拿到482签证，他们要么是在欺骗您，要么是打算提交一份站不住脚的申请材料。这条路需要时间——这不是缺陷，而正是它可靠的原因。",
+      "cta": "免费确认我的资格",
+      "backLink": "← 返回雇主担保签证总览",
+      "relatedLabel": "其他雇主担保路径",
+      "related": [
+        { "label": "1–3年经验：寻找482担保雇主", "href": "/services/employer-pathway/482-visa-employer-matching" },
+        { "label": "3年以上经验：186直接入境永居", "href": "/services/employer-pathway/186-direct-entry-sponsorship" }
+      ]
+    },
+    "employerMatching": {
+      "eyebrow": "在澳洲寻找482签证担保雇主",
+      "heading": "您已符合资格。",
+      "headingEm": "找到担保方才是难题。",
+      "subheading": "拥有1至3年相关职业经验后，您在法律层面已满足482 TSS签证的申请条件。真正的障碍在于：大多数澳洲企业不愿独自处理SBS申请、SAF征税、提名材料以及移民局审理的复杂流程。",
+      "problemLabel": "担保的壁垒",
+      "problemBody": "即使雇主有意聘用您，一旦面对完整的担保流程——标准商业担保申请、劳动力市场测试证明、提名表格、SAF征税支付与签证材料管理——大多数HR团队都会望而却步，因为他们既没有时间，也缺乏相关知识。",
+      "solutionLabel": "您的雇主，我们的流程",
+      "solutionBody": "红桥咨询通过我们持牌移民代理合作方Insight Idea，为您的雇主全程管理担保流程。我们负责SBS申请、提名和签证申请。您的雇主获得一位经过筛选、随时可用的人才；您则获得一位已完成合规设置的担保方。",
+      "stepsLabel": "匹配流程",
+      "steps": [
+        { "num": "01", "label": "档案评估", "detail": "我们确认您的职业、工作经历、技能评估状态和英语要求，并给出诚实的可行性评估。" },
+        { "num": "02", "label": "雇主对接", "detail": "我们将您的档案与我们网络中在您职业方向有招聘需求且愿意提供482担保的经核实雇主进行匹配。" },
+        { "num": "03", "label": "全程担保管理", "detail": "SBS、提名及签证申请——均由Insight Idea全程管理。您的雇主无需独自与移民局周旋。" },
+        { "num": "04", "label": "186 TRT规划", "detail": "从第一天起，我们就追踪2年工作节点，届时您将具备申请186雇主提名永居签证的资格。一切有据可查，不留遗漏。" }
+      ],
+      "requirementsLabel": "最低要求",
+      "requirements": [
+        { "label": "提名ANZSCO职业1年以上全职工作经验" },
+        { "label": "技能评估已完成或正在进行中（ACS、AMI、CAANZ、EA）" },
+        { "label": "职业列于MLTSSL或相关技术职业清单" },
+        { "label": "满足英语语言要求（雅思、PTE或同等认可证书）" }
+      ],
+      "timelineLabel": "预计时间线",
+      "timeline": "482签证获批：3至12个月 · 186 TRT资格节点：2年",
+      "honestNoteLabel": "关于SAF征税：",
+      "honestNote": "澳洲法律禁止雇主将SAF征税费用转嫁给签证申请人。如有任何一方要求您支付此费用，属于违法行为。我们确保网络中的每一位雇主都清楚了解这一规定。",
+      "cta": "免费评估，立即匹配雇主",
+      "backLink": "← 返回雇主担保签证总览",
+      "relatedLabel": "其他雇主担保路径",
+      "related": [
+        { "label": "不足1年经验：职业起航计划", "href": "/services/employer-pathway/career-launch-program" },
+        { "label": "3年以上经验：186直接入境永居", "href": "/services/employer-pathway/186-direct-entry-sponsorship" }
+      ]
+    },
+    "directEntry": {
+      "eyebrow": "186直接入境——永久居留",
+      "heading": "跳过临时签证。",
+      "headingEm": "直达永居。",
+      "subheading": "如果您在符合条件的职业中拥有3年以上近期全职工作经验，并找到合适的雇主，您可能根本不需要先申请482签证。186直接入境流可帮助您从技术专业人士直接成为澳大利亚永久居民。",
+      "problemLabel": "为什么大多数顾问不推荐这条路",
+      "problemBody": "186直接入境流比482签证更难操作——证据要求更高、职业匹配要求更严格，技能评估也必须无懈可击。许多咨询机构即使对符合DE条件的客户也默认推荐482，因为482对代理来说更简单——但对您来说未必更好。",
+      "solutionLabel": "高端职位安置，永居结果保障",
+      "solutionBody": "红桥咨询会在推荐186 DE之前，真正评估您是否符合条件。如果符合，我们将为您对接网络中具备能力且愿意直接提名永居签证的雇主，并通过Insight Idea端到端管理整个流程。",
+      "stepsLabel": "186 DE申请流程",
+      "steps": [
+        { "num": "01", "label": "资格全面审查", "detail": "职业核查、3年工作经验核实、年龄评估（45岁以下）及技能评估状态审查——在启动任何流程之前，我们先确认DE流是否真正适合您。" },
+        { "num": "02", "label": "技能评估", "detail": "如果您的技能评估尚未完成，我们将在协助您寻找雇主的同时，协调ACS、AMI、CAANZ或EA的提交工作。" },
+        { "num": "03", "label": "DE提名雇主匹配", "detail": "我们在网络中寻找愿意直接提名186永居签证的雇主——这与482担保谈判性质不同，需要不同的准备和对话策略。" },
+        { "num": "04", "label": "186签证申请", "detail": "提名及签证申请由我们的持牌移民代理合作方Insight Idea（MARN 1467870）提交并全程管理。" }
+      ],
+      "requirementsLabel": "186 DE适用人群",
+      "requirements": [
+        { "label": "提名ANZSCO职业近期3年以上全职工作经验" },
+        { "label": "已完成技能评估（ACS、AMI、CAANZ、EA）" },
+        { "label": "职业列于中长期战略技术清单（MLTSSL）" },
+        { "label": "签证申请时年龄不满45周岁" }
+      ],
+      "timelineLabel": "预计时间线",
+      "timeline": "从技能评估完成到186签证获批：约6至18个月",
+      "honestNoteLabel": "诚实提示：",
+      "honestNote": "186 DE流仅在技能评估完整、工作经历有据可查且雇主承诺明确的情况下才适用。如果TRT流（先申请482）对您来说实际上更稳妥，我们会直接告知您。",
+      "cta": "免费确认186 DE资格",
+      "backLink": "← 返回雇主担保签证总览",
+      "relatedLabel": "其他雇主担保路径",
+      "related": [
+        { "label": "不足1年经验：职业起航计划", "href": "/services/employer-pathway/career-launch-program" },
+        { "label": "1–3年经验：寻找482担保雇主", "href": "/services/employer-pathway/482-visa-employer-matching" }
+      ]
+    }
+  }
+}

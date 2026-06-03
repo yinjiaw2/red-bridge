@@ -1,0 +1,109 @@
+{
+  "spokes": {
+    "careerLaunch": {
+      "eyebrow": "482 Visa No Experience Pathway",
+      "heading": "No Experience Yet.",
+      "headingEm": "Not a Dead End.",
+      "subheading": "The 482 visa requires 2 years of verified, paid work experience in your nominated occupation. Most fresh graduates, working holiday makers, and career changers don't have it. Our Career Launch Program gives you a legal, structured path to build it.",
+      "problemLabel": "Why You're Locked Out",
+      "problemBody": "Without 2 years of post-qualification experience, no honest migration agent can recommend the direct 482 pathway. Agencies that overlook this requirement are setting you up for rejection — and a wasted application fee.",
+      "solutionLabel": "The Career Launch Bridge",
+      "solutionBody": "RedBridge places you in a structured, paid role at a verified Australian business in your field. You build your experience record while we prepare your skills assessment — so that when the 2-year mark arrives, you walk straight into the 482 sponsorship process with everything ready.",
+      "stepsLabel": "How It Works",
+      "steps": [
+        { "num": "01", "label": "Free Eligibility Assessment", "detail": "We confirm your occupation, the relevant skills assessment body, and exactly how much experience you need before a 482 application is viable." },
+        { "num": "02", "label": "Structured Placement", "detail": "12 months in a verified Australian business in your nominated ANZSCO occupation — paid, documented, and defensible at visa lodgement." },
+        { "num": "03", "label": "Skills Assessment Preparation", "detail": "ACS, AMI, or CAANZ — we prepare and lodge your assessment alongside your placement so nothing is waiting at the finish line." },
+        { "num": "04", "label": "482 Employer Match", "detail": "Once your experience is verified and your assessment cleared, we introduce you to our network of vetted 482 sponsors." }
+      ],
+      "requirementsLabel": "Who This Is For",
+      "requirements": [
+        { "label": "Working Holiday, Graduate, or Student visa status" },
+        { "label": "Relevant degree or qualifications in ICT, Accounting, or Marketing" },
+        { "label": "Less than 2 years of post-qualification work experience" },
+        { "label": "Goal of employer sponsorship and long-term Australian residency" }
+      ],
+      "timelineLabel": "Typical Timeline",
+      "timeline": "18–24 months from first assessment to 482 visa grant",
+      "honestNoteLabel": "Honest note: ",
+      "honestNote": "If an agency promises you a 482 visa in weeks with minimal experience, they are either lying or planning to file a weak application. This path takes time. That is not a flaw — it is what makes it reliable.",
+      "cta": "Check My Eligibility — Free",
+      "backLink": "← Back to Employer Pathway",
+      "relatedLabel": "Other Employer Pathways",
+      "related": [
+        { "label": "1–3 Years Experience: Find a 482 Sponsor", "href": "/services/employer-pathway/482-visa-employer-matching" },
+        { "label": "3+ Years Experience: 186 Direct Entry PR", "href": "/services/employer-pathway/186-direct-entry-sponsorship" }
+      ]
+    },
+    "employerMatching": {
+      "eyebrow": "Find a 482 Visa Sponsor in Australia",
+      "heading": "You Qualify.",
+      "headingEm": "Finding the Sponsor is the Hard Part.",
+      "subheading": "With 1–3 years of experience in an eligible occupation, you meet the legal threshold for a 482 TSS visa. The real barrier: most Australian businesses won't handle SBS applications, SAF levy payments, nomination paperwork, and Department processing on their own.",
+      "problemLabel": "The Sponsorship Wall",
+      "problemBody": "Even employers who want to hire you will walk away when they see the complexity: Standard Business Sponsorship lodgement, Labour Market Testing evidence, nomination forms, SAF levy payments, and visa application management. Most HR teams don't have the bandwidth — or the knowledge.",
+      "solutionLabel": "Your Employer, Our Process",
+      "solutionBody": "RedBridge manages every step of the sponsorship process for your employer, through our licensed migration agent partner Insight Idea. We handle SBS lodgement, nomination, and visa application. Your employer gets a vetted, work-ready hire. You get a sponsor who is properly set up and legally protected.",
+      "stepsLabel": "How We Match You",
+      "steps": [
+        { "num": "01", "label": "Profile Assessment", "detail": "We confirm your occupation, experience record, assessment status, and English language requirement — and give you an honest viability rating." },
+        { "num": "02", "label": "Employer Introduction", "detail": "We match your profile to verified employers in our network who have roles in your occupation and are open to 482 sponsorship." },
+        { "num": "03", "label": "Full Sponsorship Management", "detail": "SBS, nomination, and visa application — all managed by Insight Idea. Your employer doesn't have to navigate the Department alone." },
+        { "num": "04", "label": "186 TRT Planning", "detail": "From day one, we track the 2-year milestone that makes you eligible for a permanent 186 Employer Nomination visa. Nothing is left to chance." }
+      ],
+      "requirementsLabel": "Minimum Requirements",
+      "requirements": [
+        { "label": "1+ year of full-time experience in your nominated ANZSCO occupation" },
+        { "label": "Skills assessment completed or in progress (ACS, AMI, CAANZ, EA)" },
+        { "label": "Occupation on the MLTSSL or relevant skilled occupation list" },
+        { "label": "English language requirement met (IELTS, PTE, or equivalent)" }
+      ],
+      "timelineLabel": "Typical Timeline",
+      "timeline": "3–12 months to 482 visa grant · 2 years to 186 TRT eligibility",
+      "honestNoteLabel": "On the SAF levy: ",
+      "honestNote": "Australian law prohibits employers from passing the SAF levy cost to visa applicants. If any party asks you to pay it, that is illegal. Every employer in our network understands this.",
+      "cta": "Match Me to an Employer — Free Assessment",
+      "backLink": "← Back to Employer Pathway",
+      "relatedLabel": "Other Employer Pathways",
+      "related": [
+        { "label": "Under 1 Year Experience: Career Launch Program", "href": "/services/employer-pathway/career-launch-program" },
+        { "label": "3+ Years Experience: 186 Direct Entry PR", "href": "/services/employer-pathway/186-direct-entry-sponsorship" }
+      ]
+    },
+    "directEntry": {
+      "eyebrow": "186 Direct Entry — Permanent Residency",
+      "heading": "Skip the Temporary Visa.",
+      "headingEm": "Go Straight to PR.",
+      "subheading": "If you have 3 or more years of recent, relevant experience in an eligible occupation — and the right employer — you may not need a 482 visa at all. The 186 Direct Entry stream offers the fastest route from skilled professional to Australian Permanent Resident.",
+      "problemLabel": "Why Most Agents Don't Offer This",
+      "problemBody": "The 186 Direct Entry stream is harder to manage than a 482 — higher evidentiary standards, stricter occupation alignment, and a skills assessment that must be airtight. Many consultancies default to 482 even for clients who qualify for DE, because 482 is simpler for the agent — not better for you.",
+      "solutionLabel": "Senior Placement. Permanent Outcome.",
+      "solutionBody": "RedBridge assesses whether you genuinely qualify for 186 DE before recommending it. If you do, we connect you to employers in our network who are willing to nominate directly for permanent residency — and we manage the process end-to-end through Insight Idea.",
+      "stepsLabel": "The 186 DE Process",
+      "steps": [
+        { "num": "01", "label": "Eligibility Audit", "detail": "Occupation check, 3-year experience verification, age assessment (under 45), and skills assessment status review — we confirm the DE stream is your correct path before anything else." },
+        { "num": "02", "label": "Skills Assessment", "detail": "If your skills assessment is not yet complete, we coordinate ACS, AMI, CAANZ, or EA submission alongside your employer search." },
+        { "num": "03", "label": "Employer Match for DE Nomination", "detail": "We identify employers in our network willing to nominate directly for a 186 permanent visa — a different conversation to 482, and one we are prepared for." },
+        { "num": "04", "label": "186 Visa Lodgement", "detail": "Nomination and visa application lodged and managed by Insight Idea, our MARN 1467870 licensed migration agent partner." }
+      ],
+      "requirementsLabel": "Who Qualifies for 186 DE",
+      "requirements": [
+        { "label": "3 years of recent, full-time experience in your nominated ANZSCO occupation" },
+        { "label": "Completed skills assessment (ACS, AMI, CAANZ, EA)" },
+        { "label": "Occupation on the Medium and Long-term Strategic Skills List (MLTSSL)" },
+        { "label": "Under 45 years of age at time of visa application" }
+      ],
+      "timelineLabel": "Typical Timeline",
+      "timeline": "6–18 months from completed skills assessment to 186 visa grant",
+      "honestNoteLabel": "Honest note: ",
+      "honestNote": "The 186 DE stream is only appropriate if your skills assessment is complete, your experience is well-documented, and your employer is committed. We will tell you clearly if the TRT stream — via 482 first — is actually the safer route for your situation.",
+      "cta": "Check My 186 DE Eligibility — Free",
+      "backLink": "← Back to Employer Pathway",
+      "relatedLabel": "Other Employer Pathways",
+      "related": [
+        { "label": "Under 1 Year Experience: Career Launch Program", "href": "/services/employer-pathway/career-launch-program" },
+        { "label": "1–3 Years Experience: Find a 482 Sponsor", "href": "/services/employer-pathway/482-visa-employer-matching" }
+      ]
+    }
+  }
+}
