@@ -13,7 +13,7 @@
       "steps": [
         { "num": "01", "label": "Free Eligibility Assessment", "detail": "We confirm your occupation, the relevant skills assessment body, and exactly how much experience you need before a 482 application is viable." },
         { "num": "02", "label": "Structured Placement", "detail": "Up to 12 months in a verified Australian business in your nominated ANZSCO occupation — paid, documented, and defensible at visa lodgement." },
-        { "num": "03", "label": "Skills Assessment Preparation", "detail": "ACS, AMI, or CAANZ — we prepare and lodge your assessment alongside your placement so nothing is waiting at the finish line." },
+        { "num": "03", "label": "Skills Assessment Preparation", "detail": "ACS, AMI, VETASSES, or CAANZ — we prepare and lodge your assessment alongside your placement so nothing is waiting at the finish line. Note: a formal skills assessment is required for certain occupations only — we confirm whether this applies to you at the eligibility stage." },
         { "num": "04", "label": "482 Employer Match", "detail": "Once your experience is verified and your assessment cleared, we introduce you to our network of vetted 482 sponsors." }
       ],
       "requirementsLabel": "Who This Is For",
