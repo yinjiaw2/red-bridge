@@ -126,7 +126,7 @@
             ],
             "steps": [
               { "num": "01", "label": "Enrol in Career Launch",    "detail": "Gain 12 months of paid, structured work with our partner employers" },
-              { "num": "02", "label": "Skills assessment",          "detail": "ACS (ICT), AMI (Marketing), VETASSES, or Engineers Australia (EA). English language requirement applies. Your consultant confirms the relevant body and whether a formal assessment is required for your occupation." },
+              { "num": "02", "label": "Skills assessment",          "detail": "ACS (ICT), AMI (Marketing), VETASSESS, or Engineers Australia (EA). English language requirement applies. Your consultant confirms the relevant body and whether a formal assessment is required for your occupation." },
               { "num": "03", "label": "Match to 482 sponsor",       "detail": "We transition you directly from Career Launch into employer sponsorship" }
             ]
           },
@@ -141,7 +141,7 @@
             "requirements": [
               { "label": "Minimum 1 year full-time experience",     "detail": "In your nominated ANZSCO occupation" },
               { "label": "Occupation on CSOL or MLTSSL",           "detail": "Your consultant confirms your specific occupation" },
-              { "label": "Skills assessment (where required)",      "detail": "ACS, AMI, CAANZ, or VETASSES — confirmed at free assessment" },
+              { "label": "Skills assessment (where required)",      "detail": "ACS, AMI, CAANZ, or VETASSESS — confirmed at free assessment" },
               { "label": "English language requirement met",         "detail": "IELTS, PTE, or equivalent — your consultant confirms the applicable benchmark" }
             ],
             "steps": [

@@ -13,7 +13,7 @@
       "steps": [
         { "num": "01", "label": "Free Eligibility Assessment", "detail": "We confirm your occupation, the relevant skills assessment body, and exactly how much experience you need before a 482 application is viable." },
         { "num": "02", "label": "Structured Placement", "detail": "Up to 12 months in a verified Australian business in your nominated ANZSCO occupation — paid, documented, and defensible at visa lodgement." },
-        { "num": "03", "label": "Skills Assessment Preparation", "detail": "ACS, AMI, VETASSES, or CAANZ — we prepare and lodge your assessment alongside your placement so nothing is waiting at the finish line. Note: a formal skills assessment is required for certain occupations only — we confirm whether this applies to you at the eligibility stage." },
+        { "num": "03", "label": "Skills Assessment Preparation", "detail": "ACS, AMI, VETASSESS, or CAANZ — we prepare and lodge your assessment alongside your placement so nothing is waiting at the finish line. Note: a formal skills assessment is required for certain occupations only — we confirm whether this applies to you at the eligibility stage." },
         { "num": "04", "label": "482 Employer Match", "detail": "Once your experience is verified and your assessment cleared, we introduce you to our network of vetted 482 sponsors." }
       ],
       "requirementsLabel": "Who This Is For",
@@ -39,7 +39,7 @@
       "faqs": [
         { "q": "Is the Career Launch placement paid?", "a": "Yes — all placements are in genuine, paid employment. There is no unpaid trial or volunteer arrangement. Your experience record must be documentable and legally valid for the 482 application to hold up." },
         { "q": "Which occupations does the Career Launch Program cover?", "a": "Currently focused on ICT, Accounting, and Marketing/Communications — the three occupation categories where RedBridge has established its employer network. We assess other occupations on a case-by-case basis." },
-        { "q": "What if I'm not sure which skills assessment body applies to me?", "a": "We confirm this at your free eligibility assessment. Not all occupations require a formal skills assessment — and for those that do, the relevant body varies: ACS for ICT, AMI for marketing, CAANZ for accounting, and VETASSES for trades and technical roles." },
+        { "q": "What if I'm not sure which skills assessment body applies to me?", "a": "We confirm this at your free eligibility assessment. Not all occupations require a formal skills assessment — and for those that do, the relevant body varies: ACS for ICT, AMI for marketing, CAANZ for accounting, and VETASSESS for trades and technical roles." },
         { "q": "Can I leave my placement early?", "a": "Your placement is structured around building a defensible 12-month experience record. Leaving early means restarting the clock. We flag this clearly before you commit so there are no surprises." }
       ],
       "backLink": "← Back to Employer Pathway",
