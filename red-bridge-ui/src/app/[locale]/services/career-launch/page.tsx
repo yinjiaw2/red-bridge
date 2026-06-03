@@ -16,6 +16,13 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Career Launch Program | Work Experience for International Graduates",
       description:
         "RedBridge's Career Launch Program helps international graduates in Australia gain verified work experience in Accounting, ICT, and Marketing, building the foundation for 482 employer sponsorship and PR.",
+      keywords: [
+        "career placement services", "job placement services", "placement services",
+        "entry-level roles", "seek sponsorship jobs", "visa sponsorship jobs",
+        "visa sponsorship jobs in australia", "career consulting", "482 visa",
+        "employer sponsored visa", "migration services", "visa sponsorship",
+        "482 visa australia",
+      ],
     },
     {
       title: "职业起航计划 | 留学生本地工作经验与482签证路径 | 红桥咨询",

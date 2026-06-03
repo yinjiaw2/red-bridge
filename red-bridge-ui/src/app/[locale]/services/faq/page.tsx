@@ -16,6 +16,13 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "FAQ | Visas, Sponsorship & How RedBridge Works",
       description:
         "Straight answers about employer sponsorship, skills assessments, and how RedBridge works, including 482 and 186 visa questions.",
+      keywords: [
+        "what is 482 visa", "482 visa requirements", "482 visa conditions",
+        "482 visa", "482 visa australia", "186 visa requirements", "186 visa",
+        "what is 186 visa", "employer sponsorship", "tss visa",
+        "skills in demand visa", "migration agent", "visa consultant",
+        "immigration consulting", "482 to pr", "visa 482", "employer sponsored visa",
+      ],
     },
     {
       title: "常见问题 | 签证、担保与红桥咨询服务 | 红桥咨询",

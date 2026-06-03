@@ -24,6 +24,11 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Subclass 491 Regional Skilled Visa | 15 Bonus Points for PR",
       description:
         "The subclass 491 regional skilled visa gives you 15 extra points toward your EOI and a clear pathway to permanent residency via subclass 191. RedBridge explains eligible areas, requirements, and trade-offs.",
+      keywords: [
+        "skills in demand visa", "migration agent", "migration services",
+        "immigration consulting", "visa consultant", "491 visa",
+        "regional skilled visa", "482 visa australia", "employer sponsored visa",
+      ],
     },
     {
       title: "491偏远地区技术签证 | 额外15分通向PR | 红桥咨询",

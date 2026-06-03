@@ -20,6 +20,13 @@ export async function generateMetadata(): Promise<Metadata> {
         "RedBridge Consulting | Australia Career and Recruitment Specialists",
       description:
         "Get placed with verified employers. Gain the right experience. Move from study to 482 visa and PR with confidence. Melbourne & Sydney's leading migration and career consultancy.",
+      keywords: [
+        "482 visa australia", "employer sponsored visa", "employer sponsorship",
+        "visa sponsorship", "migration services", "immigration consulting",
+        "career consulting", "migration agent", "visa consultant",
+        "career placement services", "job placement services", "482 visa",
+        "tss visa", "482 to pr", "482 visa to pr", "sponsorship visa australia",
+      ],
     },
     {
       title: "红桥咨询 | 澳洲职业与招聘专家",

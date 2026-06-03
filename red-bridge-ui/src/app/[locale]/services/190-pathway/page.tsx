@@ -24,6 +24,11 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Subclass 190 State Nominated Visa | Victoria Skilled Migration",
       description:
         "Apply for the Victoria subclass 190 state nomination, which adds 5 bonus points toward your Expression of Interest. RedBridge covers priority occupations, selection factors, and the full process.",
+      keywords: [
+        "skills in demand visa", "migration agent", "migration services",
+        "immigration consulting", "visa consultant", "190 visa",
+        "state nominated visa", "482 visa australia", "employer sponsored visa",
+      ],
     },
     {
       title: "190技术提名签证 | 维州州提名额外5分 | 红桥咨询",

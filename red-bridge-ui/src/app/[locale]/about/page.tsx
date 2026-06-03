@@ -18,6 +18,11 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "About Us | Australian Migration & Career Specialists",
       description:
         "RedBridge Consulting is a registered Australian migration and career placement consultancy based in Melbourne's Docklands. Meet our team and learn how we help skilled professionals reach permanent residency.",
+      keywords: [
+        "migration agent", "visa consultant", "immigration consulting",
+        "migration services", "career consulting", "career placement services",
+        "employer sponsored visa", "482 visa australia", "placement services",
+      ],
     },
     {
       title: "关于我们 | 红桥咨询",

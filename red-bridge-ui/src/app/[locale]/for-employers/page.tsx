@@ -22,6 +22,15 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "For Employers | Hire & Sponsor Skilled Workers in Australia",
       description:
         "Partner with RedBridge to hire pre-vetted international talent, manage Standard Business Sponsorship (SBS), Labour Market Testing, and 482/186 visa nominations in Melbourne and Sydney.",
+      keywords: [
+        "employer sponsored visa", "482 visa", "482 employer sponsored visa",
+        "employer sponsorship", "sponsor visa australia 482", "tss visa",
+        "skills in demand visa", "company sponsorship visa", "visa sponsorship",
+        "186 visa requirements", "186 visa", "what is 186 visa",
+        "employer nomination scheme subclass 186", "subclass 186", "visa 186",
+        "work sponsorship visa", "sponsorship visa australia",
+        "migration services", "immigration consulting",
+      ],
     },
     {
       title: "雇主专区 | 招募与担保技术人才 | 红桥咨询",

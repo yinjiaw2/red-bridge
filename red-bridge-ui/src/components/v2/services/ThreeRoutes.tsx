@@ -163,7 +163,7 @@ export default function ThreeRoutes() {
               <p style={{ fontSize: 12.5, color: B.textMuted, lineHeight: 1.6, margin: 0 }}>
                 <strong style={{ color: B.navy }}>{t('siddeleylinkLabel')}</strong>
                 {t('siddeleyNote')}{' '}
-                <Link href="/for-employers" style={{ color: B.navy, fontWeight: 600 }}>{t('siddeleyLinkText')}</Link>
+                <Link href="https://siddeleygroup-v.pages.dev/" target="_blank" rel="noopener noreferrer" style={{ color: B.navy, fontWeight: 600 }}>{t('siddeleyLinkText')}</Link>
               </p>
             </div>
           )}

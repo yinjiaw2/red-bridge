@@ -16,6 +16,11 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Success Cases | Real Migration & Career Outcomes",
       description:
         "Real stories from skilled professionals RedBridge has helped reach Australian permanent residency through employer sponsorship, 189, 190, and 491 visa pathways.",
+      keywords: [
+        "482 visa", "186 visa", "employer sponsored visa", "482 to pr",
+        "visa 482 to pr", "migration services", "employer sponsorship",
+        "visa sponsorship", "482 visa australia", "career placement services",
+      ],
     },
     {
       title: "成功案例 | 红桥咨询",

@@ -17,12 +17,14 @@ export const DEFAULT_DESCRIPTION =
 export type LocaleMeta = {
   title: string;
   description: string;
+  keywords?: string[];
 };
 
 /**
  * Builds a full Next.js Metadata object for a page in both EN and ZH.
  * EN titles flow through the root layout template (%s | RedBridge Consulting).
  * ZH titles use `absolute` to substitute 红桥咨询 as the brand suffix.
+ * keywords are EN-only (Google ignores the meta tag; Bing still reads it).
  */
 export function buildMetadata(
   locale: string,
@@ -37,6 +39,7 @@ export function buildMetadata(
   return {
     title: isZh ? { absolute: meta.title } : meta.title,
     description: meta.description,
+    ...(en.keywords && !isZh ? { keywords: en.keywords } : {}),
     alternates: {
       canonical: url,
       languages: {
