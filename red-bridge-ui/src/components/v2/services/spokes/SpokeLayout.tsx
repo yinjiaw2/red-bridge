@@ -12,6 +12,7 @@ const B = {
 
 type Step = { num: string; label: string; detail: string };
 type Req  = { label: string };
+type Faq  = { q: string; a: string };
 type Link_ = { label: string; href: string };
 
 export default function SpokeLayout({
@@ -27,6 +28,7 @@ export default function SpokeLayout({
   const locale = useLocale();
   const steps       = t.raw('steps')    as Step[];
   const reqs        = t.raw('requirements') as Req[];
+  const faqs        = t.raw('faqs')     as Faq[];
   const related     = t.raw('related')  as Link_[];
 
   return (
@@ -146,6 +148,21 @@ export default function SpokeLayout({
         </div>
       </section>
 
+      {/* FAQ */}
+      <section style={{ background: B.cream, padding: '72px 24px' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto' }}>
+          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: B.textMuted, marginBottom: 28 }}>{t('faqLabel')}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: 16 }}>
+            {faqs.map((faq) => (
+              <div key={faq.q} style={{ background: B.bg, border: `1px solid ${B.divider}`, borderRadius: 14, padding: '22px 24px' }}>
+                <p style={{ fontSize: 14, fontWeight: 700, color: B.textDeep, margin: '0 0 10px', lineHeight: 1.4 }}>{faq.q}</p>
+                <p style={{ fontSize: 13.5, color: B.textBody, lineHeight: 1.65, margin: 0 }}>{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related Spokes */}
       <section style={{ background: B.cream, padding: '56px 24px', borderTop: `1px solid ${B.divider}` }}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
@@ -168,7 +185,7 @@ export default function SpokeLayout({
       <section style={{ background: B.red, padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 600, margin: '0 auto' }}>
           <h2 style={{ fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 800, color: '#fff', margin: '0 0 20px', letterSpacing: '-0.02em' }}>
-            {t('cta')}
+            {t('ctaHeading')}
           </h2>
           <Link
             href={`/contact?ctasrc=${ctasrc}_bottom&locale=${locale}`}

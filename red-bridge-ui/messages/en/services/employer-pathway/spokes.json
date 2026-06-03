@@ -34,6 +34,14 @@
       "caseStudyQuote": "RedBridge placed me with a verified employer through the Career Launch Program. Eleven months in, my skills assessment was done and a 482 sponsor was lined up.",
       "caseStudyTimeline": "14 months · WHV → 482 grant",
       "cta": "Check My Eligibility — Free",
+      "ctaHeading": "Start Building Your 482 Eligibility",
+      "faqLabel": "Common Questions",
+      "faqs": [
+        { "q": "Is the Career Launch placement paid?", "a": "Yes — all placements are in genuine, paid employment. There is no unpaid trial or volunteer arrangement. Your experience record must be documentable and legally valid for the 482 application to hold up." },
+        { "q": "Which occupations does the Career Launch Program cover?", "a": "Currently focused on ICT, Accounting, and Marketing/Communications — the three occupation categories where RedBridge has established its employer network. We assess other occupations on a case-by-case basis." },
+        { "q": "What if I'm not sure which skills assessment body applies to me?", "a": "We confirm this at your free eligibility assessment. Not all occupations require a formal skills assessment — and for those that do, the relevant body varies: ACS for ICT, AMI for marketing, CAANZ for accounting, and VETASSES for trades and technical roles." },
+        { "q": "Can I leave my placement early?", "a": "Your placement is structured around building a defensible 12-month experience record. Leaving early means restarting the clock. We flag this clearly before you commit so there are no surprises." }
+      ],
       "backLink": "← Back to Employer Pathway",
       "relatedLabel": "Other Employer Pathways",
       "related": [
@@ -75,6 +83,14 @@
       "caseStudyQuote": "RedBridge matched me with a verified sponsor in my field within a month. They handled everything — SBS, nomination, the lot. My 482 came through in seven months.",
       "caseStudyTimeline": "7 months to 482 grant",
       "cta": "Match Me to an Employer — Free Assessment",
+      "ctaHeading": "Ready to Find Your 482 Sponsor?",
+      "faqLabel": "Common Questions",
+      "faqs": [
+        { "q": "Can my existing employer use RedBridge to sponsor me?", "a": "Yes. If you already have an employer willing to sponsor but they need help navigating the process, we can onboard them and manage SBS, nomination, and visa application through Insight Idea." },
+        { "q": "How long does employer matching typically take?", "a": "Most clients are matched within 4–8 weeks. Visa processing after SBS approval typically adds 3–9 months depending on occupation, nationality, and Department processing times." },
+        { "q": "Does my employer have to pay the SAF levy?", "a": "Yes — by Australian law, the employer must pay all SBS costs and the SAF levy. It is illegal for the employer to pass these costs to you. Every employer in our network is briefed on this before any introduction is made." },
+        { "q": "What if your network has no employer in my occupation?", "a": "We will tell you. We do not fabricate matches or introduce you to employers who aren't genuinely hiring in your field. If our current network doesn't have the right fit, we'll advise on what we can do or refer you to the appropriate resource." }
+      ],
       "backLink": "← Back to Employer Pathway",
       "relatedLabel": "Other Employer Pathways",
       "related": [
@@ -116,6 +132,14 @@
       "caseStudyQuote": "RedBridge connected me with an employer in their corporate network who was ready to nominate directly for 186. Permanent residency granted nine months after I started.",
       "caseStudyTimeline": "9 months to PR · 482 → 186 DE",
       "cta": "Check My 186 DE Eligibility — Free",
+      "ctaHeading": "Ready to Apply for 186 Direct Entry?",
+      "faqLabel": "Common Questions",
+      "faqs": [
+        { "q": "How is 186 Direct Entry different from the 186 TRT stream?", "a": "The TRT stream requires you to hold a 482 visa and work with your sponsoring employer for 2 years first. Direct Entry bypasses the temporary visa entirely — you apply for PR directly, provided you have 3 years of qualifying recent experience and a willing employer." },
+        { "q": "Can I apply from outside Australia?", "a": "Yes. The 186 Direct Entry stream can be lodged onshore or offshore. Your location at time of lodgement does not affect eligibility, though processing times may vary." },
+        { "q": "What if I turn 45 during the process?", "a": "The age limit applies at time of visa application, not nomination. If you are approaching 45, we will time the process carefully to ensure lodgement before the cut-off — this is something we monitor proactively." },
+        { "q": "Does overseas work experience count?", "a": "Yes, provided it is in your nominated ANZSCO occupation, full-time or equivalent, within the last 5 years, and properly documented. Overseas experience is accepted — but documentation standards are strict. We audit your records before lodgement." }
+      ],
       "backLink": "← Back to Employer Pathway",
       "relatedLabel": "Other Employer Pathways",
       "related": [

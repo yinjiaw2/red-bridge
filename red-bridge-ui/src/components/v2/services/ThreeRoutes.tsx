@@ -99,7 +99,7 @@ export default function ThreeRoutes() {
             <p style={{ fontSize: 14.5, color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, margin: '0 0 16px', maxWidth: 560 }}>{content.intro}</p>
             <Link
               href={`/${locale}${SPOKE_HREFS[active]}`}
-              style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.35)' }}
+              style={{ fontSize: 13, fontWeight: 700, color: B.amber, textDecoration: 'none', borderBottom: `1px solid ${B.amber}`, paddingBottom: 1 }}
             >
               {t('guideLabel')}
             </Link>
