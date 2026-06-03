@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Claude Code
+.claude/worktrees/
+
+# npm
+package-lock.json
+
+# Cloudflare / OpenNext build artifacts (red-bridge-ui)
+red-bridge-ui/.open-next/
+red-bridge-ui/.wrangler/
