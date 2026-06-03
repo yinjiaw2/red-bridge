@@ -31,11 +31,21 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // v2 → canonical (Phase 1)
       { source: "/:locale/home-v2", destination: "/:locale", permanent: true },
       { source: "/:locale/about-v2", destination: "/:locale/about", permanent: true },
       { source: "/:locale/for-employers-v2", destination: "/:locale/for-employers", permanent: true },
       { source: "/:locale/success-cases-v2", destination: "/:locale/success-cases", permanent: true },
       { source: "/:locale/services/faq-v2", destination: "/:locale/services/faq", permanent: true },
+      // employer-pathway-v2 → hub (Phase 2)
+      { source: "/:locale/services/employer-pathway-v2", destination: "/:locale/services/employer-pathway", permanent: true },
+      // deleted v1 services pages
+      { source: "/:locale/services/career-launch", destination: "/:locale/services/employer-pathway/career-launch-program", permanent: true },
+      { source: "/:locale/services/189-pathway", destination: "/:locale", permanent: true },
+      { source: "/:locale/services/190-pathway", destination: "/:locale", permanent: true },
+      { source: "/:locale/services/491-pathway", destination: "/:locale", permanent: true },
+      { source: "/:locale/services/home", destination: "/:locale/services/employer-pathway", permanent: true },
+      { source: "/:locale/services", destination: "/:locale/services/employer-pathway", permanent: true },
     ];
   },
   async headers() {

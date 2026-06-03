@@ -1,27 +1,95 @@
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
-import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
-import CTABandSection from "@/components/services/employer-pathway/CTABandSection";
-import HeroSection from "@/components/services/employer-pathway/HeroSection";
-import IndustrySection from "@/components/services/employer-pathway/IndustrySection";
-import PathwaysSection from "@/components/services/employer-pathway/PathwaysSection";
-import PaymentNodeSection from "@/components/services/employer-pathway/PaymentNodeSection";
-import PromiseSection from "@/components/services/employer-pathway/PromiseSection";
-import ReviewedBanner from "@/components/services/employer-pathway/ReviewedBanner";
-import ServiceIntroSection from "@/components/services/employer-pathway/ServiceIntroSection";
-import InsightIdeaLinkBar from "@/components/services/InsightIdeaLinkBar";
+import Footer from "@/components/shared/Footer";
+import EmployerPathwayHero from "@/components/v2/services/EmployerPathwayHero";
+import ThreeRoutes from "@/components/v2/services/ThreeRoutes";
+import PaymentMilestones from "@/components/v2/services/PaymentMilestones";
+import WhatWeDoSection from "@/components/v2/services/WhatWeDoSection";
+import IndustryNetwork from "@/components/v2/services/IndustryNetwork";
+import PageCTA from "@/components/v2/shared/PageCTA";
+import { JsonLd } from "@/components/seo/JsonLd";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the requirements for a 482 visa employer sponsorship?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "To qualify, you must have a valid job offer from an approved Australian sponsor, possess at least one year of relevant full-time work experience, and meet English language benchmarks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I get a 482 visa without 1 year of work experience?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If you don't yet meet the experience threshold, RedBridge's Career Launch Program places you in a verified Australian role to legally build your experience record before entering the 482 sponsorship process.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What happens if my 482 employer sponsorship ends?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If your employment ceases, you generally have 60 to 180 days to find a new approved sponsor, apply for a different visa type, or depart Australia.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does a 482 visa pathway lead to Australian Permanent Residency (PR)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Under the Temporary Residence Transition (TRT) stream, 482 visa holders can transition to a permanent Subclass 186 visa after working full-time with their sponsoring employer for a designated period.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who pays for the 482 visa sponsorship costs and fees?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "By Australian law, the sponsoring employer must pay all costs associated with becoming a sponsor and nominating the position. This includes the nomination fee and the Skilling Australians Fund (SAF) levy. The visa applicant can only pay for their own individual visa application charge and migration agent fees.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there an age limit for a 482 visa sponsorship?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "There is no age limit to apply for or hold a temporary Subclass 482 visa. However, if your long-term goal is Permanent Residency via the Subclass 186 TRT stream, you generally need to be under 45 years of age at the time of the PR application, unless an exemption applies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which occupations are eligible for 482 visa sponsorship?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Your occupation must be on the relevant skilled occupation list, which maps to either the Short-term, Medium and Long-term, or Regional occupation lists. RedBridge helps align your specific qualifications with current Australian labor market demands.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I include my partner or family on a 482 visa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. You can include immediate family members, such as your spouse, de facto partner, and dependent children, in your 482 visa application. Dependent partners receive full unrestricted work rights in Australia.",
+      },
+    },
+  ],
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   return buildMetadata(
     locale,
     {
-      title:
-        "482 Employer Sponsored Visa | From Work Visa to Permanent Residency",
+      title: "Employer Sponsored Visa Pathway | 482 & 186 PR | RedBridge",
       description:
-        "RedBridge connects skilled professionals with verified Australian employers for 482 TSS visa sponsorship and the 186 permanent residency pathway. Melbourne & Sydney-based placements in Accounting, ICT, and Marketing.",
+        "RedBridge matches skilled professionals to verified Australian employers for 482 TSS visa sponsorship, with a clear pathway to 186 permanent residency. Specialists in ICT, accounting, and marketing roles.",
       keywords: [
         "what is 482 visa", "what is 482 visa in australia", "482 visa",
         "482 visa australia", "482 visa requirements", "482 visa conditions",
@@ -40,34 +108,28 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     {
-      title: "482雇主担保签证 | 从工签到永居全程陪同 | 红桥咨询",
+      title: "雇主担保签证路径 | 482转186永居 | 红桥咨询",
       description:
-        "RedBridge 为技术人才对接经核实的澳洲雇主，全程陪同482临时担保及186永居路径。墨尔本与悉尼，覆盖会计、ICT及市场营销方向。",
+        "红桥咨询为技术专业人士匹配经核实的澳洲雇主，获得482临时技术担保签证，并全程规划186永久居留路径。覆盖ICT、会计和市场营销方向。",
     },
     "/services/employer-pathway",
   );
 }
 
-export default function Page() {
+export default function EmployerPathwayPage() {
   return (
     <>
+      <JsonLd data={faqSchema} />
       <NavBar />
-
-      <main className="overflow-hidden pt-[70px] md:pt-24">
-        <HeroSection />
-        <ReviewedBanner />
-
-        <PathwaysSection />
-        <ServiceIntroSection />
-        <PaymentNodeSection />
-        <IndustrySection />
-        <PromiseSection />
-
-        <InsightIdeaLinkBar />
-        <CTABandSection />
+      <main className="pt-16 md:pt-24">
+        <EmployerPathwayHero />
+        <ThreeRoutes />
+        <WhatWeDoSection />
+        <IndustryNetwork />
+        <PaymentMilestones />
+        <PageCTA />
+        <Footer />
       </main>
-
-      <Footer />
     </>
   );
 }

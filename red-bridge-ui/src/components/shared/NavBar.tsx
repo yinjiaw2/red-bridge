@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 // --- Constants ---
 
@@ -24,8 +24,6 @@ const QR_SRCS: Record<QrTarget, string> = {
 };
 
 // --- Social SVG icons ---
-
-// XiaohongshuIcon replaced by PNG logo
 
 function InstagramIcon() {
   return (
@@ -57,32 +55,29 @@ export default function NavBar() {
   const t = useTranslations();
   const locale = useLocale();
   const router = useRouter();
-
   const pathname = usePathname();
 
   const isActive = (href: string) => pathname === href;
-  const isEmployeeSponsorshipActive = pathname === "/services/employer-pathway";
+  const isEmployerSponsorshipActive =
+    pathname === "/services/employer-pathway" ||
+    pathname.startsWith("/services/employer-pathway/");
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [qrModal, setQrModal] = useState<QrTarget | null>(null);
+  const [spokeOpen, setSpokeOpen] = useState(false);
+  const [spokeExpanded, setSpokeExpanded] = useState(false);
 
-  // Close mobile menu on desktop resize
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth >= 1024) {
-        setMenuOpen(false);
-      }
+      if (window.innerWidth >= 1024) setMenuOpen(false);
     }
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Lock body scroll while mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
   const switchLocale = useCallback(() => {
@@ -94,10 +89,29 @@ export default function NavBar() {
 
   function closeAll() {
     setMenuOpen(false);
+    setSpokeExpanded(false);
   }
 
   const desktopNavLinkClass =
     "inline-flex items-center justify-center rounded-full px-2.5 py-1.5 text-sm transition-all hover:bg-primary/5 hover:text-brandred whitespace-nowrap lg:px-3";
+
+  const spokes = [
+    {
+      href: "/services/employer-pathway/career-launch-program",
+      label: t("nav.careerLaunch"),
+      sub: t("nav.careerLaunchSub"),
+    },
+    {
+      href: "/services/employer-pathway/482-visa-employer-matching",
+      label: t("nav.employerMatching"),
+      sub: t("nav.employerMatchingSub"),
+    },
+    {
+      href: "/services/employer-pathway/186-direct-entry-sponsorship",
+      label: t("nav.directEntry"),
+      sub: t("nav.directEntrySub"),
+    },
+  ];
 
   return (
     <>
@@ -105,11 +119,7 @@ export default function NavBar() {
       <header className="fixed top-0 left-0 right-0 z-50 h-16 md:h-24 bg-white shadow-sm font-(family-name:--font-geist-sans) font-semibold">
         <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto h-full px-4 sm:px-6 flex items-center justify-between gap-4">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center shrink-0"
-            onClick={closeAll}
-          >
+          <Link href="/" className="flex items-center shrink-0" onClick={closeAll}>
             <Image
               src="/rb-logo.png"
               alt="RedBridge Consulting"
@@ -121,10 +131,7 @@ export default function NavBar() {
           </Link>
 
           {/* -- Desktop navigation -- */}
-          <nav
-            aria-label={t("nav.ariaLabel")}
-            className="hidden lg:flex items-center gap-4 lg:gap-5"
-          >
+          <nav aria-label={t("nav.ariaLabel")} className="hidden lg:flex items-center gap-4 lg:gap-5">
             <ul className="flex items-center gap-1 lg:gap-2 list-none m-0 p-0">
               <li>
                 <Link
@@ -137,21 +144,43 @@ export default function NavBar() {
 
               <li>
                 <Link
-                  href="/services/employer-pathway"
-                  className={`${desktopNavLinkClass} ${isEmployeeSponsorshipActive ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
-                  onClick={closeAll}
+                  href="/about"
+                  className={`${desktopNavLinkClass} ${isActive("/about") ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
                 >
-                  {t("nav.employeeSponsorship")}
+                  {t("nav.about")}
                 </Link>
               </li>
 
-              <li>
+              {/* Employer Sponsorship — hover dropdown */}
+              <li
+                className="relative"
+                onMouseEnter={() => setSpokeOpen(true)}
+                onMouseLeave={() => setSpokeOpen(false)}
+              >
                 <Link
-                  href="/success-cases"
-                  className={`${desktopNavLinkClass} ${isActive("/success-cases") ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
+                  href="/services/employer-pathway"
+                  className={`${desktopNavLinkClass} gap-1 ${isEmployerSponsorshipActive ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
+                  onClick={closeAll}
                 >
-                  {t("nav.successCases")}
+                  {t("nav.employeeSponsorship")}
+                  <ChevronDown size={13} strokeWidth={2.5} aria-hidden className={`transition-transform duration-150 ${spokeOpen ? "rotate-180" : ""}`} />
                 </Link>
+
+                {spokeOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white border border-gray-100 rounded-xl shadow-lg py-2 min-w-[260px] z-50">
+                    {spokes.map((s) => (
+                      <Link
+                        key={s.href}
+                        href={s.href}
+                        onClick={closeAll}
+                        className={`flex flex-col px-4 py-2.5 hover:bg-gray-50 transition-colors ${pathname === s.href ? "text-brandred" : "text-gray-800"}`}
+                      >
+                        <span className="text-sm font-semibold">{s.label}</span>
+                        <span className="text-xs text-gray-400 mt-0.5">{s.sub}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </li>
 
               <li>
@@ -160,15 +189,6 @@ export default function NavBar() {
                   className={`${desktopNavLinkClass} ${isActive("/for-employers") ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
                 >
                   {t("nav.forEmployers")}
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/about"
-                  className={`${desktopNavLinkClass} ${isActive("/about") ? "bg-primary/10 text-brandred" : "text-gray-700"}`}
-                >
-                  {t("nav.about")}
                 </Link>
               </li>
 
@@ -212,17 +232,11 @@ export default function NavBar() {
             <button
               className="p-1 text-gray-700"
               onClick={() => setMenuOpen((v) => !v)}
-              aria-label={
-                menuOpen ? t("actions.closeMenu") : t("actions.openMenu")
-              }
+              aria-label={menuOpen ? t("actions.closeMenu") : t("actions.openMenu")}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
             >
-              {menuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -230,10 +244,7 @@ export default function NavBar() {
 
       {/* -- Mobile drawer -- */}
       {menuOpen && (
-        <div
-          id="mobile-menu"
-          className="fixed inset-0 z-40 bg-white pt-16 overflow-y-auto lg:hidden"
-        >
+        <div id="mobile-menu" className="fixed inset-0 z-40 bg-white pt-16 overflow-y-auto lg:hidden">
           <nav aria-label={t("nav.ariaLabel")}>
             <ul className="px-4 py-4 list-none m-0 divide-y divide-gray-100">
               <li>
@@ -248,22 +259,48 @@ export default function NavBar() {
 
               <li>
                 <Link
-                  href="/services/employer-pathway"
-                  className={`block py-4 font-medium ${isEmployeeSponsorshipActive ? "text-brandred" : "text-gray-800"}`}
+                  href="/about"
+                  className={`block py-4 font-medium ${isActive("/about") ? "text-brandred" : "text-gray-800"}`}
                   onClick={closeAll}
                 >
-                  {t("nav.employeeSponsorship")}
+                  {t("nav.about")}
                 </Link>
               </li>
 
+              {/* Employer Sponsorship — accordion */}
               <li>
-                <Link
-                  href="/success-cases"
-                  className={`block py-4 font-medium ${isActive("/success-cases") ? "text-brandred" : "text-gray-800"}`}
-                  onClick={closeAll}
+                <button
+                  className={`w-full flex items-center justify-between py-4 font-medium ${isEmployerSponsorshipActive ? "text-brandred" : "text-gray-800"}`}
+                  onClick={() => setSpokeExpanded((v) => !v)}
                 >
-                  {t("nav.successCases")}
-                </Link>
+                  {t("nav.employeeSponsorship")}
+                  <ChevronDown size={16} className={`transition-transform duration-150 ${spokeExpanded ? "rotate-180" : ""}`} aria-hidden />
+                </button>
+                {spokeExpanded && (
+                  <ul className="pb-3 pl-3 space-y-1 list-none m-0">
+                    <li>
+                      <Link
+                        href="/services/employer-pathway"
+                        className={`block py-2 text-sm font-medium ${isActive("/services/employer-pathway") ? "text-brandred" : "text-gray-700"}`}
+                        onClick={closeAll}
+                      >
+                        {t("nav.employeeSponsorship")} — Overview
+                      </Link>
+                    </li>
+                    {spokes.map((s) => (
+                      <li key={s.href}>
+                        <Link
+                          href={s.href}
+                          onClick={closeAll}
+                          className={`block py-2 text-sm ${pathname === s.href ? "text-brandred font-semibold" : "text-gray-700"}`}
+                        >
+                          {s.label}
+                          <span className="ml-1.5 text-xs text-gray-400">{s.sub}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
 
               <li>
@@ -273,16 +310,6 @@ export default function NavBar() {
                   onClick={closeAll}
                 >
                   {t("nav.forEmployers")}
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/about"
-                  className={`block py-4 font-medium ${isActive("/about") ? "text-brandred" : "text-gray-800"}`}
-                  onClick={closeAll}
-                >
-                  {t("nav.about")}
                 </Link>
               </li>
 
@@ -375,9 +402,7 @@ export default function NavBar() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-4">
-              <p className="font-semibold text-gray-800">
-                {t(`qrModal.${qrModal}`)}
-              </p>
+              <p className="font-semibold text-gray-800">{t(`qrModal.${qrModal}`)}</p>
               <button
                 onClick={() => setQrModal(null)}
                 aria-label={t("qrModal.close")}

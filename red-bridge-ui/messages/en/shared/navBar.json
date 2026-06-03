@@ -2,11 +2,16 @@
   "nav": {
     "ariaLabel": "Main navigation",
     "home": "Home",
-    "employeeSponsorship": "Employer Sponsorship Pathway",
-    "successCases": "Success Stories",
-    "forEmployers": "Employers Partnership",
+    "employeeSponsorship": "Employer Sponsorship",
+    "careerLaunch": "Career Launch Program",
+    "careerLaunchSub": "< 1 Year Exp",
+    "employerMatching": "482 Employer Matching",
+    "employerMatchingSub": "1–3 Years Exp",
+    "directEntry": "186 Direct Entry Pathway",
+    "directEntrySub": "3+ Years Exp",
+    "forEmployers": "For Employers",
     "about": "About Us",
-    "faq": "FAQ"
+    "faq": "FAQs"
   },
   "cta": "Free Consultation",
   "actions": {

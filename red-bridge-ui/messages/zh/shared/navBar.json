@@ -3,7 +3,12 @@
     "ariaLabel": "主导航",
     "home": "首页",
     "employeeSponsorship": "雇主担保",
-    "successCases": "成功案例",
+    "careerLaunch": "职业起航计划",
+    "careerLaunchSub": "不足1年经验",
+    "employerMatching": "482雇主匹配",
+    "employerMatchingSub": "1至3年经验",
+    "directEntry": "186直接入境路径",
+    "directEntrySub": "3年以上经验",
     "forEmployers": "雇主合作",
     "about": "关于我们",
     "faq": "常见问题"
