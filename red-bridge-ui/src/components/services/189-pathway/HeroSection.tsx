@@ -27,7 +27,7 @@ export default function HeroSection() {
         </>
       }
       description={t("description")}
-      imageSrc="/home-assets/melbourne-city.jpg"
+      imageSrc="/images/home/melbourne-city.jpg"
       imageAlt={t("eyebrow")}
       imagePositionClassName="object-[70%_center]"
       trustItems={trust}

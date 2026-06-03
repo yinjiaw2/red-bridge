@@ -47,7 +47,7 @@ export default function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/home-hero-bg.jpg"
+          src="/images/home/home-hero-bg.jpg"
           alt={t("imageAlt")}
           fill
           priority

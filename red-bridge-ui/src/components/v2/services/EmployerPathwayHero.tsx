@@ -36,7 +36,7 @@ export default function EmployerPathwayHero() {
       {/* Background image */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <Image
-          src="/home-assets/office-meeting.jpg"
+          src="/images/home/office-meeting.jpg"
           alt=""
           fill
           priority

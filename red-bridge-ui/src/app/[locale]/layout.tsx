@@ -41,8 +41,8 @@ const organizationSchema = {
   name: SITE_NAME,
   legalName: "REDBRIDGE CONSULTING PTY LTD",
   url: SITE_URL,
-  logo: `${SITE_URL}/rb-logo.png`,
-  image: `${SITE_URL}/rb-logo.png`,
+  logo: `${SITE_URL}/images/logos/rb-logo.png`,
+  image: `${SITE_URL}/images/logos/rb-logo.png`,
   description:
     "Australian migration and career placement consultancy specialising in skilled migration (189, 190, 491), employer sponsorship (482/186), and career launch programs for international graduates.",
   telephone: "+61399617301",

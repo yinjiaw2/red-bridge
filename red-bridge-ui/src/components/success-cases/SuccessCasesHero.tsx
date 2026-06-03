@@ -26,7 +26,7 @@ export default function SuccessCasesHero() {
         </>
       }
       description={t("description")}
-      imageSrc="/home-assets/office-meeting.jpg"
+      imageSrc="/images/home/office-meeting.jpg"
       imageAlt={t("eyebrow")}
       imagePositionClassName="object-[72%_center]"
       stats={stats}

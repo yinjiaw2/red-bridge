@@ -50,7 +50,7 @@ const SOCIAL_BG: Record<SocialKey, string> = {
 };
 
 const QR_IMAGE_MAP: Partial<Record<SocialKey, string>> = {
-  wechat: '/wechat-official-account-qr.jpg',
+  wechat: '/images/social/wechat-official-account-qr.jpg',
 };
 
 const B = {
@@ -266,7 +266,7 @@ export default function PageCTA() {
                       overflow: 'hidden',
                     }}>
                       {key === 'rednote' ? (
-                        <Image src="/home-assets/xhs-logo.png" alt="小红书" width={40} height={40} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <Image src="/images/logos/xhs-logo.png" alt="小红书" width={40} height={40} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       ) : (
                         Icon && <Icon size={16} />
                       )}

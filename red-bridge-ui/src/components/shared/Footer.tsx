@@ -67,7 +67,7 @@ export const Footer = () => {
               {/* Decorative watermark — red 紅 icon, semi-transparent, behind content */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/red-logo.png"
+                src="/images/logos/red-logo.png"
                 alt=""
                 aria-hidden="true"
                 style={{
@@ -87,7 +87,7 @@ export const Footer = () => {
               <div className="mb-5">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/rb-logo-white.png"
+                  src="/images/logos/rb-logo-white.png"
                   alt={t("logoAlt")}
                   style={{ height: 44, width: 'auto', display: 'block', maxWidth: 'none' }}
                 />
@@ -245,7 +245,7 @@ export const Footer = () => {
               {t("social.wechat")}
             </p>
             <Image
-              src="/wechat-official-account-qr.jpg"
+              src="/images/social/wechat-official-account-qr.jpg"
               alt={t("social.wechat")}
               width={180}
               height={180}

@@ -17,17 +17,17 @@ const B = {
 const VIDEO_CARDS = [
   {
     key: 'welcome',
-    poster: '/videos/Andy-2-cover.png',
+    poster: '/videos/covers/Andy-2-cover.png',
     videoSrc: '/videos/Andy-2.mp4',
   },
   {
     key: 'process',
-    poster: '/videos/Andy-3-cover.png',
+    poster: '/videos/covers/Andy-3-cover.png',
     videoSrc: '/videos/Andy-3.mp4',
   },
   {
     key: 'stories',
-    poster: '/videos/Edmond-3-cover.png',
+    poster: '/videos/covers/Edmond-3-cover.png',
     videoSrc: '/videos/Edmond-3.mp4',
   },
 ] as const;

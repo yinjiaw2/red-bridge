@@ -17,7 +17,7 @@ export function BookingHero() {
         </>
       }
       description={t("description")}
-      imageSrc="/home-assets/wtc-hero.jpg"
+      imageSrc="/images/home/wtc-hero.jpg"
       imageAlt={t("eyebrow")}
       imagePositionClassName="object-[72%_center]"
       sizeClassName="min-h-[320px] sm:h-[44vh] sm:min-h-[340px]"

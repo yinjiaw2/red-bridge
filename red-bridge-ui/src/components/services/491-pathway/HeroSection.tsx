@@ -30,7 +30,7 @@ export default function HeroSection() {
         </>
       }
       description={t("subtitle")}
-      imageSrc="/home-assets/melbourne-city.jpg"
+      imageSrc="/images/home/melbourne-city.jpg"
       imageAlt={t("eyebrow")}
       imagePositionClassName="object-[74%_center]"
       contentClassName="max-w-[720px]"

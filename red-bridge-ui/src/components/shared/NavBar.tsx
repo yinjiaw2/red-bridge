@@ -19,7 +19,7 @@ const SOCIAL_LINKS = {
 type QrTarget = "wechat" | "tiktok";
 
 const QR_SRCS: Record<QrTarget, string> = {
-  wechat: "/wechat-official-account-qr.jpg",
+  wechat: "/images/social/wechat-official-account-qr.jpg",
   tiktok: "/images/qr-tiktok.png",
 };
 
@@ -121,7 +121,7 @@ export default function NavBar() {
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0" onClick={closeAll}>
             <Image
-              src="/rb-logo.png"
+              src="/images/logos/rb-logo.png"
               alt="RedBridge Consulting"
               width={240}
               height={60}
@@ -354,7 +354,7 @@ export default function NavBar() {
                     className="w-10 h-10 flex items-center justify-center rounded-full bg-[#FF2442] text-white overflow-hidden"
                   >
                     <Image
-                      src="/home-assets/xhs-logo.png"
+                      src="/images/logos/xhs-logo.png"
                       alt="Xiaohongshu"
                       width={40}
                       height={40}

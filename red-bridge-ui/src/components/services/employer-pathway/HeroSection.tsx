@@ -31,7 +31,7 @@ export default function HeroSection() {
         </>
       }
       description={t("subtitle")}
-      imageSrc="/home-assets/office-meeting.jpg"
+      imageSrc="/images/home/office-meeting.jpg"
       imageAlt={t("eyebrow")}
       imagePositionClassName="object-[72%_center]"
       trustItems={trust}

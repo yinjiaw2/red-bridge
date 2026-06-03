@@ -20,7 +20,7 @@ export function ServicesHero() {
         </>
       }
       description={t("description")}
-      imageSrc="/home-assets/wtc-hero.jpg"
+      imageSrc="/images/home/wtc-hero.jpg"
       imageAlt={t("eyebrow")}
       imagePositionClassName="object-[72%_center]"
       actions={

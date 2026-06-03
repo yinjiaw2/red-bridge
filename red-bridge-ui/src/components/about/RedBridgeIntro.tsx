@@ -19,7 +19,7 @@ export const RedBridgeIntro = () => {
         </>
       }
       description={t("body")}
-      imageSrc="/about-assets/redbridge-sydney-desk.png"
+      imageSrc="/images/about/redbridge-sydney-desk.png"
       imageAlt={t("imageAlt")}
       imagePositionClassName="object-[64%_center]"
       actions={

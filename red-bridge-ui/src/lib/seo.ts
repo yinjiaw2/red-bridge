@@ -5,7 +5,7 @@ export const SITE_NAME = "RedBridge Consulting";
 export const SITE_NAME_ZH = "红桥咨询";
 
 export const OG_IMAGE = {
-  url: "/rb-logo.png",
+  url: "/images/logos/rb-logo.png",
   width: 160,
   height: 44,
   alt: "RedBridge Consulting",

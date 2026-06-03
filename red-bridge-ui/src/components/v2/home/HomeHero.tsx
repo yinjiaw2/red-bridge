@@ -141,7 +141,7 @@ export default function HomeHero() {
           playsInline
           style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', transform: 'scale(1.15)', transformOrigin: 'center 40%' }}
         >
-          <source src="/rb-hero-video.mp4" type="video/mp4" />
+          <source src="/videos/rb-hero-video.mp4" type="video/mp4" />
         </video>
         <div
           aria-hidden="true"
